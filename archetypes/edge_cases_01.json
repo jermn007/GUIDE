@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "description": "Edge-case test examples for the Instructional Design Judge evaluator. Includes good, bad, and borderline responses across different scenario types. Each example targets specific evaluation dimensions.",
+    "version": "1.0.0",
+    "author": "Jeremy Terhune",
+    "grounding": "UCF MA Instructional Systems — Master's Program Materials"
+  },
+  "examples": [
+    {
+      "id": "good_01_completion_tracking",
+      "label": "good",
+      "expected_overall": 5,
+      "target_dimensions": ["adult_learning_alignment", "cognitive_load_management", "personalization_and_engagement"],
+      "description": "Strong response: respects expertise, well-chunked, conversational, practical",
+      "input": "How do I set up a completion tracking rule in our LMS so learners get credit after finishing all modules?",
+      "context": "The LMS supports SCORM 1.2 and xAPI tracking. Completion rules can be configured at the course level under Settings > Completion Tracking. Options include: activity completion (all or specific), grade threshold, or manual marking.",
+      "output": "Great question! Since you want learners to get credit after finishing all modules, you're looking for the course-level completion rule — most platforms call it something like 'Completion Tracking' or 'Completion Criteria.'\n\nHere's the general flow:\n\n1. Go to **Settings > Completion Tracking** in your course.\n2. Set the rule to **'All activities must be completed'** — or pick specific modules if only some count toward credit.\n3. For each module, define what 'completed' means: viewed, quiz passed, assignment submitted, etc. This depends on your instructional goals for that module.\n4. Test it with a test learner account before going live.\n\nOne thing to watch for: if any of your modules are SCORM packages, the completion signal comes from the content itself, not from the LMS rule. So double-check that your SCORM content is actually reporting a completion status — if it isn't, the LMS won't know the learner finished.\n\nWant me to walk through the SCORM reporting piece, or are you working with native LMS activities?",
+      "reference": "Navigate to Settings > Completion Tracking. Set completion criteria to require all activities. Configure individual activity completion conditions. For SCORM content, ensure the package reports completion status via SCORM 1.2 cmi.core.lesson_status or xAPI statements."
+    },
+    {
+      "id": "bad_01_jargon_wall",
+      "label": "bad",
+      "expected_overall": 1,
+      "target_dimensions": ["cognitive_load_management", "accessibility", "adult_learning_alignment"],
+      "description": "Bad response: jargon-heavy, unsegmented, condescending, ignores user context",
+      "input": "How do I set up a completion tracking rule in our LMS so learners get credit after finishing all modules?",
+      "context": "The LMS supports SCORM 1.2 and xAPI tracking. Completion rules can be configured at the course level under Settings > Completion Tracking.",
+      "output": "Completion tracking in Learning Management Systems is a fundamental component of the learning technology ecosystem that leverages the SCORM (Sharable Content Object Reference Model) specification, specifically the cmi.core.lesson_status data model element in SCORM 1.2 or the cmi.completion_status in SCORM 2004, to communicate learner progress data between the SCO (Sharable Content Object) and the LMS runtime environment. The xAPI (Experience API, formerly Tin Can API) specification provides an alternative approach using statement-based tracking with actor-verb-object triples that are stored in a Learning Record Store (LRS). To configure completion tracking, you need to understand the difference between activity-level completion (which is determined by the individual learning object's internal logic and reported via the SCORM RTE or xAPI statement endpoint) and course-level completion (which is an aggregate rule applied by the LMS based on the completion states of constituent activities). You should configure the course-level completion criteria to require all constituent activities to report a completed or passed status. Note that the specific implementation varies by LMS vendor and version. You should consult your LMS vendor's documentation for platform-specific configuration steps. It is important to note that improper configuration of completion tracking is one of the most common sources of learner frustration and help desk tickets in enterprise learning environments.",
+      "reference": "Navigate to Settings > Completion Tracking. Set completion criteria to require all activities."
+    },
+    {
+      "id": "bad_02_hallucinated_steps",
+      "label": "bad",
+      "expected_overall": 2,
+      "target_dimensions": ["accuracy_and_grounding"],
+      "description": "Bad response: fabricates specific UI steps not in the source material, sounds confident but wrong",
+      "input": "How do I create a branching scenario in our authoring tool?",
+      "context": "The authoring tool supports linear and branching course structures. Branching is created by adding decision points to slides. Decision points link to different slide groups based on learner choices.",
+      "output": "Sure! Here's how to create a branching scenario:\n\n1. Open the **Scenario Builder** from the top menu bar under **Advanced > Scenario Builder**.\n2. Click **New Branch Tree** to open the visual branch editor.\n3. Drag and drop **Decision Nodes** from the left panel onto the canvas.\n4. Connect each Decision Node to **Outcome Slides** using the green connector arrows.\n5. Set the **Branch Logic** by right-clicking each node and selecting **Edit Conditions**.\n6. In the Conditions panel, use the **Variable Manager** to create learner-choice variables.\n7. Click **Validate Tree** to check for dead-end branches.\n8. Export using **File > Export > SCORM with Branching Metadata**.\n\nThis will give you a fully interactive branching experience!",
+      "reference": "Branching is created by adding decision points to slides. Decision points link to different slide groups based on learner choices."
+    },
+    {
+      "id": "bad_03_dismissive_tone",
+      "label": "bad",
+      "expected_overall": 2,
+      "target_dimensions": ["adult_learning_alignment", "personalization_and_engagement"],
+      "description": "Bad response: dismissive of user's question, over-simplifies, doesn't engage",
+      "input": "I'm trying to understand the difference between formative and summative assessment in the context of our new course design. When should I use each?",
+      "context": "Formative assessment is conducted during instruction to improve it. Summative assessment is conducted after instruction to evaluate its effectiveness. Both are part of the Dick, Carey & Carey systematic design model.",
+      "output": "This is a very basic instructional design concept. Formative assessment happens during development, summative assessment happens after. Use formative assessment while building your course and summative assessment when it's done. That's really all there is to it. Most instructional designers learn this early in their training. If you need more detail, I'd recommend reviewing an introductory instructional design textbook.",
+      "reference": "Formative evaluation involves collecting data during instruction development to improve effectiveness (expert reviews, one-to-one evaluations, small group evaluations, field trials). Summative assessment measures achievement after instruction is complete."
+    },
+    {
+      "id": "borderline_01_accurate_but_dry",
+      "label": "borderline",
+      "expected_overall": 3,
+      "target_dimensions": ["personalization_and_engagement", "accessibility"],
+      "description": "Borderline: accurate and organized but reads like documentation, not a conversation",
+      "input": "What's the best way to handle accessibility requirements when building an e-learning module?",
+      "context": "WCAG 2.1 guidelines apply to web-based learning content. Key requirements include: text alternatives for non-text content (1.1.1), captions for audio (1.2.2), sufficient color contrast (1.4.3), keyboard navigability (2.1.1), and clear language (3.1). POUR principles: Perceivable, Operable, Understandable, Robust.",
+      "output": "Accessibility requirements for e-learning modules are governed by WCAG 2.1, which is organized around four principles (POUR):\n\n**Perceivable:**\n- Provide text alternatives for all non-text content (WCAG 1.1.1)\n- Include captions for all audio content (WCAG 1.2.2)\n- Ensure minimum color contrast ratio of 4.5:1 for normal text (WCAG 1.4.3)\n\n**Operable:**\n- Ensure all functionality is accessible via keyboard (WCAG 2.1.1)\n- Provide sufficient time for learners to read and interact with content (WCAG 2.2.1)\n\n**Understandable:**\n- Use clear, simple language (WCAG 3.1)\n- Ensure consistent navigation across pages (WCAG 3.2)\n\n**Robust:**\n- Use valid HTML markup\n- Ensure compatibility with assistive technologies\n\nThese requirements apply to all web-based learning content and should be incorporated during the design phase, not retrofitted after development.",
+      "reference": "WCAG 2.1 POUR principles with specific guideline numbers as listed in the context."
+    },
+    {
+      "id": "borderline_02_good_tone_weak_accuracy",
+      "label": "borderline",
+      "expected_overall": 3,
+      "target_dimensions": ["accuracy_and_grounding", "personalization_and_engagement"],
+      "description": "Borderline: excellent tone and engagement but stretches beyond what sources support",
+      "input": "We're switching from Storyline to Rise for our compliance training. What should I watch out for?",
+      "context": "Rise is a responsive web-based authoring tool that creates mobile-friendly content. It uses pre-built lesson blocks (text, media, interactions) rather than slide-based authoring. Rise does not support custom JavaScript or advanced animations. Content is organized into lessons within a course structure.",
+      "output": "Oh, that's a significant shift! Storyline and Rise are really different philosophies of authoring, so there are a few things worth thinking through before you migrate.\n\nThe biggest adjustment is the design mindset. Storyline gives you pixel-level control — you're essentially building custom slides. Rise is more like assembling content from pre-built blocks (text, images, interactions, etc.). That's great for speed and mobile responsiveness, but it means you'll lose some of the custom interactivity you might be used to.\n\nHere's what I'd watch for:\n\n- **Complex interactions won't translate directly.** If your Storyline courses have custom drag-and-drops, branching scenarios with variables, or JavaScript triggers, you'll need to redesign those for Rise's block-based approach. Rise has built-in interactions like sorting, matching, and flashcards, but they're more templated.\n- **Accessibility is actually easier in Rise** — it handles a lot of the WCAG compliance automatically since it generates semantic HTML. Storyline requires more manual accessibility work.\n- **Mobile experience improves significantly.** Rise is responsive by default; Storyline requires a separate mobile player or responsive settings.\n- **You'll lose custom branding control.** Rise themes are limited compared to Storyline's full design freedom.\n- **Assessment capabilities are more basic** — Rise supports knowledge checks but doesn't have Storyline's quiz engine depth. If your compliance training needs scored assessments with detailed result tracking, you may need to supplement Rise with an external tool.\n\nMy suggestion: pick one of your simpler compliance modules and rebuild it in Rise first. That'll give you a realistic sense of what translates easily and what needs rethinking.\n\nWant me to help you map out which of your current interactions have Rise equivalents?",
+      "reference": "Rise uses pre-built lesson blocks, does not support custom JavaScript or advanced animations, creates mobile-friendly responsive content, and organizes content into lessons within a course structure."
+    },
+    {
+      "id": "good_02_scaffolded_explanation",
+      "label": "good",
+      "expected_overall": 5,
+      "target_dimensions": ["instructional_clarity", "cognitive_load_management", "adult_learning_alignment"],
+      "description": "Strong response: scaffolds a complex concept, defines terms before using them, connects to practice",
+      "input": "Can you explain how xAPI works and whether it's worth switching from SCORM for our training program?",
+      "context": "xAPI (Experience API) is a learning technology specification that allows tracking of learning experiences beyond traditional LMS-based courses. It uses statement-based tracking in actor-verb-object format (e.g., 'Jane completed Module 3'). Statements are stored in a Learning Record Store (LRS), which can be standalone or embedded in an LMS. SCORM 1.2 tracks basic completion and score within an LMS. xAPI can track informal learning, mobile learning, simulations, and real-world performance.",
+      "output": "Good question — and the answer depends on what you need to track and where learning is happening.\n\nLet me start with the key concept, since xAPI uses some specific terminology:\n\n**What xAPI actually is:** It's a way to record learning activities as simple statements — structured as *someone* did *something* with *something*. For example: \"Jane completed Module 3\" or \"Alex scored 85% on the safety quiz.\" These statements get stored in what's called a **Learning Record Store (LRS)** — think of it as a database specifically designed for learning data.\n\n**How it's different from SCORM:** SCORM can only track what happens inside your LMS — a learner opened a course, completed it, got a score. That's about it. xAPI can track learning that happens *anywhere*: in your LMS, on a mobile app, during a live workshop, in a job-aid PDF, or even on-the-job performance. The LRS collects all of it in one place.\n\n**So is it worth switching?** Here's how I'd think about it:\n\n- **If your training is mostly self-paced e-learning inside your LMS**, SCORM is probably fine. It's simpler, universally supported, and does the job.\n- **If you're trying to track blended learning** (classroom + online + on-the-job), or you want data on what happens *after* the course, xAPI gives you that visibility.\n- **If leadership is asking for learning analytics beyond completion rates**, xAPI makes it possible to connect training activities to performance outcomes.\n\nOne practical note: you don't have to choose one or the other. Many organizations run SCORM for their standard e-learning and add xAPI for newer, more experience-based tracking. Your LMS may already have an embedded LRS, so it's worth checking.\n\nWould it help to look at what your current LMS supports and figure out if xAPI is already available to you?",
+      "reference": "xAPI tracks learning experiences as actor-verb-object statements stored in an LRS. It extends beyond LMS-based SCORM tracking to capture informal, mobile, and performance-based learning. SCORM 1.2 is limited to basic completion and score tracking within an LMS."
+    },
+    {
+      "id": "bad_04_over_explains_basics",
+      "label": "bad",
+      "expected_overall": 2,
+      "target_dimensions": ["adult_learning_alignment", "cognitive_load_management"],
+      "description": "Bad response: over-explains concepts the audience already knows, patronizing",
+      "input": "What's the difference between synchronous and asynchronous delivery in our blended program?",
+      "context": "The blended program uses both synchronous (live virtual sessions via Zoom) and asynchronous (self-paced modules in the LMS) delivery. Synchronous sessions are scheduled weekly. Asynchronous modules have weekly deadlines.",
+      "output": "Let me explain what synchronous and asynchronous mean, since these are important concepts in instructional design.\n\n**Synchronous** comes from the Greek words 'syn' (together) and 'chronos' (time). It means happening at the same time. In the context of education and training, synchronous delivery refers to any learning activity where all participants are present simultaneously. This can include face-to-face classroom instruction, live webinars, video conferences, real-time chat sessions, and virtual classroom sessions. The key characteristic is that the instructor and learners interact in real-time.\n\n**Asynchronous** means 'not at the same time.' Asynchronous delivery refers to learning activities that do not require simultaneous participation. Learners can access materials and complete activities on their own schedule. Examples include pre-recorded video lectures, discussion forums, email-based assignments, self-paced e-learning modules, and reading assignments.\n\nIn a **blended program**, which combines multiple delivery methods (hence the name 'blended'), you would typically use both synchronous and asynchronous components. This approach was first theorized in the early 2000s and has become increasingly popular, especially since the COVID-19 pandemic forced many organizations to adopt remote and hybrid delivery models.\n\nYour blended program appears to use synchronous delivery via Zoom for live sessions and asynchronous delivery via self-paced modules in the LMS. I hope this helps clarify the terminology!",
+      "reference": "The blended program uses synchronous (live Zoom sessions, weekly) and asynchronous (self-paced LMS modules, weekly deadlines) delivery."
+    },
+    {
+      "id": "borderline_03_good_structure_missing_context",
+      "label": "borderline",
+      "expected_overall": 3,
+      "target_dimensions": ["adult_learning_alignment", "accuracy_and_grounding"],
+      "description": "Borderline: well-structured and clear, but gives generic advice without engaging the user's specific situation",
+      "input": "We're getting low quiz scores on Module 5. Any ideas for what might be going wrong?",
+      "context": "Module 5 covers advanced reporting in the analytics dashboard. Quiz questions test ability to create custom reports, interpret data visualizations, and export filtered datasets. The module includes a video walkthrough (12 min), a text-based reference guide, and a practice sandbox. Average quiz score is 58% vs. 82% program average.",
+      "output": "Low quiz scores can result from several common issues in instructional design:\n\n**Content-Related Issues:**\n- Learning objectives may not align with assessment items\n- Content complexity may exceed learner prerequisite knowledge\n- Key concepts may lack sufficient practice opportunities\n\n**Assessment-Related Issues:**\n- Quiz questions may be poorly worded or ambiguous\n- Questions may test at a higher Bloom's level than the instruction supports\n- Distractors in multiple-choice items may be too similar to correct answers\n\n**Design-Related Issues:**\n- Insufficient scaffolding between content and assessment\n- Lack of formative feedback before the summative quiz\n- Content may not provide enough worked examples\n\n**Recommended Steps:**\n1. Review the alignment between learning objectives, content, and quiz items\n2. Analyze item-level data to identify which questions are most problematic\n3. Conduct a small-group review of the content with representative learners\n4. Consider adding practice quizzes or knowledge checks before the graded assessment\n\nThese are standard instructional design diagnostic approaches based on the Dick, Carey & Carey systematic design model.",
+      "reference": "Module 5 covers advanced reporting with video, text guide, and sandbox. Average score 58% vs 82% program average. Specific content: custom reports, data visualization interpretation, filtered dataset export."
+    },
+    {
+      "id": "good_03_formative_feedback",
+      "label": "good",
+      "expected_overall": 5,
+      "target_dimensions": ["accuracy_and_grounding", "adult_learning_alignment", "instructional_clarity"],
+      "description": "Strong response: uses the specific context, suggests concrete diagnostics, respects user's expertise",
+      "input": "We're getting low quiz scores on Module 5. Any ideas for what might be going wrong?",
+      "context": "Module 5 covers advanced reporting in the analytics dashboard. Quiz questions test ability to create custom reports, interpret data visualizations, and export filtered datasets. The module includes a video walkthrough (12 min), a text-based reference guide, and a practice sandbox. Average quiz score is 58% vs. 82% program average.",
+      "output": "A 24-point gap from your program average is a pretty clear signal that something specific is going on with Module 5, not just a general difficulty issue. Let me think through the most likely culprits given what you've described.\n\n**The content-assessment gap is the first place I'd look.** You've got a 12-minute video walkthrough and a reference guide teaching *how to do* reporting tasks (create reports, export data). But if your quiz questions are asking learners to *interpret* data visualizations, that's a different cognitive skill — more analytical than procedural. The instruction might be teaching the mechanics while the quiz tests the judgment. Worth checking whether each quiz item maps back to something the module explicitly teaches.\n\n**The sandbox is great, but timing matters.** If the practice sandbox comes after the video and reference guide but before the quiz, learners might be using it to explore rather than to practice the specific skills being assessed. A quick check: are learners actually using the sandbox, and if so, for how long? Your LMS tracking data might tell you.\n\n**Item analysis would narrow it down fast.** If you can pull question-level performance data, you'll see whether the low average is driven by a few bad questions or a uniform struggle. If 3 out of 10 questions are dragging the average down, that's likely a question-writing issue. If scores are uniformly low, it's more likely a content gap.\n\nHere's what I'd recommend as next steps:\n1. Pull item-level data to see which questions are underperforming\n2. Check alignment between those specific questions and what the module actually teaches\n3. Look at sandbox usage data — are learners practicing, and is it helping?\n\nWould it help to walk through the item analysis together once you have the data?",
+      "reference": "Module 5 covers advanced reporting with video, text guide, and sandbox. Average score 58% vs 82% program average. Specific content: custom reports, data visualization interpretation, filtered dataset export."
+    }
+  ]
+}

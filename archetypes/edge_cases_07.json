@@ -1,0 +1,107 @@
+{
+  "archetype": "needs_analysis_front_end",
+  "edge_cases": [
+    {
+      "id": "good_01_comprehensive_four_level_with_data",
+      "title": "Comprehensive Four-Level Needs Assessment With Data-Based Gap and HPT Cause Analysis",
+      "category": "good",
+      "context": "Manufacturing company experiencing safety incident rate increase. HR requested training solution.",
+      "description": "Assessment includes: (1) **Level 1 (Business Needs)**: Strategic imperative documented. 'OSHA-reportable incidents increased 40% in past 18 months (from 8/year to 12/year). Estimated cost per incident: $50K (medical, lost time, investigation). Annual impact: $200K in excess costs. Business goal: Reduce reportable incidents to 6/year within 12 months (30% reduction) to improve safety rating and reduce insurance premiums.' (2) **Level 2 (Performance Needs)**: What must workers DO differently? Assessment identifies: Floor team leads must conduct daily safety briefings (currently skipped 60% of time). Machine operators must follow new lockout/tagout procedure (new equipment installed). Supervisors must respond to safety concerns within 24 hours (currently ignored or delayed). Quantified: 'Current: 60% of briefings skipped. Target: 100% completion. Current: 40% operator adherence to new LOTO. Target: 95%.' (3) **Root Cause Analysis** (HPT model): Distinguishes environmental vs. behavior gaps: (a) **Environmental barriers identified**: Supervisors lack time (understaffed; no coverage for briefing time). New LOTO procedure not in job flow (requires extra steps not yet integrated). Safety concerns submitted via email (gets lost; no tracking system). (b) **Behavior gaps identified**: New operators don't know LOTO procedure. Leads don't know how to conduct effective briefing (skill gap). Supervisors don't prioritize safety feedback (motivation/priority gap). (4) **Level 3 (Learning Needs)**: Specific learning outcomes for each audience: Operators: Execute new LOTO procedure steps without reference (then with job card). Floor leads: Conduct 5-minute safety briefing covering: hazards of the day, relevant procedures, incident examples, Q&A. Supervisors: Track safety concerns in system; provide acknowledgment and response within 24 hours. (5) **Level 4 (Learner Needs)**: Demographics and constraints: 150 floor staff (mixed education levels, ~60% English as second language, average tenure 3 years, prefer hands-on learning). 15 supervisors (more educated, experienced, mixed tech comfort). Scheduling constraint: Production can't stop; training must happen 15-30 min sessions, no days off the floor. (6) **Intervention Recommendation (multi-pronged, not training-only)**: Training (LOTO procedure for operators, briefing skills for leads). Job design (integrate LOTO into machine startup checklist; provide laminated reference card). Process/systems (implement safety concern tracking system; automate escalation). Incentives (tie supervisor bonuses to safety metrics). Communication (launch safety campaign emphasizing new expectations). (7) **Goals linked to gap**: LOTO training goal: 'Operator executes new lockout/tagout procedure with 100% accuracy (using job card as reference) within 30 seconds.' Linked to: 'Current adherence 40%; target 95%; gap = 55 percentage points caused by skill deficit.' (8) **Stakeholder alignment**: Safety director, operations manager, floor lead, machine operator, and HR manager participated. All signed off on findings and agreed training is one component (not sole solution).",
+      "expected_scores": {
+        "performance_gap_identification": 5,
+        "cause_analysis": 5,
+        "needs_assessment_completeness": 5,
+        "goal_objective_quality": 5,
+        "stakeholder_alignment": 5,
+        "intervention_appropriateness": 5
+      },
+      "reasoning": "Exemplary needs assessment demonstrating all four levels with clear connections. Gap is quantified and data-based (40% incident increase). Cause analysis explicitly distinguishes environmental barriers (understaffing, system gaps) from behavior gaps (skill, knowledge, motivation). Intervention is appropriately multi-faceted: training addresses behavior gaps; process/systems changes address environmental barriers. Goals are Mager-formatted and directly linked to quantified gaps. Full stakeholder involvement documented.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "good_02_clear_performance_gap_with_mager_objectives",
+      "title": "Well-Defined Performance Gap With Mager-Standard Instructional Objectives",
+      "category": "good",
+      "context": "Sales organization. New sales process launched; adoption poor.",
+      "description": "Assessment documents: (1) **Business Need**: 'Sales cycle time has increased 25% (from avg. 45 days to 56 days post-process-change). Revenue impact: 15% fewer deals close per quarter. Goal: Reduce cycle time back to 45 days within 2 quarters by improving process compliance.' (2) **Performance Gap**: Sales reps report process is confusing. Data analysis shows: Only 50% of reps complete all required discovery questions (target: 100%). 30% of deals skip qualification step (target: 0%). Rep survey: 'Process adds 45 minutes per deal.' (3) **Cause Analysis**: (a) Process itself is cumbersome (environmental—not a training issue); however, (b) Reps don't understand WHY each step matters (knowledge gap). (c) Reps lack skills to execute discovery questions effectively in conversation (skill gap). (d) CRM doesn't enforce process steps (environmental—tech barrier). Assessment recommends: (i) Process redesign to streamline (non-training). (ii) Training on discovery question technique (training). (iii) CRM workflow redesign to enforce steps with reminders (non-training). (4) **Learning Objectives** (Mager format): Rep-level:\n   - 'Given a sales call recording, the rep will identify the 5 required discovery questions and explain why each matters, with 100% accuracy.'\n   - 'In a role-play scenario with peer/coach, the rep will execute the discovery questions conversationally (not reading from list), adapt wording to buyer context, and identify buyer pain points, with 80% accuracy as rated by coach.'\n   - 'Given a qualified lead in the CRM, the rep will move deal through qualification step correctly, entering required fields, within 5 minutes, with zero errors.'\n\nManager-level:\n   - 'The manager will coach one rep per week on discovery technique using a provided coaching guide, providing specific feedback, and tracking coaching in the CRM.'\n\n(5) **Feasibility**: All objectives are teachable (content stable, materials can be created), measurable (observable actions), and transferable (reps can apply immediately on the job). (6) **Stakeholder involvement**: VP Sales, Sales Manager, two senior reps (one strong performer, one struggling), and sales operations participated. Findings separated from recommendations clearly: Data = call analysis, surveys, CRM metrics. Recommendations = training (discovery skills), coaching (manager capability), process redesign, CRM changes.",
+      "expected_scores": {
+        "performance_gap_identification": 4,
+        "cause_analysis": 4,
+        "needs_assessment_completeness": 4,
+        "goal_objective_quality": 5,
+        "stakeholder_alignment": 4,
+        "intervention_appropriateness": 4
+      },
+      "reasoning": "Strong assessment with excellent objective quality (Mager standard). Performance gap is quantified (25% slower cycle time, 15% revenue impact). Cause analysis distinguishes environmental (process design, CRM) from behavior gaps (skill, knowledge). Goals directly linked to gap. Multi-pronged intervention appropriate (process redesign + training + CRM changes, not training alone). Minor gaps: Could strengthen stakeholder documentation (formal sign-off); could be more explicit about Level 1 business goal mechanics.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "bad_01_jumps_to_training_no_needs_data",
+      "title": "Request for Training With No Needs Assessment, No Data, No Cause Analysis",
+      "category": "bad",
+      "context": "Corporate request: 'We need a course on time management for all 200 employees.'",
+      "description": "Assessment (none): (1) **No Business Need stated**: Why is time management important now? What business outcome will improve? Unknown. (2) **No Performance Gap defined**: Is there evidence employees are struggling with time management? Anecdotal comments: 'People seem stressed' and 'We're behind on projects.' No data. No metrics. No analysis of actual time use. (3) **No Cause Analysis**: Why might people be stressed? Possibilities: (a) Unrealistic deadlines (workload too high). (b) Unclear priorities (too many competing demands). (c) Lack of planning skills (knowledge/skill gap—training could help). (d) No project management tools (environmental). (e) Manager poor at delegation (manager capability issue). No investigation. Assumption: 'Training will fix it.' (4) **Leap to Training**: 'Let's buy a time management course and have everyone take it.' Training chosen as default solution without determining if it's appropriate. (5) **No Learning Objectives**: Course description vague: 'Employees will learn time management.' Not Mager-formatted. Not linked to any performance problem. What specific behavior change expected? Unknown. (6) **No Feasibility Screening**: Can employees apply time management if their workload is 200% of capacity? If their manager reassigns priorities daily? Training won't help. (7) **No Stakeholder Alignment**: Decision made in HR. No input from department heads. No analysis of whether department managers will support time management practice on the job. (8) **Risk**: $50K spent on training (course license + lost productivity during training) with no evidence it will solve the problem. If the real cause is workload/priorities, training is a band-aid. Employees will be frustrated ('We don't need training; we need fewer projects') and won't apply learning.",
+      "expected_scores": {
+        "performance_gap_identification": 1,
+        "cause_analysis": 1,
+        "needs_assessment_completeness": 1,
+        "goal_objective_quality": 1,
+        "stakeholder_alignment": 1,
+        "intervention_appropriateness": 1
+      },
+      "reasoning": "This is a textbook case of backwards ID: jumping to solution (training) without understanding the problem. No evidence a performance gap exists. No data-based gap definition. No cause analysis. Training is assumed default without exploring whether it's appropriate. Must not proceed. Recommendation: Conduct proper needs assessment. Data collection: employee surveys on time pressures, workload, priorities; manager interviews on project demands; analysis of project deadlines and actual completion. THEN determine: Is it a skill gap (training)? Workload (resource allocation)? Priorities (strategy/communication)? Or a mix? Then design appropriate intervention.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "bad_02_assumes_training_environmental_problem",
+      "title": "Needs Assessment That Identifies Environmental Barrier But Still Recommends Training as Solution",
+      "category": "bad",
+      "context": "Customer service department. Customer satisfaction scores dropped 15 points.",
+      "description": "Assessment documents: (1) **Business Need**: 'Customer satisfaction dropped from 4.2/5.0 to 3.7/5.0 (15-point drop). Root: 'Response time to customer emails increased from avg. 4 hours to 18-24 hours.' (2) **Performance Gap**: Clear. Reps are not responding quickly. (3) **Cause Analysis** (Here's where it goes wrong): Investigation finds: Reps report, 'We're overwhelmed. We get 200 emails/day per person. We can't possibly respond to all within 4 hours.' Manager confirms: 'Staffing was cut 20% last year to hit budget targets. Same volume, fewer reps.' Workload is unsustainable. This is clearly an ENVIRONMENTAL barrier (insufficient resources), not a behavior gap. (4) **However**: Assessment concludes, 'Reps need training on email prioritization and efficient response techniques. A 2-day course on time management and customer communication will help reps respond faster.' (5) **The Problem**: Training does NOT solve staffing shortage. Teaching reps to 'work smarter' won't create 8 additional hours of capacity per day per rep. Reps are already working as fast as they can. This is a job design/resource problem. (6) **Correct Intervention**: Hire additional staff (or redistribute workload). OR reduce email volume (partner support, FAQ, self-service). OR clarify that 4-hour response is not feasible with current resources and reset expectation to 12-24 hours. Training is not appropriate here. (7) **Likely Outcome**: Reps take training, learn email prioritization, but still can't respond in 4 hours because they're understaffed. Frustration increases ('We got trained, but nothing changed'). Customer satisfaction stays low. Training budget wasted. Real problem (staffing) not addressed.",
+      "expected_scores": {
+        "performance_gap_identification": 4,
+        "cause_analysis": 2,
+        "needs_assessment_completeness": 2,
+        "goal_objective_quality": 1,
+        "stakeholder_alignment": 1,
+        "intervention_appropriateness": 1
+      },
+      "reasoning": "Assessment identifies the gap (response time down) and even identifies the cause (staffing cut, workload unsustainable). But fails to match cause to intervention. Environmental barrier (insufficient staff) cannot be solved by training. Recommends training anyway, likely because training is familiar/default solution. Must not proceed. Recommendation: Challenge assumption. Frame for leadership: 'Training will not create additional capacity. To meet 4-hour response time with current email volume, we need 2-3 additional FTEs OR reduce email volume via self-service/FAQ OR extend response time expectation. Which of these can we do?' Forces real decision-making instead of band-aid training.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "borderline_01_good_gap_weak_cause_analysis",
+      "title": "Clear Performance Gap and Learner Analysis But Weak Cause Analysis (Assumes Training)",
+      "category": "borderline",
+      "context": "Mortgage loan officers. Close rates dropped 20%.",
+      "description": "Assessment includes: (1) **Business Need**: 'Revenue down 20% YoY. Goal: Restore close rate to previous year (35%) within 2 quarters.' (2) **Performance Gap**: Clear and quantified. 'Current close rate: 28%. Previous year: 35%. Gap: 7 percentage points. Monthly impact: ~$500K in lost revenue.' (3) **Level 4 (Learner Analysis)**: Thorough. 'Loan officers (n=40): mix of 2-year and 20-year tenure. 75% have some college. Remote workers; training must accommodate async model. Prefer 15-minute microlearning segments. 30% report confidence gap on new loan products.' (4) **However, Cause Analysis is weak**: Assessment mentions: (a) 'New loan products added 6 months ago; officers may lack product knowledge.' (b) 'Sales techniques may need refresh.' (c) 'Pipeline quality may have changed.' But doesn't dig deeper. No investigation of: (d) Competitor activity? Market shift? (e) Loan approval process changes (delays frustrate customers)? (f) Incentive structure? (g) Lead quality from marketing? (h) Process friction in closing (too many steps)? (5) **Recommendation**: Training on new loan products and sales techniques. (6) **Missing**: 'To determine if training is appropriate, we should analyze: (a) Do officers know the product specs? (Real knowledge gap = training.) (b) Are they choosing not to sell these products? (Incentive issue = compensation redesign.) (c) Are customers rejecting products due to terms/rates? (Product design, not training.) (d) Are deals falling apart in approval process? (Process issue, not training.) (e) Is pipeline lower quality? (Marketing/lead gen issue, not training.)' Without this analysis, we're guessing. (7) **Possible Outcomes**: If root cause IS product knowledge → training works. If root cause IS incentive structure (commission structure doesn't reward new products) → training won't help; incentive redesign needed. If root cause IS process friction → training won't help; process redesign needed.",
+      "expected_scores": {
+        "performance_gap_identification": 5,
+        "cause_analysis": 2,
+        "needs_assessment_completeness": 3,
+        "goal_objective_quality": 2,
+        "stakeholder_alignment": 2,
+        "intervention_appropriateness": 2
+      },
+      "reasoning": "Good foundation (gap clear, learner profile detailed) but weak execution on cause analysis. Assessment identifies product knowledge as possible cause but doesn't rule out other causes (process, incentives, market, lead quality). Recommendation (training) may be appropriate, but insufficient analysis to be confident. Recommendation: Conduct root cause investigation before proceeding. Tools: Close rate analysis by loan product (which products losing share?). Interview customers who declined (feedback). Survey officers on confidence by product. Analyze approval timeline (is process slowing deals?). Review incentive structure (are commissions aligned with new products?). THEN design targeted intervention.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "borderline_02_thorough_assessment_weak_stakeholder_buy_in",
+      "title": "Comprehensive Needs Assessment With All Levels and HPT Analysis But No Stakeholder Documentation",
+      "category": "borderline",
+      "context": "Manufacturing company. Safety, quality, and production issues attributed to poor shift handoff practices.",
+      "description": "Assessment includes: (1) **Business Need**: 'Product defects increased 35% (Q3 vs. Q2). Root cause analysis points to handoff failures between shifts. Examples: Critical alerts missed, equipment settings not communicated, quality issues not escalated.' (2) **Performance Gap**: 'Current handoff process: 5-minute unstructured exchange between outgoing and incoming shift leads. Observation data: Only 60% of critical info transferred. Target: 100% critical info transfer; structured handoff taking 10-15 minutes.' (3) **Cause Analysis** (HPT—comprehensive): Environmental barriers: (a) No standardized handoff form (leads improvise). (b) No quiet space for handoff (noisy, distracting floor environment). (c) Equipment issues (printer broken; can't print shift log). (d) Unclear priority (management doesn't formally allocate time for handoff). Behavior gaps: (a) Lead doesn't know what MUST be communicated (knowledge gap). (b) Lead doesn't have technique for structured handoff (skill gap). (c) Lead doesn't see urgency (motivation—belief that quick verbal exchange is 'good enough'). (4) **Recommendation** (multi-level): (a) **Training**: Shift leads learn standardized handoff checklist and communication technique (address knowledge/skill). (b) **Job Design**: Create handoff form; designate quiet 10-min window in schedule; make handoff a formal, tracked activity (address environment). (c) **Process**: Equipment repair (working printer); IT integration (log system alerts fed to handoff form). (d) **Communication**: Manager emphasis that handoff is critical to safety/quality (address motivation/priority). (5) **Learner Profile**: 12 shift leads; mixed education/tenure; shift work constraints; prefer job-embedded training (checklist card + peer coaching). (6) **However**: NO stakeholder documentation. Assessment says 'This is the right solution' but doesn't show who agreed. Plant manager? Operations director? Safety director? Quality manager? Did they participate in analysis? Did they agree on priorities (training + process + job design)? Unknown. (7) **Risk**: If stakeholders didn't participate, they may resist recommendations. Example: Operations director may say, 'We can't spare 10 minutes per shift for handoff—production numbers come first.' Or: 'I'm not authorizing equipment repair now.' Or: 'This is an IT project, not a training need.' Without buy-in, implementation stalls.",
+      "expected_scores": {
+        "performance_gap_identification": 5,
+        "cause_analysis": 5,
+        "needs_assessment_completeness": 5,
+        "goal_objective_quality": 4,
+        "stakeholder_alignment": 1,
+        "intervention_appropriateness": 5
+      },
+      "reasoning": "Excellent technical analysis (gap, cause, intervention all strong) but critical execution gap: no stakeholder alignment. An assessment is only useful if stakeholders believe in it and commit to solution. Without documented buy-in from plant manager, operations, safety, quality, the recommendations won't be implemented. Fix: Present findings to stakeholder group. Get explicit agreement on: (1) Is root cause analysis correct? (2) Is the multi-intervention approach feasible? (3) Who owns each component (training, process, equipment, communication)? (4) What's timeline and budget? Document signatures/agreement. Then proceed with confidence.",
+      "difficulty": "medium"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "archetype": "wcag_accessibility",
+  "edge_cases": [
+    {
+      "id": "good_01_fully_accessible_module",
+      "title": "Fully Accessible E-Learning Module with Comprehensive Alt Text and Captions",
+      "category": "good",
+      "context": "Interactive e-learning module on project management fundamentals delivered via web platform. Target audience: Corporate employees, diverse abilities.",
+      "description": "A web-based module with the following features: (1) All images have descriptive alt text; graphs include long descriptions via aria-describedby. (2) Embedded video with professional captions (not auto-generated) including speaker identification and sound cues (e.g., '[bells chiming]'). Audio descriptions for key visual demonstrations. (3) Keyboard navigation fully functional—all buttons, form fields, interactive elements accessible via Tab and Enter keys. Focus indicator visible and logical. No keyboard traps. (4) ARIA landmarks (nav, main, region) used correctly. Form fields have associated labels. ARIA-live regions announce completion messages. (5) Contrast ratios ≥7:1 on all text. Text resizable to 200% without overflow or function loss. (6) UDL integration: Content available as text, video, interactive objects, and downloadable PDF. Assessment options include multiple choice, short answer, or reflective writing—learners choose modality. Pacing adjustable; learners can pause and resume. (7) HTML validates without errors; tested with NVDA and JAWS.",
+      "expected_scores": {
+        "perceivable": 5,
+        "operable": 5,
+        "understandable": 5,
+        "robust": 5,
+        "udl_integration": 5,
+        "remediation_feasibility": 5
+      },
+      "reasoning": "This exemplary module demonstrates full WCAG 2.1 AA compliance across all dimensions. No barriers for users with visual, hearing, motor, or cognitive disabilities. UDL principles enable multiple representation and expression. Remediation score: 5 (nothing to fix; already accessible).",
+      "difficulty": "hard"
+    },
+    {
+      "id": "good_02_well_structured_with_uدl",
+      "title": "Course Page with Clear Structure, Multiple Formats, and Flexible Engagement",
+      "category": "good",
+      "context": "LMS course home page for a higher education course (Biology 201). Mixed learner population including international students, working professionals, and students with documented disabilities.",
+      "description": "Course page includes: (1) Page language explicitly set (lang='en'). All non-text content has alt text; decorative images have alt=''. Charts include table alternatives. Video has captions and transcript. (2) Keyboard accessible: course navigation uses semantic HTML nav element. Links have descriptive text ('View Assignment' not 'Click here'). Tab order logical. No keyboard traps. (3) Form labels associated. Error messages on quiz re-attempts clearly identify incorrect answers with suggestions (e.g., 'Question 3: Incorrect. Hint: Review cell membrane structure from Week 2 readings'). (4) Color not sole conveyor: information conveyed both via color AND icon/pattern (red X for wrong, checkmark for right). Contrast >4.5:1. (5) UDL: Readings available as text, audio (podcast), and interactive infographics. Learners can choose submission format for discussion posts (text, video, podcast). Deadline extensions available upon request. Two assessment pathways: traditional quiz OR portfolio reflection (learner choice). (6) Mobile-responsive; works on phone, tablet, desktop. (7) ARIA correctly used; screen reader tested.",
+      "expected_scores": {
+        "perceivable": 5,
+        "operable": 4,
+        "understandable": 5,
+        "robust": 4,
+        "udl_integration": 5,
+        "remediation_feasibility": 5
+      },
+      "reasoning": "Strong accessibility with minor gaps (operable: one focus order oddity; robust: one ARIA-label redundancy that could be cleaner). Excellent UDL integration with multiple formats and flexible assessment. No remediation needed; minor polish only.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "bad_01_no_accessibility_features",
+      "title": "Interactive Module Without Alt Text, Captions, Keyboard Nav, or Screen Reader Support",
+      "category": "bad",
+      "context": "Software training module for enterprise tool (Salesforce configuration). Delivered via proprietary e-learning platform. 500+ employees required to complete.",
+      "description": "Module has critical accessibility gaps: (1) Interactive diagrams show flowchart of process steps with no alt text or description. Screenshots of software interface have no alt text. Drag-and-drop interactions have no text labels. (2) Module uses click-only interactions (drag-and-drop, drawing tools, hover-reveal content). No keyboard alternative. Tab order non-existent; focus not visible. Multiple keyboard traps where users cannot escape elements. (3) Embedded video has no captions or audio description. (4) Error messages are vague ('Error in step 3') with no guidance on correction. (5) Color coding used alone to distinguish task types (red=complex, blue=simple, yellow=critical). No pattern or icon distinction. Text contrast on some backgrounds is 3.2:1 (below 4.5:1 WCAG minimum). (6) No ARIA attributes. Screen reader announces 'button, button, button' with no meaningful names. (7) HTML has validation errors (missing closing tags, orphaned divs). Content not responsive; mobile view broken. (8) No UDL features: single delivery format, single interaction modality, single assessment type (quiz only). No transcript, no alternatives.",
+      "expected_scores": {
+        "perceivable": 1,
+        "operable": 1,
+        "understandable": 2,
+        "robust": 1,
+        "udl_integration": 1,
+        "remediation_feasibility": 1
+      },
+      "reasoning": "This module is inaccessible to users with visual, hearing, motor, or cognitive disabilities. Violations across all WCAG criteria. Complete remediation required: add captions, redesign interactions for keyboard accessibility, restructure HTML, implement ARIA, add alt text, redesign assessment. Estimated effort: weeks, not days. This is a 'cannot ship' scenario without major rebuild.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "bad_02_interactive_drag_drop_no_keyboard",
+      "title": "Drag-and-Drop Learning Activity Without Keyboard Alternative",
+      "category": "bad",
+      "context": "Interactive matching activity in online science course. Learners match plant parts to functions. Designed for mouse interaction only.",
+      "description": "Activity presents: Plant part labels (Root, Leaf, Stem, Flower) and functions (Photosynthesis, Water absorption, Support, Reproduction). Learners drag labels to match functions. Critical issues: (1) Interaction only via mouse drag-and-drop. No keyboard equivalent. (2) Visual feedback shows correct matches with green highlight; incorrect with red highlight. No audio or text announcement of feedback. (3) No skip button; if learner cannot drag/interact, they cannot proceed or move forward. (4) No alt text on images of plant parts. (5) Error message is visual only: red X appears without text announcement. (6) Mobile/touch alternative not provided. (7) Focus indicator not visible. Screen reader announces 'unlabeled button' for each draggable element.",
+      "expected_scores": {
+        "perceivable": 2,
+        "operable": 1,
+        "understandable": 2,
+        "robust": 2,
+        "udl_integration": 1,
+        "remediation_feasibility": 2
+      },
+      "reasoning": "Major barrier for motor and visual disabilities. Keyboard users cannot complete activity. Screen reader users get no meaningful feedback. Must redesign interaction: provide keyboard alternative (keyboard selection + selection, or dropdown match, or text-based matching) and provide text feedback + color. Estimate: 3-5 days to redesign and test.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "borderline_01_good_structure_missing_captions",
+      "title": "Well-Structured Course with Comprehensive Alt Text but Missing Video Captions",
+      "category": "borderline",
+      "context": "Online professional certification course. LMS platform is accessible (Moodle with proper theme). Learner population includes deaf and hard-of-hearing participants.",
+      "description": "Course demonstrates strong accessibility in most areas: (1) All text-based content clearly organized with headings, lists, and descriptive links. (2) Course images and diagrams have detailed alt text; charts include table alternatives. (3) Keyboard navigation fully functional; focus order logical. Skip links present. (4) Form fields properly labeled. Error messages clear and informative. (5) Contrast ratios consistently >4.5:1. Text resizable to 200%. (6) Mobile responsive. (7) ARIA correctly applied to interactive components. (8) However: Five instructional videos (average 8-12 minutes each) embedded in course. Videos have auto-generated captions (from YouTube auto-captioning), which are ~70% accurate. No professional captions. No audio descriptions of visual demonstrations. One video (equipment demo) is 15 minutes with no captions at all—user uploaded it and enabled auto-captioning, which fails to capture technical jargon. (9) Transcripts available for three of five videos, but not the two most recent ones.",
+      "expected_scores": {
+        "perceivable": 3,
+        "operable": 5,
+        "understandable": 5,
+        "robust": 5,
+        "udl_integration": 4,
+        "remediation_feasibility": 4
+      },
+      "reasoning": "Strong course with a critical gap: video accessibility. Deaf/hard-of-hearing learners cannot fully access video content. Borderline: must add professional captions and transcripts before course is fully compliant. Remediation: Engage captioning service for five videos (~$200-400 per video); 1-2 weeks turnaround. Remediation_feasibility score: 4 (not costly, but requires external vendor; not a quick fix).",
+      "difficulty": "medium"
+    },
+    {
+      "id": "borderline_02_accessible_but_poor_focus_indicators",
+      "title": "Keyboard-Accessible Course with Visible But Weak Focus Indicators",
+      "category": "borderline",
+      "context": "Interactive e-learning module on compliance training. Built with custom JavaScript framework.",
+      "description": "Module is largely keyboard accessible: (1) All buttons, links, and form fields reachable via keyboard. Tab order logical. (2) Content navigable without mouse. (3) Alt text present on images. (4) Captions and transcript for embedded video. (5) Contrast ratios adequate (≥4.5:1). (6) ARIA attributes correctly applied. However: Focus indicators are subtle—thin 1px gray outline on focused elements, which is hard to see against most backgrounds (especially gray/neutral backgrounds). User testing shows: keyboard users report 'losing their place' because they can't easily see which element is focused. One user commented: 'I had to press Tab multiple times to figure out where I was.' (7) Some links are underlined in blue; others are color-only (blue text on white, no underline), relying on color alone. Low-vision users report difficulty distinguishing links from regular text. (8) Graphics in activity section have alt text, but descriptions are brief ('Chart') and don't convey the point; long descriptions not provided.",
+      "expected_scores": {
+        "perceivable": 3,
+        "operable": 3,
+        "understandable": 4,
+        "robust": 4,
+        "udl_integration": 3,
+        "remediation_feasibility": 5
+      },
+      "reasoning": "Module is accessible but has usability friction for keyboard users and some low-vision users. Not a showstopper, but should be fixed: enhance focus indicators (add color/bold border, increase size to 2-3px, use high-contrast color); add underline or icon to all links; enhance alt text descriptions. Estimated effort: 2-3 days. Remediation_feasibility: 5 (quick, CSS/style fixes).",
+      "difficulty": "medium"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "archetype": "formative_evaluation_protocol",
+  "edge_cases": [
+    {
+      "id": "good_01_comprehensive_four_phase",
+      "title": "Comprehensive Evaluation Plan: All Four Bordonaro Phases with Clear Rationale",
+      "category": "good",
+      "context": "New e-learning module on cybersecurity awareness for 2,000 corporate employees. Project timeline: 12 weeks. Budget: $50K for development + evaluation.",
+      "description": "Evaluation plan includes: (1) **Expert Review (Week 2-3, 3 days)**: Three experts recruited—Information Security SME (internal), Instructional Design expert (contract), User Experience/Accessibility specialist (contract). Heuristic evaluation form and cognitive walkthrough protocol provided. Issues logged with severity ratings (Nielsen's scale). Target: 0 critical issues, <5 major before proceeding. (2) **One-to-One (Week 4-5, 5 sessions)**: Five learners recruited from target population—one above-average (IT background, quick learner), three average (typical office worker), one below-average (limited technical background, older employee). Sessions: 90 minutes each. Facilitator present; observer takes notes. Think-aloud protocol used. Post-task interview captures impressions, confusion, suggested improvements. (3) **Small Group (Week 6-7, 2 sessions)**: Two groups of 10 learners (20 total). Representative sample: mixed departments, experience levels, age groups. Facilitated group discussion after completing module. Observation form tracks: time spent, interaction quality, confusion points, engagement. (4) **Field Trial (Week 8-11, 50 employees)**: Implementation in actual learning environment with 50 employees from different departments. Pre/post knowledge assessment. Time-on-task tracked. Learner survey (SUS + open feedback). Manager interview on transfer: Did learning transfer to job performance? Barriers observed? (5) **Revision Decision Framework**: Target → Data Source → Information Gained → Revision Decision documented for each finding. Severity thresholds: Critical (affects learning or accessibility) = fix before field trial; Major (usability friction) = fix before full rollout; Minor (nice-to-have) = consider if time permits. (6) **Feasibility**: Timeline realistic and detailed with milestones. Learner recruitment plan documented (contact HR, target volunteer sample, offer $50 incentive for sessions). Facilities reserved. Data analysis assigned to ID specialist (10 hours estimated). Budget: $15K for learner incentives, $10K for expert contracts, $5K for facilitator time = $30K well within $50K budget.",
+      "expected_scores": {
+        "phase_coverage": 5,
+        "evaluator_selection": 5,
+        "data_collection_alignment": 5,
+        "revision_decision_framework": 5,
+        "feasibility_practicality": 5,
+        "usability_integration": 5
+      },
+      "reasoning": "Exemplary evaluation plan demonstrating Bordonaro's full four-phase model. Appropriate expert types. Learner sample strategically selected across ability levels. Clear data collection instruments aligned to research questions. Explicit revision decision framework with severity ratings. Fully resourced with realistic timeline. Usability methods (heuristic eval, think-aloud, observation) integrated throughout.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "good_02_expert_review_with_right_experts",
+      "title": "Expert Review Protocol with All Three Expert Types and Clear Heuristic Evaluation Checklist",
+      "category": "good",
+      "context": "Rapid evaluation needed for small interactive simulation (3-day training module). Quick turnaround; no budget for user testing. Decision: Expert review only, justified by timeline and project scope.",
+      "description": "Evaluation plan: (1) **Phases**: Expert review ONLY. Justification: 'Simulation is low-stakes refresher training; not critical learning outcome. Timeline constraints (need decision in 1 week) preclude one-to-one/small group. Expert review sufficient for quick iteration before considering additional phases if post-launch issues arise.' (2) **Evaluators**: Three expert types explicitly recruited. SME (Training Manager with 10 years in this domain); Instructional Designer (university adjunct with expertise in simulation design); Media/Usability Specialist (former web accessibility consultant). Each expert brings distinct lens. (3) **Data Collection**: Heuristic Evaluation Checklist (15 items): Does simulation use game-like elements effectively? Are learning objectives clear? Is feedback immediate and specific? Are interface metaphors intuitive? Does interaction feel natural? Is error recovery clear? Cognitive walkthrough document: 'Walk through learner's first use of simulation. At each step, ask: Is it clear what to do? Will learner know if they did it right? If they make a mistake, is correction obvious?' (4) **Instruments**: Checklist + walkthrough form both completed by each expert independently, then synthesized. Issues consolidated into log with expert agreement on severity (unanimous, 2/3 agreement, dissent noted). (5) **Timeline**: Experts receive materials; 2 days to complete evaluation; 2 hours for synthesis meeting. Report delivered by end of week. (6) **Revision Framework**: Issues ranked: 'Must fix' (critical usability or accessibility barrier), 'Should fix' (minor friction), 'Consider' (enhancement). Target: all 'must fix' addressed before launch; 'should fix' optional.",
+      "expected_scores": {
+        "phase_coverage": 5,
+        "evaluator_selection": 5,
+        "data_collection_alignment": 5,
+        "revision_decision_framework": 4,
+        "feasibility_practicality": 5,
+        "usability_integration": 5
+      },
+      "reasoning": "Strong expert review protocol with all three expert types. Clear instruments (checklist + walkthrough). Justification provided for phase choice (timeline, scope). Data collection aligned to expert review purpose. Minor: revision framework could specify numeric thresholds (e.g., 'if 3 experts mark as critical'). Highly feasible; quick turnaround; appropriate for constraints.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "bad_01_skips_to_field_trial_no_foundation",
+      "title": "Evaluation Plan That Jumps Directly to Field Trial Without Expert Review or Learner Testing",
+      "category": "bad",
+      "context": "New online course for high school math. Team decided to 'just deploy and see how it goes.' No upfront evaluation.",
+      "description": "Evaluation plan (such as it is): (1) **Phases**: Field trial only. Justification: 'We'll see if students learn it. No time for other phases.' No expert review, no one-to-one, no small group. (2) **Evaluators**: None explicitly identified. Plan says 'Teachers will monitor.' No specification of what teachers monitor or how feedback is collected. (3) **Data Collection**: Vague. 'We'll look at test scores at end of semester.' No formative feedback. No usability observations. No learner interviews. No instructor feedback protocols. (4) **Instruments**: None provided. No observation forms, no interview guides, no heuristic checklist. (5) **Revision Framework**: No decision process. 'If students fail, we'll figure out what to change.' No severity ratings. No prioritization. (6) **Timeline**: Deployment immediate; evaluation happens organically over 4 months (semester). By then, course is 'live' and any major issues have already affected hundreds of students. (7) **Feasibility**: Cost-free evaluation sounds efficient but is high-risk. No instructor training on what to observe. No learner consent for data collection. Data collection methods undefined; likely haphazard.",
+      "expected_scores": {
+        "phase_coverage": 1,
+        "evaluator_selection": 1,
+        "data_collection_alignment": 1,
+        "revision_decision_framework": 1,
+        "feasibility_practicality": 2,
+        "usability_integration": 1
+      },
+      "reasoning": "Non-starter evaluation plan. Skips all foundational phases (expert, one-to-one, small group) and jumps to field trial in live classroom. No expert eyes catch obvious issues before students encounter them. No learner feedback mechanism; any issues discovered post-deployment. No usability methods. Impossible to iterate effectively. High risk of student dissatisfaction and poor learning outcomes. This is a 'must redesign' scenario.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "bad_02_no_data_collection_instruments",
+      "title": "Evaluation Plan With Phases Outlined But No Actual Data Collection Instruments or Methods",
+      "category": "bad",
+      "context": "Enterprise software training module (LMS). Manager assigned evaluation task with 6-week timeline.",
+      "description": "Plan documents: (1) **Phases**: 'We'll do expert review, one-to-one, and small group.' (2) **Evaluators**: 'Get some experts and a few learners.' (3) **Data Collection**: Plan says: 'We'll collect feedback during expert review. Learners will try it and tell us what they think. Small group will discuss.' No instruments provided. No observation forms. No interview guides. No heuristic evaluation checklist. No forms for recording feedback. (4) **What does 'feedback' mean?** Unclear. Expert review evaluator shows up and... does what exactly? No protocol. (5) **One-to-one description**: 'We'll have learners use the module and observe. They'll tell us if they like it.' No think-aloud protocol. No timing. No specific questions. Just 'observe' and 'tell us.' (6) **Small group**: 'We'll have a discussion after they use the module.' No facilitation guide. No discussion prompts. No observation form for group dynamics. How long? How many participants? Unspecified. (7) **Revision Framework**: None. 'We'll see what feedback we get and decide if we need to change anything.' No severity ratings. No prioritization. No threshold for what constitutes 'we need to change.' (8) **Data Synthesis**: How will feedback be consolidated? Who analyzes? No data analysis plan. Risk: vague, contradictory feedback with no systematic way to resolve conflicts.",
+      "expected_scores": {
+        "phase_coverage": 3,
+        "evaluator_selection": 2,
+        "data_collection_alignment": 1,
+        "revision_decision_framework": 1,
+        "feasibility_practicality": 2,
+        "usability_integration": 1
+      },
+      "reasoning": "Phases are outlined, but without instruments, the evaluation will be chaotic and unreliable. Experts show up without protocol; learners participate without clear task; facilitators wing it. Data collected will be anecdotal, possibly contradictory, and difficult to synthesize. Revision decisions will be ad-hoc and potentially biased. Must create instruments (observation forms, interview guides, heuristic checklist) and define facilitation protocols before executing.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "borderline_01_good_phases_wrong_evaluators",
+      "title": "Four-Phase Plan With Appropriate Phases But Wrong Evaluator Types Selected",
+      "category": "borderline",
+      "context": "Online course on project management for corporate audiences. Evaluation plan documented with timeline and budget.",
+      "description": "Plan includes all four phases with clear timeline and resources. (1) **Expert Review**: Described as 'We'll have the course SME, the instructional designer, and a manager from the target department.' Issue: Missing media/technology/usability specialist. The three reviewers are strong on content and learning design, but none have expertise in interface design, accessibility, or user experience. Course uses a custom LMS interface that may have usability issues these reviewers won't catch. (2) **One-to-One**: Plan says 'We'll recruit three learners from the target department.' Issue: No ability stratification. All three are 'typical users' with 5+ years in project management. Plan is missing a below-average learner (e.g., new to PM, learning quickly, or slower learner). Below-average learner might encounter pacing/clarity issues that typical learners overlook. (3) **Small Group**: 'We'll invite 10 learners.' Good size. But no specification of how they're selected. Risk: self-selected volunteers may not be representative; may over-represent high-motivation learners. (4) **Field Trial**: 'We'll deploy to two departments (50+ learners).' Good scope. But timeline unclear. How long? Concurrent with other phases or sequential? (5) **Data Collection**: Methods sound: observation, interview, post-test survey, discussion. (6) **Revision Framework**: Clear severity ratings defined. (7) **Timeline**: Realistic and detailed. (8) **Feasibility**: Well-budgeted and feasible.",
+      "expected_scores": {
+        "phase_coverage": 5,
+        "evaluator_selection": 2,
+        "data_collection_alignment": 4,
+        "revision_decision_framework": 4,
+        "feasibility_practicality": 5,
+        "usability_integration": 2
+      },
+      "reasoning": "Good plan with methodological gaps in evaluator selection and usability integration. Missing media/tech expert means potential interface/usability issues won't be caught. Missing below-average learner in one-to-one means pacing problems may be missed. Needs: Add UX specialist to expert review; recruit stratified one-to-one sample (above/average/below); add heuristic evaluation for interface. Feasible to fix; would improve plan quality significantly.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "borderline_02_thorough_data_no_revision_framework",
+      "title": "Comprehensive Data Collection Plan But Missing Revision Decision Framework",
+      "category": "borderline",
+      "context": "Professional certification course redesign. Three-month pilot with 100 learners.",
+      "description": "Plan includes: (1) **Phases**: All four phases; clear timeline and justification. (2) **Evaluators**: Appropriate experts selected (SME, ID, UX specialist); learner sample stratified by experience level; facilitators trained. (3) **Data Collection**: Very thorough. Observation forms with 20+ items tracking: interaction quality, confusion points, time-on-task, help-seeking behavior. Interview guides for one-to-one (15 open-ended questions). Focus group discussion guide for small group. Pre/post achievement test with item analysis. SUS survey for usability rating. Learner satisfaction survey. Manager follow-up interview on transfer. Usage analytics tracked. Attendance and completion rates recorded. (4) **Data Quality**: All instruments validated or piloted. Clear data collection protocols. (5) **However**: **No Revision Decision Framework**. Plan describes data collection in detail but says: 'Analysis will identify issues and recommendations.' No severity ratings. No threshold defined for 'what magnitude of finding triggers revision?' For example: If 30% of learners report confusion on Module 3, is that critical? Minor? If time-on-task is 20% over estimate, does that trigger redesign? If SUS score is 70, is that acceptable? No explicit criteria. (6) **Synthesis Process**: Who synthesizes data? How are conflicting findings resolved? Not specified. Risk: Analysis paralysis or subjective decision-making based on gut feel rather than data.",
+      "expected_scores": {
+        "phase_coverage": 5,
+        "evaluator_selection": 5,
+        "data_collection_alignment": 5,
+        "revision_decision_framework": 2,
+        "feasibility_practicality": 4,
+        "usability_integration": 5
+      },
+      "reasoning": "Excellent data collection plan with a critical gap: revision decision framework. Collecting data is half the battle; knowing what to do with it is the other half. Without severity ratings or decision thresholds, the team will have abundant data but struggle to prioritize revisions. Fix: Define severity scale (critical/major/minor); set decision thresholds (e.g., 'If 40%+ of learners report barrier, redesign'; 'If SUS <65, improve interface'); document data synthesis process. Estimated effort: 1-2 hours of facilitated team discussion.",
+      "difficulty": "medium"
+    }
+  ]
+}

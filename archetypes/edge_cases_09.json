@@ -1,0 +1,108 @@
+{
+  "archetype": "cognitive_neuroscience",
+  "version": "1.0.0",
+  "edge_cases": [
+    {
+      "case_id": "09_good_01",
+      "title": "Lesson Design with Clear 5E Phases, Spaced Retrieval, Emotional Engagement, Multiple Encoding",
+      "category": "good",
+      "description": "A high school biology lesson on photosynthesis designed with explicit 5E phases: (1) Engage: Students observe a plant under grow light vs. darkness for 30 seconds—novelty and curiosity-driven (reticular activating system). (2) Explore (15 min): Students simulate photosynthesis using colored light, colored water, and observing reactions. Hands-on, procedural learning (basal ganglia). (3) Brief reflection (5 min, diffuse attention). (4) Explain (12 min, after exploration): Teacher explains the light-dependent and light-independent reactions, connecting to what students observed. Declarative learning via prefrontal cortex, building on procedural experience. (5) Elaborate: Over the next week, retrieval practice via: Day 1: diagram labeling; Day 3: mini-quiz; Day 7: apply photosynthesis to crop yield scenarios (transfer). Varied contexts (pure knowledge, application, real-world). (6) Evaluate: Students reflect on what conditions maximize photosynthesis and explain to a partner. Emotional stakes: they care about understanding because they grew plants themselves. Multiple encoding: episodic (the grow-light experience), semantic (the concept explanation), procedural (the simulation). Spaced retrieval is systematic and distributed over a week.",
+      "expected_scores": {
+        "5e_model_alignment": 5,
+        "memory_system_optimization": 5,
+        "attention_management": 5,
+        "emotional_engagement_for_encoding": 4,
+        "synaptic_strengthening_factors": 5,
+        "theory_practice_grounding": 5,
+        "overall": 4.8,
+        "rationale": "Exemplary neuroscience-grounded design. All five 5E phases are present, distinct, and neurologically purposeful. Exploration (procedural) precedes explanation (declarative)—this is neurologically critical. Attention is managed: 15-min explore, 5-min break, 12-min explain. Emotional engagement comes from the personal experience (students grew the plants). All three memory systems engaged: episodic (the observation), semantic (the concept), procedural (the simulation). Spaced retrieval spans a week with varied contexts. All five synaptic strengthening factors present and integrated. Design is explicitly grounded in BSCS 5E and spacing effect research. Very high likelihood of durable, transferable learning."
+      },
+      "notes": "This is best-practice neuroscience-grounded instruction. The only minor weakness (score 4 on Emotional Engagement rather than 5) is that the emotional stakes are intrinsic (students like the activity) but could be heightened by adding explicit relevance (e.g., 'Understanding photosynthesis helps us address food security in a warming climate'). Overall, this is an exemplary case."
+    },
+    {
+      "case_id": "09_good_02",
+      "title": "Workshop with Attention Management, Imagination/Visualization, Emotional Engagement, Spaced Practice",
+      "category": "good",
+      "description": "A professional development workshop on change management for corporate managers. Structure: (1) Opening segment (15 min): Engage. A short video of an actual organizational change failure (emotional engagement, relevance). (2) Segment 1 (18 min): Explore. Small groups discuss a real change scenario (anonymized from their organization). What went wrong? What would they do? Procedural learning through authentic problem-solving (basal ganglia engagement). (3) Break (5 min). (4) Segment 2 (15 min): Explain. Instructor presents change management research (Kotter's change model, resistance patterns, stakeholder analysis). Builds on what groups discussed. Declarative learning via prefrontal cortex. (5) Segment 3 (15 min): Elaborate. Participants mentally simulate a change initiative in their own organization using guided visualization: 'Imagine you're leading a shift to remote-first work. What's the biggest resistance point? How would you address it?' (imagination, episodic encoding). (6) Break (5 min). (7) Segment 4 (20 min): Action planning. Participants develop a specific change initiative action plan and share with a partner. (8) Closing (5 min): Metacognitive reflection. Evaluation. Emotional engagement is high because the content is personally relevant and the scenarios are authentic. Follow-up: 2-week email with a retrieval practice prompt ('What was one resistance pattern you learned?') and 4-week live virtual meetup to discuss implementation. Spaced retrieval across 4 weeks. All three memory systems engaged: episodic (the scenarios, the visualization), semantic (change management concepts), procedural (the action planning).",
+      "expected_scores": {
+        "5e_model_alignment": 4,
+        "memory_system_optimization": 5,
+        "attention_management": 5,
+        "emotional_engagement_for_encoding": 5,
+        "synaptic_strengthening_factors": 5,
+        "theory_practice_grounding": 4,
+        "overall": 4.7,
+        "rationale": "Excellent neuroscience-grounded design with near-perfect attention management and emotional engagement. All 5E phases are present, though Explain comes slightly later than ideal (after group discussion but before formal elaboration—this is acceptable). Attention is managed via 15-20 min segments with breaks. Emotional engagement is authentic and personal (participants care about change management because it affects their jobs). All three memory systems are engaged. Spaced retrieval extends beyond the workshop (2-week email, 4-week follow-up). All five synaptic strengthening factors present. Theory-practice grounding is mostly explicit (Kotter's model is named) though could be stronger. Strong likelihood of transfer to actual change initiatives."
+      },
+      "notes": "This workshop demonstrates how neuroscience principles scale to professional development. The minor weakness (5E alignment = 4 rather than 5) is that the formal Explain phase comes after group exploration, which is slightly non-standard, but this is actually pedagogically sound for adult learners (discussion first, then input). Theory grounding could be stronger by explicitly citing spacing effect and emotional-memory interaction research. Overall, excellent design."
+    },
+    {
+      "case_id": "09_bad_01",
+      "title": "90-Minute Lecture with No Breaks, No Interaction, No Attention Management",
+      "category": "bad",
+      "description": "A compliance training module: 90-minute continuous video lecture on workplace harassment policies, benefits procedures, and IT security. No segments, no breaks, no interaction. Lecture is presented by HR manager reading from slides. Visuals are static bullet points. Learners must sit through the entire 90 minutes without pause. Content is important but delivery is information-delivery only. No engagement phase (no hook, no relevance-building). No exploration (no scenarios, no practice). Lecture is explanation only (declarative information dump). No elaboration (no retrieval practice, no varied contexts). No evaluation (no reflection, no metacognition). Emotional engagement is absent (no personal relevance, no productive struggle). Content is divorced from learners' actual work. Attention requirements are unsustainable: sustained attention degrades after 15-20 minutes, but learners are expected to maintain focus for 90 minutes. Memory encoding relies solely on semantic pathway (listening to policies), with no episodic (experience) or procedural (practice) engagement.",
+      "expected_scores": {
+        "5e_model_alignment": 1,
+        "memory_system_optimization": 1,
+        "attention_management": 1,
+        "emotional_engagement_for_encoding": 1,
+        "synaptic_strengthening_factors": 1,
+        "theory_practice_grounding": 1,
+        "overall": 1.0,
+        "rationale": "Complete failure on all neuroscience dimensions. No recognizable 5E structure; this is pure Explain with no Engage, Explore, Elaborate, or Evaluate. Only semantic memory pathway engaged; no episodic or procedural. Attention management is non-existent; 90-minute continuous lecture violates sustained attention limitations. No emotional engagement; content feels imposed and irrelevant. No synaptic strengthening factors present; massed information delivery with no repetition, application, imagination, or emotional stakes. Atheoretical design; driven by compliance need, not learning theory. Likelihood of retention and transfer is very low. Learners will forget most content within days."
+      },
+      "notes": "This is a common scenario in organizational training: compliance content delivered via lecture because it's required, not because it's effective. The fix is substantial: segment into 15-min chunks, add scenarios, add retrieval practice follow-ups, build personal relevance ('Here's why this matters to your team'), engage multiple memory pathways."
+    },
+    {
+      "case_id": "09_bad_02",
+      "title": "Instruction Using Fear and Punishment as Motivators; Massed Practice with No Spacing",
+      "category": "bad",
+      "description": "A workplace safety training for construction workers on fall prevention. The instruction opens with highly graphic accident videos (worker falls from scaffolding, severe injury, death-like imagery). Goal is to 'scare workers into compliance.' Then, rapid-fire quiz: workers answer 20 safety questions in rapid succession in one 40-minute session. No spacing. No retrieval practice after the initial session. If a worker fails the quiz, they must retake it immediately (massed practice, not spaced). No reflection on why certain practices matter (no declarative learning, no understanding—just compliance through fear). Emotional engagement is high, but in the wrong direction: high anxiety (amygdala hijack). Research (Yerkes-Dodson law, threat detection) shows that this level of emotional arousal shuts down prefrontal cortex and impairs learning. Learners focus on survival (avoiding the scary video) rather than understanding fall prevention principles. Memory encoding is weak because fear-based encoding is shallow and context-specific. No elaboration or application to real work scenarios. No spaced retrieval. Synaptic strengthening factors are absent: massed practice, no application, no imagination, emotional arousal is counterproductive. Likely outcome: learners pass the quiz to avoid punishment, forget content quickly, and apply safety practices inconsistently because they never internalized the principles.",
+      "expected_scores": {
+        "5e_model_alignment": 1,
+        "memory_system_optimization": 1,
+        "attention_management": 2,
+        "emotional_engagement_for_encoding": 1,
+        "synaptic_strengthening_factors": 1,
+        "theory_practice_grounding": 1,
+        "overall": 1.2,
+        "rationale": "Severe neuroscience violations on all dimensions. No 5E structure; just scare + quiz. Memory encoding is minimal because fear-based learning is shallow. Attention management is poor; 40-minute quiz session is too long, and attention is consumed by threat response rather than learning. Emotional engagement is present but counterproductive; high anxiety triggers amygdala hijack, shutting down prefrontal cortex. This impairs learning severely. No synaptic strengthening factors present; massed practice, no meaningful application, no imagination, emotional arousal is debilitating. Atheoretical design; assumes fear motivates learning (false; it impairs learning). Likelihood of durable, transferable safety knowledge is very low. Likely outcome: compliance without understanding, rapid forgetting, inconsistent application."
+      },
+      "notes": "This is a cautionary case: well-intentioned safety training that backfires. The amygdala hijack (threat-based learning) actually *impairs* the prefrontal cortex reasoning needed for safety judgment. The fix: replace fear with productive struggle and authentic stakes. Show real scenarios where workers must make judgment calls ('You're working at height on a breezy day. The handrail setup is suboptimal. What's your move?'). Add spaced retrieval. Build understanding, not just compliance."
+    },
+    {
+      "case_id": "09_borderline_01",
+      "title": "Good 5E Structure but Exploration Phase is Teacher-Directed, Not Learner-Directed",
+      "category": "borderline",
+      "description": "A middle school math lesson on fractions: (1) Engage: Brief video hook on fractions in cooking (why do recipes say '1/4 cup'?). (2) Explore (20 min): The teacher demonstrates fractions using a pizza pie model, breaking it into pieces and asking students to observe and answer questions the teacher asks. Students watch and respond, but don't manipulate the materials themselves. They see the teacher cut, they don't cut. (3) Explain (15 min): Teacher explains numerator/denominator, equivalence. (4) Elaborate (10 min): Guided practice problems. (5) Evaluate: Partner discussion. All five 5E phases are present. Attention is managed (segments are reasonable). Emotional engagement is moderate (pizza hook is relatable). However, the Explore phase violates a critical principle: it's teacher-demonstrated exploration, not learner-directed. Students' basal ganglia (procedural learning through doing) are not engaged; only the visual cortex (observation) is engaged. The procedural pathway is underdeveloped because students didn't manipulate, measure, or cut the fractions themselves. This reduces the effectiveness of the Explore phase and weakens the subsequent Explain phase. Students are observing procedure but not performing it, which reduces encoding robustness.",
+      "expected_scores": {
+        "5e_model_alignment": 4,
+        "memory_system_optimization": 3,
+        "attention_management": 4,
+        "emotional_engagement_for_encoding": 3,
+        "synaptic_strengthening_factors": 3,
+        "theory_practice_grounding": 4,
+        "overall": 3.5,
+        "rationale": "All five 5E phases are present, which is good (score 4, not 5, because Explore should be learner-directed, not teacher-directed). Memory optimization is weak (score 3) because the procedural pathway is underdeveloped—students observed but didn't do. Episodic memory (their own experience cutting fractions) is missing. Attention management is good. Emotional engagement is moderate (pizza is relatable but stakes are low). Synaptic strengthening factors are partially present: repetition yes, but application is limited to guided practice, and imagination is not explicitly supported. Theory grounding is good (5E is named). This instruction would be more effective if students manipulated pizza slices themselves, explaining to each other how fractions work, before the teacher explains formally."
+      },
+      "notes": "This represents a common teaching challenge: wanting to show/demonstrate vs. letting learners do. The fix is straightforward: in Explore, have students cut/fold paper pizza slices, measure, and report what they observe ('What did you notice when you cut the pizza in half?') before the teacher explains fractions formally. This engages the procedural pathway and strengthens the overall learning."
+    },
+    {
+      "case_id": "09_borderline_02",
+      "title": "Strong Emotional Engagement and Authentic Context but No Spaced Retrieval or Elaborate Phase",
+      "category": "borderline",
+      "description": "A customer service training for retail employees: (1) Engage: Real (video) customer complaint scenarios from actual customer calls. (2) Explore (25 min): Employees role-play handling difficult customer interactions in small groups. Lots of procedural engagement (basal ganglia). (3) Explain (10 min): Manager debriefs: 'Here's what you did well. Here's what to adjust.' (4) Brief evaluation (5 min): Employees reflect on their own performance. Training concludes. Emotional engagement is very high: employees care about customer service because it affects their job directly. Authentic scenarios (real customer calls). Productive struggle: handling angry customers is genuinely difficult. All three 5E phases are present (Engage, Explore, Explain, Evaluate; minimal Elaborate). However, there is no systematic follow-up. No spaced retrieval practice. No retrieval cues at 1 day, 3 days, 1 week post-training. No continued emotional engagement or application opportunities after the workshop. Memory encoding is strong in the moment (episodic: they experienced the scenario, emotional stakes are high) but consolidation is likely weak without elaboration and spaced retrieval. Likelihood of forgetting key principles within days is high. No application to other customer scenarios. Transfer is uncertain.",
+      "expected_scores": {
+        "5e_model_alignment": 4,
+        "memory_system_optimization": 2,
+        "attention_management": 4,
+        "emotional_engagement_for_encoding": 5,
+        "synaptic_strengthening_factors": 3,
+        "theory_practice_grounding": 3,
+        "overall": 3.5,
+        "rationale": "Strong engagement and authentic context but missing the critical Elaborate phase. 5E alignment is 4 (all five phases present but Elaborate is minimal). Memory optimization is weak (2) because there's no spaced retrieval; semantic and procedural are engaged in the moment but won't be consolidated. Attention management is good. Emotional engagement is excellent. Synaptic strengthening factors are partially present: application (yes, in the scenario), emotion (yes), imagination (limited), repetition/spacing (no), memory variation (no). Theory grounding is moderate (employee engagement and role-play are grounded in situational learning, but spacing effect is not applied). The instruction is effective in the moment but forgetting curves suggest most content will be forgotten within days without spaced retrieval follow-ups."
+      },
+      "notes": "This is a high-engagement design that could be elevated significantly with one addition: systematic spaced retrieval after the training. Send a reminder email at 1 day, 3 days, 1 week with scenarios and reflection prompts ('Think of a customer interaction from this week. What did you do well? What would you do differently?'). This would move the memory system optimization from 2 to 4-5 and the overall score from 3.5 to 4.2+. The emotional engagement is already there; the missing piece is consolidation."
+    }
+  ]
+}

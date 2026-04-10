@@ -1,0 +1,108 @@
+{
+  "archetype": "story_design",
+  "version": "1.0.0",
+  "edge_cases": [
+    {
+      "case_id": "08_good_01",
+      "title": "Branching Compliance Scenario with Realistic Characters Facing Genuine Dilemmas",
+      "category": "good",
+      "description": "A healthcare compliance training scenario where a hospital billing clerk encounters a situation where a supervisor pressures them to code a procedure incorrectly to reduce costs. The scenario presents the clerk with genuine dilemmas: comply with the supervisor (short-term job security risk, violates ethics), refuse (career risk), or find a middle path (escalate to compliance officer, longer timeline, may face retaliation). Each choice has meaningful, realistic consequences that reflect actual workplace tension. The story builds trust with the character, showing their financial struggles and tenure at the hospital, making the dilemma emotionally authentic. Wrong choices (complying with the supervisor) lead to instructive consequences—the character learns about audit trails, legal liability, and institution penalties. Right choices (escalating) show the protections in place and the organization's actual compliance culture. Branches diverge significantly based on learner choices; no forced reconvergence.",
+      "expected_scores": {
+        "narrative_structure": 5,
+        "learning_narrative_integration": 5,
+        "character_situation_authenticity": 5,
+        "emotional_engagement_motivation": 4,
+        "decision_points_branching_quality": 5,
+        "transfer_generalizability": 4,
+        "overall": 4.7,
+        "rationale": "Excellent use of branching to show genuine workplace dilemmas with realistic consequences. Characters have depth (financial pressure, tenure, values conflict). Emotional engagement is high but not anxiety-inducing. Learning objectives (understanding compliance procedures, protecting yourself legally, recognizing retaliation) are embedded in the narrative tension. Learners can extract principles about speaking up safely that transfer beyond healthcare."
+      },
+      "notes": "This represents best practice for interactive scenario design. The key strength is that learner choice actually matters—each path teaches different content. The weakness (minor) is that Emotional Engagement could be slightly higher if the supervisor's perspective were shown (perspective-taking), but this might dilute focus for learners."
+    },
+    {
+      "case_id": "08_good_02",
+      "title": "Linear Narrative Case Study Where Story IS the Instruction with Clear Transfer",
+      "category": "good",
+      "description": "A case study for project managers on stakeholder management, told as the narrative of a real (anonymized) project failure. The story follows a project manager who inherits a troubled software implementation project. Through the narrative, learners encounter the project manager's challenges: stakeholders with conflicting priorities, poor communication from previous PM, scope creep, technical issues. The story doesn't state learning objectives up front; instead, learners see the PM make decisions (some good, some bad) and experience the consequences. By the end, learners have implicitly learned: the importance of stakeholder mapping, the cost of poor communication, how scope changes accumulate, when to escalate vs. absorb risk. The case is specific to software implementation (authentic to the target audience of IT PMs) but principles generalize to other industries. Narrative structure follows the problem-solving arc: context → crisis → attempts at resolution → partial success → lessons learned. The story never stops to explain the lesson; the lesson emerges from the narrative.",
+      "expected_scores": {
+        "narrative_structure": 4,
+        "learning_narrative_integration": 5,
+        "character_situation_authenticity": 5,
+        "emotional_engagement_motivation": 4,
+        "decision_points_branching_quality": 4,
+        "transfer_generalizability": 5,
+        "overall": 4.5,
+        "rationale": "Exceptional integration of learning into narrative. Principles emerge organically from story events rather than being stated. Characters and situations are highly authentic to IT PMs. Transfer is excellent—principles about stakeholder management, communication, and scope are generalizable beyond software. Emotional engagement is strong (project failure creates stakes). Narrative structure is clear (problem → response → outcome → reflection) though not explicitly a Hero's Journey. Linear form means no branching complexity, but Decision Points score reflects embedded decision-making within the case."
+      },
+      "notes": "This exemplifies how narrative and learning can be inseparable in linear instruction. The weakness (minor) is that Narrative Structure could be stronger if the case explicitly mapped to a framework, but this might feel heavy-handed for adult professionals."
+    },
+    {
+      "case_id": "08_bad_01",
+      "title": "Scenario with Overly Obvious Correct Answers and No Real Tension",
+      "category": "bad",
+      "description": "A customer service training scenario where an agent meets an angry customer. At each decision point, the 'right' choice is obvious: 'Empathize and listen' is always correct; 'Dismiss the customer's concerns' is always wrong. The scenario presents a customer complaint, and the agent chooses between good practices (listen, apologize, offer solution) or bad practices (ignore, argue, blame the customer). There's no genuine tension; no choice creates real consequences because the right choice is always apparent and cost-free. The scenario doesn't explore what happens if the agent tries to listen but the customer is abusive, or if listening requires admitting the company's fault. Characters are generic (angry customer, helpful agent). The emotional stakes are low because the customer's complaint is trivial (long wait time) and the resolution is simple. No learning challenge emerges from the narrative—the training just illustrates pre-stated best practices.",
+      "expected_scores": {
+        "narrative_structure": 2,
+        "learning_narrative_integration": 1,
+        "character_situation_authenticity": 2,
+        "emotional_engagement_motivation": 2,
+        "decision_points_branching_quality": 1,
+        "transfer_generalizability": 2,
+        "overall": 1.7,
+        "rationale": "This scenario fails on multiple dimensions. Learning objectives are imposed externally (best practices); story is window dressing. Decisions are not meaningful because the right choice is always obvious. Characters are one-dimensional archetypes. Emotional engagement is low because there are no stakes or tension. Transfer is unlikely because learners haven't encountered realistic dilemmas they'll face on the job (abusive customers, conflicting priorities, no clear solution). This type of scenario teaches compliance with a procedure but not judgment or transfer."
+      },
+      "notes": "A common mistake: confusing 'best practices' with 'realistic challenges.' Learners disengage when the right answer is obvious. Better approach: introduce genuine tension (e.g., 'You want to listen, but the customer is yelling and other customers are waiting. What do you do?') and show the tradeoffs of each choice."
+    },
+    {
+      "case_id": "08_bad_02",
+      "title": "Story that's Entertaining but Learning Objectives are Tacked On",
+      "category": "bad",
+      "description": "An onboarding e-learning module for a financial services company that opens with an entertaining story: a new analyst protagonist navigates their first week, makes friends at lunch, learns the office layout, attends team meetings. The story is engaging and relatable—new employees see themselves in the protagonist. However, halfway through, the narrative stops and a voiceover announces: 'Here are the five key policies you must know: compliance, expense reporting, confidentiality, cybersecurity, and conflicts of interest.' Each policy is then explained in bullet-point form while the story pauses. After the policies are presented, the story resumes briefly (protagonist completes compliance training) and ends. The learning objectives (understanding the five policies) were external to the narrative; the story served to engage the audience, but the actual learning was separated from the narrative. Transfer is weak because learners haven't seen the protagonist apply the policies to realistic scenarios; they've just heard the rules stated.",
+      "expected_scores": {
+        "narrative_structure": 4,
+        "learning_narrative_integration": 1,
+        "character_situation_authenticity": 4,
+        "emotional_engagement_motivation": 4,
+        "decision_points_branching_quality": 3,
+        "transfer_generalizability": 1,
+        "overall": 2.6,
+        "rationale": "The story itself is well-crafted (character, setting, authentic scenarios) and emotionally engaging. But learning and narrative are disconnected. The learning segment (five policies explained) is pedagogical, not narrative. This is a missed opportunity: the protagonist could have faced situations where each policy mattered (e.g., a scenario requiring confidentiality judgment, or a conflict of interest dilemma). Instead, learning is bolted on, and learners are unlikely to extract principles they can apply to their own judgment calls. Transfer is very low."
+      },
+      "notes": "A common approach: use narrative to hook engagement, then lecture. Better approach: weave the five policies into the story as challenges the protagonist faces. Show what happens when policies matter; let learners see consequences of policy violations or adherence."
+    },
+    {
+      "case_id": "08_borderline_01",
+      "title": "Strong Narrative Structure but Characters Not Relatable to Target Audience",
+      "category": "borderline",
+      "description": "A case study on project leadership designed for high-tech project managers, but the narrative follows a construction project manager leading a skyscraper renovation. The story has excellent narrative structure (clear problem, escalating challenges, climactic decision, resolution, lessons). The project manager character has depth (struggles with aging infrastructure, team dynamics, client expectations). Emotional engagement is strong (high stakes, real consequences). Decision points are meaningful. However, the target audience (software/IT PMs) may not relate to the construction context—different timelines (construction spans years; software projects span months), different constraints (physical materials vs. code), different failure modes (collapse risk vs. security vulnerabilities). The principles of project leadership are somewhat generalizable (stakeholder management, scope management, risk mitigation) but learners may dismiss them as 'not applicable to tech.' Characters are authentic to construction but not to the IT world.",
+      "expected_scores": {
+        "narrative_structure": 5,
+        "learning_narrative_integration": 4,
+        "character_situation_authenticity": 2,
+        "emotional_engagement_motivation": 4,
+        "decision_points_branching_quality": 4,
+        "transfer_generalizability": 2,
+        "overall": 3.5,
+        "rationale": "Excellent narrative structure and emotional engagement, but context mismatch undermines character authenticity and transfer. The story is compelling for construction audiences but may feel irrelevant to IT PMs. The learning objective (project leadership principles) is mostly embedded in narrative, but learners may struggle to extract principles that apply to their context. This case demonstrates the importance of target audience alignment: a strong story in the wrong context is less effective than a mediocre story in the right context."
+      },
+      "notes": "Fix: Redesign with IT-specific contexts (e.g., a mobile app project, a cloud migration, an integration project). Keep the narrative structure and decision-making framework but ground them in the target audience's world. Or, if construction is intentional (e.g., teaching cross-industry project management principles), add explicit scaffolding to help IT PMs see the parallels."
+    },
+    {
+      "case_id": "08_borderline_02",
+      "title": "Great Decision Points but Consequences are Unrealistic",
+      "category": "borderline",
+      "description": "A branching scenario for call center supervisors managing difficult employees. The scenario presents a supervisor who must decide how to respond to an agent who is consistently late and has declining performance. Decision points offer realistic dilemmas: 'Implement a performance improvement plan (fair but time-consuming)' vs. 'Terminate the agent (quick but risky)' vs. 'Have a private coaching conversation (uncertain outcome).' Each choice branches meaningfully. However, the consequences of each path are somewhat unrealistic: choosing to coach leads to a dramatic turnaround (agent improves 100%, stays happy), termination is resolved instantly with no legal complications or team morale impact, and the PIP path shows perfect documentation and compliance. In reality, coaching conversations are uncertain, termination has legal and HR complexities, and PIPs don't always succeed. The scenario presents good decision points but sanitizes the messiness of real consequences. Emotional engagement is moderate because learners don't encounter the actual complexity they'll face.",
+      "expected_scores": {
+        "narrative_structure": 4,
+        "learning_narrative_integration": 4,
+        "character_situation_authenticity": 3,
+        "emotional_engagement_motivation": 3,
+        "decision_points_branching_quality": 4,
+        "transfer_generalizability": 2,
+        "overall": 3.3,
+        "rationale": "Decision points are thoughtful and branch meaningfully, showing good instructional design. However, consequences are idealized, reducing authenticity and transfer. Real supervision is messy (outcomes are uncertain, legal risks exist, team dynamics complicate simple choices). Learners may be surprised when real consequences are more complex than the scenario predicted. Learning is partially embedded (supervisor faces real decisions) but the learning is simplistic because consequences are sanitized."
+      },
+      "notes": "Fix: Add realistic complexity to consequences. Show that coaching may not work; that termination requires HR involvement and documentation; that even perfect PIP implementation may not save the relationship. This makes the scenario less 'tidy' but more transferable. Learners will be better prepared for actual ambiguity."
+    }
+  ]
+}
