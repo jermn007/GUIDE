@@ -70,7 +70,7 @@ The framework draws on 20+ named sources across instructional design, cognitive 
 
 ## Self-Evaluation
 
-The framework has been evaluated against its own rubrics ("eating our own cooking"). The v3.0.0 rubric document scores a composite **4.0/5.0** across the 6 applicable archetypes, up from 3.4/5.0 in v2.2.0. See `GUIDE_Self_Evaluation_v3_Comparison.md` for the full before/after analysis.
+The framework has been evaluated against its own rubrics. The v3.0.0 rubric document scores a composite **4.0/5.0** across the 6 applicable archetypes, up from 3.4/5.0 in v2.2.0. See `GUIDE_Self_Evaluation_v3_Comparison.md` for the full before/after analysis.
 
 ## License
 
