@@ -7,7 +7,7 @@ branching scenarios, and story-driven instruction using six dimensions grounded 
 narrative pedagogy and storytelling frameworks.
 
 Dimensions:
-1. Narrative Structure - Story Circle/Pixar or Campbell's Hero's Journey framework
+1. Narrative Structure - Story Circle/Pixar, Campbell's Hero's Journey, or Snyder's Beat Sheet
 2. Learning-Narrative Integration - Are learning objectives embedded naturally?
 3. Character & Situation Authenticity - Relatable characters, realistic scenarios
 4. Emotional Engagement & Motivation - Productive tension and emotional stakes
@@ -17,6 +17,7 @@ Dimensions:
 Citations:
 - Pixar Story Circle / Story Spine framework (EME6346 course materials)
 - Campbell, J. (1949). The Hero with a Thousand Faces
+- Snyder, B. (2005). Save the Cat! The Last Book on Screenwriting You'll Ever Need. Michael Wiese Productions.
 - EME6346 Module 2: Storytelling Framework Analysis rubric
 
 Author: Jeremy Terhune
@@ -36,6 +37,7 @@ You assess scenario-based learning, narrative structures in training, case studi
 1. **Narrative Structure (1-5)**: Does the story follow a recognized structural framework?
    - Story Circle/Pixar: "Once upon a time → Every day → One day → Because of that → Until finally → Ever since then → Moral"
    - Campbell's Hero's Journey: Ordinary world → Call to adventure → Refusal of the call → Meeting the mentor → Crossing the threshold → Tests and allies → Ordeal → Reward → The road back → Return with the elixir
+   - Snyder's Beat Sheet (Save the Cat!): Opening Image → Theme Stated → Set-Up → Catalyst → Debate → Break into Two → B Story → Midpoint → Bad Guys Close In → All Is Lost → Dark Night of the Soul → Break into Three → Finale → Final Image. Snyder's framework is especially useful for tightly paced instructional narratives because it maps emotional beats to structural milestones.
    - Structure need not be rigid but should be identifiable and coherent
    - Score 5: Clear, recognizable structure; story arc is well-developed; beginning, middle, end are distinct
    - Score 3: Some structural elements present; story is coherent but structure is loose or one phase is underdeveloped
@@ -127,5 +129,5 @@ register_archetype(
     system_prompt=JUDGE_SYSTEM_PROMPT,
     human_prompt=JUDGE_HUMAN_PROMPT,
     description="Evaluates scenario-based learning, narrative structures in training, case studies, branching scenarios, and story-driven instruction using six dimensions: narrative structure, learning-narrative integration, character & situation authenticity, emotional engagement & motivation, decision points & branching quality, and transfer & generalizability.",
-    version="1.0.0",
+    version="1.1.0",
 )

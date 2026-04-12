@@ -3,15 +3,17 @@
 **Author:** Jeremy Terhune  
 **Grounding:** UCF MA Instructional Systems - Master's Program Materials  
 **Compatible with:** LangChain, LangSmith, LangGraph eval pipelines  
-**Version:** 1.0.0 | April 2026
+**Version:** 1.1.0 | April 2026
 
 ## Citation Sources
 
 - Knowles, M.S. (1978). Andragogy: Adult Learning Theory in Perspective.
 - Knowles, M.S., Holton, E.F., & Swanson, R.A. (2015). The Adult Learner (8th ed.).
+- Mezirow, J. (1991). Transformative Dimensions of Adult Learning. Jossey-Bass.
+- Ausubel, D.P. (2000). The Acquisition and Retention of Knowledge: A Cognitive View. Kluwer Academic Publishers.
 - Mayer, R.E. (2009). Multimedia Learning (2nd ed.). Cambridge University Press.
 - Clark, R.C. & Mayer, R.E. (2016). e-Learning and the Science of Instruction (4th ed.).
-- Sweller, J. (1988). Cognitive Load Theory. Cognition and Instruction, 5(4), 375-426.
+- Sweller, J. (1988). Cognitive Load During Problem Solving. Cognitive Science, 12(2), 257-285.
 - W3C WAI (2018). Web Content Accessibility Guidelines (WCAG) 2.1.
 - Nielsen, J. (1994). Severity Ratings for Usability Problems.
 - Dick, W., Carey, L., & Carey, J.O. (2015). The Systematic Design of Instruction (8th ed.).
@@ -38,16 +40,20 @@ most heavily.
 
 ---
 
-### Dimension 1: ADULT LEARNING ALIGNMENT (Knowles' Andragogy)
+### Dimension 1: ADULT LEARNING ALIGNMENT (Knowles' Andragogy; Mezirow's Transformative Learning)
 Grounding: Knowles (1978) identified five assumptions of adult learners: self-concept
 (self-directing), experience (richest learning resource), readiness (driven by life
 tasks), orientation (problem-centered, not subject-centered), and motivation (internal).
 Lindeman (1926, via Knowles) wrote: "The teacher is a guide... who also participates
-in learning."
+in learning." Mezirow (1991) extended adult learning theory with transformative learning:
+adults learn most deeply when they critically examine their existing frames of reference
+(meaning perspectives) and transform them through reflective discourse. Responses that
+invite critical reflection on assumptions - not just information transfer - support
+deeper adult learning.
 
 | Score | Criteria |
 |-------|----------|
-| 5 | Treats the user as a self-directing professional with valuable expertise. Builds on likely prior knowledge. Connects explanation to the user's immediate, practical problem. Empowers the user to apply the answer independently. Uses collaborative, peer-like tone. |
+| 5 | Treats the user as a self-directing professional with valuable expertise. Builds on likely prior knowledge. Connects explanation to the user's immediate, practical problem. Empowers the user to apply the answer independently. Uses collaborative, peer-like tone. Where appropriate, invites critical reflection on assumptions (Mezirow) rather than just transmitting information. |
 | 4 | Mostly respects autonomy and experience. Generally problem-centered. Minor lapses - e.g., slightly over-explains something the audience likely knows. |
 | 3 | Mixed signals. Some content is relevant and respectful of experience; other parts lecture unnecessarily or fail to connect to the user's practical context. |
 | 2 | Largely prescriptive or condescending. Treats the user as a novice. Explanation is subject-centered rather than problem-centered. Little acknowledgment of user expertise. |
@@ -72,18 +78,22 @@ learn better when material is presented in user-paced segments."
 
 ---
 
-### Dimension 3: INSTRUCTIONAL CLARITY & SIGNALING (Mayer)
+### Dimension 3: INSTRUCTIONAL CLARITY & SIGNALING (Mayer; Ausubel)
 Grounding: Mayer's Signaling Principle - "people learn better when cues highlight the
 organization of essential material." Spatial Contiguity Principle - "people learn
 better when corresponding words and pictures are near each other." Temporal Contiguity
 Principle - "people learn better when corresponding elements are presented
 simultaneously rather than successively." Pre-Training Principle - "people learn more
 deeply when they understand names and characteristics of main concepts before learning
-about processes."
+about processes." Ausubel (2000) grounded this in meaningful reception learning theory:
+new information is most effectively learned when it can be anchored to existing
+cognitive structure through advance organizers - introductory material presented at a
+higher level of abstraction that bridges what the learner already knows and what they
+need to learn.
 
 | Score | Criteria |
 |-------|----------|
-| 5 | Clear organizational cues (transitions, logical ordering). Related concepts grouped together (contiguity). Key terms defined before or when first used (pre-training). Structure matches the logic of the content. Reader always knows where they are in the explanation. |
+| 5 | Clear organizational cues (transitions, logical ordering). Related concepts grouped together (contiguity). Key terms defined before or when first used (pre-training). Uses advance organizers (Ausubel) to bridge prior knowledge to new material. Structure matches the logic of the content. Reader always knows where they are in the explanation. |
 | 4 | Generally clear with minor structural issues - e.g., one term used before defined, or slight organizational ambiguity. |
 | 3 | Partially organized. Some signaling present but inconsistent. Reader occasionally loses the thread. |
 | 2 | Poorly structured. Key terms undefined or scattered. Related ideas separated. Reader must work to piece the explanation together. |

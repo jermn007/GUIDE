@@ -3,7 +3,7 @@
 **Author:** Jeremy Terhune  
 **Grounding:** EME6346 - Story Design for Instruction, UCF MA Instructional Systems  
 **Domains:** Scenario-based learning, case studies, branching scenarios, narrative instruction  
-**Version:** 1.0.0 | April 2026
+**Version:** 1.1.0 | April 2026
 
 ---
 
@@ -32,6 +32,7 @@ This archetype evaluates the quality of narrative-driven instruction, scenario-b
 **Frameworks to evaluate against:**
 - **Story Circle (Pixar):** Once upon a time → Every day → One day → Because of that → Until finally → Ever since then → Moral
 - **Hero's Journey (Campbell):** Ordinary world → Call to adventure → Refusal of the call → Meeting the mentor → Crossing the threshold → Tests and allies → Ordeal → Reward → Road back → Return with the elixir
+- **Beat Sheet (Snyder, 2005):** Opening Image → Theme Stated → Set-Up → Catalyst → Debate → Break into Two → B Story → Midpoint → Bad Guys Close In → All Is Lost → Dark Night of the Soul → Break into Three → Finale → Final Image. Snyder's framework maps emotional beats to structural milestones and is especially useful for tightly paced instructional narratives.
 
 **Why it matters:** Structure creates cognitive scaffolding. Learners can follow a well-structured narrative more easily and retain the embedded learning more effectively. Structure also makes the story memorable, which aids recall and transfer.
 
@@ -136,6 +137,7 @@ This archetype evaluates the quality of narrative-driven instruction, scenario-b
 
 - **Story Circle / Pixar Framework:** Pixar storytelling materials, popularized in narrative design education (EME6346 course materials)
 - **Campbell, J.** (1949). *The Hero with a Thousand Faces*. Princeton University Press.
+- **Snyder, B.** (2005). *Save the Cat! The Last Book on Screenwriting You'll Ever Need*. Michael Wiese Productions.
 - **EME6346 Module 2:** Storytelling Framework Analysis rubric and course materials, UCF MA Instructional Systems
 
 ---
@@ -188,4 +190,5 @@ from archetypes.archetype_08_story_design import JUDGE_SYSTEM_PROMPT, JUDGE_HUMA
 
 ## Version History
 
+- **v1.1.0** (April 2026): Added Snyder's Save the Cat! Beat Sheet (2005) as a third recognized narrative framework alongside Story Circle and Hero's Journey. Updated Dimension 1 (Narrative Structure) scoring criteria and citation sources.
 - **v1.0.0** (April 2026): Initial release. Grounded in EME6346 curriculum. Six dimensions: Narrative Structure, Learning-Narrative Integration, Character & Situation Authenticity, Emotional Engagement & Motivation, Decision Points & Branching Quality, Transfer & Generalizability.

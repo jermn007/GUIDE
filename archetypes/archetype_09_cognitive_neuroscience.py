@@ -18,6 +18,8 @@ Dimensions:
 Citations:
 - BSCS (2006). The BSCS 5E Instructional Model
 - Bybee, R.W. (2002). Learning Science and the Science of Learning
+- Ausubel, D.P. (2000). The Acquisition and Retention of Knowledge. Kluwer Academic.
+- Brown, P.C., Roediger, H.L., & McDaniel, M.A. (2014). Make It Stick: The Science of Successful Learning. Harvard University Press.
 - Neuroscience Online, University of Texas Medical School (EME6646 textbook)
 - EME6646 course materials on learning as neurosynthesis
 - Grounded Design Model principles
@@ -49,10 +51,11 @@ You evaluate using six dimensions:
    - Score 1: Phases missing or in wrong order (e.g., Explain before Explore, skipping Engage)
 
 2. **Memory System Optimization (1-5)**: Does instruction leverage multiple memory encoding strategies?
-   - Semantic (meaning-based, prefrontal cortex + hippocampus): Connect to prior knowledge, concepts, relationships
+   - Semantic (meaning-based, prefrontal cortex + hippocampus): Connect to prior knowledge, concepts, relationships. Ausubel (2000) showed that meaningful learning occurs when new material is anchored to existing cognitive structure through advance organizers.
    - Episodic (experience-based, hippocampus): Connect to specific events, contexts, vivid details
    - Procedural (skill-based, basal ganglia + cerebellum): Practice, repetition, automatization
-   - Score 5: All three pathways are engaged. Spaced retrieval practice is built in. Multiple retrieval cues established. Transfer pathways explicit.
+   - Retrieval practice: Brown, Roediger & McDaniel (2014) demonstrated that actively retrieving information from memory strengthens retention far more than re-reading or re-studying. Instruction should build in frequent low-stakes retrieval opportunities.
+   - Score 5: All three pathways are engaged. Spaced retrieval practice (Brown et al., 2014) is built in. Advance organizers (Ausubel) bridge prior knowledge to new material. Multiple retrieval cues established. Transfer pathways explicit.
    - Score 3: Two pathways engaged. Some spaced practice but not systematic. Limited retrieval pathways.
    - Score 1: Mostly one pathway (e.g., semantic only). Massed practice. Single retrieval pathway.
 
@@ -73,12 +76,12 @@ You evaluate using six dimensions:
    - Score 1: Flat affect or fear-based motivation. No personal relevance. High anxiety or no emotional stakes.
 
 5. **Synaptic Strengthening Factors (1-5)**: Does instruction incorporate the five factors that strengthen synaptic connections?
-   - Repetition (spaced, varied contexts, not massed)
-   - Application (authentic problem-solving, transfer to real contexts)
-   - Memory (multiple encoding strategies, retrieval practice)
+   - Repetition (spaced, varied contexts, not massed). Brown et al. (2014) emphasize that spaced practice with interleaving produces stronger, more durable learning than blocked or massed practice.
+   - Application (authentic problem-solving, transfer to real contexts). Brown et al. call this "generation" - the act of producing answers rather than recognizing them.
+   - Memory (multiple encoding strategies, retrieval practice). Retrieval practice is the single most effective learning strategy (Brown et al., 2014).
    - Imagination (mental simulation, visualization, "what if" scenarios)
    - Strong Emotional Reactions (meaningful engagement, personal stakes)
-   - Score 5: All five factors are present and well-integrated. Spaced repetition, authentic application, multiple memory encoding, visualization, and emotional engagement all visible.
+   - Score 5: All five factors are present and well-integrated. Spaced repetition with interleaving, authentic application, retrieval practice, visualization, and emotional engagement all visible. Desirable difficulties (Bjork) are deliberately introduced.
    - Score 3: Three or four factors present. Some may be weakly integrated or inconsistently applied.
    - Score 1: One or two factors. Dominated by massed practice with no application, imagination, or emotional stakes.
 
@@ -135,5 +138,5 @@ register_archetype(
     system_prompt=JUDGE_SYSTEM_PROMPT,
     human_prompt=JUDGE_HUMAN_PROMPT,
     description="Evaluates instruction for alignment with how memory, attention, and emotion work in the brain. Six dimensions: 5E Model Alignment, Memory System Optimization, Attention Management, Emotional Engagement for Encoding, Synaptic Strengthening Factors, and Theory-Practice Grounding. Grounded in BSCS 5E, cognitive load theory, and neuroscience research.",
-    version="1.0.0",
+    version="1.1.0",
 )

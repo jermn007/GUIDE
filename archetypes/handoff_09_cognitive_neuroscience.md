@@ -3,7 +3,7 @@
 **Author:** Jeremy Terhune  
 **Grounding:** EME6646 - Learning, Instructional Design and Cognitive Neuroscience, UCF MA Instructional Systems  
 **Domains:** Neuroscience-grounded instruction, memory optimization, attention management, emotion and learning  
-**Version:** 1.0.0 | April 2026
+**Version:** 1.1.0 | April 2026
 
 ---
 
@@ -54,12 +54,13 @@ This archetype evaluates instruction for alignment with how memory, attention, a
 | **2** | One or two systems engaged. Massed practice (repetition without spacing). Single retrieval pathway. Minimal transfer practice. |
 | **1** | Single system (e.g., all semantic, no procedural or episodic). No systematic spacing. No retrieval practice or transfer opportunities. |
 
-**Why it matters:** The brain encodes information through multiple, independent pathways. Engaging all three creates redundancy and resilience. Spaced retrieval practice leverages the spacing effect (Cormier et al., 2015) to move information from working memory to long-term storage. Multiple retrieval pathways ensure learners can access knowledge flexibly, not just in the original learning context.
+**Why it matters:** The brain encodes information through multiple, independent pathways. Engaging all three creates redundancy and resilience. Ausubel (2000) showed that meaningful learning occurs when new material is anchored to existing cognitive structure through advance organizers. Brown, Roediger & McDaniel (2014) demonstrated that actively retrieving information from memory (retrieval practice) strengthens retention far more than re-reading or re-studying. Spaced retrieval practice leverages the spacing effect to move information from working memory to long-term storage. Multiple retrieval pathways ensure learners can access knowledge flexibly, not just in the original learning context.
 
 **Memory system details:**
-- **Semantic:** Meaning-based, conceptual, hippocampus + prefrontal cortex. Built through elaboration and prior knowledge connections.
+- **Semantic:** Meaning-based, conceptual, hippocampus + prefrontal cortex. Built through elaboration and prior knowledge connections. Ausubel's advance organizers strengthen this pathway by bridging prior knowledge to new material.
 - **Episodic:** Experience-based, contextual, hippocampus + distributed cortical regions. Built through immersive, vivid learning experiences.
 - **Procedural:** Skill-based, automatic, basal ganglia + cerebellum. Built through practice and feedback loops.
+- **Retrieval practice:** Brown et al. (2014) showed that the act of retrieving information from memory is itself a powerful learning event - more effective than re-studying. Instruction should include frequent low-stakes retrieval opportunities.
 
 ---
 
@@ -121,9 +122,9 @@ This archetype evaluates instruction for alignment with how memory, attention, a
 
 **The Five Factors:**
 
-1. **Repetition (Spacing Effect):** Spaced retrieval over time (not massed practice in one session). Cormier et al. (2015) on spacing effect; Dunlosky et al. (2013) on distributed practice.
-2. **Application (Transfer):** Problem-solving, authentic contexts, transfer to novel situations. Brown et al. (2014) on situated learning; Bjork & Bjork (1992) on desirable difficulty.
-3. **Memory (Multiple Encoding):** Semantic + episodic + procedural pathways; variety in encoding contexts. Craik & Lockhart (1972) on levels of processing; Mandler (1967) on organization.
+1. **Repetition (Spacing Effect):** Spaced retrieval over time (not massed practice in one session). Brown, Roediger & McDaniel (2014) emphasize that spaced practice with interleaving produces stronger, more durable learning than blocked or massed practice. Dunlosky et al. (2013) on distributed practice.
+2. **Application (Transfer/Generation):** Problem-solving, authentic contexts, transfer to novel situations. Brown et al. (2014) call this "generation" - the act of producing answers rather than recognizing them. Bjork & Bjork (1992) on desirable difficulty.
+3. **Memory (Multiple Encoding/Retrieval Practice):** Semantic + episodic + procedural pathways; variety in encoding contexts. Retrieval practice is the single most effective learning strategy (Brown et al., 2014). Craik & Lockhart (1972) on levels of processing.
 4. **Imagination (Mental Simulation):** Visualization, mental models, "what if" scenarios. Shepard & Metzler (1971) on mental rotation; Kosslyn et al. (2006) on visual imagery.
 5. **Strong Emotional Reactions (Salience):** Personal relevance, meaningful stakes, productive struggle. Dolcos et al. (2005) on emotion-memory interaction; Yerkes-Dodson law on optimal arousal.
 
@@ -166,11 +167,12 @@ This archetype evaluates instruction for alignment with how memory, attention, a
 
 ## Citation Sources
 
+- **Ausubel, D.P. (2000).** *The Acquisition and Retention of Knowledge: A Cognitive View.* Kluwer Academic Publishers.
+- **Brown, P.C., Roediger, H.L., & McDaniel, M.A. (2014).** *Make It Stick: The Science of Successful Learning.* Harvard University Press.
 - **BSCS (2006).** *The BSCS 5E Instructional Model: Origins and Effectiveness.*
 - **Bybee, R.W. (2002).** *Learning Science and the Science of Learning.* NSTA Press.
 - **Neuroscience Online.** University of Texas Medical School, Houston. (EME6646 course textbook)
 - **EME6646 Course Materials.** Learning, Instructional Design and Cognitive Neuroscience. UCF MA Instructional Systems.
-- **Cormier, P., Ogilvie, J.C., & Desrosiers, M.E. (2015).** Spacing effect and learning. *Scholarpedia, 10*(5), 6644.
 - **Dolcos, F., LaBar, K.S., & Cabeza, R. (2005).** Interaction between the amygdala and the medial temporal lobe memory system predicts better memory for emotional events. *Neuron, 42*(5), 855-863.
 - **Dunlosky, J., et al. (2013).** Improving students' learning with effective learning techniques: Promising directions from cognitive and educational psychology. *Psychological Science in the Public Interest, 14*(1), 4-58.
 - **Posner, M.I., & Rothbart, M.K. (1998).** Attention, self-regulation and consciousness. *Philosophical Transactions of the Royal Society B, 353*, 1915-1927.
@@ -229,4 +231,5 @@ from archetypes.archetype_09_cognitive_neuroscience import JUDGE_SYSTEM_PROMPT, 
 
 ## Version History
 
+- **v1.1.0** (April 2026): Added Ausubel's meaningful learning/advance organizers (2000) to Dim 2 and Brown, Roediger & McDaniel's retrieval practice research (2014) to Dim 2 and Dim 5. Updated scoring criteria and citation sources.
 - **v1.0.0** (April 2026): Initial release. Grounded in EME6646 curriculum. Six dimensions: 5E Model Alignment, Memory System Optimization, Attention Management, Emotional Engagement for Encoding, Synaptic Strengthening Factors, Theory-Practice Grounding.

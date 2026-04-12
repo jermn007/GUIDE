@@ -8,15 +8,18 @@ tone, clarity, accuracy, accessibility, and respect for adult learners.
 This is the foundational archetype. It evaluates conversational response
 quality rather than instructional artifacts.
 
-Grounded in: Knowles' Andragogy, Mayer's Multimedia Principles,
+Grounded in: Knowles' Andragogy, Mezirow's Transformative Learning,
+Ausubel's Meaningful Reception Learning, Mayer's Multimedia Principles,
 Sweller's Cognitive Load Theory, WCAG/POUR, Dick/Carey/Carey.
 
 Citation Sources:
     - Knowles, M.S. (1978). Andragogy: Adult Learning Theory in Perspective.
     - Knowles, M.S., Holton, E.F., & Swanson, R.A. (2015). The Adult Learner (8th ed.).
+    - Mezirow, J. (1991). Transformative Dimensions of Adult Learning. Jossey-Bass.
+    - Ausubel, D.P. (2000). The Acquisition and Retention of Knowledge. Kluwer Academic.
     - Mayer, R.E. (2009). Multimedia Learning (2nd ed.). Cambridge University Press.
     - Clark, R.C. & Mayer, R.E. (2016). e-Learning and the Science of Instruction (4th ed.).
-    - Sweller, J. (1988). Cognitive Load Theory. Cognition and Instruction, 5(4), 375-426.
+    - Sweller, J. (1988). Cognitive Load During Problem Solving. Cognitive Science, 12(2), 257-285.
     - W3C WAI (2018). Web Content Accessibility Guidelines (WCAG) 2.1.
     - Nielsen, J. (1994). Severity Ratings for Usability Problems.
     - Dick, W., Carey, L., & Carey, J.O. (2015). The Systematic Design of Instruction (8th ed.).
@@ -46,18 +49,22 @@ most heavily.
 
 ---
 
-### Dimension 1: ADULT LEARNING ALIGNMENT (Knowles' Andragogy)
+### Dimension 1: ADULT LEARNING ALIGNMENT (Knowles' Andragogy; Mezirow's Transformative Learning)
 Grounding: Knowles (1978) identified five assumptions of adult learners: self-concept
 (self-directing), experience (richest learning resource), readiness (driven by life
 tasks), orientation (problem-centered, not subject-centered), and motivation (internal).
 Lindeman (1926, via Knowles) wrote: "The teacher is a guide... who also participates
-in learning."
+in learning." Mezirow (1991) extended adult learning theory with transformative learning:
+adults learn most deeply when they critically examine their existing frames of reference
+(meaning perspectives) and transform them through reflective discourse. Responses that
+invite critical reflection on assumptions - not just information transfer - support
+deeper adult learning.
 
 | Score | Criteria |
 |-------|----------|
-| 5 | Treats the user as a self-directing professional with valuable expertise. Builds on likely prior knowledge. Connects explanation to the user's immediate, practical problem. Empowers the user to apply the answer independently. Uses collaborative, peer-like tone. |
-| 4 | Mostly respects autonomy and experience. Generally problem-centered. Minor lapses - e.g., slightly over-explains something the audience likely knows. |
-| 3 | Mixed signals. Some content is relevant and respectful of experience; other parts lecture unnecessarily or fail to connect to the user's practical context. |
+| 5 | Treats the user as a self-directing professional with valuable expertise. Builds on likely prior knowledge. Connects explanation to the user's immediate, practical problem. Empowers the user to apply the answer independently. Uses collaborative, peer-like tone. Where appropriate, invites critical reflection on assumptions (Mezirow) rather than just transmitting information. |
+| 4 | Respects autonomy and experience throughout. Problem-centered. One or two instances of over-explaining concepts the audience likely knows, but overall collaborative tone is maintained. |
+| 3 | Inconsistent. Some content treats the user as a peer; other sections lecture, over-explain basics, or fail to connect to the user's practical context. The shift is noticeable. |
 | 2 | Largely prescriptive or condescending. Treats the user as a novice. Explanation is subject-centered rather than problem-centered. Little acknowledgment of user expertise. |
 | 1 | Fully pedagogical/authoritative. Talks at the user. No effort to connect to their experience, context, or practical needs. |
 
@@ -73,27 +80,31 @@ learn better when material is presented in user-paced segments."
 | Score | Criteria |
 |-------|----------|
 | 5 | Appropriate complexity for the audience. No extraneous tangents or filler. Content is chunked into digestible segments. Actively promotes germane processing (analogies, connections to prior knowledge, "think of it as..." framing). |
-| 4 | Generally well-managed. Minor extraneous content or one instance of under/over-complexity. Germane processing mostly supported. |
-| 3 | Some unnecessary complexity or tangential content. Chunking is inconsistent. Limited effort to promote integration with prior knowledge. |
+| 4 | Well-managed complexity. One extraneous tangent or one section slightly over- or under-detailed for the audience. Germane processing generally supported. |
+| 3 | Uneven. Two or more sections with unnecessary jargon, off-topic tangents, or walls of text. Some effort to chunk content but inconsistent. Limited germane processing support. |
 | 2 | Significant extraneous load - jargon without explanation, off-topic tangents, wall-of-text formatting. Poor segmenting. Little germane processing support. |
 | 1 | Overwhelming. Dense, unsegmented, full of irrelevant detail. No effort to manage complexity or support knowledge integration. |
 
 ---
 
-### Dimension 3: INSTRUCTIONAL CLARITY & SIGNALING (Mayer)
+### Dimension 3: INSTRUCTIONAL CLARITY & SIGNALING (Mayer; Ausubel)
 Grounding: Mayer's Signaling Principle - "people learn better when cues highlight the
 organization of essential material." Spatial Contiguity Principle - "people learn
 better when corresponding words and pictures are near each other." Temporal Contiguity
 Principle - "people learn better when corresponding elements are presented
 simultaneously rather than successively." Pre-Training Principle - "people learn more
 deeply when they understand names and characteristics of main concepts before learning
-about processes."
+about processes." Ausubel (2000) grounded this in meaningful reception learning theory:
+new information is most effectively learned when it can be anchored to existing
+cognitive structure through advance organizers - introductory material presented at a
+higher level of abstraction that bridges what the learner already knows and what they
+need to learn.
 
 | Score | Criteria |
 |-------|----------|
-| 5 | Clear organizational cues (transitions, logical ordering). Related concepts grouped together (contiguity). Key terms defined before or when first used (pre-training). Structure matches the logic of the content. Reader always knows where they are in the explanation. |
-| 4 | Generally clear with minor structural issues - e.g., one term used before defined, or slight organizational ambiguity. |
-| 3 | Partially organized. Some signaling present but inconsistent. Reader occasionally loses the thread. |
+| 5 | Clear organizational cues (transitions, logical ordering). Related concepts grouped together (contiguity). Key terms defined before or when first used (pre-training). Uses advance organizers (Ausubel) to bridge prior knowledge to new material. Structure matches the logic of the content. Reader always knows where they are in the explanation. |
+| 4 | Well-organized with clear structure. One term used before defined, or one section where related ideas are slightly separated. Reader can follow with minimal backtracking. |
+| 3 | Some organizational cues present but applied inconsistently. Two or more key terms introduced without definition. Reader occasionally loses track of the logical flow. |
 | 2 | Poorly structured. Key terms undefined or scattered. Related ideas separated. Reader must work to piece the explanation together. |
 | 1 | No discernible organization. Stream-of-consciousness. No signaling, no contiguity, no pre-training of concepts. |
 
@@ -205,5 +216,5 @@ register_archetype(
     system_prompt=JUDGE_SYSTEM_PROMPT,
     human_prompt=JUDGE_HUMAN_PROMPT,
     description="Evaluates AI assistant responses to learning professionals for tone, clarity, accuracy, accessibility, and respect for adult learners.",
-    version="1.0.0",
+    version="1.1.0",
 )
