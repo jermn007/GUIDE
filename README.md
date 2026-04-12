@@ -6,7 +6,7 @@ A modular LLM-as-a-judge evaluation framework for assessing AI assistants and in
 
 GUIDE provides **54 evaluation dimensions** organized across **9 archetypes**, each targeting a distinct instructional design domain. Every dimension is scored on a 1-5 scale with explicit criteria anchored to named research. The framework is designed for use in automated evaluation pipelines (LLM-as-a-judge) but the rubrics are useful for human evaluation as well.
 
-Developed as a capstone synthesis of the University of Central Florida's MA in Instructional Systems program, GUIDE translates foundational ID research - Knowles, Mayer, Sweller, Gagne, Dick & Carey, Bloom, Vygotsky, Campbell, and others - into structured, repeatable evaluation rubrics.
+Developed as a capstone synthesis of my experience in the University of Central Florida's MA in Instructional Systems and Technology program, GUIDE translates foundational ID research - Knowles, Mayer, Sweller, Gagne, Dick & Carey, Bloom, Vygotsky, Campbell, and others - into structured, repeatable evaluation rubrics.
 
 ## Archetypes
 
