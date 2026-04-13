@@ -2,7 +2,7 @@
 
 **Version 3.0.0** | Apache License 2.0
 
-GUIDE is an LLM-as-a-judge evaluation framework that operationalizes peer-reviewed instructional design research into structured rubrics. It was developed as a capstone synthesis of the University of Central Florida Master of Arts in Instructional Systems program.
+GUIDE is an LLM-as-a-judge evaluation framework that operationalizes peer-reviewed instructional design research into structured rubrics. It was developed as a capstone synthesis of my experience in the University of Central Florida Master of Arts in Instructional Systems program.
 
 The framework evaluates instructional content across **9 archetypes** and **54 dimensions**, each grounded in named theoretical sources and scored on a 1-5 scale with concrete behavioral anchors.
 
