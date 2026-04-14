@@ -16,15 +16,15 @@ Each archetype maps to a phase of the ADDIE instructional design lifecycle:
 
 | Archetype | Focus | ADDIE Phase |
 |-----------|-------|-------------|
-| 01 - Adult Learning Communication | Knowles, Mezirow, Sweller, Ausubel | Implement |
-| 02 - Assessment Design | Bloom, Webb, Messick | Evaluate |
-| 03 - Instructional Sequencing | Gagne, Reigeluth, van Merrienboer | Design |
-| 04 - Multimedia Design | Mayer, Paivio, Sweller | Develop |
-| 05 - Accessibility & Technical | WCAG, CAST UDL, Section 508 | Develop |
-| 06 - Formative Evaluation | Scriven, Kirkpatrick, Stufflebeam | Evaluate |
-| 07 - Needs Analysis | Rossett, Kaufman, Gilbert | Analyze |
-| 08 - Story Design | Campbell, Vogler, Harmon, Snyder | Design |
-| 09 - Cognitive Neuroscience | Kandel, Sousa, Medina, Ausubel, Brown | Design |
+| Needs Analysis | Rossett, Kaufman, Gilbert | Analyze |
+| Instructional Sequencing | Gagne, Reigeluth, van Merrienboer | Design |
+| Story Design | Campbell, Vogler, Harmon, Snyder | Design |
+| Cognitive Neuroscience | Kandel, Sousa, Medina, Ausubel, Brown | Design |
+| Multimedia Design | Mayer, Paivio, Sweller | Develop |
+| Accessibility & Technical | WCAG, CAST UDL, Section 508 | Develop |
+| Adult Learning Communication | Knowles, Mezirow, Sweller, Ausubel | Implement |
+| Assessment Design | Bloom, Webb, Messick | Evaluate |
+| Formative Evaluation | Scriven, Kirkpatrick, Stufflebeam | Evaluate |
 
 ## Repository Structure
 
@@ -38,8 +38,8 @@ GUIDE/
 ├── guide_base.py                          # Base evaluator class
 ├── guide_registry.py                      # Archetype registry and runner
 └── archetypes/
-    ├── archetype_01_*.py through 09_*.py  # Judge prompt modules
-    ├── handoff_01_*.md through 09_*.md    # Model-agnostic handoff docs
+    ├── archetype_XX_*.py                  # Judge prompt modules (one per archetype)
+    ├── handoff_XX_*.md                    # Model-agnostic handoff docs (one per archetype)
     └── edge_cases_01_*.json through 09    # Edge case test suites (58 total)
 ```
 
