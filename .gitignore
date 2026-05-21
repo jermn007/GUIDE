@@ -4,3 +4,7 @@ __pycache__/
 .claude/
 CLAUDE.md
 .auto-memory/
+
+# Build artifacts for the Claude skill / plugin — publish via GitHub Releases.
+*.skill
+*.plugin

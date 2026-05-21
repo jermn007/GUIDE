@@ -1,0 +1,26 @@
+{
+  "name": "guide-instructional-design",
+  "version": "3.0.1",
+  "description": "Design and evaluate instructional content with GUIDE — 9 learning-science archetypes and 54 theory-grounded dimensions mapped to the ADDIE lifecycle. Bundles design and evaluate workflows plus the full GUIDE rubric set as a skill.",
+  "author": {
+    "name": "Jeremy Terhune"
+  },
+  "homepage": "https://github.com/jermn007/GUIDE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jermn007/GUIDE.git"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "instructional-design",
+    "learning-science",
+    "addie",
+    "evaluation",
+    "rubric",
+    "assessment",
+    "accessibility",
+    "multimedia-learning",
+    "cognitive-neuroscience",
+    "guide"
+  ]
+}

@@ -1,6 +1,6 @@
 # GUIDE - Grounded Universal Instructional Design Evaluator
 
-**Version 3.0.0** | Apache License 2.0
+**Version 3.0.1** | Apache License 2.0
 
 GUIDE is an LLM-as-a-judge evaluation framework that operationalizes peer-reviewed instructional design research into structured rubrics. It was developed as a capstone synthesis of my experience in the University of Central Florida Master of Arts in Instructional Systems program.
 
@@ -32,16 +32,31 @@ Each archetype maps to a phase of the ADDIE instructional design lifecycle:
 GUIDE/
 ├── README.md                              # This file
 ├── NOTICE                                 # Copyright and attribution
-├── GUIDE_Rubric_Document.docx             # Full rubric document (v3.0.0)
+├── GUIDE_Rubric_Document.docx             # Full rubric document (v3.0.1)
 ├── GUIDE_Self_Evaluation.md               # Self-evaluation baseline (v2.2.0)
 ├── GUIDE_Self_Evaluation_v3_Comparison.md # Before/after comparison (v2.2.0 -> v3.0.0)
 ├── guide_base.py                          # Base evaluator class
 ├── guide_registry.py                      # Archetype registry and runner
-└── archetypes/
-    ├── archetype_XX_*.py                  # Judge prompt modules (one per archetype)
-    ├── handoff_XX_*.md                    # Model-agnostic handoff docs (one per archetype)
-    └── edge_cases_01_*.json through 09    # Edge case test suites (58 total)
+├── archetypes/
+│   ├── archetype_XX_*.py                  # Judge prompt modules (one per archetype)
+│   ├── handoff_XX_*.md                    # Model-agnostic handoff docs (one per archetype)
+│   └── edge_cases_01_*.json through 09    # Edge case test suites (58 total)
+└── skill/                                 # Claude skill + plugin packaging
+    ├── README.md                          # install/usage for the skill and plugin
+    ├── sync_skill_from_archetypes.py      # regenerates references from archetypes/
+    ├── guide-instructional-design/        # canonical skill source
+    └── guide-instructional-design-plugin/ # installable plugin (mirrors the skill)
 ```
+
+## Claude Skill / Plugin
+
+GUIDE is also packaged as a Claude skill and plugin under [`skill/`](skill/). Install via:
+
+```
+/plugin install ./skill/guide-instructional-design.plugin
+```
+
+…and the skill self-activates on instructional-design intents (course, training, lesson, quiz, rubric, e-learning, accessibility, needs analysis, etc.), running in either **design** or **evaluate** mode against the 9 archetypes. See [`skill/README.md`](skill/README.md) for build instructions, skill-only install, and the sync workflow that keeps the skill aligned with `archetypes/`.
 
 ## Key Files
 
@@ -70,7 +85,7 @@ The framework draws on 20+ named sources across instructional design, cognitive 
 
 ## Self-Evaluation
 
-The framework has been evaluated against its own rubrics. The v3.0.0 rubric document scores a composite **4.0/5.0** across the 6 applicable archetypes, up from 3.4/5.0 in v2.2.0. See `GUIDE_Self_Evaluation_v3_Comparison.md` for the full before/after analysis.
+The framework has been evaluated against its own rubrics. The v3.0.x rubric document scores a composite **4.0/5.0** across the 6 applicable archetypes, up from 3.4/5.0 in v2.2.0. See `GUIDE_Self_Evaluation_v3_Comparison.md` for the full before/after analysis.
 
 ## License
 

@@ -1,0 +1,61 @@
+{
+  "name": "guide-instructional-design",
+  "version": "3.0.1",
+  "description": "Design and evaluate instructional content with GUIDE — a learning-science framework of 9 archetypes and 54 theory-grounded dimensions mapped to the ADDIE lifecycle. Packaged as a Claude skill.",
+  "keywords": [
+    "instructional-design",
+    "learning-science",
+    "addie",
+    "llm-as-a-judge",
+    "evaluation-rubric",
+    "assessment-design",
+    "multimedia-learning",
+    "accessibility",
+    "wcag",
+    "udl",
+    "cognitive-neuroscience",
+    "needs-analysis",
+    "claude-skill",
+    "guide"
+  ],
+  "author": {
+    "name": "Jeremy Terhune"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/jermn007/GUIDE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jermn007/GUIDE.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jermn007/GUIDE/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "claude-skill": ">=1.0.0"
+  },
+  "claudeSkill": {
+    "entry": "SKILL.md",
+    "type": "reference-and-workflow",
+    "modes": ["design", "evaluate"],
+    "tracksFramework": "GUIDE",
+    "frameworkVersion": "3.0.1",
+    "archetypes": 9,
+    "dimensions": 54,
+    "scale": "1-5",
+    "references": [
+      "references/00_archetype_index.md",
+      "references/handoff_01_adult_learning_communication.md",
+      "references/handoff_02_assessment_design.md",
+      "references/handoff_03_instructional_sequencing.md",
+      "references/handoff_04_multimedia_design.md",
+      "references/handoff_05_accessibility_technical.md",
+      "references/handoff_06_formative_evaluation.md",
+      "references/handoff_07_needs_analysis.md",
+      "references/handoff_08_story_design.md",
+      "references/handoff_09_cognitive_neuroscience.md"
+    ],
+    "runtimeDependencies": "none — the skill is composed of Markdown reference files; no executable code or external packages are required"
+  }
+}
