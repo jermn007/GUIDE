@@ -14,8 +14,8 @@ behavioral anchors. Built on the LLM-as-a-judge pattern (Zheng et al., 2023).
 
 | # | Archetype | ADDIE phase | Theorists | Reference file |
 |---|-----------|-------------|-----------|----------------|
-| 7 | Needs Analysis & Front-End Design | **A**nalyze | Rossett, Kaufman, Gilbert, Van Tiem (HPT), McGoldrick & Tobey, Mager | `handoff_07_needs_analysis.md` |
-| 3 | Instructional Sequencing & Events | **D**esign | Gagné, Reigeluth, van Merriënboer, Merrill, Dick & Carey | `handoff_03_instructional_sequencing.md` |
+| 7 | Needs Analysis & Front-End Design | **A**nalyze | Rossett, Kaufman, Gilbert, Van Tiem (HPT), McGoldrick & Tobey, Mager, Keller (ARCS) | `handoff_07_needs_analysis.md` |
+| 3 | Instructional Sequencing & Events | **D**esign | Gagné, Reigeluth, van Merriënboer, Merrill, Dick & Carey, Keller (ARCS) | `handoff_03_instructional_sequencing.md` |
 | 8 | Story & Narrative Design | **D**esign | Campbell, Vogler, Harmon (Story Circle), Snyder (Save the Cat!) | `handoff_08_story_design.md` |
 | 9 | Cognitive Neuroscience & Brain-Based Instruction | **D**esign | Kandel, Sousa, Medina, Ausubel, Brown/Roediger/McDaniel, BSCS 5E | `handoff_09_cognitive_neuroscience.md` |
 | 4 | Multimedia Content Design (Deep Mayer) | **D**evelop | Mayer, Paivio, Sweller, Clark | `handoff_04_multimedia_design.md` |
@@ -112,11 +112,12 @@ Several theories appear in multiple archetypes. When designing or evaluating, th
 - **Transfer** (application in varied/authentic contexts) — 03, 08, 09.
 - **Nielsen severity ratings** (cosmetic / minor / major / catastrophic) — used for severity flags in 01, 05, 06.
 - **Is training even the answer?** (HPT cause analysis; Van Tiem) — the gatekeeper question in 07.
+- **ARCS motivational design** (Keller: Attention, Relevance, Confidence, Satisfaction) — capture learner goals/interests/motivations at 07 L4 (Learner Needs), then design against them in 03 Learning Domain Alignment (especially Attitudes domain). Engagement = alignment between instruction and the learner's "why."
 
 ---
 
 ## Source
 
-GUIDE — Grounded Universal Instructional Design Evaluator (v3.0.1).
+GUIDE — Grounded Universal Instructional Design Evaluator (v3.0.2).
 Repository: github.com/jermn007/GUIDE. Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0.
 This index condenses the nine `handoff_*.md` files in this directory; those files are the authoritative source.

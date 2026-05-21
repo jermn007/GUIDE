@@ -1,6 +1,6 @@
 # GUIDE - Grounded Universal Instructional Design Evaluator
 
-**Version 3.0.1** | Apache License 2.0
+**Version 3.0.2** | Apache License 2.0
 
 GUIDE is an LLM-as-a-judge evaluation framework that operationalizes peer-reviewed instructional design research into structured rubrics. It was developed as a capstone synthesis of my experience in the University of Central Florida Master of Arts in Instructional Systems program.
 
@@ -16,8 +16,8 @@ Each archetype maps to a phase of the ADDIE instructional design lifecycle:
 
 | Archetype | Focus | ADDIE Phase |
 |-----------|-------|-------------|
-| Needs Analysis | Rossett, Kaufman, Gilbert | Analyze |
-| Instructional Sequencing | Gagne, Reigeluth, van Merrienboer | Design |
+| Needs Analysis | Rossett, Kaufman, Gilbert, Keller (ARCS) | Analyze |
+| Instructional Sequencing | Gagne, Reigeluth, van Merrienboer, Keller (ARCS) | Design |
 | Story Design | Campbell, Vogler, Harmon, Snyder | Design |
 | Cognitive Neuroscience | Kandel, Sousa, Medina, Ausubel, Brown | Design |
 | Multimedia Design | Mayer, Paivio, Sweller | Develop |
@@ -32,7 +32,7 @@ Each archetype maps to a phase of the ADDIE instructional design lifecycle:
 GUIDE/
 ├── README.md                              # This file
 ├── NOTICE                                 # Copyright and attribution
-├── GUIDE_Rubric_Document.docx             # Full rubric document (v3.0.1)
+├── GUIDE_Rubric_Document.docx             # Full rubric document (v3.0.0 snapshot)
 ├── GUIDE_Self_Evaluation.md               # Self-evaluation baseline (v2.2.0)
 ├── GUIDE_Self_Evaluation_v3_Comparison.md # Before/after comparison (v2.2.0 -> v3.0.0)
 ├── guide_base.py                          # Base evaluator class
@@ -81,6 +81,7 @@ The framework draws on 20+ named sources across instructional design, cognitive 
 - Sweller (1988) - Cognitive load theory
 - Campbell (1949) / Snyder (2005) - Narrative structure frameworks
 - Brown, Roediger & McDaniel (2014) - Retrieval practice and desirable difficulties
+- Keller (1987, 2010) - ARCS motivational design (Attention, Relevance, Confidence, Satisfaction)
 - Zheng et al. (2023) - LLM-as-a-judge methodology
 
 ## Self-Evaluation

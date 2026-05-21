@@ -374,4 +374,4 @@ Before deploying at scale:
 
 ---
 
-*Source: GUIDE — Grounded Universal Instructional Design Evaluator (v3.0.1). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 04 of 9.*
+*Source: GUIDE — Grounded Universal Instructional Design Evaluator (v3.0.2). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 04 of 9.*

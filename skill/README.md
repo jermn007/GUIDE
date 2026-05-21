@@ -2,7 +2,7 @@
 
 This folder packages [GUIDE](../) as a [Claude skill](https://docs.claude.com/en/docs/claude-code/skills) and an installable Claude Code plugin. The skill exposes GUIDE's 9 archetypes and 54 dimensions as reference-driven workflows for **designing** instructional content and **evaluating** existing artifacts.
 
-Version: **3.0.1** (tracks the GUIDE framework version one-to-one).
+Version: **3.0.2** (tracks the GUIDE framework version one-to-one).
 
 ## Contents
 
@@ -63,7 +63,7 @@ zip -r guide-instructional-design.skill guide-instructional-design
 
 ## Use
 
-Once installed, the skill self-activates on instructional-design intents. Trigger phrases include: *course*, *training*, *lesson*, *module*, *learning objectives*, *quiz*, *rubric*, *assessment*, *e-learning*, *storyboard*, *needs analysis*, *accessibility (WCAG/UDL)*, or any of the named theorists (Bloom, Gagné, Mayer, Knowles, Sweller, Mager, etc.).
+Once installed, the skill self-activates on instructional-design intents. Trigger phrases include: *course*, *training*, *lesson*, *module*, *learning objectives*, *quiz*, *rubric*, *assessment*, *e-learning*, *storyboard*, *needs analysis*, *accessibility (WCAG/UDL)*, or any of the named theorists (Bloom, Gagné, Mayer, Knowles, Sweller, Mager, Keller/ARCS, etc.).
 
 It runs in two modes:
 
@@ -86,7 +86,7 @@ The script (a) copies each archetype handoff into `references/`, (b) normalizes 
 
 ## Versioning
 
-Skill and plugin versions track the GUIDE framework version (currently 3.0.1). When bumping GUIDE:
+Skill and plugin versions track the GUIDE framework version (currently 3.0.2). When bumping GUIDE:
 
 1. Update `GUIDE_VERSION` in `sync_skill_from_archetypes.py`.
 2. Update `version` and `claudeSkill.frameworkVersion` in `guide-instructional-design/package.json`.

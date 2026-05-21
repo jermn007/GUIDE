@@ -24,6 +24,7 @@ Citations:
 - Gagné, R.M., Wager, W.W., Golas, K.C., & Keller, J.M. (2005). Principles of Instructional Design (5th ed.)
 - Dick, W., Carey, L., & Carey, J.O. (2015). The Systematic Design of Instruction (8th ed.)
 - BSCS (2006). The BSCS 5E Instructional Model
+- Keller, J.M. (1987, 2010). ARCS Model of Motivational Design (Attention, Relevance, Confidence, Satisfaction)
 
 Author: Jeremy Terhune
 License: Proprietary - organizational use by permission
@@ -46,11 +47,13 @@ You assess lesson plans, course outlines, module structures, and learning paths 
    - Score 3: Most events present; 1-2 missing or unclear
    - Score 1: Several events missing; no clear instructional structure
 
-2. **Learning Domain Alignment (1-5)**: Are instructional strategies appropriate for the learning domain?
+2. **Learning Domain Alignment (1-5)**: Are instructional strategies appropriate for the learning domain — and do they leverage learner motivation where data is available?
    - Gagné's 5 domains: verbal information, intellectual skills, cognitive strategies, motor skills, attitudes
-   - Score 5: Clear identification of domain; strategies are domain-appropriate
-   - Score 3: Domain unclear; some strategies match, others do not
-   - Score 1: Domain not considered or strategies completely mismatched
+   - For the **Attitudes** domain (and as a cross-cutting motivational lens for any domain), apply Keller's ARCS: Attention (curiosity hook), Relevance (tie to the learner's personal/professional goals from Archetype 07 L4), Confidence (early scaffolded wins, clear success criteria), Satisfaction (outcomes the learner has named as valuable — mastery, recognition, advancement)
+   - If the upstream needs assessment captured learner goals/interests/motivations and this instruction ignores them in favor of generic framing, that is a domain-alignment failure on the Attitudes/motivational layer, not just a polish issue
+   - Score 5: Clear identification of domain; strategies are domain-appropriate; for Attitudes-domain or motivationally-sensitive content, ARCS is explicitly designed in
+   - Score 3: Domain unclear; some strategies match, others do not; motivation treated as generic relevance statement
+   - Score 1: Domain not considered or strategies completely mismatched; learner motivation ignored when data was available
 
 3. **Sequencing Logic (1-5)**: Does instruction move from simple to complex, known to unknown, concrete to abstract?
    - Dick/Carey prerequisite analysis; hierarchical/procedural/combination sequencing

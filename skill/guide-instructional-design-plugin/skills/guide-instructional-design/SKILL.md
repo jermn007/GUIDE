@@ -9,7 +9,7 @@ description: >-
   learning; checking learning content for accessibility (WCAG/UDL); running a needs analysis or
   deciding whether training is even the right solution; planning a formative evaluation, usability
   test, or pilot; or grounding any of these in learning theory (Bloom, Gagné, Mayer, Knowles,
-  Sweller, Mager, cognitive neuroscience). Trigger even when the user says course, training,
+  Sweller, Mager, Keller/ARCS, cognitive neuroscience). Trigger even when the user says course, training,
   lesson, module, learners, objectives, or instructional design without naming GUIDE. Use it both
   to CREATE instructional artifacts and to SCORE existing ones with rubrics.
 ---
@@ -156,7 +156,7 @@ you need. Read the whole doc for the archetype you're actively using.
 
 ## Attribution
 
-GUIDE — Grounded Universal Instructional Design Evaluator (v3.0.1).
+GUIDE — Grounded Universal Instructional Design Evaluator (v3.0.2).
 Repository: github.com/jermn007/GUIDE. Copyright 2026 Jeremy Terhune. Licensed under the Apache License,
 Version 2.0. The bundled `references/handoff_*.md` files are the project's model-agnostic handoff
 documents, reproduced for use inside this skill; see `references/NOTICE.md`. Keep this attribution intact.

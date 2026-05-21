@@ -57,7 +57,15 @@
 - **Intellectual Skills** (procedures, rules, concepts): Practice, feedback, part-to-whole sequencing
 - **Cognitive Strategies** (learning how to learn, metacognition): Modeling, explicit strategy instruction, transfer practice
 - **Motor Skills** (physical movements): Demonstration, practice, feedback on form/timing
-- **Attitudes** (values, beliefs, preferences): Modeling, persuasive arguments, attitude-building experiences
+- **Attitudes** (values, beliefs, preferences, motivation): Modeling, persuasive arguments, attitude-building experiences, **and Keller's ARCS motivational design** — explicitly target Attention (curiosity-grabbing entry), Relevance (tie to the learner's personal/professional goals captured in Archetype 07 L4), Confidence (early wins, clear success criteria), Satisfaction (intrinsic reward, recognition, applied outcomes)
+
+**ARCS as a cross-cutting motivational layer (Keller, 1987 / 2010).** While ARCS is the canonical strategy for the Attitudes domain, the four conditions also strengthen sequencing in any domain. When the learner profile from Archetype 07 L4 captures goals/interests/motivations, this dimension should check that the instruction *uses* them:
+- **A**ttention — opening hook ties to a real problem the learner has, not generic relevance
+- **R**elevance — examples and scenarios match the learner's job/career context, not a generic audience
+- **C**onfidence — early scaffolded wins build self-efficacy before harder tasks
+- **S**atisfaction — practice connects to outcomes the learner has named as valuable (mastery, recognition, advancement)
+
+If the upstream needs assessment captured ARCS data and this instruction ignores it, flag a **major** severity issue under this dimension regardless of domain match.
 
 ### Sequencing Logic
 - **5**: Clear progression from simple to complex; prerequisites identified; logical hierarchy
@@ -121,11 +129,13 @@ You assess lesson plans, course outlines, module structures, and learning paths 
    - Score 3: Most events present; 1-2 missing or unclear
    - Score 1: Several events missing; no clear instructional structure
 
-2. **Learning Domain Alignment (1-5)**: Are instructional strategies appropriate for the learning domain?
+2. **Learning Domain Alignment (1-5)**: Are instructional strategies appropriate for the learning domain — and do they leverage learner motivation where data is available?
    - Gagné's 5 domains: verbal information, intellectual skills, cognitive strategies, motor skills, attitudes
-   - Score 5: Clear identification of domain; strategies are domain-appropriate
-   - Score 3: Domain unclear; some strategies match, others do not
-   - Score 1: Domain not considered or strategies completely mismatched
+   - For the **Attitudes** domain (and as a cross-cutting motivational lens for any domain), apply Keller's ARCS: Attention (curiosity hook), Relevance (tie to the learner's personal/professional goals from Archetype 07 L4), Confidence (early scaffolded wins, clear success criteria), Satisfaction (outcomes the learner has named as valuable — mastery, recognition, advancement)
+   - If the upstream needs assessment captured learner goals/interests/motivations and this instruction ignores them in favor of generic framing, that is a domain-alignment failure on the Attitudes/motivational layer, not just a polish issue
+   - Score 5: Clear identification of domain; strategies are domain-appropriate; for Attitudes-domain or motivationally-sensitive content, ARCS is explicitly designed in
+   - Score 3: Domain unclear; some strategies match, others do not; motivation treated as generic relevance statement
+   - Score 1: Domain not considered or strategies completely mismatched; learner motivation ignored when data was available
 
 3. **Sequencing Logic (1-5)**: Does instruction move from simple to complex, known to unknown, concrete to abstract?
    - Dick/Carey prerequisite analysis; hierarchical/procedural/combination sequencing
@@ -281,6 +291,8 @@ Before deploying at scale:
 
 - Dick, W., Carey, L., & Carey, J.O. (2015). *The Systematic Design of Instruction* (8th ed.). Pearson.
 - Gagné, R.M., Wager, W.W., Golas, K.C., & Keller, J.M. (2005). *Principles of Instructional Design* (5th ed.). Wadsworth/Thomson Learning.
+- Keller, J.M. (1987). Development and Use of the ARCS Model of Instructional Design. *Journal of Instructional Development*, 10(3), 2-10.
+- Keller, J.M. (2010). *Motivational Design for Learning and Performance: The ARCS Model Approach*. Springer.
 - Merrill, M.D. (2002). First Principles of Instruction. *Educational Technology Research and Development*, 50(3), 43-59.
 - Vygotsky, L.S. (1978). *Mind in Society: The Development of Higher Psychological Processes*. Harvard University Press.
 
@@ -298,4 +310,4 @@ Before deploying at scale:
 
 ---
 
-*Source: GUIDE — Grounded Universal Instructional Design Evaluator (v3.0.1). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 03 of 9.*
+*Source: GUIDE — Grounded Universal Instructional Design Evaluator (v3.0.2). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 03 of 9.*

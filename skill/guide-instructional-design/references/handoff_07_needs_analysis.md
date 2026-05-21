@@ -84,11 +84,11 @@ Are all four levels addressed? (McGoldrick & Tobey model; each builds on previou
 
 | Score | Business Needs | Performance Needs | Learning Needs | Learner Needs | Connection |
 |-------|---------------|------------------|----------------|---------------|-----------|
-| **1** | Not addressed | Not addressed | Assumed | Minimal | Disconnected |
-| **2** | Mentioned vaguely | Vague ("improve performance") | Mentioned | Basic demographics | Weak connection |
-| **3** | Outlined | Described moderately | Outlined | Described | Moderate connection |
-| **4** | Clear description | Well-described; linked to business | Clear; linked to performance | Well-documented | Clear hierarchy |
-| **5** | Strategic alignment clear | Explicit performance targets; linked to business | Specific learning outcomes; linked to performance | Comprehensive profile; preferred learning styles, constraints | Each level builds logically on previous |
+| **1** | Not addressed | Not addressed | Assumed | Minimal; demographics only | Disconnected |
+| **2** | Mentioned vaguely | Vague ("improve performance") | Mentioned | Basic demographics; no goals/motivations captured | Weak connection |
+| **3** | Outlined | Described moderately | Outlined | Demographics + constraints; goals/motivations implied | Moderate connection |
+| **4** | Clear description | Well-described; linked to business | Clear; linked to performance | Demographics, constraints, **and** explicit personal/professional goals or motivations | Clear hierarchy |
+| **5** | Strategic alignment clear | Explicit performance targets; linked to business | Specific learning outcomes; linked to performance | Comprehensive profile: demographics, constraints, **personal/professional goals, interests, motivations** (Keller's ARCS lens) | Each level builds logically on previous |
 
 **McGoldrick & Tobey Four-Level Model:**
 
@@ -97,12 +97,20 @@ Are all four levels addressed? (McGoldrick & Tobey model; each builds on previou
 | **1: Business Needs** | What does the organization need to achieve? What's the strategic imperative? | "Increase customer retention from 85% to 92% within 18 months to improve lifetime value by $500K" |
 | **2: Performance Needs** | What must people DO differently to achieve business goal? What performance change is required? | "Customer service reps must resolve 85% of issues in first contact (vs. current 60%) and follow new retention protocol" |
 | **3: Learning Needs** | What must people KNOW/LEARN to perform differently? | "Reps must know: (1) New retention protocol steps, (2) How to recognize high-churn customer signals, (3) Empathy de-escalation techniques" |
-| **4: Learner Needs** | Who are they? What are their characteristics, constraints, and preferences? | "500 reps; current avg. tenure 3 years; 70% remote; 40% non-native English; prefer short videos; morning availability only" |
+| **4: Learner Needs** | Who are they? What are their characteristics, constraints, preferences — and what are their personal/professional goals, interests, and motivations? | "500 reps; current avg. tenure 3 years; 70% remote; 40% non-native English; prefer short videos; morning availability only. Career goals: promotion to senior rep / team lead. Stated motivators: mastery of de-escalation (named pain point), recognition for retention wins. ARCS read: relevance is high; confidence is the gap." |
 
 **Connection Example:**
 - Business (L1) → Performance (L2): "To achieve retention target, reps must close more issues first-contact"
 - Performance (L2) → Learning (L3): "To close issues first-contact, reps must know X protocol and Y techniques"
-- Learning (L3) → Learner (L4): "Teach X and Y via short videos (remote-friendly) in morning (availability constraint) with translations (language consideration)"
+- Learning (L3) → Learner (L4): "Teach X and Y via short videos (remote-friendly) in morning (availability constraint) with translations (language consideration). Frame mastery of de-escalation as the path to senior-rep promotion the audience has named as their professional goal (ARCS: Relevance + Satisfaction)."
+
+**ARCS at Level 4 (Keller, 1987 / 2010).** Beyond demographics and constraints, capture the four motivational conditions instruction must satisfy:
+- **A**ttention — what currently grabs and holds the learners' interest? What competes for it?
+- **R**elevance — what personal or professional goals, interests, or pain points does this instruction connect to?
+- **C**onfidence — what is their current self-efficacy on this skill? Where might they expect to fail?
+- **S**atisfaction — what intrinsic or extrinsic outcomes will make the effort feel worth it?
+
+A Level-4 profile that lists demographics but omits goals/interests/motivations scores **no higher than 3** on this dimension, regardless of other completeness. Engagement is alignment to the learner's "why," not just their context.
 
 ---
 
@@ -240,8 +248,8 @@ You will score across 6 dimensions, each on a 1-5 scale:
    - Level 1 (Business needs): Organizational goals, strategic priorities, business outcomes
    - Level 2 (Performance needs): What must people do differently to achieve business goals?
    - Level 3 (Learning needs): What must people learn to perform differently?
-   - Level 4 (Learner needs): Characteristics, preferences, constraints of target learners
-   Score: 1=Only one level assessed; 5=All four levels addressed with clear connections
+   - Level 4 (Learner needs): Characteristics, preferences, constraints of target learners AND their personal/professional goals, interests, and motivations (Keller's ARCS lens: Attention, Relevance, Confidence, Satisfaction)
+   Score: 1=Only one level assessed; 5=All four levels addressed with clear connections. A profile that captures demographics/constraints but omits goals/interests/motivations is capped at 3 on this dimension.
 
 4. **Goal & Objective Quality** (1-5)
    - Goals linked directly to documented performance gaps (not invented)
@@ -337,6 +345,10 @@ Score using the rubric above. Return only the JSON object.
 **Learning Transfer**
 - Baldwin, T.T. & Ford, J.K. (1988). Transfer of Training: A Review and Directions for Future Research. Personnel Psychology, 41(1), 63-105.
 
+**Motivational Design**
+- Keller, J.M. (1987). Development and Use of the ARCS Model of Instructional Design. Journal of Instructional Development, 10(3), 2-10.
+- Keller, J.M. (2010). Motivational Design for Learning and Performance: The ARCS Model Approach. Springer. (Operationalizes Attention, Relevance, Confidence, Satisfaction as design criteria.)
+
 ---
 
 ## Common Evaluation Scenarios
@@ -396,6 +408,7 @@ Use this before scoring:
 - [ ] Performance gap quantified with data (metrics, not anecdotes)
 - [ ] Root cause analysis distinguishes environmental barriers from behavior gaps
 - [ ] All four levels (business, performance, learning, learner) addressed
+- [ ] Learner Needs (L4) captures personal/professional goals, interests, and motivations — not just demographics and constraints (ARCS: Attention, Relevance, Confidence, Satisfaction)
 - [ ] Goals linked directly to documented performance gap
 - [ ] Learning objectives written in Mager format (behavior + condition + criterion)
 - [ ] Objectives feasible (resources available, content stable, time realistic)
@@ -461,4 +474,4 @@ If you see these, score lower and recommend reassessment.
 
 ---
 
-*Source: GUIDE — Grounded Universal Instructional Design Evaluator (v3.0.1). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 07 of 9.*
+*Source: GUIDE — Grounded Universal Instructional Design Evaluator (v3.0.2). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 07 of 9.*

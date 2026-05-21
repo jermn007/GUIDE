@@ -10,6 +10,7 @@ References:
 - McGoldrick, B. & Tobey, D. (2016). Needs Assessment Basics (2nd ed.). ATD Press.
 - Mager, R.F. (1997). Preparing Instructional Objectives (3rd ed.).
 - Dick, W., Carey, L., & Carey, J.O. (2015). The Systematic Design of Instruction (8th ed.).
+- Keller, J.M. (1987, 2010). ARCS Model of Motivational Design (Attention, Relevance, Confidence, Satisfaction).
 """
 
 import sys, os
@@ -40,8 +41,8 @@ You will score across 6 dimensions, each on a 1-5 scale:
    - Level 1 (Business needs): Organizational goals, strategic priorities, business outcomes
    - Level 2 (Performance needs): What must people do differently to achieve business goals?
    - Level 3 (Learning needs): What must people learn to perform differently?
-   - Level 4 (Learner needs): Characteristics, preferences, constraints of target learners
-   Score: 1=Only one level assessed; 5=All four levels addressed with clear connections
+   - Level 4 (Learner needs): Characteristics, preferences, constraints of target learners AND their personal/professional goals, interests, and motivations (Keller's ARCS lens: Attention, Relevance, Confidence, Satisfaction)
+   Score: 1=Only one level assessed; 5=All four levels addressed with clear connections. A profile that captures demographics/constraints but omits goals/interests/motivations is capped at 3 on this dimension.
 
 4. **Goal & Objective Quality** (1-5)
    - Goals linked directly to documented performance gaps (not invented)
