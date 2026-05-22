@@ -45,7 +45,8 @@ GUIDE/
 ├── NOTICE                                 # Copyright and attribution
 ├── GUIDE_Rubric_Document.docx             # Full rubric document (v3.0.0 snapshot)
 ├── GUIDE_Self_Evaluation.md               # Self-evaluation baseline (v2.2.0)
-├── GUIDE_Self_Evaluation_v3_Comparison.md # Before/after comparison (v2.2.0 -> v3.0.0)
+├── GUIDE_Self_Evaluation_v3_Comparison.md # Comparison v2.2.0 -> v3.0.0
+├── GUIDE_Self_Evaluation_v3.1.1.md        # Comparison v3.0.0 -> v3.1.1 + Archetype 10 self-application
 ├── guide_base.py                          # Base evaluator class
 ├── guide_registry.py                      # Archetype registry and runner
 ├── archetypes/
@@ -101,7 +102,15 @@ The framework draws on 20+ named sources across instructional design, cognitive 
 
 ## Self-Evaluation
 
-The framework has been evaluated against its own rubrics. The v3.0.x rubric document scores a composite **4.0/5.0** across the 6 applicable archetypes, up from 3.4/5.0 in v2.2.0. See `GUIDE_Self_Evaluation_v3_Comparison.md` for the full before/after analysis.
+The framework is evaluated against its own rubrics on each release. Trajectory:
+
+| Version | Composite (6 base archetypes) | Composite (with Archetype 10) | Notes |
+|---|---|---|---|
+| v2.2.0 | 3.4 / 5.0 | N/A | Baseline (`GUIDE_Self_Evaluation.md`) |
+| v3.0.0 | 4.0 / 5.0 | N/A | Reader objectives + calibration example + ADDIE rationale (`GUIDE_Self_Evaluation_v3_Comparison.md`) |
+| v3.1.1 | **4.3 / 5.0** | **4.2 / 5.0** | Three Alignments framing + ARCS + citation hygiene + Archetype 10 self-application (`GUIDE_Self_Evaluation_v3.1.1.md`) |
+
+The v3.1.1 evaluation also applies the new Archetype 10 (Curriculum Alignment) to GUIDE itself - the first time the framework scores its own internal coherence. Strong on five of the six dimensions (4-5), but scores **2 on Discipline Alignment** because GUIDE does not currently map to a recognized ID professional competency framework (IBSTPI, ATD, QM, etc.). Closing that gap is the priority for v3.2. See [`GUIDE_Self_Evaluation_v3.1.1.md`](GUIDE_Self_Evaluation_v3.1.1.md) for the full analysis.
 
 ## License
 
