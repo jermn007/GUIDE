@@ -1,0 +1,120 @@
+{
+  "archetype": "curriculum_alignment",
+  "edge_cases": [
+    {
+      "case_id": "good_01_full_alignment",
+      "label": "Good: Full unit-course-discipline alignment with no drift",
+      "description": "A 3-module course on clinical interviewing for nursing students with objectives, instruction, and assessment aligned at unit/course/discipline scopes.",
+      "input": "Course: NURS 305 — Clinical Communication. Target: BSN students, semester 4. Accreditation: CCNE; AACN Essentials competencies. Course-level objective: Students will conduct a structured patient intake interview following the OPQRST framework and document findings to nursing standards.",
+      "artifact": "MODULE 1 — Foundations of Clinical Interviewing\n  Objective M1.1: Identify the seven components of OPQRST (Onset, Provocation, Quality, Radiation, Severity, Timing, Treatment) [Remember, Bloom 1]\n  Instruction: 12-min video defining each component; flashcard practice (15 cards, OPQRST terms)\n  Assessment: Quiz, 7 multiple-choice items matching each letter to its definition (Remember)\n  -> Maps to AACN Essential I.3 (foundational professional knowledge)\n\nMODULE 2 — Conducting the Interview\n  Objective M2.1: Demonstrate the OPQRST framework in a simulated patient interview, eliciting all seven components within 8 minutes [Apply, Bloom 3]\n  Instruction: Worked example video of expert nurse using OPQRST (8 min); guided role-play with peer (20 min); checklist provided\n  Assessment: Recorded simulated patient interview; rubric scores presence of all seven OPQRST components and time-to-completion (Apply)\n  -> Maps to AACN Essential II.1 (person-centered care)\n  -> Builds on M1 (must recall the components before practicing them)\n\nMODULE 3 — Documentation and Handoff\n  Objective M3.1: Analyze interview findings and produce a structured clinical note using SBAR format that another nurse could use to continue care [Analyze, Bloom 4]\n  Instruction: Two worked-example notes (one strong, one weak) annotated; guided practice writing one note from a provided transcript; peer review using rubric\n  Assessment: Write a clinical note from a fresh simulated interview transcript; rubric scores SBAR structure, completeness against OPQRST findings, handoff usability (Analyze)\n  -> Maps to AACN Essential IV.2 (information and healthcare technology)\n  -> Builds on M2 (cannot write a note about an interview that was not conducted)\n\nCOMPETENCY MAP (appendix): Every course objective maps to one or more AACN Essentials; CCNE accreditors receive this map at site visit.",
+      "expected_scores": {
+        "objective_strategy_coherence": 5,
+        "strategy_assessment_coherence": 5,
+        "objective_assessment_coherence": 5,
+        "coverage_completeness": 5,
+        "vertical_alignment": 5,
+        "discipline_alignment": 5,
+        "overall": 5.0,
+        "rationale": "Exemplary alignment. Each module's objective verb is practiced in instruction and tested in assessment at the same Bloom level (M1 Remember-Remember-Remember; M2 Apply-Apply-Apply; M3 Analyze-Analyze-Analyze). No orphan objectives, no extraneous content. Vertical alignment is explicit (M2 builds on M1; M3 builds on M2). Discipline alignment is traceable via the competency map to AACN Essentials and CCNE accreditation."
+      }
+    },
+    {
+      "case_id": "bad_01_bloom_drift",
+      "label": "Bad: Bloom-level drift across objective, instruction, and assessment",
+      "description": "An undergraduate ethics module where the objective claims Analyze-level work but instruction stops at Remember and assessment tests Remember only.",
+      "input": "Module: 'Ethical Frameworks in Business Decision-Making'. Stated objective: Students will analyze a business decision through deontological, utilitarian, and virtue ethics frameworks to recommend the most defensible action.",
+      "artifact": "STATED OBJECTIVE: Students will *analyze* business decisions using three ethical frameworks (Analyze, Bloom 4).\n\nINSTRUCTION (3 weeks):\n- Week 1: Lecture defining deontology, utilitarianism, virtue ethics (definitions, key thinkers, vocabulary)\n- Week 2: Reading: textbook chapter restating the same three frameworks\n- Week 3: Lecture giving examples of each framework being mentioned in news articles (no analysis demonstrated; examples are 1-sentence each)\n- No worked examples of actual analysis; no guided practice analyzing a case; no peer practice\n\nASSESSMENT:\n- Multiple-choice exam: 30 items.\n  - 20 items: 'Which framework focuses on duties and rules?' (Remember)\n  - 5 items: 'Match the philosopher to the framework.' (Remember)\n  - 5 items: 'A company decides X. Which framework BEST supports this?' (Understand at best — recognizing, not analyzing)\n- No essay, no case analysis, no recommendation task.",
+      "expected_scores": {
+        "objective_strategy_coherence": 2,
+        "strategy_assessment_coherence": 4,
+        "objective_assessment_coherence": 1,
+        "coverage_completeness": 3,
+        "vertical_alignment": 3,
+        "discipline_alignment": 2,
+        "overall": 2.5,
+        "severity_flags": [
+          "Bloom-level mismatch: objective at Analyze (level 4); assessment at Remember/Understand (levels 1-2) — 2-3 levels apart",
+          "Objective-Assessment Coherence at 1 caps overall at 3.0 per archetype 10 weighting rule"
+        ],
+        "rationale": "Classic Bloom drift. The objective promises Analyze-level work (apply three frameworks to a decision and recommend an action). Instruction stops at definitions and labels (Remember). Assessment tests labels (Remember) and recognition (Understand). Instruction and assessment internally cohere with each other (both at low Bloom) — so dimension 2 is reasonable — but neither matches the objective. Learners who pass this assessment have not demonstrated the analysis the objective claimed."
+      }
+    },
+    {
+      "case_id": "bad_02_orphan_objectives_and_instruction",
+      "label": "Bad: Orphan objectives and orphan instruction",
+      "description": "A workshop with three stated objectives, but only one is taught/tested; meanwhile substantial unrelated content is included.",
+      "input": "Workshop: 'Effective Project Management for New Leads.' 4-hour synchronous training. Three stated objectives.",
+      "artifact": "STATED OBJECTIVES:\n  O1: Apply the RACI matrix to clarify project roles.\n  O2: Conduct a project kickoff meeting using a standard agenda.\n  O3: Identify and escalate project risks using the organization's risk register.\n\nAGENDA (4 hours):\n- 30 min: Welcome, ice-breaker, leadership philosophy talk by the VP (not tied to any objective)\n- 60 min: RACI matrix — definitions, worked example, group exercise filling out a RACI for a sample project (serves O1)\n- 45 min: 'Inspirational case study' video about a famous failed project (entertaining; no objective tied; no analysis activity)\n- 30 min: Kickoff meeting agenda — slides explaining a 6-item agenda (covers O2 at Remember level only; no practice running a kickoff)\n- 45 min: 'Working with difficult stakeholders' — useful content, but not in any stated objective\n- 30 min: Risk register walkthrough — instructor demos the tool (covers O3 partially; no practice identifying/escalating risks)\n- 15 min: Wrap-up\n\nASSESSMENT:\n- End-of-workshop quiz: 5 multiple-choice items, all on the RACI matrix (only O1 is assessed; O2 and O3 are not).",
+      "expected_scores": {
+        "objective_strategy_coherence": 3,
+        "strategy_assessment_coherence": 2,
+        "objective_assessment_coherence": 2,
+        "coverage_completeness": 1,
+        "vertical_alignment": 3,
+        "discipline_alignment": 2,
+        "overall": 2.2,
+        "severity_flags": [
+          "Orphan objectives: O2 (kickoff meeting) and O3 (risk escalation) are not assessed at all; learners can pass the assessment without demonstrating two of three stated objectives",
+          "Orphan instruction: ~75 minutes of workshop time (VP talk, case study, difficult-stakeholders block) is unrelated to any stated objective",
+          "Coverage Completeness at 1 — objectives, instruction, and assessment are effectively three independent lists"
+        ],
+        "rationale": "Significant coverage failure. Of three stated objectives, only one (RACI) is both taught and tested at appropriate depth. O2 is taught at Remember level when the verb is Apply (kickoff meeting should be practiced, not described). O3 is partially taught but not assessed. Meanwhile, roughly 30% of the workshop time is unrelated to any objective — entertaining but extraneous content. The assessment measures only O1, leaving learners' performance on O2 and O3 unknown."
+      }
+    },
+    {
+      "case_id": "borderline_01_strong_unit_no_vertical",
+      "label": "Borderline: Strong single-unit alignment, no vertical or discipline alignment",
+      "description": "A well-designed standalone lesson on Excel pivot tables — internal alignment is exemplary, but the lesson is detached from any larger course or competency framework.",
+      "input": "Lesson: 'Pivot Tables for Beginners.' 90-minute self-paced module on a corporate learning platform. Used as a standalone optional resource; not part of any required curriculum.",
+      "artifact": "STATED OBJECTIVE: Given a flat dataset in Excel, the learner will create a pivot table that summarizes one numeric field by two categorical fields, formatted with totals, within 10 minutes.\n\nINSTRUCTION:\n- 5-min worked-example video: instructor builds a pivot table from a sales dataset, narrating each step\n- 10-min guided practice: learner follows along with a provided dataset, prompted at each step\n- 15-min independent practice: learner is given a new dataset and asked to build a pivot table to a specification\n- Hints available; built-in checks at each step\n\nASSESSMENT:\n- Performance task: learner is given a fresh dataset (different domain — HR data instead of sales) and asked to create a pivot table summarizing salary by department and job level, with totals, in under 10 minutes.\n- Pass criterion: pivot table is correctly structured, totals present, completed within time limit.\n\nNo prerequisites stated. Not mapped to any role-based curriculum or competency framework — listed as 'Optional Excel Skills' in the corporate LMS.",
+      "expected_scores": {
+        "objective_strategy_coherence": 5,
+        "strategy_assessment_coherence": 5,
+        "objective_assessment_coherence": 5,
+        "coverage_completeness": 5,
+        "vertical_alignment": 3,
+        "discipline_alignment": 2,
+        "overall": 4.2,
+        "rationale": "The unit-level triangle is exemplary: verb (create), Bloom level (Apply), criterion (within 10 minutes, correctly structured) all match across objective, instruction, and assessment. Coverage is complete and nothing is orphaned. The lesson loses points on Vertical Alignment (no prerequisites, not part of a progression — though as a standalone optional resource this is partly justified; scored 3 per the troubleshooting note for single-lesson artifacts) and Discipline Alignment (no linkage to any competency framework, role-based curriculum, or accreditation; scored 2). For a standalone resource this is acceptable, but the artifact would not slot cleanly into a larger curriculum."
+      }
+    },
+    {
+      "case_id": "bad_03_assessment_without_instruction",
+      "label": "Bad: Assessment tests skills that were never practiced",
+      "description": "A graduate research methods course where instruction focuses on quantitative methods but the final assessment requires qualitative coding and thematic analysis.",
+      "input": "Course: 'Introduction to Research Methods', graduate education program. 12-week course. Final assessment is 40% of grade.",
+      "artifact": "STATED OBJECTIVE: Students will design and execute a research study appropriate to a stated research question, using sound methodology.\n\nINSTRUCTION (12 weeks):\n- Weeks 1-3: Quantitative research designs (experimental, quasi-experimental, correlational)\n- Weeks 4-6: Statistical analysis (t-tests, ANOVA, regression) — heavy SPSS practice\n- Weeks 7-9: Survey design and Likert-scale construction; sampling theory\n- Weeks 10-11: Reporting quantitative findings; APA tables\n- Week 12: Brief lecture (one 90-min class) on 'Qualitative Methods Overview' — definitions of grounded theory, phenomenology, thematic analysis; no practice; one example shown\n- No coding practice, no transcript analysis exercise, no inter-rater reliability work\n\nFINAL ASSESSMENT:\n- Submit a qualitative research report: interview 3 participants, transcribe interviews, code transcripts using thematic analysis (Braun & Clarke 2006), develop themes, write findings section with quoted excerpts.\n- Rubric: Coding rigor (25%), theme development (25%), use of qualitative literature (20%), report writing (30%).",
+      "expected_scores": {
+        "objective_strategy_coherence": 3,
+        "strategy_assessment_coherence": 1,
+        "objective_assessment_coherence": 3,
+        "coverage_completeness": 2,
+        "vertical_alignment": 2,
+        "discipline_alignment": 3,
+        "overall": 2.3,
+        "severity_flags": [
+          "Catastrophic Strategy-Assessment mismatch: 11 weeks of quantitative instruction, then a qualitative final assessment with one overview lecture — learners are tested on skills that were never practiced",
+          "Coverage Completeness at 2: instruction and assessment cover essentially different methodological traditions"
+        ],
+        "rationale": "The stated objective is broad enough ('design and execute a research study') that the assessment is arguably consistent with it (Objective-Assessment scores 3). But Strategy-Assessment Coherence fails catastrophically — students practice quantitative methods for 11 weeks and are then assessed on qualitative coding and thematic analysis, with only one overview lecture and no coding practice. This is the canonical 'assessment tests what was never taught' failure mode. Learners will perform poorly through no fault of their own; the course teaches one thing and tests another."
+      }
+    },
+    {
+      "case_id": "borderline_02_strong_vertical_weak_unit",
+      "label": "Borderline: Strong course-level progression, weak unit-level alignment in places",
+      "description": "A coding bootcamp curriculum with clear vertical progression and discipline alignment, but several individual modules have unit-level Bloom drift.",
+      "input": "Curriculum: 12-week full-stack web development bootcamp. Outcomes mapped to entry-level junior developer competency framework used by hiring partners.",
+      "artifact": "OVERALL PROGRESSION (strong vertical alignment):\n- Weeks 1-3: HTML/CSS/JavaScript fundamentals\n- Weeks 4-6: React frontend\n- Weeks 7-9: Node/Express backend\n- Weeks 10-11: Databases and full-stack integration\n- Week 12: Capstone project (full-stack app)\nEach phase builds explicitly on the previous; prerequisites are stated; capstone synthesizes all phases.\n\nDISCIPLINE ALIGNMENT (strong): Outcomes map to the bootcamp's published 'Junior Developer Readiness' competency framework, which is in turn aligned with hiring partner job descriptions.\n\nUNIT-LEVEL ISSUES:\n- Week 5 Module 'React State Management': Objective says 'Apply React hooks to manage component state in a real application' (Apply); instruction is 80% lecture and reading about hooks with only one small in-class exercise (Understand level); assessment is a multiple-choice quiz on hook syntax (Remember) — Bloom drift\n- Week 8 Module 'REST API Design': Objective and assessment both at Apply level (build a REST endpoint); instruction is well-aligned — strong\n- Week 11 Module 'Database Normalization': Objective says 'Analyze schemas and identify normalization violations' (Analyze); instruction provides examples but no analysis practice; assessment asks for analysis — instruction-assessment mismatch but objective-assessment match",
+      "expected_scores": {
+        "objective_strategy_coherence": 3,
+        "strategy_assessment_coherence": 3,
+        "objective_assessment_coherence": 3,
+        "coverage_completeness": 4,
+        "vertical_alignment": 5,
+        "discipline_alignment": 5,
+        "overall": 3.8,
+        "rationale": "Course-level strengths: vertical alignment is exemplary (clear phase progression, prerequisites respected, capstone synthesis) and discipline alignment is strong (traceable mapping to junior developer competencies). Unit-level weaknesses pull down the unit-triangle dimensions: at least two named modules show Bloom drift (Week 5 lecture/quiz vs. stated Apply objective; Week 11 instruction doesn't teach the analysis its assessment requires). The artifact is a course that holds together well at the macro scale but has inconsistent execution at the lesson scale — fixable with module-by-module revision rather than redesign."
+      }
+    }
+  ]
+}

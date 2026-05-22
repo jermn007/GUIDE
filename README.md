@@ -1,10 +1,10 @@
 # GUIDE - Grounded Universal Instructional Design Evaluator
 
-**Version 3.0.3** | Apache License 2.0
+**Version 3.1.0** | Apache License 2.0
 
 GUIDE is an LLM-as-a-judge evaluation framework that operationalizes peer-reviewed instructional design research into structured rubrics. It was developed as a capstone synthesis of my experience in the University of Central Florida Master of Arts in Instructional Systems program.
 
-The framework evaluates instructional content across **9 archetypes** and **54 dimensions**, each grounded in named theoretical sources and scored on a 1-5 scale with concrete behavioral anchors.
+The framework evaluates instructional content across **10 archetypes** and **60 dimensions**, each grounded in named theoretical sources and scored on a 1-5 scale with concrete behavioral anchors.
 
 ## How It Works
 
@@ -35,6 +35,7 @@ Each archetype maps to a phase of the ADDIE instructional design lifecycle:
 | Adult Learning Communication | Knowles, Mezirow, Sweller, Ausubel | Implement | Engaging (problem-centered, personalized) |
 | Assessment Design | Bloom, Webb, Messick | Evaluate | Efficient (Obj↔Assessment) |
 | Formative Evaluation | Scriven, Kirkpatrick, Stufflebeam | Evaluate | Cross-cutting (measures whether alignment was achieved) |
+| Curriculum Alignment | Tyler, Bloom/Anderson & Krathwohl, Webb (DoK), Mager, Dick & Carey, Wiggins & McTighe, Reigeluth, Hirumi | Cross-ADDIE | **Efficient** (synthesis archetype — Obj↔Strategy↔Assessment + vertical + discipline) |
 
 ## Repository Structure
 
@@ -48,9 +49,9 @@ GUIDE/
 ├── guide_base.py                          # Base evaluator class
 ├── guide_registry.py                      # Archetype registry and runner
 ├── archetypes/
-│   ├── archetype_XX_*.py                  # Judge prompt modules (one per archetype)
+│   ├── archetype_XX_*.py                  # Judge prompt modules (one per archetype, 01-10)
 │   ├── handoff_XX_*.md                    # Model-agnostic handoff docs (one per archetype)
-│   └── edge_cases_01_*.json through 09    # Edge case test suites (58 total)
+│   └── edge_cases_XX.json                 # Edge case test suites (one per archetype)
 └── skill/                                 # Claude skill + plugin packaging
     ├── README.md                          # install/usage for the skill and plugin
     ├── sync_skill_from_archetypes.py      # regenerates references from archetypes/

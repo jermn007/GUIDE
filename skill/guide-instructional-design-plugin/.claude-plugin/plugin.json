@@ -1,7 +1,7 @@
 {
   "name": "guide-instructional-design",
-  "version": "3.0.3",
-  "description": "Design and evaluate instructional content with GUIDE — 9 learning-science archetypes and 54 theory-grounded dimensions mapped to the ADDIE lifecycle. Bundles design and evaluate workflows plus the full GUIDE rubric set as a skill.",
+  "version": "3.1.0",
+  "description": "Design and evaluate instructional content with GUIDE — 10 learning-science archetypes and 60 theory-grounded dimensions mapped to the ADDIE lifecycle (plus a synthesis archetype for curriculum alignment). Bundles design and evaluate workflows plus the full GUIDE rubric set as a skill.",
   "author": {
     "name": "Jeremy Terhune"
   },

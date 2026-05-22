@@ -1,7 +1,7 @@
 {
   "name": "guide-instructional-design",
-  "version": "3.0.3",
-  "description": "Design and evaluate instructional content with GUIDE — a learning-science framework of 9 archetypes and 54 theory-grounded dimensions mapped to the ADDIE lifecycle. Packaged as a Claude skill.",
+  "version": "3.1.0",
+  "description": "Design and evaluate instructional content with GUIDE — a learning-science framework of 10 archetypes and 60 theory-grounded dimensions mapped to the ADDIE lifecycle (plus a synthesis archetype for curriculum alignment). Packaged as a Claude skill.",
   "keywords": [
     "instructional-design",
     "learning-science",
@@ -40,9 +40,9 @@
     "type": "reference-and-workflow",
     "modes": ["design", "evaluate"],
     "tracksFramework": "GUIDE",
-    "frameworkVersion": "3.0.3",
-    "archetypes": 9,
-    "dimensions": 54,
+    "frameworkVersion": "3.1.0",
+    "archetypes": 10,
+    "dimensions": 60,
     "scale": "1-5",
     "references": [
       "references/00_archetype_index.md",
@@ -54,7 +54,8 @@
       "references/handoff_06_formative_evaluation.md",
       "references/handoff_07_needs_analysis.md",
       "references/handoff_08_story_design.md",
-      "references/handoff_09_cognitive_neuroscience.md"
+      "references/handoff_09_cognitive_neuroscience.md",
+      "references/handoff_10_curriculum_alignment.md"
     ],
     "runtimeDependencies": "none — the skill is composed of Markdown reference files; no executable code or external packages are required"
   }

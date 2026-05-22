@@ -375,4 +375,4 @@ If these five are met, score ≥3 ("Fair"). Lower scores indicate critical gaps.
 
 ---
 
-*Source: GUIDE — Grounded Universal Instructional Design Evaluator (v3.0.3). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 06 of 9.*
+*Source: GUIDE — Grounded Universal Instructional Design Evaluator (v3.1.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 06 of 9.*

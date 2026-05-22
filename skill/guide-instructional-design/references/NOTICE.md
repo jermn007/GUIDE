@@ -3,7 +3,7 @@
 This skill packages content from the **GUIDE** project.
 
 **GUIDE — Grounded Universal Instructional Design Evaluator**
-Version 3.0.3
+Version 3.1.0
 Repository: https://github.com/jermn007/GUIDE
 Copyright 2026 Jeremy Terhune.
 Licensed under the Apache License, Version 2.0 (the "License"). You may not use these files except in
@@ -12,12 +12,12 @@ https://www.apache.org/licenses/LICENSE-2.0
 
 GUIDE was developed as a capstone synthesis of the author's work in the University of Central Florida
 Master of Arts in Instructional Systems program. It applies the LLM-as-a-judge pattern
-(Zheng et al., 2023) to instructional-design evaluation across 9 archetypes and 54 theory-grounded
+(Zheng et al., 2023) to instructional-design evaluation across 10 archetypes and 60 theory-grounded
 dimensions.
 
 ## What is bundled here
 
-The nine `handoff_0X_*.md` files in this directory are GUIDE's "model-agnostic handoff documents,"
+The ten `handoff_NN_*.md` files in this directory are GUIDE's "model-agnostic handoff documents,"
 reproduced for use inside this skill so the rubrics, grounding text, scoring anchors, judge prompts,
 and output formats are available without depending on the upstream codebase. They correspond to the
 files under `archetypes/` in the GUIDE repository.

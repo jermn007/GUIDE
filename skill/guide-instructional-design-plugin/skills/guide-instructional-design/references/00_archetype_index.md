@@ -4,11 +4,16 @@ This is the routing map for the GUIDE framework. Use it to pick the right archet
 instructional-design task, then open the matching `handoff_XX_*.md` file for the full grounding text,
 scoring anchors, judge prompt, and output format.
 
-GUIDE = **G**rounded **U**niversal **I**nstructional **D**esign **E**valuator. Nine archetypes,
-54 dimensions (6 per archetype), each grounded in named learning-science sources and scored 1–5 with
+GUIDE = **G**rounded **U**niversal **I**nstructional **D**esign **E**valuator. Ten archetypes,
+60 dimensions (6 per archetype), each grounded in named learning-science sources and scored 1–5 with
 behavioral anchors. Built on the LLM-as-a-judge pattern (Zheng et al., 2023) and on the grounded-design
 premise that key design decisions should be traceable to evidence from research, theory, and documented
 best practice (Hannafin, Hannafin, Land, & Oliver, 1997).
+
+Archetypes 01-09 evaluate component quality across the ADDIE lifecycle. Archetype 10 (Curriculum Alignment)
+is the synthesis archetype — it evaluates whether the components, taken together, cohere. A course can
+score well on 02, 03, and 07 individually and still fail 10 if its objectives, instruction, and assessment
+teach and test different cognitive levels or behaviors.
 
 ---
 
@@ -32,7 +37,7 @@ Each archetype below is tagged with the alignment(s) it primarily produces evide
 
 ---
 
-## The 9 archetypes mapped to ADDIE and the Three Alignments
+## The 10 archetypes mapped to ADDIE and the Three Alignments
 
 | # | Archetype | ADDIE phase | Primary alignment | Theorists | Reference file |
 |---|-----------|-------------|-------------------|-----------|----------------|
@@ -45,6 +50,7 @@ Each archetype below is tagged with the alignment(s) it primarily produces evide
 | 1 | Adult Learning Communication | **I**mplement | Engaging (problem-centered, personalized) | Knowles, Mezirow, Sweller, Ausubel, Mayer, WCAG | `handoff_01_adult_learning_communication.md` |
 | 2 | Assessment Design Quality | **E**valuate | Efficient (Obj↔Assessment) | Bloom/Anderson & Krathwohl, Webb, Messick, Mager, Kubiszyn & Borich | `handoff_02_assessment_design.md` |
 | 6 | Formative Evaluation Protocol Quality | **E**valuate | Cross-cutting (measures whether alignment was achieved) | Scriven, Kirkpatrick, Stufflebeam, Bordonaro, Dick & Carey, Nielsen | `handoff_06_formative_evaluation.md` |
+| 10 | Curriculum Alignment (Synthesis) | **Cross-ADDIE** | **Efficient** (synthesis — Obj↔Strategy↔Assessment + vertical + discipline) | Tyler, Bloom/Anderson & Krathwohl, Webb (DoK), Mager, Dick & Carey, Wiggins & McTighe, Reigeluth, van Merriënboer, Hirumi | `handoff_10_curriculum_alignment.md` |
 
 ---
 
@@ -61,14 +67,21 @@ Use this to route. Match the artifact in front of you to the archetype whose obj
 - **A chatbot/RAG answer, help-desk reply, or any conversational response to a learning professional** → **01 Adult Learning Communication**.
 - **A quiz, test, item bank, rubric, or test blueprint** → **02 Assessment Design**.
 - **An evaluation plan, usability test, expert-review protocol, or pilot study design** → **06 Formative Evaluation**.
+- **An end-to-end course (objectives + instruction + assessment together), a course map being audited for coherence, a Bloom-drift check between stated and tested behavior, or any curriculum review against discipline-level competencies / accreditation standards** → **10 Curriculum Alignment**. Run *in addition* to component archetypes when the question is "do these pieces hang together?" rather than "is this piece well-designed?"
 
 **Multiple archetypes often apply.** A narrated e-learning scenario could be scored by 04 (multimedia),
-08 (story), 05 (accessibility), and 09 (neuroscience). Pick the 1–3 most relevant rather than forcing all nine.
+08 (story), 05 (accessibility), and 09 (neuroscience). Pick the 1–3 most relevant rather than forcing all ten.
 When in doubt, lead with the archetype that matches the artifact's primary purpose, then add lenses.
+
+**When to add archetype 10.** Archetype 10 is the synthesis lens — it does not evaluate component quality
+(other archetypes do that). Include it when the artifact contains objectives + instruction + assessment
+together and the question is whether they cohere. Typical pairings: 07 + 03 + 02 + 10 for a full course
+review; 02 + 10 to check Bloom-drift between stated objective and assessment item; 03 + 10 to check that
+sequencing teaches what objectives state.
 
 ---
 
-## The 54 dimensions at a glance
+## The 60 dimensions at a glance
 
 Each archetype scores six dimensions 1–5. Overall is normally the mean of the six (a few archetypes
 weight specific dimensions — see the individual handoff doc).
@@ -101,6 +114,11 @@ Goal & Objective Quality · Stakeholder Alignment · Intervention Appropriatenes
 
 **09 Cognitive Neuroscience** — 5E Model Alignment · Memory System Optimization · Attention Management ·
 Emotional Engagement for Encoding · Synaptic Strengthening Factors · Theory-Practice Grounding.
+
+**10 Curriculum Alignment** — Objective ↔ Strategy Coherence · Strategy ↔ Assessment Coherence · Objective ↔
+Assessment Coherence · Coverage Completeness · Vertical Alignment · Discipline Alignment. *(Overall is
+capped at 3.0 if Objective ↔ Assessment Coherence scores 1 or 2 — an assessment that measures fundamentally
+different behaviors than its objectives state cannot be considered well-aligned regardless of other dimensions.)*
 
 ---
 
@@ -143,6 +161,6 @@ Several theories appear in multiple archetypes. When designing or evaluating, th
 
 ## Source
 
-GUIDE — Grounded Universal Instructional Design Evaluator (v3.0.3).
+GUIDE — Grounded Universal Instructional Design Evaluator (v3.1.0).
 Repository: github.com/jermn007/GUIDE. Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0.
 This index condenses the nine `handoff_*.md` files in this directory; those files are the authoritative source.
