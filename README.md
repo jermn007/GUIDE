@@ -104,11 +104,13 @@ The framework draws on 20+ named sources across instructional design, cognitive 
 
 The framework is evaluated against its own rubrics on each release. Trajectory:
 
-| Version | Composite (6 base archetypes) | Composite (with Archetype 10) | Notes |
+| Version | Composite (applicable archetypes, n=6) | Composite (with Archetype 10, n=7) | Notes |
 |---|---|---|---|
 | v2.2.0 | 3.4 / 5.0 | N/A | Baseline (`GUIDE_Self_Evaluation.md`) |
 | v3.0.0 | 4.0 / 5.0 | N/A | Reader objectives + calibration example + ADDIE rationale (`GUIDE_Self_Evaluation_v3_Comparison.md`) |
 | v3.1.1 | **4.3 / 5.0** | **4.2 / 5.0** | Three Alignments framing + ARCS + citation hygiene + Archetype 10 self-application (`GUIDE_Self_Evaluation_v3.1.1.md`) |
+
+*Applicable archetypes: 01 Adult Learning Communication, 02 Assessment Design, 03 Instructional Sequencing, 04 Multimedia Design, 05 Accessibility, 09 Cognitive Neuroscience. Archetypes 06 (Formative Evaluation), 07 (Needs Analysis), and 08 (Story Design) evaluate artifact types GUIDE isn't (an evaluation plan, a needs assessment, a narrative) and are marked N/A. Archetype 10 (Curriculum Alignment) became applicable in v3.1.0 as the synthesis lens.*
 
 The v3.1.1 evaluation also applies the new Archetype 10 (Curriculum Alignment) to GUIDE itself - the first time the framework scores its own internal coherence. Strong on five of the six dimensions (4-5), but scores **2 on Discipline Alignment** because GUIDE does not currently map to a recognized ID professional competency framework (IBSTPI, ATD, QM, etc.). Closing that gap is the priority for v3.2. See [`GUIDE_Self_Evaluation_v3.1.1.md`](GUIDE_Self_Evaluation_v3.1.1.md) for the full analysis.
 
