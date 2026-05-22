@@ -95,7 +95,7 @@ The framework draws on 20+ named sources across instructional design, cognitive 
 - Hannafin, Hannafin, Land & Oliver (1997) - Grounded practice in instructional design (the *grounded* premise of GUIDE)
 - Brown, Roediger & McDaniel (2014) - Retrieval practice and desirable difficulties
 - Keller (1987, 2010) - ARCS motivational design (Attention, Relevance, Confidence, Satisfaction)
-- Merrill (2024) - Effective, efficient, and engaging learning experiences as the criterion for high-quality instruction
+- Merrill (2002) - Effective, efficient, and engaging learning experiences as the criterion for high-quality instruction
 - Hirumi, Ratliff & de la Mora (2021); Hirumi (2025) - Mapping the three quality outcomes to alignments of instructional elements (objectives ↔ strategies ↔ assessments; alignment to theory/research; alignment to personal/professional goals)
 - Zheng et al. (2023) - LLM-as-a-judge methodology
 
