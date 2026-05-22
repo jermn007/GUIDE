@@ -350,10 +350,11 @@ Score using the rubric above. Return only the JSON object.
 - Keller, J.M. (1987). Development and Use of the ARCS Model of Instructional Design. Journal of Instructional Development, 10(3), 2-10.
 - Keller, J.M. (2010). Motivational Design for Learning and Performance: The ARCS Model Approach. Springer. (Operationalizes Attention, Relevance, Confidence, Satisfaction as design criteria.)
 
-**Three Alignments & Evidence-Informed Design**
+**Quality Outcomes, Alignments & Evidence-Informed Design**
+- Merrill, M.D. (2024). Using the first principles of instruction to make instruction effective, efficient, and engaging. In R.E. West & H. Leary (Eds.), Foundations of Learning and Instructional Design Technology (2nd ed., pp. 244-254). EdTechBooks. (Source for the effective/efficient/engaging quality vocabulary.)
 - Hannafin, M.J., Hannafin, K.M., Land, S.M., & Oliver, K. (1997). Grounded practice and the design of constructivist learning environments. Educational Technology Research and Development, 45(3), 101-117.
-- Hirumi, A., Ratliff, M., & de la Mora Velasco, E. (2021). Analyzing your context to improve and innovate distance learning (pp. 104-140). In L. Cifuentes (Ed.), Guide to Administering Distance Learning. Brill Publishing.
-- Hirumi, A. (2025). Design Principles, Ethics, and Evidence-Informed Decision Making: The (Evolving) Future of the Field is Design! In R. E. West & H. Leary (Eds.), Foundations of Learning and Instructional Design Technology (2nd ed., pp. 433-448). EdTechBooks.
+- Hirumi, A., Ratliff, M., & de la Mora Velasco, E. (2021). Analyzing your context to improve and innovate distance learning (pp. 104-140). In L. Cifuentes (Ed.), Guide to Administering Distance Learning. Brill Publishing. (Original figure mapping alignments of essential instructional elements.)
+- Hirumi, A. (2025). Design Principles, Ethics, and Evidence-Informed Decision Making: The (Evolving) Future of the Field is Design! In R.E. West & H. Leary (Eds.), Foundations of Learning and Instructional Design Technology (2nd ed., pp. 433-448). EdTechBooks. (Maps Merrill's effective/efficient/engaging triad to three alignments of instructional elements, including alignment to personal/professional goals.)
 - Tyler, R.W. (1949). Basic Principles of Curriculum and Instruction. University of Chicago Press. (Originating source for the objectives → instruction → assessment alignment principle.)
 
 ---
@@ -481,4 +482,4 @@ If you see these, score lower and recommend reassessment.
 
 ---
 
-*Source: GUIDE — Grounded Universal Instructional Design Evaluator (v3.1.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 07 of 9.*
+*Source: GUIDE — Grounded Universal Instructional Design Evaluator (v3.1.1). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 07 of 9.*

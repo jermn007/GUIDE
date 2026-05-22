@@ -17,10 +17,11 @@ teach and test different cognitive levels or behaviors.
 
 ---
 
-## Quality outcomes & the Three Alignments
+## Quality outcomes: Effective, Efficient, Engaging
 
-GUIDE operationalizes the three alignments that produce high-quality instruction (Hirumi, 2025;
-Hirumi, Ratliff, & de la Mora, 2021):
+High-quality instruction is effective, efficient, and engaging (Merrill, 2024). Hirumi (2025; building
+on Hirumi, Ratliff & de la Mora, 2021) maps each quality outcome to an alignment of instructional
+elements. GUIDE operationalizes each:
 
 - **Effective** — alignment of instructional elements to **theory, research, and documented best practice**
   (Hannafin et al., 1997). The *grounded* in GUIDE's name. Every archetype is theory-grounded; archetypes
@@ -37,7 +38,7 @@ Each archetype below is tagged with the alignment(s) it primarily produces evide
 
 ---
 
-## The 10 archetypes mapped to ADDIE and the Three Alignments
+## The 10 archetypes mapped to ADDIE and the three alignments
 
 | # | Archetype | ADDIE phase | Primary alignment | Theorists | Reference file |
 |---|-----------|-------------|-------------------|-----------|----------------|
@@ -153,7 +154,7 @@ Several theories appear in multiple archetypes. When designing or evaluating, th
 - **Nielsen severity ratings** (cosmetic / minor / major / catastrophic) — used for severity flags in 01, 05, 06.
 - **Is training even the answer?** (HPT cause analysis; Van Tiem) — the gatekeeper question in 07.
 - **ARCS motivational design** (Keller: Attention, Relevance, Confidence, Satisfaction) — capture learner goals/interests/motivations at 07 L4 (Learner Needs), then design against them in 03 Learning Domain Alignment (especially Attitudes domain). Engagement = alignment between instruction and the learner's "why."
-- **Three Alignments → Effective / Efficient / Engaging** (Hirumi, 2025; Hirumi, Ratliff, & de la Mora, 2021) — the top-level quality vocabulary GUIDE evaluates against. See *Quality outcomes & the Three Alignments* above.
+- **Effective / Efficient / Engaging quality outcomes** (Merrill, 2024), produced by alignment along three dimensions — internal coherence of objectives ↔ strategies ↔ assessments, alignment to theory/research, and alignment to learner personal/professional goals (Hirumi, Ratliff & de la Mora, 2021; Hirumi, 2025). The top-level quality vocabulary GUIDE evaluates against. See *Quality outcomes: Effective, Efficient, Engaging* above.
 - **Grounded design** (Hannafin, Hannafin, Land, & Oliver, 1997) — the meta-principle that key design decisions should be traceable to research, theory, and documented best practice. This is the *grounded* in GUIDE's name and the rationale for every archetype's grounding text and citations.
 - **Anecdotal vs. scientific evidence** (Hirumi, 2025) — anecdotal evidence comes from observations and stakeholder experience; scientific evidence comes from systematic, peer-reviewed research. Both are usable, but confusing them produces bad design decisions. Surfaces in 01's *Accuracy & Grounding* and 07's *Performance Gap Identification* (which requires data, not anecdote).
 
@@ -161,6 +162,6 @@ Several theories appear in multiple archetypes. When designing or evaluating, th
 
 ## Source
 
-GUIDE — Grounded Universal Instructional Design Evaluator (v3.1.0).
+GUIDE — Grounded Universal Instructional Design Evaluator (v3.1.1).
 Repository: github.com/jermn007/GUIDE. Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0.
 This index condenses the nine `handoff_*.md` files in this directory; those files are the authoritative source.

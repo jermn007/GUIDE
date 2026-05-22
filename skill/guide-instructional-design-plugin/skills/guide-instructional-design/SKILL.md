@@ -23,11 +23,13 @@ science into ten **archetypes**, each scoring an instructional artifact on **six
 framework (Zheng et al., 2023), but the same rubrics are powerful **design guardrails**: the things
 the judge looks for are exactly the things good instruction should do.
 
-High-quality instruction is the product of three alignments (Hirumi, 2025): **Effective** (aligned to
-theory, research, and documented best practice — Hannafin et al., 1997), **Efficient** (objectives ↔
-strategies ↔ assessments aligned with each other — Tyler, 1949; Dick & Carey), and **Engaging** (aligned
-to learners' personal and professional goals, interests, and motivations — Keller's ARCS). Every archetype
-evaluates one or more of these alignments; see `references/00_archetype_index.md` for the mapping.
+High-quality instruction is effective, efficient, and engaging (Merrill, 2024). Hirumi (2025; building on
+Hirumi, Ratliff & de la Mora, 2021) maps each quality outcome to an alignment of instructional elements:
+**Effective** (aligned to theory, research, and documented best practice - Hannafin et al., 1997),
+**Efficient** (objectives ↔ strategies ↔ assessments aligned with each other - Tyler, 1949; Dick & Carey),
+and **Engaging** (aligned to learners' personal and professional goals, interests, and motivations -
+Keller's ARCS). Every archetype evaluates one or more of these alignments; see
+`references/00_archetype_index.md` for the mapping.
 
 This skill uses GUIDE two ways:
 
@@ -167,7 +169,7 @@ you need. Read the whole doc for the archetype you're actively using.
 
 ## Attribution
 
-GUIDE — Grounded Universal Instructional Design Evaluator (v3.1.0).
+GUIDE — Grounded Universal Instructional Design Evaluator (v3.1.1).
 Repository: github.com/jermn007/GUIDE. Copyright 2026 Jeremy Terhune. Licensed under the Apache License,
 Version 2.0. The bundled `references/handoff_*.md` files are the project's model-agnostic handoff
 documents, reproduced for use inside this skill; see `references/NOTICE.md`. Keep this attribution intact.

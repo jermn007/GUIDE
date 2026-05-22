@@ -25,7 +25,7 @@ import re
 import shutil
 from pathlib import Path
 
-GUIDE_VERSION = "3.1.0"
+GUIDE_VERSION = "3.1.1"
 COPYRIGHT_YEAR = "2026"
 COPYRIGHT_HOLDER = "Jeremy Terhune"
 

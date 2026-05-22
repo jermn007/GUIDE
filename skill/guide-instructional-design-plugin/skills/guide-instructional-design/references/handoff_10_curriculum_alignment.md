@@ -3,7 +3,7 @@
 
 **Purpose**: Evaluate whether an instructional artifact's internal pieces — objectives, instructional strategies (content + activities + chunking + sequencing), and learner assessments — cohere with each other and with broader scopes (course-level vertical progression and discipline-level competencies).
 
-This archetype operationalizes Hirumi's (2025) **Efficient** quality outcome: the alignment of objectives ↔ strategies ↔ assessments. It is the synthesis archetype — it does *not* evaluate the quality of any individual component (other archetypes do that) but rather whether the components, taken together, say the same thing.
+This archetype operationalizes the **Efficient** quality outcome (Merrill, 2024) — the alignment of objectives ↔ strategies ↔ assessments mapped to that outcome by Hirumi (2025). It is the synthesis archetype - it does *not* evaluate the quality of any individual component (other archetypes do that) but rather whether the components, taken together, say the same thing.
 
 **Use Cases**:
 - End-to-end course design review (objectives + lessons + assessments together)
@@ -31,9 +31,10 @@ A course can score 5/5 on 02, 03, and 07 individually and still fail archetype 1
 - Dick, W., Carey, L., & Carey, J.O. (2015). *The Systematic Design of Instruction* (8th ed.). Pearson.
 - Wiggins, G., & McTighe, J. (2005). *Understanding by Design* (2nd ed.). ASCD. (Backward design and curriculum blueprint.)
 - Reigeluth, C.M. (1999). *Instructional-Design Theories and Models, Volume II: A New Paradigm of Instructional Theory*. Lawrence Erlbaum. (Elaboration Theory; vertical sequencing.)
-- van Merriënboer, J.J.G., & Kirschner, P.A. (2018). *Ten Steps to Complex Learning* (3rd ed.). Routledge. (4C/ID — Four-Component Instructional Design.)
-- Hirumi, A., Ratliff, M., & de la Mora Velasco, E. (2021). Analyzing your context to improve and innovate distance learning. In L. Cifuentes (Ed.), *Guide to Administering Distance Learning* (pp. 104-140). Brill.
-- Hirumi, A. (2025). Design Principles, Ethics, and Evidence-Informed Decision Making: The (Evolving) Future of the Field is Design! In R.E. West & H. Leary (Eds.), *Foundations of Learning and Instructional Design Technology* (2nd ed., pp. 433-448). EdTechBooks. (Three Alignments framework — Effective / Efficient / Engaging.)
+- van Merriënboer, J.J.G., & Kirschner, P.A. (2018). *Ten Steps to Complex Learning* (3rd ed.). Routledge. (4C/ID - Four-Component Instructional Design.)
+- Merrill, M.D. (2024). Using the first principles of instruction to make instruction effective, efficient, and engaging. In R.E. West & H. Leary (Eds.), *Foundations of Learning and Instructional Design Technology* (2nd ed., pp. 244-254). EdTechBooks. (Source for the effective/efficient/engaging quality vocabulary GUIDE adopts.)
+- Hirumi, A., Ratliff, M., & de la Mora Velasco, E. (2021). Analyzing your context to improve and innovate distance learning. In L. Cifuentes (Ed.), *Guide to Administering Distance Learning* (pp. 104-140). Brill. (Original figure mapping alignments of essential instructional elements.)
+- Hirumi, A. (2025). Design Principles, Ethics, and Evidence-Informed Decision Making: The (Evolving) Future of the Field is Design! In R.E. West & H. Leary (Eds.), *Foundations of Learning and Instructional Design Technology* (2nd ed., pp. 433-448). EdTechBooks. (Maps Merrill's effective/efficient/engaging triad to three alignments of instructional elements, including alignment to personal/professional goals.)
 
 ---
 
@@ -302,4 +303,4 @@ The judge returns a JSON object matching the schema in the Human Prompt Template
 
 ---
 
-*Source: GUIDE — Grounded Universal Instructional Design Evaluator (v3.1.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 10 of 9.*
+*Source: GUIDE — Grounded Universal Instructional Design Evaluator (v3.1.1). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 10 of 9.*

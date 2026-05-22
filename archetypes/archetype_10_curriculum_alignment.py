@@ -7,10 +7,11 @@ instructional strategies (content, activities, chunking, sequencing), and
 learner assessments — cohere with each other and with broader scopes
 (course-level vertical progression and discipline-level competencies).
 
-This archetype operationalizes Hirumi's (2025) **Efficient** quality outcome.
-It is the synthesis archetype: it does NOT evaluate the quality of any
-individual component (other archetypes do that) but whether the components,
-taken together, say the same thing. A course can score 5/5 on archetypes
+This archetype operationalizes the **Efficient** quality outcome (Merrill,
+2024) - the alignment of objectives <-> strategies <-> assessments mapped
+to that outcome by Hirumi (2025). It is the synthesis archetype: it does
+NOT evaluate the quality of any individual component (other archetypes do
+that) but whether the components, taken together, say the same thing. A course can score 5/5 on archetypes
 02, 03, and 07 individually and still fail this archetype if its objectives,
 instruction, and assessment teach and test different cognitive levels or
 different behaviors.
@@ -37,7 +38,10 @@ Citations:
 - Wiggins, G., & McTighe, J. (2005). Understanding by Design (Backward Design)
 - Reigeluth, C.M. (1999). Elaboration Theory
 - van Merrienboer & Kirschner (2018). Ten Steps to Complex Learning (4C/ID)
-- Hirumi, Ratliff & de la Mora (2021); Hirumi (2025). Three Alignments framework
+- Merrill (2024). Effective, efficient, engaging quality outcomes
+- Hirumi, Ratliff & de la Mora (2021); Hirumi (2025). Mapping the quality outcomes to alignments
+  of instructional elements (objectives <-> strategies <-> assessments; theory/research alignment;
+  personal/professional goal alignment)
 """
 
 import sys
@@ -156,6 +160,6 @@ register_archetype(
     name="curriculum_alignment",
     system_prompt=JUDGE_SYSTEM_PROMPT,
     human_prompt=JUDGE_HUMAN_PROMPT,
-    description="Evaluates whether an instructional artifact's objectives, instructional strategies, and learner assessments cohere with each other and with broader scopes (vertical progression, discipline-level competencies). Operationalizes Hirumi's (2025) Efficient quality outcome. Dimensions: Objective<->Strategy Coherence, Strategy<->Assessment Coherence, Objective<->Assessment Coherence, Coverage Completeness, Vertical Alignment, Discipline Alignment.",
+    description="Evaluates whether an instructional artifact's objectives, instructional strategies, and learner assessments cohere with each other and with broader scopes (vertical progression, discipline-level competencies). Operationalizes the Efficient quality outcome (Merrill, 2024) per the alignment mapping in Hirumi (2025). Dimensions: Objective<->Strategy Coherence, Strategy<->Assessment Coherence, Objective<->Assessment Coherence, Coverage Completeness, Vertical Alignment, Discipline Alignment.",
     version="1.0.0",
 )
