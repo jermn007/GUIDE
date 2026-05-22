@@ -38,7 +38,7 @@ including Tyler (1949), Knowles (1980), Mezirow (1991), Ausubel (2000), Bloom (1
 Krathwohl (2001), Gagné (1985), Mayer (2009), Sweller (1988), Mager (1997), Hannafin, Hannafin, Land
 & Oliver (1997), Keller (1987, 2010 — ARCS), Campbell (1949), Snyder (2005), Brown, Roediger &
 McDaniel (2014), Dick, Carey & Carey (2015), Van Tiem et al. (2000), WCAG 2.1 (W3C WAI, 2018), CAST
-UDL (2018), Nielsen (1994), Merrill (2024 - effective/efficient/engaging quality outcomes),
+UDL (2018), Nielsen (1994), Merrill (2002 - effective/efficient/engaging quality outcomes),
 Hirumi, Ratliff & de la Mora (2021) / Hirumi (2025 - mapping quality outcomes to alignments of
 instructional elements),
 and Zheng et al. (2023). Full citations appear in the individual handoff documents.

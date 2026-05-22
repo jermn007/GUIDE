@@ -38,7 +38,7 @@ Citations:
 - Wiggins, G., & McTighe, J. (2005). Understanding by Design (Backward Design)
 - Reigeluth, C.M. (1999). Elaboration Theory
 - van Merrienboer & Kirschner (2018). Ten Steps to Complex Learning (4C/ID)
-- Merrill (2024). Effective, efficient, engaging quality outcomes
+- Merrill (2002). First Principles of Instruction (effective, efficient, engaging quality outcomes)
 - Hirumi, Ratliff & de la Mora (2021); Hirumi (2025). Mapping the quality outcomes to alignments
   of instructional elements (objectives <-> strategies <-> assessments; theory/research alignment;
   personal/professional goal alignment)
@@ -160,6 +160,6 @@ register_archetype(
     name="curriculum_alignment",
     system_prompt=JUDGE_SYSTEM_PROMPT,
     human_prompt=JUDGE_HUMAN_PROMPT,
-    description="Evaluates whether an instructional artifact's objectives, instructional strategies, and learner assessments cohere with each other and with broader scopes (vertical progression, discipline-level competencies). Operationalizes the Efficient quality outcome (Merrill, 2024) per the alignment mapping in Hirumi (2025). Dimensions: Objective<->Strategy Coherence, Strategy<->Assessment Coherence, Objective<->Assessment Coherence, Coverage Completeness, Vertical Alignment, Discipline Alignment.",
+    description="Evaluates whether an instructional artifact's objectives, instructional strategies, and learner assessments cohere with each other and with broader scopes (vertical progression, discipline-level competencies). Operationalizes the Efficient quality outcome (Merrill, 2002) per the alignment mapping in Hirumi (2025). Dimensions: Objective<->Strategy Coherence, Strategy<->Assessment Coherence, Objective<->Assessment Coherence, Coverage Completeness, Vertical Alignment, Discipline Alignment.",
     version="1.0.0",
 )

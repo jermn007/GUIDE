@@ -19,7 +19,7 @@ teach and test different cognitive levels or behaviors.
 
 ## Quality outcomes: Effective, Efficient, Engaging
 
-High-quality instruction is effective, efficient, and engaging (Merrill, 2024). Hirumi (2025; building
+High-quality instruction is effective, efficient, and engaging (Merrill, 2002). Hirumi (2025; building
 on Hirumi, Ratliff & de la Mora, 2021) maps each quality outcome to an alignment of instructional
 elements. GUIDE operationalizes each:
 
@@ -154,7 +154,7 @@ Several theories appear in multiple archetypes. When designing or evaluating, th
 - **Nielsen severity ratings** (cosmetic / minor / major / catastrophic) — used for severity flags in 01, 05, 06.
 - **Is training even the answer?** (HPT cause analysis; Van Tiem) — the gatekeeper question in 07.
 - **ARCS motivational design** (Keller: Attention, Relevance, Confidence, Satisfaction) — capture learner goals/interests/motivations at 07 L4 (Learner Needs), then design against them in 03 Learning Domain Alignment (especially Attitudes domain). Engagement = alignment between instruction and the learner's "why."
-- **Effective / Efficient / Engaging quality outcomes** (Merrill, 2024), produced by alignment along three dimensions — internal coherence of objectives ↔ strategies ↔ assessments, alignment to theory/research, and alignment to learner personal/professional goals (Hirumi, Ratliff & de la Mora, 2021; Hirumi, 2025). The top-level quality vocabulary GUIDE evaluates against. See *Quality outcomes: Effective, Efficient, Engaging* above.
+- **Effective / Efficient / Engaging quality outcomes** (Merrill, 2002), produced by alignment along three dimensions — internal coherence of objectives ↔ strategies ↔ assessments, alignment to theory/research, and alignment to learner personal/professional goals (Hirumi, Ratliff & de la Mora, 2021; Hirumi, 2025). The top-level quality vocabulary GUIDE evaluates against. See *Quality outcomes: Effective, Efficient, Engaging* above.
 - **Grounded design** (Hannafin, Hannafin, Land, & Oliver, 1997) — the meta-principle that key design decisions should be traceable to research, theory, and documented best practice. This is the *grounded* in GUIDE's name and the rationale for every archetype's grounding text and citations.
 - **Anecdotal vs. scientific evidence** (Hirumi, 2025) — anecdotal evidence comes from observations and stakeholder experience; scientific evidence comes from systematic, peer-reviewed research. Both are usable, but confusing them produces bad design decisions. Surfaces in 01's *Accuracy & Grounding* and 07's *Performance Gap Identification* (which requires data, not anecdote).
 
