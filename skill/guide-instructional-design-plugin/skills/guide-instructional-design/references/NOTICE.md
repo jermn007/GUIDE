@@ -3,7 +3,7 @@
 This skill packages content from the **GUIDE** project.
 
 **GUIDE — Grounded Universal Instructional Design Evaluator**
-Version 3.0.2
+Version 3.0.3
 Repository: https://github.com/jermn007/GUIDE
 Copyright 2026 Jeremy Terhune.
 Licensed under the Apache License, Version 2.0 (the "License"). You may not use these files except in
@@ -34,8 +34,9 @@ bundled file. No dimension definitions, scoring anchors, grounding text, or cita
 ## Theoretical sources
 
 GUIDE draws on 20+ named sources across instructional design, cognitive science, and narrative theory,
-including Knowles (1980), Mezirow (1991), Ausubel (2000), Bloom (1956) / Anderson & Krathwohl (2001),
-Gagné (1985), Mayer (2009), Sweller (1988), Mager (1997), Keller (1987, 2010 — ARCS), Campbell (1949),
-Snyder (2005), Brown, Roediger & McDaniel (2014), Dick, Carey & Carey (2015), Van Tiem et al. (2000),
-WCAG 2.1 (W3C WAI, 2018), CAST UDL (2018), Nielsen (1994), and Zheng et al. (2023). Full citations
-appear in the individual handoff documents.
+including Tyler (1949), Knowles (1980), Mezirow (1991), Ausubel (2000), Bloom (1956) / Anderson &
+Krathwohl (2001), Gagné (1985), Mayer (2009), Sweller (1988), Mager (1997), Hannafin, Hannafin, Land
+& Oliver (1997), Keller (1987, 2010 — ARCS), Campbell (1949), Snyder (2005), Brown, Roediger &
+McDaniel (2014), Dick, Carey & Carey (2015), Van Tiem et al. (2000), WCAG 2.1 (W3C WAI, 2018), CAST
+UDL (2018), Nielsen (1994), Hirumi, Ratliff & de la Mora (2021) / Hirumi (2025 — Three Alignments),
+and Zheng et al. (2023). Full citations appear in the individual handoff documents.

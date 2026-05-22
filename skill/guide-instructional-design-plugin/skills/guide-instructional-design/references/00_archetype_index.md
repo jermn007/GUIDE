@@ -6,23 +6,45 @@ scoring anchors, judge prompt, and output format.
 
 GUIDE = **G**rounded **U**niversal **I**nstructional **D**esign **E**valuator. Nine archetypes,
 54 dimensions (6 per archetype), each grounded in named learning-science sources and scored 1–5 with
-behavioral anchors. Built on the LLM-as-a-judge pattern (Zheng et al., 2023).
+behavioral anchors. Built on the LLM-as-a-judge pattern (Zheng et al., 2023) and on the grounded-design
+premise that key design decisions should be traceable to evidence from research, theory, and documented
+best practice (Hannafin, Hannafin, Land, & Oliver, 1997).
 
 ---
 
-## The 9 archetypes mapped to ADDIE
+## Quality outcomes & the Three Alignments
 
-| # | Archetype | ADDIE phase | Theorists | Reference file |
-|---|-----------|-------------|-----------|----------------|
-| 7 | Needs Analysis & Front-End Design | **A**nalyze | Rossett, Kaufman, Gilbert, Van Tiem (HPT), McGoldrick & Tobey, Mager, Keller (ARCS) | `handoff_07_needs_analysis.md` |
-| 3 | Instructional Sequencing & Events | **D**esign | Gagné, Reigeluth, van Merriënboer, Merrill, Dick & Carey, Keller (ARCS) | `handoff_03_instructional_sequencing.md` |
-| 8 | Story & Narrative Design | **D**esign | Campbell, Vogler, Harmon (Story Circle), Snyder (Save the Cat!) | `handoff_08_story_design.md` |
-| 9 | Cognitive Neuroscience & Brain-Based Instruction | **D**esign | Kandel, Sousa, Medina, Ausubel, Brown/Roediger/McDaniel, BSCS 5E | `handoff_09_cognitive_neuroscience.md` |
-| 4 | Multimedia Content Design (Deep Mayer) | **D**evelop | Mayer, Paivio, Sweller, Clark | `handoff_04_multimedia_design.md` |
-| 5 | WCAG/POUR Technical Accessibility | **D**evelop | WCAG 2.1, CAST UDL, Section 508, Nielsen | `handoff_05_accessibility_technical.md` |
-| 1 | Adult Learning Communication | **I**mplement | Knowles, Mezirow, Sweller, Ausubel, Mayer, WCAG | `handoff_01_adult_learning_communication.md` |
-| 2 | Assessment Design Quality | **E**valuate | Bloom/Anderson & Krathwohl, Webb, Messick, Mager, Kubiszyn & Borich | `handoff_02_assessment_design.md` |
-| 6 | Formative Evaluation Protocol Quality | **E**valuate | Scriven, Kirkpatrick, Stufflebeam, Bordonaro, Dick & Carey, Nielsen | `handoff_06_formative_evaluation.md` |
+GUIDE operationalizes the three alignments that produce high-quality instruction (Hirumi, 2025;
+Hirumi, Ratliff, & de la Mora, 2021):
+
+- **Effective** — alignment of instructional elements to **theory, research, and documented best practice**
+  (Hannafin et al., 1997). The *grounded* in GUIDE's name. Every archetype is theory-grounded; archetypes
+  04 and 09 lead with this lens.
+- **Efficient** — alignment of **objectives ↔ instructional strategies (chunking, sequencing) ↔ learner
+  assessments** (Tyler, 1949; Bloom, 1956; Dick, Carey & Carey, 2015). The internal coherence check.
+  Archetypes 02, 03, and 07 carry the load here; a cross-archetype Internal Alignment Check is planned
+  for v3.1.
+- **Engaging** — alignment of instructional elements to **learners' personal and professional goals,
+  interests, and motivations** (Keller, 1987, 2010 — ARCS). Captured at 07 L4 (Learner Needs), applied
+  at 03 (Learning Domain Alignment), and surfaced in 01, 08, and 09.
+
+Each archetype below is tagged with the alignment(s) it primarily produces evidence about.
+
+---
+
+## The 9 archetypes mapped to ADDIE and the Three Alignments
+
+| # | Archetype | ADDIE phase | Primary alignment | Theorists | Reference file |
+|---|-----------|-------------|-------------------|-----------|----------------|
+| 7 | Needs Analysis & Front-End Design | **A**nalyze | Efficient (objectives) + Engaging (L4 ARCS) | Rossett, Kaufman, Gilbert, Van Tiem (HPT), McGoldrick & Tobey, Mager, Keller (ARCS) | `handoff_07_needs_analysis.md` |
+| 3 | Instructional Sequencing & Events | **D**esign | Efficient (Obj↔Strategy) + Effective (theory) | Gagné, Reigeluth, van Merriënboer, Merrill, Dick & Carey, Keller (ARCS) | `handoff_03_instructional_sequencing.md` |
+| 8 | Story & Narrative Design | **D**esign | Engaging (narrative/emotional) | Campbell, Vogler, Harmon (Story Circle), Snyder (Save the Cat!) | `handoff_08_story_design.md` |
+| 9 | Cognitive Neuroscience & Brain-Based Instruction | **D**esign | Effective (theory) + Engaging (relevance) | Kandel, Sousa, Medina, Ausubel, Brown/Roediger/McDaniel, BSCS 5E | `handoff_09_cognitive_neuroscience.md` |
+| 4 | Multimedia Content Design (Deep Mayer) | **D**evelop | Effective (Mayer/Sweller) | Mayer, Paivio, Sweller, Clark | `handoff_04_multimedia_design.md` |
+| 5 | WCAG/POUR Technical Accessibility | **D**evelop | Cross-cutting (precondition for all three) | WCAG 2.1, CAST UDL, Section 508, Nielsen | `handoff_05_accessibility_technical.md` |
+| 1 | Adult Learning Communication | **I**mplement | Engaging (problem-centered, personalized) | Knowles, Mezirow, Sweller, Ausubel, Mayer, WCAG | `handoff_01_adult_learning_communication.md` |
+| 2 | Assessment Design Quality | **E**valuate | Efficient (Obj↔Assessment) | Bloom/Anderson & Krathwohl, Webb, Messick, Mager, Kubiszyn & Borich | `handoff_02_assessment_design.md` |
+| 6 | Formative Evaluation Protocol Quality | **E**valuate | Cross-cutting (measures whether alignment was achieved) | Scriven, Kirkpatrick, Stufflebeam, Bordonaro, Dick & Carey, Nielsen | `handoff_06_formative_evaluation.md` |
 
 ---
 
@@ -113,11 +135,14 @@ Several theories appear in multiple archetypes. When designing or evaluating, th
 - **Nielsen severity ratings** (cosmetic / minor / major / catastrophic) — used for severity flags in 01, 05, 06.
 - **Is training even the answer?** (HPT cause analysis; Van Tiem) — the gatekeeper question in 07.
 - **ARCS motivational design** (Keller: Attention, Relevance, Confidence, Satisfaction) — capture learner goals/interests/motivations at 07 L4 (Learner Needs), then design against them in 03 Learning Domain Alignment (especially Attitudes domain). Engagement = alignment between instruction and the learner's "why."
+- **Three Alignments → Effective / Efficient / Engaging** (Hirumi, 2025; Hirumi, Ratliff, & de la Mora, 2021) — the top-level quality vocabulary GUIDE evaluates against. See *Quality outcomes & the Three Alignments* above.
+- **Grounded design** (Hannafin, Hannafin, Land, & Oliver, 1997) — the meta-principle that key design decisions should be traceable to research, theory, and documented best practice. This is the *grounded* in GUIDE's name and the rationale for every archetype's grounding text and citations.
+- **Anecdotal vs. scientific evidence** (Hirumi, 2025) — anecdotal evidence comes from observations and stakeholder experience; scientific evidence comes from systematic, peer-reviewed research. Both are usable, but confusing them produces bad design decisions. Surfaces in 01's *Accuracy & Grounding* and 07's *Performance Gap Identification* (which requires data, not anecdote).
 
 ---
 
 ## Source
 
-GUIDE — Grounded Universal Instructional Design Evaluator (v3.0.2).
+GUIDE — Grounded Universal Instructional Design Evaluator (v3.0.3).
 Repository: github.com/jermn007/GUIDE. Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0.
 This index condenses the nine `handoff_*.md` files in this directory; those files are the authoritative source.

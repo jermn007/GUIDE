@@ -340,4 +340,4 @@ from archetypes.archetype_09_cognitive_neuroscience import JUDGE_SYSTEM_PROMPT, 
 
 ---
 
-*Source: GUIDE — Grounded Universal Instructional Design Evaluator (v3.0.2). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 09 of 9.*
+*Source: GUIDE — Grounded Universal Instructional Design Evaluator (v3.0.3). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 09 of 9.*

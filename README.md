@@ -1,6 +1,6 @@
 # GUIDE - Grounded Universal Instructional Design Evaluator
 
-**Version 3.0.2** | Apache License 2.0
+**Version 3.0.3** | Apache License 2.0
 
 GUIDE is an LLM-as-a-judge evaluation framework that operationalizes peer-reviewed instructional design research into structured rubrics. It was developed as a capstone synthesis of my experience in the University of Central Florida Master of Arts in Instructional Systems program.
 
@@ -10,21 +10,31 @@ The framework evaluates instructional content across **9 archetypes** and **54 d
 
 GUIDE applies the LLM-as-a-judge pattern (Zheng et al., 2023) to instructional design evaluation. Each archetype is a standalone judge prompt that can be loaded into any LLM capable of following structured evaluation instructions. The judge reads instructional content, scores it against 6 theory-grounded dimensions, and returns a structured scorecard with rationale.
 
+## Quality Outcomes: Effective, Efficient, Engaging
+
+High-quality instruction is the product of three alignments (Hirumi, 2025; Hirumi, Ratliff, & de la Mora, 2021). GUIDE operationalizes each:
+
+- **Effective** — instructional elements aligned with **theory, research, and documented best practice** (Hannafin, Hannafin, Land, & Oliver, 1997). Whether the artifact reflects what learning science actually says works. This is the *grounded* in Grounded Universal Instructional Design Evaluator.
+- **Efficient** — **objectives, instructional strategies (chunking and sequencing), and learner assessments aligned with each other** (Tyler, 1949; Bloom, 1956; Dick, Carey & Carey, 2015). Whether the artifact's internal pieces cohere so learners aren't doing wasted work.
+- **Engaging** — instructional elements aligned with **learners' personal and professional goals, interests, and motivations** (Keller, 1987, 2010 — ARCS). Whether the artifact connects to who the learner is and what they're trying to become.
+
+Each archetype below evaluates one or more of these alignments. The "Primary alignment" column tags the alignment(s) the archetype primarily produces evidence about.
+
 ## The Nine Archetypes
 
 Each archetype maps to a phase of the ADDIE instructional design lifecycle:
 
-| Archetype | Focus | ADDIE Phase |
-|-----------|-------|-------------|
-| Needs Analysis | Rossett, Kaufman, Gilbert, Keller (ARCS) | Analyze |
-| Instructional Sequencing | Gagne, Reigeluth, van Merrienboer, Keller (ARCS) | Design |
-| Story Design | Campbell, Vogler, Harmon, Snyder | Design |
-| Cognitive Neuroscience | Kandel, Sousa, Medina, Ausubel, Brown | Design |
-| Multimedia Design | Mayer, Paivio, Sweller | Develop |
-| Accessibility & Technical | WCAG, CAST UDL, Section 508 | Develop |
-| Adult Learning Communication | Knowles, Mezirow, Sweller, Ausubel | Implement |
-| Assessment Design | Bloom, Webb, Messick | Evaluate |
-| Formative Evaluation | Scriven, Kirkpatrick, Stufflebeam | Evaluate |
+| Archetype | Focus | ADDIE Phase | Primary alignment |
+|-----------|-------|-------------|-------------------|
+| Needs Analysis | Rossett, Kaufman, Gilbert, Keller (ARCS) | Analyze | Efficient (objectives) + Engaging (L4 ARCS) |
+| Instructional Sequencing | Gagne, Reigeluth, van Merrienboer, Keller (ARCS) | Design | Efficient (Obj↔Strategy) + Effective (theory) |
+| Story Design | Campbell, Vogler, Harmon, Snyder | Design | Engaging (narrative/emotional) |
+| Cognitive Neuroscience | Kandel, Sousa, Medina, Ausubel, Brown | Design | Effective (theory) + Engaging (relevance) |
+| Multimedia Design | Mayer, Paivio, Sweller | Develop | Effective (Mayer/Sweller) |
+| Accessibility & Technical | WCAG, CAST UDL, Section 508 | Develop | Cross-cutting (precondition for all three) |
+| Adult Learning Communication | Knowles, Mezirow, Sweller, Ausubel | Implement | Engaging (problem-centered, personalized) |
+| Assessment Design | Bloom, Webb, Messick | Evaluate | Efficient (Obj↔Assessment) |
+| Formative Evaluation | Scriven, Kirkpatrick, Stufflebeam | Evaluate | Cross-cutting (measures whether alignment was achieved) |
 
 ## Repository Structure
 
@@ -72,6 +82,7 @@ GUIDE is also packaged as a Claude skill and plugin under [`skill/`](skill/). In
 
 The framework draws on 20+ named sources across instructional design, cognitive science, and narrative theory. Key citations include:
 
+- Tyler (1949) - Original alignment principle (objectives → instruction → assessment)
 - Knowles (1980) - Andragogy and self-directed learning
 - Mezirow (1991) - Transformative learning and critical reflection
 - Ausubel (2000) - Meaningful reception learning and advance organizers
@@ -80,8 +91,10 @@ The framework draws on 20+ named sources across instructional design, cognitive 
 - Mayer (2009) - Cognitive theory of multimedia learning
 - Sweller (1988) - Cognitive load theory
 - Campbell (1949) / Snyder (2005) - Narrative structure frameworks
+- Hannafin, Hannafin, Land & Oliver (1997) - Grounded practice in instructional design (the *grounded* premise of GUIDE)
 - Brown, Roediger & McDaniel (2014) - Retrieval practice and desirable difficulties
 - Keller (1987, 2010) - ARCS motivational design (Attention, Relevance, Confidence, Satisfaction)
+- Hirumi, Ratliff, & de la Mora (2021); Hirumi (2025) - Three Alignments framework (Effective / Efficient / Engaging)
 - Zheng et al. (2023) - LLM-as-a-judge methodology
 
 ## Self-Evaluation

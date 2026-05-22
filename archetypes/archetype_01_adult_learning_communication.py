@@ -117,12 +117,17 @@ the response faithfully reflects the retrieved source documents without hallucin
 distortion, or unsupported extrapolation. This parallels the "golden answer" validation
 pattern used in LangSmith evaluation pipelines.
 
+Hirumi (2025) distinguishes anecdotal evidence (observations, stakeholder experience)
+from scientific evidence (systematic, peer-reviewed research). Both have uses, but
+confusing them produces bad decisions. A response that presents anecdote as scientific
+consensus should lose points here even if the underlying claim happens to be true.
+
 | Score | Criteria |
 |-------|----------|
-| 5 | All claims are accurate and traceable to authoritative sources. No hallucination. Appropriate hedging on uncertain points. If sources conflict, the response acknowledges the ambiguity. |
+| 5 | All claims are accurate and traceable to authoritative sources. No hallucination. Appropriate hedging on uncertain points. If sources conflict, the response acknowledges the ambiguity. Anecdotal and scientific evidence are distinguished and labeled appropriately. |
 | 4 | Accurate overall. Minor imprecision or one instance of unsupported generalization that doesn't mislead. |
-| 3 | Mostly accurate but includes at least one unsupported claim or meaningful oversimplification that could mislead. |
-| 2 | Multiple inaccuracies or unsupported claims. Mixes valid information with hallucinated content. |
+| 3 | Mostly accurate but includes at least one unsupported claim, meaningful oversimplification, or anecdote presented as if it were scientific consensus. |
+| 2 | Multiple inaccuracies or unsupported claims. Mixes valid information with hallucinated content; anecdotal and scientific evidence are conflated. |
 | 1 | Substantially inaccurate. Fabricated information. Would mislead the user. |
 
 ---

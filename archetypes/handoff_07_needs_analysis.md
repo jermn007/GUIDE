@@ -31,6 +31,7 @@ Is the gap between desired and actual performance clearly defined and DATA-BASED
 **Guidance:**
 - **Data types**: Learning outcomes data, performance metrics, completion rates, error rates, stakeholder surveys, job analysis data, business metrics
 - **Avoid**: "People need training" without data; "This would be nice to have" (not a gap)
+- **Anecdotal vs. scientific evidence (Hirumi, 2025).** Anecdotal evidence — stakeholder accounts, individual experience, "we've always done it this way" — is acceptable as *signal* (it tells you where to look), but cannot stand alone as the gap definition. Scientific or systematically collected evidence (metrics, validated surveys, observation protocols, peer-reviewed studies) is what justifies the scope and severity of the gap. A needs assessment that conflates the two — treating stakeholder impressions as if they were measurement — is capped at 3 on this dimension.
 - **Sweet spot**: "Current state: 65% of new employees can execute Process X without assistance. Desired state: 95% within 30 days. Gap: 30 percentage points."
 
 ---
@@ -348,6 +349,12 @@ Score using the rubric above. Return only the JSON object.
 **Motivational Design**
 - Keller, J.M. (1987). Development and Use of the ARCS Model of Instructional Design. Journal of Instructional Development, 10(3), 2-10.
 - Keller, J.M. (2010). Motivational Design for Learning and Performance: The ARCS Model Approach. Springer. (Operationalizes Attention, Relevance, Confidence, Satisfaction as design criteria.)
+
+**Three Alignments & Evidence-Informed Design**
+- Hannafin, M.J., Hannafin, K.M., Land, S.M., & Oliver, K. (1997). Grounded practice and the design of constructivist learning environments. Educational Technology Research and Development, 45(3), 101-117.
+- Hirumi, A., Ratliff, M., & de la Mora Velasco, E. (2021). Analyzing your context to improve and innovate distance learning (pp. 104-140). In L. Cifuentes (Ed.), Guide to Administering Distance Learning. Brill Publishing.
+- Hirumi, A. (2025). Design Principles, Ethics, and Evidence-Informed Decision Making: The (Evolving) Future of the Field is Design! In R. E. West & H. Leary (Eds.), Foundations of Learning and Instructional Design Technology (2nd ed., pp. 433-448). EdTechBooks.
+- Tyler, R.W. (1949). Basic Principles of Curriculum and Instruction. University of Chicago Press. (Originating source for the objectives → instruction → assessment alignment principle.)
 
 ---
 
