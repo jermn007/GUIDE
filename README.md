@@ -14,9 +14,9 @@ GUIDE applies the LLM-as-a-judge pattern (Zheng et al., 2023) to instructional d
 
 High-quality instruction is the product of three alignments (Hirumi, 2025; Hirumi, Ratliff, & de la Mora, 2021). GUIDE operationalizes each:
 
-- **Effective** — instructional elements aligned with **theory, research, and documented best practice** (Hannafin, Hannafin, Land, & Oliver, 1997). Whether the artifact reflects what learning science actually says works. This is the *grounded* in Grounded Universal Instructional Design Evaluator.
-- **Efficient** — **objectives, instructional strategies (chunking and sequencing), and learner assessments aligned with each other** (Tyler, 1949; Bloom, 1956; Dick, Carey & Carey, 2015). Whether the artifact's internal pieces cohere so learners aren't doing wasted work.
-- **Engaging** — instructional elements aligned with **learners' personal and professional goals, interests, and motivations** (Keller, 1987, 2010 — ARCS). Whether the artifact connects to who the learner is and what they're trying to become.
+- **Effective** - instructional elements aligned with **theory, research, and documented best practice** (Hannafin, Hannafin, Land, & Oliver, 1997). Whether the artifact reflects what learning science actually says works. This is the *grounded* in Grounded Universal Instructional Design Evaluator.
+- **Efficient** - **objectives, instructional strategies (chunking and sequencing), and learner assessments aligned with each other** (Tyler, 1949; Bloom, 1956; Dick, Carey & Carey, 2015). Whether the artifact's internal pieces cohere so learners aren't doing wasted work.
+- **Engaging** - instructional elements aligned with **learners' personal and professional goals, interests, and motivations** (Keller, 1987, 2010 - ARCS). Whether the artifact connects to who the learner is and what they're trying to become.
 
 Each archetype below evaluates one or more of these alignments. The "Primary alignment" column tags the alignment(s) the archetype primarily produces evidence about.
 
@@ -35,7 +35,7 @@ Each archetype maps to a phase of the ADDIE instructional design lifecycle:
 | Adult Learning Communication | Knowles, Mezirow, Sweller, Ausubel | Implement | Engaging (problem-centered, personalized) |
 | Assessment Design | Bloom, Webb, Messick | Evaluate | Efficient (Obj↔Assessment) |
 | Formative Evaluation | Scriven, Kirkpatrick, Stufflebeam | Evaluate | Cross-cutting (measures whether alignment was achieved) |
-| Curriculum Alignment | Tyler, Bloom/Anderson & Krathwohl, Webb (DoK), Mager, Dick & Carey, Wiggins & McTighe, Reigeluth, Hirumi | Cross-ADDIE | **Efficient** (synthesis archetype — Obj↔Strategy↔Assessment + vertical + discipline) |
+| Curriculum Alignment | Tyler, Bloom/Anderson & Krathwohl, Webb (DoK), Mager, Dick & Carey, Wiggins & McTighe, Reigeluth, Hirumi | Cross-ADDIE | **Efficient** (synthesis archetype - Obj↔Strategy↔Assessment + vertical + discipline) |
 
 ## Repository Structure
 
