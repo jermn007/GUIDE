@@ -2,15 +2,14 @@
 name: guide-instructional-design
 description: >-
   Design and evaluate instructional content using GUIDE, a learning-science framework of 10
-  archetypes and 60 theory-grounded dimensions mapped to the ADDIE lifecycle (plus a synthesis
-  archetype for curriculum alignment). Use whenever work
+  archetypes and 60 theory-grounded dimensions across the ADDIE lifecycle. Use whenever work
   involves teaching, training, or learning: writing or reviewing a lesson plan, course, syllabus,
   or curriculum; building or critiquing a quiz, test, rubric, or assessment; creating or auditing
   an e-learning module, training video, or slide deck; designing scenario-based or branching
   learning; checking learning content for accessibility (WCAG/UDL); running a needs analysis or
-  deciding whether training is even the right solution; planning a formative evaluation, usability
+  deciding whether training is the right solution; planning a formative evaluation, usability
   test, or pilot; or grounding any of these in learning theory (Bloom, Gagné, Mayer, Knowles,
-  Sweller, Mager, Keller/ARCS, cognitive neuroscience). Trigger even when the user says course, training,
+  Sweller, Mager, Keller/ARCS, cognitive neuroscience). Trigger when the user says course, training,
   lesson, module, learners, objectives, or instructional design without naming GUIDE. Use it both
   to CREATE instructional artifacts and to SCORE existing ones with rubrics.
 ---
@@ -169,7 +168,7 @@ you need. Read the whole doc for the archetype you're actively using.
 
 ## Attribution
 
-GUIDE — Grounded Universal Instructional Design Evaluator (v3.1.1).
+GUIDE — Grounded Universal Instructional Design Evaluator (v3.1.2).
 Repository: github.com/jermn007/GUIDE. Copyright 2026 Jeremy Terhune. Licensed under the Apache License,
 Version 2.0. The bundled `references/handoff_*.md` files are the project's model-agnostic handoff
 documents, reproduced for use inside this skill; see `references/NOTICE.md`. Keep this attribution intact.

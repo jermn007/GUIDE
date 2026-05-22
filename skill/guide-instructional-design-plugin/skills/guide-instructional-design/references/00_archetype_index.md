@@ -162,6 +162,6 @@ Several theories appear in multiple archetypes. When designing or evaluating, th
 
 ## Source
 
-GUIDE — Grounded Universal Instructional Design Evaluator (v3.1.1).
+GUIDE — Grounded Universal Instructional Design Evaluator (v3.1.2).
 Repository: github.com/jermn007/GUIDE. Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0.
 This index condenses the nine `handoff_*.md` files in this directory; those files are the authoritative source.

@@ -1,6 +1,6 @@
 # GUIDE - Grounded Universal Instructional Design Evaluator
 
-**Version 3.1.1** | Apache License 2.0
+**Version 3.1.2** | Apache License 2.0
 
 GUIDE is an LLM-as-a-judge evaluation framework that operationalizes peer-reviewed instructional design research into structured rubrics. It was developed as a capstone synthesis of my experience in the University of Central Florida Master of Arts in Instructional Systems program.
 
@@ -72,7 +72,7 @@ GUIDE is also packaged as a Claude skill and plugin under [`skill/`](skill/). In
 
 ## Key Files
 
-**GUIDE_Rubric_Document.docx** is a static snapshot of the v3.0.0 rubric - a comprehensive document containing the original 9 archetypes, 54 dimensions, scoring criteria, a cross-archetype coverage matrix, calibration example, and glossary. The live framework is now v3.1.1 (10 archetypes, 60 dimensions) and lives in `archetypes/` and the skill; the docx will be regenerated on the next major release.
+**GUIDE_Rubric_Document.docx** is a static snapshot of the v3.0.0 rubric - a comprehensive document containing the original 9 archetypes, 54 dimensions, scoring criteria, a cross-archetype coverage matrix, calibration example, and glossary. The live framework is now v3.1.2 (10 archetypes, 60 dimensions) and lives in `archetypes/` and the skill; the docx will be regenerated on the next major release.
 
 **Archetype Python modules** (`archetype_*.py`) are standalone judge prompts that can be loaded into any LLM. Each contains the full grounding text, scoring criteria, and evaluation instructions for its 6 dimensions.
 
