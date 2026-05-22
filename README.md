@@ -20,7 +20,7 @@ High-quality instruction is the product of three alignments (Hirumi, 2025; Hirum
 
 Each archetype below evaluates one or more of these alignments. The "Primary alignment" column tags the alignment(s) the archetype primarily produces evidence about.
 
-## The Nine Archetypes
+## The Ten Archetypes
 
 Each archetype maps to a phase of the ADDIE instructional design lifecycle:
 
@@ -67,11 +67,11 @@ GUIDE is also packaged as a Claude skill and plugin under [`skill/`](skill/). In
 /plugin install ./skill/guide-instructional-design.plugin
 ```
 
-…and the skill self-activates on instructional-design intents (course, training, lesson, quiz, rubric, e-learning, accessibility, needs analysis, etc.), running in either **design** or **evaluate** mode against the 9 archetypes. See [`skill/README.md`](skill/README.md) for build instructions, skill-only install, and the sync workflow that keeps the skill aligned with `archetypes/`.
+…and the skill self-activates on instructional-design intents (course, training, lesson, quiz, rubric, e-learning, accessibility, needs analysis, etc.), running in either **design** or **evaluate** mode against the 10 archetypes. See [`skill/README.md`](skill/README.md) for build instructions, skill-only install, and the sync workflow that keeps the skill aligned with `archetypes/`.
 
 ## Key Files
 
-**GUIDE_Rubric_Document.docx** is the primary deliverable - a comprehensive rubric document containing all 9 archetypes, 54 dimensions, scoring criteria, a cross-archetype coverage matrix, calibration example, and glossary.
+**GUIDE_Rubric_Document.docx** is a static snapshot of the v3.0.0 rubric - a comprehensive document containing the original 9 archetypes, 54 dimensions, scoring criteria, a cross-archetype coverage matrix, calibration example, and glossary. The live framework is now v3.1.0 (10 archetypes, 60 dimensions) and lives in `archetypes/` and the skill; the docx will be regenerated on the next major release.
 
 **Archetype Python modules** (`archetype_*.py`) are standalone judge prompts that can be loaded into any LLM. Each contains the full grounding text, scoring criteria, and evaluation instructions for its 6 dimensions.
 
