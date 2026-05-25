@@ -62,13 +62,13 @@ GUIDE/
 
 ## Claude Skill / Plugin
 
-GUIDE is also packaged as a Claude skill and plugin under [`skill/`](skill/). Install via:
+GUIDE is also packaged as a Claude skill and plugin. Download the latest `.plugin` (or `.skill`) from the [Releases page](https://github.com/jermn007/GUIDE/releases/latest), then in Claude Code run:
 
 ```
-/plugin install ./skill/guide-instructional-design.plugin
+/plugin install ./guide-instructional-design.plugin
 ```
 
-…and the skill self-activates on instructional-design intents (course, training, lesson, quiz, rubric, e-learning, accessibility, needs analysis, etc.), running in either **design** or **evaluate** mode against the 10 archetypes. See [`skill/README.md`](skill/README.md) for build instructions, skill-only install, and the sync workflow that keeps the skill aligned with `archetypes/`.
+…and the skill self-activates on instructional-design intents (course, training, lesson, quiz, rubric, e-learning, accessibility, needs analysis, etc.), running in either **design** or **evaluate** mode against the 10 archetypes. See [`skill/README.md`](skill/README.md) for the skill-only install path, building from source, and the sync workflow that keeps the skill aligned with `archetypes/`.
 
 ## Key Files
 

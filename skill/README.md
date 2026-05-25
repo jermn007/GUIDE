@@ -26,21 +26,21 @@ The plugin's `skills/guide-instructional-design/` directory is a generated mirro
 
 ## Install
 
-### Option A — Plugin (recommended for Claude Code users)
+### Option A - Plugin (recommended for Claude Code users)
 
-Build a `.plugin` zip and install it via Claude Code:
+Download the latest `guide-instructional-design.plugin` from the [Releases page](https://github.com/jermn007/GUIDE/releases/latest), then in Claude Code run:
+
+```
+/plugin install ./guide-instructional-design.plugin
+```
+
+If you'd rather build the plugin from source (e.g., to test a local edit before a release):
 
 ```bash
 # from the repo root
 cd skill/guide-instructional-design-plugin
 zip -r ../guide-instructional-design.plugin .
 cd ../..
-```
-
-Then in Claude Code:
-
-```
-/plugin install ./skill/guide-instructional-design.plugin
 ```
 
 ### Option B — Skill only
