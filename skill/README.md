@@ -34,6 +34,8 @@ Download the latest `guide-instructional-design.plugin` from the [Releases page]
 /plugin install ./guide-instructional-design.plugin
 ```
 
+For a step-by-step walkthrough with screenshots, see [`../Installing-GUIDE-in-Claude.pdf`](../Installing-GUIDE-in-Claude.pdf) (also attached to each release).
+
 If you'd rather build the plugin from source (e.g., to test a local edit before a release):
 
 ```bash

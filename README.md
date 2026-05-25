@@ -47,6 +47,7 @@ GUIDE/
 ├── GUIDE_Self_Evaluation.md               # Self-evaluation baseline (v2.2.0)
 ├── GUIDE_Self_Evaluation_v3_Comparison.md # Comparison v2.2.0 -> v3.0.0
 ├── GUIDE_Self_Evaluation_v3.1.1.md        # Comparison v3.0.0 -> v3.1.1 + Archetype 10 self-application
+├── Installing-GUIDE-in-Claude.pdf         # Step-by-step install guide with screenshots
 ├── guide_base.py                          # Base evaluator class
 ├── guide_registry.py                      # Archetype registry and runner
 ├── archetypes/
@@ -68,7 +69,9 @@ GUIDE is also packaged as a Claude skill and plugin. Download the latest `.plugi
 /plugin install ./guide-instructional-design.plugin
 ```
 
-…and the skill self-activates on instructional-design intents (course, training, lesson, quiz, rubric, e-learning, accessibility, needs analysis, etc.), running in either **design** or **evaluate** mode against the 10 archetypes. See [`skill/README.md`](skill/README.md) for the skill-only install path, building from source, and the sync workflow that keeps the skill aligned with `archetypes/`.
+…and the skill self-activates on instructional-design intents (course, training, lesson, quiz, rubric, e-learning, accessibility, needs analysis, etc.), running in either **design** or **evaluate** mode against the 10 archetypes.
+
+**For a step-by-step walkthrough with screenshots, see [`Installing-GUIDE-in-Claude.pdf`](Installing-GUIDE-in-Claude.pdf)** (also attached to each release on the [Releases page](https://github.com/jermn007/GUIDE/releases/latest)). See [`skill/README.md`](skill/README.md) for the skill-only install path, building from source, and the sync workflow that keeps the skill aligned with `archetypes/`.
 
 ## Key Files
 
