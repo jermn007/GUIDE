@@ -43,7 +43,7 @@ Each archetype maps to a phase of the ADDIE instructional design lifecycle:
 GUIDE/
 ├── README.md                              # This file
 ├── NOTICE                                 # Copyright and attribution
-├── GUIDE_Rubric_Document.docx             # Full rubric document (v3.0.0 snapshot)
+├── GUIDE_Rubric_Document.docx             # Full rubric document (v3.1.2)
 ├── GUIDE_Self_Evaluation.md               # Self-evaluation baseline (v2.2.0)
 ├── GUIDE_Self_Evaluation_v3_Comparison.md # Comparison v2.2.0 -> v3.0.0
 ├── GUIDE_Self_Evaluation_v3.1.1.md        # Comparison v3.0.0 -> v3.1.1 + Archetype 10 self-application
@@ -75,7 +75,7 @@ GUIDE is also packaged as a Claude skill and plugin. Download the latest `.plugi
 
 ## Key Files
 
-**GUIDE_Rubric_Document.docx** is a static snapshot of the v3.0.0 rubric - a comprehensive document containing the original 9 archetypes, 54 dimensions, scoring criteria, a cross-archetype coverage matrix, calibration example, and glossary. The live framework is now v3.1.2 (10 archetypes, 60 dimensions) and lives in `archetypes/` and the skill; the docx will be regenerated on the next major release.
+**GUIDE_Rubric_Document.docx** is the printable companion to the live framework - a comprehensive document containing all 10 archetypes, 60 dimensions, scoring criteria, the Three Alignments (Effective/Efficient/Engaging) framing, ARCS motivational design integration, the Curriculum Alignment synthesis archetype, a cross-archetype coverage matrix, calibration example, and glossary. Brought to parity with the live framework in v3.1.2; future framework changes will be propagated via [`scripts/update_rubric_doc.py`](scripts/update_rubric_doc.py).
 
 **Archetype Python modules** (`archetype_*.py`) are standalone judge prompts that can be loaded into any LLM. Each contains the full grounding text, scoring criteria, and evaluation instructions for its 6 dimensions.
 
