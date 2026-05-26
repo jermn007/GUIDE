@@ -75,7 +75,7 @@ GUIDE is also packaged as a Claude skill and plugin. Download the latest `.plugi
 
 ## Key Files
 
-**GUIDE_Rubric_Document.docx** is the printable companion to the live framework - a comprehensive document containing all 10 archetypes, 60 dimensions, scoring criteria, the Three Alignments (Effective/Efficient/Engaging) framing, ARCS motivational design integration, the Curriculum Alignment synthesis archetype, a cross-archetype coverage matrix, calibration example, and glossary. Brought to parity with the live framework in v3.1.2; future framework changes will be propagated via [`scripts/update_rubric_doc.py`](scripts/update_rubric_doc.py).
+**GUIDE_Rubric_Document.docx** is the printable companion to the live framework - a comprehensive document containing all 10 archetypes, 60 dimensions, scoring criteria, the Three Alignments (Effective/Efficient/Engaging) framing, ARCS motivational design integration, the Curriculum Alignment synthesis archetype, a cross-archetype coverage matrix, calibration example, and glossary. Brought to parity with the live framework in v3.1.2.
 
 **Archetype Python modules** (`archetype_*.py`) are standalone judge prompts that can be loaded into any LLM. Each contains the full grounding text, scoring criteria, and evaluation instructions for its 6 dimensions.
 
