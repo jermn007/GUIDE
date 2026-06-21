@@ -69,7 +69,16 @@ GUIDE/
 
 ## Claude Skill / Plugin
 
-GUIDE is also packaged as a Claude skill and plugin. Download the latest `.plugin` (or `.skill`) from the [Releases page](https://github.com/jermn007/GUIDE/releases/latest), then in Claude Code run:
+GUIDE is also packaged as a Claude skill and plugin.
+
+**Install via marketplace (recommended - receives version updates):**
+
+```
+/plugin marketplace add jermn007/GUIDE
+/plugin install guide-instructional-design@guide
+```
+
+**Or install from a release file:** download the latest `.plugin` (or `.skill`) from the [Releases page](https://github.com/jermn007/GUIDE/releases/latest), then run:
 
 ```
 /plugin install ./guide-instructional-design.plugin

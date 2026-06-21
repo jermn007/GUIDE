@@ -1,0 +1,32 @@
+{
+  "name": "guide",
+  "owner": {
+    "name": "Jeremy Terhune"
+  },
+  "description": "GUIDE - Grounded Universal Instructional Design Evaluator: learning-science archetypes, rubrics, and a 13-agent ADDIE pipeline for designing and evaluating instructional content.",
+  "plugins": [
+    {
+      "name": "guide-instructional-design",
+      "source": "./skill/guide-instructional-design-plugin",
+      "description": "Design and evaluate instructional content with GUIDE - 10 learning-science archetypes and 60 theory-grounded dimensions mapped to the ADDIE lifecycle, plus a 13-agent ADDIE pipeline (router, 10 archetype specialists, curriculum-alignment gate, synthesizer, reviser).",
+      "author": {
+        "name": "Jeremy Terhune"
+      },
+      "homepage": "https://github.com/jermn007/GUIDE",
+      "repository": "https://github.com/jermn007/GUIDE",
+      "license": "Apache-2.0",
+      "keywords": [
+        "instructional-design",
+        "learning-science",
+        "addie",
+        "evaluation",
+        "rubric",
+        "assessment",
+        "accessibility",
+        "multimedia-learning",
+        "cognitive-neuroscience",
+        "guide"
+      ]
+    }
+  ]
+}
