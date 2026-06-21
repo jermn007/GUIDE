@@ -145,50 +145,50 @@ instruction, and assessment teach and test different cognitive levels or differe
 You will score across 6 dimensions, each on a 1-5 scale:
 
 1. **Objective ↔ Strategy Coherence** (1-5)
-   - Does the instruction actually teach what the objective states?
-   - Behavior verb in the objective is practiced in instruction
-   - Bloom level taught matches Bloom level stated (Bloom 1956; Anderson & Krathwohl 2001)
-   - No instruction exists that doesn't trace to an objective (no extraneous content)
-   Score: 1=Instruction and objectives essentially disconnected; 5=Every objective verb practiced; Bloom levels match; no extraneous content
+- Does the instruction actually teach what the objective states?
+- Behavior verb in the objective is practiced in instruction
+- Bloom level taught matches Bloom level stated (Bloom 1956; Anderson & Krathwohl 2001)
+- No instruction exists that doesn't trace to an objective (no extraneous content)
+Score: 1=Instruction and objectives essentially disconnected; 5=Every objective verb practiced; Bloom levels match; no extraneous content
 
 2. **Strategy ↔ Assessment Coherence** (1-5)
-   - Does the assessment measure what was taught?
-   - Assessment tasks reflect the practice activities in format and cognitive demand
-   - No surprises for the learner — same Bloom level taught is tested
-   - Skills tested were actually practiced, not just mentioned
-   Score: 1=Assessment tests different content than was taught; 5=Assessment mirrors practice in format and cognitive demand
+- Does the assessment measure what was taught?
+- Assessment tasks reflect the practice activities in format and cognitive demand
+- No surprises for the learner — same Bloom level taught is tested
+- Skills tested were actually practiced, not just mentioned
+Score: 1=Assessment tests different content than was taught; 5=Assessment mirrors practice in format and cognitive demand
 
 3. **Objective ↔ Assessment Coherence** (1-5)
-   - Does the assessment test what the objective states?
-   - Verb-to-task match (Mager 1997): if objective says "analyze," assessment asks for analysis
-   - Bloom-level match (Bloom 1956; Anderson & Krathwohl 2001): cognitive demand of objective equals cognitive demand of assessment
-   - Webb's Depth of Knowledge (Webb 1997) consistent across objective and assessment
-   - The criterion stated in the objective is the criterion in the rubric
-   Score: 1=Assessment tests fundamentally different behaviors than objectives state; 5=Verb, Bloom level, DoK, and criterion all match
+- Does the assessment test what the objective states?
+- Verb-to-task match (Mager 1997): if objective says "analyze," assessment asks for analysis
+- Bloom-level match (Bloom 1956; Anderson & Krathwohl 2001): cognitive demand of objective equals cognitive demand of assessment
+- Webb's Depth of Knowledge (Webb 1997) consistent across objective and assessment
+- The criterion stated in the objective is the criterion in the rubric
+Score: 1=Assessment tests fundamentally different behaviors than objectives state; 5=Verb, Bloom level, DoK, and criterion all match
 
 4. **Coverage Completeness** (1-5)
-   - Is every objective addressed in both instruction AND assessment?
-   - Is every piece of instruction tied to an objective?
-   - No orphan objectives (stated but not taught or not tested)
-   - No orphan instruction (taught but not aligned to any objective)
-   - A blueprint or table of specifications is present or trivially derivable (Dick & Carey 2015; Wiggins & McTighe 2005)
-   Score: 1=Objectives, instruction, and assessment are three independent lists; 5=Complete coverage, no orphans, blueprint derivable
+- Is every objective addressed in both instruction AND assessment?
+- Is every piece of instruction tied to an objective?
+- No orphan objectives (stated but not taught or not tested)
+- No orphan instruction (taught but not aligned to any objective)
+- A blueprint or table of specifications is present or trivially derivable (Dick & Carey 2015; Wiggins & McTighe 2005)
+Score: 1=Objectives, instruction, and assessment are three independent lists; 5=Complete coverage, no orphans, blueprint derivable
 
 5. **Vertical Alignment** (1-5)
-   - Across lessons/modules/courses, do they build coherently?
-   - Prerequisites identified and respected
-   - Spiral curriculum (Bruner) or elaboration logic (Reigeluth 1999) evident
-   - Later content extends, not merely repeats, earlier content
-   - For 4C/ID-style designs (van Merriënboer & Kirschner 2018), whole-task progression coherent
-   Score: 1=Lesson/module order is arbitrary or reverse-coherent; 5=Clear vertical logic; prerequisites respected; progression builds
-   Note: For single-lesson artifacts, score within-lesson sequencing instead and flag the adaptation in rationale.
+- Across lessons/modules/courses, do they build coherently?
+- Prerequisites identified and respected
+- Spiral curriculum (Bruner) or elaboration logic (Reigeluth 1999) evident
+- Later content extends, not merely repeats, earlier content
+- For 4C/ID-style designs (van Merriënboer & Kirschner 2018), whole-task progression coherent
+Score: 1=Lesson/module order is arbitrary or reverse-coherent; 5=Clear vertical logic; prerequisites respected; progression builds
+Note: For single-lesson artifacts, score within-lesson sequencing instead and flag the adaptation in rationale.
 
 6. **Discipline Alignment** (1-5)
-   - Does the course/program ladder up to professional competencies, knowledge base, or accrediting examinations?
-   - Stated linkage to external competency framework
-   - Every objective at the unit/lesson level maps upward to a competency at the discipline level (Hirumi, Ratliff & de la Mora 2021; Hirumi 2025, Figure 1)
-   Score: 1=No stated discipline-level alignment; 5=Explicit traceable linkage; every objective maps upward
-   Note: For artifacts not intended to ladder up to a discipline (one-off workshops, internal training), score on internal coherence with stated purpose and note the adaptation in rationale.
+- Does the course/program ladder up to professional competencies, knowledge base, or accrediting examinations?
+- Stated linkage to external competency framework
+- Every objective at the unit/lesson level maps upward to a competency at the discipline level (Hirumi, Ratliff & de la Mora 2021; Hirumi 2025, Figure 1)
+Score: 1=No stated discipline-level alignment; 5=Explicit traceable linkage; every objective maps upward
+Note: For artifacts not intended to ladder up to a discipline (one-off workshops, internal training), score on internal coherence with stated purpose and note the adaptation in rationale.
 
 Return JSON with overall score (mean of 6 dimensions unless a severity flag warrants weighting),
 individual dimension scores, rationale per dimension, severity_flags (critical issues), and

@@ -16,102 +16,75 @@
 
 | Dimension | Scale | Definition | Key Criteria |
 |-----------|-------|------------|--------------|
-| **Gagné's Nine Events Coverage** | 1-5 | Are all nine events present in the instruction? | (1) Gain attention, (2) State objectives, (3) Recall prior learning, (4) Present content, (5) Provide guidance, (6) Elicit performance, (7) Provide feedback, (8) Assess performance, (9) Enhance retention/transfer; events may be reordered |
-| **Learning Domain Alignment** | 1-5 | Are instructional strategies appropriate for the learning domain? | Gagné's 5 domains: verbal information, intellectual skills, cognitive strategies, motor skills, attitudes; strategy match |
+| **Gagné's Nine Events Coverage** | 1-5 | Are all nine events present in the instruction? | (1) Gain attention, (2) State objectives, (3) Recall prior, (4) Present content, (5) Provide guidance, (6) Elicit performance, (7) Provide feedback, (8) Assess performance, (9) Enhance retention/transfer |
+| **Learning Domain Alignment** | 1-5 | Are instructional strategies appropriate for the learning domain — and do they leverage learner motivation where data is available? | Gagné's 5 domains; **Keller's ARCS as cross-cutting motivational layer**, especially for Attitudes domain |
 | **Sequencing Logic** | 1-5 | Does instruction move from simple to complex, known to unknown, concrete to abstract? | Dick/Carey prerequisite analysis; hierarchical/procedural/combination sequencing |
 | **Scaffolding & Gradual Release** | 1-5 | Is support provided early and gradually removed? | Initial support → guided practice → independent practice transition; Merrill's First Principles |
-| **Practice & Feedback Integration** | 1-5 | Are there sufficient opportunities for practice with timely, specific feedback? | Multiple practice opportunities; timely, specific feedback (confirmatory, evaluative, remedial, descriptive); Gagné events 6-7 |
-| **Transfer & Retention Design** | 1-5 | Does instruction explicitly support transfer and long-term retention? | Real-world application; spaced practice; varied contexts; Gagné event 9 |
+| **Practice & Feedback Integration** | 1-5 | Are there sufficient opportunities for practice with timely, specific feedback? | Multiple practice opportunities; confirmatory/evaluative/remedial/descriptive feedback |
+| **Transfer & Retention Design** | 1-5 | Does instruction explicitly support transfer and long-term retention? | Real-world application; spaced practice; varied contexts |
 
 ---
 
 ## Scoring Guide
 
 ### Gagné's Nine Events Coverage
-- **5**: All nine events clearly identifiable; logical flow and integration
-- **4**: Eight events present; one event unclear or implied
-- **3**: Six to seven events present; one to two missing or vague
-- **2**: Four to five events present; multiple missing
-- **1**: Fewer than four events; no clear instructional structure
+- **5**: All nine events clearly identifiable; logical flow and integration.
+- **4**: Eight events present; one event unclear or implied.
+- **3**: Six to seven events present; one to two missing or vague.
+- **2**: Four to five events present; multiple missing.
+- **1**: Fewer than four events; no clear instructional structure.
 
-**Event Identification Tips**:
-1. **Gain Attention**: Hook, opening problem, relevance statement
-2. **State Objectives**: Learning goals; Mager-style or narrative
-3. **Recall Prior Learning**: Activation of prerequisites; review
-4. **Present Content**: Direct instruction, reading, video, or discovery
-5. **Provide Guidance**: Examples, hints, analogies, scaffolds
-6. **Elicit Performance**: Practice activities, problems, projects
-7. **Provide Feedback**: Response to practice; corrective guidance
-8. **Assess Performance**: Quiz, test, rubric-based evaluation
-9. **Enhance Retention/Transfer**: Review, spaced practice, real-world application
-
-### Learning Domain Alignment
-- **5**: Learning domain explicitly identified; all strategies match domain
-- **4**: Domain clear; most strategies appropriate; one minor mismatch
-- **3**: Domain can be inferred; strategy-domain alignment partial
-- **2**: Domain unclear; several strategies misaligned
-- **1**: Domain not identified; strategies inappropriate for domain
+### Learning Domain Alignment (v3.1.0: ARCS integrated)
+- **5**: Learning domain explicitly identified; all strategies match domain. For the Attitudes domain or any motivationally-sensitive content, ARCS is explicitly designed in.
+- **4**: Domain clear; most strategies appropriate; one minor mismatch.
+- **3**: Domain can be inferred; strategy-domain alignment partial; motivation treated as generic relevance statement.
+- **2**: Domain unclear; several strategies misaligned.
+- **1**: Domain not identified; strategies inappropriate for domain; learner motivation ignored when data was available.
 
 **Domain-Strategy Matching**:
-- **Verbal Information** (facts, names, definitions): Lectures, mnemonics, elaboration, chunking
-- **Intellectual Skills** (procedures, rules, concepts): Practice, feedback, part-to-whole sequencing
-- **Cognitive Strategies** (learning how to learn, metacognition): Modeling, explicit strategy instruction, transfer practice
-- **Motor Skills** (physical movements): Demonstration, practice, feedback on form/timing
-- **Attitudes** (values, beliefs, preferences, motivation): Modeling, persuasive arguments, attitude-building experiences, **and Keller's ARCS motivational design** — explicitly target Attention (curiosity-grabbing entry), Relevance (tie to the learner's personal/professional goals captured in Archetype 07 L4), Confidence (early wins, clear success criteria), Satisfaction (intrinsic reward, recognition, applied outcomes)
+- **Verbal Information** (facts, names, definitions): Lectures, mnemonics, elaboration, chunking.
+- **Intellectual Skills** (procedures, rules, concepts): Practice, feedback, part-to-whole sequencing.
+- **Cognitive Strategies** (metacognition): Modeling, explicit strategy instruction, transfer practice.
+- **Motor Skills**: Demonstration, practice, feedback on form/timing.
+- **Attitudes** (values, beliefs, preferences, motivation): Modeling, persuasive arguments, attitude-building experiences, **and Keller's ARCS** — Attention (curiosity-grabbing entry), Relevance (tie to the learner's personal/professional goals captured in Archetype 07 L4), Confidence (early wins, clear success criteria), Satisfaction (intrinsic reward, recognition, applied outcomes).
 
-**ARCS as a cross-cutting motivational layer (Keller, 1987 / 2010).** While ARCS is the canonical strategy for the Attitudes domain, the four conditions also strengthen sequencing in any domain. When the learner profile from Archetype 07 L4 captures goals/interests/motivations, this dimension should check that the instruction *uses* them:
-- **A**ttention — opening hook ties to a real problem the learner has, not generic relevance
-- **R**elevance — examples and scenarios match the learner's job/career context, not a generic audience
-- **C**onfidence — early scaffolded wins build self-efficacy before harder tasks
-- **S**atisfaction — practice connects to outcomes the learner has named as valuable (mastery, recognition, advancement)
+**ARCS as a cross-cutting motivational layer (Keller, 1987 / 2010).** While ARCS is canonical for the Attitudes domain, the four conditions strengthen sequencing in any domain. When the learner profile from Archetype 07 L4 captures goals/interests/motivations, this dimension should check that the instruction *uses* them:
+- **A**ttention — opening hook ties to a real problem the learner has, not generic relevance.
+- **R**elevance — examples and scenarios match the learner's job/career context.
+- **C**onfidence — early scaffolded wins build self-efficacy before harder tasks.
+- **S**atisfaction — practice connects to outcomes the learner has named as valuable (mastery, recognition, advancement).
 
-If the upstream needs assessment captured ARCS data and this instruction ignores it, flag a **major** severity issue under this dimension regardless of domain match.
+**If the upstream needs assessment captured ARCS data and this instruction ignores it, flag a major severity issue under this dimension regardless of domain match.**
 
 ### Sequencing Logic
-- **5**: Clear progression from simple to complex; prerequisites identified; logical hierarchy
-- **4**: Generally logical sequence; minor prerequisite gaps; mostly appropriate complexity progression
-- **3**: Sequence attempts progression but some items out of order; prerequisite analysis partial
-- **2**: Sequence unclear; several items illogically placed; prerequisites not addressed
-- **1**: Disorganized; no apparent sequence or logic; major prerequisite violations
+- **5**: Clear progression from simple to complex; prerequisites identified; logical hierarchy.
+- **4**: Generally logical sequence; minor prerequisite gaps.
+- **3**: Sequence attempts progression but some items out of order; prerequisite analysis partial.
+- **2**: Sequence unclear; several items illogically placed.
+- **1**: Disorganized; no apparent sequence; major prerequisite violations.
 
 ### Scaffolding & Gradual Release
-- **5**: Clear scaffolding plan with three phases: initial support, guided practice, independent practice
-- **4**: Scaffolding present; mostly systematic; some fading is clear
-- **3**: Some scaffolding but not systematic; support level inconsistent
-- **2**: Minimal scaffolding; learners may be unsupported in early attempts
-- **1**: No scaffolding; learners expected to work independently immediately
-
-**Worked Examples & Release Framework**:
-- Phase 1 (Modeling): Teacher demonstrates with think-aloud; students observe
-- Phase 2 (Guided Practice): Worked examples provided; students solve with guidance (hints, prompts, partner work)
-- Phase 3 (Independent Practice): Students solve similar problems without supports
-- Look for: explicit transition markers between phases; support gradually fades
+- **5**: Clear three-phase plan: initial support, guided practice, independent practice. Worked examples precede independent problems (Merrill).
+- **4**: Scaffolding present; mostly systematic; some fading is clear.
+- **3**: Some scaffolding but not systematic; support level inconsistent.
+- **2**: Minimal scaffolding; learners may be unsupported in early attempts.
+- **1**: No scaffolding; learners expected to work independently immediately.
 
 ### Practice & Feedback Integration
-- **5**: Multiple practice opportunities (minimum 3-5); feedback is timely (immediate or within 24 hours), specific, and varied in type
-- **4**: Adequate practice (2-3 opportunities); feedback is mostly timely and specific
-- **3**: Minimal practice (1-2 opportunities); feedback is delayed or somewhat generic
-- **2**: Little practice; feedback rare or very delayed
-- **1**: No practice or feedback; assessment only
+- **5**: Multiple practice opportunities (3-5+); feedback is timely, specific, varied in type.
+- **4**: Adequate practice; feedback mostly timely and specific.
+- **3**: Minimal practice; feedback delayed or generic.
+- **2**: Little practice; feedback rare or very delayed.
+- **1**: No practice or feedback; assessment only.
 
-**Feedback Types**:
-- **Confirmatory**: "Correct" / "Incorrect" (insufficient for learning)
-- **Evaluative**: Criterion-based feedback (e.g., "Your essay meets 4 of 5 rubric criteria")
-- **Remedial**: Corrective guidance (e.g., "Reconsider the role of photosystem II")
-- **Descriptive**: Specific guidance with next steps (e.g., "You correctly identified glycolysis; now trace the products into the Krebs cycle")
+**Feedback Types**: Confirmatory (right/wrong), Evaluative (criterion-based), Remedial (corrective), Descriptive (specific guidance with next steps).
 
 ### Transfer & Retention Design
-- **5**: Transfer explicitly addressed; practice in varied contexts; spaced review built into timeline
-- **4**: Transfer activities present; some context variety; review or spaced practice mentioned
-- **3**: Minimal transfer; single or limited context; retention strategy unclear
-- **2**: No explicit transfer; single context; no retention strategy
-- **1**: No transfer or retention considerations
-
-**Transfer & Retention Strategies**:
-- **Spaced Practice**: Review scheduled days/weeks after initial learning
-- **Varied Contexts**: Practice in multiple settings, with different examples, or using different representations
-- **Real-World Application**: Project, problem-solving, or case study using authentic scenarios
-- **Metacognitive Reflection**: Students reflect on learning strategies and when/how to apply them
+- **5**: Transfer explicitly addressed; practice in varied contexts; spaced review built into timeline.
+- **4**: Transfer activities present; some context variety; review mentioned.
+- **3**: Minimal transfer; single or limited context.
+- **2**: No explicit transfer; single context; no retention strategy.
+- **1**: No transfer or retention considerations.
 
 ---
 
@@ -122,48 +95,36 @@ You are an expert instructional design evaluator specializing in course design a
 
 You assess lesson plans, course outlines, module structures, and learning paths using six dimensions:
 
-1. **Gagné's Nine Events Coverage (1-5)**: Are all nine events present in the instruction?
-   - The nine events: (1) Gain attention, (2) State objectives, (3) Recall prior learning, (4) Present content, (5) Provide guidance, (6) Elicit performance, (7) Provide feedback, (8) Assess performance, (9) Enhance retention/transfer
-   - Events may be reordered but all should be present
-   - Score 5: All nine events clearly identifiable; logical flow
-   - Score 3: Most events present; 1-2 missing or unclear
-   - Score 1: Several events missing; no clear instructional structure
+1. Gagné's Nine Events Coverage (1-5)
+   The nine events: gain attention, state objectives, recall prior learning, present content,
+   provide guidance, elicit performance, provide feedback, assess performance, enhance retention/transfer.
+   Events may be reordered but all should be present.
 
-2. **Learning Domain Alignment (1-5)**: Are instructional strategies appropriate for the learning domain — and do they leverage learner motivation where data is available?
-   - Gagné's 5 domains: verbal information, intellectual skills, cognitive strategies, motor skills, attitudes
-   - For the **Attitudes** domain (and as a cross-cutting motivational lens for any domain), apply Keller's ARCS: Attention (curiosity hook), Relevance (tie to the learner's personal/professional goals from Archetype 07 L4), Confidence (early scaffolded wins, clear success criteria), Satisfaction (outcomes the learner has named as valuable — mastery, recognition, advancement)
-   - If the upstream needs assessment captured learner goals/interests/motivations and this instruction ignores them in favor of generic framing, that is a domain-alignment failure on the Attitudes/motivational layer, not just a polish issue
-   - Score 5: Clear identification of domain; strategies are domain-appropriate; for Attitudes-domain or motivationally-sensitive content, ARCS is explicitly designed in
-   - Score 3: Domain unclear; some strategies match, others do not; motivation treated as generic relevance statement
-   - Score 1: Domain not considered or strategies completely mismatched; learner motivation ignored when data was available
+2. Learning Domain Alignment (1-5) — v3.1.0 includes ARCS as cross-cutting motivational lens.
+   Gagné's 5 domains: verbal information, intellectual skills, cognitive strategies, motor skills, attitudes.
+   For the Attitudes domain (and as a cross-cutting motivational lens for any domain), apply
+   Keller's ARCS: Attention (curiosity hook), Relevance (tie to the learner's personal/professional
+   goals from Archetype 07 L4), Confidence (early scaffolded wins, clear success criteria),
+   Satisfaction (outcomes the learner has named as valuable - mastery, recognition, advancement).
+   If the upstream needs assessment captured learner goals/interests/motivations and this instruction
+   ignores them in favor of generic framing, that is a domain-alignment failure, not just polish.
 
-3. **Sequencing Logic (1-5)**: Does instruction move from simple to complex, known to unknown, concrete to abstract?
-   - Dick/Carey prerequisite analysis; hierarchical/procedural/combination sequencing
-   - Score 5: Clear progression; prerequisites identified; logical flow from simple to complex
-   - Score 3: Generally logical but some prerequisites missing or out of sequence
-   - Score 1: Disorganized; no apparent sequence; prerequisites not addressed
+3. Sequencing Logic (1-5)
+   Dick/Carey prerequisite analysis; hierarchical/procedural/combination sequencing.
 
-4. **Scaffolding & Gradual Release (1-5)**: Is support provided early and gradually removed? Are worked examples present?
-   - Look for: initial support → guided practice → independent practice transition
-   - Merrill's First Principles: worked examples before independent tasks
-   - Score 5: Clear scaffolding plan; examples provided early; support fades
-   - Score 3: Some scaffolding but not systematic; examples present but may not precede practice
-   - Score 1: Little to no scaffolding; no worked examples; learners expected to work independently immediately
+4. Scaffolding & Gradual Release (1-5)
+   Initial support → guided practice → independent practice.
+   Merrill's First Principles: worked examples before independent tasks.
 
-5. **Practice & Feedback Integration (1-5)**: Are there sufficient opportunities for practice with timely, specific feedback?
-   - Gagné events 6-7: elicit performance, provide feedback
-   - Feedback types: confirmatory (right/wrong), evaluative (criteria-based), remedial (corrective), descriptive (specific guidance)
-   - Score 5: Multiple practice opportunities; timely, specific feedback after each practice
-   - Score 3: Some practice and feedback; may be delayed or generic
-   - Score 1: Little practice; feedback absent or delayed
+5. Practice & Feedback Integration (1-5)
+   Gagné events 6-7. Multiple practice opportunities; timely, specific, varied feedback
+   (confirmatory, evaluative, remedial, descriptive).
 
-6. **Transfer & Retention Design (1-5)**: Does instruction explicitly support transfer and long-term retention?
-   - Gagné event 9; spaced practice; varied contexts; real-world application
-   - Score 5: Transfer explicitly addressed; practice in varied contexts; spaced review built in
-   - Score 3: Some transfer activities; limited context variety; spaced practice unclear
-   - Score 1: No transfer activities; single context; no retention strategy
+6. Transfer & Retention Design (1-5)
+   Gagné event 9; spaced practice; varied contexts; real-world application.
 
-Return JSON with overall score (mean of 6 dimensions), individual dimension scores, rationale per dimension, severity_flags (critical issues), and improvement_suggestions (actionable next steps).
+Return JSON with overall score (mean of 6 dimensions), individual dimension scores,
+rationale per dimension, severity_flags, and improvement_suggestions.
 ```
 
 ---
@@ -185,105 +146,34 @@ Evaluate the following instructional artifact.
 ## REFERENCE (if available)
 {reference}
 
-Score using the rubric above. Return only the JSON object in this format:
-{
-  "scores": {
-    "gagne_events_coverage": <1-5>,
-    "learning_domain_alignment": <1-5>,
-    "sequencing_logic": <1-5>,
-    "scaffolding_gradual_release": <1-5>,
-    "practice_feedback_integration": <1-5>,
-    "transfer_retention_design": <1-5>,
-    "overall": <mean of all 6>
-  },
-  "rationale": {
-    "gagne_events_coverage": "<brief explanation>",
-    "learning_domain_alignment": "<brief explanation>",
-    "sequencing_logic": "<brief explanation>",
-    "scaffolding_gradual_release": "<brief explanation>",
-    "practice_feedback_integration": "<brief explanation>",
-    "transfer_retention_design": "<brief explanation>"
-  },
-  "severity_flags": ["<critical issue 1>", "<critical issue 2>"],
-  "improvement_suggestions": ["<suggestion 1>", "<suggestion 2>"]
-}
+Score using the rubric above. Return only the JSON object.
 ```
 
 ---
 
 ## Severity Flags (Red Flags)
 
-Look for and flag critical issues:
-
-1. **Missing Events**: Fewer than six Gagné events; instruction is incomplete
-2. **No Assessment**: Assessment/performance check absent; no evidence of learning
-3. **No Practice or Feedback**: Instruction moves from content to assessment with no guided practice
-4. **Prerequisite Violations**: Content presented before learners have foundation
-5. **No Scaffolding Plan**: Learners expected to work independently with complex tasks immediately
-6. **Domain-Strategy Mismatch**: Verbal information taught through discovery; motor skill taught through reading only
-7. **No Transfer Plan**: Instruction stops at practice; no real-world application or transfer to new contexts
+1. **Missing Events**: Fewer than six Gagné events; instruction is incomplete.
+2. **No Assessment**: Assessment/performance check absent.
+3. **No Practice or Feedback**: Instruction moves from content to assessment with no guided practice.
+4. **Prerequisite Violations**: Content presented before learners have foundation.
+5. **No Scaffolding Plan**: Learners expected to work independently with complex tasks immediately.
+6. **Domain-Strategy Mismatch**: Verbal information taught through discovery; motor skill taught through reading only.
+7. **No Transfer Plan**: Instruction stops at practice; no real-world application.
+8. **ARCS Data Ignored**: Upstream Archetype 07 captured learner goals/motivations and this instruction frames everything generically (v3.1.0 major flag).
 
 ---
 
 ## Improvement Suggestions
 
-When scoring < 4 on any dimension, recommend specific next steps:
+When scoring < 4 on any dimension:
 
-1. **Gagné's Events**: Map existing instruction to the nine events; fill gaps with targeted activities
-2. **Domain Alignment**: Identify the learning domain; select or modify strategies to match
-3. **Sequencing**: Conduct prerequisite analysis (Dick/Carey); reorder content from simple to complex, known to unknown
-4. **Scaffolding**: Design three-phase scaffolding plan; provide worked examples early; explicit support fade
-5. **Practice & Feedback**: Add minimum 3-5 practice opportunities; design timely, specific feedback (not just right/wrong)
-6. **Transfer**: Include spaced review; practice in varied contexts; culminating real-world application
-
----
-
-## Input Format
-
-The archetype expects:
-
-- **Input**: Learning objective(s), learner profile, and instructional context (e.g., "Unit on DNA replication for high school biology; learners have completed cell structure unit; 45-minute class period")
-- **Output**: Lesson plan, course outline, module structure, or learning path (ideally with time estimates, activity descriptions, and assessment checkpoints)
-- **Context** (optional): Learner characteristics, prior knowledge, learning environment constraints
-- **Reference** (optional): A reference lesson plan, BSCS 5E model, or exemplary course outline for comparison
-
-Example:
-```
-INPUT: "Design a 3-week module on 'Designing for Accessibility' for instructional design graduate students. Learners have completed foundational ID courses; asynchronous online delivery."
-
-OUTPUT:
-Week 1: Accessibility Basics
-  - Day 1: Gain attention (video: "A Day in the Life of a Blind Student")
-  - State objectives: "Students will evaluate designs for WCAG 2.1 AA compliance"
-  - Recall prior: Discussion of design principles from prerequisite course
-  - Content presentation: Reading (WCAG standards), video (accessibility features)
-  - Worked example: Walk-through of a website audit using WCAG checklist
-  - Practice: Pair activity-audit a provided website; submit checklist
-  - Feedback: Peer review + instructor rubric-based feedback
-  - Reflect: Exit ticket on one new learning
-
-Week 2: Hands-On Design
-  - Scaffolding: Students redesign a provided inaccessible mockup with guidance
-  - Gradual release: First task is guided; second task adds constraints; third is open-ended
-  - Multiple practice opportunities with feedback
-
-Week 3: Transfer & Real-World Application
-  - Capstone: Audit and redesign a real-world website
-  - Reflection: Metacognitive debrief on accessibility design strategies
-  - Spaced review: Follow-up quiz on WCAG criteria two weeks post-module
-```
-
----
-
----
-
-## Calibration & Validation
-
-Before deploying at scale:
-
-1. **Calibrate the Rubric**: Run 5-10 diverse lesson plans through your chosen model. Compare results to your expert judgment. Adjust event definitions if the model struggles to identify scaffolding or transfer activities.
-2. **Test Edge Cases**: Validate against the 6 edge cases in `edge_cases_03.json`. All should score within your expected range.
-4. **Document Threshold**: Define what score ranges mean for your context (e.g., 4.5+ = "ready to teach", 3.5-4.4 = "revise", < 3.5 = "redesign").
+1. **Gagné's Events**: Map existing instruction to the nine events; fill gaps with targeted activities.
+2. **Domain Alignment**: Identify the learning domain; select or modify strategies to match. If learner ARCS data is available, design Attention/Relevance/Confidence/Satisfaction beats per segment.
+3. **Sequencing**: Conduct prerequisite analysis (Dick/Carey); reorder content simple → complex.
+4. **Scaffolding**: Design three-phase scaffolding plan; worked examples early; explicit support fade.
+5. **Practice & Feedback**: Add 3-5+ practice opportunities; design timely, specific, varied feedback.
+6. **Transfer**: Include spaced review; practice in varied contexts; culminating real-world application.
 
 ---
 
@@ -293,17 +183,5 @@ Before deploying at scale:
 - Gagné, R.M., Wager, W.W., Golas, K.C., & Keller, J.M. (2005). *Principles of Instructional Design* (5th ed.). Wadsworth/Thomson Learning.
 - Keller, J.M. (1987). Development and Use of the ARCS Model of Instructional Design. *Journal of Instructional Development*, 10(3), 2-10.
 - Keller, J.M. (2010). *Motivational Design for Learning and Performance: The ARCS Model Approach*. Springer.
-- Merrill, M.D. (2002). First Principles of Instruction. *Educational Technology Research and Development*, 50(3), 43-59.
-- Vygotsky, L.S. (1978). *Mind in Society: The Development of Higher Psychological Processes*. Harvard University Press.
-
----
-
-## Troubleshooting
-
-| Issue | Resolution |
-|-------|-----------|
-| Judge identifies only 5-6 events but you see all 9 | Ensure events are explicitly named or clearly labeled in your lesson plan. Implicit events may be missed; make scaffolding, feedback, and transfer explicit. |
-| Scores are consistently high (4.5+) on well-designed lessons but low (2-3) on rushed lessons | This suggests the rubric is functioning well. The discrimination is appropriate. |
-| Judge misses "Provide Guidance" (Event 5) | Ensure worked examples, hints, or scaffolds are explicitly described. Implicit guidance (e.g., "students will review examples") may not be detected. |
-| Feedback dimension is consistently low | Lesson plans often neglect to describe feedback mechanisms. Add specific feedback strategies: confirmatory, evaluative, remedial, or descriptive. |
-| Transfer dimension is low but learning outcomes are clear | Many instructors focus on mastery within the course but not on transfer. Add spaced review, varied practice contexts, and real-world applications to improve this score. |
+- Merrill, M.D. (2002). First Principles of Instruction. *ETR&D*, 50(3), 43-59.
+- Vygotsky, L.S. (1978). *Mind in Society*. Harvard University Press.

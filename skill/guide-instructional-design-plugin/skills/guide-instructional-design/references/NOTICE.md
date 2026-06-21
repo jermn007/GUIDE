@@ -3,7 +3,7 @@
 This skill packages content from the **GUIDE** project.
 
 **GUIDE — Grounded Universal Instructional Design Evaluator**
-Version 3.1.2
+Version 3.2.0
 Repository: https://github.com/jermn007/GUIDE
 Copyright 2026 Jeremy Terhune.
 Licensed under the Apache License, Version 2.0 (the "License"). You may not use these files except in
@@ -12,12 +12,12 @@ https://www.apache.org/licenses/LICENSE-2.0
 
 GUIDE was developed as a capstone synthesis of the author's work in the University of Central Florida
 Master of Arts in Instructional Systems program. It applies the LLM-as-a-judge pattern
-(Zheng et al., 2023) to instructional-design evaluation across 10 archetypes and 60 theory-grounded
+(Zheng et al., 2023) to instructional-design evaluation across 9 archetypes and 54 theory-grounded
 dimensions.
 
 ## What is bundled here
 
-The ten `handoff_NN_*.md` files in this directory are GUIDE's "model-agnostic handoff documents,"
+The nine `handoff_0X_*.md` files in this directory are GUIDE's "model-agnostic handoff documents,"
 reproduced for use inside this skill so the rubrics, grounding text, scoring anchors, judge prompts,
 and output formats are available without depending on the upstream codebase. They correspond to the
 files under `archetypes/` in the GUIDE repository.
@@ -34,11 +34,8 @@ bundled file. No dimension definitions, scoring anchors, grounding text, or cita
 ## Theoretical sources
 
 GUIDE draws on 20+ named sources across instructional design, cognitive science, and narrative theory,
-including Tyler (1949), Knowles (1980), Mezirow (1991), Ausubel (2000), Bloom (1956) / Anderson &
-Krathwohl (2001), Gagné (1985), Mayer (2009), Sweller (1988), Mager (1997), Hannafin, Hannafin, Land
-& Oliver (1997), Keller (1987, 2010 — ARCS), Campbell (1949), Snyder (2005), Brown, Roediger &
-McDaniel (2014), Dick, Carey & Carey (2015), Van Tiem et al. (2000), WCAG 2.1 (W3C WAI, 2018), CAST
-UDL (2018), Nielsen (1994), Merrill (2002 - effective/efficient/engaging quality outcomes),
-Hirumi, Ratliff & de la Mora (2021) / Hirumi (2025 - mapping quality outcomes to alignments of
-instructional elements),
-and Zheng et al. (2023). Full citations appear in the individual handoff documents.
+including Knowles (1980), Mezirow (1991), Ausubel (2000), Bloom (1956) / Anderson & Krathwohl (2001),
+Gagné (1985), Mayer (2009), Sweller (1988), Mager (1997), Campbell (1949), Snyder (2005),
+Brown, Roediger & McDaniel (2014), Dick, Carey & Carey (2015), Van Tiem et al. (2000), WCAG 2.1 (W3C
+WAI, 2018), CAST UDL (2018), Nielsen (1994), and Zheng et al. (2023). Full citations appear in the
+individual handoff documents.

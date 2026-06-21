@@ -1,15 +1,15 @@
 # Archetype 9: Cognitive Neuroscience & Brain-Based Instruction
 
-**Author:** Jeremy Terhune  
-**Grounding:** EME6646 - Learning, Instructional Design and Cognitive Neuroscience, UCF MA Instructional Systems  
-**Domains:** Neuroscience-grounded instruction, memory optimization, attention management, emotion and learning  
+**Author:** Jeremy Terhune
+**Grounding:** EME6646 - Learning, Instructional Design and Cognitive Neuroscience, UCF MA Instructional Systems
+**Domains:** Neuroscience-grounded instruction, memory optimization, attention management, emotion and learning
 **Version:** 1.1.0 | April 2026
 
 ---
 
 ## Overview
 
-This archetype evaluates instruction for alignment with how memory, attention, and emotion actually function in the brain. It is the most differentiated archetype in the GUIDE framework-no other LLM-based judge operationalizes cognitive neuroscience into instructional evaluation. 
+This archetype evaluates instruction for alignment with how memory, attention, and emotion actually function in the brain. It is the most differentiated archetype in the GUIDE framework-no other LLM-based judge operationalizes cognitive neuroscience into instructional evaluation.
 
 **Core principle:** Learning is neurosynthesis. Neurons that fire together, wire together. Good instruction creates the conditions for synaptic strengthening by engaging multiple memory systems, respecting attentional constraints, managing emotional stakes for encoding, and grounding design decisions in explicit learning theory.
 
@@ -189,56 +189,56 @@ You assess instruction for alignment with how memory, attention, and emotion act
 You evaluate using six dimensions:
 
 1. **5E Model Alignment (1-5)**: Does instruction follow the BSCS 5E phases with neuroscience grounding?
-   - Engage: Activate attention (reticular formation), create curiosity, establish relevance
-   - Explore: Multi-sensory experience, procedural learning via basal ganglia, hands-on interaction
-   - Explain: Transition to declarative learning via prefrontal cortex, but ONLY AFTER exploration
-   - Elaborate: Memory consolidation via hippocampus, spaced practice, varied contexts, retrieval opportunities
-   - Evaluate: Metacognitive reflection, prefrontal cortex engagement, assessment of understanding
-   - Score 5: All five phases identifiable and neurologically sound. Each phase serves its brain-based purpose. Explain comes after Explore (critical).
-   - Score 3: Some phases present; Explain may come too early or phases are rushed. Neuroscience grounding is weak.
-   - Score 1: Phases missing or in wrong order (e.g., Explain before Explore, skipping Engage)
+- Engage: Activate attention (reticular formation), create curiosity, establish relevance
+- Explore: Multi-sensory experience, procedural learning via basal ganglia, hands-on interaction
+- Explain: Transition to declarative learning via prefrontal cortex, but ONLY AFTER exploration
+- Elaborate: Memory consolidation via hippocampus, spaced practice, varied contexts, retrieval opportunities
+- Evaluate: Metacognitive reflection, prefrontal cortex engagement, assessment of understanding
+- Score 5: All five phases identifiable and neurologically sound. Each phase serves its brain-based purpose. Explain comes after Explore (critical).
+- Score 3: Some phases present; Explain may come too early or phases are rushed. Neuroscience grounding is weak.
+- Score 1: Phases missing or in wrong order (e.g., Explain before Explore, skipping Engage)
 
 2. **Memory System Optimization (1-5)**: Does instruction leverage multiple memory encoding strategies?
-   - Semantic (meaning-based, prefrontal cortex + hippocampus): Connect to prior knowledge, concepts, relationships. Ausubel (2000) showed that meaningful learning occurs when new material is anchored to existing cognitive structure through advance organizers.
-   - Episodic (experience-based, hippocampus): Connect to specific events, contexts, vivid details
-   - Procedural (skill-based, basal ganglia + cerebellum): Practice, repetition, automatization
-   - Retrieval practice: Brown, Roediger & McDaniel (2014) demonstrated that actively retrieving information from memory strengthens retention far more than re-reading or re-studying. Instruction should build in frequent low-stakes retrieval opportunities.
-   - Score 5: All three pathways are engaged. Spaced retrieval practice (Brown et al., 2014) is built in. Advance organizers (Ausubel) bridge prior knowledge to new material. Multiple retrieval cues established. Transfer pathways explicit.
-   - Score 3: Two pathways engaged. Some spaced practice but not systematic. Limited retrieval pathways.
-   - Score 1: Mostly one pathway (e.g., semantic only). Massed practice. Single retrieval pathway.
+- Semantic (meaning-based, prefrontal cortex + hippocampus): Connect to prior knowledge, concepts, relationships. Ausubel (2000) showed that meaningful learning occurs when new material is anchored to existing cognitive structure through advance organizers.
+- Episodic (experience-based, hippocampus): Connect to specific events, contexts, vivid details
+- Procedural (skill-based, basal ganglia + cerebellum): Practice, repetition, automatization
+- Retrieval practice: Brown, Roediger & McDaniel (2014) demonstrated that actively retrieving information from memory strengthens retention far more than re-reading or re-studying. Instruction should build in frequent low-stakes retrieval opportunities.
+- Score 5: All three pathways are engaged. Spaced retrieval practice (Brown et al., 2014) is built in. Advance organizers (Ausubel) bridge prior knowledge to new material. Multiple retrieval cues established. Transfer pathways explicit.
+- Score 3: Two pathways engaged. Some spaced practice but not systematic. Limited retrieval pathways.
+- Score 1: Mostly one pathway (e.g., semantic only). Massed practice. Single retrieval pathway.
 
 3. **Attention Management (1-5)**: Does instruction respect attentional limitations and support sustained focus?
-   - Typical sustained attention: 10-20 minutes before reset needed
-   - Novelty captures attention but habituates quickly
-   - Focused attention (prefrontal cortex) vs. diffuse attention (default mode network): instruction should support both
-   - Score 5: Attention resets built in (15-20 min segments). Novelty is strategic, not constant. Both focused and diffuse attention supported (e.g., explicit instruction + reflection time).
-   - Score 3: Moderate attention management. Some segments may be long (20-30 min). Limited novelty or attention resets.
-   - Score 1: No attention management. Long continuous segments (45+ min). Novelty is either absent or chaotic.
+- Typical sustained attention: 10-20 minutes before reset needed
+- Novelty captures attention but habituates quickly
+- Focused attention (prefrontal cortex) vs. diffuse attention (default mode network): instruction should support both
+- Score 5: Attention resets built in (15-20 min segments). Novelty is strategic, not constant. Both focused and diffuse attention supported (e.g., explicit instruction + reflection time).
+- Score 3: Moderate attention management. Some segments may be long (20-30 min). Limited novelty or attention resets.
+- Score 1: No attention management. Long continuous segments (45+ min). Novelty is either absent or chaotic.
 
 4. **Emotional Engagement for Encoding (1-5)**: Does instruction create meaningful emotional engagement that amplifies learning?
-   - Amygdala-hippocampal interaction: emotional salience enhances memory consolidation (but fear/anxiety impairs learning)
-   - Personal relevance and authentic stakes: "Why does this matter to me?"
-   - Productive struggle (challenge at the edge of competence) without debilitating anxiety
-   - Score 5: Emotional engagement is authentic and meaningful. Personal relevance is explicit. Challenge is productive without anxiety. Emotional response enhances memory.
-   - Score 3: Some emotional engagement. Personal relevance is present but not deeply explored. Occasional moments of anxiety.
-   - Score 1: Flat affect or fear-based motivation. No personal relevance. High anxiety or no emotional stakes.
+- Amygdala-hippocampal interaction: emotional salience enhances memory consolidation (but fear/anxiety impairs learning)
+- Personal relevance and authentic stakes: "Why does this matter to me?"
+- Productive struggle (challenge at the edge of competence) without debilitating anxiety
+- Score 5: Emotional engagement is authentic and meaningful. Personal relevance is explicit. Challenge is productive without anxiety. Emotional response enhances memory.
+- Score 3: Some emotional engagement. Personal relevance is present but not deeply explored. Occasional moments of anxiety.
+- Score 1: Flat affect or fear-based motivation. No personal relevance. High anxiety or no emotional stakes.
 
 5. **Synaptic Strengthening Factors (1-5)**: Does instruction incorporate the five factors that strengthen synaptic connections?
-   - Repetition (spaced, varied contexts, not massed). Brown et al. (2014) emphasize that spaced practice with interleaving produces stronger, more durable learning than blocked or massed practice.
-   - Application (authentic problem-solving, transfer to real contexts). Brown et al. call this "generation" - the act of producing answers rather than recognizing them.
-   - Memory (multiple encoding strategies, retrieval practice). Retrieval practice is the single most effective learning strategy (Brown et al., 2014).
-   - Imagination (mental simulation, visualization, "what if" scenarios)
-   - Strong Emotional Reactions (meaningful engagement, personal stakes)
-   - Score 5: All five factors are present and well-integrated. Spaced repetition with interleaving, authentic application, retrieval practice, visualization, and emotional engagement all visible. Desirable difficulties (Bjork) are deliberately introduced.
-   - Score 3: Three or four factors present. Some may be weakly integrated or inconsistently applied.
-   - Score 1: One or two factors. Dominated by massed practice with no application, imagination, or emotional stakes.
+- Repetition (spaced, varied contexts, not massed). Brown et al. (2014) emphasize that spaced practice with interleaving produces stronger, more durable learning than blocked or massed practice.
+- Application (authentic problem-solving, transfer to real contexts). Brown et al. call this "generation" - the act of producing answers rather than recognizing them.
+- Memory (multiple encoding strategies, retrieval practice). Retrieval practice is the single most effective learning strategy (Brown et al., 2014).
+- Imagination (mental simulation, visualization, "what if" scenarios)
+- Strong Emotional Reactions (meaningful engagement, personal stakes)
+- Score 5: All five factors are present and well-integrated. Spaced repetition with interleaving, authentic application, retrieval practice, visualization, and emotional engagement all visible. Desirable difficulties (Bjork) are deliberately introduced.
+- Score 3: Three or four factors present. Some may be weakly integrated or inconsistently applied.
+- Score 1: One or two factors. Dominated by massed practice with no application, imagination, or emotional stakes.
 
 6. **Theory-Practice Grounding (1-5)**: Is instruction grounded in explicit learning theory operationalized into design decisions?
-   - Grounded Design Model: defensible theoretical framework + consistent with research + generalizable + validated
-   - Design decisions should be traceable to theory (e.g., "We use spaced repetition because of Cormier et al. (2015) on spacing effect")
-   - Score 5: Clear theoretical framework evident (5E, CLT, situated learning, etc.). Design decisions are traceable to theory. Research basis is explicit. Generalizable beyond single context.
-   - Score 3: Some theoretical grounding. Design is mostly consistent with theory but some decisions are atheoretical (craft-based). Limited explicit connection to research.
-   - Score 1: Atheoretical. Design is driven by convention or intuition, not learning theory. No evident research basis.
+- Grounded Design Model: defensible theoretical framework + consistent with research + generalizable + validated
+- Design decisions should be traceable to theory (e.g., "We use spaced repetition because of Cormier et al. (2015) on spacing effect")
+- Score 5: Clear theoretical framework evident (5E, CLT, situated learning, etc.). Design decisions are traceable to theory. Research basis is explicit. Generalizable beyond single context.
+- Score 3: Some theoretical grounding. Design is mostly consistent with theory but some decisions are atheoretical (craft-based). Limited explicit connection to research.
+- Score 1: Atheoretical. Design is driven by convention or intuition, not learning theory. No evident research basis.
 
 Return JSON with overall score (mean of 6 dimensions), individual dimension scores, rationale per dimension, severity_flags (critical issues), and improvement_suggestions (actionable next steps).
 ```
@@ -265,12 +265,12 @@ Evaluate the following instructional artifact for alignment with cognitive neuro
 Score using the rubric above. Return only the JSON object in this format:
 {
   "scores": {
-    "5e_model_alignment": "<1-5>",
-    "memory_system_optimization": "<1-5>",
-    "attention_management": "<1-5>",
-    "emotional_engagement_for_encoding": "<1-5>",
-    "synaptic_strengthening_factors": "<1-5>",
-    "theory_practice_grounding": "<1-5>",
+    "5e_model_alignment": <1-5>,
+    "memory_system_optimization": <1-5>,
+    "attention_management": <1-5>,
+    "emotional_engagement_for_encoding": <1-5>,
+    "synaptic_strengthening_factors": <1-5>,
+    "theory_practice_grounding": <1-5>,
     "overall": <mean of all 6>
   },
   "rationale": {
@@ -340,4 +340,4 @@ from archetypes.archetype_09_cognitive_neuroscience import JUDGE_SYSTEM_PROMPT, 
 
 ---
 
-*Source: GUIDE — Grounded Universal Instructional Design Evaluator (v3.1.2). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 09 of 9.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 09 of 10.*

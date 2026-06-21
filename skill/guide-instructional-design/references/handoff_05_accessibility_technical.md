@@ -107,7 +107,7 @@ How easily can identified accessibility issues be fixed? 5 = quick fixes only; 1
 | **2** | Significant: Keyboard nav rebuild, JavaScript accessibility refactor | Weeks-months | 3+ contributors | Medium-High | Critical |
 | **1** | Architectural: Rebuild required, Flash/plugin removal, major rewrite | Months+ | Full team | High | Critical (Block release) |
 
-**Guidance**: 
+**Guidance**:
 - **Score 5-4**: Can be addressed in current sprint or patch cycle
 - **Score 3**: Plan for next major release; include in roadmap
 - **Score 2-1**: Block release; plan comprehensive accessibility overhaul; consider new framework or rebuild
@@ -123,53 +123,53 @@ Your role is to evaluate web-based learning content against accessibility standa
 You will score across 6 dimensions, each on a 1-5 scale:
 
 1. **Perceivable** (1-5)
-   - Text alternatives for non-text content (1.1.1): All images, icons, graphs have alt text
-   - Captions for audio (1.2.2): Multimedia includes captions for hearing-impaired users
-   - Audio description (1.2.5): Videos have audio descriptions for visual content
-   - Color not sole conveyor (1.4.1): Information isn't conveyed by color alone
-   - Contrast ratio (1.4.3): Text contrast ≥4.5:1 for normal text
-   - Text resizable (1.4.4): Content remains readable when text enlarged to 200%
-   Score: 1=No alt text, captions, or descriptions; 5=Full coverage of all above
+- Text alternatives for non-text content (1.1.1): All images, icons, graphs have alt text
+- Captions for audio (1.2.2): Multimedia includes captions for hearing-impaired users
+- Audio description (1.2.5): Videos have audio descriptions for visual content
+- Color not sole conveyor (1.4.1): Information isn't conveyed by color alone
+- Contrast ratio (1.4.3): Text contrast ≥4.5:1 for normal text
+- Text resizable (1.4.4): Content remains readable when text enlarged to 200%
+Score: 1=No alt text, captions, or descriptions; 5=Full coverage of all above
 
 2. **Operable** (1-5)
-   - Keyboard accessibility (2.1.1): All functionality accessible via keyboard
-   - No keyboard traps (2.1.2): Users can navigate away from any element
-   - Adjustable timing (2.2.1): Users can extend time limits for tasks
-   - Skip navigation (2.4.1): Links to skip repetitive content present
-   - Descriptive titles (2.4.2): Page/section titles clearly describe content
-   - Logical focus order (2.4.3): Tab order follows logical sequence
-   - Descriptive link text (2.4.4): Links have meaningful text (not "click here")
-   Score: 1=Not keyboard accessible; 5=Full keyboard nav, no traps, clear focus
+- Keyboard accessibility (2.1.1): All functionality accessible via keyboard
+- No keyboard traps (2.1.2): Users can navigate away from any element
+- Adjustable timing (2.2.1): Users can extend time limits for tasks
+- Skip navigation (2.4.1): Links to skip repetitive content present
+- Descriptive titles (2.4.2): Page/section titles clearly describe content
+- Logical focus order (2.4.3): Tab order follows logical sequence
+- Descriptive link text (2.4.4): Links have meaningful text (not "click here")
+Score: 1=Not keyboard accessible; 5=Full keyboard nav, no traps, clear focus
 
 3. **Understandable** (1-5)
-   - Language identified (3.1.1): Page language explicitly set
-   - Consistent navigation (3.2.3): Navigation patterns consistent across pages
-   - Consistent identification (3.2.4): Components identified consistently
-   - Error identification (3.3.1): Errors clearly identified to user
-   - Labels and instructions (3.3.2): Form fields have clear labels
-   - Error suggestions (3.3.3): Errors provide suggestions for correction
-   Score: 1=No language set, inconsistent nav, no error handling; 5=Fully compliant
+- Language identified (3.1.1): Page language explicitly set
+- Consistent navigation (3.2.3): Navigation patterns consistent across pages
+- Consistent identification (3.2.4): Components identified consistently
+- Error identification (3.3.1): Errors clearly identified to user
+- Labels and instructions (3.3.2): Form fields have clear labels
+- Error suggestions (3.3.3): Errors provide suggestions for correction
+Score: 1=No language set, inconsistent nav, no error handling; 5=Fully compliant
 
 4. **Robust** (1-5)
-   - Valid HTML (4.1.1): Code passes WCAG validation
-   - Name/role/value (4.1.2): UI components have accessible names and roles
-   - ARIA usage (4.1.2): ARIA correctly applied (not redundantly or incorrectly)
-   - Assistive tech compatibility: Content works with screen readers, keyboard nav
-   Score: 1=Invalid HTML, broken screen reader support; 5=Valid, ARIA correct, full AT support
+- Valid HTML (4.1.1): Code passes WCAG validation
+- Name/role/value (4.1.2): UI components have accessible names and roles
+- ARIA usage (4.1.2): ARIA correctly applied (not redundantly or incorrectly)
+- Assistive tech compatibility: Content works with screen readers, keyboard nav
+Score: 1=Invalid HTML, broken screen reader support; 5=Valid, ARIA correct, full AT support
 
 5. **Universal Design for Learning Integration** (1-5)
-   - Multiple means of representation: Content in text, audio, visual, interactive formats
-   - Multiple means of action/expression: Learners can interact via keyboard, mouse, touch, voice
-   - Multiple means of engagement: Choices in learning pace, difficulty, content type
-   - Alternative formats: PDFs accessible, transcripts provided, captions included
-   - Flexible assessment: Not dependent on single modality (vision, hearing, motor control)
-   Score: 1=Single format/modality only; 5=Multiple formats, flexible engagement
+- Multiple means of representation: Content in text, audio, visual, interactive formats
+- Multiple means of action/expression: Learners can interact via keyboard, mouse, touch, voice
+- Multiple means of engagement: Choices in learning pace, difficulty, content type
+- Alternative formats: PDFs accessible, transcripts provided, captions included
+- Flexible assessment: Not dependent on single modality (vision, hearing, motor control)
+Score: 1=Single format/modality only; 5=Multiple formats, flexible engagement
 
 6. **Remediation Feasibility** (1-5)
-   - Surface-level issues (quick fixes): Missing alt text, contrast ratio, missing captions
-   - Structural issues (significant effort): No keyboard nav requires code refactor, invalid HTML
-   - Architectural barriers (rebuild required): Flash content, unsupported technologies
-   Score: 5=Quick fixes only; 1=Requires architectural rebuild
+- Surface-level issues (quick fixes): Missing alt text, contrast ratio, missing captions
+- Structural issues (significant effort): No keyboard nav requires code refactor, invalid HTML
+- Architectural barriers (rebuild required): Flash content, unsupported technologies
+Score: 5=Quick fixes only; 1=Requires architectural rebuild
 
 Return only a valid JSON object with keys: perceivable, operable, understandable, robust, udl_integration, remediation_feasibility.
 Each key should map to an integer 1-5.
@@ -296,4 +296,4 @@ Use this before scoring:
 
 ---
 
-*Source: GUIDE — Grounded Universal Instructional Design Evaluator (v3.1.2). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 05 of 9.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 05 of 10.*

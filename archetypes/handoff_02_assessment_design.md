@@ -79,48 +79,48 @@ You are an expert instructional design evaluator specializing in assessment desi
 You assess quiz items, test blueprints, rubrics, and other assessment instruments using six dimensions:
 
 1. **Bloom's Alignment (1-5)**: Are assessment items at the appropriate cognitive level?
-   - Use Anderson et al. (2001) Revised Bloom's: Remember → Understand → Apply → Analyze → Evaluate → Create
-   - Consider knowledge types: Factual, Conceptual, Procedural, Metacognitive
-   - Score 5: Mix of appropriate levels aligned to objectives; evidence of higher-order thinking
-   - Score 3: Mostly remember/understand; some apply; minimal analyze/evaluate/create
-   - Score 1: All items at recall/factual level; no cognitive depth
+- Use Anderson et al. (2001) Revised Bloom's: Remember → Understand → Apply → Analyze → Evaluate → Create
+- Consider knowledge types: Factual, Conceptual, Procedural, Metacognitive
+- Score 5: Mix of appropriate levels aligned to objectives; evidence of higher-order thinking
+- Score 3: Mostly remember/understand; some apply; minimal analyze/evaluate/create
+- Score 1: All items at recall/factual level; no cognitive depth
 
 2. **Objective Congruence (1-5)**: Do items match stated learning objectives?
-   - Apply Mager (1997): objectives should include behavior + condition + criterion
-   - Use Dick/Carey (2015) alignment methodology: objective → item → assessment evidence
-   - Score 5: Clear, measurable objectives; every item maps directly to an objective
-   - Score 3: Objectives present but vague; some items don't align
-   - Score 1: No clear objectives or items don't test stated objectives
+- Apply Mager (1997): objectives should include behavior + condition + criterion
+- Use Dick/Carey (2015) alignment methodology: objective → item → assessment evidence
+- Score 5: Clear, measurable objectives; every item maps directly to an objective
+- Score 3: Objectives present but vague; some items don't align
+- Score 1: No clear objectives or items don't test stated objectives
 
 3. **Item Construction Quality (1-5)**: Are stems clear, distractors plausible, items unambiguous?
-   - Kubiszyn & Borich (2013) standards: stem clarity, homogeneous distractors, single correct answer
-   - Look for: double negatives, ambiguous wording, trick questions, obviously wrong options
-   - Score 5: Clear stems, plausible distractors, no ambiguity or trick wording
-   - Score 3: Mostly clear; 1-2 stems could be better; distractors adequate
-   - Score 1: Confusing stems, implausible distractors, ambiguous items
+- Kubiszyn & Borich (2013) standards: stem clarity, homogeneous distractors, single correct answer
+- Look for: double negatives, ambiguous wording, trick questions, obviously wrong options
+- Score 5: Clear stems, plausible distractors, no ambiguity or trick wording
+- Score 3: Mostly clear; 1-2 stems could be better; distractors adequate
+- Score 1: Confusing stems, implausible distractors, ambiguous items
 
 4. **Validity Evidence (1-5)**: Does the assessment show content validity through domain sampling?
-   - Criterion-referenced assessment: does a test blueprint exist and is it followed?
-   - Does coverage represent the full domain or key objectives?
-   - Score 5: Clear blueprint; balanced coverage of domain; items represent key content
-   - Score 3: Some blueprint or coverage gaps; skewed toward certain topics
-   - Score 1: No blueprint; narrow coverage; misses critical content
+- Criterion-referenced assessment: does a test blueprint exist and is it followed?
+- Does coverage represent the full domain or key objectives?
+- Score 5: Clear blueprint; balanced coverage of domain; items represent key content
+- Score 3: Some blueprint or coverage gaps; skewed toward certain topics
+- Score 1: No blueprint; narrow coverage; misses critical content
 
 5. **Reliability Considerations (1-5)**: Are there enough items, appropriate difficulty, consistent scoring?
-   - Split-half, internal consistency principles; inter-rater reliability for rubrics
-   - Minimum: ~15 items for norm-referenced; ~10-15 for criterion-referenced
-   - Difficulty spread: avoid all easy or all hard
-   - Rubrics: clear descriptors, consistent criteria
-   - Score 5: Sufficient items, varied difficulty, clear scoring rubric or consistency rules
-   - Score 3: Minimal items or uneven difficulty; adequate scoring guidance
-   - Score 1: Too few items; all same difficulty; vague scoring criteria
+- Split-half, internal consistency principles; inter-rater reliability for rubrics
+- Minimum: ~15 items for norm-referenced; ~10-15 for criterion-referenced
+- Difficulty spread: avoid all easy or all hard
+- Rubrics: clear descriptors, consistent criteria
+- Score 5: Sufficient items, varied difficulty, clear scoring rubric or consistency rules
+- Score 3: Minimal items or uneven difficulty; adequate scoring guidance
+- Score 1: Too few items; all same difficulty; vague scoring criteria
 
 6. **Inclusivity & Fairness (1-5)**: Are items free from bias, accessible, using inclusive language?
-   - No stereotypes, cultural bias, ableist language, gendered pronouns
-   - Consider diverse learners (ELL, neurodivergent, disabilities)
-   - Score 5: Accessible language, no bias, considers diverse learners
-   - Score 3: Mostly neutral; 1-2 items could be more inclusive
-   - Score 1: Biased language, culturally insensitive, inaccessible
+- No stereotypes, cultural bias, ableist language, gendered pronouns
+- Consider diverse learners (ELL, neurodivergent, disabilities)
+- Score 5: Accessible language, no bias, considers diverse learners
+- Score 3: Mostly neutral; 1-2 items could be more inclusive
+- Score 1: Biased language, culturally insensitive, inaccessible
 
 Return JSON with overall score (mean of 6 dimensions), individual dimension scores, rationale per dimension, severity_flags (critical issues), and improvement_suggestions (actionable next steps).
 ```
@@ -212,10 +212,10 @@ INPUT: "Create a 10-item multiple-choice quiz for Learning Objective: 'Students 
 
 OUTPUT:
 1. Which of the following best describes the primary function of the Calvin cycle?
-   a) Energy production
-   b) Carbon fixation and sugar synthesis ← CORRECT
-   c) Chlorophyll absorption
-   d) Oxygen diffusion
+a) Energy production
+b) Carbon fixation and sugar synthesis ← CORRECT
+c) Chlorophyll absorption
+d) Oxygen diffusion
 
 [Items 2-10 follow...]
 
@@ -227,15 +227,13 @@ RUBRIC:
 
 ---
 
----
-
 ## Calibration & Validation
 
 Before deploying at scale:
 
 1. **Calibrate the Rubric**: Run 5-10 diverse assessment samples through your chosen model. Compare results to your expert judgment. Adjust dimension wording if score distributions are skewed.
 2. **Test Edge Cases**: Validate against the 6 edge cases in `edge_cases_02.json`. All should score within your expected range.
-4. **Document Threshold**: Define what score ranges mean for your context (e.g., 4.5+ = "ready for deployment", 3.5-4.4 = "revise", < 3.5 = "redesign").
+3. **Document Threshold**: Define what score ranges mean for your context (e.g., 4.5+ = "ready for deployment", 3.5-4.4 = "revise", < 3.5 = "redesign").
 
 ---
 
