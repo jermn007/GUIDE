@@ -50,15 +50,21 @@ GUIDE/
 ├── Installing-GUIDE-in-Claude.pdf         # Step-by-step install guide with screenshots
 ├── guide_base.py                          # Base evaluator class
 ├── guide_registry.py                      # Archetype registry and runner
+├── guide_pipeline.py                      # ADDIE multi-archetype orchestrator (ADDIEPipeline)
+├── smoke_test_pipeline.py                 # Mocked end-to-end test for the orchestrator
 ├── archetypes/
 │   ├── archetype_XX_*.py                  # Judge prompt modules (one per archetype, 01-10)
-│   ├── handoff_XX_*.md                    # Model-agnostic handoff docs (one per archetype)
+│   ├── handoff_XX_*.md                    # Model-agnostic handoff docs - single source of truth for the rubrics
 │   └── edge_cases_XX.json                 # Edge case test suites (one per archetype)
 └── skill/                                 # Claude skill + plugin packaging
     ├── README.md                          # install/usage for the skill and plugin
-    ├── sync_skill_from_archetypes.py      # regenerates references from archetypes/
+    ├── build_skill.py                     # generates skill references from archetypes/ + mirrors into the plugin
     ├── guide-instructional-design/        # canonical skill source
-    └── guide-instructional-design-plugin/ # installable plugin (mirrors the skill)
+    └── guide-instructional-design-plugin/ # installable plugin
+        ├── .claude-plugin/plugin.json     # plugin manifest
+        ├── agents/                        # 13 ADDIE pipeline subagents
+        ├── PIPELINE.md                    # multi-agent workflow design
+        └── skills/                        # mirror of the canonical skill
 ```
 
 ## Claude Skill / Plugin
@@ -71,7 +77,13 @@ GUIDE is also packaged as a Claude skill and plugin. Download the latest `.plugi
 
 …and the skill self-activates on instructional-design intents (course, training, lesson, quiz, rubric, e-learning, accessibility, needs analysis, etc.), running in either **design** or **evaluate** mode against the 10 archetypes.
 
-**For a step-by-step walkthrough with screenshots, see [`Installing-GUIDE-in-Claude.pdf`](Installing-GUIDE-in-Claude.pdf)** (also attached to each release on the [Releases page](https://github.com/jermn007/GUIDE/releases/latest)). See [`skill/README.md`](skill/README.md) for the skill-only install path, building from source, and the sync workflow that keeps the skill aligned with `archetypes/`.
+**For a step-by-step walkthrough with screenshots, see [`Installing-GUIDE-in-Claude.pdf`](Installing-GUIDE-in-Claude.pdf)** (also attached to each release on the [Releases page](https://github.com/jermn007/GUIDE/releases/latest)). See [`skill/README.md`](skill/README.md) for the skill-only install path, building from source, and the workflow that keeps the skill aligned with `archetypes/`.
+
+## ADDIE Agent Pipeline
+
+Beyond the standalone judges, the plugin bundles a **13-agent ADDIE pipeline** that uses each archetype as both a design guardrail (when building) and an acceptance test (when judging): a router, the 10 archetype specialists, the Curriculum Alignment acceptance gate, a synthesizer, and a reviser. See [`skill/guide-instructional-design-plugin/PIPELINE.md`](skill/guide-instructional-design-plugin/PIPELINE.md) for the full workflow - phase ordering, the Design-to-Develop fail-fast seam, severity flags, and composite thresholds.
+
+For programmatic / batch evaluation, [`guide_pipeline.py`](guide_pipeline.py) exposes the same pipeline as `ADDIEPipeline`: it fans the archetype judges out over an artifact set, runs the Curriculum Alignment gate (with archetype 10's cap rule), and returns a composite verdict plus targeted revision actions. [`smoke_test_pipeline.py`](smoke_test_pipeline.py) is its mocked end-to-end test.
 
 ## Key Files
 
