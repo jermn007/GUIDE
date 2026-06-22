@@ -1,7 +1,7 @@
 """
 GUIDE Pipeline - ADDIE Multi-Archetype Orchestrator
 ====================================================
-GUIDE: Grounded Universal Instructional Design Evaluator (v3.2.0)
+GUIDE: Grounded Universal Instructional Design Evaluator (v3.2.1)
 
 Extends guide_registry.py with a multi-archetype evaluation pipeline that maps
 to the ADDIE lifecycle, applies archetype 10's curriculum-alignment cap rule,

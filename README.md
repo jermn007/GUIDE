@@ -1,6 +1,6 @@
 # GUIDE - Grounded Universal Instructional Design Evaluator
 
-**Version 3.2.0** | Apache License 2.0
+**Version 3.2.1** | Apache License 2.0
 
 GUIDE is an LLM-as-a-judge evaluation framework that operationalizes peer-reviewed instructional design research into structured rubrics. It was developed as a capstone synthesis of my experience in the University of Central Florida Master of Arts in Instructional Systems program.
 

@@ -255,4 +255,4 @@ Return a JSON object with keys for each dimension (1-5 integers) and a summary k
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 07 of 10.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.1). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 07 of 10.*

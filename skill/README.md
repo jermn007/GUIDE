@@ -2,7 +2,7 @@
 
 This folder packages [GUIDE](../) as a [Claude skill](https://docs.claude.com/en/docs/claude-code/skills) and an installable Claude Code plugin. The skill exposes GUIDE's 10 archetypes and 60 dimensions as reference-driven workflows for **designing** instructional content and **evaluating** existing artifacts. The plugin additionally bundles a **13-agent ADDIE pipeline** that orchestrates those archetypes end-to-end (see [Agent pipeline](#agent-pipeline-plugin)).
 
-Version: **3.2.0** (tracks the GUIDE framework version one-to-one).
+Version: **3.2.1** (tracks the GUIDE framework version one-to-one).
 
 ## Contents
 
@@ -123,7 +123,7 @@ The script (a) copies each `../archetypes/handoff_*.md` into `references/` with 
 
 ## Versioning
 
-Skill and plugin versions track the GUIDE framework version (currently 3.2.0). When bumping GUIDE:
+Skill and plugin versions track the GUIDE framework version (currently 3.2.1). When bumping GUIDE:
 
 1. Update `GUIDE_VERSION` in `build_skill.py`.
 2. Update `version` and `claudeSkill.frameworkVersion` in `guide-instructional-design/package.json`.

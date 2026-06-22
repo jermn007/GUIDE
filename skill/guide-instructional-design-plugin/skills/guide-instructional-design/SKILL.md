@@ -156,7 +156,7 @@ you need. Read the whole doc for the archetype you're actively using.
 
 ## Attribution
 
-GUIDE — Grounded Universal Instructional Design Evaluator (v3.2.0).
+GUIDE — Grounded Universal Instructional Design Evaluator (v3.2.1).
 Repository: github.com/jermn007/GUIDE. Copyright 2026 Jeremy Terhune. Licensed under the Apache License,
 Version 2.0. The bundled `references/handoff_*.md` files are the project's model-agnostic handoff
 documents, reproduced for use inside this skill; see `references/NOTICE.md`. Keep this attribution intact.
