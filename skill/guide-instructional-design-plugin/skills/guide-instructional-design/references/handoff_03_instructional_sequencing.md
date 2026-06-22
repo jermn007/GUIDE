@@ -188,4 +188,4 @@ When scoring < 4 on any dimension:
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.1). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 03 of 10.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.2). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 03 of 10.*
