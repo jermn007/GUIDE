@@ -1,14 +1,23 @@
 # GUIDE - Grounded Universal Instructional Design Evaluator
 
+**Design and grade instruction. Learning science, made executable.**
+
 **Version 3.2.2** | Apache License 2.0
 
-GUIDE is an LLM-as-a-judge evaluation framework that operationalizes peer-reviewed instructional design research into structured rubrics. It was developed as a capstone synthesis of my experience in the University of Central Florida Master of Arts in Instructional Systems program.
+GUIDE is a learning-science framework with two modes: **author** instructional content against 60 theory-grounded dimensions, or **evaluate** existing content against the same dimensions. The rubric that grades a finished course is the spec you design the next one from - one set of criteria, run forward to generate or backward to judge. It was developed as a capstone synthesis of my experience in the University of Central Florida Master of Arts in Instructional Systems program.
 
-The framework evaluates instructional content across **10 archetypes** and **60 dimensions**, each grounded in named theoretical sources and scored on a 1-5 scale with concrete behavioral anchors.
+The framework spans **10 archetypes** and **60 dimensions**, each grounded in named theoretical sources and scored on a 1-5 scale with concrete behavioral anchors.
+
+Because the dimensions are specific enough to score against, they're specific enough to build against.
 
 ## How It Works
 
-GUIDE applies the LLM-as-a-judge pattern (Zheng et al., 2023) to instructional design evaluation. Each archetype is a standalone judge prompt that can be loaded into any LLM capable of following structured evaluation instructions. The judge reads instructional content, scores it against 6 theory-grounded dimensions, and returns a structured scorecard with rationale.
+GUIDE is built on the LLM-as-a-judge pattern (Zheng et al., 2023). Each archetype is a standalone judge prompt - the full rubric for one slice of instructional quality - that loads into any LLM capable of following structured evaluation instructions. Those same rubrics drive both modes:
+
+- **Evaluate mode** - the judge reads existing instructional content, scores it against 6 theory-grounded dimensions, and returns a structured scorecard with cited rationale a designer can act on. Nothing is scored on vibes.
+- **Design mode** - the same dimensions become forward-looking authoring criteria. Content is written *against* the anchors instead of graded after the fact, so a single run can produce a complete artifact - for example a 90-minute hands-on workshop with facilitator guide, slide deck, and one-page job aid - that already satisfies the rubric it would be judged by.
+
+Because both modes share one rubric, content authored in design mode and content checked in evaluate mode are held to exactly the same bar.
 
 ## Quality Outcomes: Effective, Efficient, Engaging
 
@@ -90,7 +99,7 @@ GUIDE is also packaged as a Claude skill and plugin.
 
 ## ADDIE Agent Pipeline
 
-Beyond the standalone judges, the plugin bundles a **13-agent ADDIE pipeline** that uses each archetype as both a design guardrail (when building) and an acceptance test (when judging): a router, the 10 archetype specialists, the Curriculum Alignment acceptance gate, a synthesizer, and a reviser. See [`skill/guide-instructional-design-plugin/PIPELINE.md`](skill/guide-instructional-design-plugin/PIPELINE.md) for the full workflow - phase ordering, the Design-to-Develop fail-fast seam, severity flags, and composite thresholds.
+Beyond the standalone judges, the plugin bundles a **13-agent ADDIE pipeline** that builds instructional content end-to-end, using each archetype first as a live design guardrail while authoring and then as an acceptance test before ship: a router, the 10 archetype specialists, the Curriculum Alignment acceptance gate, a synthesizer, and a reviser. See [`skill/guide-instructional-design-plugin/PIPELINE.md`](skill/guide-instructional-design-plugin/PIPELINE.md) for the full workflow - phase ordering, the Design-to-Develop fail-fast seam, severity flags, and composite thresholds.
 
 For programmatic / batch evaluation, [`guide_pipeline.py`](guide_pipeline.py) exposes the same pipeline as `ADDIEPipeline`: it fans the archetype judges out over an artifact set, runs the Curriculum Alignment gate (with archetype 10's cap rule), and returns a composite verdict plus targeted revision actions. [`smoke_test_pipeline.py`](smoke_test_pipeline.py) is its mocked end-to-end test.
 
