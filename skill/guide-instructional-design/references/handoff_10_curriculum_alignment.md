@@ -1,7 +1,14 @@
 # Archetype 10: Curriculum Alignment
 ## Handoff Documentation
 
-**Purpose**: Evaluate whether an instructional artifact's internal pieces — objectives, instructional strategies (content + activities + chunking + sequencing), and learner assessments — cohere with each other and with broader scopes (course-level vertical progression and discipline-level competencies).
+**Purpose**: Design and evaluate the internal alignment of an instructional artifact — whether its objectives, instructional strategies (content + activities + chunking + sequencing), and learner assessments cohere with each other and with broader scopes (course-level vertical progression and discipline-level competencies). The dimensions below work in both directions: build an aligned artifact against them, or score an existing set for coherence.
+
+**Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
+- Trace every objective to a strategy that teaches it and an assessment that measures it - no orphans (Tyler; Dick & Carey).
+- Match cognitive demand across stated, taught, and tested behaviors (Bloom; Webb DoK).
+- Check coverage completeness and vertical progression (lesson -> course), and ladder objectives up to discipline-level competencies where a recognized framework applies.
+
+Then run an evaluate-mode self-check against the scoring anchors below.
 
 This archetype operationalizes the **Efficient** quality outcome (Merrill, 2002) - the alignment of objectives ↔ strategies ↔ assessments mapped to that outcome by Hirumi (2025). It is the synthesis archetype - it does *not* evaluate the quality of any individual component (other archetypes do that) but rather whether the components, taken together, say the same thing.
 
@@ -18,6 +25,10 @@ This archetype operationalizes the **Efficient** quality outcome (Merrill, 2002)
 - **07 Needs Analysis** evaluates whether objectives are well-written (Mager format, linked to gap). Archetype 10 evaluates whether those objectives connect cleanly through to assessment.
 
 A course can score 5/5 on 02, 03, and 07 individually and still fail archetype 10 — that is exactly the failure mode this archetype is designed to catch.
+
+**Two ways to run this archetype:**
+- **Fail-fast pre-check** (between Design and Develop): score only Objective ↔ Strategy Coherence to confirm the strategies actually serve the objectives before spending Develop effort. A cheap gate that stops misaligned work early.
+- **Full acceptance gate** (after assessments exist): score all six dimensions as the final coherence check on the complete artifact set. This is where the cap rule applies (see the weighting note below): if Objective ↔ Assessment Coherence scores 1 or 2, the overall is capped at 3.0 regardless of the other dimensions.
 
 ---
 
@@ -303,4 +314,4 @@ The judge returns a JSON object matching the schema in the Human Prompt Template
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.2). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 10 of 10 (the synthesis archetype).*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.3). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 10 of 10 (the synthesis archetype).*

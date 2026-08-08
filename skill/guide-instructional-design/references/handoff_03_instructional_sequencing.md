@@ -1,7 +1,14 @@
 # Archetype 3: Instructional Sequencing & Events
 ## Handoff Documentation
 
-**Purpose**: Evaluate lesson plans, course outlines, module structures, and learning paths for pedagogical coherence, event coverage, and instructional effectiveness.
+**Purpose**: Design and evaluate lesson plans, course outlines, module structures, and learning paths for pedagogical coherence, event coverage, and instructional effectiveness. The dimensions below work in both directions: sequence against them, or score an existing sequence.
+
+**Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
+- Walk Gagné's nine events in order; don't skip gain-attention, recall of prior learning, or assessment/retention.
+- Match the strategy to the learning domain (intellectual skill vs. attitude vs. motor skill).
+- Scaffold with gradual release (I do / we do / you do) and fade support; build in ARCS motivational beats and spaced retrieval for transfer.
+
+Then run an evaluate-mode self-check against the scoring anchors below.
 
 **Use Cases**:
 - Peer review of lesson plans before delivery
@@ -188,4 +195,4 @@ When scoring < 4 on any dimension:
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.2). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 03 of 10.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.3). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 03 of 10.*

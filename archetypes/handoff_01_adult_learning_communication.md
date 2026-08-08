@@ -1,7 +1,14 @@
 # Archetype: Adult Learning Communication
 ## Handoff Documentation
 
-**Purpose**: Evaluate the quality of an AI assistant's conversational responses to learning professionals — tone, clarity, accuracy, accessibility, and respect for adult learners.
+**Purpose**: Design and evaluate an AI assistant's conversational responses to learning professionals — tone, clarity, accuracy, accessibility, and respect for adult learners. The dimensions below work in both directions: hold them in mind while authoring a response, or score an existing one against them.
+
+**Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
+- Treat the reader as a self-directing professional: build on their stated problem, offer options, invite reflection - don't lecture (Knowles, Mezirow).
+- Lead with the answer, define terms before use, and cut tangents to keep load down (Sweller; Mayer signaling/coherence).
+- Ground every claim in an authoritative source and mark anecdotal vs. scientific evidence (Hirumi); write in a conversational, personalized voice.
+
+Then run an evaluate-mode self-check against the scoring anchors below.
 
 **Use Cases**:
 - Evaluation of RAG-based assistant responses for learning platform users

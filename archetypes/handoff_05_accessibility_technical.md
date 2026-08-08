@@ -1,6 +1,13 @@
 # Archetype 5: WCAG/POUR Technical Accessibility
 
-**Purpose**: Evaluate web-based learning content, LMS pages, and e-learning modules for compliance with WCAG 2.1 standards and Universal Design for Learning (UDL) principles.
+**Purpose**: Design and evaluate web-based learning content, LMS pages, and e-learning modules for compliance with WCAG 2.1 standards and Universal Design for Learning (UDL) principles. The dimensions below work in both directions: build accessibility in against them, or audit existing content.
+
+**Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
+- Provide text alternatives, captions, transcripts, and audio description (Perceivable).
+- Ensure full keyboard operability with a logical focus order (Operable); use plain language and consistent navigation (Understandable).
+- Build multiple means of representation, action, and engagement in from the start (UDL) - not as after-the-fact remediation.
+
+Then run an evaluate-mode self-check against the scoring anchors below.
 
 **Evaluation Context**: Use this archetype when assessing:
 - Learning management system (LMS) pages and course shells

@@ -1,7 +1,14 @@
 # Archetype 4: Multimedia Content Design (Deep Mayer)
 ## Handoff Documentation
 
-**Purpose**: Evaluate e-learning modules, videos, interactive media, and slide-based courses for cognitive load optimization and multimedia learning effectiveness.
+**Purpose**: Design and evaluate e-learning modules, videos, interactive media, and slide-based courses for cognitive load optimization and multimedia learning effectiveness. The dimensions below work in both directions: author media against them, or score existing media.
+
+**Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
+- Pair words with relevant visuals; cut decorative media and on-screen text that duplicates narration (coherence, redundancy).
+- Segment into learner-paced chunks and pre-train key terms before the main content (segmenting, pre-training).
+- Narrate visuals rather than captioning them (modality), keep related elements contiguous, and give learners pause/replay/navigation control.
+
+Then run an evaluate-mode self-check against the scoring anchors below.
 
 **Use Cases**:
 - Video course review before launch
@@ -372,4 +379,4 @@ Before deploying at scale:
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.2). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 04 of 10.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.3). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 04 of 10.*
