@@ -1,6 +1,6 @@
 # GUIDE Discipline Alignment Crosswalk
 
-**How GUIDE's ten archetypes ladder up to recognized professional standards in instructional design and performance improvement.**
+**How GUIDE's ten archetypes align to recognized professional standards in instructional design and performance improvement.**
 
 GUIDE is grounded in named *learning theory* (Knowles, Mayer, Gagné, Sweller, and others). This document addresses a different axis: **discipline alignment** - whether GUIDE's archetypes map to the professional competency and performance standards that instructional designers and L&D practitioners are actually measured against. It is the reference model behind Archetype 10's *Discipline Alignment* dimension.
 

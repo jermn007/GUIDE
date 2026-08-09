@@ -9,7 +9,7 @@
 
 Then run an evaluate-mode self-check against the scoring anchors below.
 
-**Professional alignment** (how this archetype ladders up to recognized standards - see [`discipline_alignment_crosswalk.md`](discipline_alignment_crosswalk.md) for the full mapping, citations, and licensing notes):
+**Professional alignment** (how this archetype aligns to recognized standards - see [`discipline_alignment_crosswalk.md`](discipline_alignment_crosswalk.md) for the full mapping, citations, and licensing notes):
 - **IBSTPI ID Competencies (2012)** - Evaluation & Implementation: C17 (evaluating interventions), C18 (data-based revision).
 - **ATD Capability Model (2020)** - Evaluating Impact; Data & Analytics.
 - **ISPI/HPT Ten Standards** - S10 Evaluate Results and Measure Impact.

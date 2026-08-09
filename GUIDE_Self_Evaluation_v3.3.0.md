@@ -27,7 +27,7 @@ One themed change, additive only:
 1. **Discipline Alignment crosswalk.** A new `discipline_alignment_crosswalk.md` maps each archetype to recognized professional standards - IBSTPI Instructional Designer Competencies (2012), the ATD Talent Development Capability Model (2020), and ISPI/HPT's Ten Standards (with Gilbert's BEM) - at their natural altitudes (IBSTPI for artifact/process fit, ATD for practitioner capability, ISPI/HPT for the front-end and evaluation ends). It is built in a **reference-safe form**: framework names and competency numbers as pointers, GUIDE's own paraphrase, full citations, an independence/licensing notice, and no reproduced verbatim competency text or proprietary figures. It also states GUIDE's **intentional scope boundary** (it does not cover IBSTPI Management, most ATD Domains 1/3, or the design of HPT non-instructional interventions).
 2. **Per-handoff Professional Alignment blocks.** Each of the 10 handoffs now carries a compact block naming its IBSTPI/ATD/ISPI-HPT pointers and linking to the crosswalk.
 
-**No dimension definitions, scoring anchors, citations, or judge prompts changed.** The 60 dimensions score artifacts exactly as before. This release adds a discipline-alignment *reference layer*; it does not alter the rubric.
+**No scoring anchors or dimension criteria changed in meaning.** The 60 dimensions score artifacts exactly as before; this release adds a discipline-alignment *reference layer* rather than altering the rubric. (It also applies a framework-wide copyedit, replacing the "ladder up" metaphor with "align" - including in Archetype 10's Discipline Alignment wording and its judge prompt - which changes no scoring criterion.)
 
 ---
 
@@ -47,7 +47,7 @@ v3.3.0 closes it. GUIDE now publishes an explicit, cited crosswalk to three reco
 | Strategy <-> Assessment Coherence | 4 | 4 | 0 | Edge-case depth still varies across archetypes. Holds. |
 | Objective <-> Assessment Coherence | 4 | 4 | 0 | Holds. |
 | Coverage Completeness | 5 | 5 | 0 | Held at ceiling; the crosswalk adds the discipline axis without leaving orphans. |
-| Vertical Alignment | 4 | 4 | 0 | The crosswalk ladders archetypes to discipline-level competencies (the Discipline dimension), not course-level vertical progression. Holds. |
+| Vertical Alignment | 4 | 4 | 0 | The crosswalk aligns archetypes to discipline-level competencies (the Discipline dimension), not course-level vertical progression. Holds. |
 | Discipline Alignment | **2** | **4** | **+2** | **The gap closes.** GUIDE now maps every archetype to IBSTPI (2012), ATD (2020), and ISPI/HPT standards in a cited, structured crosswalk, and each handoff carries a Professional Alignment tag. Not a 5 because: (a) it is a **self-published** mapping, not accreditation or endorsement by the standards bodies; (b) the reference-safe version uses pointers + paraphrase rather than owner-validated verbatim mappings; (c) it rests on the IBSTPI 2012 edition (a revision is pending) with no permission yet sought. Those are the path from 4 to 5. |
 
 **Archetype 10 Mean: 3.8 -> 4.2 (+0.4)**

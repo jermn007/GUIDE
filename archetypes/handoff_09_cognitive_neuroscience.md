@@ -18,7 +18,7 @@ This archetype guides the design of, and evaluates, instruction for alignment wi
 
 Then run an evaluate-mode self-check against the scoring anchors below.
 
-**Professional alignment** (how this archetype ladders up to recognized standards - see [`discipline_alignment_crosswalk.md`](discipline_alignment_crosswalk.md) for the full mapping, citations, and licensing notes):
+**Professional alignment** (how this archetype aligns to recognized standards - see [`discipline_alignment_crosswalk.md`](discipline_alignment_crosswalk.md) for the full mapping, citations, and licensing notes):
 - **IBSTPI ID Competencies (2012)** - Professional Foundations: C2 (applying research & theory); Design & Development: C12 (designing instructional interventions).
 - **ATD Capability Model (2020)** - Learning Sciences; Instructional Design.
 - **ISPI/HPT Ten Standards** - limited direct fit (HPT is solution-neutral); indirect via S3 Add Value.
