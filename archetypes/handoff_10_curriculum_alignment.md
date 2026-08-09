@@ -6,9 +6,14 @@
 **Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
 - Trace every objective to a strategy that teaches it and an assessment that measures it - no orphans (Tyler; Dick & Carey).
 - Match cognitive demand across stated, taught, and tested behaviors (Bloom; Webb DoK).
-- Check coverage completeness and vertical progression (lesson -> course), and ladder objectives up to discipline-level competencies where a recognized framework applies.
+- Check coverage completeness and vertical progression (lesson -> course), and align objectives to discipline-level competencies where a recognized framework applies.
 
 Then run an evaluate-mode self-check against the scoring anchors below.
+
+**Professional alignment** (how this archetype aligns to recognized standards - see [`discipline_alignment_crosswalk.md`](discipline_alignment_crosswalk.md) for the full mapping, citations, and licensing notes):
+- **IBSTPI ID Competencies (2012)** - Design & Development: C10 (fit-for-project design process), C11 (organizing programs across design/develop/evaluate).
+- **ATD Capability Model (2020)** - Instructional Design; Learning Sciences.
+- **ISPI/HPT Ten Standards** - S1 Focus on Results; S2 Take a Systemic View. The crosswalk itself is this archetype's *Discipline Alignment* reference model.
 
 This archetype operationalizes the **Efficient** quality outcome (Merrill, 2002) - the alignment of objectives ↔ strategies ↔ assessments mapped to that outcome by Hirumi (2025). It is the synthesis archetype - it does *not* evaluate the quality of any individual component (other archetypes do that) but rather whether the components, taken together, say the same thing.
 
@@ -58,7 +63,7 @@ A course can score 5/5 on 02, 03, and 07 individually and still fail archetype 1
 | **Objective ↔ Assessment Coherence** | 1-5 | Does the assessment test what the objective states? | Verb-to-task match (Mager); Bloom-level match (Bloom / Anderson & Krathwohl); Webb's Depth of Knowledge consistent; criterion in objective is the criterion in the rubric |
 | **Coverage Completeness** | 1-5 | Is every objective served by instruction *and* tested? Any orphans or extraneous content? | No orphan objectives (stated but not taught or not tested); no orphan instruction (taught but not tied to an objective); blueprint or table of specifications present or derivable |
 | **Vertical Alignment** | 1-5 | Across lessons/modules/courses, do they build coherently? | Prerequisites identified and respected; spiral curriculum (Bruner) or elaboration (Reigeluth) evident; later content builds on, doesn't merely repeat, earlier content |
-| **Discipline Alignment** | 1-5 | Does the course/program ladder up to professional competencies, knowledge base, or accrediting examinations? | Stated linkage to external competency framework (national exam, professional standards, accreditation body); discipline-level alignment as in Hirumi (2025) Figure 1 |
+| **Discipline Alignment** | 1-5 | Does the course/program align to professional competencies, knowledge base, or accrediting examinations? | Stated linkage to external competency framework (national exam, professional standards, accreditation body); discipline-level alignment as in Hirumi (2025) Figure 1 |
 
 ---
 
@@ -131,7 +136,7 @@ A course can score 5/5 on 02, 03, and 07 individually and still fail archetype 1
 | **2** | Weak linkage; some content seems to serve external standards but the mapping is left to the reader. |
 | **1** | No stated discipline-level alignment; course exists in isolation from professional competencies or accreditation. |
 
-**Note**: For artifacts not intended to ladder up to a discipline (e.g., a one-off workshop, internal training), score this dimension on **internal coherence with stated purpose** instead, and note the adaptation in rationale.
+**Note**: For artifacts not intended to align with a discipline (e.g., a one-off workshop, internal training), score this dimension on **internal coherence with stated purpose** instead, and note the adaptation in rationale.
 
 ---
 
@@ -195,11 +200,11 @@ Score: 1=Lesson/module order is arbitrary or reverse-coherent; 5=Clear vertical 
 Note: For single-lesson artifacts, score within-lesson sequencing instead and flag the adaptation in rationale.
 
 6. **Discipline Alignment** (1-5)
-- Does the course/program ladder up to professional competencies, knowledge base, or accrediting examinations?
+- Does the course/program align to professional competencies, knowledge base, or accrediting examinations?
 - Stated linkage to external competency framework
 - Every objective at the unit/lesson level maps upward to a competency at the discipline level (Hirumi, Ratliff & de la Mora 2021; Hirumi 2025, Figure 1)
 Score: 1=No stated discipline-level alignment; 5=Explicit traceable linkage; every objective maps upward
-Note: For artifacts not intended to ladder up to a discipline (one-off workshops, internal training), score on internal coherence with stated purpose and note the adaptation in rationale.
+Note: For artifacts not intended to align with a discipline (one-off workshops, internal training), score on internal coherence with stated purpose and note the adaptation in rationale.
 
 Return JSON with overall score (mean of 6 dimensions unless a severity flag warrants weighting),
 individual dimension scores, rationale per dimension, severity_flags (critical issues), and

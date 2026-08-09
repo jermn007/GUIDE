@@ -26,7 +26,7 @@ Dimensions:
    (Wiggins & McTighe, 2005)
 5. Vertical Alignment - lessons/modules build coherently; prerequisites respected (Bruner;
    Reigeluth, 1999; van Merrienboer & Kirschner, 2018)
-6. Discipline Alignment - course/program ladders up to professional competencies, knowledge
+6. Discipline Alignment - course/program aligns to professional competencies, knowledge
    base, or accrediting examinations (Hirumi, Ratliff & de la Mora, 2021; Hirumi, 2025)
 
 Citations:
@@ -107,11 +107,11 @@ You will score across 6 dimensions, each on a 1-5 scale:
    Note: For single-lesson artifacts, score within-lesson sequencing instead and flag the adaptation in rationale.
 
 6. **Discipline Alignment** (1-5)
-   - Does the course/program ladder up to professional competencies, knowledge base, or accrediting examinations?
+   - Does the course/program align to professional competencies, knowledge base, or accrediting examinations?
    - Stated linkage to external competency framework
    - Every objective at the unit/lesson level maps upward to a competency at the discipline level (Hirumi, Ratliff & de la Mora 2021; Hirumi 2025, Figure 1)
    Score: 1=No stated discipline-level alignment; 5=Explicit traceable linkage; every objective maps upward
-   Note: For artifacts not intended to ladder up to a discipline (one-off workshops, internal training), score on internal coherence with stated purpose and note the adaptation in rationale.
+   Note: For artifacts not intended to align with a discipline (one-off workshops, internal training), score on internal coherence with stated purpose and note the adaptation in rationale.
 
 Return JSON with overall score (mean of 6 dimensions; cap at 3.0 if Objective <-> Assessment Coherence scores 1 or 2),
 individual dimension scores, rationale per dimension, severity_flags (critical issues),

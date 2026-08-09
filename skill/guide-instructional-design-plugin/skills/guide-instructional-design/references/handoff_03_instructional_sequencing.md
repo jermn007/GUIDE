@@ -10,6 +10,11 @@
 
 Then run an evaluate-mode self-check against the scoring anchors below.
 
+**Professional alignment** (how this archetype aligns to recognized standards - see [`discipline_alignment_crosswalk.md`](discipline_alignment_crosswalk.md) for the full mapping, citations, and licensing notes):
+- **IBSTPI ID Competencies (2012)** - Design & Development: C10 (fit-for-project design process), C11 (organizing programs), C12 (designing instructional interventions).
+- **ATD Capability Model (2020)** - Instructional Design; Learning Sciences.
+- **ISPI/HPT Ten Standards** - S7 Design Solutions (instructional branch).
+
 **Use Cases**:
 - Peer review of lesson plans before delivery
 - Course outline validation
@@ -195,4 +200,4 @@ When scoring < 4 on any dimension:
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.3). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 03 of 10.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.3.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 03 of 10.*

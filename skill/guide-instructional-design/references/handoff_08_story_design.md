@@ -18,6 +18,11 @@ This archetype guides the design of, and evaluates, narrative-driven instruction
 
 Then run an evaluate-mode self-check against the scoring anchors below.
 
+**Professional alignment** (how this archetype aligns to recognized standards - see [`discipline_alignment_crosswalk.md`](discipline_alignment_crosswalk.md) for the full mapping, citations, and licensing notes):
+- **IBSTPI ID Competencies (2012)** - Design & Development: C12 (designing instructional interventions), C15 (developing materials).
+- **ATD Capability Model (2020)** - Instructional Design; Learning Sciences.
+- **ISPI/HPT Ten Standards** - S7 Design Solutions.
+
 **Key insight:** The best story-driven instruction makes it impossible to separate the learning from the narrative. The story *is* the instruction.
 
 ---
@@ -304,4 +309,4 @@ from archetypes.archetype_08_story_design import JUDGE_SYSTEM_PROMPT, JUDGE_HUMA
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.3). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 08 of 10.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.3.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 08 of 10.*

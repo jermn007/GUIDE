@@ -45,7 +45,7 @@ Score the six dimensions strictly per the handoff doc's anchors:
 3. **Objective ↔ Assessment Coherence** — does the assessment test what the objective states? Verb-to-task match (Mager); Bloom level match (Bloom / Anderson & Krathwohl); Webb's DoK consistent; criterion stated in objective = criterion in rubric.
 4. **Coverage Completeness** — every objective served by both instruction *and* assessment; every piece of instruction tied to an objective. Blueprint present or derivable.
 5. **Vertical Alignment** — across lessons/modules/courses, do they build coherently? Prerequisites respected; Bruner spiral or Reigeluth elaboration evident.
-6. **Discipline Alignment** — does the course/program ladder up to professional competencies, knowledge base, or accrediting examinations? Hirumi (2025) Figure 1 mapping.
+6. **Discipline Alignment** — does the course/program align to professional competencies, knowledge base, or accrediting examinations? Hirumi (2025) Figure 1 mapping.
 
 ## The cap rule (non-negotiable)
 
@@ -65,7 +65,7 @@ Surface any of these regardless of overall score:
 ## Single-lesson / non-discipline adaptations
 
 - Single-lesson artifact: score Vertical Alignment on within-lesson sequencing; flag the adaptation in rationale.
-- Course not intended to ladder to a discipline (one-off workshops, internal training): score Discipline Alignment on internal-purpose coherence; flag the adaptation.
+- Course not intended to align with a discipline (one-off workshops, internal training): score Discipline Alignment on internal-purpose coherence; flag the adaptation.
 - Objectives missing from artifact: itself a major coverage failure; do not invent objectives; score Coverage Completeness ≤ 2.
 - Assessment missing: major coverage failure; score Strategy ↔ Assessment and Objective ↔ Assessment as 1.
 

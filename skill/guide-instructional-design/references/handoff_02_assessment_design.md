@@ -10,6 +10,11 @@
 
 Then run an evaluate-mode self-check against the scoring anchors below.
 
+**Professional alignment** (how this archetype aligns to recognized standards - see [`discipline_alignment_crosswalk.md`](discipline_alignment_crosswalk.md) for the full mapping, citations, and licensing notes):
+- **IBSTPI ID Competencies (2012)** - Design & Development: C16 (designing learning assessment).
+- **ATD Capability Model (2020)** - Evaluating Impact; Instructional Design.
+- **ISPI/HPT Ten Standards** - S10 Evaluate Results and Measure Impact (partial; assessment feeds evaluation).
+
 **Use Cases**:
 - Peer review of quiz items before deployment
 - Validation of unit tests against learning objectives
@@ -264,4 +269,4 @@ Before deploying at scale:
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.3). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 02 of 10.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.3.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 02 of 10.*

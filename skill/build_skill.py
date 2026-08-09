@@ -29,12 +29,14 @@ import re
 import shutil
 from pathlib import Path
 
-GUIDE_VERSION = "3.2.3"
+GUIDE_VERSION = "3.3.0"
 COPYRIGHT_YEAR = "2026"
 COPYRIGHT_HOLDER = "Jeremy Terhune"
 TOTAL_ARCHETYPES = 10
 # Trailing note appended after "of 10" for specific archetypes (10 is the synthesis lens).
 FOOTER_SUFFIX = {10: " (the synthesis archetype)"}
+# Non-handoff reference authored in archetypes/ and propagated like the handoffs.
+CROSSWALK_NAME = "discipline_alignment_crosswalk.md"
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 ARCHETYPES_DIR = REPO_ROOT / "archetypes"
@@ -80,6 +82,31 @@ def generate_references() -> list[Path]:
     return written
 
 
+def generic_footer() -> str:
+    """Version footer for non-handoff references (no archetype number)."""
+    return (
+        "\n---\n\n"
+        f"*Source: GUIDE - Grounded Universal Instructional Design Evaluator "
+        f"(v{GUIDE_VERSION}). Copyright {COPYRIGHT_YEAR} {COPYRIGHT_HOLDER}. "
+        f"Licensed under the Apache License, Version 2.0.*\n"
+    )
+
+
+def copy_crosswalk() -> Path | None:
+    """Copy the discipline-alignment crosswalk into references/ with a version footer.
+
+    Authored in archetypes/ (alongside the handoffs) so the per-handoff relative
+    links resolve in both archetypes/ and the generated references/ directory.
+    """
+    src = ARCHETYPES_DIR / CROSSWALK_NAME
+    if not src.exists():
+        return None
+    body = FOOTER_RE.sub("", src.read_text(encoding="utf-8")).rstrip() + "\n"
+    dst = REFERENCES_DIR / CROSSWALK_NAME
+    dst.write_text(body + generic_footer(), encoding="utf-8", newline="")
+    return dst
+
+
 def mirror_skill_to_plugin() -> None:
     """Copy the canonical skill tree into the plugin so the two stay byte-identical."""
     if PLUGIN_SKILL_DIR.exists():
@@ -93,8 +120,11 @@ def main() -> None:
     if not REFERENCES_DIR.is_dir():
         raise SystemExit(f"Cannot find references dir: {REFERENCES_DIR}")
     written = generate_references()
+    crosswalk = copy_crosswalk()
     mirror_skill_to_plugin()
     print(f"Generated {len(written)} handoff reference(s) at GUIDE v{GUIDE_VERSION}.")
+    if crosswalk:
+        print(f"Copied {crosswalk.name} into references/.")
     print(f"Mirrored {SKILL_DIR.name}/ -> plugin skills/{SKILL_DIR.name}/.")
 
 
