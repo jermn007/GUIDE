@@ -80,14 +80,23 @@ GUIDE/
 
 GUIDE is also packaged as a Claude skill and plugin.
 
-**Install via marketplace (recommended - receives version updates):**
+**Install via the GUI (easiest, and stays synced with updates):** open **Settings -> Plugins** (under *Customize* in the sidebar), click **Add -> Add marketplace -> Add from a repository**, and enter `jermn007/GUIDE`. When the **Guide instructional design** plugin appears in the list, install it.
+
+**Or via slash commands:**
 
 ```
 /plugin marketplace add jermn007/GUIDE
 /plugin install guide-instructional-design@guide
 ```
 
-**Or install from a release file:** download the latest `.plugin` (or `.skill`) from the [Releases page](https://github.com/jermn007/GUIDE/releases/latest), then run:
+Both marketplace paths receive version updates. **To update an existing install:** an already-added marketplace serves from a local clone, so a plain reinstall keeps the old version - refresh the marketplace first, then update the plugin:
+
+```
+/plugin marketplace update guide
+/plugin update guide-instructional-design@guide
+```
+
+**Or install from a release file** (a fixed snapshot, no auto-updates): download the latest `.plugin` (or `.skill`) from the [Releases page](https://github.com/jermn007/GUIDE/releases/latest), then run:
 
 ```
 /plugin install ./guide-instructional-design.plugin
