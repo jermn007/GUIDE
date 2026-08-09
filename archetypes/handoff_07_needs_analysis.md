@@ -1,6 +1,13 @@
 # Archetype 7: Needs Analysis & Front-End Design
 
-**Purpose**: Evaluate needs assessments, learner analyses, goal analyses, performance gap analyses, and instructional goals for completeness, rigor, and evidence-based decision-making.
+**Purpose**: Design and evaluate needs assessments, learner analyses, goal analyses, performance gap analyses, and instructional goals for completeness, rigor, and evidence-based decision-making. The dimensions below work in both directions: conduct the analysis against them, or score an existing one.
+
+**Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
+- Establish a data-based performance gap (actual vs. desired) before proposing training.
+- Run HPT cause analysis: confirm the cause is a skill/knowledge gap, not environment or incentives - training won't fix the latter.
+- Write objectives in Mager format (Behavior + Condition + Criterion, observable verbs); capture learner goals/motivations (ARCS L4) and align stakeholders.
+
+Then run an evaluate-mode self-check against the scoring anchors below.
 
 **Evaluation Context**: Use this archetype when assessing:
 - Performance gap analyses from organizational requests

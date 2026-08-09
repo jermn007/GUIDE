@@ -29,7 +29,7 @@ import re
 import shutil
 from pathlib import Path
 
-GUIDE_VERSION = "3.2.2"
+GUIDE_VERSION = "3.2.3"
 COPYRIGHT_YEAR = "2026"
 COPYRIGHT_HOLDER = "Jeremy Terhune"
 TOTAL_ARCHETYPES = 10

@@ -9,7 +9,14 @@
 
 ## Overview
 
-This archetype evaluates the quality of narrative-driven instruction, scenario-based learning, case studies, and branching scenarios. It assesses whether stories are structurally sound, whether learning objectives are naturally integrated into the narrative rather than artificially overlaid, and whether the story creates the conditions for authentic transfer of learning to learners' real-world contexts.
+This archetype guides the design of, and evaluates, narrative-driven instruction, scenario-based learning, case studies, and branching scenarios. It covers whether stories are structurally sound, whether learning objectives are naturally integrated into the narrative rather than artificially overlaid, and whether the story creates the conditions for authentic transfer of learning to learners' real-world contexts. The dimensions below work in both directions: author a scenario against them, or score an existing one.
+
+**Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
+- Build a sound narrative arc (Campbell; Snyder beats) - don't bolt a lesson onto a flat scenario.
+- Fuse the objective into the narrative tension so the learning is the story, using authentic characters and situations from the learners' real context.
+- Design consequential decision points and branches whose choices transfer to real practice.
+
+Then run an evaluate-mode self-check against the scoring anchors below.
 
 **Key insight:** The best story-driven instruction makes it impossible to separate the learning from the narrative. The story *is* the instruction.
 
@@ -297,4 +304,4 @@ from archetypes.archetype_08_story_design import JUDGE_SYSTEM_PROMPT, JUDGE_HUMA
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.2). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 08 of 10.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.3). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 08 of 10.*

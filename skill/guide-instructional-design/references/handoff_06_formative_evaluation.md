@@ -1,6 +1,13 @@
 # Archetype 6: Formative Evaluation Protocol Quality
 
-**Purpose**: Evaluate formative evaluation plans, expert review protocols, usability test designs, and pilot study designs for methodological rigor and appropriateness.
+**Purpose**: Design and evaluate formative evaluation plans, expert review protocols, usability test designs, and pilot study designs for methodological rigor and appropriateness. The dimensions below work in both directions: draft a plan against them, or score an existing one.
+
+**Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
+- Cover the formative phases - one-to-one, small-group, and field/expert review (Bordonaro; Dick & Carey).
+- Match evaluators to each phase (SME, target learners, usability testers).
+- Tie each instrument to a specific decision and state the revision decision rule up front; keep scope, sample, and timeline feasible.
+
+Then run an evaluate-mode self-check against the scoring anchors below.
 
 **Evaluation Context**: Use this archetype when assessing:
 - Instructional design evaluation plans (pre-implementation)
@@ -375,4 +382,4 @@ If these five are met, score ≥3 ("Fair"). Lower scores indicate critical gaps.
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.2). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 06 of 10.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.3). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 06 of 10.*

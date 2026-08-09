@@ -2,7 +2,7 @@
 
 A multi-agent ADDIE workflow that uses each of GUIDE's 10 archetypes as both **design guardrail** (when building) and **acceptance test** (when judging). Archetype 10 (Curriculum Alignment, v3.1.0) operates as a cross-cutting alignment check: it does **not** replace any individual archetype's judgment; it verifies that the components agree with each other.
 
-Tracks GUIDE **v3.2.2** (10 archetypes, 60 dimensions). Adopts Hirumi's Three Alignments (01), ARCS motivational alignment (03/07), and the Merrill (2002) Effective/Efficient/Engaging vocabulary that archetype 10 codifies.
+Tracks GUIDE **v3.2.3** (10 archetypes, 60 dimensions). Adopts Hirumi's Three Alignments (01), ARCS motivational alignment (03/07), and the Merrill (2002) Effective/Efficient/Engaging vocabulary that archetype 10 codifies.
 
 ## Goals
 
@@ -238,4 +238,4 @@ A few decisions worth making before v0.2:
 
 ---
 
-*Tracks GUIDE v3.2.2. Copyright 2026 Jeremy Terhune. Apache-2.0.*
+*Tracks GUIDE v3.2.3. Copyright 2026 Jeremy Terhune. Apache-2.0.*

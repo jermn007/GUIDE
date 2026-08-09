@@ -9,7 +9,14 @@
 
 ## Overview
 
-This archetype evaluates instruction for alignment with how memory, attention, and emotion actually function in the brain. It is the most differentiated archetype in the GUIDE framework-no other LLM-based judge operationalizes cognitive neuroscience into instructional evaluation.
+This archetype guides the design of, and evaluates, instruction for alignment with how memory, attention, and emotion actually function in the brain. It is the most differentiated archetype in the GUIDE framework-no other LLM-based judge operationalizes cognitive neuroscience into instructional design and evaluation.
+
+**Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
+- Sequence Explore before Explain (5E); let learners generate before you tell.
+- Engage multiple memory systems and chunk to ~15-20 minute attention spans (Posner & Rothbart).
+- Manage emotional stakes to strengthen encoding; use retrieval practice and spacing (Brown, Roediger & McDaniel), and tie each design choice to an explicit mechanism.
+
+Then run an evaluate-mode self-check against the scoring anchors below.
 
 **Core principle:** Learning is neurosynthesis. Neurons that fire together, wire together. Good instruction creates the conditions for synaptic strengthening by engaging multiple memory systems, respecting attentional constraints, managing emotional stakes for encoding, and grounding design decisions in explicit learning theory.
 
@@ -340,4 +347,4 @@ from archetypes.archetype_09_cognitive_neuroscience import JUDGE_SYSTEM_PROMPT, 
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.2). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 09 of 10.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.3). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 09 of 10.*

@@ -1,7 +1,14 @@
 # Archetype 2: Assessment Design Quality
 ## Handoff Documentation
 
-**Purpose**: Evaluate quiz items, test blueprints, rubrics, and other assessment instruments for pedagogical soundness and measurement validity.
+**Purpose**: Design and evaluate quiz items, test blueprints, rubrics, and other assessment instruments for pedagogical soundness and measurement validity. The dimensions below work in both directions: author items against them, or score existing ones.
+
+**Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
+- Write each item to its objective's Bloom level and verb - don't test recall for an "analyze" objective.
+- Build a coverage blueprint (objectives x items) before writing items.
+- Craft plausible, homogeneous distractors with one unambiguous key; screen every item for bias and accessibility.
+
+Then run an evaluate-mode self-check against the scoring anchors below.
 
 **Use Cases**:
 - Peer review of quiz items before deployment
@@ -257,4 +264,4 @@ Before deploying at scale:
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.2). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 02 of 10.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.3). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 02 of 10.*

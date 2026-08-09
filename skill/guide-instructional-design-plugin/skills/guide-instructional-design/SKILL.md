@@ -1,8 +1,8 @@
 ---
 name: guide-instructional-design
 description: >-
-  Design and evaluate instructional content using GUIDE, a learning-science framework of 9
-  archetypes and 54 theory-grounded dimensions mapped to the ADDIE lifecycle. Use whenever work
+  Design and evaluate instructional content using GUIDE, a learning-science framework of 10
+  archetypes and 60 theory-grounded dimensions mapped to the ADDIE lifecycle. Use whenever work
   involves teaching, training, or learning: writing or reviewing a lesson plan, course, syllabus,
   or curriculum; building or critiquing a quiz, test, rubric, or assessment; creating or auditing
   an e-learning module, training video, or slide deck; designing scenario-based or branching
@@ -17,8 +17,8 @@ description: >-
 # GUIDE: Instructional Design (Design & Evaluate)
 
 GUIDE (Grounded Universal Instructional Design Evaluator) operationalizes peer-reviewed learning
-science into nine **archetypes**, each scoring an instructional artifact on **six dimensions**
-(54 total) using a 1–5 scale with concrete behavioral anchors. It was built as an LLM-as-a-judge
+science into ten **archetypes**, each scoring an instructional artifact on **six dimensions**
+(60 total) using a 1–5 scale with concrete behavioral anchors. It was built as an LLM-as-a-judge
 framework (Zheng et al., 2023), but the same rubrics are powerful **design guardrails**: the things
 the judge looks for are exactly the things good instruction should do.
 
@@ -41,7 +41,7 @@ anchors rather than improvising. Each archetype is faithful to the GUIDE reposit
 
 2. **Route to the right archetype(s).** Open `references/00_archetype_index.md` and match the artifact
    to its archetype using the "artifact → archetype" map. Usually 1–3 archetypes apply. Don't force
-   all nine; lead with the one matching the artifact's primary purpose, then add lenses (e.g., a
+   all ten; lead with the one matching the artifact's primary purpose, then add lenses (e.g., a
    narrated e-learning scenario → 04 Multimedia + 08 Story + 05 Accessibility).
 
 3. **Load the full rubric(s).** Read the matching `references/handoff_0X_*.md` file(s). Each contains
@@ -55,7 +55,7 @@ anchors rather than improvising. Each archetype is faithful to the GUIDE reposit
    the anchor and that the overall reflects the parts. In design mode, run a quick self-evaluation pass
    against the dimensions and fix anything that would score below 4.
 
-## The nine archetypes (ADDIE order)
+## The ten archetypes (ADDIE order)
 
 | Archetype | Use it for | ADDIE |
 |-----------|-----------|-------|
@@ -68,8 +68,11 @@ anchors rather than improvising. Each archetype is faithful to the GUIDE reposit
 | 01 Adult Learning Communication | chatbot/RAG/help answers to learning professionals | Implement |
 | 02 Assessment Design | quizzes, tests, item banks, rubrics, blueprints | Evaluate |
 | 06 Formative Evaluation | eval plans, usability tests, expert reviews, pilots | Evaluate |
+| 10 Curriculum Alignment | synthesis gate: do objectives, instruction & assessment cohere? | Cross-ADDIE |
 
-Full theorist lists, the 54 dimensions, and routing detail are in `references/00_archetype_index.md`.
+Full theorist lists, the 60 dimensions, and routing detail are in `references/00_archetype_index.md`.
+Archetype 10 is the synthesis gate — run it last, once objectives + instruction + assessment exist
+together, to check they actually agree (a set can score 5/5 on each component archetype and still fail 10).
 
 ## Evaluate mode
 
@@ -138,7 +141,7 @@ the GUIDE-grounded content. GUIDE supplies the substance; those skills supply th
 
 ## Reference files
 
-- `references/00_archetype_index.md` — router: artifact→archetype map, ADDIE table, all 54 dimensions,
+- `references/00_archetype_index.md` — router: artifact→archetype map, ADDIE table, all 60 dimensions,
   shared 1–5 scale, thresholds, and recurring cross-archetype concepts. **Read this first** to choose
   archetypes.
 - `references/handoff_01_adult_learning_communication.md` — conversational/RAG answers to learners.
@@ -150,13 +153,14 @@ the GUIDE-grounded content. GUIDE supplies the substance; those skills supply th
 - `references/handoff_07_needs_analysis.md` — needs assessment, performance gaps, HPT, Mager objectives.
 - `references/handoff_08_story_design.md` — scenario/narrative/branching instruction.
 - `references/handoff_09_cognitive_neuroscience.md` — brain-based design (memory, attention, emotion, 5E).
+- `references/handoff_10_curriculum_alignment.md` — synthesis gate: objective↔strategy↔assessment coherence.
 
 Each handoff doc is long; it opens with Purpose and the dimension table, so you can skim to the dimension
 you need. Read the whole doc for the archetype you're actively using.
 
 ## Attribution
 
-GUIDE — Grounded Universal Instructional Design Evaluator (v3.2.2).
+GUIDE — Grounded Universal Instructional Design Evaluator (v3.2.3).
 Repository: github.com/jermn007/GUIDE. Copyright 2026 Jeremy Terhune. Licensed under the Apache License,
 Version 2.0. The bundled `references/handoff_*.md` files are the project's model-agnostic handoff
 documents, reproduced for use inside this skill; see `references/NOTICE.md`. Keep this attribution intact.
