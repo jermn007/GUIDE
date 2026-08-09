@@ -30,14 +30,25 @@ The plugin's `skills/guide-instructional-design/` directory is a generated mirro
 
 ### Option A - Marketplace (recommended; receives version updates)
 
-Add the GUIDE marketplace once, then install the plugin from it:
+**GUI (easiest):** open **Settings -> Plugins** (under *Customize* in the sidebar), click **Add -> Add marketplace -> Add from a repository**, and enter `jermn007/GUIDE` (or `https://github.com/jermn007/GUIDE.git`). When the **Guide instructional design** plugin appears, install it.
+
+**Slash commands:**
 
 ```
 /plugin marketplace add jermn007/GUIDE
 /plugin install guide-instructional-design@guide
 ```
 
-Installing from the marketplace lets Claude Code update the plugin whenever a new `version` is published (see [Versioning](#versioning)) - unlike a one-off file install, which is a fixed snapshot.
+Installing from the marketplace lets Claude Code update the plugin whenever a new `version` is published (see [Versioning](#versioning)), unlike a one-off file install, which is a fixed snapshot.
+
+**Updating an existing install.** An already-added marketplace serves from a local clone, so a plain reinstall keeps the old version. Refresh the marketplace, then update the plugin:
+
+```
+/plugin marketplace update guide
+/plugin update guide-instructional-design@guide
+```
+
+In the GUI, the plugin list shows each marketplace's **Last updated** date; re-sync the marketplace from its menu, then update the plugin.
 
 ### Option B - Plugin file (from a release)
 
