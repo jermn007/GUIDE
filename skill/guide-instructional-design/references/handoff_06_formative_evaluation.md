@@ -9,6 +9,11 @@
 
 Then run an evaluate-mode self-check against the scoring anchors below.
 
+**Professional alignment** (how this archetype ladders up to recognized standards - see [`discipline_alignment_crosswalk.md`](discipline_alignment_crosswalk.md) for the full mapping, citations, and licensing notes):
+- **IBSTPI ID Competencies (2012)** - Evaluation & Implementation: C17 (evaluating interventions), C18 (data-based revision).
+- **ATD Capability Model (2020)** - Evaluating Impact; Data & Analytics.
+- **ISPI/HPT Ten Standards** - S10 Evaluate Results and Measure Impact.
+
 **Evaluation Context**: Use this archetype when assessing:
 - Instructional design evaluation plans (pre-implementation)
 - Expert review protocols for e-learning modules or courses
@@ -382,4 +387,4 @@ If these five are met, score ≥3 ("Fair"). Lower scores indicate critical gaps.
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.2.3). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 06 of 10.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.3.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 06 of 10.*

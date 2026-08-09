@@ -154,13 +154,14 @@ the GUIDE-grounded content. GUIDE supplies the substance; those skills supply th
 - `references/handoff_08_story_design.md` — scenario/narrative/branching instruction.
 - `references/handoff_09_cognitive_neuroscience.md` — brain-based design (memory, attention, emotion, 5E).
 - `references/handoff_10_curriculum_alignment.md` — synthesis gate: objective↔strategy↔assessment coherence.
+- `references/discipline_alignment_crosswalk.md` — how each archetype maps to IBSTPI / ATD / ISPI-HPT professional standards (the Discipline Alignment reference model).
 
 Each handoff doc is long; it opens with Purpose and the dimension table, so you can skim to the dimension
 you need. Read the whole doc for the archetype you're actively using.
 
 ## Attribution
 
-GUIDE — Grounded Universal Instructional Design Evaluator (v3.2.3).
+GUIDE — Grounded Universal Instructional Design Evaluator (v3.3.0).
 Repository: github.com/jermn007/GUIDE. Copyright 2026 Jeremy Terhune. Licensed under the Apache License,
 Version 2.0. The bundled `references/handoff_*.md` files are the project's model-agnostic handoff
 documents, reproduced for use inside this skill; see `references/NOTICE.md`. Keep this attribution intact.
