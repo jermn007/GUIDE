@@ -10,7 +10,7 @@
 
 Then run an evaluate-mode self-check against the scoring anchors below.
 
-**Professional alignment** (how this archetype aligns to recognized standards - see [`discipline_alignment_crosswalk.md`](discipline_alignment_crosswalk.md) for the full mapping, citations, and licensing notes):
+**Professional alignment** (the professional standards this archetype *aims* to align with - an independent, aspirational mapping by the author, not reviewed or endorsed by these bodies; see [`discipline_alignment_crosswalk.md`](discipline_alignment_crosswalk.md) for the full mapping, citations, and licensing notes):
 - **IBSTPI ID Competencies (2012)** - Professional Foundations: C1 (effective communication), C2 (applying research & theory).
 - **ATD Capability Model (2020)** - Communication; Training Delivery & Facilitation; Learning Sciences.
 - **ISPI/HPT Ten Standards** - S9 Implement Solutions; S4 Work in Partnership with Stakeholders.
@@ -210,4 +210,4 @@ Before deploying at scale:
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.3.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 01 of 10.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.4.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 01 of 10.*
