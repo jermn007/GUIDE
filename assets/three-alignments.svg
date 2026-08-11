@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 640" width="920" height="640" role="img" aria-label="GUIDE's Three Alignments: Effective, Efficient, and Engaging instruction">
+  <rect x="1" y="1" width="918" height="638" rx="18" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <g font-family="'Segoe UI', system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif">
+    <!-- Title -->
+    <text x="460" y="52" text-anchor="middle" font-size="30" font-weight="700" fill="#0f172a">GUIDE's Three Alignments</text>
+    <text x="460" y="82" text-anchor="middle" font-size="16" fill="#475569">High-quality instruction is effective, efficient, and engaging (Merrill, 2002).</text>
+
+    <!-- Triangle -->
+    <polygon points="460,212 196,478 724,478" fill="#eef2ff" fill-opacity="0.55" stroke="#cbd5e1" stroke-width="2.5" stroke-linejoin="round"/>
+
+    <!-- Center label -->
+    <text x="460" y="378" text-anchor="middle" font-size="19" font-weight="700" fill="#475569">High-quality</text>
+    <text x="460" y="401" text-anchor="middle" font-size="19" font-weight="700" fill="#475569">learning experience</text>
+
+    <!-- Vertex badges -->
+    <circle cx="460" cy="212" r="13" fill="#2563eb" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="196" cy="478" r="13" fill="#059669" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="724" cy="478" r="13" fill="#d97706" stroke="#ffffff" stroke-width="3"/>
+
+    <!-- Effective (top) -->
+    <text x="460" y="128" text-anchor="middle" font-size="23" font-weight="700" fill="#2563eb" letter-spacing="0.5">EFFECTIVE</text>
+    <text x="460" y="154" text-anchor="middle" font-size="14.5" fill="#334155">Aligned with theory, research,</text>
+    <text x="460" y="173" text-anchor="middle" font-size="14.5" fill="#334155">and documented best practice</text>
+
+    <!-- Efficient (bottom-left) -->
+    <text x="52" y="524" font-size="23" font-weight="700" fill="#059669" letter-spacing="0.5">EFFICIENT</text>
+    <text x="52" y="550" font-size="14.5" fill="#334155">Objectives, instruction, and</text>
+    <text x="52" y="569" font-size="14.5" fill="#334155">assessment cohere with each other</text>
+
+    <!-- Engaging (bottom-right) -->
+    <text x="868" y="524" text-anchor="end" font-size="23" font-weight="700" fill="#d97706" letter-spacing="0.5">ENGAGING</text>
+    <text x="868" y="550" text-anchor="end" font-size="14.5" fill="#334155">Connected to learners' goals,</text>
+    <text x="868" y="569" text-anchor="end" font-size="14.5" fill="#334155">interests, and motivations</text>
+
+    <!-- Footer -->
+    <text x="460" y="622" text-anchor="middle" font-size="12" fill="#94a3b8">Quality outcomes: Merrill (2002). Alignment framing after Hirumi (2021, 2025). Independent diagram, not the original figure.</text>
+  </g>
+</svg>

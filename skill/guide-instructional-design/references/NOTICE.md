@@ -3,7 +3,7 @@
 This skill packages content from the **GUIDE** project.
 
 **GUIDE — Grounded Universal Instructional Design Evaluator**
-Version 3.3.0
+Version 3.4.0
 Repository: https://github.com/jermn007/GUIDE
 Copyright 2026 Jeremy Terhune.
 Licensed under the Apache License, Version 2.0 (the "License"). You may not use these files except in

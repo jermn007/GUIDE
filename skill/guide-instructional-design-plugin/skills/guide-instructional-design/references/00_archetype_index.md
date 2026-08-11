@@ -6,7 +6,7 @@ scoring anchors, judge prompt, and output format.
 
 GUIDE = **G**rounded **U**niversal **I**nstructional **D**esign **E**valuator. **Ten** archetypes,
 **60** dimensions (6 per archetype), each grounded in named learning-science sources and scored 1–5
-with behavioral anchors. Built on the LLM-as-a-judge pattern (Zheng et al., 2023). Tracks GUIDE v3.3.0.
+with behavioral anchors. Built on the LLM-as-a-judge pattern (Zheng et al., 2023). Tracks GUIDE v3.4.0.
 
 **What's new in v3.1.0:** Archetype **10 Curriculum Alignment** (synthesis archetype, evaluates
 relationships between objectives ↔ strategies ↔ assessments). Archetypes **03 Sequencing** and
@@ -146,6 +146,6 @@ Several theories appear in multiple archetypes. When designing or evaluating, th
 
 ## Source
 
-GUIDE — Grounded Universal Instructional Design Evaluator (v3.3.0).
+GUIDE — Grounded Universal Instructional Design Evaluator (v3.4.0).
 Repository: github.com/jermn007/GUIDE. Copyright 2026 Jeremy Terhune. Apache-2.0.
 This index condenses the ten `handoff_*.md` files in this directory; those files are the authoritative source.

@@ -2,7 +2,7 @@
 
 **Design and grade instruction. Learning science, made executable.**
 
-**Version 3.3.0** | Apache License 2.0
+**Version 3.4.0** | Apache License 2.0
 
 GUIDE is a learning-science framework with two modes: **author** instructional content against 60 theory-grounded dimensions, or **evaluate** existing content against the same dimensions. The rubric that grades a finished course is the spec you design the next one from - one set of criteria, run forward to generate or backward to judge. It was developed as a capstone synthesis of my experience in the University of Central Florida Master of Arts in Instructional Systems program.
 
@@ -22,6 +22,8 @@ Because both modes share one rubric, content authored in design mode and content
 ## Quality Outcomes: Effective, Efficient, Engaging
 
 High-quality instruction is effective, efficient, and engaging (Merrill, 2002). Hirumi (2025), building on Hirumi, Ratliff & de la Mora (2021), maps each of those quality outcomes to an alignment of instructional elements. GUIDE operationalizes each:
+
+![GUIDE's Three Alignments - effective, efficient, and engaging instruction, each aligned to its instructional elements](assets/three-alignments.svg)
 
 - **Effective** - instructional elements aligned with **theory, research, and documented best practice** (Hannafin, Hannafin, Land, & Oliver, 1997). Whether the artifact reflects what learning science actually says works. This is the *grounded* in Grounded Universal Instructional Design Evaluator.
 - **Efficient** - **objectives, instructional strategies (chunking and sequencing), and learner assessments aligned with each other** (Tyler, 1949; Bloom, 1956; Dick, Carey & Carey, 2015). Whether the artifact's internal pieces cohere so learners aren't doing wasted work.
@@ -153,6 +155,7 @@ The framework is evaluated against its own rubrics on each release. Trajectory:
 | v3.1.1 | **4.3 / 5.0** | **4.2 / 5.0** | Three Alignments framing + ARCS + citation hygiene + Archetype 10 self-application (`GUIDE_Self_Evaluation_v3.1.1.md`) |
 | v3.2.3 | **4.3 / 5.0** | **4.2 / 5.0** | Dual-mode "design and evaluate" reframe reaches the rubric layer; SKILL/NOTICE corrected to 10 archetypes / 60 dimensions; no dimension content changed (`GUIDE_Self_Evaluation_v3.2.3.md`) |
 | v3.3.0 | **4.3 / 5.0** | **4.3 / 5.0** | Discipline Alignment crosswalk (IBSTPI / ATD / ISPI-HPT) + per-handoff Professional Alignment; Archetype 10 Discipline Alignment 2 -> 4, first movement on the only sub-3 dimension; no dimension content changed (`GUIDE_Self_Evaluation_v3.3.0.md`) |
+| v3.4.0 | **4.4 / 5.0** | **4.3 / 5.0** | Printable docx brought to parity + three-alignments diagram; re-scored against the updated document (first docx self-eval since v3.0.0); Multimedia Principle Compliance 3 -> 4 closes the visual-model gap; professional alignment reframed as aspirational (`GUIDE_Self_Evaluation_v3.4.0.md`) |
 
 *Applicable archetypes: 01 Adult Learning Communication, 02 Assessment Design, 03 Instructional Sequencing, 04 Multimedia Design, 05 Accessibility, 09 Cognitive Neuroscience. Archetypes 06 (Formative Evaluation), 07 (Needs Analysis), and 08 (Story Design) evaluate artifact types GUIDE isn't (an evaluation plan, a needs assessment, a narrative) and are marked N/A. Archetype 10 (Curriculum Alignment) became applicable in v3.1.0 as the synthesis lens.*
 
@@ -161,6 +164,8 @@ The v3.1.1 evaluation also applies the new Archetype 10 (Curriculum Alignment) t
 v3.2.3 *was* re-evaluated, because it touches the rubric layer (the dual-mode "design and evaluate" framing now leads every handoff) and corrects the skill's advertised archetype count (9/54 to 10/60). It holds the composite with no regressions and resolves an internal-coherence defect the v3.1.1 self-eval had not caught - the skill's stated scope disagreed with the assets it shipped, exactly the objective-to-strategy mismatch Archetype 10 exists to detect. See [`GUIDE_Self_Evaluation_v3.2.3.md`](GUIDE_Self_Evaluation_v3.2.3.md) for the full analysis.
 
 v3.3.0 closes the standing gap. A new [`discipline_alignment_crosswalk.md`](archetypes/discipline_alignment_crosswalk.md) maps all ten archetypes to IBSTPI (2012), the ATD Talent Development Capability Model (2020), and ISPI/HPT's Ten Standards, and each handoff carries a Professional Alignment tag. Archetype 10's Discipline Alignment rises **2 -> 4** - the first movement on the only sub-3 dimension in the framework's history - lifting the 7-archetype composite to 4.3. It stops at 4, not 5, because a self-published crosswalk is a real discipline anchor but not accreditation; reaching 5 means securing the standards owners' permission for validated, verbatim mappings. See [`GUIDE_Self_Evaluation_v3.3.0.md`](GUIDE_Self_Evaluation_v3.3.0.md) for the full analysis.
+
+v3.4.0 returns the printable `GUIDE_Rubric_Document.docx` to parity with the live framework - it now carries the dual-mode framing, per-archetype Design targets, and the discipline crosswalk (reframed as an *aspirational* mapping: the standards GUIDE aims to align with, not endorsed by the bodies) - and adds the framework's first figure, the three-alignments diagram. Re-scored against the updated document (the first docx-targeted self-eval since v3.0.0), the composite rises **4.0 -> 4.4**, closing the visual-model gap (Archetype 04 Multimedia Principle Compliance 3 -> 4) that every prior self-evaluation had flagged. See [`GUIDE_Self_Evaluation_v3.4.0.md`](GUIDE_Self_Evaluation_v3.4.0.md) for the full analysis.
 
 ## License
 

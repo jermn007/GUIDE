@@ -1,8 +1,8 @@
 # GUIDE Discipline Alignment Crosswalk
 
-**How GUIDE's ten archetypes align to recognized professional standards in instructional design and performance improvement.**
+**The professional standards GUIDE's ten archetypes aim to align with - an independent, aspirational mapping across instructional design and performance improvement.**
 
-GUIDE is grounded in named *learning theory* (Knowles, Mayer, Gagné, Sweller, and others). This document addresses a different axis: **discipline alignment** - whether GUIDE's archetypes map to the professional competency and performance standards that instructional designers and L&D practitioners are actually measured against. It is the reference model behind Archetype 10's *Discipline Alignment* dimension.
+GUIDE is grounded in named *learning theory* (Knowles, Mayer, Gagné, Sweller, and others). This document addresses a different axis: **discipline alignment** - the professional competency and performance standards GUIDE's archetypes *aim* to align with, the ones instructional designers and L&D practitioners are actually measured against. It is the reference model behind Archetype 10's *Discipline Alignment* dimension.
 
 Three complementary standards are used, each at its natural altitude:
 
@@ -14,7 +14,7 @@ Three complementary standards are used, each at its natural altitude:
 
 ## Independence and licensing notice
 
-This crosswalk is an **independent mapping created by the GUIDE project. It is not endorsed by, affiliated with, or approved by IBSTPI, ATD, or ISPI.**
+This crosswalk is an **independent, aspirational mapping created by the GUIDE project - the professional standards GUIDE aims to align with. It is not endorsed by, affiliated with, or approved by IBSTPI, ATD, or ISPI.**
 
 It references each framework by **domain/standard name and competency number** for identification and comparison, with attribution, and describes each item in GUIDE's **own paraphrased wording**. It does **not** reproduce any framework's verbatim competency statements, standard definitions, rubric text, or proprietary figures (such as the ATD Capability Model graphic or the HPT model diagram).
 

@@ -9,7 +9,7 @@
 
 Then run an evaluate-mode self-check against the scoring anchors below.
 
-**Professional alignment** (how this archetype aligns to recognized standards - see [`discipline_alignment_crosswalk.md`](discipline_alignment_crosswalk.md) for the full mapping, citations, and licensing notes):
+**Professional alignment** (the professional standards this archetype *aims* to align with - an independent, aspirational mapping by the author, not reviewed or endorsed by these bodies; see [`discipline_alignment_crosswalk.md`](discipline_alignment_crosswalk.md) for the full mapping, citations, and licensing notes):
 - **IBSTPI ID Competencies (2012)** - Planning & Analysis: C6 (front-end needs assessment), C7 (learner & environment analysis), C8 (content analysis); Design & Development: C13 (planning non-instructional interventions).
 - **ATD Capability Model (2020)** - Instructional Design; Performance Improvement; Consulting & Business Partnering.
 - **ISPI/HPT Ten Standards** - S5 Determine Need or Opportunity; S6 Determine Cause (Gilbert's BEM); S1 Focus on Results; S2 Take a Systemic View. *(GUIDE's tightest HPT tie.)*
