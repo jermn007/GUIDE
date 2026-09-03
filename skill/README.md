@@ -16,7 +16,8 @@ skill/
 │   └── references/
 │       ├── 00_archetype_index.md          # routing index
 │       ├── NOTICE.md                      # Apache-2.0 attribution
-│       └── handoff_01..10_*.md            # the 10 archetype rubrics (generated from ../archetypes/)
+│       ├── handoff_01..10_*.md            # the 10 archetype rubrics (generated from ../archetypes/)
+│       └── discipline_alignment_crosswalk.md # archetype -> IBSTPI / ATD / ISPI-HPT mapping (generated from ../archetypes/)
 └── guide-instructional-design-plugin/     # installable Claude Code plugin
     ├── .claude-plugin/plugin.json          # plugin manifest (version, metadata)
     ├── agents/                             # 13 ADDIE pipeline subagents (plugin-only, hand-maintained)
@@ -128,7 +129,7 @@ After editing the canonical handoffs or any skill file, run the build script:
 python skill/build_skill.py
 ```
 
-The script (a) copies each `../archetypes/handoff_*.md` into `references/` with a fresh `Source: GUIDE ... (vX.Y.Z) ... Archetype NN of 10` footer, and (b) mirrors the entire canonical skill into the plugin's `skills/` directory so the two stay byte-identical. It does **not** touch the plugin's `agents/` or `PIPELINE.md`, which are plugin-only and maintained directly.
+The script (a) copies each `../archetypes/handoff_*.md` into `references/` with a fresh `Source: GUIDE ... (vX.Y.Z) ... Archetype NN of 10` footer, also copying `../archetypes/discipline_alignment_crosswalk.md` with a generic version footer, and (b) mirrors the entire canonical skill into the plugin's `skills/` directory so the two stay byte-identical. It does **not** touch the plugin's `agents/` or `PIPELINE.md`, which are plugin-only and maintained directly.
 
 > **Note:** The Python judge prompts (`archetypes/*.py`, `JUDGE_SYSTEM_PROMPT`) and the handoff markdown are separate artifacts (an executable prompt vs. a practitioner guide) and are not generated from each other; keep their rubric content in step when editing either.
 
