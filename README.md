@@ -24,7 +24,7 @@ Because both modes share one rubric, content authored in design mode and content
 High-quality instruction is effective, efficient, and engaging (Merrill, 2002). Hirumi (2025), building on Hirumi, Ratliff & de la Mora (2021), maps each of those quality outcomes to an alignment of instructional elements. GUIDE operationalizes each:
 
 <p align="center">
-  <img src="assets/three-alignments.svg" alt="GUIDE's Three Alignments - effective, efficient, and engaging instruction, each aligned to its instructional elements" width="640">
+  <img src="assets/three-alignments.svg" alt="GUIDE's Three Alignments - effective, efficient, and engaging instruction, each aligned to its instructional elements" width="736">
 </p>
 
 - **Effective** - instructional elements aligned with **theory, research, and documented best practice** (Hannafin, Hannafin, Land, & Oliver, 1997). Whether the artifact reflects what learning science actually says works. This is the *grounded* in Grounded Universal Instructional Design Evaluator.
