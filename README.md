@@ -54,40 +54,42 @@ Each archetype maps to a phase of the ADDIE instructional design lifecycle:
 
 ```
 GUIDE/
-├── README.md                              # This file
-├── LICENSE                                # Apache License 2.0
-├── NOTICE                                 # Copyright and attribution
-├── .claude-plugin/marketplace.json        # Plugin marketplace manifest (points at skill/guide-instructional-design-plugin/)
-├── GUIDE_Rubric_Document.docx             # Printable rubric document (v3.4.0, at parity with the live framework)
+├── .claude-plugin/
+│   └── marketplace.json                   # Plugin marketplace manifest (points at skill/guide-instructional-design-plugin/)
+├── archetypes/
+│   ├── archetype_XX_*.py                  # Judge prompt modules (one per archetype, 01-10)
+│   ├── discipline_alignment_crosswalk.md  # Archetype -> IBSTPI / ATD / ISPI-HPT mapping (aspirational)
+│   ├── edge_cases_XX.json                 # Edge case test suites (one per archetype)
+│   └── handoff_XX_*.md                    # Model-agnostic handoff docs - single source of truth for the rubrics
+├── assets/
+│   ├── three-alignments.png               # Three-alignments diagram, rasterized for the docx
+│   └── three-alignments.svg               # Three-alignments diagram (README)
 ├── self-evaluations/                      # One self-evaluation per release (see Self-Evaluation section)
 │   ├── GUIDE_Self_Evaluation.md           # Baseline (v2.2.0)
-│   ├── GUIDE_Self_Evaluation_v3_Comparison.md # v2.2.0 -> v3.0.0
 │   ├── GUIDE_Self_Evaluation_v3.1.1.md    # v3.0.0 -> v3.1.1 + Archetype 10 self-application
 │   ├── GUIDE_Self_Evaluation_v3.2.3.md    # Dual-mode reframe + archetype-count correction
 │   ├── GUIDE_Self_Evaluation_v3.3.0.md    # Discipline Alignment crosswalk (2 -> 4)
-│   └── GUIDE_Self_Evaluation_v3.4.0.md    # Docx parity + three-alignments diagram (4.0 -> 4.4)
+│   ├── GUIDE_Self_Evaluation_v3.4.0.md    # Docx parity + three-alignments diagram (4.0 -> 4.4)
+│   └── GUIDE_Self_Evaluation_v3_Comparison.md # v2.2.0 -> v3.0.0
+├── skill/                                 # Claude skill + plugin packaging
+│   ├── guide-instructional-design/        # canonical skill source
+│   ├── guide-instructional-design-plugin/ # installable plugin
+│   │   ├── .claude-plugin/
+│   │   │   └── plugin.json                # plugin manifest (version authority)
+│   │   ├── agents/                        # 13 ADDIE pipeline subagents
+│   │   ├── skills/                        # mirror of the canonical skill
+│   │   └── PIPELINE.md                    # multi-agent workflow design
+│   ├── README.md                          # install/usage for the skill and plugin
+│   └── build_skill.py                     # generates skill references (handoffs + crosswalk) from archetypes/ + mirrors into the plugin
+├── GUIDE_Rubric_Document.docx             # Printable rubric document (v3.4.0, at parity with the live framework)
 ├── Installing-GUIDE-in-Claude.pdf         # Step-by-step install guide with screenshots
+├── LICENSE                                # Apache License 2.0
+├── NOTICE                                 # Copyright and attribution
+├── README.md                              # This file
 ├── guide_base.py                          # Base evaluator class
-├── guide_registry.py                      # Archetype registry and runner
 ├── guide_pipeline.py                      # ADDIE multi-archetype orchestrator (ADDIEPipeline)
-├── smoke_test_pipeline.py                 # Mocked end-to-end test for the orchestrator
-├── assets/
-│   ├── three-alignments.svg               # Three-alignments diagram (README)
-│   └── three-alignments.png               # Same diagram, rasterized for the docx
-├── archetypes/
-│   ├── archetype_XX_*.py                  # Judge prompt modules (one per archetype, 01-10)
-│   ├── handoff_XX_*.md                    # Model-agnostic handoff docs - single source of truth for the rubrics
-│   ├── discipline_alignment_crosswalk.md  # Archetype -> IBSTPI / ATD / ISPI-HPT mapping (aspirational)
-│   └── edge_cases_XX.json                 # Edge case test suites (one per archetype)
-└── skill/                                 # Claude skill + plugin packaging
-    ├── README.md                          # install/usage for the skill and plugin
-    ├── build_skill.py                     # generates skill references (handoffs + crosswalk) from archetypes/ + mirrors into the plugin
-    ├── guide-instructional-design/        # canonical skill source
-    └── guide-instructional-design-plugin/ # installable plugin
-        ├── .claude-plugin/plugin.json     # plugin manifest (version authority)
-        ├── agents/                        # 13 ADDIE pipeline subagents
-        ├── PIPELINE.md                    # multi-agent workflow design
-        └── skills/                        # mirror of the canonical skill
+├── guide_registry.py                      # Archetype registry and runner
+└── smoke_test_pipeline.py                 # Mocked end-to-end test for the orchestrator
 ```
 
 ## Claude Skill / Plugin
