@@ -66,11 +66,11 @@ GUIDE/
 │   └── three-alignments.svg               # Three-alignments diagram (README)
 ├── self-evaluations/                      # One self-evaluation per release (see Self-Evaluation section)
 │   ├── GUIDE_Self_Evaluation.md           # Baseline (v2.2.0)
+│   ├── GUIDE_Self_Evaluation_v3.0.0.md    # v2.2.0 -> v3.0.0
 │   ├── GUIDE_Self_Evaluation_v3.1.1.md    # v3.0.0 -> v3.1.1 + Archetype 10 self-application
 │   ├── GUIDE_Self_Evaluation_v3.2.3.md    # Dual-mode reframe + archetype-count correction
 │   ├── GUIDE_Self_Evaluation_v3.3.0.md    # Discipline Alignment crosswalk (2 -> 4)
-│   ├── GUIDE_Self_Evaluation_v3.4.0.md    # Docx parity + three-alignments diagram (4.0 -> 4.4)
-│   └── GUIDE_Self_Evaluation_v3_Comparison.md # v2.2.0 -> v3.0.0
+│   └── GUIDE_Self_Evaluation_v3.4.0.md    # Docx parity + three-alignments diagram (4.0 -> 4.4)
 ├── skill/                                 # Claude skill + plugin packaging
 │   ├── guide-instructional-design/        # canonical skill source
 │   ├── guide-instructional-design-plugin/ # installable plugin
@@ -165,7 +165,7 @@ The framework is evaluated against its own rubrics on each release. Trajectory:
 | Version | Composite (applicable archetypes, n=6) | Composite (with Archetype 10, n=7) | Notes |
 |---|---|---|---|
 | v2.2.0 | 3.4 / 5.0 | N/A | Baseline (`GUIDE_Self_Evaluation.md`) |
-| v3.0.0 | 4.0 / 5.0 | N/A | Reader objectives + calibration example + ADDIE rationale (`GUIDE_Self_Evaluation_v3_Comparison.md`) |
+| v3.0.0 | 4.0 / 5.0 | N/A | Reader objectives + calibration example + ADDIE rationale (`GUIDE_Self_Evaluation_v3.0.0.md`) |
 | v3.1.1 | **4.3 / 5.0** | **4.2 / 5.0** | Three Alignments framing + ARCS + citation hygiene + Archetype 10 self-application (`GUIDE_Self_Evaluation_v3.1.1.md`) |
 | v3.2.3 | **4.3 / 5.0** | **4.2 / 5.0** | Dual-mode "design and evaluate" reframe reaches the rubric layer; SKILL/NOTICE corrected to 10 archetypes / 60 dimensions; no dimension content changed (`GUIDE_Self_Evaluation_v3.2.3.md`) |
 | v3.3.0 | **4.3 / 5.0** | **4.3 / 5.0** | Discipline Alignment crosswalk (IBSTPI / ATD / ISPI-HPT) + per-handoff Professional Alignment; Archetype 10 Discipline Alignment 2 -> 4, first movement on the only sub-3 dimension; no dimension content changed (`GUIDE_Self_Evaluation_v3.3.0.md`) |
