@@ -10,6 +10,10 @@ References:
 - Dick, W., Carey, L., & Carey, J.O. (2015). The Systematic Design of Instruction.
 - Nielsen, J. (1994). Severity Ratings for Usability Problems.
 - Nielsen, J. (1994). Heuristic Evaluation methodology.
+
+Author: Jeremy Terhune
+Copyright 2026 Jeremy Terhune
+License: Apache-2.0 (see LICENSE and NOTICE in the repository root)
 """
 
 import sys, os

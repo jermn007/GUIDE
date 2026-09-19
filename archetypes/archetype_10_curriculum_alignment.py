@@ -42,6 +42,10 @@ Citations:
 - Hirumi, Ratliff & de la Mora (2021); Hirumi (2025). Mapping the quality outcomes to alignments
   of instructional elements (objectives <-> strategies <-> assessments; theory/research alignment;
   personal/professional goal alignment)
+
+Author: Jeremy Terhune
+Copyright 2026 Jeremy Terhune
+License: Apache-2.0 (see LICENSE and NOTICE in the repository root)
 """
 
 import sys

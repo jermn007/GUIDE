@@ -23,6 +23,10 @@ Citation Sources:
     - W3C WAI (2018). Web Content Accessibility Guidelines (WCAG) 2.1.
     - Nielsen, J. (1994). Severity Ratings for Usability Problems.
     - Dick, W., Carey, L., & Carey, J.O. (2015). The Systematic Design of Instruction (8th ed.).
+
+Author: Jeremy Terhune
+Copyright 2026 Jeremy Terhune
+License: Apache-2.0 (see LICENSE and NOTICE in the repository root)
 """
 
 import sys

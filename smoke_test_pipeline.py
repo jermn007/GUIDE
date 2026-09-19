@@ -17,6 +17,10 @@ Run from the GUIDE repo root (or any dir with guide_base.py and guide_pipeline.p
     python smoke_test_pipeline.py
 
 Exit code 0 == all assertions passed. Non-zero == failure (prints which case).
+
+Author: Jeremy Terhune
+Copyright 2026 Jeremy Terhune
+License: Apache-2.0 (see LICENSE and NOTICE in the repository root)
 """
 from __future__ import annotations
 

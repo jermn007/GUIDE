@@ -11,6 +11,10 @@ Usage:
 
     print(list_archetypes())
     result = evaluate_standalone("assessment_design", input, output)
+
+Author: Jeremy Terhune
+Copyright 2026 Jeremy Terhune
+License: Apache-2.0 (see LICENSE and NOTICE in the repository root)
 """
 
 from . import archetype_01_adult_learning_communication

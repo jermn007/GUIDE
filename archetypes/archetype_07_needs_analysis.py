@@ -11,6 +11,10 @@ References:
 - Mager, R.F. (1997). Preparing Instructional Objectives (3rd ed.).
 - Dick, W., Carey, L., & Carey, J.O. (2015). The Systematic Design of Instruction (8th ed.).
 - Keller, J.M. (1987, 2010). ARCS Model of Motivational Design (Attention, Relevance, Confidence, Satisfaction).
+
+Author: Jeremy Terhune
+Copyright 2026 Jeremy Terhune
+License: Apache-2.0 (see LICENSE and NOTICE in the repository root)
 """
 
 import sys, os

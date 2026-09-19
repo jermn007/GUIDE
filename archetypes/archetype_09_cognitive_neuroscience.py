@@ -25,7 +25,8 @@ Citations:
 - Grounded Design Model principles
 
 Author: Jeremy Terhune
-License: Proprietary - organizational use by permission
+Copyright 2026 Jeremy Terhune
+License: Apache-2.0 (see LICENSE and NOTICE in the repository root)
 """
 
 import sys

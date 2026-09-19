@@ -21,6 +21,10 @@ This script:
 
 Run from the repo root:
     python skill/build_skill.py
+
+Author: Jeremy Terhune
+Copyright 2026 Jeremy Terhune
+License: Apache-2.0 (see LICENSE and NOTICE in the repository root)
 """
 
 from __future__ import annotations

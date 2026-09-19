@@ -30,7 +30,8 @@ Usage:
     full = evaluate_all(input="...", output="...")
 
 Author: Jeremy Terhune
-License: Proprietary - organizational use by permission
+Copyright 2026 Jeremy Terhune
+License: Apache-2.0 (see LICENSE and NOTICE in the repository root)
 """
 
 # Register all archetypes by importing the package

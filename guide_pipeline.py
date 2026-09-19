@@ -45,7 +45,8 @@ Usage:
         print(f"  - {action.fix_owner_archetype}: {action.action}")
 
 Author: Jeremy Terhune
-License: Apache-2.0 (matches GUIDE repo)
+Copyright 2026 Jeremy Terhune
+License: Apache-2.0 (see LICENSE and NOTICE in the repository root)
 """
 
 from __future__ import annotations
