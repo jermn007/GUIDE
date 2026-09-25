@@ -5,7 +5,7 @@
   <img src="docs/art/hero-light.png" alt="GUIDE: Grounded Universal Instructional Design Evaluator" width="100%">
 </picture>
 
-**Design and grade instruction against learning science.**
+**Design and grade instruction aligned to learning science.**
 
 [![Latest release](https://img.shields.io/github/v/release/jermn007/GUIDE?style=for-the-badge&label=release&color=2563eb&labelColor=0f172a)](https://github.com/jermn007/GUIDE/releases/latest)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache_2.0-059669?style=for-the-badge&labelColor=0f172a)](LICENSE)
