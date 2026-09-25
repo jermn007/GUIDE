@@ -1,6 +1,6 @@
 # Status
 
-What works, what is open, and what is next. Last checked: 2026-09-24, against `main` at v3.4.0 plus unreleased docs changes.
+What works, what is open, and what is next. Last checked: 2026-09-24, against `main` at v3.4.0 plus unreleased changes.
 
 Each item is marked by its evidence:
 
@@ -15,6 +15,7 @@ Each item is marked by its evidence:
 | 10 archetypes register and load | tested | `python guide_registry.py` lists 10. |
 | 60 dimensions (6 per archetype) | tested | Counted from each archetype's scoring schema. |
 | ADDIE pipeline orchestrator (`ADDIEPipeline`) | tested | `python smoke_test_pipeline.py` passes all scenarios. It uses a mocked model, not live API calls. |
+| All 10 archetypes ask for the standard output format | tested | `python test_judge_schemas.py` parses each archetype's JSON template with `GUIDEResult.from_json`. Fixed for 05, 06, and 07 in v3.4.1. It checks the format, not live judge output. |
 | Plugin bundles 1 skill and 13 agents | tested | 13 files in `skill/guide-instructional-design-plugin/agents/`. |
 | Plugin installs from the marketplace | verified | Confirmed by hand at v3.2.2 (see the release notes). Not re-checked for v3.4.0. |
 | Printable rubric matches the live framework | verified | Brought to parity and re-scored in the [v3.4.0 self-evaluation](self-evaluations/GUIDE_Self_Evaluation_v3.4.0.md). |
@@ -23,7 +24,6 @@ Each item is marked by its evidence:
 
 | Item | Evidence | Notes |
 |---|---|---|
-| Archetypes 05, 06, and 07 from Python | open | Their judge prompts ask for a flat JSON object, but `GUIDEResult.from_json` reads a `scores` key. Through `evaluate()`, their scores come back empty. The plugin and skill are not affected. |
 | Edge-case regression runs | open | `archetypes/edge_cases_XX.json` exist for all 10 archetypes, but no script runs them. |
 | Continuous integration | open | No CI workflow. Checks are run by hand. |
 | Default judge model | open | The Python runners default to `claude-sonnet-4-20250514`, an older model. Override with `model_name`. |
@@ -31,6 +31,5 @@ Each item is marked by its evidence:
 
 ## Next
 
-1. Fix the JSON output format for archetypes 05, 06, and 07, and add a check that every archetype asks for the standard format.
-2. Add a script that runs the edge cases against a live model and reports drift from `expected_overall`.
-3. Add a CI workflow that runs the registry check and the pipeline smoke test.
+1. Add a script that runs the edge cases against a live model and reports drift from `expected_overall`.
+2. Add a CI workflow that runs the registry check, the output-format check, and the pipeline smoke test.

@@ -183,9 +183,7 @@ Score: 1=Single format/modality only; 5=Multiple formats, flexible engagement
 - Architectural barriers (rebuild required): Flash content, unsupported technologies
 Score: 5=Quick fixes only; 1=Requires architectural rebuild
 
-Return only a valid JSON object with keys: perceivable, operable, understandable, robust, udl_integration, remediation_feasibility.
-Each key should map to an integer 1-5.
-Include a "summary" key with 1-2 sentences explaining the overall accessibility level and priority fixes needed.
+Return JSON with overall score (mean of 6 dimensions), individual dimension scores, rationale per dimension, severity_flags (critical issues), and improvement_suggestions (actionable next steps).
 ```
 
 ---
@@ -207,7 +205,28 @@ Evaluate the following web-based learning content for WCAG 2.1 compliance.
 ## REFERENCE (if available)
 {reference}
 
-Score using the rubric above. Return only the JSON object.
+Score using the rubric above. Return only the JSON object in this format:
+{
+  "scores": {
+    "perceivable": <1-5>,
+    "operable": <1-5>,
+    "understandable": <1-5>,
+    "robust": <1-5>,
+    "udl_integration": <1-5>,
+    "remediation_feasibility": <1-5>,
+    "overall": <mean of all 6>
+  },
+  "rationale": {
+    "perceivable": "<brief explanation>",
+    "operable": "<brief explanation>",
+    "understandable": "<brief explanation>",
+    "robust": "<brief explanation>",
+    "udl_integration": "<brief explanation>",
+    "remediation_feasibility": "<brief explanation>"
+  },
+  "severity_flags": ["<critical issue 1>", "<critical issue 2>"],
+  "improvement_suggestions": ["<suggestion 1>", "<suggestion 2>"]
+}
 ```
 
 ---

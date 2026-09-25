@@ -70,9 +70,7 @@ You will score across 6 dimensions, each on a 1-5 scale:
    - Observation protocols designed to capture usability issues
    Score: 1=No usability methods; 5=Multiple usability techniques well-integrated
 
-Return only a valid JSON object with keys: phase_coverage, evaluator_selection, data_collection_alignment, revision_decision_framework, feasibility_practicality, usability_integration.
-Each key should map to an integer 1-5.
-Include a "summary" key with 1-2 sentences on overall evaluation plan quality and key missing elements.
+Return JSON with overall score (mean of 6 dimensions), individual dimension scores, rationale per dimension, severity_flags (critical issues), and improvement_suggestions (actionable next steps).
 """
 
 JUDGE_HUMAN_PROMPT = """Evaluate the following formative evaluation plan or protocol.
@@ -89,11 +87,34 @@ JUDGE_HUMAN_PROMPT = """Evaluate the following formative evaluation plan or prot
 ## REFERENCE (if available)
 {reference}
 
-Score using the rubric above. Return only the JSON object."""
+Score using the rubric above. Return only the JSON object in this format:
+{{
+  "scores": {{
+    "phase_coverage": <1-5>,
+    "evaluator_selection": <1-5>,
+    "data_collection_alignment": <1-5>,
+    "revision_decision_framework": <1-5>,
+    "feasibility_practicality": <1-5>,
+    "usability_integration": <1-5>,
+    "overall": <mean of all 6>
+  }},
+  "rationale": {{
+    "phase_coverage": "<brief explanation>",
+    "evaluator_selection": "<brief explanation>",
+    "data_collection_alignment": "<brief explanation>",
+    "revision_decision_framework": "<brief explanation>",
+    "feasibility_practicality": "<brief explanation>",
+    "usability_integration": "<brief explanation>"
+  }},
+  "severity_flags": ["<critical issue 1>", "<critical issue 2>"],
+  "improvement_suggestions": ["<suggestion 1>", "<suggestion 2>"]
+}}
+"""
 
 register_archetype(
     name="formative_evaluation_protocol",
     system_prompt=JUDGE_SYSTEM_PROMPT,
     human_prompt=JUDGE_HUMAN_PROMPT,
     description="Evaluates formative evaluation plans, expert review protocols, usability test designs, and pilot studies. Scores: Phase Coverage, Evaluator Selection, Data Collection Alignment, Revision Decision Framework, Feasibility & Practicality, Usability Integration.",
+    version="1.1.0",
 )

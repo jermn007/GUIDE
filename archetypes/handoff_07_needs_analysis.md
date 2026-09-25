@@ -221,7 +221,50 @@ Score: 1=No stakeholder input; 5=Multiple stakeholders engaged with documented a
 HPT Seven Intervention Categories — is the chosen intervention matched to the cause? Training only for learning gaps.
 Score: 1=Wrong intervention for cause; 5=Intervention precisely matched
 
-Return a JSON object with keys for each dimension (1-5 integers) and a summary key.
+Return JSON with overall score (mean of 6 dimensions), individual dimension scores, rationale per dimension, severity_flags (critical issues), and improvement_suggestions (actionable next steps).
+```
+
+---
+
+## Human Prompt Template
+
+```
+Evaluate the following needs assessment, learner analysis, or instructional goals document.
+
+## INPUT / ARTIFACT
+{input}
+
+## CONTEXT (if available)
+{context}
+
+## OUTPUT / RESPONSE TO EVALUATE
+{output}
+
+## REFERENCE (if available)
+{reference}
+
+Score using the rubric above. Return only the JSON object in this format:
+{
+  "scores": {
+    "performance_gap_identification": <1-5>,
+    "cause_analysis": <1-5>,
+    "needs_assessment_completeness": <1-5>,
+    "goal_objective_quality": <1-5>,
+    "stakeholder_alignment": <1-5>,
+    "intervention_appropriateness": <1-5>,
+    "overall": <mean of all 6>
+  },
+  "rationale": {
+    "performance_gap_identification": "<brief explanation>",
+    "cause_analysis": "<brief explanation>",
+    "needs_assessment_completeness": "<brief explanation>",
+    "goal_objective_quality": "<brief explanation>",
+    "stakeholder_alignment": "<brief explanation>",
+    "intervention_appropriateness": "<brief explanation>"
+  },
+  "severity_flags": ["<critical issue 1>", "<critical issue 2>"],
+  "improvement_suggestions": ["<suggestion 1>", "<suggestion 2>"]
+}
 ```
 
 ---

@@ -233,7 +233,8 @@ GUIDE/
 ├── guide_base.py                          # Result types, registry, evaluation runners
 ├── guide_pipeline.py                      # ADDIE multi-archetype orchestrator
 ├── guide_registry.py                      # Public Python API
-└── smoke_test_pipeline.py                 # Mocked end-to-end pipeline test
+├── smoke_test_pipeline.py                 # Mocked end-to-end pipeline test
+└── test_judge_schemas.py                  # Checks every archetype asks for the standard output format
 ```
 
 </details>
@@ -244,7 +245,7 @@ GUIDE/
 - The rubrics live in `archetypes/handoff_*.md`. Edit those, then run `python skill/build_skill.py` to regenerate the skill references and the plugin mirror. Don't edit the mirror by hand.
 - The plugin version in `skill/guide-instructional-design-plugin/.claude-plugin/plugin.json` is the version that marketplace installs see.
 - Update [`CHANGELOG.md`](CHANGELOG.md) and [`STATUS.md`](STATUS.md) in the same commit as the change they describe.
-- Before a pull request, run `python guide_registry.py` and `python smoke_test_pipeline.py`.
+- Before a pull request, run `python guide_registry.py`, `python test_judge_schemas.py`, and `python smoke_test_pipeline.py`.
 
 </details>
 

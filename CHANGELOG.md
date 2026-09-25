@@ -6,7 +6,11 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
+### Fixed
+- Archetypes 05 (Accessibility), 06 (Formative Evaluation), and 07 (Needs Analysis) asked the judge for a flat JSON object instead of the standard `scores` / `rationale` / `severity_flags` / `improvement_suggestions` format, so their results came back empty through the Python API. Their prompts and handoffs now use the standard format (prompt version 1.1.0). The plugin and skill were not affected.
+
 ### Added
+- `test_judge_schemas.py`, which checks that every archetype asks for the standard output format.
 - `CHANGELOG.md` (this file), backfilled from the GitHub release notes.
 - `STATUS.md`: what works, what is open, and what is next, with each item marked verified, tested, or open.
 - `CITATION.cff`, which turns on the **Cite this repository** button on GitHub.

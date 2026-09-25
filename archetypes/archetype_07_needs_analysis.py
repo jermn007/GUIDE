@@ -75,9 +75,7 @@ You will score across 6 dimensions, each on a 1-5 scale:
    Is recommended intervention matched to identified cause? Training appropriate only if learning gap identified.
    Score: 1=Wrong intervention for cause (e.g., training for environmental barrier); 5=Intervention precisely matched to root cause
 
-Return only a valid JSON object with keys: performance_gap_identification, cause_analysis, needs_assessment_completeness, goal_objective_quality, stakeholder_alignment, intervention_appropriateness.
-Each key should map to an integer 1-5.
-Include a "summary" key with 1-2 sentences on overall assessment quality and critical gaps.
+Return JSON with overall score (mean of 6 dimensions), individual dimension scores, rationale per dimension, severity_flags (critical issues), and improvement_suggestions (actionable next steps).
 """
 
 JUDGE_HUMAN_PROMPT = """Evaluate the following needs assessment, learner analysis, or instructional goals document.
@@ -94,11 +92,34 @@ JUDGE_HUMAN_PROMPT = """Evaluate the following needs assessment, learner analysi
 ## REFERENCE (if available)
 {reference}
 
-Score using the rubric above. Return only the JSON object."""
+Score using the rubric above. Return only the JSON object in this format:
+{{
+  "scores": {{
+    "performance_gap_identification": <1-5>,
+    "cause_analysis": <1-5>,
+    "needs_assessment_completeness": <1-5>,
+    "goal_objective_quality": <1-5>,
+    "stakeholder_alignment": <1-5>,
+    "intervention_appropriateness": <1-5>,
+    "overall": <mean of all 6>
+  }},
+  "rationale": {{
+    "performance_gap_identification": "<brief explanation>",
+    "cause_analysis": "<brief explanation>",
+    "needs_assessment_completeness": "<brief explanation>",
+    "goal_objective_quality": "<brief explanation>",
+    "stakeholder_alignment": "<brief explanation>",
+    "intervention_appropriateness": "<brief explanation>"
+  }},
+  "severity_flags": ["<critical issue 1>", "<critical issue 2>"],
+  "improvement_suggestions": ["<suggestion 1>", "<suggestion 2>"]
+}}
+"""
 
 register_archetype(
     name="needs_analysis_front_end",
     system_prompt=JUDGE_SYSTEM_PROMPT,
     human_prompt=JUDGE_HUMAN_PROMPT,
     description="Evaluates needs assessments, learner analyses, goal analyses, and performance gap analyses. Scores: Performance Gap Identification, Cause Analysis, Needs Assessment Completeness, Goal & Objective Quality, Stakeholder Alignment, Intervention Appropriateness.",
+    version="1.1.0",
 )
