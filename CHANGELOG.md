@@ -6,6 +6,9 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
+### Added
+- Zenodo DOI: a DOI badge and citation in the README, and the concept DOI ([10.5281/zenodo.22949871](https://doi.org/10.5281/zenodo.22949871)) in `CITATION.cff`. v3.4.1 is archived as [10.5281/zenodo.22949872](https://doi.org/10.5281/zenodo.22949872).
+
 ### Changed
 - README hero: the title, the three-alignments mark, and the subtitle are about 10% larger.
 

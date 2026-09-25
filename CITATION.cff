@@ -11,6 +11,8 @@ authors:
     given-names: Jeremy
 version: 3.4.1
 date-released: 2026-09-24
+# Zenodo concept DOI: covers every version and resolves to the latest one.
+doi: 10.5281/zenodo.22949871
 license: Apache-2.0
 repository-code: "https://github.com/jermn007/GUIDE"
 url: "https://github.com/jermn007/GUIDE"

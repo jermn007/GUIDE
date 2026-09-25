@@ -15,6 +15,7 @@
 ![60 dimensions](https://img.shields.io/badge/dimensions-60-334155?style=flat-square)
 ![13 agents](https://img.shields.io/badge/ADDIE_pipeline-13_agents-334155?style=flat-square)
 [![Claude Code plugin](https://img.shields.io/badge/Claude_Code-plugin-334155?style=flat-square)](#install)
+[![DOI 10.5281/zenodo.22949871](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22949871-334155?style=flat-square)](https://doi.org/10.5281/zenodo.22949871)
 
 [Install](#install) · [Quick start](#quick-start) · [How it works](#how-it-works) · [Status](STATUS.md) · [Changelog](CHANGELOG.md) · [Cite](#license-and-citation)
 
@@ -255,4 +256,6 @@ GUIDE is licensed under the [Apache License 2.0](LICENSE). Copyright 2026 Jeremy
 
 If you use GUIDE in research, teaching, or training, select **Cite this repository** in the sidebar on GitHub for APA and BibTeX formats (the details come from [`CITATION.cff`](CITATION.cff)). In APA style:
 
-> Terhune, J. (2026). *GUIDE: Grounded Universal Instructional Design Evaluator* (Version 3.4.1) [Computer software]. https://github.com/jermn007/GUIDE
+> Terhune, J. (2026). *GUIDE: Grounded Universal Instructional Design Evaluator* (Version 3.4.1) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22949871
+
+That DOI covers all versions and always points to the latest release. To cite the exact version you used, take its DOI from the [Zenodo record](https://doi.org/10.5281/zenodo.22949871).
