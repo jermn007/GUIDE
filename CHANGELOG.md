@@ -6,6 +6,9 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
+### Changed
+- README hero: the title, the three-alignments mark, and the subtitle are about 10% larger.
+
 ## [3.4.1] - 2026-09-24
 
 ### Fixed
