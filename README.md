@@ -220,6 +220,7 @@ GUIDE/
 │   ├── README.md                          # Skill and plugin install, build, and sync
 │   └── build_skill.py                     # Regenerates skill references and plugin mirror from archetypes/
 ├── CHANGELOG.md                           # Release history
+├── CITATION.cff                           # Citation metadata (Cite this repository)
 ├── GUIDE_Rubric_Document.docx             # Printable rubric (v3.4.0)
 ├── Installing-GUIDE-in-Claude.pdf         # Install guide with screenshots
 ├── LICENSE                                # Apache License 2.0
@@ -248,14 +249,6 @@ GUIDE/
 
 GUIDE is licensed under the [Apache License 2.0](LICENSE). Copyright 2026 Jeremy Terhune. See [`NOTICE`](NOTICE) for attribution.
 
-If you use GUIDE in research or teaching, please cite it:
+If you use GUIDE in research, teaching, or training, select **Cite this repository** in the sidebar on GitHub for APA and BibTeX formats (the details come from [`CITATION.cff`](CITATION.cff)). In APA style:
 
-```bibtex
-@software{terhune_guide_2026,
-  author  = {Terhune, Jeremy},
-  title   = {{GUIDE}: Grounded Universal Instructional Design Evaluator},
-  version = {3.4.0},
-  year    = {2026},
-  url     = {https://github.com/jermn007/GUIDE}
-}
-```
+> Terhune, J. (2026). *GUIDE: Grounded Universal Instructional Design Evaluator* (Version 3.4.0) [Computer software]. https://github.com/jermn007/GUIDE
