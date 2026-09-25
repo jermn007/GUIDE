@@ -8,6 +8,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ### Added
 - `CHANGELOG.md` (this file), backfilled from the GitHub release notes.
+- `STATUS.md`: what works, what is open, and what is next, with each item marked verified, tested, or open.
 
 ### Changed
 - Self-evaluation reports moved into `self-evaluations/`. The v3 comparison report is renamed `GUIDE_Self_Evaluation_v3.0.0.md`.
