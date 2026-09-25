@@ -319,4 +319,4 @@ The judge returns a JSON object matching the schema in the Human Prompt Template
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.4.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 10 of 10 (the synthesis archetype).*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.4.1). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 10 of 10 (the synthesis archetype).*

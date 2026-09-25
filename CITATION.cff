@@ -9,8 +9,8 @@ abstract: >-
 authors:
   - family-names: Terhune
     given-names: Jeremy
-version: 3.4.0
-date-released: 2026-08-11
+version: 3.4.1
+date-released: 2026-09-24
 license: Apache-2.0
 repository-code: "https://github.com/jermn007/GUIDE"
 url: "https://github.com/jermn007/GUIDE"

@@ -6,6 +6,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
+## [3.4.1] - 2026-09-24
+
 ### Fixed
 - Archetypes 05 (Accessibility), 06 (Formative Evaluation), and 07 (Needs Analysis) asked the judge for a flat JSON object instead of the standard `scores` / `rationale` / `severity_flags` / `improvement_suggestions` format, so their results came back empty through the Python API. Their prompts and handoffs now use the standard format (prompt version 1.1.0). The plugin and skill were not affected.
 
@@ -81,7 +83,8 @@ First public release as an installable Claude skill and plugin.
 - The `SKILL.md` description exceeded the 1024-character limit, which stopped the skill from loading.
 - Citations: the three quality outcomes are credited to Merrill (2002), and the alignment mapping to Hirumi, Ratliff and de la Mora (2021) and Hirumi (2025) (v3.1.1).
 
-[Unreleased]: https://github.com/jermn007/GUIDE/compare/v3.4.0...HEAD
+[Unreleased]: https://github.com/jermn007/GUIDE/compare/v3.4.1...HEAD
+[3.4.1]: https://github.com/jermn007/GUIDE/compare/v3.4.0...v3.4.1
 [3.4.0]: https://github.com/jermn007/GUIDE/compare/v3.3.0...v3.4.0
 [3.3.0]: https://github.com/jermn007/GUIDE/compare/v3.2.2...v3.3.0
 [3.2.2]: https://github.com/jermn007/GUIDE/compare/v3.2.1...v3.2.2

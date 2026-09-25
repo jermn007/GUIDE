@@ -20,7 +20,7 @@
 
 </div>
 
-**Latest:** [v3.4.0](https://github.com/jermn007/GUIDE/releases/tag/v3.4.0) (August 11, 2026) adds the three-alignments diagram and brings the printable rubric back in line with the live framework.
+**Latest:** [v3.4.1](https://github.com/jermn007/GUIDE/releases/tag/v3.4.1) (September 24, 2026) fixes the Python output format for three archetypes and adds a changelog, a status page, and citation metadata.
 
 ## What GUIDE is
 
@@ -195,7 +195,7 @@ Highlights:
 - **v3.3.0** added the discipline crosswalk and raised that score from 2 to 4. It stops at 4 because a self-published crosswalk is not accreditation.
 - **v3.4.0** brought the printable rubric back to parity and added the first diagram, which raised Multimedia Principle Compliance from 3 to 4.
 
-v3.2.2 was packaging only, so it was not re-scored.
+v3.2.2 was packaging only, and v3.4.1 fixed only the Python output format for three archetypes, so neither was re-scored.
 
 </details>
 
@@ -255,4 +255,4 @@ GUIDE is licensed under the [Apache License 2.0](LICENSE). Copyright 2026 Jeremy
 
 If you use GUIDE in research, teaching, or training, select **Cite this repository** in the sidebar on GitHub for APA and BibTeX formats (the details come from [`CITATION.cff`](CITATION.cff)). In APA style:
 
-> Terhune, J. (2026). *GUIDE: Grounded Universal Instructional Design Evaluator* (Version 3.4.0) [Computer software]. https://github.com/jermn007/GUIDE
+> Terhune, J. (2026). *GUIDE: Grounded Universal Instructional Design Evaluator* (Version 3.4.1) [Computer software]. https://github.com/jermn007/GUIDE

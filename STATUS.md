@@ -1,6 +1,6 @@
 # Status
 
-What works, what is open, and what is next. Last checked: 2026-09-24, against `main` at v3.4.0 plus unreleased changes.
+What works, what is open, and what is next. Last checked: 2026-09-24, against `main` at v3.4.1.
 
 Each item is marked by its evidence:
 
