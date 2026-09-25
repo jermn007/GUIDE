@@ -13,6 +13,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 ### Changed
 - Self-evaluation reports moved into `self-evaluations/`. The v3 comparison report is renamed `GUIDE_Self_Evaluation_v3.0.0.md`.
 - Every Python file now carries the Apache-2.0 header. Seven modules still had a stale "Proprietary" header from v2.1.0.
+- README rewritten for first-time users: badges, numbered install steps, a quick start, and developer material in collapsible sections.
 
 ## [3.4.0] - 2026-08-11
 
