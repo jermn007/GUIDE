@@ -11,6 +11,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ### Changed
 - README hero: the title, the three-alignments mark, and the subtitle are about 10% larger.
+- README fact badges now open matching content: archetypes goes to the archetype table, dimensions to the list of all 60 dimensions, and the ADDIE pipeline badge to `PIPELINE.md`. Before, they opened the badge image.
 
 ## [3.4.1] - 2026-09-24
 

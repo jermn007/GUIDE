@@ -11,9 +11,9 @@
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache_2.0-059669?style=for-the-badge&labelColor=0f172a)](LICENSE)
 [![Instructional design: LLM-as-judge](https://img.shields.io/badge/instructional_design-LLM--as--judge-d97706?style=for-the-badge&labelColor=0f172a)](#how-it-works)
 
-![10 archetypes](https://img.shields.io/badge/archetypes-10-334155?style=flat-square)
-![60 dimensions](https://img.shields.io/badge/dimensions-60-334155?style=flat-square)
-![13 agents](https://img.shields.io/badge/ADDIE_pipeline-13_agents-334155?style=flat-square)
+[![10 archetypes](https://img.shields.io/badge/archetypes-10-334155?style=flat-square)](#ten-archetypes-across-addie)
+[![60 dimensions](https://img.shields.io/badge/dimensions-60-334155?style=flat-square)](skill/guide-instructional-design/references/00_archetype_index.md#the-60-dimensions-at-a-glance)
+[![13 agents](https://img.shields.io/badge/ADDIE_pipeline-13_agents-334155?style=flat-square)](skill/guide-instructional-design-plugin/PIPELINE.md)
 [![Claude Code plugin](https://img.shields.io/badge/Claude_Code-plugin-334155?style=flat-square)](#install)
 [![DOI 10.5281/zenodo.22949871](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22949871-334155?style=flat-square)](https://doi.org/10.5281/zenodo.22949871)
 
