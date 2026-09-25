@@ -1,10 +1,11 @@
 <div align="center">
 
-# GUIDE
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/art/hero-dark.png">
+  <img src="docs/art/hero-light.png" alt="GUIDE: Grounded Universal Instructional Design Evaluator" width="100%">
+</picture>
 
-**Grounded Universal Instructional Design Evaluator**
-
-Design and grade instruction against learning science.
+**Design and grade instruction against learning science.**
 
 [![Latest release](https://img.shields.io/github/v/release/jermn007/GUIDE?style=for-the-badge&label=release&color=2563eb&labelColor=0f172a)](https://github.com/jermn007/GUIDE/releases/latest)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache_2.0-059669?style=for-the-badge&labelColor=0f172a)](LICENSE)
@@ -23,7 +24,7 @@ Design and grade instruction against learning science.
 
 ## What GUIDE is
 
-GUIDE is a set of rubrics that score instructional content (a lesson plan, a quiz, an e-learning module, a needs analysis) against published learning-science research. You can use it to **evaluate** something that already exists, or to **design** something new that meets the same criteria from the start. It runs inside Claude, so you ask for a review in plain language and get back a scorecard with reasons and next steps.
+GUIDE (Grounded Universal Instructional Design Evaluator) is a set of rubrics that score instructional content (a lesson plan, a quiz, an e-learning module, a needs analysis) against published learning-science research. You can use it to **evaluate** something that already exists, or to **design** something new that meets the same criteria from the start. It runs inside Claude, so you ask for a review in plain language and get back a scorecard with reasons and next steps.
 
 GUIDE started as the capstone synthesis for the University of Central Florida Master of Arts in Instructional Systems program.
 
@@ -213,6 +214,8 @@ GUIDE/
 ├── assets/
 │   ├── three-alignments.png               # Diagram, rasterized for the docx
 │   └── three-alignments.svg               # Diagram used in this README
+├── docs/
+│   └── art/                               # README hero: hero.html source and rendered PNGs
 ├── self-evaluations/                      # One self-evaluation per scored release
 ├── skill/
 │   ├── guide-instructional-design/        # Canonical skill source
