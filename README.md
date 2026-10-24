@@ -229,6 +229,7 @@ GUIDE/
 ├── Installing-GUIDE-in-Claude.pdf         # Install guide with screenshots
 ├── LICENSE                                # Apache License 2.0
 ├── NOTICE                                 # Copyright and attribution
+├── PRIVACY.md                             # Privacy policy (the plugin collects and sends nothing)
 ├── README.md                              # This file
 ├── STATUS.md                              # What works, what is open, what is next
 ├── guide_base.py                          # Result types, registry, evaluation runners

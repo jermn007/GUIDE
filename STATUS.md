@@ -18,7 +18,7 @@ Each item is marked by its evidence:
 | All 10 archetypes ask for the standard output format | tested | `python test_judge_schemas.py` parses each archetype's JSON template with `GUIDEResult.from_json`. Fixed for 05, 06, and 07 in v3.4.1. It checks the format, not live judge output. |
 | Plugin bundles 1 skill and 13 agents | tested | 13 files in `skill/guide-instructional-design-plugin/agents/`. |
 | Releases are archived on Zenodo with a DOI | verified | Starting with v3.4.1 ([record 22949872](https://zenodo.org/records/22949872)). The concept DOI [10.5281/zenodo.22949871](https://doi.org/10.5281/zenodo.22949871) resolves to the latest version. |
-| Plugin and marketplace manifests are well-formed | tested | `claude plugin validate --strict` passes on the plugin folder and the repository root (Claude Code 2.1.226). |
+| Plugin and marketplace manifests are well-formed | tested | `claude plugin validate` passes on the plugin folder and the repository root (Claude Code 2.1.226). With `--strict`, 2.1.226 fails on the four directory listing URL fields, which it does not know yet. The manifest docs say v2.1.281 and later accept them. |
 | Plugin installs from the marketplace | verified | Confirmed by hand at v3.2.2 (see the release notes). Not re-checked for v3.4.0. |
 | Printable rubric matches the live framework | verified | Brought to parity and re-scored in the [v3.4.0 self-evaluation](self-evaluations/GUIDE_Self_Evaluation_v3.4.0.md). |
 
@@ -29,7 +29,7 @@ Each item is marked by its evidence:
 | Edge-case regression runs | open | `archetypes/edge_cases_XX.json` exist for all 10 archetypes, but no script runs them. |
 | Continuous integration | open | No CI workflow. Checks are run by hand. |
 | Default judge model | open | The Python runners default to `claude-sonnet-4-20250514`, an older model. Override with `model_name`. |
-| Claude directory listing | open | The developer portal's **Validate** step passed at `881ffc6` with three warnings: no icon, and a download-and-execute pattern in `guide-router.md` and `PIPELINE.md`. The next commit adds an icon and changes the text the validator most likely flagged. Not yet re-validated or submitted. |
+| Claude directory listing | open | The developer portal's **Validate** step passed with no warnings at `3f748fd`. Listing links (documentation, support, privacy policy, terms) were added after that and are not yet re-validated. Not yet submitted. |
 | Discipline Alignment at 5 | open | Stays at 4 until the standards owners validate the crosswalk. See the [v3.3.0 self-evaluation](self-evaluations/GUIDE_Self_Evaluation_v3.3.0.md). |
 
 ## Next

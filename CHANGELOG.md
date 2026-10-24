@@ -11,6 +11,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - Plugin `README.md`, in preparation for listing GUIDE in Anthropic's Claude directory. The directory requires a README of at least 40 words in the plugin folder and shows it as the listing's description. It says what each archetype is for, which parts load in Claude chat versus Cowork and Claude Code, and that the plugin runs and sends nothing.
 - Plugin `displayName` ("GUIDE Instructional Design") in `plugin.json`.
 - Plugin icon at `.claude-plugin/icon.png`: the three-alignments mark from the README hero, 1024 by 1024 px. `docs/art/icon.py` draws it in code, so it carries the same Apache-2.0 license as the rest of the repo.
+- `PRIVACY.md`: the plugin and skill collect, store, and send nothing, and the Python judges send your content only to the services you choose, with your own key.
+- Directory listing links in `plugin.json`: `documentationUrl` (the README), `supportUrl` (GitHub issues), `privacyPolicyUrl` (`PRIVACY.md`), and `termsOfServiceUrl` (the Apache License 2.0).
 
 ### Changed
 - Plugin `description` in `plugin.json` uses a colon instead of an em dash.

@@ -8,6 +8,10 @@
   },
   "homepage": "https://github.com/jermn007/GUIDE",
   "repository": "https://github.com/jermn007/GUIDE",
+  "documentationUrl": "https://github.com/jermn007/GUIDE#readme",
+  "supportUrl": "https://github.com/jermn007/GUIDE/issues",
+  "privacyPolicyUrl": "https://github.com/jermn007/GUIDE/blob/main/PRIVACY.md",
+  "termsOfServiceUrl": "https://github.com/jermn007/GUIDE/blob/main/LICENSE",
   "license": "Apache-2.0",
   "keywords": [
     "instructional-design",
