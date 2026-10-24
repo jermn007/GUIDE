@@ -220,7 +220,7 @@ GUIDE/
 ├── self-evaluations/                      # One self-evaluation per scored release
 ├── skill/
 │   ├── guide-instructional-design/        # Canonical skill source
-│   ├── guide-instructional-design-plugin/ # Installable plugin (skill mirror, 13 agents, PIPELINE.md)
+│   ├── guide-instructional-design-plugin/ # Installable plugin (skill mirror, 13 agents, PIPELINE.md, README.md)
 │   ├── README.md                          # Skill and plugin install, build, and sync
 │   └── build_skill.py                     # Regenerates skill references and plugin mirror from archetypes/
 ├── CHANGELOG.md                           # Release history

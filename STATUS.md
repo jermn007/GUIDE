@@ -18,6 +18,7 @@ Each item is marked by its evidence:
 | All 10 archetypes ask for the standard output format | tested | `python test_judge_schemas.py` parses each archetype's JSON template with `GUIDEResult.from_json`. Fixed for 05, 06, and 07 in v3.4.1. It checks the format, not live judge output. |
 | Plugin bundles 1 skill and 13 agents | tested | 13 files in `skill/guide-instructional-design-plugin/agents/`. |
 | Releases are archived on Zenodo with a DOI | verified | Starting with v3.4.1 ([record 22949872](https://zenodo.org/records/22949872)). The concept DOI [10.5281/zenodo.22949871](https://doi.org/10.5281/zenodo.22949871) resolves to the latest version. |
+| Plugin and marketplace manifests are well-formed | tested | `claude plugin validate --strict` passes on the plugin folder and the repository root (Claude Code 2.1.226). |
 | Plugin installs from the marketplace | verified | Confirmed by hand at v3.2.2 (see the release notes). Not re-checked for v3.4.0. |
 | Printable rubric matches the live framework | verified | Brought to parity and re-scored in the [v3.4.0 self-evaluation](self-evaluations/GUIDE_Self_Evaluation_v3.4.0.md). |
 
@@ -28,6 +29,7 @@ Each item is marked by its evidence:
 | Edge-case regression runs | open | `archetypes/edge_cases_XX.json` exist for all 10 archetypes, but no script runs them. |
 | Continuous integration | open | No CI workflow. Checks are run by hand. |
 | Default judge model | open | The Python runners default to `claude-sonnet-4-20250514`, an older model. Override with `model_name`. |
+| Claude directory listing | open | The plugin folder now has the README and license the directory requires. Not yet submitted or run through the developer portal's **Validate** step, which checks more than `claude plugin validate`. |
 | Discipline Alignment at 5 | open | Stays at 4 until the standards owners validate the crosswalk. See the [v3.3.0 self-evaluation](self-evaluations/GUIDE_Self_Evaluation_v3.3.0.md). |
 
 ## Next
