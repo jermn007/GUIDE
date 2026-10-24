@@ -216,7 +216,7 @@ GUIDE/
 │   ├── three-alignments.png               # Diagram, rasterized for the docx
 │   └── three-alignments.svg               # Diagram used in this README
 ├── docs/
-│   └── art/                               # README hero: hero.html source and rendered PNGs
+│   └── art/                               # README hero (hero.html) and plugin icon (icon.py) sources, rendered PNGs
 ├── self-evaluations/                      # One self-evaluation per scored release
 ├── skill/
 │   ├── guide-instructional-design/        # Canonical skill source

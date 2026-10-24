@@ -10,9 +10,11 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - Zenodo DOI: a DOI badge and citation in the README, and the concept DOI ([10.5281/zenodo.22949871](https://doi.org/10.5281/zenodo.22949871)) in `CITATION.cff`. v3.4.1 is archived as [10.5281/zenodo.22949872](https://doi.org/10.5281/zenodo.22949872).
 - Plugin `README.md`, in preparation for listing GUIDE in Anthropic's Claude directory. The directory requires a README of at least 40 words in the plugin folder and shows it as the listing's description. It says what each archetype is for, which parts load in Claude chat versus Cowork and Claude Code, and that the plugin runs and sends nothing.
 - Plugin `displayName` ("GUIDE Instructional Design") in `plugin.json`.
+- Plugin icon at `.claude-plugin/icon.png`: the three-alignments mark from the README hero, 1024 by 1024 px. `docs/art/icon.py` draws it in code, so it carries the same Apache-2.0 license as the rest of the repo.
 
 ### Changed
 - Plugin `description` in `plugin.json` uses a colon instead of an em dash.
+- `guide-router.md` and `PIPELINE.md` no longer put the agent name guide-formative-eval in inline code, and the pipeline diagram's code block is marked as `text`. The directory's validator read the inline name as a shell `eval` command and warned of a download-and-execute risk. The plugin runs no commands.
 - README hero: the title, the three-alignments mark, and the subtitle are about 10% larger.
 - README hero: the mark's dots now match the three-alignments diagram (effective in blue at the top, efficient in green at bottom left, engaging in amber at bottom right). Green and amber were swapped.
 - README fact badges now open matching content: archetypes goes to the archetype table, dimensions to the list of all 60 dimensions, and the ADDIE pipeline badge to `PIPELINE.md`. Before, they opened the badge image.

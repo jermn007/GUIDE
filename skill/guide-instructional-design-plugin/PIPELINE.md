@@ -13,7 +13,7 @@ Tracks GUIDE **v3.4.1** (10 archetypes, 60 dimensions). Adopts Hirumi's Three Al
 
 ## Architecture at a glance
 
-```
+```text
                        ┌──────────────────────┐
                        │   guide-router       │  (Phase 0: classify + dispatch)
                        └─────────┬────────────┘
@@ -117,7 +117,7 @@ Parallel. Each returns the developed artifact (storyboards, scripts, slides, mod
 ## Phase E — Evaluate (Archetypes 02, 06)
 
 - `guide-assessment` (02) — generates assessment items (quizzes, rubrics, blueprints) at the Bloom level each objective requires.
-- `guide-formative-eval` (06) — drafts the evaluation plan (Bordonaro phases, evaluator selection, instruments, revision decision framework, usability methods).
+- guide-formative-eval (06) — drafts the evaluation plan (Bordonaro phases, evaluator selection, instruments, revision decision framework, usability methods).
 
 Parallel.
 

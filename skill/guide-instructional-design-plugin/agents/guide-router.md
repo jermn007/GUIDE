@@ -77,7 +77,7 @@ Return exactly this JSON shape:
 ## Edge cases to handle
 
 - **No artifact, no clear training request** ("how should we improve learning?"): respond with `mode_detected: "build"` but flag in `rationale` that the request is too underspecified and recommend the orchestrator surface a clarifying question before dispatching.
-- **Artifact is an evaluation plan, not instructional content**: route to `guide-formative-eval` (06) directly; skip the build pipeline.
+- **Artifact is an evaluation plan, not instructional content**: route to guide-formative-eval (06) directly; skip the build pipeline.
 - **Artifact is a chatbot transcript or help response**: route to `guide-adult-learning` (01) in evaluate mode; skip A/D/D.
 - **Mixed bundle** (e.g., course outline + sample assessment): use `partial`; include both Phase D specialists and Phase E specialists in the plan.
 
