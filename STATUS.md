@@ -29,7 +29,7 @@ Each item is marked by its evidence:
 | Edge-case regression runs | open | `archetypes/edge_cases_XX.json` exist for all 10 archetypes, but no script runs them. |
 | Continuous integration | open | No CI workflow. Checks are run by hand. |
 | Default judge model | open | The Python runners default to `claude-sonnet-4-20250514`, an older model. Override with `model_name`. |
-| Claude directory listing | open | The developer portal's **Validate** step passed with no warnings at `3f748fd`. Listing links (documentation, support, privacy policy, terms) were added after that and are not yet re-validated. Not yet submitted. |
+| Claude directory listing | open | Submitted for review on 2026-10-24 from `1d7e53a`, tracking `main`. The portal's **Validate** step passed; its only warnings are the four listing link fields, which the portal says need no action. Not yet approved or published. |
 | Discipline Alignment at 5 | open | Stays at 4 until the standards owners validate the crosswalk. See the [v3.3.0 self-evaluation](self-evaluations/GUIDE_Self_Evaluation_v3.3.0.md). |
 
 ## Next
