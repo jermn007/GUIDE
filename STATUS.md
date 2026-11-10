@@ -20,6 +20,7 @@ Each item is marked by its evidence:
 | Releases are archived on Zenodo with a DOI | verified | Starting with v3.4.1 ([record 22949872](https://zenodo.org/records/22949872)). The concept DOI [10.5281/zenodo.22949871](https://doi.org/10.5281/zenodo.22949871) resolves to the latest version. |
 | Plugin and marketplace manifests are well-formed | tested | `claude plugin validate` passes on the plugin folder and the repository root (Claude Code 2.1.226). With `--strict`, 2.1.226 fails on the four directory listing URL fields, which it does not know yet. The manifest docs say v2.1.281 and later accept them. |
 | Plugin installs from the marketplace | verified | Confirmed by hand at v3.2.2 (see the release notes). Not re-checked for v3.4.0. |
+| Listed in Anthropic's Claude directory | verified | Approved and live since 2026-11-09 (v3.4.1 at `1f4c436`), in Claude Code, Cowork, and the Claude apps. The listing tracks `main`. The plugin icon is still waiting for its own review. |
 | Printable rubric matches the live framework | verified | Brought to parity and re-scored in the [v3.4.0 self-evaluation](self-evaluations/GUIDE_Self_Evaluation_v3.4.0.md). |
 
 ## Open
@@ -29,7 +30,6 @@ Each item is marked by its evidence:
 | Edge-case regression runs | open | `archetypes/edge_cases_XX.json` exist for all 10 archetypes, but no script runs them. |
 | Continuous integration | open | No CI workflow. Checks are run by hand. |
 | Default judge model | open | The Python runners default to `claude-sonnet-4-20250514`, an older model. Override with `model_name`. |
-| Claude directory listing | open | Submitted for review on 2026-10-24 from `1d7e53a`, tracking `main`. The portal's **Validate** step passed; its only warnings are the four listing link fields, which the portal says need no action. Not yet approved or published. |
 | Discipline Alignment at 5 | open | Stays at 4 until the standards owners validate the crosswalk. See the [v3.3.0 self-evaluation](self-evaluations/GUIDE_Self_Evaluation_v3.3.0.md). |
 
 ## Next
