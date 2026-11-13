@@ -31,16 +31,30 @@ GUIDE started as the capstone synthesis for the University of Central Florida Ma
 
 ## Install
 
-The easiest way to use GUIDE is as a Claude Code plugin from this repository's marketplace. Marketplace installs receive new versions.
+GUIDE is listed in Anthropic's [Claude directory](https://claude.ai/directory), and that is the easiest way to install it. It works in the Claude apps, Cowork, and Claude Code, and directory installs receive new versions.
 
-**In the Claude desktop app**
+**From the Claude directory (recommended)**
+
+1. In Claude, open **Settings**, then **Customize**. In the desktop app, choose **Plugins** under *Customize*.
+2. Search for **GUIDE Instructional Design**.
+3. Open it (it is marked "from Anthropic Directory") and select **Add**.
+
+To get a newer version later, open the same page and select **Update**.
+
+A new release reaches the directory after Anthropic reviews it, so the directory can be a version behind this repository for a few days.
+
+**From this repository's marketplace**
+
+Use this if you want each release the day it is published, or if the directory is not available to you.
+
+In the Claude desktop app:
 
 1. Open **Settings**, then **Plugins** (under *Customize* in the sidebar).
 2. Select **Add**, then **Add marketplace**, then **Add from a repository**.
 3. Enter `jermn007/GUIDE`.
 4. When **Guide instructional design** appears in the list, select **Install**.
 
-**With slash commands**
+With slash commands:
 
 1. Add the marketplace:
 
