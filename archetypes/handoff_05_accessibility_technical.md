@@ -2,6 +2,8 @@
 
 **Purpose**: Design and evaluate web-based learning content, LMS pages, and e-learning modules for compliance with WCAG 2.1 standards and Universal Design for Learning (UDL) principles. The dimensions below work in both directions: build accessibility in against them, or audit existing content.
 
+**When this is skipped**: A new hire who uses a screen reader opens the mandatory onboarding course on day one. The drag-and-drop activity cannot be reached by keyboard and the videos have no captions, so the first thing the company teaches him is that the course was not built for him. If your learners include anyone you have not met, this archetype is how you avoid finding that out from them.
+
 **Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
 - Provide text alternatives, captions, transcripts, and audio description (Perceivable).
 - Ensure full keyboard operability with a logical focus order (Operable); use plain language and consistent navigation (Understandable).

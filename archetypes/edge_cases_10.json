@@ -28,15 +28,15 @@
         "objective_strategy_coherence": 2,
         "strategy_assessment_coherence": 4,
         "objective_assessment_coherence": 1,
-        "coverage_completeness": 3,
-        "vertical_alignment": 3,
+        "coverage_completeness": 2,
+        "vertical_alignment": 2,
         "discipline_alignment": 2,
-        "overall": 2.5,
+        "overall": 2.2,
         "severity_flags": [
           "Bloom-level mismatch: objective at Analyze (level 4); assessment at Remember/Understand (levels 1-2) — 2-3 levels apart",
           "Objective-Assessment Coherence at 1 caps overall at 3.0 per archetype 10 weighting rule"
         ],
-        "rationale": "Classic Bloom drift. The objective promises Analyze-level work (apply three frameworks to a decision and recommend an action). Instruction stops at definitions and labels (Remember). Assessment tests labels (Remember) and recognition (Understand). Instruction and assessment internally cohere with each other (both at low Bloom) — so dimension 2 is reasonable — but neither matches the objective. Learners who pass this assessment have not demonstrated the analysis the objective claimed."
+        "rationale": "Classic Bloom drift. The objective promises Analyze-level work (apply three frameworks to a decision and recommend an action). Instruction stops at definitions and labels (Remember). Assessment tests labels (Remember) and recognition (Understand). Instruction and assessment agree with each other, so Strategy-Assessment Coherence is scored on its own and stays at 4; the miss is carried by the other two pairs. The single objective is neither taught nor tested at its level, and week 2 repeats week 1 (Coverage 2). The three weeks restate the same definitions and do not build toward analysis (Vertical 2). Learners who pass have not shown the analysis the objective claims."
       }
     },
     {

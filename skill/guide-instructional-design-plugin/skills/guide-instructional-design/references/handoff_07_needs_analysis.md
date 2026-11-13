@@ -2,6 +2,8 @@
 
 **Purpose**: Design and evaluate needs assessments, learner analyses, goal analyses, performance gap analyses, and instructional goals for completeness, rigor, and evidence-based decision-making. The dimensions below work in both directions: conduct the analysis against them, or score an existing one.
 
+**When this is skipped**: A sales team's close rate drops and leadership orders two days of negotiation training for forty people. The real cause was a new commission plan and a slower CRM. The training runs, the rate does not move, and the training team takes the blame. If someone has already told you the answer is a course, this archetype is the question you ask before you agree.
+
 **Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
 - Establish a data-based performance gap (actual vs. desired) before proposing training.
 - Run HPT cause analysis: confirm the cause is a skill/knowledge gap, not environment or incentives - training won't fix the latter.

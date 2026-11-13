@@ -31,8 +31,9 @@ A course can score 5/5 on archetypes 02, 03, and 07 individually and still fail 
 the failure mode 10 is designed to catch.
 
 **Professional standards.** For how each archetype maps to IBSTPI, ATD, and ISPI/HPT competency
-standards - the reference model behind archetype 10's *Discipline Alignment* dimension - see
-`discipline_alignment_crosswalk.md` in this directory.
+standards, see `discipline_alignment_crosswalk.md` in this directory. It is GUIDE's own
+discipline-level mapping; when archetype 10 scores another course, *Discipline Alignment* looks for
+that course's own competency framework.
 
 ---
 

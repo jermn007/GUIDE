@@ -464,7 +464,27 @@ FRONT_MATTER_SWAPS = {
         "wide rollout; below 2.5 calls for redesign.",
     "'Generally well-organized with good signaling. Minor lapses in definition or grouping.'":
         "'Well-organized; one term used before defined or one minor structural slip.'",
+    "Functional and friendly response that answers the question. Key weakness":
+        "Archetype 01's overall is not a plain mean (that would be 3.67): Accuracy & Grounding and Adult Learning "
+        "Alignment weigh most, and Accuracy at 3 pulls it down. A functional, friendly response that answers the "
+        "question. Key weakness",
+    "Dolcos, F., LaBar, K.S., & Cabeza, R. (2005).": "Dolcos, F., LaBar, K.S., & Cabeza, R. (2004).",
 }
+
+# The worked calibration example scores archetype 01, whose overall is weighted.
+CALIBRATION_OVERALL = ("3.7", "3.6")
+
+# Works the archetype sections cite that the hand-written back-matter list lacked.
+EXTRA_REFERENCES = [
+    "Bjork, R.A. (1994). Memory and metamemory considerations in the training of human beings. In J. Metcalfe & "
+    "A.P. Shimamura (Eds.), Metacognition: Knowing about Knowing (pp. 185-205). MIT Press.",
+    "Craik, F.I.M., & Lockhart, R.S. (1972). Levels of processing: A framework for memory research. Journal of "
+    "Verbal Learning and Verbal Behavior, 11(6), 671-684.",
+    "Kosslyn, S.M., Thompson, W.L., & Ganis, G. (2006). The Case for Mental Imagery. Oxford University Press.",
+    "Shepard, R.N., & Metzler, J. (1971). Mental rotation of three-dimensional objects. Science, 171(3972), 701-703.",
+    "Yerkes, R.M., & Dodson, J.D. (1908). The relation of strength of stimulus to rapidity of habit-formation. "
+    "Journal of Comparative Neurology and Psychology, 18(5), 459-482.",
+]
 
 
 def replace_in_paragraph(para: Paragraph, old: str, new: str) -> bool:
@@ -497,6 +517,50 @@ def fix_front_matter(doc) -> None:
         para = Paragraph(p, doc)
         for old, new in FRONT_MATTER_SWAPS.items():
             replace_in_paragraph(para, old, new)
+    fix_calibration_overall(doc)
+    add_missing_references(doc)
+
+
+def fix_calibration_overall(doc) -> None:
+    """Show archetype 01's weighted overall in the worked example, not the plain mean."""
+    old, new = CALIBRATION_OVERALL
+    for table in doc.tables:
+        for row in table.rows:
+            cells = row.cells
+            if len(cells) >= 2 and cells[0].text.strip() == "OVERALL" and cells[1].text.strip() == old:
+                for para in cells[1].paragraphs:
+                    replace_in_paragraph(para, old, new)
+
+
+def add_missing_references(doc) -> None:
+    """Insert EXTRA_REFERENCES into the back-matter list, in alphabetical order, once."""
+    start = heading_element(doc, "References")
+    entries = []
+    el = start.getnext()
+    while el is not None:
+        if el.tag == qn("w:p"):
+            para = Paragraph(el, doc)
+            if para.text.strip():
+                entries.append(para)
+        el = el.getnext()
+    if not entries:
+        raise SystemExit("The References section has no entries")
+    for ref in EXTRA_REFERENCES:
+        key = ref.split("(")[0].strip().lower()
+        if any(e.text.strip().lower().startswith(key) for e in entries):
+            continue
+        after = [e for e in entries if e.text.strip().lower() > ref.lower()]
+        new_p = copy.deepcopy(entries[0]._p)
+        para = Paragraph(new_p, doc)
+        for run in para.runs[1:]:
+            run._r.getparent().remove(run._r)
+        para.runs[0].text = ref
+        if after:
+            after[0]._p.addprevious(new_p)
+            entries.insert(entries.index(after[0]), para)
+        else:
+            entries[-1]._p.addnext(new_p)
+            entries.append(para)
 
 
 def update_matrix(doc, handoff_text: dict[int, str]) -> None:

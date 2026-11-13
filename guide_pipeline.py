@@ -18,7 +18,7 @@ Usage:
 
     from guide_pipeline import ADDIEPipeline
 
-    pipeline = ADDIEPipeline(model_name="claude-sonnet-4-20250514")
+    pipeline = ADDIEPipeline(model_name="claude-sonnet-5-5")
 
     # Full evaluation of a course artifact set
     verdict = pipeline.run_evaluation(
@@ -206,7 +206,7 @@ class ADDIEPipeline:
 
     def __init__(
         self,
-        model_name: str = "claude-sonnet-4-20250514",
+        model_name: str = "claude-sonnet-5-5",
         api_key: Optional[str] = None,
         max_iterations: int = 3,
     ):
@@ -578,7 +578,7 @@ def _cli() -> None:
     )
     parser.add_argument("--context", default="N/A", help="Optional retrieval context or source material.")
     parser.add_argument("--reference", default="N/A", help="Optional gold-standard artifact for comparison.")
-    parser.add_argument("--model", default="claude-sonnet-4-20250514", help="Anthropic model name.")
+    parser.add_argument("--model", default="claude-sonnet-5-5", help="Anthropic model name.")
     parser.add_argument("--output", default="-", help="Output path for verdict JSON (- for stdout).")
     args = parser.parse_args()
 

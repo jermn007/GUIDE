@@ -3,6 +3,8 @@
 
 **Purpose**: Design and evaluate an AI assistant's conversational responses to learning professionals — tone, clarity, accuracy, accessibility, and respect for adult learners. The dimensions below work in both directions: hold them in mind while authoring a response, or score an existing one against them.
 
+**When this is skipped**: A new instructional designer asks a help assistant how to set up completion tracking the night before a launch. The reply opens with three paragraphs of theory, uses two terms it never defines, and states a menu path the product does not have. She follows it, the tracking fails, and she stops trusting the assistant. If your reader is a busy adult with a real problem, this is the archetype that decides whether your answer helps them or costs them an evening.
+
 **Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
 - Treat the reader as a self-directing professional: build on their stated problem, offer options, invite reflection - don't lecture (Knowles, Mezirow).
 - Lead with the answer, define terms before use, and cut tangents to keep load down (Sweller; Mayer signaling/coherence).

@@ -1,6 +1,6 @@
 # Status
 
-What works, what is open, and what is next. Last checked: 2026-11-12, at v3.5.0.
+What works, what is open, and what is next. Last checked: 2026-11-13, at v3.5.0.
 
 Each item is marked by its evidence:
 
@@ -25,20 +25,22 @@ Each item is marked by its evidence:
 | Plugin commands run in Claude Code | verified | Run live on 2026-11-12 from a local build (Claude Code 2.1.226). `/guide-review` scored a single quiz item with the sample rule. `/guide-design` opened with the cause question instead of a course. `/guide-pipeline` reviewed a micro-lesson: router, five specialists in one batch, the alignment gate, and the synthesizer all returned valid JSON and read their rubrics from the path the command gave them. |
 | Pipeline gates and revision loop run live | verified | Run on 2026-11-12. Needs-analysis stop: a course request whose cause was a tool change halted before Design. Fail-fast gate: a lecture proposed for a hands-on objective was blocked at `objective_strategy_coherence` 1, the sequencing agent redesigned it, and the re-check passed. Revision loop: the synthesizer returned `revise` at a capped 3.0, the reviser routed work to the assessment and sequencing agents, and the second round scored 4.89 with the cap released. All 11 agent calls returned valid JSON. |
 | Printable rubric works with a screen reader | verified | The author read `GUIDE_Rubric_Document.docx` with NVDA on 2026-11-12 and found no problems. No second screen reader has been tried. The figures carry alt text and every table marks its header row. |
-| Edge cases scored by a live judge | tested | Run on 2026-11-12 with `python run_edge_cases.py --live --backend cli --model sonnet`: 62 of 68 cases within 0.7 of the expected overall, mean absolute drift 0.43, no errors. The judge scores about 0.3 lower than the expected scores on average and never ranks a bad case above a good one. Results are in [`self-evaluations/edge_case_run_v3.5.0.json`](self-evaluations/edge_case_run_v3.5.0.json). Each case was scored once, by one model. |
+| Edge cases scored by a live judge, on two models | tested | `python run_edge_cases.py --live --backend cli`, each case scored once per model. Sonnet: 66 of 68 within 0.7 of the expected overall, mean absolute drift 0.36 (archetypes 02, 08, 09 and 10 re-scored on 2026-11-13 after the corrections below; the rest from 2026-11-12). Opus, all 68 on 2026-11-13: 62 of 68, mean absolute drift 0.39. The two models' overalls differ by 0.20 on average, and no case drifts on both. Both score about 0.25 below the expected scores on average. Results: [`edge_case_run_v3.5.0.json`](self-evaluations/edge_case_run_v3.5.0.json) and [`edge_case_run_v3.5.0_opus.json`](self-evaluations/edge_case_run_v3.5.0_opus.json). |
+| Six drifting edge cases settled | tested | The six cases that drifted in the first run were each decided: two artifacts in `edge_cases_02` were rewritten to earn their "good" label, four expected-score sets were corrected against the anchors, and the anchors for 08 Decision Points and 10 Strategy-Assessment Coherence were sharpened. All six are within tolerance on both models. |
+| One full build in a single headless run | verified | Run on 2026-11-13 with `--model sonnet`: a barista micro-lesson built end to end in 20 minutes and 18 agent calls. Route, needs analysis (training confirmed), the Design pair, the fail-fast gate (proceed at 5), the Develop pair in design mode, the Evaluate pair, the acceptance gate, the synthesizer (`light_revision`, 4.16), the reviser, one revision round, and a second gate and synthesizer (`light_revision`, 4.39). Every call returned valid JSON, every agent read its rubric, and the synthesizer's verdict stayed within its four values. The router planned no conversational layer or scenario, so the adult-learning and story agents did not run in design mode. |
+| Continuous integration | tested | `.github/workflows/checks.yml` runs the offline checks on pull requests and pushes to `main`. It makes no model calls. |
 | Listed in Anthropic's Claude directory | verified | Approved and live since 2026-11-09 (v3.4.1 at `1f4c436`), in Claude Code, Cowork, and the Claude apps. The listing tracks `main`. The plugin icon is still waiting for its own review. |
 
 ## Open
 
 | Item | Evidence | Notes |
 |---|---|---|
-| Continuous integration | open | No CI workflow. Checks are run by hand. |
-| One full build in a single headless run | open | An end-to-end build (all phases, every agent) did not finish inside a 55-minute headless run, so the gates and the loop were verified in shorter targeted runs. The Develop and Implement agents have run live only in review mode. How Claude chat treats typed-only skills is not documented. |
-| Six edge cases drift from their expected scores | open | `edge_cases_02` good_01 and good_02, `edge_cases_08` good_02 and bad_02, `edge_cases_09` borderline_01, and `edge_cases_10` bad_01 scored 0.8 to 1.8 lower than expected. In at least one (02 good_01) the judge found real flaws the expected scores overlook. Each needs a decision: correct the expected scores or sharpen the anchor. |
-| Default judge model | open | The Python runners default to `claude-sonnet-4-20250514`, an older model. Override with `model_name`. |
+| Revision prompts carry the agent's earlier output | open | In the full build, a revised agent was sent only the fix and invented part of its earlier output. `/guide-pipeline` now tells the orchestrator to include the earlier output in full. Not yet re-run live. How Claude chat treats typed-only skills is not documented. |
+| Edge cases near the tolerance line | open | Eight cases drift on one model and not the other, by 0.72 to 1.53 (Sonnet: `08_borderline_02`, 10 `bad_03`; Opus: 02 `borderline_01`, `borderline_02`, `borderline_03`, 06 `good_02`, 07 `bad_01`, `08_good_01`). That is judge variance at one run per case, not a settled disagreement. Scoring each case several times would separate the two. |
 | Discipline Alignment at 5 | open | Stays at 4 until the standards owners validate the crosswalk. See the [v3.3.0 self-evaluation](self-evaluations/GUIDE_Self_Evaluation_v3.3.0.md). |
 
 ## Next
 
-1. Review the six edge cases that drift from their expected scores, and re-run the edge cases with a second model.
-2. Add a CI workflow that runs the registry check, the output-format check, the edge-case check, the pipeline smoke test, and `docs/build_rubric_docx.py --check`.
+1. Score each edge case several times per model, so run-to-run variance can be told apart from a wrong expected score.
+2. Run a build that includes a conversational layer and a scenario, so the adult-learning and story agents run in design mode, and confirm the revision-prompt fix.
+3. A second screen reader and a keyboard-only pass on the printable rubric.

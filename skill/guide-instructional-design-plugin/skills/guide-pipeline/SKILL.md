@@ -30,6 +30,10 @@ synthesizer, and the reviser instead of relying on that file:
 - Verdict, exactly one of four values: `ship` at 4.5 and up, `light_revision` from 3.5, `revise` from 2.5,
   `redesign` below 2.5.
 
+The agents keep nothing between calls and the artifacts exist only in this conversation. Whenever
+you send an agent back to revise, put its own previous output in the prompt in full, next to the
+fix; an agent sent only the fix will invent the rest.
+
 Also ask every specialist to start each severity flag with its tier (catastrophic, major, minor,
 or cosmetic), so the synthesizer can rank them.
 

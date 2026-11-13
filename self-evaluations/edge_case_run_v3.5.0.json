@@ -1,15 +1,15 @@
 {
   "guide_version": "3.5.0",
-  "date": "2026-11-12",
+  "date": "2026-11-13",
   "backend": "cli (Claude Code 2.1.226)",
   "model": "sonnet",
   "tolerance": 0.7,
-  "note": "Each case scored once. Archetype 02 was re-scored after one case was corrected; the other nine archetypes are from the first full run. Cases that expect only a whole-number overall are allowed one full point.",
+  "note": "Each case scored once through the Claude Code CLI. Archetypes 01 and 03 to 07 are from the run of 2026-11-12; archetypes 02, 08, 09 and 10 were re-scored on 2026-11-13 after six drifting cases were corrected and the anchors for 08 Decision Points and 10 Strategy-Assessment Coherence were sharpened. A second model's run is in edge_case_run_v3.5.0_opus.json.",
   "cases": 68,
-  "within_tolerance": 62,
+  "within_tolerance": 66,
   "errors": 0,
-  "mean_absolute_drift": 0.43,
-  "mean_drift": -0.299,
+  "mean_absolute_drift": 0.36,
+  "mean_drift": -0.23,
   "results": [
     {
       "archetype": "adult_learning_communication",
@@ -223,63 +223,72 @@
     {
       "archetype": "assessment_design",
       "case": "good_01_wellaligned_quiz",
-      "expected_overall": 4.8,
+      "expected_overall": 4.5,
       "expected_scores": {
         "blooms_alignment": 5,
         "objective_congruence": 5,
+        "item_construction_quality": 4,
+        "validity_evidence": 5,
+        "reliability_considerations": 4,
+        "inclusivity_fairness": 4
+      },
+      "judge_overall": 4.5,
+      "judge_scores": {
+        "blooms_alignment": 4,
+        "objective_congruence": 4,
         "item_construction_quality": 5,
         "validity_evidence": 5,
         "reliability_considerations": 4,
         "inclusivity_fairness": 5
       },
-      "judge_overall": 3.0,
-      "judge_scores": {
-        "blooms_alignment": 4,
-        "objective_congruence": 3,
-        "item_construction_quality": 3,
-        "validity_evidence": 2,
-        "reliability_considerations": 3,
-        "inclusivity_fairness": 3
+      "severity_flags": [],
+      "rationale": {
+        "blooms_alignment": "Strong level-matching overall: item 1 is pure recall (Remember), items 2/6 require explaining mechanism (Understand), items 3/7 are genuine ratio-application problems (Apply), and items 5/9 require weighing competing claims (Evaluate). Item 8 and 10 function at Analyze (distinguishing the ETC's unique contribution; predicting downstream effect of a break). Item 4, however, mostly asks students to recognize the correct direction of electron flow — closer to Understand than true Analyze/compare, since no comparison or inference is actually required. This single soft spot keeps the set from a 5.",
+        "objective_congruence": "Objectives are stated with clear, observable verbs and knowledge types, and the blueprint explicitly maps every item to one objective, with weighting that matches the unit's Analyze/Evaluate emphasis. The mapping mostly holds (3/7 to Apply's calculation verb, 5/9 to Evaluate's judgment verb are exact matches), but item 8 tests the ETC's proton-pumping role more than it tests the objective's specific 'compare PSII/PSI electron flow' language, and item 4 tests description rather than comparison — a mild verb/format drift that caps this below 5.",
+        "item_construction_quality": "Stems are concise, scenario-grounded, and free of negatives, idioms, or 'all of the above' construction. Distractors are homogeneous and misconception-based (location confusion, absorption vs. reflection, direction of flow, component role swaps) rather than implausible filler. The quantitative items (3, 7) check out arithmetically (900 ATP; 48 photons) with a single defensible key. Items 5 and 9 use strong-argument/best-supported framing that avoids absolutist distractors being obviously silly while still being clearly wrong on content grounds.",
+        "validity_evidence": "An explicit blueprint ties every item to a named sub-objective, coverage spans the full stated objective (molecular mechanism through evaluative judgment of Z-scheme design), and item density is deliberately skewed toward Analyze/Evaluate to match where the unit objective itself is pitched — a textbook content-validity rationale, explicitly justified in the artifact rather than assumed.",
+        "reliability_considerations": "Ten items with a clearly stated criterion (8/10 mastery), a stated no-partial-credit scoring rule, and a separate answer key for students satisfy the basic reliability bar for a criterion-referenced quiz on one bounded objective. Difficulty is deliberately varied (3 easier, 3 harder, 4 middle) rather than flat. The one soft spot is Objective 1 (Remember) resting on a single item, giving no redundancy if that item is flawed; 10 items is also at the low end of the 10-15 guidance band.",
+        "inclusivity_fairness": "No gendered, idiomatic, or culturally loaded language; stems are short and literal; negative wording and trick formats ('all of the above') are explicitly excluded — all directly supportive of the stated ELL learners. Glossary access during the quiz reduces vocabulary-recall load so items test the intended cognitive skill rather than English proficiency, and a text-only format avoids image-accessibility concerns."
       },
-      "severity_flags": [
-        "Item 3's correct answer requires no calculation despite testing an explicit 'Apply: calculate' objective, and its stated rationale misidentifies the actual missing variable — the key as written is not scientifically defensible.",
-        "Light-independent reactions (Calvin cycle) are essentially untested despite being half of the stated learning objective ('light-dependent vs. light-independent efficiency') — a significant content-validity gap with no blueprint to catch it.",
-        "Items 6, 7, and 10 are not explicitly tied to any of the five stated objectives, contradicting the rubric's own claim that 'every item maps to a stated learning objective.'",
-        "Stated ELL and deaf-accessibility accommodations are not actually built into the items (no glossary/simplified language; captioning claim is inapplicable to a text-only instrument)."
-      ],
-      "drift": -1.8,
-      "whole_number_overall": false,
-      "within_tolerance": false
+      "drift": 0.0,
+      "whole_number_overall": false
     },
     {
       "archetype": "assessment_design",
       "case": "good_02_performancerubric",
-      "expected_overall": 4.7,
+      "expected_overall": 4.2,
       "expected_scores": {
         "blooms_alignment": 5,
-        "objective_congruence": 5,
-        "item_construction_quality": 5,
+        "objective_congruence": 4,
+        "item_construction_quality": 4,
+        "validity_evidence": 4,
+        "reliability_considerations": 4,
+        "inclusivity_fairness": 4
+      },
+      "judge_overall": 4.17,
+      "judge_scores": {
+        "blooms_alignment": 4,
+        "objective_congruence": 4,
+        "item_construction_quality": 4,
         "validity_evidence": 4,
         "reliability_considerations": 5,
         "inclusivity_fairness": 4
       },
-      "judge_overall": 3.5,
-      "judge_scores": {
-        "blooms_alignment": 4,
-        "objective_congruence": 4,
-        "item_construction_quality": 3,
-        "validity_evidence": 3,
-        "reliability_considerations": 3,
-        "inclusivity_fairness": 4
-      },
       "severity_flags": [
-        "Overlapping score-band thresholds in Criterion 2 ('4+ layers' Excellent vs. '3-4 layers' Proficient) create scoring ambiguity at the boundary.",
-        "Fluid dynamics — explicitly named in the learning objective — has no dedicated assessment criterion, only indirect coverage via flow rate/inlet-outlet design.",
-        "No calibration anchors, exemplars, or weighting guidance provided, leaving inter-rater reliability largely untested."
+        "Fluid dynamics — one of three named objective components — is only implicitly assessed via 'flow rate' comparison, with no requirement to reason explicitly about pressure, flow path, or measured throughput",
+        "No stated mastery/cut score for the 16-point total, so proficiency determination is left undefined",
+        "Criterion 1's 'Analyze' label is only partially supported by its descriptors, which mostly describe Understand-level explanation"
       ],
-      "drift": -1.2,
-      "whole_number_overall": false,
-      "within_tolerance": false
+      "rationale": {
+        "blooms_alignment": "Criteria 2 (Create) and 3 (Evaluate) are genuinely higher-order: the Create criterion requires producing a sequenced multi-layer design with justified material choices, and the Evaluate criterion requires designing a fair test, weighing trade-offs, and proposing revisions — real evaluative reasoning, not recall. Criterion 1 is labeled 'Analyze' but its descriptors mostly ask students to 'explain how materials work,' which is closer to Understand (explaining mechanism) than true Analyze (differentiating/attributing across competing variables); the label slightly overstates the level, though the top descriptor's reference to particle-size hierarchy pulls it partway toward Analyze. Overall, the higher-order objectives are matched by genuinely higher-order descriptors, with one soft mismatch.",
+        "objective_congruence": "The objective names three components — particle size, fluid dynamics, and material selection — and three of the four criteria map cleanly onto two of them (particle size/material selection via Criteria 1–2; trade-off evaluation via Criterion 3). Fluid dynamics is only indirectly captured through 'flow rate' in Criterion 3 rather than through any requirement to reason about pressure, flow path, or velocity explicitly, leaving one objective strand thinly tested. The added Communication criterion is not derived from the stated objective at all; it's a reasonable practical addition for a project rubric but technically sits outside the congruence mapping.",
+        "item_construction_quality": "Descriptors are observable and mostly quantified (e.g., '4+ layers' vs. '3 layers' vs. '2 layers'), which gives clear, qualitatively distinct performance bands per Kubiszyn & Borich. A few descriptors lean on vaguer qualifiers ('mostly logical sequence,' 'basic inlet/outlet present') that could produce scorer disagreement without further anchoring, but there is no ambiguity, trick wording, or construct-irrelevant language anywhere in the rubric.",
+        "validity_evidence": "As a performance-task rubric (not a multi-item test), domain sampling is judged by whether the criteria cover the objective's key facets. Coverage is good for particle size/material understanding, design/sequencing, and trade-off evaluation, but fluid dynamics is only loosely operationalized through 'flow rate' without requiring explicit fluid-dynamics reasoning (e.g., measured flow rate vs. head pressure, computed throughput). No formal blueprint document is referenced, though the criteria-to-objective mapping stated at the top functions as a lightweight one.",
+        "reliability_considerations": "This is explicitly criterion-referenced (4-point descriptors against fixed standards), appropriately treated as such. The rubric shows strong reliability practice: anchor/annotated sample projects at each level plus a required calibration step where teachers co-score sample projects and reconcile any disagreement greater than one level before scoring independently — this is a genuine inter-rater reliability control, rare in rubric design and matching best practice. A minor gap: no stated mastery/cut score for the 16-point total, so pass/fail or proficiency determination isn't specified.",
+        "inclusivity_fairness": "Language throughout is neutral, free of stereotypes, gendered pronouns, or cultural bias, and uses plain, accessible phrasing appropriate for high schoolers. The rubric leans heavily on written explanation and labeled sketches as the main performance evidence, which could disadvantage ELL students or those with writing-related disabilities; no alternate response modes (e.g., verbal explanation, oral defense, graphic/visual organizer with sentence starters) are offered as accommodation."
+      },
+      "drift": -0.03,
+      "whole_number_overall": false
     },
     {
       "archetype": "assessment_design",
@@ -303,14 +312,22 @@
         "inclusivity_fairness": 4
       },
       "severity_flags": [
-        "Objective-item mismatch: an 'Analyze' objective is assessed almost entirely with Remember-level recall items; no item requires data interpretation, graph analysis, or model application.",
-        "Majority of items (1, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15) test content irrelevant to the stated objective, severely undermining content validity.",
-        "Item 1's correct answer is a non-answer/trick response ('no Latin name'), violating basic single-correct-answer item construction standards.",
-        "Multiple items (5, 8, 12, 13, 14) have scientifically debatable or source-dependent 'correct' answers, threatening scoring defensibility."
+        "Critical Bloom's/objective mismatch: objective requires Analyze-level use of mathematical models and empirical data, but ~13 of 15 items are Remember-level trivia with no analytical task",
+        "Indefensible key on Item 1 ('Predator (no Latin name)' marked correct against non-parallel distractors)",
+        "Multiple items test content with no connection to predator-prey dynamics or ecology coursework (insect leg count, rabbit fur color, mammalian body temperature, wolf lifespan, cheetah speed, biome ranking)",
+        "No item requires reading, interpreting, or manipulating a graph/equation/dataset despite the objective explicitly naming 'mathematical models and empirical data'",
+        "No evident test blueprint; content coverage does not represent the stated objective's domain"
       ],
+      "rationale": {
+        "blooms_alignment": "The stated objective ('analyze...using mathematical models and empirical data') calls for Analyze-level work with Conceptual/Procedural knowledge. Nearly every item (1, 2, 4-10, 12-15) is pure Remember-level factual recall (definitions, trivia, naming). Even the two items that touch the actual model (3, 11) only ask students to recall a fact about the model's behavior or name, not to interpret, apply, or analyze data/graphs/equations. No item asks students to read a population graph, manipulate an equation, or draw a conclusion from empirical data. This is the textbook Score-1 case: 'nearly all items are pure recall while the objectives call for more.'",
+        "objective_congruence": "Using Dick & Carey's objective→item mapping, the objective is specific about behavior (analyze), content (predator-prey interactions), and method (mathematical models, empirical data). The large majority of items test content with no bearing on this objective at all (insect leg count, rabbit fur color, mammal body temperature, wolf lifespan, cheetah hunting speed, who coined 'ecosystem', biome with the most predators). Only items 3, 4, 11 are even topically adjacent, and none require the stated behavior (analyze) or method (models/data). A good-looking objective statement cannot lift a congruence score when the items don't test it.",
+        "item_construction_quality": "Several items are flawed per Kubiszyn & Borich standards. Item 1's keyed answer ('Predator (no Latin name)') is incoherent — the distractors (Heterotroph, Carnivore, Autotroph) aren't 'scientific names for a predator' either, making the whole item indefensible. Item 8 ('what color are most rabbits') and item 5 ('fastest hunting speed' with a mismatched comparison set) and item 12 ('biome with the most predators') have debatable or overgeneralized keys rather than single defensible correct answers. Item 13's key (37°C) ignores substantial inter-species variation. The remaining items (definitions, named equation, named scientist) are mechanically clear, which keeps this from scoring a 1.",
+        "validity_evidence": "No blueprint is evident, and if one existed it was not followed: domain sampling is dominated by general-biology trivia (insect anatomy, rabbit coloration, wolf lifespan, mammalian thermoregulation) that is irrelevant to the stated objective, while the actual target content — reading/interpreting Lotka-Volterra dynamics, equilibrium behavior, parameter effects, or empirical population data — is almost entirely absent. This is presented as a complete 15-item quiz, so the full threshold applies, and coverage of the critical content is missing.",
+        "reliability_considerations": "The item count (15) meets the criterion-referenced minimum and an answer key is provided, which keeps this above the floor. However, several keys are debatable or scientifically oversimplified (items 1, 5, 8, 12, 13), which undermines consistent, defensible scoring — a form of key/reliability risk distinct from item count. Difficulty is also essentially flat: almost every item is a single-fact recall question with little variation in cognitive demand, so the instrument would not discriminate between levels of understanding of the actual objective.",
+        "inclusivity_fairness": "No stereotyping, gendered language, cultural bias, or ableist phrasing is present; wording is neutral and generally accessible. A point is withheld because several stems rely on imprecise/colloquial framing ('most rabbits are what color,' 'fastest hunting speed') that could disadvantage ELL or literal-reading learners through ambiguity rather than bias per se, and no accommodations (e.g., alt formats, glossary for technical terms like 'carrying capacity') are indicated."
+      },
       "drift": 0.13,
-      "whole_number_overall": false,
-      "within_tolerance": true
+      "whole_number_overall": false
     },
     {
       "archetype": "assessment_design",
@@ -324,26 +341,32 @@
         "reliability_considerations": 1,
         "inclusivity_fairness": 3
       },
-      "judge_overall": 1.83,
+      "judge_overall": 2.0,
       "judge_scores": {
         "blooms_alignment": 2,
         "objective_congruence": 2,
         "item_construction_quality": 1,
         "validity_evidence": 2,
-        "reliability_considerations": 1,
+        "reliability_considerations": 2,
         "inclusivity_fairness": 3
       },
       "severity_flags": [
-        "Three constructed-response items (4, 10, 12) have no rubric or scoring criteria — scoring is explicitly 'subjective,' violating minimum reliability standards",
-        "No answer key provided for the majority of multiple-choice/true-false items",
-        "Leading/rhetorical stems ('right?', 'isn't it?') in items 1 and 12 cue or bias the expected response",
-        "Unresolved double negative in item 2 creates genuine ambiguity about what is being asked",
-        "Item 6 is an intentional trick question whose 'all of the above' key undermines content validity",
-        "Nearly all items test Remember-level recall despite an objective explicitly requiring Apply-level performance"
+        "Three scored constructed-response items (4, 10, 12) have no rubric or scoring criteria, undermining consistent/fair grading",
+        "Objective explicitly names 'photosynthetic pathways' but no pathway variants (C3/C4/CAM) or physiology application scenarios are tested",
+        "Item 1 and Item 2 use leading/double-negative phrasing that creates genuine ambiguity about what is being asked",
+        "Item 6 and Item 7 contain self-acknowledged trick framing / implausible distractors, violating single-best-answer clarity",
+        "Nearly all items sit at Remember despite the objective requiring Understand and Apply"
       ],
-      "drift": 0.33,
-      "whole_number_overall": false,
-      "within_tolerance": true
+      "rationale": {
+        "blooms_alignment": "The objective calls for Understand (pathways) plus Apply (plant physiology problems), but the vast majority of items (1, 2, 5, 6, 7, 8, 11) are pure Factual Remember — definitions, true/false, yes/no. Only items 3 and 9 approach Apply/Analyze (predicting outcomes), and 4/10/12 nominally ask for explanation but are too vaguely worded to reliably elicit Understand-level reasoning. Higher-order demand in the objective is not met by the item set.",
+        "objective_congruence": "The stated objective bundles two behaviors ('understand pathways' and 'apply to physiology problems') with no condition or criterion (Mager), so it is already weak. More critically, the items mostly test isolated factual recall (pigment color, organelle names, cycle names) rather than pathway understanding or physiology application; 'photosynthetic pathways' (C3/C4/CAM, light-dependent vs. light-independent mechanics) is never substantively tested despite being named in the objective.",
+        "item_construction_quality": "Multiple serious construction flaws: Item 1 stacks a leading rhetorical opener ('right?') with a confusing double/triple negative. Item 2 is an acknowledged double-negative true/false. Item 6 is a self-flagged trick question (all options correct, framed as if one isn't). Item 7's distractor set includes the stem concept itself as an option ('opposite of Photosynthesis is... Photosynthesis'), which is implausible/non-homogeneous. Item 12 is a leading, non-academic rhetorical prompt ('isn't it?'). Items 8 is a binary Yes/No item inappropriate for the cognitive target. These are not isolated nitpicks but pervasive, acknowledged defects.",
+        "validity_evidence": "No blueprint is evident, and no weighting across pathway stages is apparent. Coverage skews toward trivia (chlorophyll color, stroma location, cycle naming) and omits the pathway variants and applied physiology scenarios the objective foregrounds. Topics like limiting factors, gas exchange, or C3/C4/CAM differentiation — central to 'photosynthetic pathways... plant physiology problems' — are absent, so domain sampling is narrow relative to the stated objective.",
+        "reliability_considerations": "Item count (12) is near the criterion-referenced floor for a module-level quiz, but difficulty is overwhelmingly easy/recall with little spread, and three constructed-response items (4, 10, 12) carry explicitly no rubric ('scores subjectively,' 'rubric missing entirely'), which undermines consistent scoring across raters/students. Per rubric guidance, missing scoring guidance on a meaningful portion of the instrument caps this dimension low even though the MC items do have marked keys.",
+        "inclusivity_fairness": "No overt stereotyping, cultural bias, or ableist/gendered language is present. However, repeated casual/rhetorical phrasing ('right?', 'isn't it?', 'cool') adds interpretive ambiguity that disproportionately burdens ELL and neurodivergent learners, and the vague open-ended prompts (4, 10, 12) lack the structure that supports equitable access to full credit."
+      },
+      "drift": 0.5,
+      "whole_number_overall": false
     },
     {
       "archetype": "assessment_design",
@@ -359,21 +382,29 @@
       },
       "judge_overall": 3.17,
       "judge_scores": {
-        "blooms_alignment": 3,
-        "objective_congruence": 2,
-        "item_construction_quality": 4,
+        "blooms_alignment": 4,
+        "objective_congruence": 3,
+        "item_construction_quality": 3,
         "validity_evidence": 2,
         "reliability_considerations": 3,
-        "inclusivity_fairness": 5
+        "inclusivity_fairness": 4
       },
       "severity_flags": [
-        "Blueprint imbalance: glucose metabolism is 67% of the test versus a recommended 25–30%, while diabetes and glucagon are each only 8% — far below minimum coverage for topics tied to the Apply and Analyze objectives.",
-        "Objective 3 (Analyze) is tested by only one item, insufficient to support any claim about mastery of disorder analysis.",
-        "Bloom's-level mislabeling: Items 9, 10, and 11 are tagged at Understand/Apply but function as straight factual recall, inflating the apparent cognitive rigor of the test."
+        "Domain coverage is severely imbalanced (67% glucose vs. a 25-30% target per topic), leaving Objective 3 (diabetes/Analyze) tested by a single item (8%) despite being a full stated learning objective.",
+        "Objective 2 (Apply) is underrepresented relative to the recommended 4-5 items, with only 2 items clearly mapped to dietary-change prediction.",
+        "Single-item measurement of the Analyze-level objective (item 12) cannot support a reliable mastery judgment for that objective.",
+        "Distractor quality issues in items 2 and 12 (obviously-wrong or non-parallel options) reduce discrimination power."
       ],
+      "rationale": {
+        "blooms_alignment": "Individually, tagged items generally match their stated cognitive level: item 2 and 10 are genuine Apply-level prediction/application tasks, and item 12 is a true Analyze-level comparison with causal explanation, matching Objective 3. However, several 'Understand' items (9, 11, and arguably 3) are closer to pure factual recall ('secreted by which cells', 'where is X synthesized') than conceptual understanding. More importantly, the higher-order objective (Analyze/diabetes) is represented by only one item, so while that item is well-pitched, the set as a whole leans heavily on lower-order items for an assessment with three distinct cognitive-level objectives.",
+        "objective_congruence": "Objectives are reasonably clear and stated at distinct cognitive levels (Understand/Apply/Analyze), and most individual items do map to one of the three objectives. But the proportion of items devoted to each objective is badly out of balance: Objective 1 content (glucose) dominates at 67%, while Objective 2 (Apply/dietary-change prediction) has only 2 clearly-mapped items and Objective 3 (Analyze/diabetes) has just 1. A 'congruent' objective-to-item map requires the item set to actually exercise all three objectives proportionate to their stated importance, which this does not.",
+        "item_construction_quality": "Stems are generally clear and most distractors are plausible (items 1, 3, 9, 10, 11). Two items have construction weaknesses: item 2's distractor 'blood glucose remains elevated indefinitely' is an implausible, easily-eliminated option rather than a genuine misconception, and item 12's distractors ('both are equally severe,' 'Type 2 results in no insulin production,' 'Type 1 only affects glucose metabolism') are not homogeneous with the lengthy, multi-clause correct answer and are each wrong for a different, often obvious, reason rather than representing parallel common misconceptions.",
+        "validity_evidence": "A test blueprint exists, which is good practice, but the actual distribution (67%/17%/8%/8%) is severely skewed relative to the reference target of 25-30% per topic. Diabetes/pathophysiology — an explicit learning objective — receives only 8% of items (a single question), meaning the domain is not adequately sampled and a full stated objective is essentially under-tested. This is a significant content validity gap, not a minor coverage dip.",
+        "reliability_considerations": "Twelve items meets the rough floor for a criterion-referenced quiz of this scope, and each item has a single defensible key (marked inline). However, reliability should be considered per construct: Objective 3 (Analyze/diabetes) is measured by exactly one item, which cannot yield a reliable estimate of mastery for that objective, and Objective 2 (Apply) rests on only two explicitly-tagged items. Difficulty also skews toward easy/moderate recall-and-comprehension items with little genuine difficulty spread. No separate scoring rubric is provided beyond inline correct-answer tags (adequate for selected-response items, but thin for the compare-and-explain demand of item 12).",
+        "inclusivity_fairness": "Language is neutral, discipline-specific, and free of stereotypes, gendered assumptions, or culturally biased content. One minor accessibility concern: item 12's correct option packs several distinct claims into one dense sentence, which could disadvantage ELL or reading-challenged students relative to the simpler competing options; otherwise the set is accessible."
+      },
       "drift": -0.33,
-      "whole_number_overall": false,
-      "within_tolerance": true
+      "whole_number_overall": false
     },
     {
       "archetype": "assessment_design",
@@ -387,24 +418,32 @@
         "reliability_considerations": 3,
         "inclusivity_fairness": 4
       },
-      "judge_overall": 2.83,
+      "judge_overall": 2.67,
       "judge_scores": {
         "blooms_alignment": 3,
         "objective_congruence": 2,
         "item_construction_quality": 3,
         "validity_evidence": 2,
         "reliability_considerations": 2,
-        "inclusivity_fairness": 5
+        "inclusivity_fairness": 4
       },
       "severity_flags": [
-        "Three items (2, 6, 8) — including the sole item assessing the 'think critically about environmental issues' objective — have no rubric or scoring criteria, making them unscoreable consistently by different graders.",
-        "Learning objectives are self-described as 'Vague' and lack Mager's behavior/condition/criterion format, with no stated mastery threshold.",
-        "No test blueprint or stated item-to-objective mapping exists; coverage is skewed toward food webs (7/10 items) while the critical-thinking objective is nearly untested.",
-        "Bloom level tags are internally inconsistent (item 9 mislabeled Understand instead of Remember; item 3 mislabeled Apply instead of Analyze), undermining confidence in the stated alignment."
+        "Objectives lack Mager-format behavior/condition/criterion and are self-labeled 'Vague,' making downstream alignment judgments inferential rather than verifiable",
+        "No scoring rubric for 3 of 10 items (2, 6, 8), including the sole item carrying the 'critical thinking' objective — a reliability and validity risk",
+        "Two items (4, 9) are mislabeled: tagged [Understand] but are factual recall, not conceptual understanding",
+        "Item 4 contains non-plausible 'joke' distractors, weakening item discrimination",
+        "No test blueprint; content coverage is skewed toward ecosystems/food-web facts with minimal representation of the environmental-issues/critical-thinking objective"
       ],
-      "drift": -0.47,
-      "whole_number_overall": false,
-      "within_tolerance": true
+      "rationale": {
+        "blooms_alignment": "Several items genuinely hit the level they claim (Item 1/7 Remember, Item 5 Analyze, Item 6 Create, Item 8 Evaluate, Item 10 Analyze/bioaccumulation), and the 'critical thinking' objective is matched with real higher-order items (5, 8, 10) rather than recall dressed up as analysis. However, Items 4 and 9 are labeled [Understand] but are pure factual recall (definition lookup; a memorized percentage), so roughly 2 of 10 tags are mismatched to their actual cognitive demand.",
+        "objective_congruence": "Objectives are explicitly flagged 'Vague' in the artifact itself and lack Mager's behavior+condition+criterion structure (no measurable performance, no condition, no mastery criterion). There is no stated item-to-objective map; it must be inferred. Objective 3 ('think critically about environmental issues') is carried almost entirely by one vaguely-worded, unscored item (8), leaving the congruence between that objective and its evidence weak.",
+        "item_construction_quality": "Most MC stems are clear with plausible, content-based distractors (Items 1, 3, 7, 9, 10). Item 4's distractors ('Something you find in a restaurant,' 'A way to catch food') are joke options rather than plausible misconceptions, violating distractor homogeneity. Item 8's prompt is explicitly noted as vague with no criteria for what counts as a complete answer, undermining clarity and gradability.",
+        "validity_evidence": "No test blueprint or table of specifications is provided. Coverage leans heavily toward ecosystems/food-web factual and conceptual content (7 of 10 items) while the 'critical thinking about environmental issues' objective is represented by a single, loosely specified item. This is a skew toward one content strand rather than balanced sampling of all three stated objectives.",
+        "reliability_considerations": "Ten items is on the low edge for a criterion-referenced module quiz, and three items (2, 6, 8) — 30% of the instrument — are open-ended with no rubric or scoring guide at all, which directly limits scoring consistency across raters. The MC items do have keys and span a reasonable difficulty range (easy recall to bioaccumulation reasoning), but the missing rubrics for nearly a third of the items is a significant reliability gap.",
+        "inclusivity_fairness": "Language is neutral and content-focused (ecosystems, trophic levels, a mining/wetland scenario) with no gendered pronouns, stereotypes, or culturally loaded references. Item 8's open scenario could pose an accessibility barrier for ELL or novice writers without more scaffolding/criteria, but this is a minor concern rather than overt bias."
+      },
+      "drift": -0.63,
+      "whole_number_overall": false
     },
     {
       "archetype": "assessment_design",
@@ -418,22 +457,29 @@
         "reliability_considerations": 3,
         "inclusivity_fairness": 4
       },
-      "judge_overall": 3.0,
+      "judge_overall": 2.83,
       "judge_scores": {
         "blooms_alignment": 1,
-        "objective_congruence": 2,
-        "item_construction_quality": 5,
-        "validity_evidence": 2,
+        "objective_congruence": 1,
+        "item_construction_quality": 4,
+        "validity_evidence": 3,
         "reliability_considerations": 3,
         "inclusivity_fairness": 5
       },
       "severity_flags": [
-        "Bloom's/objective mismatch: the stated objective is Apply-level (resolve a live complaint call using LEAP) but the item tests only Remember-level recall of an acronym letter.",
-        "No answer key or reference provided to confirm which option is correct, and no scenario context to verify the item even belongs to this objective rather than a generic 'know the model' objective."
+        "Bloom/objective mismatch: Apply-level objective assessed with a Remember-level recall item — this item provides no evidence the learner can actually de-escalate a call",
+        "If this item is representative of how the 'apply LEAP' objective is tested across the quiz, the instrument may lack any genuine performance/scenario-based evidence for its core skill objective"
       ],
-      "drift": 0.5,
-      "whole_number_overall": false,
-      "within_tolerance": true
+      "rationale": {
+        "blooms_alignment": "The objective calls for Apply-level procedural performance ('apply the LEAP de-escalation model to resolve the complaint' given a live call). The item only asks the test-taker to recall what a letter in an acronym stands for — pure Factual/Remember-level recognition. This is a textbook case of a recall item testing an objective that demands application.",
+        "objective_congruence": "The item does not test the stated behavior (de-escalating a real/simulated complaint without escalation) under the stated condition (given a call). It tests mnemonic recall instead. Per scoring rules, a well-formed objective cannot lift a score when the item doesn't test it — capped at the low end.",
+        "item_construction_quality": "Mechanically sound: clear single-sentence stem, four homogeneous single-word distractors (all plausible action verbs beginning with 'L'), no double negatives or trick wording, and an apparent single correct answer. No construction flaws evident.",
+        "validity_evidence": "This is one item from a longer instrument, so full-domain coverage can't be judged from this sample alone; scored per the sample rule (capped at 3) rather than penalized for narrow coverage.",
+        "reliability_considerations": "As an isolated sample item, item count and difficulty spread can't be evaluated. It appears to have one defensible key (one option is correct, three clearly wrong), so it's scored at the sample ceiling of 3 rather than penalized for being 'one item.'",
+        "inclusivity_fairness": "Neutral, accessible language; no cultural, gender, or ability bias; no barriers for ELL or neurodivergent learners."
+      },
+      "drift": 0.33,
+      "whole_number_overall": false
     },
     {
       "archetype": "assessment_design",
@@ -447,24 +493,32 @@
         "reliability_considerations": 1,
         "inclusivity_fairness": 5
       },
-      "judge_overall": 2.5,
+      "judge_overall": 3.0,
       "judge_scores": {
         "blooms_alignment": 4,
         "objective_congruence": 2,
-        "item_construction_quality": 2,
-        "validity_evidence": 1,
-        "reliability_considerations": 1,
+        "item_construction_quality": 3,
+        "validity_evidence": 2,
+        "reliability_considerations": 2,
         "inclusivity_fairness": 5
       },
       "severity_flags": [
         "No answer key or scoring guide provided for a quiz presented as complete",
-        "Objective requires listing/producing the full ordered sequence, but no item requires production — all are recognition/selection",
-        "Two of the four procedure steps and their relative ordering are never directly tested",
-        "Q2 contains overlapping/inconsistent distractors ('Purge the wand' vs. 'Wipe and purge'), risking ambiguity about what each option represents"
+        "Objective requires producing/listing the full ordered sequence, but all items only test recognition/selection of partial order relationships",
+        "Full four-step order is never fully assessed (middle-step positions and their relation to each other are untested)",
+        "Q2 distractor 'Wipe and purge' is not parallel in structure to the other single-action options, reducing item construction quality",
+        "Only 3 items for an entire end-of-module quiz — insufficient for reliable mastery judgment even on a single objective"
       ],
-      "drift": -0.5,
-      "whole_number_overall": false,
-      "within_tolerance": true
+      "rationale": {
+        "blooms_alignment": "The objective ('list the four steps in order') is Remember-level procedural knowledge — recalling a fixed sequence. All three items are recognition-based recall (identify first/last step, true/false on relative order), which sits at the same Remember level. Cognitive demand matches the objective's demand, so alignment is good, though the items only probe fragments of the sequence rather than the whole ordered list the objective targets.",
+        "objective_congruence": "The objective calls for listing/producing the full four-step sequence, but every item uses select-the-answer (MC) or true/false recognition — a format mismatch between 'produce the order' and 'select from given order,' which per rubric caps this dimension regardless of item clarity. Additionally, no item requires demonstrating the complete order (steps 2 and 3, and their relation to each other, are never tested).",
+        "item_construction_quality": "Stems are mostly clear and distractors are plausible, but Q2's option 'Wipe and purge' bundles two actions into one choice while the other options are single actions — breaking the homogeneous/parallel-construction standard. No source procedure is specified, so 'correct' order is unverifiable from the artifact alone. No answer key accompanies any item.",
+        "validity_evidence": "As a complete assessment on a single objective, content validity should be judged by whether items exhaust that objective. They don't: only three relationships are probed (first step, last step, stretch-vs-texture order), leaving the position of the remaining steps (e.g., where 'purge' and 'wipe' fall relative to each other and to 'texture') untested. No blueprint is evident.",
+        "reliability_considerations": "Only 3 items testing one narrow objective, with no stated answer key or scoring guide — per rubric, a complete assessment lacking a key/scoring guide cannot score above 2. All items are the same difficulty/format (simple recognition), with no variation to support consistent discrimination of mastery.",
+        "inclusivity_fairness": "Language is neutral, job-relevant, and free of bias, stereotypes, or inaccessible phrasing. No concerns identified."
+      },
+      "drift": 0.0,
+      "whole_number_overall": false
     },
     {
       "archetype": "assessment_design",
@@ -478,23 +532,31 @@
         "reliability_considerations": 3,
         "inclusivity_fairness": 5
       },
-      "judge_overall": 3.5,
+      "judge_overall": 3.67,
       "judge_scores": {
         "blooms_alignment": 4,
         "objective_congruence": 3,
         "item_construction_quality": 3,
         "validity_evidence": 4,
         "reliability_considerations": 3,
-        "inclusivity_fairness": 4
+        "inclusivity_fairness": 5
       },
       "severity_flags": [
-        "Item 4's answer choices are mislabeled/out of sequence (a, c, b, d), risking learner and grading confusion.",
-        "Items 9-11 reuse an identical 4-option set across consecutive questions, enabling elimination-based answering instead of independent recall and weakening reliability.",
-        "Objective 3 ('list the steps in order') is tested as isolated single-step recognition in 3 of its 4 items rather than as sequencing, a format mismatch with the stated objective."
+        "Item 4 has visibly scrambled option-label order (a, c, b, d instead of a, b, c, d), a construction defect that could confuse test-takers despite an internally consistent key.",
+        "Objective 3 ('list the PASS steps in order') is tested mostly via single-step selection (items 9-11) rather than sequencing/production, a format mismatch between objective verb and item type.",
+        "All 12 items sit at a single, uniform difficulty level with no spread, weakening discrimination even for a criterion-referenced mastery test.",
+        "Item 12 uses strict all-or-nothing scoring for a 4-step sequence with no partial-credit rule, which could penalize near-mastery responses inconsistently if graders interpret 'credit' differently."
       ],
-      "drift": -0.5,
-      "whole_number_overall": false,
-      "within_tolerance": true
+      "rationale": {
+        "blooms_alignment": "All three objectives use Remember-level verbs ('identify', 'list') appropriate for new-hire safety training, and the blueprint correctly labels all 12 items as Remember. Items 1-8 test simple fact/association recall matching 'identify.' Items 9-12 test recall of a fixed sequence matching 'list in order.' Cognitive level of items matches cognitive level implied by objectives throughout; no item overreaches or underreaches its objective's level.",
+        "objective_congruence": "Objectives are clear and measurable, and the blueprint maps items to objectives in even, transparent blocks (4-4-4). Objectives 1 and 2 are well served by their items. Objective 3, however, says 'list the four steps... in order' - a production/sequencing behavior - but 3 of its 4 items (9-11) only ask the respondent to select one isolated step from a repeated 4-option list, which is a recognition task, not a sequencing-production task. Only item 12 actually requires producing the full order, so the format of most of objective 3's items under-tests the behavior the objective specifies.",
+        "item_construction_quality": "Stems are generally short and unambiguous, and distractors are domain-plausible (e.g., items 9-11 use the other three real PASS steps as distractors, which is good homogeneous-distractor practice). However, item 4's options are mis-sequenced in display ('a) Class B c) Class C b) Class D d) Class K'), which is a clear formatting defect that could confuse test-takers even though the key is internally consistent. Items 9-11 are also somewhat repetitive/formulaic, testing the same four words three times in slightly different frames.",
+        "validity_evidence": "A test blueprint is explicitly stated and followed exactly (4 items per objective), and the items collectively sample the stated domain fairly well: all five fire classes appear across items 1-4, extinguisher-type knowledge spans wet chemical/CO2/dry chemical/Class D in items 5-8, and PASS sequence is covered from multiple angles in 9-12. Coverage is proportional to the three objectives with no major content gaps relative to what was promised.",
+        "reliability_considerations": "Twelve items sits at the low end of the recommended 10-15 range for a criterion-referenced module quiz, which is acceptable, and a full answer key with an explicit scoring rule for the constructed-response item (all four PASS steps required for credit) is provided - this clears the 'no key' floor. Weaknesses: all items sit at a single, uniform (low) difficulty level with no spread, and items 9-11 are largely redundant with each other and partially redundant with item 12, which inflates apparent coverage of objective 3 without adding distinct evidence of mastery.",
+        "inclusivity_fairness": "Language is plain, procedural, and free of cultural, gender, or ability bias. Content is job-relevant and accessible to a general warehouse workforce, including likely ELL readers, with no idiomatic or culturally loaded phrasing."
+      },
+      "drift": -0.33,
+      "whole_number_overall": false
     },
     {
       "archetype": "assessment_design",
@@ -518,14 +580,20 @@
         "inclusivity_fairness": 5
       },
       "severity_flags": [
-        "High-stakes 3-way placement decision rests on only 10 items for a norm-referenced percentile cut, below the reliability threshold for this use case",
-        "Domain coverage omits content needed to validly distinguish Algebra I from Algebra II readiness (systems of equations, quadratics, inequalities, functions)",
-        "No reported difficulty spread or psychometric evidence (item discrimination, internal consistency) despite percentile-based cutoffs determining course placement",
-        "Objectives exist only as topic labels, not measurable performance objectives, limiting evaluability of alignment"
+        "Domain coverage is too narrow to validly support a three-way placement decision: no items assess Pre-Algebra prerequisites (integers, decimals, percents) or Algebra II readiness content (quadratics, systems, functions, inequalities), yet the score is used to sort applicants into exactly those three tiers.",
+        "Only 10 items for a norm-referenced, high-stakes placement decision (below the ~15-item minimum), producing coarse percentile resolution right at the 30th/70th percentile cut points that determine course placement.",
+        "No items at a difficulty level capable of discriminating top-end (Algebra II-bound) performance from mid-tier performance — risk of misplacing strong applicants into Algebra I."
       ],
+      "rationale": {
+        "blooms_alignment": "No formal objectives are stated, only topic labels, so alignment is judged against the stated purpose (placing students by procedural math skill). Nearly all items sit at Apply (solve, compute, translate), which is appropriate for a skills-based placement instrument — this isn't a test that should be probing Analyze/Evaluate/Create. Item 10 edges toward Apply/low-Analyze by requiring translation of a verbal scenario into symbolic form, which is a reasonable ceiling for this purpose. Minor deduction because the absence of stated objectives makes it impossible to confirm the test is deliberately targeting the right level for each skill area rather than defaulting to computation by convenience.",
+        "objective_congruence": "The 'skill areas sampled' function as content labels, not Mager-style objectives (no behavior + condition + criterion, e.g., no stated accuracy threshold or testing conditions). Items do map cleanly to their labeled skill areas (fractions→1-3, linear equations→4-7, exponents→8-9, word problem→10), so the mapping itself is not broken, but vague objectives cap this dimension per the rubric's rule that vague objectives with adequate mapping land at mid-score.",
+        "item_construction_quality": "Stems are concise and unambiguous, and most distractors reflect genuine, diagnostic student errors (add-instead-of-multiply exponent errors in items 8-9, flat-fee/rate reversal in item 10, cross-multiplication slips in items 1-2). One weak distractor: item 3's option 'a) 4/2' simplifies to 2, an implausible result for subtracting two proper fractions and likely to be eliminated by guessing rather than genuine skill, slightly reducing distractor homogeneity. No double negatives, trick wording, or multiple defensible keys were found.",
+        "validity_evidence": "Presented as the complete, final instrument, so full thresholds apply. A minimal blueprint exists (skill area → item count), but domain coverage is far too narrow for a decision that sorts applicants into three distinct course levels. There are no items on integers/decimals/percents or order of operations (Pre-Algebra prerequisites), no inequalities, systems, graphing beyond identifying slope, functions, or quadratics (content that would differentiate genuine Algebra II readiness from Algebra I competence). As built, the test can distinguish fraction/linear-equation fluency but has little content-validity basis for the Algebra II cut specifically.",
+        "reliability_considerations": "This is a norm-referenced instrument (placement by percentile rank within the applicant pool), which the artifact states explicitly, so the norm-referenced minimum (~15 items) applies rather than the criterion-referenced minimum. Ten items is short of that floor for a high-stakes three-way split, and the percentile cuts (30/40/30) will be unstable with so few score points. Difficulty is clustered in a narrow middle band (basic fraction operations, one-step/two-step linear equations, exponent rules) with no harder items (e.g., quadratics, multi-step algebraic manipulation) to reliably separate the top 30% destined for Algebra II from the middle 40%. An answer key is provided, which keeps this from scoring at the floor.",
+        "inclusivity_fairness": "Language is neutral and accessible throughout; no gendered pronouns, cultural references, or ableist phrasing. The word problem (phone plan) is a broadly familiar, low-bias context. No evidence of bias against any learner group in the content itself."
+      },
       "drift": 0.03,
-      "whole_number_overall": false,
-      "within_tolerance": true
+      "whole_number_overall": false
     },
     {
       "archetype": "instructional_sequencing",
@@ -1482,41 +1550,56 @@
         "transfer_generalizability": 4
       },
       "severity_flags": [
-        "Artifact submitted is a summary/description of the scenario rather than the actual script, dialogue, or interface text — several judgments (character voice, pacing, tone) are inferred rather than directly verified.",
-        "No explicit mapping to a recognized narrative framework is present, which weakens confidence in structural coherence beyond basic setup-choice-consequence logic."
+        "The submitted artifact is a high-level design summary/description, not actual scripted narrative content (no dialogue, scene text, or screen-by-screen detail) — scores above reflect evaluation of stated intent, not verified execution, and should be treated as provisional until actual content is reviewed.",
+        "No mention of a debrief, reflection prompt, or explicit principle-naming moment at scenario end, which is the usual mechanism ensuring transfer rather than leaving it implicit."
       ],
+      "rationale": {
+        "narrative_structure": "The artifact describes a central dilemma and three branching paths but provides no visible beginning/setup, inciting incident, or resolution beats mapped to a recognizable framework (Story Circle, Hero's Journey, Save the Cat). We're told trust and backstory are 'built' but not shown how or in what sequence, so structural coherence can only be inferred, not confirmed. This lands as 'some structural elements present but loosely defined' territory.",
+        "learning_narrative_integration": "The compliance lesson (audit trails, legal liability, institutional penalties, escalation protections) is described as emerging from the consequences of character choices rather than being appended as a separate lecture, which is good integration practice. However, because only the design intent is stated rather than actual dialogue/scene text, it's not verifiable whether the lesson content feels embedded or whether exposition breaks in to explain audit trails and legal liability in a way that interrupts flow.",
+        "character_situation_authenticity": "Grounding the dilemma in financial struggle and tenure is a strong authenticity move — it supplies real stakes (why compliance would be tempting) rather than a cartoonish 'evil supervisor' setup. The scenario (billing clerk pressured to miscode for cost savings) is a recognizable, realistic healthcare compliance situation. Scores well, though again this is asserted rather than demonstrated with actual character voice or dialogue.",
+        "emotional_engagement_motivation": "Financial precarity plus career risk versus ethical violation is a productive-tension setup — high stakes without being gratuitously punitive. The description explicitly frames consequences as instructive rather than purely punitive, which supports productive (not paralyzing) anxiety. Full marks are withheld only because the emotional arc's actual pacing/intensity can't be assessed from a summary.",
+        "decision_points_branching_quality": "This is the strongest-described dimension: three genuinely distinct options (comply, refuse, escalate) each with realistic, differentiated consequences; wrong choices teach substantive content (audit trails, legal liability, penalties) rather than just failing; branches explicitly do not force reconvergence, preserving meaningful complexity. This matches the rubric's top-end criteria closely.",
+        "transfer_generalizability": "Audit trails, legal liability, and escalation protections are transferable compliance principles applicable beyond this one clerk's scenario, and the specific context (hospital billing) is concrete enough to stay engaging while the underlying principle (pressure to violate ethics for short-term gain vs. proper escalation channels) generalizes to other compliance contexts. Score capped slightly short of 5 because no explicit reflection/debrief mechanism is mentioned to help learners consciously extract the principle."
+      },
       "drift": -0.7,
-      "whole_number_overall": false,
-      "within_tolerance": true
+      "whole_number_overall": false
     },
     {
       "archetype": "story_design",
       "case": "08_good_02",
-      "expected_overall": 4.5,
+      "expected_overall": 4.2,
       "expected_scores": {
+        "narrative_structure": 4,
+        "learning_narrative_integration": 5,
+        "character_situation_authenticity": 4,
+        "emotional_engagement_motivation": 4,
+        "decision_points_branching_quality": 4,
+        "transfer_generalizability": 4
+      },
+      "judge_overall": 4.33,
+      "judge_scores": {
         "narrative_structure": 4,
         "learning_narrative_integration": 5,
         "character_situation_authenticity": 5,
         "emotional_engagement_motivation": 4,
         "decision_points_branching_quality": 4,
-        "transfer_generalizability": 5
-      },
-      "judge_overall": 3.33,
-      "judge_scores": {
-        "narrative_structure": 3,
-        "learning_narrative_integration": 4,
-        "character_situation_authenticity": 4,
-        "emotional_engagement_motivation": 3,
-        "decision_points_branching_quality": 2,
         "transfer_generalizability": 4
       },
       "severity_flags": [
-        "No learner-facing decision points or branching — the scenario is narrated/observed rather than interactive, undermining the 'Decision Points & Branching Quality' dimension by design",
-        "Narrative structure is only loosely mapped to a recognized framework; key dramatic beats (midpoint escalation, low point, resolution) are underspecified, risking a flat or anticlimactic experience"
+        "No explicit reflection, debrief, or principle-extraction mechanism described — transfer relies entirely on learner inference, which risks some learners missing or misapplying the implicit lessons.",
+        "Linear structure means only one decision path is shown; learners never see the consequences of alternative choices the PM could have made, limiting depth of decision-point learning.",
+        "Claims of authenticity and emotional engagement cannot be fully verified without the actual narrative text — assessment is based on a structural description rather than the story itself."
       ],
-      "drift": -1.17,
-      "whole_number_overall": false,
-      "within_tolerance": false
+      "rationale": {
+        "narrative_structure": "The described arc (context → crisis → attempts at resolution → partial success → lessons learned) maps onto a recognizable problem-solving/Hero's-Journey-like structure with a clear beginning, middle, and end. It is coherent but looser than a fully mapped framework like Snyder's beat sheet, and 'attempts at resolution' and 'partial success' are described briefly, suggesting the middle may be underdeveloped relative to setup and conclusion.",
+        "learning_narrative_integration": "Learning objectives are explicitly not stated up front and are described as emerging purely from the PM's decisions and their consequences. This is the ideal integration pattern the rubric rewards — no artificial 'here's the lesson' interruptions — earning a top score.",
+        "character_situation_authenticity": "Based on a real, anonymized project failure with a protagonist facing realistic IT-PM problems (inherited mess, conflicting stakeholders, prior PM's poor communication, scope creep, technical issues). This grounding in a genuine case strongly supports authenticity for the target audience of IT project managers.",
+        "emotional_engagement_motivation": "Crisis, inherited dysfunction, and stakeholder conflict create productive tension, and 'partial success' (rather than a clean win) suggests realistic, non-sanitized stakes. Scored just below top marks because the description doesn't detail how emotional intensity is modulated to stay productive rather than overwhelming.",
+        "decision_points_branching_quality": "This is a linear case rather than a branching scenario, so per the rubric it is scored on whether the character's decisions are meaningful and consequences shown. The narrative explicitly shows good and bad PM decisions (e.g., escalate vs. absorb risk) and their downstream effects (scope creep accumulation), which is instructive, though the linear format inherently limits the complexity/diversity of decision exploration a branching design would offer.",
+        "transfer_generalizability": "The case explicitly claims principles (stakeholder mapping, communication costs, scope creep dynamics, escalation thresholds) generalize beyond software implementation to other industries, which supports transfer. Specificity to IT software projects keeps it engaging, though the case description doesn't mention any explicit reflection/bridging mechanism to help learners abstract the principles themselves."
+      },
+      "drift": 0.13,
+      "whole_number_overall": false
     },
     {
       "archetype": "story_design",
@@ -1530,9 +1613,9 @@
         "decision_points_branching_quality": 1,
         "transfer_generalizability": 2
       },
-      "judge_overall": 1.5,
+      "judge_overall": 1.33,
       "judge_scores": {
-        "narrative_structure": 2,
+        "narrative_structure": 1,
         "learning_narrative_integration": 1,
         "character_situation_authenticity": 2,
         "emotional_engagement_motivation": 1,
@@ -1540,45 +1623,57 @@
         "transfer_generalizability": 2
       },
       "severity_flags": [
-        "No genuine decision complexity — choices are cost-free and outcomes are predetermined, undermining the entire purpose of a branching/scenario format",
-        "Learning objectives are externally imposed rather than emergent from narrative tension, violating core scenario-based learning design principles",
-        "Scenario avoids the realistic difficult cases (abusive customer, admitting company fault) that would actually require judgment, making the training non-representative of real job demands",
-        "Flat emotional stakes risk learner disengagement and provide no productive tension to deepen processing or retention"
+        "No genuine decision complexity: choices are telegraphed and cost-free, undermining the entire premise of a 'branching scenario'",
+        "Learning objectives are external to the narrative rather than emergent from it — the scenario is acknowledged to be illustration, not story-driven learning",
+        "Scenario deliberately avoids the realistic edge cases (customer abuse, company fault) that would make the training applicable to actual difficult encounters, risking false confidence in trainees"
       ],
-      "drift": -0.2,
-      "whole_number_overall": false,
-      "within_tolerance": true
+      "rationale": {
+        "narrative_structure": "There is no identifiable arc. The 'scenario' is a single static situation (customer is angry about wait time) with a binary response attached, not a sequence of rising action, complication, and resolution. No setup/catalyst/climax/change is present — it reads as an illustration, not a story.",
+        "learning_narrative_integration": "The artifact is explicit that it 'just illustrates pre-stated best practices' — the textbook definition of instruction imposed on top of a story rather than emerging from it. The learning point (empathize, don't dismiss) exists independently of any narrative tension; the story is a delivery vehicle, not a generator, of the lesson.",
+        "character_situation_authenticity": "Both characters are named only by role ('angry customer,' 'helpful agent') with no distinguishing traits, history, or motivation. The situation (long wait time) is low-stakes and generic — it does not reflect the harder, messier realities (abusive customers, company-fault admissions) that make customer service genuinely difficult, so authenticity is minimal though not entirely absent (the surface scenario is at least plausible).",
+        "emotional_engagement_motivation": "The piece explicitly states there is 'no genuine tension' and stakes are low because the complaint is trivial and resolution simple. Without productive tension, mystery, or risk, there is nothing to sustain engagement or deepen processing — this is a near-total failure on this dimension.",
+        "decision_points_branching_quality": "Choices are binary and transparently keyed (good practice vs. bad practice) with the correct answer telegraphed and cost-free. No divergent paths, no instructive wrong-path consequences, and — critically — the hard cases (abusive customer, admitting fault) that would create real decision complexity are explicitly absent. This is close to the rubric's definition of a 1: decisions are not genuine.",
+        "transfer_generalizability": "A thin, general principle ('listen and empathize') is extractable and could nominally transfer, which keeps this just above a 1. But because the scenario avoids the harder conditions under which the principle is actually tested (hostility, fault admission, ambiguous right answers), learners get no practice applying the principle under real-world complexity, limiting genuine transfer."
+      },
+      "drift": -0.37,
+      "whole_number_overall": false
     },
     {
       "archetype": "story_design",
       "case": "08_bad_02",
-      "expected_overall": 2.6,
+      "expected_overall": 2.2,
       "expected_scores": {
-        "narrative_structure": 4,
+        "narrative_structure": 3,
         "learning_narrative_integration": 1,
         "character_situation_authenticity": 4,
-        "emotional_engagement_motivation": 4,
-        "decision_points_branching_quality": 3,
+        "emotional_engagement_motivation": 3,
+        "decision_points_branching_quality": 1,
         "transfer_generalizability": 1
       },
-      "judge_overall": 1.67,
+      "judge_overall": 2.0,
       "judge_scores": {
         "narrative_structure": 2,
         "learning_narrative_integration": 1,
-        "character_situation_authenticity": 3,
-        "emotional_engagement_motivation": 2,
+        "character_situation_authenticity": 4,
+        "emotional_engagement_motivation": 3,
         "decision_points_branching_quality": 1,
         "transfer_generalizability": 1
       },
       "severity_flags": [
-        "Critical structural break: narrative is paused for an external, non-diegetic policy lecture, violating basic narrative-instruction integration principles",
-        "Zero decision points or branching—learners never practice applying the five policies, only receive them as stated rules",
-        "Weak transfer: no realistic application scenarios modeled for any of the five policies (compliance, expenses, confidentiality, cybersecurity, conflicts of interest)",
-        "Risk of engagement collapse at the midpoint, where the relatable story the learner has invested in is abandoned for bullet-point exposition"
+        "Narrative and instructional content are structurally severed — a voiceover explicitly pauses the story to deliver policy content, violating the core 'impossible to separate story from learning' principle.",
+        "Zero modeled application of the five policies to realistic scenarios, leaving transfer almost entirely unsupported.",
+        "No decision points or consequences shown for the protagonist, eliminating the mechanism (practice + feedback) most likely to make policy knowledge stick."
       ],
-      "drift": -0.93,
-      "whole_number_overall": false,
-      "within_tolerance": false
+      "rationale": {
+        "narrative_structure": "There is a recognizable opening (ordinary world: first week, office, colleagues) and a nominal close (protagonist completes compliance training), but the arc is broken in half by a non-narrative voiceover lecture. The 'until finally/ever since then' causal chain of a Story Circle (or the midpoint/break-into-three beats of a Beat Sheet) never develops — the second half is a compressed afterthought rather than a resolved arc, so the structure is present only in skeletal, interrupted form.",
+        "learning_narrative_integration": "This is the artifact's core failure: the policies are announced by an external voiceover that explicitly pauses the story ('Here are the five key policies...') and delivered as decontextualized bullet points. The narrative does not generate the need for this content — it is imposed on top of the story rather than emerging from story tension, which is the textbook pattern of separation this dimension penalizes most heavily.",
+        "character_situation_authenticity": "The protagonist and setting are described as genuinely relatable — new-employee anxieties, lunch bonding, office navigation, team meetings — and new hires are said to see themselves in the character. This part of the artifact is executed well and grounded in authentic first-week experience, even though it isn't connected to the policy content.",
+        "emotional_engagement_motivation": "The opening generates real engagement and relatability, which is a strength, but the abrupt halt for a bullet-point policy dump almost certainly breaks whatever emotional momentum was built — bullet-list exposition is inherently low-affect. Engagement is front-loaded and not sustained or leveraged through the instructional portion, yielding a moderate rather than strong score.",
+        "decision_points_branching_quality": "No meaningful decision points are described anywhere in the narrative. The protagonist doesn't face dilemmas involving the five policies (e.g., a conflict-of-interest temptation, a confidentiality slip, an expense-reporting gray area); 'completes compliance training' is a passive action, not a choice with consequences. Even for a linear narrative, the rubric credits decisions the character faces — here there are essentially none.",
+        "transfer_generalizability": "Explicitly and correctly flagged as weak in the artifact description: learners hear the rules stated but never see the protagonist (or anyone) apply them to a realistic scenario, make a judgment call, or face a consequence. Without modeled application, learners have no worked example to generalize from to their own future situations."
+      },
+      "drift": -0.2,
+      "whole_number_overall": false
     },
     {
       "archetype": "story_design",
@@ -1602,13 +1697,20 @@
         "transfer_generalizability": 2
       },
       "severity_flags": [
-        "Domain mismatch between narrative surface features and target audience may cause learners to dismiss the case as irrelevant ('not applicable to tech'), undermining transfer regardless of narrative quality.",
-        "Character authenticity is misaligned with intended learners—vivid construction PM persona does not help software/IT PMs see themselves in the story, weakening identification and motivation to apply lessons.",
-        "Divergent failure-mode stakes (structural collapse vs. security vulnerability) risk making consequences feel dramatic but not credible or proportionate to real IT PM risk, potentially reducing perceived relevance."
+        "Domain mismatch between narrative context (construction/skyscraper renovation) and target audience (software/IT PMs) risks learners rejecting valid principles as inapplicable, undermining transfer—the single most important failure mode for a case study.",
+        "Surface-level authenticity gap: physical failure modes (structural collapse) have no felt equivalent for IT PMs, whose real failure modes (outages, security breaches, technical debt) are categorically different, weakening relatability despite strong craft.",
+        "Risk that strong narrative/emotional quality masks the transfer problem—learners may rate the story highly as entertainment while failing to apply the lesson, a classic 'engaging but non-transferable' trap."
       ],
+      "rationale": {
+        "narrative_structure": "The case study has a clear, well-developed arc: escalating problem, rising complications, a climactic decision, resolution, and explicit lessons. This maps cleanly onto a recognizable structure (clear beginning/middle/end, distinct escalation and payoff), fully satisfying the top-band criteria regardless of the audience-fit issues elsewhere.",
+        "learning_narrative_integration": "Stakeholder management, scope management, and risk mitigation appear to emerge from the story's tension rather than being bolted on, which supports integration. However, because the surface domain (construction) is mismatched to the target audience (software/IT), learners are likely to experience a cognitive 'translation tax'—mentally stripping away construction specifics to find the underlying lesson—which functions like an interruption even if the authors didn't design it that way. This keeps it from the top score.",
+        "character_situation_authenticity": "The PM character is described as having genuine depth and facing real struggles (aging infrastructure, team dynamics, client expectations), which would score well for a construction audience. But authenticity must be judged relative to the target audience: software/IT PMs will find the physical risks (structural collapse, material constraints, multi-year timelines) unfamiliar and not reflective of their actual work context (sprints, code, security vulnerabilities, stakeholder churn on monthly cycles). The scenario is well-crafted but inauthentic to the stated learners.",
+        "emotional_engagement_motivation": "High stakes (structural/safety risk, client pressure, escalating crisis) and a climactic decision point generate genuine tension and engagement as a story. The emotional arc is strong on its own terms. Scored slightly below top marks only because stakes tied to physical collapse risk may read as dramatic but disconnected rather than personally urgent for an IT audience, slightly diluting (not eliminating) the productive tension.",
+        "decision_points_branching_quality": "Decision points are described as meaningful with real consequences shown through escalating complications and a climactic choice—this satisfies the rubric's guidance that even a linear narrative scores well here if characters face genuine dilemmas with visible consequences. The construction-specific nature of the decisions doesn't by itself weaken their instructiveness as decisions.",
+        "transfer_generalizability": "The underlying principles (stakeholder management, scope control, risk mitigation) are real and transferable in the abstract, but the vehicle actively works against transfer: different timelines (years vs. months), different constraints (physical materials vs. code/architecture), and different failure modes (collapse vs. security breach) create surface-level dissonance strong enough that learners may dismiss the lessons as 'not applicable to tech' before extracting the principle. This is the core design flaw of the artifact."
+      },
       "drift": -0.17,
-      "whole_number_overall": false,
-      "within_tolerance": true
+      "whole_number_overall": false
     },
     {
       "archetype": "story_design",
@@ -1622,22 +1724,29 @@
         "decision_points_branching_quality": 4,
         "transfer_generalizability": 2
       },
-      "judge_overall": 2.83,
+      "judge_overall": 2.5,
       "judge_scores": {
-        "narrative_structure": 3,
+        "narrative_structure": 2,
         "learning_narrative_integration": 4,
         "character_situation_authenticity": 2,
-        "emotional_engagement_motivation": 3,
+        "emotional_engagement_motivation": 2,
         "decision_points_branching_quality": 3,
         "transfer_generalizability": 2
       },
       "severity_flags": [
-        "Sanitized consequences (100% turnaround, zero legal/HR complications, perfect PIP compliance) risk teaching supervisors false confidence about outcomes that are actually uncertain and risk-laden in real workplaces",
-        "No branch models failure, ambiguity, or partial success, so learners never practice recovering from a reasonable decision that still goes badly — a core real-world supervisory skill"
+        "Outcome sanitization risks teaching false confidence: learners may believe termination is legally/socially low-risk or that coaching conversations reliably produce full turnarounds.",
+        "No consequence path shows failure, ambiguity, or partial success — removing the realistic 'uncertain outcome' the coaching option explicitly promises in its own label."
       ],
-      "drift": -0.47,
-      "whole_number_overall": false,
-      "within_tolerance": true
+      "rationale": {
+        "narrative_structure": "The scenario offers a situation (declining performance, chronic lateness) and a single decision point with three branches, but there is no developed arc — no rising complication, midpoint reversal, or dark-night-of-the-soul tension before resolution. It reads as a one-beat decision exercise rather than a story with a discernible beginning/middle/end; closer to a case snapshot than a structured narrative.",
+        "learning_narrative_integration": "This is the strongest dimension: the decision itself IS the learning content. Supervisors aren't told 'the lesson is X' separately from the story — the choice between PIP, termination, and coaching is the instructional objective made concrete. No artificial lesson-tacked-on moments are described.",
+        "character_situation_authenticity": "The setup (a late, underperforming agent) is recognizable and grounded in real call-center management. However, authenticity collapses at the consequence stage: a dramatic 100% turnaround from one coaching conversation, instant bloodless termination, and flawless PIP documentation are not believable outcomes supervisors will recognize from their own experience, undermining the realism the setup initially earns.",
+        "emotional_engagement_motivation": "Tension exists at the decision point (three genuinely different-feeling choices), but because every path resolves cleanly and favorably (or simply 'risky' without real fallout), the stakes evaporate rather than build. Learners aren't made to sit with ambiguity or sustained consequence, so engagement stays moderate rather than productive.",
+        "decision_points_branching_quality": "The three choices are well-differentiated and represent genuinely different management philosophies, which is a real strength. But the branches don't diverge into meaningfully different complexity — each converges on an artificially clean resolution, so wrong/risky paths aren't instructive about real risk (legal exposure, morale damage, PIP failure rates), limiting how much the branching teaches.",
+        "transfer_generalizability": "Because outcomes are sanitized, learners risk forming miscalibrated mental models (e.g., 'termination is simple,' 'coaching always works') that won't transfer to real HR situations. The principle a learner should extract — that these paths carry real uncertainty and trade-offs — is actively undercut by the artifact's resolution, weakening transfer rather than supporting it."
+      },
+      "drift": -0.8,
+      "whole_number_overall": false
     },
     {
       "archetype": "cognitive_neuroscience",
@@ -1651,23 +1760,30 @@
         "synaptic_strengthening_factors": 5,
         "theory_practice_grounding": 5
       },
-      "judge_overall": 4.33,
+      "judge_overall": 4.17,
       "judge_scores": {
         "5e_model_alignment": 5,
         "memory_system_optimization": 4,
         "attention_management": 5,
         "emotional_engagement_for_encoding": 3,
         "synaptic_strengthening_factors": 4,
-        "theory_practice_grounding": 5
+        "theory_practice_grounding": 4
       },
       "severity_flags": [
-        "No explicit advance organizer connecting prior knowledge to new content before instruction begins, weakening semantic anchoring (Ausubel, 2000)",
-        "Imagination/mental-simulation strategies are absent, leaving one of the five synaptic-strengthening factors unaddressed",
-        "Emotional engagement rests on a single asserted claim rather than a deliberately designed authentic-stakes or productive-struggle experience"
+        "Emotional engagement is asserted but not operationalized—no authentic stakes, choice, or consequence design",
+        "No advance organizer connecting prior knowledge before Engage/Explore",
+        "Imagination/visualization pathway absent from the Elaborate design"
       ],
-      "drift": -0.47,
-      "whole_number_overall": false,
-      "within_tolerance": true
+      "rationale": {
+        "5e_model_alignment": "All five phases are explicitly present and correctly sequenced, with Explain occurring only after Explore—the critical neurological ordering. Each phase is tied to a specific brain structure (RAS for Engage, basal ganglia for Explore, prefrontal cortex for Explain) and serves its intended function. The brief diffuse-attention reflection between Explore and Explain is a sophisticated touch that most 5E designs omit.",
+        "memory_system_optimization": "All three memory pathways (semantic, episodic, procedural) are explicitly engaged and named, and retrieval practice is systematically spaced (Day 1/3/7) rather than massed. Falls short of a 5 because no explicit advance organizer (Ausubel) bridges prior knowledge before the Engage/Explore phases—the lesson jumps into observation/simulation without first activating or assessing what students already believe about plant energy.",
+        "attention_management": "Segment lengths respect the 10-20 minute attentional window (30 sec, 15 min, 5 min, 12 min), and the 5-minute reflection explicitly functions as a diffuse-attention reset between focused segments. Novelty (grow light vs. darkness) is used strategically and briefly rather than sustained artificially. This is a strong, deliberate attention-management design.",
+        "emotional_engagement_for_encoding": "Personal relevance is asserted ('they care because they grew plants themselves') but not developed—there's no indication of authentic stakes, choice, or consequence tied to the plants' fate, nor any designed productive-struggle challenge calibrated to the edge of competence. The emotional hook is plausible but thin and asserted rather than engineered into the design.",
+        "synaptic_strengthening_factors": "Repetition is spaced and varied (diagram/quiz/transfer), application is authentic (crop yield), and retrieval/memory practice is strong. However, imagination/mental simulation (e.g., visualizing molecular events, 'what if' scenarios) is not explicitly built in, and emotional engagement remains underdeveloped, leaving only partial coverage of the five factors.",
+        "theory_practice_grounding": "Specific brain structures and mechanisms are named throughout (RAS, basal ganglia, prefrontal cortex, declarative/procedural distinction) and the 5E framework is explicit, with retrieval timing clearly reflecting spaced-practice logic. It stops short of a 5 because no specific researchers/studies (e.g., Ausubel, Bjork, Brown et al.) are cited to justify design choices—grounding is implicit/conceptual rather than explicitly sourced."
+      },
+      "drift": -0.63,
+      "whole_number_overall": false
     },
     {
       "archetype": "cognitive_neuroscience",
@@ -1681,24 +1797,30 @@
         "synaptic_strengthening_factors": 5,
         "theory_practice_grounding": 4
       },
-      "judge_overall": 4.83,
+      "judge_overall": 4.5,
       "judge_scores": {
         "5e_model_alignment": 5,
-        "memory_system_optimization": 5,
-        "attention_management": 4,
-        "emotional_engagement_for_encoding": 5,
-        "synaptic_strengthening_factors": 5,
+        "memory_system_optimization": 4,
+        "attention_management": 5,
+        "emotional_engagement_for_encoding": 4,
+        "synaptic_strengthening_factors": 4,
         "theory_practice_grounding": 5
       },
       "severity_flags": [
-        "Two uninterrupted activity stretches (33 min and 30 min) exceed the 10-20 min attention-reset guideline without a dedicated reset or micro-break.",
-        "Action Planning segment (20 min) is not explicitly mapped to a 5E phase, creating ambiguity in how it functions within the model.",
-        "Spaced retrieval practice relies on a single follow-up prompt rather than multiple varied touchpoints, limiting robustness of long-term consolidation.",
-        "Discussing 'what went wrong' using participants' own real organizational scenarios carries latent risk of defensiveness/anxiety if psychological safety isn't explicitly framed, which could suppress productive emotional encoding."
+        "Post-session spaced retrieval relies on only two touchpoints (2-week, 4-week), which is far short of a systematic distributed-practice schedule and risks most content decaying before reinforcement.",
+        "No within-session retrieval practice or interleaving across varied contexts; the pathway from Explore→Explain→Elaborate is a single linear pass rather than a spaced/interleaved cycle.",
+        "The 20-minute action-planning segment and the 'failure video' opener are each individually defensible but, combined with no explicit emotional-arc management (threat→safety), create a mild risk of anxiety priming or an attention segment that slightly exceeds the 10-20 minute reset guideline."
       ],
-      "drift": 0.13,
-      "whole_number_overall": false,
-      "within_tolerance": true
+      "rationale": {
+        "5e_model_alignment": "All five phases are present and correctly sequenced: Engage (video, relevance/curiosity), Explore (small-group authentic problem-solving, basal ganglia-tagged procedural engagement) BEFORE Explain (Kotter's model, stakeholder analysis, explicitly framed as declarative/PFC and explicitly built on the prior Explore discussion), Elaborate (guided visualization for consolidation), and Evaluate (metacognitive reflection). The critical Explore-before-Explain ordering is honored, and each phase maps cleanly to its intended neural/cognitive function.",
+        "memory_system_optimization": "All three pathways are explicitly engaged (episodic via scenarios/visualization, semantic via Kotter's model and concepts, procedural via action planning and group problem-solving), and an advance-organizer logic is used (Explain builds on Explore). However, spaced retrieval is limited to only two post-session touchpoints (2-week email, 4-week meetup) rather than a systematic, multi-point distributed schedule, and no within-session retrieval checks (e.g., quick recall prompts) are built in.",
+        "attention_management": "Segment lengths (15, 18, 15, 15, 20, 5 min) stay within or near the 10-20 minute reset window, with two breaks interspersed and varied activity types (video, discussion, lecture, visualization, planning, reflection) providing strategic novelty. The 20-minute action-planning segment sits at the upper edge without an internal micro-reset, but overall the design alternates focused attention (lecture, planning) with more diffuse/reflective modes (visualization, closing reflection).",
+        "emotional_engagement_for_encoding": "Personal relevance is strong and explicit: real organizational scenarios, a visualization tied to participants' own context, and partner sharing of concrete plans. The amygdala-hippocampal rationale is referenced. The opening 'change failure' video could introduce a threat/anxiety framing if not carefully facilitated toward growth rather than blame, and the emotional arc isn't explicitly managed from threat (failure video) toward safety/efficacy (action planning), which slightly tempers the score.",
+        "synaptic_strengthening_factors": "Application (authentic problem-solving, action plans), Imagination (guided visualization), Memory/retrieval (2-week prompt), and Emotional engagement (authentic, relevant scenarios) are all present. Repetition, however, is weak: within-session practice is essentially single-pass (one discussion, one lecture, one visualization, one plan) with no interleaving across contexts, and post-session spacing is limited to two checkpoints rather than a deliberate spaced/interleaved schedule with desirable difficulties (Bjork).",
+        "theory_practice_grounding": "The design explicitly names its theoretical scaffolding throughout (5E model, Kotter's change model, basal ganglia/prefrontal cortex/hippocampus mappings, episodic/semantic/procedural memory systems, spaced retrieval). Design choices are traceable to stated mechanisms (e.g., Explore precedes Explain because procedural/experiential learning should precede declarative abstraction), satisfying a Grounded Design Model standard with explicit, generalizable theoretical justification."
+      },
+      "drift": -0.2,
+      "whole_number_overall": false
     },
     {
       "archetype": "cognitive_neuroscience",
@@ -1722,15 +1844,21 @@
         "theory_practice_grounding": 1
       },
       "severity_flags": [
-        "90-minute uninterrupted lecture format directly contradicts documented sustained-attention limits (15-20 minutes), risking near-total disengagement and minimal retention",
-        "Explain-only delivery with no Explore phase violates the 5E Model's core sequencing principle, preventing basal-ganglia/procedural groundwork before declarative framing",
-        "Single-pathway (semantic-only) encoding with zero retrieval practice means content is highly vulnerable to rapid forgetting (no desirable difficulties, no spaced retrieval per Brown et al., 2014)",
-        "No mechanism exists to verify comprehension, behavior change, or policy application (e.g., harassment reporting, security protocols), creating organizational/legal risk despite 'compliance' framing",
-        "Content is explicitly divorced from learners' actual work context, eliminating personal relevance and transfer potential"
+        "90-minute unbroken session with zero attention resets directly violates the 15-20 minute sustained-attention ceiling, guaranteeing attentional collapse and near-total information loss for the latter portion of the session",
+        "Explain-only design with no Explore phase inverts/violates the critical 5E sequencing requirement, preventing procedural/experiential grounding before abstract declarative content is introduced",
+        "Single-pathway (semantic-only) encoding with no retrieval practice and no spaced repetition means almost none of the content will transfer to durable long-term memory, undermining the stated compliance/legal purpose of the training",
+        "Complete absence of personal relevance or emotional salience removes the amygdala-hippocampal consolidation boost, and content disconnected from learners' actual work roles eliminates any transfer pathway to real job behavior"
       ],
+      "rationale": {
+        "5e_model_alignment": "Only the Explain phase exists, and even that is reduced to a one-way declarative dump. There is no Engage (no hook, no reticular-formation-activating relevance cue), no Explore (no multi-sensory or procedural interaction via basal ganglia), no Elaborate (no spaced retrieval, no varied contexts for hippocampal consolidation), and no Evaluate (no prefrontal-cortex-engaging metacognitive reflection). Explain is not even preceded by Explore, violating the critical sequencing requirement of the model outright.",
+        "memory_system_optimization": "Encoding relies exclusively on the semantic pathway (passive listening to policy statements), with zero episodic engagement (no vivid experiences, scenarios, or contexts) and zero procedural engagement (no practice or skill rehearsal). No advance organizers connect new material to prior knowledge (violating Ausubel, 2000), and there is no retrieval practice of any kind (violating Brown, Roediger & McDaniel, 2014). This is the single-pathway, massed-exposure floor case.",
+        "attention_management": "A continuous 90-minute block with no segmentation, no breaks, and no interaction massively exceeds the 15-20 minute sustained-attention window before degradation sets in. There is no strategic novelty, no attention resets, and no support for either focused (prefrontal) or diffuse (default mode network) attention modes — just one uninterrupted demand on a system that cannot sustain it.",
+        "emotional_engagement_for_encoding": "Emotional engagement is explicitly absent: no personal relevance is established, no authentic stakes are framed, and no productive struggle exists at all (not even failed attempts at challenge). Flat, monotone slide-reading produces no amygdala-hippocampal salience signal to tag the material as memorable, and content is explicitly divorced from learners' actual work, eliminating any 'why does this matter to me' hook.",
+        "synaptic_strengthening_factors": "None of the five factors are meaningfully present. Repetition, where it exists, is massed (one continuous pass) rather than spaced or interleaved. There is no application/generation (Brown et al., 2014's strongest lever), no retrieval practice, no imagination/visualization/what-if simulation, and no emotional engagement. No desirable difficulties (Bjork) are introduced — the design offers no friction that would strengthen encoding, only passive exposure.",
+        "theory_practice_grounding": "The artifact shows no evidence of any theoretical framework — not 5E, not Cognitive Load Theory, not situated learning, not grounded design. Design choices (90-minute unbroken lecture, slide-reading, bullet-point visuals) read as driven by administrative convenience and compliance-checkbox convention rather than any defensible, research-traceable instructional model. Nothing here would generalize as a validated design pattern."
+      },
       "drift": 0.0,
-      "whole_number_overall": false,
-      "within_tolerance": true
+      "whole_number_overall": false
     },
     {
       "archetype": "cognitive_neuroscience",
@@ -1754,44 +1882,59 @@
         "theory_practice_grounding": 1
       },
       "severity_flags": [
-        "Amygdala hijack: emotional arousal level actively shuts down prefrontal cortex function per Yerkes-Dodson, directly impairing the encoding of safety-critical content.",
-        "No Explain/Elaborate phase: workers never receive conceptual understanding of WHY practices matter, producing compliance without comprehension.",
-        "Massed, non-spaced practice with forced immediate retakes reinforces anxiety and shallow cramming rather than durable learning.",
-        "Fear-based motivation substitutes punishment-avoidance for genuine safety internalization, predicting inconsistent real-world application—a safety-critical failure mode."
+        "Amygdala hijack: emotional arousal level is high enough to suppress prefrontal cortex function per Yerkes-Dodson, actively impairing rather than aiding learning",
+        "Explain/Explore/Elaborate phases of the 5E model are entirely missing — learners receive no conceptual understanding, only compliance pressure",
+        "Massed practice only — immediate forced retake after failure with no spacing, directly contradicting retrieval-practice and spaced-repetition research (Brown et al., 2014)",
+        "Fear-based motivation with no authentic personal relevance, risking long-term disengagement, avoidance behavior, and inconsistent real-world application",
+        "No procedural/hands-on practice with actual fall-prevention equipment, leaving basal ganglia-based skill automatization entirely unaddressed"
       ],
+      "rationale": {
+        "5e_model_alignment": "No identifiable 5E structure. The graphic videos function as a toxic 'Engage' hook (curiosity replaced by threat), but there is no Explore phase (no hands-on, multi-sensory, procedural interaction with equipment/scenarios), no Explain (no declarative conceptual framing of why practices matter), no Elaborate (no varied contexts, spaced retrieval, or transfer), and 'Evaluate' is reduced to a punitive pass/fail quiz rather than metacognitive reflection. Critically, the sequence skips straight from fear-induction to testing, inverting the required Explore-before-Explain order entirely.",
+        "memory_system_optimization": "Only one encoding pathway is weakly engaged: episodic/emotional memory, and it is shallow and context-bound (tied to the fear stimulus rather than the task). No semantic pathway (no advance organizers per Ausubel, no linking to prior knowledge or causal understanding), no procedural pathway (no physical practice with harnesses, anchor points, or scaffolding setup), and no genuine retrieval practice (Brown, Roediger & McDaniel, 2014) — the immediate forced retake is massed re-exposure to the same test, not spaced retrieval from memory.",
+        "attention_management": "A single continuous 40-minute block with no attention resets violates the 10-20 minute rule of thumb. The graphic video is a novelty spike that will habituate and also hijacks attention toward threat-monitoring rather than content. The rapid-fire 20-question format allows no diffuse-mode reflection time; only hypervigilant focused attention is engaged, and even that is directed at self-preservation, not the material.",
+        "emotional_engagement_for_encoding": "Emotional arousal is high but maladaptive: per Yerkes-Dodson, arousal this intense (amygdala hijack) exceeds the optimal zone and suppresses prefrontal cortex function, impairing encoding and reasoning. There is no authentic personal relevance beyond fear, no productive struggle, and no safety net — this is anxiety-based coercion, not meaningful engagement, which the rubric explicitly identifies as a Score-1 pattern.",
+        "synaptic_strengthening_factors": "All five factors are either absent or inverted: repetition is massed (immediate retake, not spaced/interleaved), there is no authentic application or transfer to real work scenarios, memory strategy is effectively limited to one shallow emotional channel with no retrieval practice, there is no imagination/visualization/mental simulation of scenarios, and the one emotional factor present (fear) is counterproductive rather than strengthening. Per Bjork, desirable difficulties are absent; this is undesirable difficulty (threat) instead.",
+        "theory_practice_grounding": "The design is purely atheoretical and convention-driven ('scare workers into compliance'), with no traceable learning-theory rationale behind any choice. Although Yerkes-Dodson and threat-detection research are invoked in the artifact's own description, they are cited to explain why the design fails, not to justify any design decision — there is no grounded design model, no defensible framework, and no generalizable, research-consistent rationale underlying the instructional choices actually made."
+      },
       "drift": -0.2,
-      "whole_number_overall": false,
-      "within_tolerance": true
+      "whole_number_overall": false
     },
     {
       "archetype": "cognitive_neuroscience",
       "case": "09_borderline_01",
-      "expected_overall": 3.5,
+      "expected_overall": 2.8,
       "expected_scores": {
-        "5e_model_alignment": 4,
-        "memory_system_optimization": 3,
-        "attention_management": 4,
-        "emotional_engagement_for_encoding": 3,
-        "synaptic_strengthening_factors": 3,
-        "theory_practice_grounding": 4
-      },
-      "judge_overall": 2.67,
-      "judge_scores": {
-        "5e_model_alignment": 2,
+        "5e_model_alignment": 3,
         "memory_system_optimization": 2,
         "attention_management": 4,
         "emotional_engagement_for_encoding": 3,
         "synaptic_strengthening_factors": 2,
         "theory_practice_grounding": 3
       },
+      "judge_overall": 2.5,
+      "judge_scores": {
+        "5e_model_alignment": 2,
+        "memory_system_optimization": 2,
+        "attention_management": 4,
+        "emotional_engagement_for_encoding": 3,
+        "synaptic_strengthening_factors": 2,
+        "theory_practice_grounding": 2
+      },
       "severity_flags": [
-        "CRITICAL: Explore phase is teacher-demonstrated, not learner-directed — students observe rather than manipulate materials, so the basal ganglia procedural pathway is never engaged, undermining the defining purpose of Explore in the 5E model.",
-        "Explain phase is built on an impoverished Explore foundation, weakening the declarative learning (numerator/denominator, equivalence) that depends on prior embodied experience.",
-        "No procedural/generation-based retrieval practice; 'practice' problems are the first time students actually act on fractions themselves, which is too late in the sequence."
+        "Explore phase is teacher-demonstrated, not learner-directed — basal ganglia/procedural learning pathway is not engaged, violating a core principle of brain-based Explore design",
+        "Absence of hands-on manipulation during Explore weakens the neurological justification for placing Explain after Explore, since there is no procedural experience for declarative explanation to build upon",
+        "No spaced or interleaved retrieval practice; practice is massed and procedural encoding is shallow"
       ],
-      "drift": -0.83,
-      "whole_number_overall": false,
-      "within_tolerance": false
+      "rationale": {
+        "5e_model_alignment": "All five 5E phases appear in the correct sequence (Explain follows Explore, not before), which avoids the most severe ordering violation. However, the Explore phase fails its core neurological function: it is teacher-demonstrated rather than learner-directed, so it does not provide the multi-sensory, hands-on, basal-ganglia-engaging experience Explore is supposed to deliver. This means Explain is built on a weak foundation (observed procedure, not performed procedure), undermining the brain-based rationale for sequencing Explore before Explain even though the surface order is correct.",
+        "memory_system_optimization": "Semantic pathway is engaged (numerator/denominator explanation, equivalence concepts) and there is a thin episodic layer (watching a relatable pizza-cutting scenario), but the procedural pathway (basal ganglia/cerebellum) is essentially absent because students never manipulate, measure, or cut anything themselves. Retrieval practice exists only lightly in guided practice and partner discussion, with no evidence of spacing or systematic retrieval cues. Only one pathway (semantic) is robustly engaged.",
+        "attention_management": "Segment lengths (20, 15, 10 minutes) are within or near the recommended 10-20 minute attention-reset window, and phase transitions (video hook → demo → explanation → practice → discussion) provide natural novelty/reset points. The video hook introduces strategic novelty rather than constant stimulation. This is reasonably well managed, though the 20-minute teacher-led Explore segment sits at the upper edge and lacks active engagement to sustain focused attention.",
+        "emotional_engagement_for_encoding": "The cooking/pizza hook creates moderate personal relevance (recipes, food) and the amygdala-hippocampal interaction is mildly activated by the relatable context. However, there is no productive struggle, authentic stakes, or deepening of personal relevance beyond the initial hook — students passively observe rather than grapple with material, which caps emotional salience at a moderate level.",
+        "synaptic_strengthening_factors": "Application is present in a limited form (guided practice, partner discussion) and emotional engagement is mild (pizza relevance), but repetition is massed rather than spaced/interleaved, retrieval practice is thin, and imagination/visualization ('what if the pieces were different sizes?') is entirely absent. Only two of the five factors are meaningfully present, and neither is strongly integrated.",
+        "theory_practice_grounding": "The lesson explicitly adopts the 5E framework, giving it surface-level theoretical grounding, but the actual design decision for Explore (teacher demonstration instead of student manipulation) is atheoretical and contradicts the very neuroscience rationale (procedural/basal ganglia engagement) that justifies the Explore phase in brain-based instructional design. The mismatch between stated framework and implementation reveals craft-based rather than theory-driven decision-making at a critical juncture."
+      },
+      "drift": -0.3,
+      "whole_number_overall": false
     },
     {
       "archetype": "cognitive_neuroscience",
@@ -1805,24 +1948,30 @@
         "synaptic_strengthening_factors": 3,
         "theory_practice_grounding": 3
       },
-      "judge_overall": 3.33,
+      "judge_overall": 3.17,
       "judge_scores": {
         "5e_model_alignment": 3,
         "memory_system_optimization": 2,
         "attention_management": 3,
         "emotional_engagement_for_encoding": 5,
-        "synaptic_strengthening_factors": 3,
+        "synaptic_strengthening_factors": 2,
         "theory_practice_grounding": 4
       },
       "severity_flags": [
-        "No Elaborate phase: memory consolidation, spaced practice, and varied-context application are entirely absent, risking rapid decay of in-the-moment learning.",
-        "Zero retrieval practice or spaced retrieval cues (1-day, 3-day, 1-week) — directly contradicts Brown, Roediger & McDaniel (2014) findings on retrieval as the single most effective durability mechanism.",
-        "Single-session massed practice with no follow-up application opportunities; transfer to novel customer scenarios is unaddressed, leaving transfer outcomes uncertain.",
-        "High emotional/episodic encoding in the moment is not leveraged post-session — without reinforcement, strong initial encoding is likely to be wasted as unconsolidated memory."
+        "Critical: No spaced retrieval practice post-training — forgetting of key principles is explicitly predicted to be high within days, undermining the entire investment in the live session",
+        "Critical: Elaborate phase is essentially absent, so episodic/emotional encoding from the role-play has no mechanism to consolidate into durable, transferable knowledge",
+        "Moderate: No transfer practice to novel customer scenarios beyond the original role-play, leaving generalization uncertain"
       ],
-      "drift": -0.17,
-      "whole_number_overall": false,
-      "within_tolerance": true
+      "rationale": {
+        "5e_model_alignment": "Engage, Explore, and Explain are correctly sequenced (Explain follows Explore, respecting the procedural-before-declarative transition), and a brief Evaluate phase exists. However, Elaborate is explicitly 'minimal' — there is no systematic consolidation, varied-context practice, or spaced retrieval built into the design. A single-session workshop with no post-training follow-up cannot support hippocampal consolidation, so the model is only partially realized.",
+        "memory_system_optimization": "Episodic encoding is strong (real customer call scenarios, lived role-play experience) and procedural encoding is strong (basal ganglia engagement via repeated physical/verbal practice). Semantic encoding (explicit conceptual frameworks, advance organizers per Ausubel) is largely implicit/absent, and there is zero retrieval practice — no spaced retrieval cues at 1 day, 3 days, or 1 week, which Brown, Roediger & McDaniel (2014) identify as the single most powerful lever for durable retention. Two of three pathways engaged, no systematic spacing.",
+        "attention_management": "The 25-minute Explore block exceeds the 10-20 minute attention-reset guideline with no described sub-breaks or novelty refresh within it, though the overall session (40 min) is not egregiously long and does shift modality (video → role-play → debrief → reflection), which naturally supports some attention switching. No explicit diffuse-attention/reflection pacing is described beyond the brief 5-minute evaluate.",
+        "emotional_engagement_for_encoding": "Emotional engagement is authentic and high-stakes without being fear-driven: employees have genuine personal/professional relevance (job performance tied to customer service), authentic materials (real calls), and productive struggle (difficult but survivable challenge) rather than debilitating anxiety. This is close to an ideal amygdala-hippocampal encoding condition in the moment.",
+        "synaptic_strengthening_factors": "Application (authentic role-play) and strong emotional reactions are clearly present, and imagination is modestly engaged through scenario simulation. However, repetition is massed (single session, no spacing/interleaving) and memory/retrieval practice is entirely absent — no generation effect opportunities after the initial session. Only 2-3 of 5 factors are meaningfully present, and the two most evidence-backed levers (spaced repetition, retrieval practice) are explicitly missing.",
+        "theory_practice_grounding": "The artifact explicitly names underlying mechanisms (basal ganglia for procedural learning, hippocampus/amygdala for episodic-emotional encoding, 5E phase labels, spaced retrieval, consolidation) and diagnoses its own gaps in theoretical terms rather than through craft intuition. This makes the design decisions traceable to a research basis, even though the practice itself does not yet operationalize spaced retrieval or elaboration — the grounding is in the diagnosis more than the intervention."
+      },
+      "drift": -0.33,
+      "whole_number_overall": false
     },
     {
       "archetype": "curriculum_alignment",
@@ -1836,53 +1985,67 @@
         "vertical_alignment": 5,
         "discipline_alignment": 5
       },
-      "judge_overall": 4.83,
+      "judge_overall": 4.67,
       "judge_scores": {
-        "objective_strategy_coherence": 5,
+        "objective_strategy_coherence": 4,
         "strategy_assessment_coherence": 5,
-        "objective_assessment_coherence": 5,
+        "objective_assessment_coherence": 4,
         "coverage_completeness": 5,
-        "vertical_alignment": 4,
+        "vertical_alignment": 5,
         "discipline_alignment": 5
       },
       "severity_flags": [
-        "M3's 'Analyze' Bloom tag covers a task (producing a new SBAR document) that also carries Create-level synthesis demand; not a coherence break since objective, instruction, and assessment all treat it consistently, but worth noting if a separate archetype later audits objective quality.",
-        "No explicit statement of how NURS 305 vertically connects to adjacent courses in the BSN curriculum (what it presumes from semester 3, what it enables in semester 5) — only within-course sequencing is evidenced."
+        "M3's 'Analyze' Bloom label is not fully supported by its instruction or assessment, both of which emphasize correct application of the SBAR template rather than differentiating clinically significant from insignificant findings — a mislabeled cognitive level rather than a true Analyze task.",
+        "The course-level objective ('document findings to nursing standards') does not itself specify an Analyze-level demand, leaving a minor unexplained gap between the course objective's apparent Apply ceiling and M3's stated Analyze objective."
       ],
-      "drift": -0.17,
-      "whole_number_overall": false,
-      "within_tolerance": true
+      "rationale": {
+        "objective_strategy_coherence": "M1 (Remember) and M2 (Apply) instruction match their stated verbs precisely: M1's video+flashcards drill definitions for an 'identify' objective; M2's worked example + guided role-play directly rehearses the 'demonstrate...within 8 minutes' objective. M3 is the weak point: the objective is labeled Analyze, but the instruction (annotated strong/weak examples, guided practice transposing a transcript into SBAR, peer review) primarily teaches correct application of a documentation template rather than true analytic skills (e.g., discriminating clinically significant from insignificant findings, synthesizing conflicting data). No extraneous content exists outside the three objectives.",
+        "strategy_assessment_coherence": "Each assessment is a direct extension of its practice activity in both format and demand: M1's MC quiz mirrors flashcard drill; M2's recorded simulated interview mirrors the guided role-play format and criteria (component presence, timing); M3's 'write a note from a fresh transcript' is literally the same task type as the guided practice, just on new data. Learners face no surprise in task type or modality at any level.",
+        "objective_assessment_coherence": "M1 and M2 show strong verb/criterion fidelity: 'identify' -> matching quiz; 'demonstrate...within 8 minutes' -> rubric scoring component presence plus time-to-completion. M3's criterion fidelity is also good ('a note another nurse could use' -> 'handoff usability' scored directly), but the Bloom-level claim is only partly supported: the rubric criteria (SBAR structure, completeness against OPQRST, handoff usability) assess correct application of a format more than analytic reasoning, so the Analyze label is not fully earned by what is actually measured.",
+        "coverage_completeness": "All three objectives are taught and assessed with no orphans; no instructional content exists that doesn't trace to an objective. The appendix competency map plus the clear one-to-one module/objective/instruction/assessment structure makes a blueprint trivially derivable.",
+        "vertical_alignment": "Explicit prerequisite logic is stated and logically sound: M1 (Remember the parts) must precede M2 (Apply them in real time), which must precede M3 (cannot document an interview not yet conducted). Bloom level rises stepwise across modules (1->3->4), consistent with a whole-task/elaboration progression rather than mere repetition.",
+        "discipline_alignment": "Each module objective maps explicitly and individually to a named AACN Essential, and a competency map is maintained for CCNE site visits — exactly the traceable upward linkage the rubric calls for. The three Essentials chosen (I.3, II.1, IV.2) are plausible fits for their respective module content, though the IV.2 (health IT) mapping for M3's documentation/SBAR work is a slightly looser fit than the other two and could be double-checked against AACN language."
+      },
+      "drift": -0.33,
+      "whole_number_overall": false
     },
     {
       "archetype": "curriculum_alignment",
       "case": "bad_01_bloom_drift",
-      "expected_overall": 2.5,
+      "expected_overall": 2.2,
       "expected_scores": {
         "objective_strategy_coherence": 2,
         "strategy_assessment_coherence": 4,
         "objective_assessment_coherence": 1,
-        "coverage_completeness": 3,
-        "vertical_alignment": 3,
+        "coverage_completeness": 2,
+        "vertical_alignment": 2,
         "discipline_alignment": 2
       },
-      "judge_overall": 1.33,
+      "judge_overall": 1.67,
       "judge_scores": {
         "objective_strategy_coherence": 1,
-        "strategy_assessment_coherence": 2,
+        "strategy_assessment_coherence": 4,
         "objective_assessment_coherence": 1,
         "coverage_completeness": 1,
-        "vertical_alignment": 1,
-        "discipline_alignment": 2
+        "vertical_alignment": 2,
+        "discipline_alignment": 1
       },
       "severity_flags": [
-        "CRITICAL: Bloom-level mismatch across all three legs (objective=Analyze; instruction=Remember/Understand; assessment=Remember/Understand) — the module teaches and tests recall of definitions while claiming to teach analysis.",
-        "CRITICAL: No instructional activity ever models or practices the application of ethical frameworks to a case, and no assessment item requires it — the core objective behavior ('analyze...to recommend') is never operationalized anywhere in the module.",
-        "No case-based, essay, or recommendation task exists despite being the explicit deliverable implied by the objective ('recommend the most defensible action').",
-        "Weeks 1-2 are substantively redundant (lecture then textbook reading of the same definitions), consuming instructional time without advancing toward the stated skill."
+        "Objective states Bloom 4 (Analyze) with a decision/recommendation outcome; instruction and assessment never exceed Bloom 2 (Understand) — a two-level cognitive gap.",
+        "Zero analysis practice opportunities exist in 3 weeks of instruction (no worked examples, no guided case practice, no peer practice).",
+        "Assessment contains no performance task capable of measuring 'analyze' or 'recommend' (all 30 items are MC Remember/Understand).",
+        "Capped overall score triggered: Objective<->Assessment Coherence = 1, which is at or below the critical threshold of 2."
       ],
-      "drift": -1.17,
-      "whole_number_overall": false,
-      "within_tolerance": false
+      "rationale": {
+        "objective_strategy_coherence": "The objective verb is 'analyze' (Bloom 4) applied to a business decision to reach a defensible recommendation. All three weeks of instruction operate at Remember/Understand: Week 1 is definitional lecture (vocabulary, key thinkers), Week 2 restates the same definitions via reading, and Week 3 shows one-sentence framework-labeling in news examples with 'no analysis demonstrated.' There is no worked model of analysis, no guided practice applying a framework to a case, and no practice recommending/defending an action. The stated behavior is never modeled or rehearsed, so instruction and objective are essentially disconnected.",
+        "strategy_assessment_coherence": "Scored on its own terms per the rubric's guidance for cases where instruction and assessment agree with each other but both miss the objective: here they are well matched. Instruction taught definitions, philosopher-to-framework pairings, and framework-recognition examples; the exam tests exactly that — 20 Remember items on definitions, 5 Remember items matching philosophers to frameworks, and 5 Understand items recognizing which framework 'best supports' a scenario (mirroring the Week 3 labeling exercise). No surprises exist for the learner relative to what was practiced, even though what was practiced was never analysis.",
+        "objective_assessment_coherence": "Severe verb and Bloom-level mismatch: the objective demands Analyze-level work culminating in a justified recommendation; the assessment is 30 MC items capping at Understand (recognition/matching), with zero analysis, essay, case-based, or recommendation tasks. Webb's DoK for the assessment is DoK 1 (recall) at best, versus DoK 3 implied by 'analyze...to recommend' in the objective. The rubric criterion implied by the objective (defensible, framework-grounded recommendation) has no corresponding assessment criterion at all.",
+        "coverage_completeness": "The objective's core demands — analyzing a decision through three frameworks and producing a defensible recommendation — are never taught and never tested. Only the declarative substrate (framework names, definitions, thinkers) is covered by both instruction and assessment. This is a textbook orphan objective: stated at a high cognitive level but addressed only at a low one everywhere downstream. No blueprint/table of specifications could be derived that shows analysis-level coverage because none exists.",
+        "vertical_alignment": "Treating this as a single-module, within-sequence case (per the adaptation note for single-lesson/single-module artifacts): the three weeks do not build — they repeat. Week 1 defines the frameworks, Week 2 reads the same definitions again, and Week 3 merely relabels examples without adding analytic depth or complexity. There is no elaboration (Reigeluth), no spiral (Bruner) toward the whole task of multi-framework analysis and recommendation, and no scaffolded progression from part-task (define) to whole-task (analyze and recommend) as a 4C/ID design would require.",
+        "discipline_alignment": "No external competency framework (e.g., AACSB ethical reasoning standards, professional business ethics competencies) is stated or referenced, despite this being the kind of applied ethical-reasoning skill typically mapped to such frameworks in business curricula. Absent that linkage, and given the module also fails to even reach its own stated objective's cognitive level, there is no traceable upward mapping from this module's content to any discipline-level competency. Scored low rather than adapted-out, since a business ethics module is a plausible candidate for such mapping and none is evident."
+      },
+      "drift": -0.53,
+      "whole_number_overall": false
     },
     {
       "archetype": "curriculum_alignment",
@@ -1906,14 +2069,22 @@
         "discipline_alignment": 2
       },
       "severity_flags": [
-        "Objective-Assessment Coherence scored 1: two of three stated objectives (O2, O3) are not assessed at all, and the one assessed objective (O1) is tested at a lower Bloom level ('Apply' stated vs. recognition-level MCQ delivered) — overall score capped at 3.0 per rubric rule.",
-        "Approximately 50% of workshop time (VP talk, inspirational video, stakeholders segment) is instructional content with no traceable link to any stated objective — a major extraneous-content/coverage violation.",
-        "O2 and O3 are taught at Remember-level only (slides/demo) despite objectives requiring Apply-level behavior ('conduct,' 'identify and escalate') — no opportunity to practice before being expected to perform on the job.",
-        "No rubric, criterion, or performance checklist exists anywhere that mirrors any objective's stated criterion, undermining the assessment's validity for certifying competence."
+        "2 of 3 stated objectives (O2, O3) are not assessed at all — assessment covers only 1 objective",
+        "O2 and O3 are taught only at Remember/exposure level (slides, demo) despite being Apply-level ('conduct', 'identify and escalate') objectives — no practice provided",
+        "~50% of workshop time (VP talk, case-study video, stakeholder segment) is extraneous content with no objective linkage",
+        "Objective-Assessment Coherence scores 1, triggering the overall score cap per rubric rule",
+        "No stated or traceable linkage to an external PM competency framework"
       ],
+      "rationale": {
+        "objective_strategy_coherence": "Only O1 gets Bloom-appropriate practice (60-min RACI group exercise = Apply, matching 'Apply the RACI matrix'). O2 ('Conduct a kickoff meeting') is taught only via slides explaining the agenda — Remember-level exposure with no opportunity to actually run or practice a kickoff, so the taught level falls short of the stated 'conduct' (Apply/psychomotor) verb. O3 ('Identify and escalate risks') is taught via instructor demo only — again Remember/Understand level, with no learner practice identifying or escalating anything, short of the 'identify and escalate' (Apply) verb. Additionally, 120 of 240 minutes (VP philosophy talk, inspirational case-study video with no analysis task, 'difficult stakeholders' segment) are extraneous — not tied to any objective at all, which is half the workshop.",
+        "strategy_assessment_coherence": "The RACI exercise (hands-on, Apply-level) is followed by an MCQ quiz (recall/recognition), so even the one component with genuine practice is assessed at a lower cognitive demand than it was practiced — a format/demand mismatch. For O2 and O3, the practice that did occur (passive slides, passive demo) has literally nothing it could be mirrored against because no assessment items exist for them, so there is no coherence to evaluate — a total disconnect for 2 of 3 objectives.",
+        "objective_assessment_coherence": "Verb-to-task match fails broadly: O1 says 'Apply' but is tested with MCQ recall, not an applied task (e.g., build/critique a RACI). O2 ('Conduct...') and O3 ('Identify and escalate...') are not assessed at all — zero verb match, zero Bloom match, zero DoK match, no criterion carried into any rubric because no rubric/assessment exists for them. Only 1 of 3 objectives is even nominally assessed, and that one is at a mismatched Bloom level.",
+        "coverage_completeness": "No objective is fully covered across both instruction and assessment: O1 is taught well but under-assessed (Bloom mismatch); O2 and O3 are weakly taught (exposure only) and completely unassessed. Simultaneously, roughly half of the instructional time (VP talk, case-study video, stakeholder segment) is orphan instruction with no traceable objective. No blueprint/table of specifications is present or derivable — the three columns (objectives, instruction, assessment) do not line up as a matrix.",
+        "vertical_alignment": "This is a single 4-hour workshop, so vertical alignment is scored as within-lesson sequencing per the rubric's adaptation note. There is a faint logical arc (roles via RACI → process via kickoff → monitoring via risk register) that loosely tracks a project lifecycle, but it is repeatedly interrupted by unrelated segments (ice-breaker/VP talk, case-study video, stakeholder management) that neither build on nor connect to what precedes or follows them, breaking any scaffolding or elaboration logic.",
+        "discipline_alignment": "No external competency framework (e.g., PMI/PMBOK, PMI Talent Triangle, organizational PM competency model) is explicitly cited or mapped to the three objectives. The topics chosen (RACI, kickoff, risk register) are recognizable standard PM knowledge areas, giving an implicit, unstated correspondence to common PM competency domains, but there is no traceable, explicit linkage as the rubric requires."
+      },
       "drift": -0.53,
-      "whole_number_overall": false,
-      "within_tolerance": true
+      "whole_number_overall": false
     },
     {
       "archetype": "curriculum_alignment",
@@ -1927,23 +2098,29 @@
         "vertical_alignment": 3,
         "discipline_alignment": 2
       },
-      "judge_overall": 4.33,
+      "judge_overall": 3.83,
       "judge_scores": {
         "objective_strategy_coherence": 4,
-        "strategy_assessment_coherence": 4,
+        "strategy_assessment_coherence": 3,
         "objective_assessment_coherence": 5,
-        "coverage_completeness": 5,
+        "coverage_completeness": 4,
         "vertical_alignment": 4,
-        "discipline_alignment": 4
+        "discipline_alignment": 3
       },
       "severity_flags": [
-        "Time-criterion gap: the objective and assessment both impose a hard 10-minute limit, but no instructional activity rehearses performance under that exact time pressure (guided practice is untimed; independent practice allows 15 minutes) — learners are tested on a condition they never practiced.",
-        "Hint/scaffold withdrawal at assessment (hints and step-checks present in practice, absent in the performance task) is appropriate for an application-level test but is not flagged anywhere in the lesson, risking learner surprise.",
-        "No stated prerequisites — baseline Excel familiarity is assumed but never verified or stated, which is a minor completeness gap rather than a critical one given the lesson's optional/standalone status."
+        "Time-criterion mismatch: independent practice permits 15 minutes while the assessment pass criterion requires completion in under 10 minutes — the hardest part of the stated objective (speed) is tested at a stricter standard than it was ever practiced.",
+        "No discipline-level or role-based competency mapping exists; acceptable for an explicitly 'optional' module but should be flagged if this module is ever repurposed into a required curriculum."
       ],
-      "drift": 0.13,
-      "whole_number_overall": false,
-      "within_tolerance": true
+      "rationale": {
+        "objective_strategy_coherence": "The objective's core behavior ('create a pivot table... one numeric field by two categorical fields... with totals') is directly practiced across the worked example, guided practice, and independent practice — a textbook 'I do/we do/you do' progression at the Apply level (Bloom). No extraneous content is present; every instructional block serves the single objective. The one gap: the objective's explicit time criterion ('within 10 minutes') is never practiced at that standard — independent practice allows 15 minutes, 50% more time than the stated/tested criterion — so one component of the objective (speed) is under-rehearsed relative to how it is stated and later tested.",
+        "strategy_assessment_coherence": "Format and cognitive demand otherwise mirror the practice: a fresh dataset, a specification to build to, same construction task. However, the assessment imposes a stricter time limit (under 10 minutes) than was ever practiced (15 minutes in independent practice), and scaffolding (hints/checks) present during practice is presumably withdrawn at assessment. This is a genuine 'surprise' on the time dimension even though the structural task itself was well-rehearsed, which caps this dimension below the otherwise-strong content alignment.",
+        "objective_assessment_coherence": "Near-perfect match: verb ('create a pivot table') identical, criteria (one numeric field, two categorical fields, totals, 10-minute limit) are reproduced almost verbatim in the assessment (salary by department and job level, totals present, under 10 minutes). The domain switch (sales to HR) is appropriate and does not violate the objective, since the objective specifies structure, not domain — this is a legitimate, even desirable, transfer check. DoK and Bloom level (Apply/procedural) are consistent.",
+        "coverage_completeness": "There is a single objective, and it is addressed in both instruction and assessment with no orphan content and no orphan objective — a blueprint is trivially derivable given the 1:1 mapping. The only incomplete element is that the pass criterion's time constraint (10 min) is not fully covered by instruction (practice stops at 15 min), so coverage of one sub-criterion of the objective is partial rather than complete.",
+        "vertical_alignment": "This is a standalone, single-lesson module (adaptation per rubric note: scored on within-lesson sequencing rather than cross-lesson progression). The sequence — modeling, scaffolded practice, independent practice, assessment — follows a coherent gradual-release logic with decreasing support. The one flaw is an abrupt tightening of the time constraint between independent practice (15 min) and assessment (10 min) with no intermediate step scaffolding that specific demand down.",
+        "discipline_alignment": "Adaptation per rubric note: this module is explicitly non-discipline-mapped ('Optional Excel Skills,' standalone, no prerequisites, no competency framework). Given its stated purpose as an optional, self-contained skill resource, the absence of competency-framework linkage is not a design failure, but it also means there is no traceable upward mapping to any broader data-analysis or role competency, which is the literal construct this dimension measures. Internally, the module is coherent with its own narrow, stated purpose."
+      },
+      "drift": -0.37,
+      "whole_number_overall": false
     },
     {
       "archetype": "curriculum_alignment",
@@ -1957,24 +2134,31 @@
         "vertical_alignment": 2,
         "discipline_alignment": 3
       },
-      "judge_overall": 1.67,
+      "judge_overall": 1.5,
       "judge_scores": {
         "objective_strategy_coherence": 2,
         "strategy_assessment_coherence": 1,
         "objective_assessment_coherence": 2,
         "coverage_completeness": 1,
-        "vertical_alignment": 2,
+        "vertical_alignment": 1,
         "discipline_alignment": 2
       },
       "severity_flags": [
-        "Final assessment (40% of grade) tests qualitative research skills (interviewing, transcription, thematic coding, theme development) that receive zero instructional practice — only a single non-practice overview lecture.",
-        "11 of 12 instructional weeks (quantitative methods, statistics, SPSS, survey design) are not measured by any assessment component described, representing near-total orphan instruction.",
-        "Rubric criteria (coding rigor, theme development, use of qualitative literature) have no corresponding practiced skill or stated objective criterion — students are being graded on unlearned competencies.",
-        "No scaffolding or formative practice bridges the week 12 qualitative lecture to the high-stakes summative qualitative project."
+        "Final assessment (40% of grade) tests qualitative coding/thematic-analysis skills that received zero instructional practice — a high-stakes validity failure.",
+        "11 of 12 weeks of instruction are not measured by any assessment described, raising questions about what the grade actually certifies.",
+        "Single lecture with 'no practice' is used as the sole bridge between an entire course's quantitative curriculum and a qualitative capstone — insufficient scaffolding for a 40%-weighted deliverable.",
+        "Objective is generic enough to avoid outright contradiction but fails to specify methodology, criteria, or Bloom level actually assessed, masking the misalignment at the objective-assessment level."
       ],
-      "drift": -0.63,
-      "whole_number_overall": false,
-      "within_tolerance": true
+      "rationale": {
+        "objective_strategy_coherence": "The objective ('design and execute a research study...using sound methodology') is broad enough to be nominally served by 11 weeks of quantitative design, stats, and survey-construction instruction — that content does practice 'design' at an apply/analyze level. But 'execute a research study' as an integrated, end-to-end synthesis task (Bloom: Create) is never practiced — students practice isolated sub-skills (run a t-test, build a Likert scale) rather than designing-and-executing a full study. The qualitative half of the objective's possible scope gets only a single unpracticed 90-minute lecture (definitions only, one example, 'no practice' per the artifact itself), so the verb is not practiced at the level or in the domain ultimately demanded.",
+        "strategy_assessment_coherence": "This is the sharpest break in the artifact. Instruction is ~92% quantitative (design, SPSS/stats, survey/sampling, APA quant reporting) with zero practice in coding, transcription, or inter-rater reliability. The final assessment is 100% qualitative (interview, transcribe, thematic-code via Braun & Clarke, develop themes, write findings with quotes) and is graded primarily on coding rigor and theme development — skills that were explicitly never practiced. Learners face a complete 'surprise' assessment relative to practice.",
+        "objective_assessment_coherence": "The objective's language ('sound methodology') is generic enough to not explicitly contradict a qualitative task, so it is not a total verb mismatch — but the objective gives no criteria resembling the rubric's actual criteria (coding rigor, use of qualitative literature, thematic development). DoK and Bloom level for the assessment (synthesizing codes into themes, DoK 3-4) is plausible for a 'design and execute' objective, but nothing in the objective signals qualitative methodology, interview protocol, or coding as the criterion of success. Because the objective doesn't name the methodology or criteria actually assessed, this scores low (2), which per the rubric caps overall at 3.0 — though the realized overall is already far below that cap.",
+        "coverage_completeness": "No blueprint is derivable without major mismatch. Eleven weeks of instruction (quant design, statistics, survey/sampling, quant reporting) are orphaned — none of it is assessed. The assessment's core skills (interviewing, transcription, thematic coding, qualitative literature integration) are orphaned in the opposite direction — assessed but not taught (explicitly: 'no coding practice, no transcript analysis exercise, no inter-rater reliability work'). This is close to two independent lists plus one disconnected lecture bridging them.",
+        "vertical_alignment": "Within this single-course artifact, weeks 1-11 build logically (design → analysis → instrumentation → reporting) as a coherent quantitative strand. But the progression does not elaborate toward the final task at all; week 12 is a non-sequitur pivot, not a capstone integration of what preceded it. Scored as within-course sequencing per the single-artifact note: the terminal assessment does not represent the culmination of the preceding 11 weeks' scaffolding, so the course's visible logic actively points away from its own final deliverable.",
+        "discipline_alignment": "No external competency framework (e.g., APA research-training guidelines, doctoral research-competency matrices) is stated or referenced. Independently of that absence, even an implicit discipline mapping (producing dissertation-ready quantitative or mixed-methods research skill) is undermined because the credentialing deliverable (40% of grade) requires a qualitative competency the course did not build, so any upward mapping of objectives to discipline-level research competencies would be unsupported by the actual instructional record."
+      },
+      "drift": -0.8,
+      "whole_number_overall": false
     },
     {
       "archetype": "curriculum_alignment",
@@ -1988,9 +2172,9 @@
         "vertical_alignment": 5,
         "discipline_alignment": 5
       },
-      "judge_overall": 3.5,
+      "judge_overall": 3.33,
       "judge_scores": {
-        "objective_strategy_coherence": 3,
+        "objective_strategy_coherence": 2,
         "strategy_assessment_coherence": 2,
         "objective_assessment_coherence": 3,
         "coverage_completeness": 3,
@@ -1998,13 +2182,20 @@
         "discipline_alignment": 5
       },
       "severity_flags": [
-        "Week 5 'React State Management': two-level Bloom drift between objective (Apply) and assessment (Remember via MC quiz) — the capstone-critical skill of state management is being certified at a recall level, not application level, creating risk that learners reach the capstone without having been validated on a core hireable skill.",
-        "Week 11 'Database Normalization': assessment tests Analyze-level skill (identify normalization violations) that was never practiced in instruction (examples only, no analysis exercises) — learners are tested on an unpracticed skill, violating the 'no surprises' principle even though the objective-assessment pairing itself is technically correct.",
-        "Strategy-Assessment Coherence is the systemic weak point (2/5): in 2 of 3 sampled units, what is taught does not match in format or cognitive demand what is assessed, suggesting this pattern may recur across other modules not shown in the excerpt."
+        "Week 5 'React State Management' shows a three-way Bloom-level cascade failure: Apply objective -> Understand-level instruction -> Remember-level assessment. The MC quiz on hook syntax cannot certify the stated competency of applying hooks in a real application.",
+        "Week 11 'Database Normalization' assessment (Analyze) outruns its instruction (exposure/examples only, no guided analysis practice) — learners are being tested on a skill they were shown but never asked to perform before the summative assessment.",
+        "Only 3 of an unknown number of modules were sampled, and 2 of the 3 already show coherence failures — this raises risk that similar drift is present elsewhere in the 12-week curriculum but undetected without a full module-by-module audit."
       ],
-      "drift": -0.3,
-      "whole_number_overall": false,
-      "within_tolerance": true
+      "rationale": {
+        "objective_strategy_coherence": "Of the three modules detailed, two show clear Bloom-level drift between objective and instruction. Week 5's objective states 'Apply' but instruction is 80% lecture/reading (Understand level) with only one small exercise — the verb 'apply' is never substantively practiced. Week 11's objective states 'Analyze' but instruction provides only examples, no analysis practice — learners are shown, not asked to analyze. Only Week 8 (REST API Design) shows objective-instruction match. A 1-of-3 success rate on sampled evidence indicates instruction is not reliably teaching to the stated objective verb or cognitive level.",
+        "strategy_assessment_coherence": "Week 5's instruction (mostly passive lecture/reading, Understand-level) is followed by an assessment pitched even lower (Remember-level MC syntax quiz) — a mismatch in cognitive demand between what was practiced and what was tested. Week 11's instruction (examples only, no analysis practice) is followed by an assessment that demands analysis — an explicit instruction-assessment mismatch per the artifact's own labeling. Only Week 8 shows strategy-assessment alignment (build-an-endpoint practice tested by build-an-endpoint task). Two of three sampled modules show learners being assessed on skills they did not get to practice in the same form or at the same cognitive level.",
+        "objective_assessment_coherence": "Week 8 (Apply objective / Apply assessment) and Week 11 (Analyze objective / Analyze assessment) both show verb and Bloom-level match between objective and assessment. Week 5 shows a severe mismatch: objective demands Apply, assessment tests Remember (recall of hook syntax via MC) — a two-level drop in Webb's DoK and Bloom level, with no indication the rubric criterion in the objective ('manage component state in a real application') is reflected in the quiz. Mixed evidence (2 of 3 aligned, 1 severely misaligned) keeps this at a mid-range score rather than a failing one, but the Week 5 case is a significant, named defect.",
+        "coverage_completeness": "The artifact names only 3 of what is presumably dozens of weekly modules across 12 weeks, so a full blueprint/table of specifications cannot be verified from the evidence given. No orphan objectives or orphan instruction are explicitly reported, and the week-by-week phase structure (HTML/CSS/JS -> React -> Node/Express -> DB/integration -> capstone) implies objectives are organized and traceable. However, without an explicit coverage map or confirmation that every objective in every module is both taught and tested, completeness cannot be rated higher than moderate — especially given that 2 of the 3 sampled modules already show gaps between what is objective-stated, taught, and tested.",
+        "vertical_alignment": "Explicitly strong and well-evidenced: the 12-week sequence moves from fundamentals (HTML/CSS/JS) through React, then backend (Node/Express), then database/full-stack integration, culminating in a capstone that synthesizes all prior phases. Prerequisites are stated, and later phases extend rather than repeat earlier ones (e.g., React consumes JS fundamentals; Express/DB integration consumes both frontend and backend skills). This matches elaboration/whole-task progression logic (Reigeluth 1999; van Merriënboer & Kirschner 2018).",
+        "discipline_alignment": "Explicitly strong: outcomes are mapped to a published 'Junior Developer Readiness' competency framework, which is itself aligned to hiring-partner job descriptions — giving a traceable, two-tier linkage from unit objectives up to industry-facing competencies (Hirumi, Ratliff & de la Mora 2021). No evidence contradicts this claim, though the artifact does not show the actual crosswalk table, so full verification of 'every objective maps upward' is not directly demonstrated but is reasonably inferable from the stated structure."
+      },
+      "drift": -0.47,
+      "whole_number_overall": false
     }
   ]
 }

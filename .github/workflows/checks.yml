@@ -1,0 +1,33 @@
+name: checks
+
+# Offline checks only: no model calls and no secrets.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Judges and handoffs agree on dimension keys
+        run: python test_judge_schemas.py
+      - name: Edge cases are well-formed
+        run: python run_edge_cases.py
+      - name: Pipeline math, cap rule, and verdict bands
+        run: python smoke_test_pipeline.py
+      - name: Skill and plugin references are generated from the handoffs
+        run: |
+          python skill/build_skill.py
+          git diff --exit-code -- skill
+      - name: Printable rubric is current
+        run: |
+          python -m pip install --quiet python-docx
+          python docs/build_rubric_docx.py --check

@@ -3,6 +3,8 @@
 
 **Purpose**: Design and evaluate e-learning modules, videos, interactive media, and slide-based courses for cognitive load optimization and multimedia learning effectiveness. The dimensions below work in both directions: author media against them, or score existing media.
 
+**When this is skipped**: A compliance module has a narrator reading every word on a dense slide while a stock photo fades in and music plays. Learners click Next as fast as the button allows and remember the music. The content was correct and almost none of it got in. If you build slides, video, or e-learning, this archetype is the difference between material people sit through and material they learn from.
+
 **Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
 - Pair words with relevant visuals; cut decorative media and on-screen text that duplicates narration (coherence, redundancy).
 - Segment into learner-paced chunks and pre-train key terms before the main content (segmenting, pre-training).

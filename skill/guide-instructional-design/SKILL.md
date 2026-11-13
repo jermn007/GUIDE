@@ -77,7 +77,8 @@ substance; those skills supply the format.
 - `references/handoff_09_cognitive_neuroscience.md`: brain-based design (memory, attention, emotion, 5E).
 - `references/handoff_10_curriculum_alignment.md`: synthesis gate, objective-strategy-assessment coherence.
 - `references/discipline_alignment_crosswalk.md`: how each archetype maps to IBSTPI / ATD / ISPI-HPT
-  professional standards (the Discipline Alignment reference model).
+  professional standards (GUIDE's own discipline-level mapping, not the framework other courses are
+  scored against).
 
 The handoffs here are the **skill edition**: the Python judge prompts and harness notes are
 omitted. The full model-agnostic handoffs, for use with other models and the Python API, live in

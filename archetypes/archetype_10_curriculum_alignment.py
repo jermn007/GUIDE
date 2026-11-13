@@ -83,6 +83,7 @@ You will score across 6 dimensions, each on a 1-5 scale:
    - Assessment tasks reflect the practice activities in format and cognitive demand
    - No surprises for the learner — same Bloom level taught is tested
    - Skills tested were actually practiced, not just mentioned
+   - Score this pair on its own: when instruction and assessment agree with each other but both miss the objective, score this high and put the miss on dimensions 1 and 3
    Score: 1=Assessment tests different content than was taught; 5=Assessment mirrors practice in format and cognitive demand
 
 3. **Objective <-> Assessment Coherence** (1-5)
@@ -165,5 +166,5 @@ register_archetype(
     system_prompt=JUDGE_SYSTEM_PROMPT,
     human_prompt=JUDGE_HUMAN_PROMPT,
     description="Evaluates whether an instructional artifact's objectives, instructional strategies, and learner assessments cohere with each other and with broader scopes (vertical progression, discipline-level competencies). Operationalizes the Efficient quality outcome (Merrill, 2002) per the alignment mapping in Hirumi (2025). Dimensions: Objective<->Strategy Coherence, Strategy<->Assessment Coherence, Objective<->Assessment Coherence, Coverage Completeness, Vertical Alignment, Discipline Alignment.",
-    version="1.0.0",
+    version="1.0.1",
 )
