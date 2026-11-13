@@ -175,7 +175,7 @@ The script replaces everything from "Archetype 01" to "Severity Flagging" with a
 Skill and plugin versions track the GUIDE framework version (currently 3.5.0). When bumping GUIDE:
 
 1. Update `GUIDE_VERSION` in `build_skill.py`.
-2. Update `version` and `claudeSkill.frameworkVersion` in `guide-instructional-design/package.json`.
+2. Update `version` in `guide-instructional-design/package.json`. Keep that file to the plain npm fields it has now: the Claude directory refuses a plugin whose `package.json` carries custom fields.
 3. Update `version` in `guide-instructional-design-plugin/.claude-plugin/plugin.json`.
 4. Update the version strings in `SKILL.md`, `references/00_archetype_index.md`, and `references/NOTICE.md`.
 5. Run `python skill/build_skill.py` to re-stamp the handoff footers and mirror the plugin, then `python docs/build_rubric_docx.py` to re-stamp and regenerate the printable rubric.

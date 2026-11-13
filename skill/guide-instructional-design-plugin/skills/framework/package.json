@@ -31,36 +31,5 @@
   },
   "bugs": {
     "url": "https://github.com/jermn007/GUIDE/issues"
-  },
-  "dependencies": {},
-  "devDependencies": {},
-  "engines": {
-    "claude-skill": ">=1.0.0"
-  },
-  "claudeSkill": {
-    "entry": "SKILL.md",
-    "type": "reference-and-workflow",
-    "modes": ["design", "evaluate"],
-    "tracksFramework": "GUIDE",
-    "frameworkVersion": "3.5.0",
-    "archetypes": 10,
-    "dimensions": 60,
-    "scale": "1-5",
-    "references": [
-      "references/00_archetype_index.md",
-      "references/handoff_01_adult_learning_communication.md",
-      "references/handoff_02_assessment_design.md",
-      "references/handoff_03_instructional_sequencing.md",
-      "references/handoff_04_multimedia_design.md",
-      "references/handoff_05_accessibility_technical.md",
-      "references/handoff_06_formative_evaluation.md",
-      "references/handoff_07_needs_analysis.md",
-      "references/handoff_08_story_design.md",
-      "references/handoff_09_cognitive_neuroscience.md",
-      "references/handoff_10_curriculum_alignment.md",
-      "references/discipline_alignment_crosswalk.md"
-    ],
-    "runtimeDependencies": "none - Markdown reference files only; no executable code or external packages required",
-    "workflows": ["EVALUATE.md", "DESIGN.md"]
   }
 }

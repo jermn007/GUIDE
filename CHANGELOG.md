@@ -6,6 +6,10 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
+### Changed
+- README: the Install section leads with Anthropic's Claude directory, with a direct link to the plugin's page and the search steps, and keeps this repository's marketplace as the alternative.
+- The skill's `package.json` keeps only standard fields (name, version, description, keywords, author, license, homepage, repository, bugs). The Claude directory now refuses plugins whose `package.json` has fields outside its allowed list, and it refused v3.5.0 for the custom `claudeSkill` block, the empty `dependencies` and `devDependencies`, and a version range under `engines`. Nothing read those fields.
+
 ## [3.5.0] - 2026-11-13
 
 ### Added
