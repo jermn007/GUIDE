@@ -3,7 +3,7 @@
 
 **Purpose**: Design and evaluate quiz items, test blueprints, rubrics, and other assessment instruments for pedagogical soundness and measurement validity. The dimensions below work in both directions: author items against them, or score existing ones.
 
-**When this is skipped**: A nurse passes the medication-safety quiz with 95% and makes a dosing error the next week. The quiz asked her to define terms; the job asks her to calculate under pressure. Nobody lied, and the score was still wrong about her. If anyone will make a decision from your test results - a pass, a certification, a promotion - this archetype is what makes those results mean what you think they mean.
+**When this is skipped** (an illustrative scenario): A nurse passes the medication-safety quiz with 95% and makes a dosing error the next week. The quiz asked her to define terms; the job asks her to calculate under pressure. Nobody lied, and the score was still wrong about her. If anyone will make a decision from your test results - a pass, a certification, a promotion - this archetype is what makes those results mean what you think they mean.
 
 **Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
 - Write each item to its objective's Bloom level and verb - don't test recall for an "analyze" objective.

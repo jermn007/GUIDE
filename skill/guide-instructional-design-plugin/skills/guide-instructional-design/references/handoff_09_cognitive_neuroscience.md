@@ -11,7 +11,7 @@
 
 This archetype guides the design of, and evaluates, instruction for alignment with how memory, attention, and emotion actually function in the brain. It turns findings from cognitive neuroscience into criteria for designing and evaluating instruction.
 
-**When this is skipped**: A team spends a full day in training on a new process, with no breaks in the content, no practice from memory, and no follow-up. By the next Monday most of it is gone, and people quietly go back to the old way. Nothing was wrong with the content; it was delivered in a way memory does not keep. If you need people to still know this in a month, this archetype is where that is decided.
+**When this is skipped** (an illustrative scenario): A team spends a full day in training on a new process, with no breaks in the content, no practice from memory, and no follow-up. By the next Monday most of it is gone, and people quietly go back to the old way. Nothing was wrong with the content; it was delivered in a way memory does not keep. If you need people to still know this in a month, this archetype is where that is decided.
 
 **Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
 - Sequence Explore before Explain (5E); let learners generate before you tell.

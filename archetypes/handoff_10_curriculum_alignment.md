@@ -3,7 +3,7 @@
 
 **Purpose**: Design and evaluate the internal alignment of an instructional artifact — whether its objectives, instructional strategies (content + activities + chunking + sequencing), and learner assessments cohere with each other and with broader scopes (course-level vertical progression and discipline-level competencies). The dimensions below work in both directions: build an aligned artifact against them, or score an existing set for coherence.
 
-**When this is skipped**: A course has well-written objectives, a polished set of lessons, and a carefully built exam, each made by a different person. The objectives say analyze, the lessons explain, and the exam asks for definitions. Every part passes its own review, and learners finish certified in something the course never taught. If more than one person, or more than one week, went into your course, this archetype is the check that the parts still agree.
+**When this is skipped** (an illustrative scenario): A course has well-written objectives, a polished set of lessons, and a carefully built exam, each made by a different person. The objectives say analyze, the lessons explain, and the exam asks for definitions. Every part passes its own review, and learners finish certified in something the course never taught. If more than one person, or more than one week, went into your course, this archetype is the check that the parts still agree.
 
 **Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
 - Trace every objective to a strategy that teaches it and an assessment that measures it - no orphans (Tyler; Dick & Carey).

@@ -3,7 +3,7 @@
 
 **Purpose**: Design and evaluate lesson plans, course outlines, module structures, and learning paths for pedagogical coherence, event coverage, and instructional effectiveness. The dimensions below work in both directions: sequence against them, or score an existing sequence.
 
-**When this is skipped**: A two-hour workshop opens with forty minutes of slides, moves to a demo, and ends as time runs out, just before the practice. People leave able to describe the skill and unable to do it, and their manager concludes the training did not work. If you have ever cut the practice to fit the agenda, this archetype shows what that trade costs the learner.
+**When this is skipped** (an illustrative scenario): A two-hour workshop opens with forty minutes of slides, moves to a demo, and ends as time runs out, just before the practice. People leave able to describe the skill and unable to do it, and their manager concludes the training did not work. If you have ever cut the practice to fit the agenda, this archetype shows what that trade costs the learner.
 
 **Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
 - Walk Gagné's nine events in order; don't skip gain-attention, recall of prior learning, or assessment/retention.

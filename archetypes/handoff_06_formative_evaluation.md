@@ -2,7 +2,7 @@
 
 **Purpose**: Design and evaluate formative evaluation plans, expert review protocols, usability test designs, and pilot study designs for methodological rigor and appropriateness. The dimensions below work in both directions: draft a plan against them, or score an existing one.
 
-**When this is skipped**: A course goes to 4,000 employees without a single learner having tried it first. On launch day a broken quiz blocks completion, the instructions on screen three confuse nearly everyone, and the help desk takes 300 tickets. Three people and one afternoon would have caught all of it. If you are about to release something you have only reviewed yourself, this archetype is for you.
+**When this is skipped** (an illustrative scenario): A course goes to 4,000 employees without a single learner having tried it first. On launch day a broken quiz blocks completion, the instructions on screen three confuse nearly everyone, and the help desk takes 300 tickets. Three people and one afternoon would have caught all of it. If you are about to release something you have only reviewed yourself, this archetype is for you.
 
 **Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
 - Cover the formative phases - one-to-one, small-group, and field/expert review (Bordonaro; Dick & Carey).

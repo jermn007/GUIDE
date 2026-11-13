@@ -469,6 +469,9 @@ FRONT_MATTER_SWAPS = {
         "Alignment weigh most, and Accuracy at 3 pulls it down. A functional, friendly response that answers the "
         "question. Key weakness",
     "Dolcos, F., LaBar, K.S., & Cabeza, R. (2005).": "Dolcos, F., LaBar, K.S., & Cabeza, R. (2004).",
+    "weigh most, and Accuracy at 3 pulls it down. A functional":
+        "weigh most, and Accuracy at 3 pulls it down. A judge may report this overall as a whole number; the decimal "
+        "is shown here to make the weighting visible. A functional",
 }
 
 # The worked calibration example scores archetype 01, whose overall is weighted.
@@ -482,6 +485,18 @@ EXTRA_REFERENCES = [
     "Verbal Learning and Verbal Behavior, 11(6), 671-684.",
     "Kosslyn, S.M., Thompson, W.L., & Ganis, G. (2006). The Case for Mental Imagery. Oxford University Press.",
     "Shepard, R.N., & Metzler, J. (1971). Mental rotation of three-dimensional objects. Science, 171(3972), 701-703.",
+    "Association for Talent Development. (2020). Talent Development Capability Model. ATD.",
+    "Baldwin, T.T., & Ford, J.K. (1988). Transfer of training. Personnel Psychology, 41(1), 63-105.",
+    "Bloom, B.S. (Ed.). (1956). Taxonomy of Educational Objectives: The Classification of Educational Goals. "
+    "Handbook I: Cognitive Domain. David McKay.",
+    "Gilbert, T.F. (1978). Human Competence: Engineering Worthy Performance. McGraw-Hill.",
+    "Kaufman, R., & Valentine, G. (1999). Operational processes for needs assessment. Training & Development, "
+    "53(7), 20-27.",
+    "Koszalka, T.A., Russ-Eft, D.F., & Reiser, R. (2013). Instructional Designer Competencies: The Standards "
+    "(4th ed.). Information Age Publishing.",
+    "Trewin, S. (2020). AI Fairness for People with Disabilities.",
+    "Van Tiem, D.M., Moseley, J.L., & Dessinger, J.C. (2012). Fundamentals of Performance Improvement: Optimizing "
+    "Results through People, Process, and Organizations (3rd ed.). Pfeiffer / ISPI.",
     "Yerkes, R.M., & Dodson, J.D. (1908). The relation of strength of stimulus to rapidity of habit-formation. "
     "Journal of Comparative Neurology and Psychology, 18(5), 459-482.",
 ]
@@ -546,7 +561,7 @@ def add_missing_references(doc) -> None:
     if not entries:
         raise SystemExit("The References section has no entries")
     for ref in EXTRA_REFERENCES:
-        key = ref.split("(")[0].strip().lower()
+        key = ref.split(")")[0].strip().lower()
         if any(e.text.strip().lower().startswith(key) for e in entries):
             continue
         after = [e for e in entries if e.text.strip().lower() > ref.lower()]
