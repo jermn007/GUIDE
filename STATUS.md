@@ -33,7 +33,7 @@ Each item is marked by its evidence:
 |---|---|---|
 | Continuous integration | open | No CI workflow. Checks are run by hand. |
 | Six edge cases drift from their expected scores | open | `edge_cases_02` good_01 and good_02, `edge_cases_08` good_02 and bad_02, `edge_cases_09` borderline_01, and `edge_cases_10` bad_01 scored 0.8 to 1.8 lower than expected. In at least one (02 good_01) the judge found real flaws the expected scores overlook. Each needs a decision: correct the expected scores or sharpen the anchor. |
-| Pipeline build path and revision loop, live | open | The live `/guide-pipeline` run was a review that ended in redesign, so the needs-analysis stop, the fail-fast gate, and the reviser loop have not run live. How Claude chat treats typed-only skills is not documented. |
+| Pipeline fail-fast gate and revision loop, live | open | The needs-analysis stop ran live on 2026-11-12: given a course request whose cause was a tool change, `/guide-pipeline` ran the router and the needs-analysis agent, got `is_training_appropriate: false`, and halted before Design. The fail-fast gate and the reviser loop have not yet been seen to run live. How Claude chat treats typed-only skills is not documented. |
 | Default judge model | open | The Python runners default to `claude-sonnet-4-20250514`, an older model. Override with `model_name`. |
 | Discipline Alignment at 5 | open | Stays at 4 until the standards owners validate the crosswalk. See the [v3.3.0 self-evaluation](self-evaluations/GUIDE_Self_Evaluation_v3.3.0.md). |
 
