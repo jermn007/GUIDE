@@ -2,11 +2,11 @@
 
 This is the routing map for the GUIDE framework. Use it to pick the right archetype(s) for any
 instructional-design task, then open the matching `handoff_XX_*.md` file for the full grounding text,
-scoring anchors, judge prompt, and output format.
+scoring anchors, severity flags, and output JSON.
 
 GUIDE = **G**rounded **U**niversal **I**nstructional **D**esign **E**valuator. **Ten** archetypes,
 **60** dimensions (6 per archetype), each grounded in named learning-science sources and scored 1–5
-with behavioral anchors. Built on the LLM-as-a-judge pattern (Zheng et al., 2023). Tracks GUIDE v3.4.1.
+with behavioral anchors. Built on the LLM-as-a-judge pattern (Zheng et al., 2023). Tracks GUIDE v3.5.0.
 
 **What's new in v3.1.0:** Archetype **10 Curriculum Alignment** (synthesis archetype, evaluates
 relationships between objectives ↔ strategies ↔ assessments). Archetypes **03 Sequencing** and
@@ -116,11 +116,14 @@ Objective ↔ Assessment Coherence · Coverage Completeness · Vertical Alignmen
 - **2 — Weak**: Significant problems; criterion mostly unmet.
 - **1 — Inadequate**: Criterion not met; would mislead, exclude, or fail learners.
 
-**Composite interpretation thresholds** (adapt to context; defaults from the handoff docs):
+**Composite interpretation thresholds** (GUIDE's defaults for every archetype; adapt to context):
 - **4.5–5.0** — Publish/ship as-is.
 - **3.5–4.4** — Light revision; ship with documented gaps.
 - **2.5–3.4** — Real concerns; revise before wide rollout.
 - **< 2.5** — Redesign; do not ship.
+
+Report the overall to two decimals and read each band from its lower bound: 4.5 and up, 3.5 up to
+4.5, 2.5 up to 3.5, below 2.5. A 4.47 is light revision.
 
 ---
 
@@ -146,6 +149,6 @@ Several theories appear in multiple archetypes. When designing or evaluating, th
 
 ## Source
 
-GUIDE — Grounded Universal Instructional Design Evaluator (v3.4.1).
+GUIDE — Grounded Universal Instructional Design Evaluator (v3.5.0).
 Repository: github.com/jermn007/GUIDE. Copyright 2026 Jeremy Terhune. Apache-2.0.
 This index condenses the ten `handoff_*.md` files in this directory; those files are the authoritative source.

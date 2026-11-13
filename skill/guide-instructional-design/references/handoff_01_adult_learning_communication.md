@@ -79,7 +79,7 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 ### Accuracy & Grounding (v3.1.0: anecdotal vs. scientific evidence)
 - **5**: All claims accurate and traceable; no hallucination; appropriate hedging. **Anecdotal evidence** (observations, stakeholder experience) is framed as anecdotal; **scientific evidence** (systematic, peer-reviewed) is framed as such; the two are not conflated (Hirumi, 2025).
 - **4**: Accurate overall; minor imprecision or one unsupported generalization that doesn't mislead.
-- **3**: Mostly accurate but at least one unsupported claim, oversimplification, or anecdote presented as if it were scientific consensus.
+- **3**: Mostly accurate but at least one unsupported claim, oversimplification, or anecdote presented as if it were established practice or scientific consensus (penalize this even when the anecdote is true).
 - **2**: Multiple inaccuracies; valid information mixed with hallucinated content; anecdotal and scientific evidence conflated in misleading ways.
 - **1**: Substantially inaccurate; fabricated information; would mislead the user.
 
@@ -97,68 +97,38 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 - **2**: Predominantly formal or robotic; excessive self-referential disclaimers.
 - **1**: Reads like a textbook or policy document; no social presence.
 
----
-
-## System Prompt (Judge Rubric)
-
-```
-You are an expert Instructional Design evaluator. Your role is to judge the quality
-of an AI assistant's response to an adult learner's question. You evaluate against a
-rubric grounded in peer-reviewed instructional design research.
-
-The assistant supports learning professionals who use learning tools (LCMS/LMS, authoring
-tools, video hosting, assessment systems). It relies on retrieval-augmented generation
-(RAG) to answer accurately and explain concepts clearly for adult learners.
-
-Score each dimension 1-5 using the criteria below. Then provide an overall score (1-5)
-weighting accuracy and adult learning alignment most heavily.
-
-1. ADULT LEARNING ALIGNMENT (Knowles' Andragogy; Mezirow's Transformative Learning)
-   Knowles' five assumptions: self-direction, experience, readiness, orientation, motivation.
-   Mezirow: invite critical reflection on assumptions, not just information transfer.
-
-2. COGNITIVE LOAD MANAGEMENT (Mayer; Sweller)
-   Sweller's CLT: intrinsic, extraneous, germane load. Mayer's Coherence and Segmenting.
-
-3. INSTRUCTIONAL CLARITY & SIGNALING (Mayer; Ausubel)
-   Signaling, spatial/temporal contiguity, pre-training, advance organizers.
-
-4. ACCURACY & GROUNDING (RAG alignment; Hirumi evidence-type distinction)
-   Dick/Carey: validate against authoritative sources. No hallucination. Appropriate hedging.
-   Hirumi (2025): distinguish anecdotal evidence (observations, stakeholder experience) from
-   scientific evidence (systematic, peer-reviewed). Do not conflate the two. Penalize responses
-   that present anecdote as established practice or as research consensus, even if true.
-
-5. ACCESSIBILITY & INCLUSIVE COMMUNICATION (WCAG/POUR; UDL)
-   POUR: Perceivable, Operable, Understandable, Robust. UDL multiple means of representation.
-
-6. PERSONALIZATION & ENGAGEMENT (Mayer; Knowles)
-   Personalization Principle, Voice Principle, no distracting "As an AI..." meta-commentary.
-
-Return a JSON object with scores (1-5 + overall), rationale per dimension, severity_flags
-(major issues), and improvement_suggestions (1-3 actionable improvements).
-```
+### Overall score
+The overall (1-5) is not a plain mean: weight **Accuracy & Grounding** and **Adult Learning Alignment** most heavily. A fluent, well-signaled response that is inaccurate or ignores the adult learner's context should not score well overall.
 
 ---
 
-## Human Prompt Template
+## Output JSON
 
-```
-Evaluate the following assistant response.
+Return this shape when the user wants machine-readable output (scores are integers 1-5; `overall` follows the archetype's scoring rule):
 
-## USER QUESTION
-{input}
-
-## RETRIEVED CONTEXT (if available)
-{context}
-
-## ASSISTANT RESPONSE
-{output}
-
-## REFERENCE ANSWER (if available)
-{reference}
-
-Score using the six-dimension rubric. Return only the JSON object.
+```json
+{
+  "scores": {
+    "adult_learning_alignment": <1-5>,
+    "cognitive_load_management": <1-5>,
+    "instructional_clarity": <1-5>,
+    "accuracy_and_grounding": <1-5>,
+    "accessibility": <1-5>,
+    "personalization_and_engagement": <1-5>,
+    "overall": <1-5, weighted toward accuracy and adult learning alignment>
+  },
+  "rationale": {
+    "adult_learning_alignment": "<2-3 sentence justification citing specific evidence from the response>",
+    "cognitive_load_management": "<2-3 sentence justification>",
+    "instructional_clarity": "<2-3 sentence justification>",
+    "accuracy_and_grounding": "<2-3 sentence justification>",
+    "accessibility": "<2-3 sentence justification>",
+    "personalization_and_engagement": "<2-3 sentence justification>",
+    "overall": "<1-2 sentence holistic summary>"
+  },
+  "severity_flags": ["<Nielsen severity 3-4 issues: major problems or catastrophes to fix before deployment>"],
+  "improvement_suggestions": ["<top 1-3 actionable improvements>"]
+}
 ```
 
 ---
@@ -187,16 +157,6 @@ When scoring < 4 on any dimension:
 
 ---
 
-## Calibration & Validation
-
-Before deploying at scale:
-
-1. **Calibrate**: Run 5-10 diverse responses through your chosen model. Compare to expert judgment.
-2. **Test Edge Cases**: Validate against `edge_cases_01.json`.
-3. **Document Threshold**: Define what scores mean for your context (4.5+ ship; 3.5-4.4 light revision; <3.5 rewrite).
-
----
-
 ## References
 
 - Clark, R.C., & Mayer, R.E. (2016). *e-Learning and the Science of Instruction* (4th ed.). Wiley.
@@ -210,4 +170,4 @@ Before deploying at scale:
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.4.1). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 01 of 10.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.5.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 01 of 10. Skill edition: the judge prompts and Python-harness notes are omitted; the full model-agnostic handoff is `archetypes/handoff_01_adult_learning_communication.md` in the GUIDE repository.*

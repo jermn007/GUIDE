@@ -40,7 +40,7 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 | **5** | All five phases are identifiable and neurologically purposeful. Engage activates attention and curiosity (reticular formation, anterior cingulate). Explore provides multi-sensory, procedural experience (basal ganglia, cerebellum). Explain transitions to declarative/conceptual learning via prefrontal cortex-**critically, AFTER exploration**. Elaborate builds memory consolidation via hippocampus with spaced retrieval and varied contexts. Evaluate supports metacognitive reflection (prefrontal cortex). Phases are distinct but connected. |
 | **4** | Four of five phases are present and purposeful. One phase may be underdeveloped or Explain may come slightly early. Overall arc is neurologically sound. |
 | **3** | Three phases present or all five present but weak integration. Explain often comes too early (before adequate exploration). Phases feel rushed or out of order. Neuroscience grounding is incomplete. |
-| **2** | Two phases or fewer. Critical phase missing (e.g., no exploration phase, no reflection phase). Major order issue (Explain before Explore). |
+| **2** | Two phases or fewer. Critical phase missing (e.g., no Engage, no exploration phase, no reflection phase). Major order issue (Explain before Explore). |
 | **1** | No recognizable 5E structure. Instruction is linear without distinct phases. |
 
 **Why it matters:** The 5E model maps to documented brain systems and their learning functions. Explore must precede Explain because procedural learning (basal ganglia) must establish experience before declarative learning (prefrontal cortex) can extract meaning. Violating this order reduces learning efficiency and transfer.
@@ -60,7 +60,7 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 
 | Score | Indicators |
 |-------|-----------|
-| **5** | All three memory systems are engaged: Semantic (meaning, concepts, relationships to prior knowledge); Episodic (contextual, vivid details, specific events); Procedural (skill practice, automatization). Spaced retrieval practice is systematic (e.g., retrieval cues at 1 day, 3 days, 1 week). Multiple retrieval pathways are established (e.g., recall from visual cue, recall from context, recall from problem-solving). Transfer pathways are explicit (learners practice applying knowledge to new contexts). |
+| **5** | All three memory systems are engaged: Semantic (meaning, concepts, relationships to prior knowledge); Episodic (contextual, vivid details, specific events); Procedural (skill practice, automatization). Spaced retrieval practice is systematic (e.g., retrieval cues at 1 day, 3 days, 1 week). Advance organizers (Ausubel) bridge prior knowledge to new material. Multiple retrieval pathways are established (e.g., recall from visual cue, recall from context, recall from problem-solving). Transfer pathways are explicit (learners practice applying knowledge to new contexts). |
 | **4** | All three systems engaged, but spacing may be less systematic or retrieval pathways fewer. Mostly effective for memory consolidation. |
 | **3** | Two of three systems engaged. Some spaced practice but not comprehensive. Limited retrieval pathways. Transfer practice may be minimal. |
 | **2** | One or two systems engaged. Massed practice (repetition without spacing). Single retrieval pathway. Minimal transfer practice. |
@@ -109,7 +109,7 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 | **2** | Weak emotional engagement or counterproductive anxiety. Personal relevance is unclear. Challenge may be too high (anxiety) or too low (boredom). Emotional tone doesn't support learning. |
 | **1** | Flat affect, fear-based motivation, or overwhelming anxiety. No personal relevance. Emotional response impairs learning (amygdala hijack-high stress shuts down prefrontal cortex). |
 
-**Why it matters:** Emotional salience (amygdala activation) enhances memory consolidation via amygdala-hippocampal connection (Dolcos et al., 2005). However, this only works for *moderate* emotional arousal. High anxiety activates the amygdala and threat-detection pathways, which shuts down prefrontal cortex (the "amygdala hijack"), impairing learning. The sweet spot is productive struggle: challenge at the learner's zone of proximal development, with authentic stakes and personal relevance, without fear.
+**Why it matters:** Emotional salience (amygdala activation) enhances memory consolidation via amygdala-hippocampal connection (Dolcos et al., 2004). However, this only works for *moderate* emotional arousal. High anxiety activates the amygdala and threat-detection pathways, which shuts down prefrontal cortex (the "amygdala hijack"), impairing learning. The sweet spot is productive struggle: challenge at the learner's zone of proximal development, with authentic stakes and personal relevance, without fear.
 
 **Emotional-learning pathway:**
 - **Optimal:** Moderate emotional engagement + amygdala activation → enhanced hippocampal consolidation → better memory
@@ -124,7 +124,7 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 
 | Score | Indicators |
 |-------|-----------|
-| **5** | All five factors are present and well-integrated: (1) Repetition is spaced (not massed) and varied across contexts. (2) Application is authentic and problem-based (not contrived practice problems). (3) Memory encoding uses multiple pathways (semantic, episodic, procedural). (4) Imagination is explicitly supported (mental simulation, visualization, "what if" scenarios). (5) Emotional reactions are meaningful and personal. These factors reinforce each other; repetition happens in varied contexts with emotional stakes and imagination. |
+| **5** | All five factors are present and well-integrated: (1) Repetition is spaced (not massed) and varied across contexts. (2) Application is authentic and problem-based (not contrived practice problems). (3) Memory encoding uses multiple pathways (semantic, episodic, procedural). (4) Imagination is explicitly supported (mental simulation, visualization, "what if" scenarios). (5) Emotional reactions are meaningful and personal. These factors reinforce each other; repetition happens in varied contexts with emotional stakes and imagination. Desirable difficulties (Bjork) are deliberately introduced. |
 | **4** | All five factors present but one may be weaker. Integration is mostly strong. |
 | **3** | Three or four factors present. Some weak integration; factors may operate independently. |
 | **2** | Two factors present. Dominated by one mode (e.g., repetition without application or imagination). Limited integration. |
@@ -138,7 +138,7 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 2. **Application (Transfer/Generation):** Problem-solving, authentic contexts, transfer to novel situations. Brown et al. (2014) call this "generation" - the act of producing answers rather than recognizing them. Bjork & Bjork (1992) on desirable difficulty.
 3. **Memory (Multiple Encoding/Retrieval Practice):** Semantic + episodic + procedural pathways; variety in encoding contexts. Retrieval practice is the single most effective learning strategy (Brown et al., 2014). Craik & Lockhart (1972) on levels of processing.
 4. **Imagination (Mental Simulation):** Visualization, mental models, "what if" scenarios. Shepard & Metzler (1971) on mental rotation; Kosslyn et al. (2006) on visual imagery.
-5. **Strong Emotional Reactions (Salience):** Personal relevance, meaningful stakes, productive struggle. Dolcos et al. (2005) on emotion-memory interaction; Yerkes-Dodson law on optimal arousal.
+5. **Strong Emotional Reactions (Salience):** Personal relevance, meaningful stakes, productive struggle. Dolcos et al. (2004) on emotion-memory interaction; Yerkes-Dodson law on optimal arousal.
 
 ---
 
@@ -185,7 +185,7 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 - **Bybee, R.W. (2002).** *Learning Science and the Science of Learning.* NSTA Press.
 - **Neuroscience Online.** University of Texas Medical School, Houston. (EME6646 course textbook)
 - **EME6646 Course Materials.** Learning, Instructional Design and Cognitive Neuroscience. UCF MA Instructional Systems.
-- **Dolcos, F., LaBar, K.S., & Cabeza, R. (2005).** Interaction between the amygdala and the medial temporal lobe memory system predicts better memory for emotional events. *Neuron, 42*(5), 855-863.
+- **Dolcos, F., LaBar, K.S., & Cabeza, R. (2004).** Interaction between the amygdala and the medial temporal lobe memory system predicts better memory for emotional events. *Neuron, 42*(5), 855-863.
 - **Dunlosky, J., et al. (2013).** Improving students' learning with effective learning techniques: Promising directions from cognitive and educational psychology. *Psychological Science in the Public Interest, 14*(1), 4-58.
 - **Posner, M.I., & Rothbart, M.K. (1998).** Attention, self-regulation and consciousness. *Philosophical Transactions of the Royal Society B, 353*, 1915-1927.
 

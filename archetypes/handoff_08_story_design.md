@@ -46,6 +46,8 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 - **Hero's Journey (Campbell):** Ordinary world → Call to adventure → Refusal of the call → Meeting the mentor → Crossing the threshold → Tests and allies → Ordeal → Reward → Road back → Return with the elixir
 - **Beat Sheet (Snyder, 2005):** Opening Image → Theme Stated → Set-Up → Catalyst → Debate → Break into Two → B Story → Midpoint → Bad Guys Close In → All Is Lost → Dark Night of the Soul → Break into Three → Finale → Final Image. Snyder's framework maps emotional beats to structural milestones and is especially useful for tightly paced instructional narratives.
 
+The structure need not follow a framework rigidly, but it should be identifiable and coherent.
+
 **Why it matters:** Structure creates cognitive scaffolding. Learners can follow a well-structured narrative more easily and retain the embedded learning more effectively. Structure also makes the story memorable, which aids recall and transfer.
 
 ---
@@ -68,7 +70,7 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 
 ### Dimension 3: Character & Situation Authenticity (1-5)
 
-**Question:** Are characters relatable to the target audience? Are scenarios realistic and relevant?
+**Question:** Are characters relatable to the target audience? Are scenarios realistic and relevant? Do the emotional stakes feel earned and believable?
 
 | Score | Indicators |
 |-------|-----------|

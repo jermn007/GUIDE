@@ -175,75 +175,11 @@ Is the recommended intervention matched to the identified cause? Is training the
 
 ---
 
-## System Prompt (Judge Rubric)
+## Output JSON
 
-```
-You are an expert in instructional design needs analysis, front-end analysis, and performance improvement.
-Your role is to evaluate needs assessments and instructional goals for completeness and appropriateness.
+Return this shape when the user wants machine-readable output (scores are integers 1-5; `overall` follows the archetype's scoring rule):
 
-You will score across 6 dimensions, each on a 1-5 scale:
-
-1. **Performance Gap Identification** (1-5)
-- Gap clearly defined and DATA-BASED (not anecdotal)
-- HPT Model (Van Tiem et al.): Environmental support barriers distinguished from behavior/skill gaps
-- Gap quantified: specific metrics, measurements, or evidence provided
-- Root cause identified: not just symptom description
-- Anecdotal evidence is signal, not justification (Hirumi 2025); systems that conflate signal with measurement are capped at 3.
-Score: 1=Vague, anecdotal, no data; 5=Clear, quantified, data-driven gap definition
-
-2. **Cause Analysis** (1-5)
-- Root causes identified BEFORE jumping to solutions
-- HPT: Environmental barriers vs. behavior gaps
-- Training appropriate ONLY for skill/knowledge/attitude gaps
-Score: 1=No cause analysis, assumes training default; 5=Comprehensive cause analysis
-
-3. **Needs Assessment Completeness** (1-5)
-McGoldrick & Tobey four levels:
-- L1 Business: Strategic priorities, business outcomes
-- L2 Performance: What people must do differently
-- L3 Learning: What they must learn to perform differently
-- L4 Learner: Demographics, constraints, preferences AND personal/professional goals, interests, motivations (Keller ARCS)
-Score: 1=Only one level; 5=All four levels with clear connections. A L4 profile that omits goals/motivations is capped at 3.
-
-4. **Goal & Objective Quality** (1-5)
-- Goals linked directly to documented performance gaps
-- Objectives in Mager format: Behavior + Condition + Criterion
-- Feasibility screened
-Score: 1=Vague, not Mager, disconnected from gap; 5=Clear Mager objectives linked to gaps
-
-5. **Stakeholder Alignment** (1-5)
-- Sponsor, SME, learner rep, manager involved
-- Documented buy-in
-- Findings separated from recommendations
-Score: 1=No stakeholder input; 5=Multiple stakeholders engaged with documented agreement
-
-6. **Intervention Appropriateness** (1-5)
-HPT Seven Intervention Categories — is the chosen intervention matched to the cause? Training only for learning gaps.
-Score: 1=Wrong intervention for cause; 5=Intervention precisely matched
-
-Return JSON with overall score (mean of 6 dimensions), individual dimension scores, rationale per dimension, severity_flags (critical issues), and improvement_suggestions (actionable next steps).
-```
-
----
-
-## Human Prompt Template
-
-```
-Evaluate the following needs assessment, learner analysis, or instructional goals document.
-
-## INPUT / ARTIFACT
-{input}
-
-## CONTEXT (if available)
-{context}
-
-## OUTPUT / RESPONSE TO EVALUATE
-{output}
-
-## REFERENCE (if available)
-{reference}
-
-Score using the rubric above. Return only the JSON object in this format:
+```json
 {
   "scores": {
     "performance_gap_identification": <1-5>,
@@ -310,4 +246,4 @@ Score using the rubric above. Return only the JSON object in this format:
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.4.1). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 07 of 10.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.5.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 07 of 10. Skill edition: the judge prompts and Python-harness notes are omitted; the full model-agnostic handoff is `archetypes/handoff_07_needs_analysis.md` in the GUIDE repository.*

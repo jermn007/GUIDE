@@ -118,7 +118,7 @@ A course can score 5/5 on 02, 03, and 07 individually and still fail archetype 1
 
 | Score | Definition |
 |-------|-----------|
-| **5** | Across lessons/modules/courses, content builds coherently. Prerequisites are explicit and respected. Spiral or elaboration logic (Bruner; Reigeluth) is evident. Later content extends rather than merely repeats earlier content. |
+| **5** | Across lessons/modules/courses, content builds coherently. Prerequisites are explicit and respected. Spiral or elaboration logic (Bruner; Reigeluth) is evident. Later content extends rather than merely repeats earlier content. For 4C/ID-style designs (van Merriënboer & Kirschner, 2018), the whole-task progression is coherent. |
 | **4** | Strong vertical logic; one prerequisite gap or one redundancy. |
 | **3** | Moderate; some modules build on prior, others stand alone in ways that don't make pedagogical sense. |
 | **2** | Weak vertical logic; modules feel like independent units rather than a connected progression. |
@@ -284,7 +284,7 @@ For artifacts scoring below 4 on any dimension, draw from these categories:
 
 ## Output Format
 
-The judge returns a JSON object matching the schema in the Human Prompt Template above. The framework's `GUIDEResult` class parses this and exposes:
+The judge returns a JSON object matching the GUIDE output JSON schema (scores, rationale, severity_flags, improvement_suggestions). The framework's `GUIDEResult` class parses this and exposes:
 - `overall_score` — mean of the six dimensions (unless a catastrophic severity flag warrants weighting; see Notes)
 - `scores` — dict of dimension → integer 1–5
 - `rationale` — dict of dimension → 2–3 sentence justification

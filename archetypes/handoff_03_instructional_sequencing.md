@@ -46,6 +46,8 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 - **2**: Four to five events present; multiple missing.
 - **1**: Fewer than four events; no clear instructional structure.
 
+Events may be reordered; score on whether each one is present, not on strict Gagné order.
+
 ### Learning Domain Alignment (v3.1.0: ARCS integrated)
 - **5**: Learning domain explicitly identified; all strategies match domain. For the Attitudes domain or any motivationally-sensitive content, ARCS is explicitly designed in.
 - **4**: Domain clear; most strategies appropriate; one minor mismatch.
@@ -158,7 +160,28 @@ Evaluate the following instructional artifact.
 ## REFERENCE (if available)
 {reference}
 
-Score using the rubric above. Return only the JSON object.
+Score using the rubric above. Return only the JSON object in this format:
+{
+  "scores": {
+    "gagne_events_coverage": <1-5>,
+    "learning_domain_alignment": <1-5>,
+    "sequencing_logic": <1-5>,
+    "scaffolding_gradual_release": <1-5>,
+    "practice_feedback_integration": <1-5>,
+    "transfer_retention_design": <1-5>,
+    "overall": <mean of all 6>
+  },
+  "rationale": {
+    "gagne_events_coverage": "<brief explanation>",
+    "learning_domain_alignment": "<brief explanation>",
+    "sequencing_logic": "<brief explanation>",
+    "scaffolding_gradual_release": "<brief explanation>",
+    "practice_feedback_integration": "<brief explanation>",
+    "transfer_retention_design": "<brief explanation>"
+  },
+  "severity_flags": ["<critical issue 1>", "<critical issue 2>"],
+  "improvement_suggestions": ["<suggestion 1>", "<suggestion 2>"]
+}
 ```
 
 ---

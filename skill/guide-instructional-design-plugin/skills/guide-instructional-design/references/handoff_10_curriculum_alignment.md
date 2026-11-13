@@ -118,7 +118,7 @@ A course can score 5/5 on 02, 03, and 07 individually and still fail archetype 1
 
 | Score | Definition |
 |-------|-----------|
-| **5** | Across lessons/modules/courses, content builds coherently. Prerequisites are explicit and respected. Spiral or elaboration logic (Bruner; Reigeluth) is evident. Later content extends rather than merely repeats earlier content. |
+| **5** | Across lessons/modules/courses, content builds coherently. Prerequisites are explicit and respected. Spiral or elaboration logic (Bruner; Reigeluth) is evident. Later content extends rather than merely repeats earlier content. For 4C/ID-style designs (van Merriënboer & Kirschner, 2018), the whole-task progression is coherent. |
 | **4** | Strong vertical logic; one prerequisite gap or one redundancy. |
 | **3** | Moderate; some modules build on prior, others stand alone in ways that don't make pedagogical sense. |
 | **2** | Weak vertical logic; modules feel like independent units rather than a connected progression. |
@@ -140,97 +140,11 @@ A course can score 5/5 on 02, 03, and 07 individually and still fail archetype 1
 
 ---
 
-## System Prompt (Judge Rubric)
+## Output JSON
 
-```
-You are an expert in instructional design, curriculum mapping, and Bloom's taxonomy alignment.
-Your role is to evaluate whether an instructional artifact's internal pieces — objectives,
-instructional strategies (content, activities, chunking, sequencing), and learner assessments —
-cohere with each other and with broader scopes.
+Return this shape when the user wants machine-readable output (scores are integers 1-5; `overall` follows the archetype's scoring rule):
 
-CRITICAL: You evaluate ONLY internal coherence, not the quality of any individual component.
-Other GUIDE archetypes evaluate component quality:
-- Archetype 02 evaluates whether the assessment itself is well-constructed.
-- Archetype 03 evaluates whether the instruction is well-sequenced.
-- Archetype 07 evaluates whether the objectives are well-written.
-
-Your job is different: do the three components, taken together, say the same thing? A course
-can score 5/5 on each of 02, 03, and 07 and still fail this archetype if its objectives,
-instruction, and assessment teach and test different cognitive levels or different behaviors.
-
-You will score across 6 dimensions, each on a 1-5 scale:
-
-1. **Objective ↔ Strategy Coherence** (1-5)
-- Does the instruction actually teach what the objective states?
-- Behavior verb in the objective is practiced in instruction
-- Bloom level taught matches Bloom level stated (Bloom 1956; Anderson & Krathwohl 2001)
-- No instruction exists that doesn't trace to an objective (no extraneous content)
-Score: 1=Instruction and objectives essentially disconnected; 5=Every objective verb practiced; Bloom levels match; no extraneous content
-
-2. **Strategy ↔ Assessment Coherence** (1-5)
-- Does the assessment measure what was taught?
-- Assessment tasks reflect the practice activities in format and cognitive demand
-- No surprises for the learner — same Bloom level taught is tested
-- Skills tested were actually practiced, not just mentioned
-Score: 1=Assessment tests different content than was taught; 5=Assessment mirrors practice in format and cognitive demand
-
-3. **Objective ↔ Assessment Coherence** (1-5)
-- Does the assessment test what the objective states?
-- Verb-to-task match (Mager 1997): if objective says "analyze," assessment asks for analysis
-- Bloom-level match (Bloom 1956; Anderson & Krathwohl 2001): cognitive demand of objective equals cognitive demand of assessment
-- Webb's Depth of Knowledge (Webb 1997) consistent across objective and assessment
-- The criterion stated in the objective is the criterion in the rubric
-Score: 1=Assessment tests fundamentally different behaviors than objectives state; 5=Verb, Bloom level, DoK, and criterion all match
-
-4. **Coverage Completeness** (1-5)
-- Is every objective addressed in both instruction AND assessment?
-- Is every piece of instruction tied to an objective?
-- No orphan objectives (stated but not taught or not tested)
-- No orphan instruction (taught but not aligned to any objective)
-- A blueprint or table of specifications is present or trivially derivable (Dick & Carey 2015; Wiggins & McTighe 2005)
-Score: 1=Objectives, instruction, and assessment are three independent lists; 5=Complete coverage, no orphans, blueprint derivable
-
-5. **Vertical Alignment** (1-5)
-- Across lessons/modules/courses, do they build coherently?
-- Prerequisites identified and respected
-- Spiral curriculum (Bruner) or elaboration logic (Reigeluth 1999) evident
-- Later content extends, not merely repeats, earlier content
-- For 4C/ID-style designs (van Merriënboer & Kirschner 2018), whole-task progression coherent
-Score: 1=Lesson/module order is arbitrary or reverse-coherent; 5=Clear vertical logic; prerequisites respected; progression builds
-Note: For single-lesson artifacts, score within-lesson sequencing instead and flag the adaptation in rationale.
-
-6. **Discipline Alignment** (1-5)
-- Does the course/program align to professional competencies, knowledge base, or accrediting examinations?
-- Stated linkage to external competency framework
-- Every objective at the unit/lesson level maps upward to a competency at the discipline level (Hirumi, Ratliff & de la Mora 2021; Hirumi 2025, Figure 1)
-Score: 1=No stated discipline-level alignment; 5=Explicit traceable linkage; every objective maps upward
-Note: For artifacts not intended to align with a discipline (one-off workshops, internal training), score on internal coherence with stated purpose and note the adaptation in rationale.
-
-Return JSON with overall score (mean of 6 dimensions unless a severity flag warrants weighting),
-individual dimension scores, rationale per dimension, severity_flags (critical issues), and
-improvement_suggestions (actionable next steps).
-```
-
----
-
-## Human Prompt Template
-
-```
-Evaluate the internal alignment of the following instructional artifact.
-
-## INPUT / ARTIFACT
-{input}
-
-## CONTEXT (if available)
-{context}
-
-## OUTPUT / RESPONSE TO EVALUATE
-{output}
-
-## REFERENCE (if available)
-{reference}
-
-Score using the rubric above. Return only the JSON object in this format:
+```json
 {
   "scores": {
     "objective_strategy_coherence": "<1-5>",
@@ -284,7 +198,7 @@ For artifacts scoring below 4 on any dimension, draw from these categories:
 
 ## Output Format
 
-The judge returns a JSON object matching the schema in the Human Prompt Template above. The framework's `GUIDEResult` class parses this and exposes:
+The judge returns a JSON object matching the GUIDE output JSON schema (scores, rationale, severity_flags, improvement_suggestions). The framework's `GUIDEResult` class parses this and exposes:
 - `overall_score` — mean of the six dimensions (unless a catastrophic severity flag warrants weighting; see Notes)
 - `scores` — dict of dimension → integer 1–5
 - `rationale` — dict of dimension → 2–3 sentence justification
@@ -319,4 +233,4 @@ The judge returns a JSON object matching the schema in the Human Prompt Template
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.4.1). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 10 of 10 (the synthesis archetype).*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.5.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 10 of 10 (the synthesis archetype). Skill edition: the judge prompts and Python-harness notes are omitted; the full model-agnostic handoff is `archetypes/handoff_10_curriculum_alignment.md` in the GUIDE repository.*

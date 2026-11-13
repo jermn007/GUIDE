@@ -21,7 +21,7 @@
 
 </div>
 
-**Latest:** [v3.4.1](https://github.com/jermn007/GUIDE/releases/tag/v3.4.1) (September 24, 2026) fixes the Python output format for three archetypes and adds a changelog, a status page, and citation metadata.
+**Latest:** [v3.5.0](https://github.com/jermn007/GUIDE/releases/tag/v3.5.0) (November 12, 2026) adds three plugin commands (`/guide-review`, `/guide-design`, `/guide-pipeline`), slims the rubrics the skill loads by about a fifth, and tightens the assessment rubric for single items, test type, and answer keys.
 
 ## What GUIDE is
 
@@ -70,7 +70,7 @@ The easiest way to use GUIDE is as a Claude Code plugin from this repository's m
 
 ## Quick start
 
-Once the plugin is installed, GUIDE turns on by itself when you talk about courses, lessons, quizzes, training, or learners. You don't need a special command.
+Once the plugin is installed, GUIDE turns on by itself when you talk about courses, lessons, quizzes, training, or learners. You don't need a special command, though the plugin adds three: `/guide-review`, `/guide-design`, and `/guide-pipeline`.
 
 Paste a draft and ask for a review:
 
@@ -166,7 +166,7 @@ Every dimension cites its research. Full citations are in each archetype's rubri
 <details>
 <summary><strong>The 13-agent ADDIE pipeline</strong></summary>
 
-The plugin includes 13 agents that build instructional content from start to finish: a router, the 10 archetype specialists, the Curriculum Alignment acceptance gate, a synthesizer, and a reviser. Each archetype acts first as a design guardrail and then as an acceptance test. See [`PIPELINE.md`](skill/guide-instructional-design-plugin/PIPELINE.md) for phase order, severity flags, and score thresholds.
+The plugin includes 13 agents that build instructional content from start to finish: a router, the 10 archetype specialists (the Curriculum Alignment specialist doubles as the acceptance gate), a synthesizer, and a reviser. Each archetype acts first as a design guardrail and then as an acceptance test. See [`PIPELINE.md`](skill/guide-instructional-design-plugin/PIPELINE.md) for phase order, severity flags, and score thresholds.
 
 For batch evaluation, [`guide_pipeline.py`](guide_pipeline.py) runs the same pipeline from Python as `ADDIEPipeline`, and [`smoke_test_pipeline.py`](smoke_test_pipeline.py) is its mocked end-to-end test:
 
@@ -189,12 +189,14 @@ GUIDE is scored against its own rubrics at most releases. Six archetypes apply t
 | v3.2.3 | 4.3 / 5 | 4.2 / 5 | [v3.2.3](self-evaluations/GUIDE_Self_Evaluation_v3.2.3.md) |
 | v3.3.0 | 4.3 / 5 | 4.3 / 5 | [v3.3.0](self-evaluations/GUIDE_Self_Evaluation_v3.3.0.md) |
 | v3.4.0 | 4.4 / 5 | 4.3 / 5 | [v3.4.0](self-evaluations/GUIDE_Self_Evaluation_v3.4.0.md) |
+| v3.5.0 | 4.1 / 5 | 4.1 / 5 | [v3.5.0](self-evaluations/GUIDE_Self_Evaluation_v3.5.0.md) |
 
 Highlights:
 
 - **v3.1.1** applied archetype 10 to GUIDE for the first time. It scored 2 on Discipline Alignment because GUIDE did not map to a professional competency framework.
 - **v3.3.0** added the discipline crosswalk and raised that score from 2 to 4. It stops at 4 because a self-published crosswalk is not accreditation.
 - **v3.4.0** brought the printable rubric back to parity and added the first diagram, which raised Multimedia Principle Compliance from 3 to 4.
+- **v3.5.0** scored the living framework and the printable rubric together, re-reading every dimension against its anchor, and came out at 4.1, down from 4.4. Two dimensions fell because of this release: the printable rubric trails the updated assessment rubric, and the new rules and commands are not yet tested. The other eight are corrections to scores that had been carried forward on more generous readings, so the number fell mainly because the scoring got stricter. The report lists what to fix.
 
 v3.2.2 was packaging only, and v3.4.1 fixed only the Python output format for three archetypes, so neither was re-scored.
 
@@ -220,12 +222,12 @@ GUIDE/
 ├── self-evaluations/                      # One self-evaluation per scored release
 ├── skill/
 │   ├── guide-instructional-design/        # Canonical skill source
-│   ├── guide-instructional-design-plugin/ # Installable plugin (skill mirror, 13 agents, PIPELINE.md, README.md)
+│   ├── guide-instructional-design-plugin/ # Installable plugin (skill mirror, 3 commands, 13 agents, PIPELINE.md, README.md)
 │   ├── README.md                          # Skill and plugin install, build, and sync
 │   └── build_skill.py                     # Regenerates skill references and plugin mirror from archetypes/
 ├── CHANGELOG.md                           # Release history
 ├── CITATION.cff                           # Citation metadata (Cite this repository)
-├── GUIDE_Rubric_Document.docx             # Printable rubric (v3.4.0)
+├── GUIDE_Rubric_Document.docx             # Printable rubric (v3.5.0)
 ├── Installing-GUIDE-in-Claude.pdf         # Install guide with screenshots
 ├── LICENSE                                # Apache License 2.0
 ├── NOTICE                                 # Copyright and attribution
@@ -257,6 +259,6 @@ GUIDE is licensed under the [Apache License 2.0](LICENSE). Copyright 2026 Jeremy
 
 If you use GUIDE in research, teaching, or training, select **Cite this repository** in the sidebar on GitHub for APA and BibTeX formats (the details come from [`CITATION.cff`](CITATION.cff)). In APA style:
 
-> Terhune, J. (2026). *GUIDE: Grounded Universal Instructional Design Evaluator* (Version 3.4.1) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22949871
+> Terhune, J. (2026). *GUIDE: Grounded Universal Instructional Design Evaluator* (Version 3.5.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22949871
 
 That DOI covers all versions and always points to the latest release. To cite the exact version you used, take its DOI from the [Zenodo record](https://doi.org/10.5281/zenodo.22949871).

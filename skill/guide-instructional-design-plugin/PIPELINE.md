@@ -2,7 +2,7 @@
 
 A multi-agent ADDIE workflow that uses each of GUIDE's 10 archetypes as both **design guardrail** (when building) and **acceptance test** (when judging). Archetype 10 (Curriculum Alignment, v3.1.0) operates as a cross-cutting alignment check: it does **not** replace any individual archetype's judgment; it verifies that the components agree with each other.
 
-Tracks GUIDE **v3.4.1** (10 archetypes, 60 dimensions). Adopts Hirumi's Three Alignments (01), ARCS motivational alignment (03/07), and the Merrill (2002) Effective/Efficient/Engaging vocabulary that archetype 10 codifies.
+Tracks GUIDE **v3.5.0** (10 archetypes, 60 dimensions). Adopts Hirumi's Three Alignments (01), ARCS motivational alignment (03/07), and the Merrill (2002) Effective/Efficient/Engaging vocabulary that archetype 10 codifies.
 
 ## Goals
 
@@ -101,7 +101,7 @@ Three specialists in parallel:
 
 Each returns a draft design document + a self-evaluation against its own archetype.
 
-**Alignment fail-fast (10).** `guide-curriculum-alignment` runs a lightweight check on (objectives ← Phase A) vs (proposed strategies ← Phase D Design). If `objective_strategy_coherence < 4`, the router sends design back to revision before any Develop work is spent. This is the most expensive misalignment to catch late; catch it here.
+**Alignment fail-fast (10).** `guide-curriculum-alignment` runs a lightweight check on (objectives ← Phase A) vs (proposed strategies ← Phase D Design). If `objective_strategy_coherence < 4`, the orchestrator sends design back to revision before any Develop work is spent. This is the most expensive misalignment to catch late; catch it here.
 
 ## Phase D — Develop (Archetypes 04, 05)
 
@@ -175,7 +175,7 @@ Every agent's output adheres to a stable JSON contract so the orchestrator can c
 }
 ```
 
-The synthesizer's final output:
+The synthesizer's final output, in outline (`agents/guide-synthesizer.md` holds the full contract, including `non_progress_flag` and the per-action `fix_owner_agent` the reviser uses):
 
 ```json
 {
@@ -192,7 +192,7 @@ The synthesizer's final output:
 
 - **Sequential within phase boundaries** (A → Design → Develop → Implement → Evaluate → Gate → Synth). The phase-internal specialists run **in parallel** where listed.
 - **Fail-fast at the Design→Develop seam** via the lightweight 10 check; this is the cheapest place to catch verb/Bloom drift before development resources are committed.
-- **Audit path** skips A/D/D/I and runs only E + final 10 + synth on an existing artifact. Useful for batch grading.
+- **Audit path** skips the build work and runs every applicable specialist in evaluate mode on an existing artifact, then the final 10 and the synthesizer. Useful for batch grading.
 - **Partial path** lets the router pick up mid-cycle if some artifacts are already produced.
 - **Iteration cap** prevents infinite loops; if composite hasn't moved by ≥ 0.5 across two iterations, escalate to the user.
 
@@ -217,13 +217,13 @@ Cap rule from archetype 10 overrides upward composite when `objective_assessment
 
 ## How to invoke (Cowork / Claude Code)
 
-From a Cowork chat with this plugin installed:
+Type `/guide-pipeline` followed by the request or artifact (in Claude Code: `/guide-instructional-design:guide-pipeline`). The main conversation is the orchestrator: it spawns `guide-router`, runs the returned `dispatch_plan` (parallel within a phase), honors the fail-fast gate, runs the acceptance gate and `guide-synthesizer`, and loops through `guide-reviser` up to the iteration cap. The agents only read files and return JSON; none of them spawns another agent.
 
-> "Run the GUIDE pipeline on this course outline." → main Claude reads `agents/guide-router.md`, spawns the router subagent, which dispatches the rest via the Task tool.
+> `/guide-pipeline Build a 2-hour onboarding module on incident response for new SREs.` → router sets `build` and the plan starts at Phase A.
 
-For evaluation-only on an existing artifact:
+> `/guide-pipeline Grade this course outline end-to-end.` → router sets `review`, the judges fan out in parallel, 10 runs as the gate, and the synthesizer returns the verdict.
 
-> "Grade this artifact end-to-end against GUIDE." → router classifies as `review`, fans out to all relevant judges in parallel, runs 10 as the gate, synthesizer returns the verdict.
+Asking in plain language ("Run the GUIDE pipeline on this course outline") also works, but the command spells out the orchestration steps.
 
 The plugin's skill (`guide-instructional-design`) supplies the rubric content all agents reference; the agents supply the *roles* and the orchestration glue.
 
@@ -238,4 +238,4 @@ A few decisions worth making before v0.2:
 
 ---
 
-*Tracks GUIDE v3.4.1. Copyright 2026 Jeremy Terhune. Apache-2.0.*
+*Tracks GUIDE v3.5.0. Copyright 2026 Jeremy Terhune. Apache-2.0.*

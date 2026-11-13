@@ -125,7 +125,7 @@ Revision Decision: [What to do? e.g., "Rewrite labels; test with one learner bef
 
 ### 5. Feasibility & Practicality (1-5)
 
-Can the evaluation be executed realistically with available resources?
+Can the evaluation be executed realistically with available resources? Weigh cost against benefit: the evaluation should be commensurate with the project's scope.
 
 | Score | Budget | Timeline | Recruitment | Facilities/Tech | Resource Plan |
 |-------|--------|----------|------------|----------------|---------------|
@@ -185,82 +185,11 @@ Are appropriate usability methods integrated into the evaluation design?
 
 ---
 
-## System Prompt (Judge Rubric)
+## Output JSON
 
-```
-You are an expert in instructional design evaluation methodology and formative evaluation design.
-Your role is to assess evaluation plans, protocols, and designs for quality and appropriateness.
+Return this shape when the user wants machine-readable output (scores are integers 1-5; `overall` follows the archetype's scoring rule):
 
-You will score across 6 dimensions, each on a 1-5 scale:
-
-1. **Phase Coverage** (1-5)
-Bordonaro's four-phase model: expert review → one-to-one evaluation → small group → field trial
-- Not all phases required for every project, but omissions should be justified
-- Expert review: Subject matter experts, instructional designers, media specialists evaluate
-- One-to-one: Individual learners from target population work through content with observation/interview
-- Small group: 8-12 learners work through, facilitated discussion, identify issues
-- Field trial: Implementation in actual learning environment with larger sample
-Score: 1=Only one phase, no justification; 5=Appropriate phases with clear rationale
-
-2. **Evaluator Selection** (1-5)
-- Expert review requires THREE expert types: SME (content), Instruction/Learning expert, Media/Technology expert
-- One-to-one needs mixed ability learners: above-average, average, below-average from target population
-- Small group: Representative sample of target population
-- Field trial: Adequate sample size for statistical power (if applicable)
-Score: 1=Wrong evaluator types or sample; 5=Correct mix, justified selection criteria
-
-3. **Data Collection Alignment** (1-5)
-- Instruments match evaluation goals and research questions
-- Appropriate methods: observation forms, interviews, attitude surveys, achievement tests, think-aloud, heuristic checklists
-- Data collection tools clearly specified and attached
-- Right data being collected for right questions (not collecting "nice to know")
-Score: 1=Vague data collection, misaligned to goals; 5=Specific, well-designed instruments aligned to questions
-
-4. **Revision Decision Framework** (1-5)
-- Clear process for turning findings into revisions: Target → Data Source → Information Gained → Revision Decision
-- Severity ratings applied to prioritize fixes (Nielsen's scale: cosmetic, minor, major, catastrophic)
-- Threshold defined: what magnitude of finding triggers revision?
-- Revision decisions documented and tracked
-Score: 1=No clear decision framework; 5=Explicit severity ratings, prioritization, tracking
-
-5. **Feasibility & Practicality** (1-5)
-- Can the evaluation be executed with available resources (budget, personnel, time)?
-- Timelines realistic given recruitment and data collection needs
-- Participant recruitment plan documented and feasible
-- Technology/facilities available for planned evaluation
-- Cost-benefit analysis: Is the evaluation commensurate with project scope?
-Score: 1=Unrealistic timeline, no resource plan; 5=Fully resourced, detailed timeline, achievable
-
-6. **Usability Engineering Integration** (1-5)
-- Appropriate usability techniques employed: card sorting, think-aloud, heuristic evaluation, scenario testing
-- Nielsen's heuristic evaluation principles applied where appropriate
-- User testing methodology matches learning/usability goals
-- Observation protocols designed to capture usability issues
-Score: 1=No usability methods; 5=Multiple usability techniques well-integrated
-
-Return JSON with overall score (mean of 6 dimensions), individual dimension scores, rationale per dimension, severity_flags (critical issues), and improvement_suggestions (actionable next steps).
-```
-
----
-
-## Human Prompt Template
-
-```
-Evaluate the following formative evaluation plan or protocol.
-
-## INPUT / ARTIFACT
-{input}
-
-## CONTEXT (if available)
-{context}
-
-## OUTPUT / RESPONSE TO EVALUATE
-{output}
-
-## REFERENCE (if available)
-{reference}
-
-Score using the rubric above. Return only the JSON object in this format:
+```json
 {
   "scores": {
     "phase_coverage": <1-5>,
@@ -406,4 +335,4 @@ If these five are met, score ≥3 ("Fair"). Lower scores indicate critical gaps.
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.4.1). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 06 of 10.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.5.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 06 of 10. Skill edition: the judge prompts and Python-harness notes are omitted; the full model-agnostic handoff is `archetypes/handoff_06_formative_evaluation.md` in the GUIDE repository.*

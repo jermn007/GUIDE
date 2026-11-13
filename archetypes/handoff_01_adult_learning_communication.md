@@ -79,7 +79,7 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 ### Accuracy & Grounding (v3.1.0: anecdotal vs. scientific evidence)
 - **5**: All claims accurate and traceable; no hallucination; appropriate hedging. **Anecdotal evidence** (observations, stakeholder experience) is framed as anecdotal; **scientific evidence** (systematic, peer-reviewed) is framed as such; the two are not conflated (Hirumi, 2025).
 - **4**: Accurate overall; minor imprecision or one unsupported generalization that doesn't mislead.
-- **3**: Mostly accurate but at least one unsupported claim, oversimplification, or anecdote presented as if it were scientific consensus.
+- **3**: Mostly accurate but at least one unsupported claim, oversimplification, or anecdote presented as if it were established practice or scientific consensus (penalize this even when the anecdote is true).
 - **2**: Multiple inaccuracies; valid information mixed with hallucinated content; anecdotal and scientific evidence conflated in misleading ways.
 - **1**: Substantially inaccurate; fabricated information; would mislead the user.
 
@@ -96,6 +96,9 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 - **3**: Mixed — partly conversational, partly stiff or generic.
 - **2**: Predominantly formal or robotic; excessive self-referential disclaimers.
 - **1**: Reads like a textbook or policy document; no social presence.
+
+### Overall score
+The overall (1-5) is not a plain mean: weight **Accuracy & Grounding** and **Adult Learning Alignment** most heavily. A fluent, well-signaled response that is inaccurate or ignores the adult learner's context should not score well overall.
 
 ---
 
@@ -158,7 +161,29 @@ Evaluate the following assistant response.
 ## REFERENCE ANSWER (if available)
 {reference}
 
-Score using the six-dimension rubric. Return only the JSON object.
+Score using the six-dimension rubric. Return only the JSON object in this format:
+{
+  "scores": {
+    "adult_learning_alignment": <1-5>,
+    "cognitive_load_management": <1-5>,
+    "instructional_clarity": <1-5>,
+    "accuracy_and_grounding": <1-5>,
+    "accessibility": <1-5>,
+    "personalization_and_engagement": <1-5>,
+    "overall": <1-5, weighted toward accuracy and adult learning alignment>
+  },
+  "rationale": {
+    "adult_learning_alignment": "<2-3 sentence justification citing specific evidence from the response>",
+    "cognitive_load_management": "<2-3 sentence justification>",
+    "instructional_clarity": "<2-3 sentence justification>",
+    "accuracy_and_grounding": "<2-3 sentence justification>",
+    "accessibility": "<2-3 sentence justification>",
+    "personalization_and_engagement": "<2-3 sentence justification>",
+    "overall": "<1-2 sentence holistic summary>"
+  },
+  "severity_flags": ["<Nielsen severity 3-4 issues: major problems or catastrophes to fix before deployment>"],
+  "improvement_suggestions": ["<top 1-3 actionable improvements>"]
+}
 ```
 
 ---

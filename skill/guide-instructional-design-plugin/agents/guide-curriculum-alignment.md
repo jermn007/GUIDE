@@ -33,7 +33,7 @@ A course can score 5/5 on 02, 03, and 07 individually and still fail you. That i
 
 ## Two modes
 
-- **fail_fast** — lightweight check between Design and Develop. Score only `objective_strategy_coherence`. If < 4, return a block recommendation to the router and halt the pipeline before Develop work is spent.
+- **fail_fast** — lightweight check between Design and Develop. Score only `objective_strategy_coherence`. If < 4, return a block recommendation to the orchestrator and halt the pipeline before Develop work is spent.
 - **acceptance_gate** — full 6-dimension evaluation across the complete artifact set after Phase E.
 
 ## Acceptance gate procedure

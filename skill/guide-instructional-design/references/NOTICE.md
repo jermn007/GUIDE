@@ -3,7 +3,7 @@
 This skill packages content from the **GUIDE** project.
 
 **GUIDE — Grounded Universal Instructional Design Evaluator**
-Version 3.4.1
+Version 3.5.0
 Repository: https://github.com/jermn007/GUIDE
 Copyright 2026 Jeremy Terhune.
 Licensed under the Apache License, Version 2.0 (the "License"). You may not use these files except in
@@ -17,19 +17,24 @@ dimensions.
 
 ## What is bundled here
 
-The ten `handoff_0X_*.md` files in this directory are GUIDE's "model-agnostic handoff documents,"
-reproduced for use inside this skill so the rubrics, grounding text, scoring anchors, judge prompts,
-and output formats are available without depending on the upstream codebase. They correspond to the
-files under `archetypes/` in the GUIDE repository.
+The ten `handoff_0X_*.md` files in this directory are the **skill edition** of GUIDE's
+"model-agnostic handoff documents": the rubrics, grounding text, scoring anchors, severity flags,
+improvement suggestions, and output JSON, available without depending on the upstream codebase.
+They are generated from the files under `archetypes/` in the GUIDE repository, which remain the
+complete edition for use with other models and the Python API.
 
 `00_archetype_index.md` is a condensed routing index created for this skill; it summarizes and points
 to the handoff documents, which remain the authoritative source.
 
 ## Modifications
 
-Content is reproduced substantively verbatim from the GUIDE handoff documents. The only changes are:
-formatting normalization (e.g., code-fence indentation), and an attribution footer appended to each
-bundled file. No dimension definitions, scoring anchors, grounding text, or citations were altered.
+Content is reproduced verbatim from the GUIDE handoff documents, with these changes: the sections
+that serve only the Python LLM-as-a-judge harness are omitted (the judge system prompt, the
+human prompt template, input-format and calibration notes, pipeline-integration notes, and version
+history); the human prompt template is replaced by the JSON output shape it contains, under an
+"Output JSON" heading; and an attribution footer is appended to each bundled file. Scoring guidance
+that appeared only in a judge prompt was first moved into the kept sections of the source documents,
+so no dimension definitions, scoring anchors, grounding text, or citations were lost.
 
 ## Theoretical sources
 

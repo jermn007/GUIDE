@@ -88,6 +88,53 @@ def check(name: str, archetype: dict) -> list[str]:
     return problems
 
 
+def dimension_keys(name: str, archetype: dict) -> list[str]:
+    """Return the judge's six dimension keys, in order, from its JSON template."""
+    prompt = archetype["human_prompt"].format(
+        input="INPUT", output="OUTPUT", context="N/A", reference="N/A"
+    )
+    template = extract_template(archetype["system_prompt"] + "\n" + prompt) or ""
+    filled = re.sub(r'(?<!")<[^>"\n]*>(?!")', "3", template)
+    scores = json.loads(filled).get("scores", {}) if filled else {}
+    return [k for k in scores if k != "overall"]
+
+
+def check_handoffs() -> list[str]:
+    """Check each archetypes/handoff_NN_*.md shows the same dimension keys as its judge.
+
+    The handoffs are the model-agnostic edition used outside Claude (and the source of
+    the Claude skill), so their output JSON must stay in step with the Python judges.
+    """
+    problems: list[str] = []
+    here = os.path.dirname(os.path.abspath(__file__))
+    adir = os.path.join(here, "archetypes")
+    for fname in sorted(os.listdir(adir)):
+        m = re.fullmatch(r"handoff_(\d{2})_(.+)\.md", fname)
+        if not m:
+            continue
+        module = os.path.join(adir, f"archetype_{m.group(1)}_{m.group(2)}.py")
+        if not os.path.exists(module):
+            problems.append(f"{fname}: no matching {os.path.basename(module)}")
+            continue
+        with open(module, encoding="utf-8") as fh:
+            reg = re.search(r'register_archetype\(\s*name="([^"]+)"', fh.read())
+        if not reg or reg.group(1) not in _REGISTRY:
+            problems.append(f"{fname}: cannot find the registered archetype name")
+            continue
+        judge_keys = dimension_keys(reg.group(1), _REGISTRY[reg.group(1)])
+        with open(os.path.join(adir, fname), encoding="utf-8") as fh:
+            handoff = fh.read()
+        template = extract_template(handoff[handoff.find("## Human Prompt Template"):])
+        if template is None:
+            problems.append(f'{fname}: no JSON template with "scores" in its Human Prompt Template')
+            continue
+        hm = re.search(r'"scores"\s*:\s*\{(.*?)\}', template, re.DOTALL)
+        handoff_keys = [k for k in re.findall(r'"([a-z0-9_]+)"\s*:', hm.group(1)) if k != "overall"]
+        if handoff_keys != judge_keys:
+            problems.append(f"{fname}: dimension keys {handoff_keys} != judge {judge_keys}")
+    return problems
+
+
 def main() -> int:
     try:
         sys.stdout.reconfigure(encoding="utf-8")
@@ -109,11 +156,17 @@ def main() -> int:
                 print(f"  FAIL  {name}: {p}")
         else:
             print(f"  PASS  {name} (v{archetype.get('version', '?')})")
+    handoff_problems = check_handoffs()
+    for p in handoff_problems:
+        print(f"  FAIL  {p}")
+    if not handoff_problems:
+        print("  PASS  handoff output JSON matches each judge's dimension keys")
+    failed += len(handoff_problems)
     print()
     if failed:
         print(f"{failed} problem(s) found.")
         return 1
-    print(f"All {len(_REGISTRY)} archetypes ask for the standard output format.")
+    print(f"All {len(_REGISTRY)} archetypes ask for the standard output format, and the handoffs match.")
     return 0
 
 

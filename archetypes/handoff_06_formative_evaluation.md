@@ -125,7 +125,7 @@ Revision Decision: [What to do? e.g., "Rewrite labels; test with one learner bef
 
 ### 5. Feasibility & Practicality (1-5)
 
-Can the evaluation be executed realistically with available resources?
+Can the evaluation be executed realistically with available resources? Weigh cost against benefit: the evaluation should be commensurate with the project's scope.
 
 | Score | Budget | Timeline | Recruitment | Facilities/Tech | Resource Plan |
 |-------|--------|----------|------------|----------------|---------------|

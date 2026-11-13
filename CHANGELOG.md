@@ -6,7 +6,17 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
+## [3.5.0] - 2026-11-12
+
 ### Added
+- Archetype 02 (Assessment Design): guidance for scoring a single item or a short sample. Four dimensions score normally; Validity Evidence and Reliability Considerations are capped at 3 for a sample, and the item-count and coverage flags do not apply. An artifact presented as the complete assessment still meets the full thresholds.
+- Archetype 02: a rule for telling criterion-referenced from norm-referenced tests (cut score or mastery criterion versus percentiles, ranks, or a curve), with criterion-referenced as the stated default when the artifact does not say.
+- Archetype 02: a "Missing or Wrong Answer Key" severity flag, and a cap of 2 on Reliability Considerations when there is no answer key or scoring guide.
+- [v3.5.0 self-evaluation](self-evaluations/GUIDE_Self_Evaluation_v3.5.0.md), scored against the updated rubrics.
+- Three plugin commands: `/guide-review` scores an artifact, `/guide-design` starts with a needs-analysis interview before designing, and `/guide-pipeline` runs the 13-agent pipeline with the main conversation as orchestrator. They are user-invoked skills (`disable-model-invocation: true`), so they add nothing to Claude's context until typed. Before, the pipeline started only from phrasing, and its router agent had no way to spawn the other agents.
+- `EVALUATE.md` and `DESIGN.md` in the skill. `SKILL.md` now routes to one of them, so each run reads only the procedure for its mode, and each ends on a checkable "Done when" list (every score cites evidence, every dimension under 4 has a fix).
+- `build_skill.py` checks that each specialist agent's output contract uses the same dimension keys as its handoff, and `test_judge_schemas.py` checks that each handoff's output JSON matches its Python judge.
+- Plugin README: a Commands section and an "It's working if" section.
 - Zenodo DOI: a DOI badge and citation in the README, and the concept DOI ([10.5281/zenodo.22949871](https://doi.org/10.5281/zenodo.22949871)) in `CITATION.cff`. v3.4.1 is archived as [10.5281/zenodo.22949872](https://doi.org/10.5281/zenodo.22949872).
 - Plugin `README.md`, in preparation for listing GUIDE in Anthropic's Claude directory. The directory requires a README of at least 40 words in the plugin folder and shows it as the listing's description. It says what each archetype is for, which parts load in Claude chat versus Cowork and Claude Code, and that the plugin runs and sends nothing.
 - Plugin `displayName` ("GUIDE Instructional Design") in `plugin.json`.
@@ -15,11 +25,27 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - Directory listing links in `plugin.json`: `documentationUrl` (the README), `supportUrl` (GitHub issues), `privacyPolicyUrl` (`PRIVACY.md`), and `termsOfServiceUrl` (the Apache License 2.0).
 
 ### Changed
+- Archetype 02's Bloom's Alignment anchors now score the match between each item and its objective, not how high the items reach. Before, a recall quiz for a recall objective could not score above 2. The Python judge (`assessment_design`, now v1.1.0), the assessment agent, and the printable rubric carry the same change.
+- `/guide-pipeline` gives every agent the absolute path of the rubric folder. The agents name their rubrics relative to the plugin, which they could not resolve from the user's project.
+- `EVALUATE.md` says where each handoff keeps its severity list (Severity Flags, Red Flags, or Common Pitfalls to Flag) and what to flag for the two handoffs that have none (05 and 06).
+- `GUIDE_Rubric_Document.docx` is stamped v3.5.0 and carries the new Bloom's Alignment anchors. The new archetype 02 guidance on samples, test type, and answer keys is in the handoff only.
+- Archetype 02: Objective Congruence scores the item mapping when objective quality and mapping disagree, and the Coverage Gaps flag can be judged from the objectives when there is no blueprint.
+- `/guide-pipeline` stops when needs analysis finds training is the wrong fix, passes the reviser and synthesizer the inputs their contracts require, and skips the fail-fast gate in review runs. `PIPELINE.md` and the router and gate agents now name the main conversation as the orchestrator.
+- Threshold bands in the archetype index state their lower bounds, so an overall such as 4.47 has a band.
+- `STATUS.md`: the Claude directory listing is live (published 2026-11-09).
+- The skill's `references/handoff_*.md` are now a **skill edition**, about a fifth smaller. `build_skill.py` drops the sections that serve only the Python judge harness (the judge system prompt, the human prompt template, input-format, calibration, pipeline-integration, and version-history notes) and keeps the JSON output shape as an "Output JSON" section. The complete handoffs in `archetypes/` are unchanged for use with other models and the Python API.
+- Scoring guidance that appeared only in a judge prompt is now also in the kept sections of the handoffs: 01's overall weighting and its output JSON, 03's output JSON and "events may be reordered" rule, and small anchor details in 02, 06, 08, 09, and 10.
 - Plugin `description` in `plugin.json` uses a colon instead of an em dash.
 - `guide-router.md` and `PIPELINE.md` no longer put the agent name guide-formative-eval in inline code, and the pipeline diagram's code block is marked as `text`. The directory's validator read the inline name as a shell `eval` command and warned of a download-and-execute risk. The plugin runs no commands.
 - README hero: the title, the three-alignments mark, and the subtitle are about 10% larger.
 - README hero: the mark's dots now match the three-alignments diagram (effective in blue at the top, efficient in green at bottom left, engaging in amber at bottom right). Green and amber were swapped.
 - README fact badges now open matching content: archetypes goes to the archetype table, dimensions to the list of all 60 dimensions, and the ADDIE pipeline badge to `PIPELINE.md`. Before, they opened the badge image.
+
+### Fixed
+- `GUIDE_Rubric_Document.docx` said "nine archetypes" and "54 evaluation dimensions" in three places. It now says ten and 60.
+- Handoff 09 dated Dolcos, LaBar, and Cabeza's *Neuron* paper 2005. It is 2004.
+- The agent list in the READMEs and manifests counted the curriculum-alignment gate apart from the 10 specialists, which summed to 14. The gate is one of the 10; there are 13 agents.
+- `EVALUATE.md` pointed to a troubleshooting table that handoff 01 does not have.
 
 ## [3.4.1] - 2026-09-24
 
@@ -98,7 +124,8 @@ First public release as an installable Claude skill and plugin.
 - The `SKILL.md` description exceeded the 1024-character limit, which stopped the skill from loading.
 - Citations: the three quality outcomes are credited to Merrill (2002), and the alignment mapping to Hirumi, Ratliff and de la Mora (2021) and Hirumi (2025) (v3.1.1).
 
-[Unreleased]: https://github.com/jermn007/GUIDE/compare/v3.4.1...HEAD
+[Unreleased]: https://github.com/jermn007/GUIDE/compare/v3.5.0...HEAD
+[3.5.0]: https://github.com/jermn007/GUIDE/compare/v3.4.1...v3.5.0
 [3.4.1]: https://github.com/jermn007/GUIDE/compare/v3.4.0...v3.4.1
 [3.4.0]: https://github.com/jermn007/GUIDE/compare/v3.3.0...v3.4.0
 [3.3.0]: https://github.com/jermn007/GUIDE/compare/v3.2.2...v3.3.0
