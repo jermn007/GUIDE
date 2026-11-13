@@ -43,11 +43,11 @@ New to scoring with a rubric? The repository has [three short practice exercises
 
 You can also type a command:
 
-- `/guide-review` scores an artifact you paste, attach, or point to.
-- `/guide-design` starts with a short needs-analysis interview that checks whether training is the right fix, then designs against the rubrics.
-- `/guide-pipeline` runs the full multi-agent design or audit, with an alignment gate and a revision loop.
+- `/evaluate` scores an artifact you paste, attach, or point to.
+- `/build` starts with a short needs-analysis interview that checks whether training is the right fix, then designs against the rubrics.
+- `/pipeline` runs the full multi-agent design or audit, with an alignment gate and a revision loop.
 
-In Claude Code the commands carry the plugin name, for example `/guide-instructional-design:guide-review`.
+Each command's full name carries the plugin name, for example `/guide-instructional-design:evaluate`. In Claude Code the short form works when no other command uses that name; type the full name if it does.
 
 ### It's working if
 
@@ -59,7 +59,7 @@ In Claude Code the commands carry the plugin name, for example `/guide-instructi
 ## What's included
 
 - **The GUIDE skill:** the rubrics and scoring guidance. It works in Claude chat, Cowork, and Claude Code.
-- **3 commands:** `/guide-review`, `/guide-design`, and `/guide-pipeline`.
+- **3 commands:** `/evaluate`, `/build`, and `/pipeline`.
 - **13 agents:** a router, 10 archetype specialists (the curriculum-alignment specialist doubles as the gate), a synthesizer, and a reviser that together run a full ADDIE design or audit. Agents run in Cowork and Claude Code. Claude chat uses the skill only.
 
 ## What this plugin runs and sends

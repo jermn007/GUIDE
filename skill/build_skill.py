@@ -6,14 +6,14 @@ Single source of truth for handoff rubric content:
 
 Everything downstream is GENERATED — do not hand-edit it:
 - skill/guide-instructional-design/references/handoff_0X_*.md   (skill edition + version footer)
-- skill/guide-instructional-design-plugin/skills/guide-instructional-design/  (plugin mirror)
+- skill/guide-instructional-design-plugin/skills/framework/  (plugin mirror)
 
 The skill-specific files that are NOT handoffs — SKILL.md, package.json,
 references/00_archetype_index.md, references/NOTICE.md — are edited directly in
 skill/guide-instructional-design/ and only mirrored into the plugin by this script.
 SKILL.md, EVALUATE.md and DESIGN.md are edited the same way. The plugin's agents/,
-PIPELINE.md, and entry-command skills (skills/guide-review, guide-design,
-guide-pipeline) are plugin-only and untouched here.
+PIPELINE.md, and entry-command skills (skills/evaluate, build,
+pipeline) are plugin-only and untouched here.
 
 This script:
 1. Writes the skill edition of each archetypes/handoff_*.md into the skill's
@@ -21,8 +21,9 @@ This script:
    Template is replaced by its JSON output shape ("Output JSON"), and the
    "Source: GUIDE ... (vX.Y.Z) ... Archetype NN of 10" version footer is appended.
    The canonical handoffs stay complete for use outside Claude.
-2. Mirrors the canonical skill tree into the plugin's skills/guide-instructional-design/
-   so the plugin always ships a byte-identical copy.
+2. Mirrors the canonical skill tree into the plugin's skills/framework/
+   so the plugin always ships the same content. Only the `name` in SKILL.md differs:
+   the plugin's copy is named `framework`.
 3. Checks that each specialist agent's output contract uses the same dimension keys
    as its handoff's output JSON, and exits non-zero if not.
 
@@ -71,7 +72,10 @@ ARCHETYPES_DIR = REPO_ROOT / "archetypes"
 SKILL_DIR = REPO_ROOT / "skill" / "guide-instructional-design"
 REFERENCES_DIR = SKILL_DIR / "references"
 PLUGIN_DIR = REPO_ROOT / "skill" / "guide-instructional-design-plugin"
-PLUGIN_SKILL_DIR = PLUGIN_DIR / "skills" / "guide-instructional-design"
+# Inside the plugin the skill is named "framework", so it reads as
+# guide-instructional-design:framework and not as the plugin name twice.
+PLUGIN_SKILL_NAME = "framework"
+PLUGIN_SKILL_DIR = PLUGIN_DIR / "skills" / PLUGIN_SKILL_NAME
 PLUGIN_AGENTS_DIR = PLUGIN_DIR / "agents"
 
 # Matches a trailing "--- / *Source: GUIDE ... *" footer block so a source file that
@@ -248,10 +252,16 @@ def copy_crosswalk() -> Path | None:
 
 
 def mirror_skill_to_plugin() -> None:
-    """Copy the canonical skill tree into the plugin so the two stay byte-identical."""
+    """Copy the canonical skill tree into the plugin, identical except for the skill's name."""
     if PLUGIN_SKILL_DIR.exists():
         shutil.rmtree(PLUGIN_SKILL_DIR)
     shutil.copytree(SKILL_DIR, PLUGIN_SKILL_DIR)
+    skill_md = PLUGIN_SKILL_DIR / "SKILL.md"
+    text = skill_md.read_text(encoding="utf-8")
+    old = f"name: {SKILL_DIR.name}\n"
+    if text.count(old) != 1:
+        raise SystemExit(f"Expected one '{old.strip()}' line in {skill_md}")
+    skill_md.write_text(text.replace(old, f"name: {PLUGIN_SKILL_NAME}\n"), encoding="utf-8", newline="")
 
 
 def main() -> None:
@@ -265,7 +275,7 @@ def main() -> None:
     print(f"Generated {len(keys_by_archetype)} skill-edition handoff(s) at GUIDE v{GUIDE_VERSION}.")
     if crosswalk:
         print(f"Copied {crosswalk.name} into references/.")
-    print(f"Mirrored {SKILL_DIR.name}/ -> plugin skills/{SKILL_DIR.name}/.")
+    print(f"Mirrored {SKILL_DIR.name}/ -> plugin skills/{PLUGIN_SKILL_NAME}/.")
     problems = check_agents(keys_by_archetype)
     if problems:
         for p in problems:

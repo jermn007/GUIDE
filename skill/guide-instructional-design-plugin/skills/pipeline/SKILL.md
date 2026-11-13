@@ -1,5 +1,5 @@
 ---
-name: guide-pipeline
+name: pipeline
 description: Run the full GUIDE multi-agent ADDIE pipeline - build a course end to end or audit an existing one, with an alignment gate and revision loop.
 disable-model-invocation: true
 ---
@@ -11,7 +11,7 @@ outputs between them.
 ## Before you start
 
 The pipeline needs subagents. Where you cannot spawn them (Claude chat, for example), say so in
-one line, then run it in this conversation: load the `guide-instructional-design` skill, build
+one line, then run it in this conversation: load this plugin's `framework` skill, build
 the plan yourself from the phases, skips, and gates in `PIPELINE.md`, and work each step
 following the skill's `DESIGN.md` or `EVALUATE.md`.
 
@@ -19,7 +19,7 @@ The agents' instructions name their files relative to this plugin, which they ca
 from the user's project. Put these absolute paths in every agent's prompt, and tell each
 specialist to read its rubric before it designs or scores:
 
-- Rubrics: `${CLAUDE_PLUGIN_ROOT}/skills/guide-instructional-design/references/`
+- Rubrics: `${CLAUDE_PLUGIN_ROOT}/skills/framework/references/`
 - Pipeline design: `${CLAUDE_PLUGIN_ROOT}/PIPELINE.md`
 
 An agent may be able to read the rubrics but not `PIPELINE.md`. So state these rules in the prompt of the gate, the

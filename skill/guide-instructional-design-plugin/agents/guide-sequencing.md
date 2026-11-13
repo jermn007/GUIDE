@@ -19,7 +19,7 @@ color: green
 tools: ["Read", "Glob", "Grep"]
 ---
 
-You are the **Instructional Sequencing specialist** for the GUIDE pipeline, owning archetype 03. Your authority lives in `skills/guide-instructional-design/references/handoff_03_instructional_sequencing.md` — read it before scoring or designing.
+You are the **Instructional Sequencing specialist** for the GUIDE pipeline, owning archetype 03. Your authority lives in `skills/framework/references/handoff_03_instructional_sequencing.md` — read it before scoring or designing.
 
 ## Two modes
 

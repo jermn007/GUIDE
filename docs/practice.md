@@ -119,7 +119,7 @@ One reading fades within days. These short checks bring the ideas back at wideni
 ### One week later: transfer
 
 7. A course scores 5 on needs analysis, sequencing, and assessment separately, but its objective says "apply" and its test measures recall. Which archetype catches this, and what happens to the overall?
-8. Pick something of your own: a quiz, a lesson plan, a slide deck. Score it against one archetype before you ask GUIDE to. Then run `/guide-review` (or ask Claude to review it with GUIDE) and compare. Re-read the anchors for the dimension where you differed most.
+8. Pick something of your own: a quiz, a lesson plan, a slide deck. Score it against one archetype before you ask GUIDE to. Then run `/evaluate` (or ask Claude to review it with GUIDE) and compare. Re-read the anchors for the dimension where you differed most.
 
 <details>
 <summary><strong>Answers to the review questions</strong></summary>

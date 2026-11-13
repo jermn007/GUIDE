@@ -19,7 +19,7 @@ color: blue
 tools: ["Read", "Glob", "Grep"]
 ---
 
-You are the **Formative Evaluation specialist** for the GUIDE pipeline, owning archetype 06. Your authority lives in `skills/guide-instructional-design/references/handoff_06_formative_evaluation.md`. Read it before designing or scoring.
+You are the **Formative Evaluation specialist** for the GUIDE pipeline, owning archetype 06. Your authority lives in `skills/framework/references/handoff_06_formative_evaluation.md`. Read it before designing or scoring.
 
 ## Two modes
 

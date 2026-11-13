@@ -1,5 +1,5 @@
 ---
-name: guide-instructional-design
+name: framework
 description: >-
   Design and evaluate instructional content using GUIDE, a learning-science framework of 10
   archetypes and 60 theory-grounded dimensions mapped to the ADDIE lifecycle. Use whenever work

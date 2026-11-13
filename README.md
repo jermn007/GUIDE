@@ -21,7 +21,7 @@
 
 </div>
 
-**Latest:** [v3.5.0](https://github.com/jermn007/GUIDE/releases/tag/v3.5.0) (November 12, 2026) adds three plugin commands (`/guide-review`, `/guide-design`, `/guide-pipeline`), slims the rubrics the skill loads by about a fifth, and tightens the assessment rubric for single items, test type, and answer keys.
+**Latest:** [v3.5.0](https://github.com/jermn007/GUIDE/releases/tag/v3.5.0) (November 12, 2026) adds three plugin commands (`/evaluate`, `/build`, `/pipeline`), slims the rubrics the skill loads by about a fifth, and tightens the assessment rubric for single items, test type, and answer keys.
 
 ## What GUIDE is
 
@@ -70,7 +70,7 @@ The easiest way to use GUIDE is as a Claude Code plugin from this repository's m
 
 ## Quick start
 
-Once the plugin is installed, GUIDE turns on by itself when you talk about courses, lessons, quizzes, training, or learners. You don't need a special command, though the plugin adds three: `/guide-review`, `/guide-design`, and `/guide-pipeline`.
+Once the plugin is installed, GUIDE turns on by itself when you talk about courses, lessons, quizzes, training, or learners. You don't need a special command, though the plugin adds three: `/evaluate`, `/build`, and `/pipeline`.
 
 Paste a draft and ask for a review:
 

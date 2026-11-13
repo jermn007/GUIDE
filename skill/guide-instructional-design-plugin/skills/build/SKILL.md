@@ -1,14 +1,13 @@
 ---
-name: guide-design
+name: build
 description: Design new instruction with GUIDE, starting from a needs analysis that checks whether training is the right fix.
 disable-model-invocation: true
 ---
 
 Design instructional content with GUIDE in **design mode**, in this conversation.
 
-1. **Load the rubrics.** Load the `guide-instructional-design` skill (through the Skill tool where
-   one is available; in Claude Code its full name is
-   `guide-instructional-design:guide-instructional-design`) and read its `DESIGN.md` and
+1. **Load the rubrics.** Load this plugin's `framework` skill (through the Skill tool where
+   one is available; its full name is `guide-instructional-design:framework`) and read its `DESIGN.md` and
    `references/handoff_07_needs_analysis.md`. The archetype index can wait until step 4.
 2. **Run the gatekeeper interview** before designing anything. Ask one question at a time. Give
    each one your recommended answer or, for facts only the user has, your working assumption and

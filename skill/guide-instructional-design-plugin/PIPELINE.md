@@ -217,11 +217,11 @@ Cap rule from archetype 10 overrides upward composite when `objective_assessment
 
 ## How to invoke (Cowork / Claude Code)
 
-Type `/guide-pipeline` followed by the request or artifact (in Claude Code: `/guide-instructional-design:guide-pipeline`). The main conversation is the orchestrator: it spawns `guide-router`, runs the returned `dispatch_plan` (parallel within a phase), honors the fail-fast gate, runs the acceptance gate and `guide-synthesizer`, and loops through `guide-reviser` up to the iteration cap. The agents only read files and return JSON; none of them spawns another agent.
+Type `/pipeline` followed by the request or artifact (in Claude Code: `/guide-instructional-design:pipeline`). The main conversation is the orchestrator: it spawns `guide-router`, runs the returned `dispatch_plan` (parallel within a phase), honors the fail-fast gate, runs the acceptance gate and `guide-synthesizer`, and loops through `guide-reviser` up to the iteration cap. The agents only read files and return JSON; none of them spawns another agent.
 
-> `/guide-pipeline Build a 2-hour onboarding module on incident response for new SREs.` → router sets `build` and the plan starts at Phase A.
+> `/pipeline Build a 2-hour onboarding module on incident response for new SREs.` → router sets `build` and the plan starts at Phase A.
 
-> `/guide-pipeline Grade this course outline end-to-end.` → router sets `review`, the judges fan out in parallel, 10 runs as the gate, and the synthesizer returns the verdict.
+> `/pipeline Grade this course outline end-to-end.` → router sets `review`, the judges fan out in parallel, 10 runs as the gate, and the synthesizer returns the verdict.
 
 Asking in plain language ("Run the GUIDE pipeline on this course outline") also works, but the command spells out the orchestration steps.
 
