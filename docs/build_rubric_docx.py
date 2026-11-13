@@ -37,10 +37,10 @@ import sys
 from pathlib import Path
 
 from docx import Document
-from docx.enum.text import WD_BREAK
+from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_BREAK
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
-from docx.shared import Pt, RGBColor
+from docx.shared import Inches, Pt
 from docx.table import Table
 from docx.text.paragraph import Paragraph
 
@@ -75,6 +75,37 @@ MATRIX_PATTERNS = [
     ("HPT", r"Van Tiem|HPT model|Gilbert"), ("Campbell", r"Campbell|Snyder|Story Circle"), ("Brown", r"Brown|retrieval practice"),
     ("5E", r"\b5E\b"), ("Neuroscience", r"neuroscien"),
 ]
+PRACTICE_MD = REPO_ROOT / "docs" / "practice.md"
+PRACTICE_TITLE = "Practice: Score This, Then Compare"
+GENERATED_FIGURE_PREFIX = "GUIDE figure: "
+# key -> (PNG rendered by docs/art/render_diagrams.py, caption, alt text)
+FIGURES = {
+    "addie-map": (
+        REPO_ROOT / "assets" / "addie-map.png",
+        "the ten archetypes on the five ADDIE phases.",
+        "Diagram of the five ADDIE phases with GUIDE's archetypes under each. Analyze: 07 Needs Analysis. Design: 03 "
+        "Instructional Sequencing, 08 Story Design, 09 Cognitive Neuroscience. Develop: 04 Multimedia Design, 05 "
+        "Accessibility. Implement: 01 Adult Learning Communication. Evaluate: 02 Assessment Design, 06 Formative "
+        "Evaluation. Archetype 10, Curriculum Alignment, spans all five phases and checks that objectives, instruction, "
+        "and assessment agree.",
+    ),
+    "review-flow": (
+        REPO_ROOT / "assets" / "review-flow.png",
+        "the five steps of a review and the four verdict bands.",
+        "Diagram of a GUIDE review in five steps. 1 Route: match the draft to one to three archetypes. 2 Read: read each "
+        "rubric's six dimensions and anchors. 3 Score: give each dimension the score its anchor matches and quote the "
+        "evidence. 4 Flag and fix: raise severity flags and give a fix for every dimension under 4. 5 Verdict: average "
+        "the six scores. Verdict bands: below 2.5 redesign, 2.5 to 3.4 revise, 3.5 to 4.4 light revision, 4.5 to 5.0 ship.",
+    ),
+    "alignment-cap": (
+        REPO_ROOT / "assets" / "alignment-cap.png",
+        "the three links archetype 10 scores, and its cap rule.",
+        "Triangle diagram linking objectives, instructional strategies, and assessments. Archetype 10 scores the three "
+        "links: objective and strategy coherence, strategy and assessment coherence, and objective and assessment "
+        "coherence. The cap rule: when objective and assessment coherence scores 1 or 2, the overall is capped at 3.0. "
+        "Example: an objective that says apply, tested by a recall question.",
+    ),
+}
 CODE_FONT = "Consolas"
 INLINE_RE = re.compile(r"(\*\*.+?\*\*|`[^`]+`|(?<![\*\w])\*(?!\s)[^*]+?(?<!\s)\*(?!\w)|\[[^\]]+\]\([^)]+\))")
 
@@ -244,7 +275,7 @@ def split_row(line: str) -> list[str]:
     return [c.strip().replace("\\|", "|") for c in cells]
 
 
-def render_markdown(writer: Writer, md: str) -> None:
+def render_markdown(writer: Writer, md: str, h2_page_break: tuple[str, ...] = ()) -> None:
     lines = md.split("\n")
     i = 0
     buffer: list[str] = []
@@ -277,7 +308,7 @@ def render_markdown(writer: Writer, md: str) -> None:
             level = len(m.group(1))
             text = m.group(2).strip()
             if level <= 3:
-                writer.heading(text, level)
+                writer.heading(text, level, page_break=(level == 2 and text.startswith(h2_page_break) if h2_page_break else False))
             else:
                 writer.paragraph(f"**{text.replace('**', '')}**")
             i += 1
@@ -314,7 +345,9 @@ def render_markdown(writer: Writer, md: str) -> None:
             continue
         if stripped.startswith(">"):
             flush()
-            writer.paragraph("*" + stripped.lstrip("> ").replace("*", "") + "*", indent=18)
+            quoted = stripped.lstrip(">").strip()
+            if quoted:
+                writer.paragraph(quoted, indent=24)
             i += 1
             continue
         buffer.append(line)
@@ -505,18 +538,72 @@ def update_matrix(doc, handoff_text: dict[int, str]) -> None:
 def accessibility_pass(doc) -> None:
     for table in doc.tables:
         mark_header_row(table)
-    for doc_pr in doc.element.body.iter(qn("wp:docPr")):
+    # The hand-placed three-alignments figure: alt text, and the current rendering of its PNG.
+    for drawing in doc.element.body.iter(qn("w:drawing")):
+        doc_pr = next(drawing.iter(qn("wp:docPr")), None)
+        if doc_pr is None or (doc_pr.get("title") or "").startswith(GENERATED_FIGURE_PREFIX):
+            continue
         doc_pr.set("descr", FIGURE_ALT)
         doc_pr.set("title", "GUIDE three alignments diagram")
-    if FIGURE_PNG.exists():
-        blob = FIGURE_PNG.read_bytes()
-        for rel in doc.part.rels.values():
-            if "image" in rel.reltype and not rel.is_external:
-                rel.target_part._blob = blob
+        blip = next(drawing.iter(qn("a:blip")), None)
+        rel_id = blip.get(qn("r:embed")) if blip is not None else None
+        if rel_id and FIGURE_PNG.exists():
+            doc.part.rels[rel_id].target_part._blob = FIGURE_PNG.read_bytes()
+
+
+def remove_generated_figures(doc) -> None:
+    """Remove figures an earlier run placed in the hand-written sections, so a re-run does not stack them."""
+    body = doc.element.body
+    for drawing in list(body.iter(qn("w:drawing"))):
+        doc_pr = next(drawing.iter(qn("wp:docPr")), None)
+        if doc_pr is None or not (doc_pr.get("title") or "").startswith(GENERATED_FIGURE_PREFIX):
+            continue
+        para = drawing.getparent()
+        while para is not None and para.tag != qn("w:p"):
+            para = para.getparent()
+        if para is None:
+            continue
+        caption = para.getnext()
+        if caption is not None and caption.tag == qn("w:p") and Paragraph(caption, doc).text.startswith("Figure:"):
+            caption.getparent().remove(caption)
+        para.getparent().remove(para)
+
+
+def add_figure(doc, after, key: str) -> None:
+    """Insert a generated figure and its caption after a body element."""
+    png, caption, alt = FIGURES[key]
+    if not png.exists():
+        raise SystemExit(f"Missing {png}: run python docs/art/render_diagrams.py")
+    cap = doc.add_paragraph()
+    after.addnext(cap._p)
+    run = cap.add_run(f"Figure: {caption}")
+    run.italic = True
+    run.font.size = Pt(9)
+    cap.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    pic = doc.add_paragraph()
+    after.addnext(pic._p)
+    pic.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    pic.paragraph_format.keep_with_next = True
+    pic.add_run().add_picture(str(png), width=Inches(6.0))
+    doc_pr = next(pic._p.iter(qn("wp:docPr")))
+    doc_pr.set("descr", alt)
+    doc_pr.set("title", GENERATED_FIGURE_PREFIX + key)
+
+
+def practice_markdown() -> str:
+    """docs/practice.md as plain markdown: HTML disclosure tags dropped, links reduced to their labels."""
+    text = PRACTICE_MD.read_text(encoding="utf-8").replace("\r\n", "\n")
+    text = re.sub(r"^# .+\n", "", text, count=1)
+    text = re.sub(r"^</?details>\s*\n", "", text, flags=re.MULTILINE)
+    text = re.sub(r"^<summary>.*</summary>\s*\n", "", text, flags=re.MULTILINE)
+    text = text.replace("[`archetypes/`](../archetypes) holds one `handoff_NN_*.md` file per archetype, and the printable "
+                        "rubric has the same text.", "The archetype sections of this document hold the anchors.")
+    return re.sub(r"\s*—\s*", " - ", text)
 
 
 def build() -> None:
     doc = Document(str(DOCX))
+    remove_generated_figures(doc)
     start = heading_element(doc, FIRST_GENERATED)
     end = heading_element(doc, AFTER_GENERATED)
     remove_between(doc, start, end, keep_start=False)
@@ -530,13 +617,20 @@ def build() -> None:
         number = int(re.search(r"handoff_(\d{2})_", path.name).group(1))
         title, body = print_edition(path)
         handoff_text[number] = body
-        writer.heading(heading_title(number, title), 1, page_break=True)
+        h1 = writer.heading(heading_title(number, title), 1, page_break=True)
         render_markdown(writer, body)
+        if number == 10:
+            add_figure(doc, h1._p, "alignment-cap")
+    # Practice exercises and the spaced-review schedule close the generated block.
+    writer.heading(PRACTICE_TITLE, 1, page_break=True)
+    render_markdown(writer, practice_markdown(), h2_page_break=("Part 2", "Answers"))
     # The section after the generated block starts on its own page.
     Paragraph(end, doc).paragraph_format.page_break_before = True
 
     stamp_cover(doc)
     fix_front_matter(doc)
+    add_figure(doc, heading_element(doc, "Quick-Reference", level=2), "addie-map")
+    add_figure(doc, heading_element(doc, "How to Use This Document", level=2), "review-flow")
     insert_toc(doc)
     update_matrix(doc, handoff_text)
     accessibility_pass(doc)
@@ -555,8 +649,10 @@ def sources_digest() -> str:
         h.update(path.read_bytes().replace(b"\r\n", b"\n"))
     h.update(build_skill.GUIDE_VERSION.encode())
     h.update(Path(__file__).read_bytes().replace(b"\r\n", b"\n"))
-    if FIGURE_PNG.exists():
-        h.update(FIGURE_PNG.read_bytes())
+    h.update(PRACTICE_MD.read_bytes().replace(b"\r\n", b"\n"))
+    for png in [FIGURE_PNG] + [fig[0] for fig in FIGURES.values()]:
+        if png.exists():
+            h.update(png.read_bytes())
     return h.hexdigest()[:16]
 
 

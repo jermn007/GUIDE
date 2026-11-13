@@ -168,7 +168,7 @@ Because the skill edition omits the judge prompts, keep any scoring rule in the 
 python docs/build_rubric_docx.py
 ```
 
-The script replaces everything from "Archetype 01" to "Severity Flagging" with a print edition of each handoff (the skill edition without the JSON output shape), stamps the cover with `GUIDE_VERSION`, rebuilds the table of contents, recomputes the archetype 10 column of the coverage matrix, marks every table's header row, and sets the figure's alt text. It needs `python-docx`. With Word installed it also fills in the page numbers; without Word they fill in when the file is first opened. Run it after editing a handoff, and never edit the generated sections by hand. `python docs/build_rubric_docx.py --check` fails when the file is older than its sources.
+The script replaces everything from "Archetype 01" to "Severity Flagging" with a print edition of each handoff (the skill edition without the JSON output shape), stamps the cover with `GUIDE_VERSION`, rebuilds the table of contents, recomputes the archetype 10 column of the coverage matrix, places the diagrams, appends `docs/practice.md` as a practice section, marks every table's header row, and sets alt text on every figure. After editing a diagram in `assets/`, run `python docs/art/render_diagrams.py` first to refresh the PNGs. It needs `python-docx`. With Word installed it also fills in the page numbers; without Word they fill in when the file is first opened. Run it after editing a handoff, and never edit the generated sections by hand. `python docs/build_rubric_docx.py --check` fails when the file is older than its sources.
 
 ## Versioning
 

@@ -37,6 +37,8 @@ GUIDE returns a 1 to 5 score on each dimension with the evidence behind it, an o
 
 To design instead, ask for what you want built: *"Write a three-item scenario quiz for that objective, using GUIDE."*
 
+New to scoring with a rubric? The repository has [three short practice exercises](https://github.com/jermn007/GUIDE/blob/main/docs/practice.md) where you score first and then compare with GUIDE.
+
 ### Commands
 
 You can also type a command:

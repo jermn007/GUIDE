@@ -93,6 +93,12 @@ GUIDE matches the item to **Assessment Design** (archetype 02) and returns:
 
 This sample item has a classic flaw for GUIDE to catch: the objective asks learners to *apply* a model, but the item only asks them to *recall* it.
 
+<p align="center">
+  <img src="assets/review-flow.svg" alt="Diagram of a GUIDE review in five steps. 1 Route: match the draft to one to three archetypes. 2 Read: read each rubric's six dimensions and anchors. 3 Score: give each dimension the score its anchor matches and quote the evidence. 4 Flag and fix: raise severity flags and give a fix for every dimension under 4. 5 Verdict: average the six scores. Verdict bands: below 2.5 redesign, 2.5 to 3.4 revise, 3.5 to 4.4 light revision, 4.5 to 5.0 ship." width="760">
+</p>
+
+**Learn to score by doing it.** [Practice: score this, then compare](docs/practice.md) has three five-minute exercises with GUIDE's scores and reasoning to check yours against, and a short review schedule for the week after.
+
 To **design** instead of grade, ask for the thing you want built, for example: *"Write a three-item scenario quiz for that objective, using GUIDE."* GUIDE writes against the same dimensions and checks its own work before handing it over.
 
 <details>
@@ -146,6 +152,10 @@ Good instruction is effective, efficient, and engaging (Merrill, 2002). Hirumi (
 
 Each archetype maps to a phase of the ADDIE lifecycle. Archetype 10 checks that the pieces fit together, so a course can score well on every other archetype and still fail it.
 
+<p align="center">
+  <img src="assets/addie-map.svg" alt="Diagram of the five ADDIE phases with GUIDE's archetypes under each. Analyze: 07 Needs Analysis. Design: 03 Instructional Sequencing, 08 Story Design, 09 Cognitive Neuroscience. Develop: 04 Multimedia Design, 05 Accessibility. Implement: 01 Adult Learning Communication. Evaluate: 02 Assessment Design, 06 Formative Evaluation. Archetype 10, Curriculum Alignment, spans all five phases." width="760">
+</p>
+
 | # | Archetype | Use it for | ADDIE phase | Grounded in |
 |---|-----------|-----------|-------------|-------------|
 | 07 | Needs Analysis | training requests, performance gaps, objectives | Analyze | Van Tiem, Kaufman, Mager, Keller |
@@ -158,6 +168,12 @@ Each archetype maps to a phase of the ADDIE lifecycle. Archetype 10 checks that 
 | 02 | Assessment Design | quizzes, tests, item banks, rubrics | Evaluate | Anderson and Krathwohl, Mager, Kubiszyn and Borich |
 | 06 | Formative Evaluation | evaluation plans, usability tests, pilots | Evaluate | Bordonaro, Dick and Carey, Nielsen |
 | 10 | Curriculum Alignment | do objectives, instruction, and assessment agree? | Across all phases | Tyler, Anderson and Krathwohl, Webb, Mager, Dick and Carey, Wiggins and McTighe, Reigeluth, Hirumi |
+
+Archetype 10 scores the links between the parts, and one link carries a cap:
+
+<p align="center">
+  <img src="assets/alignment-cap.svg" alt="Triangle diagram linking objectives, instructional strategies, and assessments. Archetype 10 scores the three links between them. The cap rule: when objective and assessment coherence scores 1 or 2, the overall is capped at 3.0, however strong the other scores are. Example: an objective that says apply, tested by a recall question." width="760">
+</p>
 
 ### Sources
 
@@ -189,14 +205,14 @@ GUIDE is scored against its own rubrics at most releases. Six archetypes apply t
 | v3.2.3 | 4.3 / 5 | 4.2 / 5 | [v3.2.3](self-evaluations/GUIDE_Self_Evaluation_v3.2.3.md) |
 | v3.3.0 | 4.3 / 5 | 4.3 / 5 | [v3.3.0](self-evaluations/GUIDE_Self_Evaluation_v3.3.0.md) |
 | v3.4.0 | 4.4 / 5 | 4.3 / 5 | [v3.4.0](self-evaluations/GUIDE_Self_Evaluation_v3.4.0.md) |
-| v3.5.0 | 4.2 / 5 | 4.2 / 5 | [v3.5.0](self-evaluations/GUIDE_Self_Evaluation_v3.5.0.md) |
+| v3.5.0 | 4.3 / 5 | 4.3 / 5 | [v3.5.0](self-evaluations/GUIDE_Self_Evaluation_v3.5.0.md) |
 
 Highlights:
 
 - **v3.1.1** applied archetype 10 to GUIDE for the first time. It scored 2 on Discipline Alignment because GUIDE did not map to a professional competency framework.
 - **v3.3.0** added the discipline crosswalk and raised that score from 2 to 4. It stops at 4 because a self-published crosswalk is not accreditation.
 - **v3.4.0** brought the printable rubric back to parity and added the first diagram, which raised Multimedia Principle Compliance from 3 to 4.
-- **v3.5.0** scored the living framework and the printable rubric together, re-reading every dimension against its anchor, and came out at 4.2, down from 4.4. Six of the seven one-point drops are corrections to scores that had been carried forward on more generous readings, and one traces to this release (pipeline paths not yet run live), so the number fell because the scoring got stricter. The report lists what to fix next.
+- **v3.5.0** scored the living framework and the printable rubric together, re-reading every dimension against its anchor, and came out at 4.3 against v3.4.0's 4.4. The earlier figure reads about 4.2 under the same strict scoring, so this release is a gain: practice exercises, a spaced review schedule, and three new diagrams raised five dimensions, four older scores were corrected down, and one fell because parts of the pipeline have not yet run live.
 
 v3.2.2 was packaging only, and v3.4.1 fixed only the Python output format for three archetypes, so neither was re-scored.
 
@@ -215,11 +231,12 @@ GUIDE/
 │   ├── edge_cases_XX.json                 # Labeled test cases (one file per archetype)
 │   └── handoff_XX_*.md                    # Rubrics: the single source of truth
 ├── assets/
-│   ├── three-alignments.png               # Diagram, rasterized from the SVG for the docx
-│   └── three-alignments.svg               # Diagram used in this README
+│   ├── *.svg                              # Diagrams used in this README (three alignments, ADDIE map, review flow, alignment cap)
+│   └── *.png                              # The same diagrams, rasterized for the docx by docs/art/render_diagrams.py
 ├── docs/
 │   ├── art/                               # README hero (hero.html) and plugin icon (icon.py) sources, rendered PNGs
-│   └── build_rubric_docx.py               # Regenerates the printable rubric's archetype sections from archetypes/
+│   ├── build_rubric_docx.py               # Regenerates the printable rubric's archetype sections from archetypes/
+│   └── practice.md                        # Three score-then-compare exercises and a spaced review schedule
 ├── self-evaluations/                      # One self-evaluation per scored release
 ├── skill/
 │   ├── guide-instructional-design/        # Canonical skill source

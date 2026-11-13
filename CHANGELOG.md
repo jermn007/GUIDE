@@ -14,6 +14,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - Archetype 02: a "Missing or Wrong Answer Key" severity flag, and a cap of 2 on Reliability Considerations when there is no answer key or scoring guide.
 - [v3.5.0 self-evaluation](self-evaluations/GUIDE_Self_Evaluation_v3.5.0.md), scored against the updated rubrics.
 - `docs/build_rubric_docx.py` regenerates the ten archetype sections of `GUIDE_Rubric_Document.docx` from the handoffs, so the printable rubric cannot drift from the rubrics. It also rebuilds the table of contents, adds an archetype 10 column to the coverage matrix, marks every table's header row, and gives the figure alt text. `--check` fails when the file is stale.
+- `docs/practice.md`: three score-then-compare exercises (a quiz, a slide, a training request) with GUIDE's scores and reasoning, and a review schedule for one day, three days, and one week later. The printable rubric carries it as a closing section.
+- Three diagrams, drawn as SVG: the archetypes across ADDIE, the five steps of a review with the four verdict bands, and archetype 10's links and cap rule. They appear in the README and the printable rubric with full alt text. `docs/art/render_diagrams.py` rasterizes them for the docx.
 - `run_edge_cases.py` checks every edge-case file without a model, and with `--live` scores each case with a judge and reports drift from the expected overall.
 - Four edge cases for archetype 02's new rules: a single-item sample, a keyless quiz on one objective, a recall quiz for recall objectives, and a short norm-referenced placement test.
 - Severity flag lists for archetypes 05 (Accessibility) and 06 (Formative Evaluation), in the handoffs and the Python judges. Every rubric now names the conditions to flag.
