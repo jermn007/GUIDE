@@ -1,0 +1,2010 @@
+{
+  "guide_version": "3.5.0",
+  "date": "2026-11-12",
+  "backend": "cli (Claude Code 2.1.226)",
+  "model": "sonnet",
+  "tolerance": 0.7,
+  "note": "Each case scored once. Archetype 02 was re-scored after one case was corrected; the other nine archetypes are from the first full run. Cases that expect only a whole-number overall are allowed one full point.",
+  "cases": 68,
+  "within_tolerance": 62,
+  "errors": 0,
+  "mean_absolute_drift": 0.43,
+  "mean_drift": -0.299,
+  "results": [
+    {
+      "archetype": "adult_learning_communication",
+      "case": "good_01_completion_tracking",
+      "expected_overall": 5.0,
+      "expected_scores": {},
+      "judge_overall": 5.0,
+      "judge_scores": {
+        "adult_learning_alignment": 5,
+        "cognitive_load_management": 5,
+        "instructional_clarity": 4,
+        "accuracy_and_grounding": 4,
+        "accessibility": 5,
+        "personalization_and_engagement": 5
+      },
+      "severity_flags": [],
+      "drift": 0.0,
+      "whole_number_overall": true,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "adult_learning_communication",
+      "case": "bad_01_jargon_wall",
+      "expected_overall": 1.0,
+      "expected_scores": {},
+      "judge_overall": 2.0,
+      "judge_scores": {
+        "adult_learning_alignment": 2,
+        "cognitive_load_management": 2,
+        "instructional_clarity": 2,
+        "accuracy_and_grounding": 2,
+        "accessibility": 1,
+        "personalization_and_engagement": 1
+      },
+      "severity_flags": [
+        "RAG context (Settings > Completion Tracking navigation path) was retrieved but not surfaced to the user, meaning the actual answer to 'how do I set this up' is effectively missing from the response.",
+        "Unsupported claim presented as established fact ('one of the most common sources of learner frustration and help desk tickets') without evidence or hedging, risking misleading the user about the scope of the problem."
+      ],
+      "drift": 1.0,
+      "whole_number_overall": true,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "adult_learning_communication",
+      "case": "bad_02_hallucinated_steps",
+      "expected_overall": 2.0,
+      "expected_scores": {},
+      "judge_overall": 1.0,
+      "judge_scores": {
+        "adult_learning_alignment": 2,
+        "cognitive_load_management": 2,
+        "instructional_clarity": 3,
+        "accuracy_and_grounding": 1,
+        "accessibility": 2,
+        "personalization_and_engagement": 2
+      },
+      "severity_flags": [
+        "Catastrophe: Response fabricates specific UI elements, menu paths, and export options (Scenario Builder, Variable Manager, Validate Tree, SCORM with Branching Metadata) that have no basis in the retrieved context, presenting hallucinated content as confident, actionable fact to a user who will follow it and fail.",
+        "No hedging or acknowledgment that the retrieved context only describes a generic decision-point/slide-group mechanism, not the detailed tool-specific workflow described."
+      ],
+      "drift": -1.0,
+      "whole_number_overall": true,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "adult_learning_communication",
+      "case": "bad_03_dismissive_tone",
+      "expected_overall": 2.0,
+      "expected_scores": {},
+      "judge_overall": 1.0,
+      "judge_scores": {
+        "adult_learning_alignment": 1,
+        "cognitive_load_management": 3,
+        "instructional_clarity": 2,
+        "accuracy_and_grounding": 2,
+        "accessibility": 2,
+        "personalization_and_engagement": 1
+      },
+      "severity_flags": [
+        "Condescending tone toward a professional user asking a legitimate practical question, violating core andragogical principles and risking user trust/satisfaction",
+        "Response discards available retrieved context (purpose of each assessment type, Dick/Carey/Carey model) that would have directly answered 'when should I use each,' resulting in an incomplete answer to the actual question asked",
+        "Unsupported generalization ('most instructional designers learn this early') stated as fact with no hedging or sourcing"
+      ],
+      "drift": -1.0,
+      "whole_number_overall": true,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "adult_learning_communication",
+      "case": "borderline_01_accurate_but_dry",
+      "expected_overall": 3.0,
+      "expected_scores": {},
+      "judge_overall": 3.0,
+      "judge_scores": {
+        "adult_learning_alignment": 2,
+        "cognitive_load_management": 3,
+        "instructional_clarity": 4,
+        "accuracy_and_grounding": 4,
+        "accessibility": 3,
+        "personalization_and_engagement": 2
+      },
+      "severity_flags": [],
+      "drift": 0.0,
+      "whole_number_overall": true,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "adult_learning_communication",
+      "case": "borderline_02_good_tone_weak_accuracy",
+      "expected_overall": 3.0,
+      "expected_scores": {},
+      "judge_overall": 4.0,
+      "judge_scores": {
+        "adult_learning_alignment": 5,
+        "cognitive_load_management": 4,
+        "instructional_clarity": 4,
+        "accuracy_and_grounding": 3,
+        "accessibility": 4,
+        "personalization_and_engagement": 5
+      },
+      "severity_flags": [
+        "Unsupported claims about Rise's accessibility/WCAG handling, branding limitations, and assessment depth are not traceable to the retrieved context and are stated as fact without hedging, risking user reliance on unverified specifics for a compliance-training decision."
+      ],
+      "drift": 1.0,
+      "whole_number_overall": true,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "adult_learning_communication",
+      "case": "good_02_scaffolded_explanation",
+      "expected_overall": 5.0,
+      "expected_scores": {},
+      "judge_overall": 5.0,
+      "judge_scores": {
+        "adult_learning_alignment": 5,
+        "cognitive_load_management": 5,
+        "instructional_clarity": 5,
+        "accuracy_and_grounding": 5,
+        "accessibility": 5,
+        "personalization_and_engagement": 5
+      },
+      "severity_flags": [],
+      "drift": 0.0,
+      "whole_number_overall": true,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "adult_learning_communication",
+      "case": "bad_04_over_explains_basics",
+      "expected_overall": 2.0,
+      "expected_scores": {},
+      "judge_overall": 2.0,
+      "judge_scores": {
+        "adult_learning_alignment": 2,
+        "cognitive_load_management": 2,
+        "instructional_clarity": 3,
+        "accuracy_and_grounding": 2,
+        "accessibility": 3,
+        "personalization_and_engagement": 2
+      },
+      "severity_flags": [
+        "Buries the direct answer to the user's specific question at the very end, after extensive generic preamble — violates problem-centered andragogy and coherence/segmenting principles.",
+        "Introduces an unsupported historical claim ('first theorized in the early 2000s') not present in retrieved context, presented as fact.",
+        "Omits relevant retrieved detail (weekly deadlines/schedule for both delivery modes) that directly answers likely follow-up needs."
+      ],
+      "drift": 0.0,
+      "whole_number_overall": true,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "adult_learning_communication",
+      "case": "borderline_03_good_structure_missing_context",
+      "expected_overall": 3.0,
+      "expected_scores": {},
+      "judge_overall": 2.0,
+      "judge_scores": {
+        "adult_learning_alignment": 2,
+        "cognitive_load_management": 3,
+        "instructional_clarity": 3,
+        "accuracy_and_grounding": 2,
+        "accessibility": 2,
+        "personalization_and_engagement": 2
+      },
+      "severity_flags": [
+        "Response does not use or reference the retrieved context at all (Module 5 content, score gap, learning materials), representing a major RAG grounding failure that could mislead the user into thinking no specific data was available to diagnose the problem.",
+        "Cites Dick, Carey & Carey as the basis for generic advice that was not actually derived from or validated against the user's specific retrieved data, creating a false impression of rigor."
+      ],
+      "drift": -1.0,
+      "whole_number_overall": true,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "adult_learning_communication",
+      "case": "good_03_formative_feedback",
+      "expected_overall": 5.0,
+      "expected_scores": {},
+      "judge_overall": 5.0,
+      "judge_scores": {
+        "adult_learning_alignment": 5,
+        "cognitive_load_management": 5,
+        "instructional_clarity": 4,
+        "accuracy_and_grounding": 5,
+        "accessibility": 5,
+        "personalization_and_engagement": 5
+      },
+      "severity_flags": [],
+      "drift": 0.0,
+      "whole_number_overall": true,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "assessment_design",
+      "case": "good_01_wellaligned_quiz",
+      "expected_overall": 4.8,
+      "expected_scores": {
+        "blooms_alignment": 5,
+        "objective_congruence": 5,
+        "item_construction_quality": 5,
+        "validity_evidence": 5,
+        "reliability_considerations": 4,
+        "inclusivity_fairness": 5
+      },
+      "judge_overall": 3.0,
+      "judge_scores": {
+        "blooms_alignment": 4,
+        "objective_congruence": 3,
+        "item_construction_quality": 3,
+        "validity_evidence": 2,
+        "reliability_considerations": 3,
+        "inclusivity_fairness": 3
+      },
+      "severity_flags": [
+        "Item 3's correct answer requires no calculation despite testing an explicit 'Apply: calculate' objective, and its stated rationale misidentifies the actual missing variable — the key as written is not scientifically defensible.",
+        "Light-independent reactions (Calvin cycle) are essentially untested despite being half of the stated learning objective ('light-dependent vs. light-independent efficiency') — a significant content-validity gap with no blueprint to catch it.",
+        "Items 6, 7, and 10 are not explicitly tied to any of the five stated objectives, contradicting the rubric's own claim that 'every item maps to a stated learning objective.'",
+        "Stated ELL and deaf-accessibility accommodations are not actually built into the items (no glossary/simplified language; captioning claim is inapplicable to a text-only instrument)."
+      ],
+      "drift": -1.8,
+      "whole_number_overall": false,
+      "within_tolerance": false
+    },
+    {
+      "archetype": "assessment_design",
+      "case": "good_02_performancerubric",
+      "expected_overall": 4.7,
+      "expected_scores": {
+        "blooms_alignment": 5,
+        "objective_congruence": 5,
+        "item_construction_quality": 5,
+        "validity_evidence": 4,
+        "reliability_considerations": 5,
+        "inclusivity_fairness": 4
+      },
+      "judge_overall": 3.5,
+      "judge_scores": {
+        "blooms_alignment": 4,
+        "objective_congruence": 4,
+        "item_construction_quality": 3,
+        "validity_evidence": 3,
+        "reliability_considerations": 3,
+        "inclusivity_fairness": 4
+      },
+      "severity_flags": [
+        "Overlapping score-band thresholds in Criterion 2 ('4+ layers' Excellent vs. '3-4 layers' Proficient) create scoring ambiguity at the boundary.",
+        "Fluid dynamics — explicitly named in the learning objective — has no dedicated assessment criterion, only indirect coverage via flow rate/inlet-outlet design.",
+        "No calibration anchors, exemplars, or weighting guidance provided, leaving inter-rater reliability largely untested."
+      ],
+      "drift": -1.2,
+      "whole_number_overall": false,
+      "within_tolerance": false
+    },
+    {
+      "archetype": "assessment_design",
+      "case": "bad_01_allrecall",
+      "expected_overall": 1.7,
+      "expected_scores": {
+        "blooms_alignment": 1,
+        "objective_congruence": 1,
+        "item_construction_quality": 2,
+        "validity_evidence": 1,
+        "reliability_considerations": 3,
+        "inclusivity_fairness": 2
+      },
+      "judge_overall": 1.83,
+      "judge_scores": {
+        "blooms_alignment": 1,
+        "objective_congruence": 1,
+        "item_construction_quality": 2,
+        "validity_evidence": 1,
+        "reliability_considerations": 2,
+        "inclusivity_fairness": 4
+      },
+      "severity_flags": [
+        "Objective-item mismatch: an 'Analyze' objective is assessed almost entirely with Remember-level recall items; no item requires data interpretation, graph analysis, or model application.",
+        "Majority of items (1, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15) test content irrelevant to the stated objective, severely undermining content validity.",
+        "Item 1's correct answer is a non-answer/trick response ('no Latin name'), violating basic single-correct-answer item construction standards.",
+        "Multiple items (5, 8, 12, 13, 14) have scientifically debatable or source-dependent 'correct' answers, threatening scoring defensibility."
+      ],
+      "drift": 0.13,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "assessment_design",
+      "case": "bad_02_ambiguous_poorly_written",
+      "expected_overall": 1.5,
+      "expected_scores": {
+        "blooms_alignment": 2,
+        "objective_congruence": 2,
+        "item_construction_quality": 1,
+        "validity_evidence": 1,
+        "reliability_considerations": 1,
+        "inclusivity_fairness": 3
+      },
+      "judge_overall": 1.83,
+      "judge_scores": {
+        "blooms_alignment": 2,
+        "objective_congruence": 2,
+        "item_construction_quality": 1,
+        "validity_evidence": 2,
+        "reliability_considerations": 1,
+        "inclusivity_fairness": 3
+      },
+      "severity_flags": [
+        "Three constructed-response items (4, 10, 12) have no rubric or scoring criteria — scoring is explicitly 'subjective,' violating minimum reliability standards",
+        "No answer key provided for the majority of multiple-choice/true-false items",
+        "Leading/rhetorical stems ('right?', 'isn't it?') in items 1 and 12 cue or bias the expected response",
+        "Unresolved double negative in item 2 creates genuine ambiguity about what is being asked",
+        "Item 6 is an intentional trick question whose 'all of the above' key undermines content validity",
+        "Nearly all items test Remember-level recall despite an objective explicitly requiring Apply-level performance"
+      ],
+      "drift": 0.33,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "assessment_design",
+      "case": "borderline_01_gooditems_nocoverage",
+      "expected_overall": 3.5,
+      "expected_scores": {
+        "blooms_alignment": 4,
+        "objective_congruence": 2,
+        "item_construction_quality": 5,
+        "validity_evidence": 2,
+        "reliability_considerations": 4,
+        "inclusivity_fairness": 4
+      },
+      "judge_overall": 3.17,
+      "judge_scores": {
+        "blooms_alignment": 3,
+        "objective_congruence": 2,
+        "item_construction_quality": 4,
+        "validity_evidence": 2,
+        "reliability_considerations": 3,
+        "inclusivity_fairness": 5
+      },
+      "severity_flags": [
+        "Blueprint imbalance: glucose metabolism is 67% of the test versus a recommended 25–30%, while diabetes and glucagon are each only 8% — far below minimum coverage for topics tied to the Apply and Analyze objectives.",
+        "Objective 3 (Analyze) is tested by only one item, insufficient to support any claim about mastery of disorder analysis.",
+        "Bloom's-level mislabeling: Items 9, 10, and 11 are tagged at Understand/Apply but function as straight factual recall, inflating the apparent cognitive rigor of the test."
+      ],
+      "drift": -0.33,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "assessment_design",
+      "case": "borderline_02_lowalignment_unclear_objectives",
+      "expected_overall": 3.3,
+      "expected_scores": {
+        "blooms_alignment": 4,
+        "objective_congruence": 2,
+        "item_construction_quality": 4,
+        "validity_evidence": 3,
+        "reliability_considerations": 3,
+        "inclusivity_fairness": 4
+      },
+      "judge_overall": 2.83,
+      "judge_scores": {
+        "blooms_alignment": 3,
+        "objective_congruence": 2,
+        "item_construction_quality": 3,
+        "validity_evidence": 2,
+        "reliability_considerations": 2,
+        "inclusivity_fairness": 5
+      },
+      "severity_flags": [
+        "Three items (2, 6, 8) — including the sole item assessing the 'think critically about environmental issues' objective — have no rubric or scoring criteria, making them unscoreable consistently by different graders.",
+        "Learning objectives are self-described as 'Vague' and lack Mager's behavior/condition/criterion format, with no stated mastery threshold.",
+        "No test blueprint or stated item-to-objective mapping exists; coverage is skewed toward food webs (7/10 items) while the critical-thinking objective is nearly untested.",
+        "Bloom level tags are internally inconsistent (item 9 mislabeled Understand instead of Remember; item 3 mislabeled Apply instead of Analyze), undermining confidence in the stated alignment."
+      ],
+      "drift": -0.47,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "assessment_design",
+      "case": "sample_01_single_item_apply_objective",
+      "expected_overall": 2.5,
+      "expected_scores": {
+        "blooms_alignment": 1,
+        "objective_congruence": 2,
+        "item_construction_quality": 3,
+        "validity_evidence": 2,
+        "reliability_considerations": 3,
+        "inclusivity_fairness": 4
+      },
+      "judge_overall": 3.0,
+      "judge_scores": {
+        "blooms_alignment": 1,
+        "objective_congruence": 2,
+        "item_construction_quality": 5,
+        "validity_evidence": 2,
+        "reliability_considerations": 3,
+        "inclusivity_fairness": 5
+      },
+      "severity_flags": [
+        "Bloom's/objective mismatch: the stated objective is Apply-level (resolve a live complaint call using LEAP) but the item tests only Remember-level recall of an acronym letter.",
+        "No answer key or reference provided to confirm which option is correct, and no scenario context to verify the item even belongs to this objective rather than a generic 'know the model' objective."
+      ],
+      "drift": 0.5,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "assessment_design",
+      "case": "complete_01_keyless_single_objective_quiz",
+      "expected_overall": 3.0,
+      "expected_scores": {
+        "blooms_alignment": 5,
+        "objective_congruence": 3,
+        "item_construction_quality": 2,
+        "validity_evidence": 2,
+        "reliability_considerations": 1,
+        "inclusivity_fairness": 5
+      },
+      "judge_overall": 2.5,
+      "judge_scores": {
+        "blooms_alignment": 4,
+        "objective_congruence": 2,
+        "item_construction_quality": 2,
+        "validity_evidence": 1,
+        "reliability_considerations": 1,
+        "inclusivity_fairness": 5
+      },
+      "severity_flags": [
+        "No answer key or scoring guide provided for a quiz presented as complete",
+        "Objective requires listing/producing the full ordered sequence, but no item requires production — all are recognition/selection",
+        "Two of the four procedure steps and their relative ordering are never directly tested",
+        "Q2 contains overlapping/inconsistent distractors ('Purge the wand' vs. 'Wipe and purge'), risking ambiguity about what each option represents"
+      ],
+      "drift": -0.5,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "assessment_design",
+      "case": "good_03_recall_quiz_for_recall_objectives",
+      "expected_overall": 4.0,
+      "expected_scores": {
+        "blooms_alignment": 5,
+        "objective_congruence": 4,
+        "item_construction_quality": 3,
+        "validity_evidence": 4,
+        "reliability_considerations": 3,
+        "inclusivity_fairness": 5
+      },
+      "judge_overall": 3.5,
+      "judge_scores": {
+        "blooms_alignment": 4,
+        "objective_congruence": 3,
+        "item_construction_quality": 3,
+        "validity_evidence": 4,
+        "reliability_considerations": 3,
+        "inclusivity_fairness": 4
+      },
+      "severity_flags": [
+        "Item 4's answer choices are mislabeled/out of sequence (a, c, b, d), risking learner and grading confusion.",
+        "Items 9-11 reuse an identical 4-option set across consecutive questions, enabling elimination-based answering instead of independent recall and weakening reliability.",
+        "Objective 3 ('list the steps in order') is tested as isolated single-step recognition in 3 of its 4 items rather than as sequencing, a format mismatch with the stated objective."
+      ],
+      "drift": -0.5,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "assessment_design",
+      "case": "borderline_03_norm_referenced_short_test",
+      "expected_overall": 3.3,
+      "expected_scores": {
+        "blooms_alignment": 4,
+        "objective_congruence": 3,
+        "item_construction_quality": 4,
+        "validity_evidence": 3,
+        "reliability_considerations": 2,
+        "inclusivity_fairness": 4
+      },
+      "judge_overall": 3.33,
+      "judge_scores": {
+        "blooms_alignment": 4,
+        "objective_congruence": 3,
+        "item_construction_quality": 4,
+        "validity_evidence": 2,
+        "reliability_considerations": 2,
+        "inclusivity_fairness": 5
+      },
+      "severity_flags": [
+        "High-stakes 3-way placement decision rests on only 10 items for a norm-referenced percentile cut, below the reliability threshold for this use case",
+        "Domain coverage omits content needed to validly distinguish Algebra I from Algebra II readiness (systems of equations, quadratics, inequalities, functions)",
+        "No reported difficulty spread or psychometric evidence (item discrimination, internal consistency) despite percentile-based cutoffs determining course placement",
+        "Objectives exist only as topic labels, not measurable performance objectives, limiting evaluability of alignment"
+      ],
+      "drift": 0.03,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "instructional_sequencing",
+      "case": "good_01_complete_lesson",
+      "expected_overall": 5.0,
+      "expected_scores": {
+        "gagne_events_coverage": 5,
+        "learning_domain_alignment": 5,
+        "sequencing_logic": 5,
+        "scaffolding_gradual_release": 5,
+        "practice_feedback_integration": 5,
+        "transfer_retention_design": 5
+      },
+      "judge_overall": 4.83,
+      "judge_scores": {
+        "gagne_events_coverage": 5,
+        "learning_domain_alignment": 4,
+        "sequencing_logic": 5,
+        "scaffolding_gradual_release": 5,
+        "practice_feedback_integration": 5,
+        "transfer_retention_design": 5
+      },
+      "severity_flags": [
+        "ARCS motivational design (Confidence/Satisfaction specifically) is not explicitly engineered despite the lesson being motivationally rich — a missed layer rather than a structural flaw",
+        "No explicit differentiation plan for the stated 'mixed-ability' 30-student class beyond ELL visual supports; struggling learners during the 12-minute independent/group practice have no named scaffold tier"
+      ],
+      "drift": -0.17,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "instructional_sequencing",
+      "case": "good_02_welldesigned_module",
+      "expected_overall": 5.0,
+      "expected_scores": {
+        "gagne_events_coverage": 5,
+        "learning_domain_alignment": 5,
+        "sequencing_logic": 5,
+        "scaffolding_gradual_release": 5,
+        "practice_feedback_integration": 5,
+        "transfer_retention_design": 5
+      },
+      "judge_overall": 4.67,
+      "judge_scores": {
+        "gagne_events_coverage": 5,
+        "learning_domain_alignment": 4,
+        "sequencing_logic": 5,
+        "scaffolding_gradual_release": 5,
+        "practice_feedback_integration": 5,
+        "transfer_retention_design": 4
+      },
+      "severity_flags": [
+        "Scope/timeline mismatch: the artifact restructures the single requested 'Week 2' slot into a full 3-week module and schedules spaced-retrieval quizzes at 'Week 4' and 'Week 7,' which falls outside the stated 4-week course length — this needs reconciliation before the plan is implementable as specified.",
+        "No explicit ARCS-based motivational design or connection to individually captured learner goals; relevance is handled generically via business scenarios rather than personalized hooks, though this is mitigated by the absence of upstream needs-assessment data in this case."
+      ],
+      "drift": -0.33,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "instructional_sequencing",
+      "case": "bad_01_contentdump",
+      "expected_overall": 1.5,
+      "expected_scores": {
+        "gagne_events_coverage": 2,
+        "learning_domain_alignment": 2,
+        "sequencing_logic": 2,
+        "scaffolding_gradual_release": 1,
+        "practice_feedback_integration": 1,
+        "transfer_retention_design": 1
+      },
+      "judge_overall": 1.33,
+      "judge_scores": {
+        "gagne_events_coverage": 1,
+        "learning_domain_alignment": 2,
+        "sequencing_logic": 2,
+        "scaffolding_gradual_release": 1,
+        "practice_feedback_integration": 1,
+        "transfer_retention_design": 1
+      },
+      "severity_flags": [
+        "No formative assessment or practice exists anywhere before a high-stakes 50-question summative midterm — students receive their first feedback on learning a full week after a graded exam.",
+        "Three consecutive 60-minute lecture blocks with zero interactivity, questions, or activation of prior knowledge for 50 first-exposure, mixed-background undergraduates — high risk of disengagement and shallow learning, evidenced by the described disengagement (phones, side conversations).",
+        "Assessment-instruction misalignment: exam items require application ('which theory best explains Y') but instruction never moves beyond definitional lecture, so students are tested on a skill level they were never taught or given practice in.",
+        "120 pages of unguided reading assigned with no comprehension check, reading guide, or follow-up discussion, risking wasted learner effort and no verification of understanding."
+      ],
+      "drift": -0.17,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "instructional_sequencing",
+      "case": "bad_02_assessment_no_instruction",
+      "expected_overall": 1.3,
+      "expected_scores": {
+        "gagne_events_coverage": 2,
+        "learning_domain_alignment": 2,
+        "sequencing_logic": 1,
+        "scaffolding_gradual_release": 1,
+        "practice_feedback_integration": 1,
+        "transfer_retention_design": 1
+      },
+      "judge_overall": 1.0,
+      "judge_scores": {
+        "gagne_events_coverage": 1,
+        "learning_domain_alignment": 1,
+        "sequencing_logic": 1,
+        "scaffolding_gradual_release": 1,
+        "practice_feedback_integration": 1,
+        "transfer_retention_design": 1
+      },
+      "severity_flags": [
+        "Complete absence of instruction, worked examples, or guided practice before a high-stakes summative deliverable (violates basic instructional design and risks severe cognitive overload)",
+        "Rubric withheld until after grading — students cannot calibrate effort or self-assess against success criteria, undermining fairness and validity of assessment",
+        "No feedback loop or revision opportunity exists anywhere in the 14-day cycle; the only feedback is a delayed, comment-free score",
+        "Twelve days (Days 2–13) with zero instructional support or checkpoints for a complex, multi-part group project — high risk of floundering, unequal group contribution, and stress",
+        "Learner motivation/interest data (if any exists from prior coursework) is entirely ignored; no ARCS design for a task that is both cognitively demanding and motivationally fragile (group work, ambiguity, high stakes)"
+      ],
+      "drift": -0.3,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "instructional_sequencing",
+      "case": "borderline_01_practicenoauthentic",
+      "expected_overall": 4.5,
+      "expected_scores": {
+        "gagne_events_coverage": 5,
+        "learning_domain_alignment": 5,
+        "sequencing_logic": 5,
+        "scaffolding_gradual_release": 5,
+        "practice_feedback_integration": 5,
+        "transfer_retention_design": 2
+      },
+      "judge_overall": 3.83,
+      "judge_scores": {
+        "gagne_events_coverage": 5,
+        "learning_domain_alignment": 3,
+        "sequencing_logic": 4,
+        "scaffolding_gradual_release": 5,
+        "practice_feedback_integration": 4,
+        "transfer_retention_design": 2
+      },
+      "severity_flags": [
+        "Transfer is promissory, not enacted: the lesson states a real-world connection will happen 'tomorrow' but includes no in-class authentic application, undermining event 9 and the transfer dimension.",
+        "Known learner data (math anxiety) is not translated into an explicit ARCS/confidence-building design choice, only generic scaffolding — a motivational-layer alignment gap.",
+        "Teacher-delivered feedback reaches only 2-3 students directly within the time allotted; the rest of the class depends on unverified peer-check accuracy."
+      ],
+      "drift": -0.67,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "instructional_sequencing",
+      "case": "borderline_02_eventspresent_noscaffold",
+      "expected_overall": 3.2,
+      "expected_scores": {
+        "gagne_events_coverage": 5,
+        "learning_domain_alignment": 4,
+        "sequencing_logic": 4,
+        "scaffolding_gradual_release": 2,
+        "practice_feedback_integration": 3,
+        "transfer_retention_design": 1
+      },
+      "judge_overall": 2.67,
+      "judge_scores": {
+        "gagne_events_coverage": 4,
+        "learning_domain_alignment": 3,
+        "sequencing_logic": 3,
+        "scaffolding_gradual_release": 2,
+        "practice_feedback_integration": 2,
+        "transfer_retention_design": 2
+      },
+      "severity_flags": [
+        "Missing guided practice (We-Do) between modeling and independent writing — the single largest instructional design gap, disproportionately harming ELL and struggling writers",
+        "No real-time feedback loop during independent work: teacher does not circulate, feedback is deferred overnight, and no peer review exists",
+        "No authentic audience, revision cycle, or spaced/varied-context practice, leaving transfer and retention almost entirely unsupported"
+      ],
+      "drift": -0.53,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "multimedia_design",
+      "case": "good_01_welldesigned_module",
+      "expected_overall": 5.0,
+      "expected_scores": {
+        "multimedia_principle_compliance": 5,
+        "extraneous_load_reduction": 5,
+        "intrinsic_load_management": 5,
+        "generative_processing_support": 5,
+        "interactivity_learner_control": 5,
+        "visual_design_information_architecture": 5
+      },
+      "judge_overall": 4.83,
+      "judge_scores": {
+        "multimedia_principle_compliance": 5,
+        "extraneous_load_reduction": 5,
+        "intrinsic_load_management": 5,
+        "generative_processing_support": 5,
+        "interactivity_learner_control": 4,
+        "visual_design_information_architecture": 5
+      },
+      "severity_flags": [
+        "The 'branching scenario' label overstates the interaction's actual design (free exploration, not differentiated decision paths with consequences) — risks misaligned expectations for assessing analytical decision-making.",
+        "Knowledge checks rely on low-cognitive-level formats (true/false) that may under-assess the stated objective of 'analyzing trends,' which implies higher-order reasoning.",
+        "This is a design specification, not a tested build — claims (e.g., mobile responsiveness of the drag-and-drop simulation, actual contrast ratios) need verification against the live Articulate Storyline output before sign-off."
+      ],
+      "drift": -0.17,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "multimedia_design",
+      "case": "good_02_instructionalvideo",
+      "expected_overall": 4.8,
+      "expected_scores": {
+        "multimedia_principle_compliance": 5,
+        "extraneous_load_reduction": 5,
+        "intrinsic_load_management": 5,
+        "generative_processing_support": 5,
+        "interactivity_learner_control": 4,
+        "visual_design_information_architecture": 5
+      },
+      "judge_overall": 4.83,
+      "judge_scores": {
+        "multimedia_principle_compliance": 5,
+        "extraneous_load_reduction": 5,
+        "intrinsic_load_management": 5,
+        "generative_processing_support": 5,
+        "interactivity_learner_control": 4,
+        "visual_design_information_architecture": 5
+      },
+      "severity_flags": [],
+      "drift": 0.03,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "multimedia_design",
+      "case": "bad_01_walloftext",
+      "expected_overall": 1.2,
+      "expected_scores": {
+        "multimedia_principle_compliance": 1,
+        "extraneous_load_reduction": 1,
+        "intrinsic_load_management": 1,
+        "generative_processing_support": 2,
+        "interactivity_learner_control": 1,
+        "visual_design_information_architecture": 1
+      },
+      "judge_overall": 1.0,
+      "judge_scores": {
+        "multimedia_principle_compliance": 1,
+        "extraneous_load_reduction": 1,
+        "intrinsic_load_management": 1,
+        "generative_processing_support": 1,
+        "interactivity_learner_control": 1,
+        "visual_design_information_architecture": 1
+      },
+      "severity_flags": [
+        "Critical: Content was designed for live-lecture delivery (presenter narrating over bullets) but is being deployed as standalone async e-learning — the core delivery mismatch undermines every design dimension.",
+        "Critical: Zero interactivity or practice opportunities for a skills-based topic (feedback conversations) that requires applied practice, not passive reading.",
+        "Critical: No instructional graphics anywhere in the deck — only decorative clipart/stock imagery, directly violating the multimedia principle.",
+        "Critical: No accessibility provisions (no captions/transcript mentioned, small 12pt font, unverified contrast) — likely fails basic compliance standards (e.g., WCAG/Section 508).",
+        "High: Learning objective is never stated on-screen and has no visual anchor, so learners cannot gauge relevance or progress toward it."
+      ],
+      "drift": -0.2,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "multimedia_design",
+      "case": "bad_02_redundancy_onscreen_text",
+      "expected_overall": 2.0,
+      "expected_scores": {
+        "multimedia_principle_compliance": 2,
+        "extraneous_load_reduction": 1,
+        "intrinsic_load_management": 2,
+        "generative_processing_support": 2,
+        "interactivity_learner_control": 2,
+        "visual_design_information_architecture": 3
+      },
+      "judge_overall": 1.33,
+      "judge_scores": {
+        "multimedia_principle_compliance": 2,
+        "extraneous_load_reduction": 1,
+        "intrinsic_load_management": 1,
+        "generative_processing_support": 1,
+        "interactivity_learner_control": 1,
+        "visual_design_information_architecture": 2
+      },
+      "severity_flags": [
+        "Critical redundancy violation: identical narration and on-screen text throughout an 8-minute complex procedural video, directly contradicting Mayer's redundancy principle and risking cognitive overload",
+        "Zero interactivity or learner pacing control on content requiring multi-step procedural understanding (replication fork, enzyme roles)",
+        "No signaling or synchronized temporal contiguity — learners cannot reliably map narration to the correct part of the animation",
+        "Synthesized/robotic voice reduces engagement and undermines generative processing for content that benefits from a human, conversational narrator",
+        "Accessibility is superficial: captions duplicate the already-redundant on-screen text rather than providing a non-redundant alternative, and no separate transcript is offered for review"
+      ],
+      "drift": -0.67,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "multimedia_design",
+      "case": "borderline_01_goodvisuals_lowinteraction",
+      "expected_overall": 4.3,
+      "expected_scores": {
+        "multimedia_principle_compliance": 5,
+        "extraneous_load_reduction": 5,
+        "intrinsic_load_management": 5,
+        "generative_processing_support": 4,
+        "interactivity_learner_control": 2,
+        "visual_design_information_architecture": 5
+      },
+      "judge_overall": 4.33,
+      "judge_scores": {
+        "multimedia_principle_compliance": 5,
+        "extraneous_load_reduction": 5,
+        "intrinsic_load_management": 5,
+        "generative_processing_support": 4,
+        "interactivity_learner_control": 2,
+        "visual_design_information_architecture": 5
+      },
+      "severity_flags": [
+        "Case study application is non-interactive: learners read rhetorical questions and a static answer key instead of making decisions, undermining the 'apply' verb in the stated learning objective.",
+        "Quiz feedback is binary ('Correct!'/'Try again.') with no explanation of why answers are right or wrong, missing a key opportunity for corrective, generative feedback.",
+        "No meaningful simulation, branching, or drag-and-drop interactivity despite three clearly identified and feasible opportunities (WBS drag-and-drop, branching case study, interactive risk matrix)."
+      ],
+      "drift": 0.03,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "multimedia_design",
+      "case": "borderline_02_poornarration_goodvisuals",
+      "expected_overall": 2.5,
+      "expected_scores": {
+        "multimedia_principle_compliance": 4,
+        "extraneous_load_reduction": 3,
+        "intrinsic_load_management": 2,
+        "generative_processing_support": 1,
+        "interactivity_learner_control": 1,
+        "visual_design_information_architecture": 4
+      },
+      "judge_overall": 2.17,
+      "judge_scores": {
+        "multimedia_principle_compliance": 3,
+        "extraneous_load_reduction": 2,
+        "intrinsic_load_management": 1,
+        "generative_processing_support": 2,
+        "interactivity_learner_control": 1,
+        "visual_design_information_architecture": 4
+      },
+      "severity_flags": [
+        "High risk of p-value misconception: 'P(data | H0)' is introduced without plain-language framing, inviting the common error that p-value equals P(H0 is true)",
+        "Zero interactivity combined with high, unmanaged intrinsic load — no mechanism exists for learners to pause conceptually or check understanding before new material stacks on",
+        "Narration self-correction mid-example ('two-sample... no, one-sample') undermines credibility and adds extraneous processing load at a critical worked-example moment",
+        "Jargon (frequentist inference, directional/non-directional, population parameter) is used before being defined, violating pre-training principle for undergraduate/asynchronous audience with only basic prior knowledge",
+        "Accessibility risk: rushed, technical narration disadvantages ELL learners and those with auditory processing needs, with no transcript/control remedy indicated"
+      ],
+      "drift": -0.33,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "wcag_accessibility",
+      "case": "good_01_fully_accessible_module",
+      "expected_overall": 5.0,
+      "expected_scores": {
+        "perceivable": 5,
+        "operable": 5,
+        "understandable": 5,
+        "robust": 5,
+        "udl_integration": 5,
+        "remediation_feasibility": 5
+      },
+      "judge_overall": 4.5,
+      "judge_scores": {
+        "perceivable": 5,
+        "operable": 4,
+        "understandable": 3,
+        "robust": 5,
+        "udl_integration": 5,
+        "remediation_feasibility": 5
+      },
+      "severity_flags": [
+        "No confirmation of an explicitly declared page language (lang attribute) — WCAG 3.1.1",
+        "No mention of skip-navigation mechanism for repetitive content — WCAG 2.4.1",
+        "No mention of error identification or correction suggestions for assessment/form inputs — WCAG 3.3.1/3.3.3",
+        "Compliance is self-reported (claims HTML validation and NVDA/JAWS testing) with no independent artifact or audit trail provided for verification"
+      ],
+      "drift": -0.5,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "wcag_accessibility",
+      "case": "good_02_well_structured_with_uدl",
+      "expected_overall": 4.67,
+      "expected_scores": {
+        "perceivable": 5,
+        "operable": 4,
+        "understandable": 5,
+        "robust": 4,
+        "udl_integration": 5,
+        "remediation_feasibility": 5
+      },
+      "judge_overall": 4.67,
+      "judge_scores": {
+        "perceivable": 5,
+        "operable": 4,
+        "understandable": 5,
+        "robust": 4,
+        "udl_integration": 5,
+        "remediation_feasibility": 5
+      },
+      "severity_flags": [
+        "Compliance claim appears self-reported with no mention of independent/automated testing (e.g., axe, WAVE) or specific assistive technology/browser combinations used to validate the screen-reader testing claim",
+        "No explicit confirmation of skip-navigation links (2.4.1) for repetitive course navigation",
+        "No explicit confirmation of adjustable time limits for any timed in-course quiz attempts (2.2.1) — deadline extensions address assignment submission, not in-activity timing",
+        "No explicit confirmation of descriptive, unique page/section titles (2.4.2) across the course"
+      ],
+      "drift": 0.0,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "wcag_accessibility",
+      "case": "bad_01_no_accessibility_features",
+      "expected_overall": 1.17,
+      "expected_scores": {
+        "perceivable": 1,
+        "operable": 1,
+        "understandable": 2,
+        "robust": 1,
+        "udl_integration": 1,
+        "remediation_feasibility": 1
+      },
+      "judge_overall": 1.33,
+      "judge_scores": {
+        "perceivable": 1,
+        "operable": 1,
+        "understandable": 2,
+        "robust": 1,
+        "udl_integration": 1,
+        "remediation_feasibility": 2
+      },
+      "severity_flags": [
+        "Instructional diagrams and software screenshots have no text alternative — critical content inaccessible to screen reader users",
+        "Core interactions (drag-and-drop, drawing, hover-reveal) have no keyboard alternative, blocking all keyboard-only users from completing required training",
+        "Multiple keyboard traps prevent users from navigating away from elements — a severe WCAG 2.1.2 violation",
+        "Embedded video has no captions or audio description — excludes deaf/hard-of-hearing and blind/low-vision learners",
+        "Task-type meaning conveyed by color alone (red/blue/yellow) with no pattern or icon backup — fails color-independence requirement",
+        "No ARIA attributes; controls expose no accessible name/role ('button, button, button') — screen readers cannot operate the interface",
+        "Mandatory enterprise training (500+ employees) with these barriers creates material legal/compliance exposure (ADA/Section 508/WCAG) since employees with disabilities cannot complete required work training",
+        "No prior accessibility testing evident behind this module despite being a mandatory compliance-training deliverable"
+      ],
+      "drift": 0.16,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "wcag_accessibility",
+      "case": "bad_02_interactive_drag_drop_no_keyboard",
+      "expected_overall": 1.67,
+      "expected_scores": {
+        "perceivable": 2,
+        "operable": 1,
+        "understandable": 2,
+        "robust": 2,
+        "udl_integration": 1,
+        "remediation_feasibility": 2
+      },
+      "judge_overall": 1.33,
+      "judge_scores": {
+        "perceivable": 1,
+        "operable": 1,
+        "understandable": 2,
+        "robust": 1,
+        "udl_integration": 1,
+        "remediation_feasibility": 2
+      },
+      "severity_flags": [
+        "No keyboard equivalent for drag-and-drop interaction — activity is entirely inoperable without a mouse (2.1.1 critical failure)",
+        "No skip/alternate-path mechanism — a learner who cannot drag is blocked from progressing through the course (hard content lock-out)",
+        "Correct/incorrect feedback conveyed by color alone with no text or audio announcement (1.4.1 / 3.3.1 failure)",
+        "Draggable controls have no accessible name — screen reader announces 'unlabeled button', making the activity unusable with assistive technology (4.1.2 failure)",
+        "No alt text on instructional plant-part images (1.1.1 failure)",
+        "No visible focus indicator, preventing sighted keyboard users from tracking position (2.4.7 failure)",
+        "No mobile/touch alternative provided, excluding touch-only device users entirely"
+      ],
+      "drift": -0.34,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "wcag_accessibility",
+      "case": "borderline_01_good_structure_missing_captions",
+      "expected_overall": 4.33,
+      "expected_scores": {
+        "perceivable": 3,
+        "operable": 5,
+        "understandable": 5,
+        "robust": 5,
+        "udl_integration": 4,
+        "remediation_feasibility": 4
+      },
+      "judge_overall": 3.83,
+      "judge_scores": {
+        "perceivable": 2,
+        "operable": 5,
+        "understandable": 5,
+        "robust": 5,
+        "udl_integration": 2,
+        "remediation_feasibility": 4
+      },
+      "severity_flags": [
+        "One instructional video (15-minute equipment demo) has NO captions at all, completely excluding deaf/hard-of-hearing learners from that content — critical, immediate-fix priority.",
+        "Auto-generated (~70% accurate) captions are used as the sole access method for 4 of 5 videos, failing WCAG 1.2.2's requirement for accurate synchronized captions, particularly given technical jargon in a professional certification course.",
+        "No audio descriptions (1.2.5) exist for any video containing visual demonstrations, excluding blind/low-vision learners from visually-conveyed instructional content.",
+        "Transcripts are missing for the two most recently added videos, removing a fallback text alternative precisely where caption accuracy is also unverified.",
+        "The overall accessibility claim ('strong accessibility in most areas') is asserted without citing specific testing evidence (no automated scan results, screen reader testing, or user testing with the stated deaf/HoH population referenced)."
+      ],
+      "drift": -0.5,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "wcag_accessibility",
+      "case": "borderline_02_accessible_but_poor_focus_indicators",
+      "expected_overall": 3.67,
+      "expected_scores": {
+        "perceivable": 3,
+        "operable": 3,
+        "understandable": 4,
+        "robust": 4,
+        "udl_integration": 3,
+        "remediation_feasibility": 5
+      },
+      "judge_overall": 3.67,
+      "judge_scores": {
+        "perceivable": 3,
+        "operable": 3,
+        "understandable": 4,
+        "robust": 4,
+        "udl_integration": 3,
+        "remediation_feasibility": 5
+      },
+      "severity_flags": [
+        "Focus indicator (1px gray outline) fails WCAG 2.4.7 Focus Visible in practice — user testing documents keyboard users losing their place, a confirmed usability barrier, not a theoretical one.",
+        "Links distinguished by color alone (no underline on some blue links) violates 1.4.1 Use of Color — low-vision users report being unable to reliably identify links.",
+        "Instructional/data-bearing charts in the activity section have non-meaningful alt text ('Chart') with no long description, violating 1.1.1 for complex images — screen reader users cannot access the chart's actual informational content, which may also affect assessment validity."
+      ],
+      "drift": 0.0,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "formative_evaluation_protocol",
+      "case": "good_01_comprehensive_four_phase",
+      "expected_overall": 5.0,
+      "expected_scores": {
+        "phase_coverage": 5,
+        "evaluator_selection": 5,
+        "data_collection_alignment": 5,
+        "revision_decision_framework": 5,
+        "feasibility_practicality": 5,
+        "usability_integration": 5
+      },
+      "judge_overall": 4.5,
+      "judge_scores": {
+        "phase_coverage": 5,
+        "evaluator_selection": 5,
+        "data_collection_alignment": 5,
+        "revision_decision_framework": 4,
+        "feasibility_practicality": 4,
+        "usability_integration": 4
+      },
+      "severity_flags": [
+        "Budget ambiguity: the $50K figure is described in CONTEXT as covering both development AND evaluation, but the feasibility section treats $30K of evaluation spend as 'well within $50K budget' without accounting for development costs — this could leave the project under-resourced or misrepresent feasibility.",
+        "10 hours allocated for data analysis across 4 evaluation phases (expert review, 5 one-to-one sessions, 2 small group sessions, 50-person field trial with pre/post tests, SUS, and manager interviews) is very likely insufficient and risks rushed or superficial analysis.",
+        "No explicit time/budget reserved for implementing revisions between phases (one-to-one → small group → field trial), risking carrying unresolved major issues forward into larger-sample phases.",
+        "No participant protection/consent language (incentive is mentioned, but informed consent, voluntary participation safeguards, and data confidentiality for interviews/surveys are not addressed)."
+      ],
+      "drift": -0.5,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "formative_evaluation_protocol",
+      "case": "good_02_expert_review_with_right_experts",
+      "expected_overall": 4.83,
+      "expected_scores": {
+        "phase_coverage": 5,
+        "evaluator_selection": 5,
+        "data_collection_alignment": 5,
+        "revision_decision_framework": 4,
+        "feasibility_practicality": 5,
+        "usability_integration": 5
+      },
+      "judge_overall": 4.33,
+      "judge_scores": {
+        "phase_coverage": 3,
+        "evaluator_selection": 5,
+        "data_collection_alignment": 4,
+        "revision_decision_framework": 5,
+        "feasibility_practicality": 4,
+        "usability_integration": 5
+      },
+      "severity_flags": [
+        "No learners from the target population are involved at any stage — all findings rest on expert judgment alone, which is a known blind spot for catching learner-specific confusion or motivational issues.",
+        "No time or budget is explicitly reserved for implementing 'must fix' revisions after the report is delivered; the timeline ends at reporting, not at verified resolution before launch.",
+        "A few checklist items are loosely worded and not directly traceable to the module's stated learning objectives, risking collection of 'nice to know' rather than decision-relevant data."
+      ],
+      "drift": -0.5,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "formative_evaluation_protocol",
+      "case": "bad_01_skips_to_field_trial_no_foundation",
+      "expected_overall": 1.17,
+      "expected_scores": {
+        "phase_coverage": 1,
+        "evaluator_selection": 1,
+        "data_collection_alignment": 1,
+        "revision_decision_framework": 1,
+        "feasibility_practicality": 2,
+        "usability_integration": 1
+      },
+      "judge_overall": 1.0,
+      "judge_scores": {
+        "phase_coverage": 1,
+        "evaluator_selection": 1,
+        "data_collection_alignment": 1,
+        "revision_decision_framework": 1,
+        "feasibility_practicality": 1,
+        "usability_integration": 1
+      },
+      "severity_flags": [
+        "No learners involved prior to full-scale deployment — the entire target population is the first exposure to the untested course.",
+        "No independent/expert evaluators at any stage (no SME, ID, or media/technology review).",
+        "No learner consent for data collection — a human-subjects/ethics violation given test scores and teacher observations will be used as evaluation data.",
+        "Data collected with no decision rule: 'figure out what to change' after failure is not a revision framework.",
+        "Instruments do not match evaluation questions — end-of-semester scores cannot diagnose formative issues (usability, clarity, pacing) that caused the failure.",
+        "Summative data (final test scores) is being used in place of formative evaluation, risking summative claims from what is effectively an uncontrolled field exposure.",
+        "No time or budget reserved for revision — by the time data exists (end of semester), hundreds of students have already been affected and the window to fix the live course before harm has closed."
+      ],
+      "drift": -0.17,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "formative_evaluation_protocol",
+      "case": "bad_02_no_data_collection_instruments",
+      "expected_overall": 1.67,
+      "expected_scores": {
+        "phase_coverage": 3,
+        "evaluator_selection": 2,
+        "data_collection_alignment": 1,
+        "revision_decision_framework": 1,
+        "feasibility_practicality": 2,
+        "usability_integration": 1
+      },
+      "judge_overall": 1.33,
+      "judge_scores": {
+        "phase_coverage": 2,
+        "evaluator_selection": 1,
+        "data_collection_alignment": 1,
+        "revision_decision_framework": 1,
+        "feasibility_practicality": 2,
+        "usability_integration": 1
+      },
+      "severity_flags": [
+        "No instruments of any kind (no observation forms, interview guides, heuristic checklists, surveys) — data collection cannot be executed as written",
+        "No decision rule connecting data to revision — data collected with no way to determine if/how findings change the module (violates core formative evaluation logic)",
+        "No defined evaluator roles — expert review evaluator 'shows up and does what exactly?' is an explicit admission of missing protocol, risking an unfocused or purely subjective review",
+        "No sample size, stratification, or recruitment plan for one-to-one or small group phases — cannot verify representativeness of target population",
+        "No field trial and no stated justification for its omission — plan cannot speak to transfer/performance in actual LMS deployment context",
+        "No data synthesis or analysis plan — vague, possibly contradictory feedback across phases has no systematic resolution method, risking arbitrary or biased revision decisions",
+        "No participant protection/consent language, no facilitation guide for small group (risk of groupthink or dominant-voice bias going unmanaged)",
+        "6-week timeline given but no time/budget allocated specifically to the revision step itself — risk of running out of runway to act on findings"
+      ],
+      "drift": -0.34,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "formative_evaluation_protocol",
+      "case": "borderline_01_good_phases_wrong_evaluators",
+      "expected_overall": 3.67,
+      "expected_scores": {
+        "phase_coverage": 5,
+        "evaluator_selection": 2,
+        "data_collection_alignment": 4,
+        "revision_decision_framework": 4,
+        "feasibility_practicality": 5,
+        "usability_integration": 2
+      },
+      "judge_overall": 3.17,
+      "judge_scores": {
+        "phase_coverage": 4,
+        "evaluator_selection": 2,
+        "data_collection_alignment": 3,
+        "revision_decision_framework": 4,
+        "feasibility_practicality": 4,
+        "usability_integration": 2
+      },
+      "severity_flags": [
+        "Expert review panel lacks any media/technology/usability specialist — interface and accessibility issues on the custom LMS may go undetected until field trial, when fixes are costly",
+        "One-to-one evaluation has no below-average/novice learner — pacing, clarity, and comprehension issues disproportionately affecting struggling learners are likely to be missed",
+        "Small group recruitment method unspecified — reliance on volunteers risks a non-representative, high-motivation sample that masks real-world usability/comprehension problems",
+        "Field trial timeline and sequencing undefined — unclear whether revisions from small group phase are implemented before field trial begins, risking a summative-style rollout without closing the formative loop"
+      ],
+      "drift": -0.5,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "formative_evaluation_protocol",
+      "case": "borderline_02_thorough_data_no_revision_framework",
+      "expected_overall": 4.33,
+      "expected_scores": {
+        "phase_coverage": 5,
+        "evaluator_selection": 5,
+        "data_collection_alignment": 5,
+        "revision_decision_framework": 2,
+        "feasibility_practicality": 4,
+        "usability_integration": 5
+      },
+      "judge_overall": 3.67,
+      "judge_scores": {
+        "phase_coverage": 5,
+        "evaluator_selection": 5,
+        "data_collection_alignment": 4,
+        "revision_decision_framework": 1,
+        "feasibility_practicality": 3,
+        "usability_integration": 4
+      },
+      "severity_flags": [
+        "Data collected with no decision rule: plan states only that 'analysis will identify issues and recommendations' with no severity ratings or thresholds — core formative-evaluation requirement is missing",
+        "No synthesis ownership or conflict-resolution process defined: unclear who reconciles disagreeing data sources (e.g., high SUS score but high observed confusion), risking gut-feel or ad hoc decisions",
+        "Risk of analysis paralysis: instrument volume (9+ distinct data sources) with no prioritization scheme or triage rule for a 3-month pilot timeline",
+        "No pre-registered acceptability criteria (e.g., minimum SUS score, maximum acceptable time-on-task overage, confusion-rate ceiling), making post hoc interpretation vulnerable to bias"
+      ],
+      "drift": -0.66,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "needs_analysis_front_end",
+      "case": "good_01_comprehensive_four_level_with_data",
+      "expected_overall": 5.0,
+      "expected_scores": {
+        "performance_gap_identification": 5,
+        "cause_analysis": 5,
+        "needs_assessment_completeness": 5,
+        "goal_objective_quality": 5,
+        "stakeholder_alignment": 5,
+        "intervention_appropriateness": 5
+      },
+      "judge_overall": 4.33,
+      "judge_scores": {
+        "performance_gap_identification": 5,
+        "cause_analysis": 5,
+        "needs_assessment_completeness": 3,
+        "goal_objective_quality": 4,
+        "stakeholder_alignment": 4,
+        "intervention_appropriateness": 5
+      },
+      "severity_flags": [
+        "Level 4 learner analysis omits motivation/interest/goals data (ARCS-relevant), limiting the ability to design for engagement/relevance despite otherwise strong needs analysis.",
+        "Briefing objective lacks a defined quality criterion for 'effective' — risks inconsistent assessment of mastery for floor leads.",
+        "No visibility into whether/how stakeholder disagreements were surfaced or reconciled, despite a diverse five-role panel."
+      ],
+      "drift": -0.67,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "needs_analysis_front_end",
+      "case": "good_02_clear_performance_gap_with_mager_objectives",
+      "expected_overall": 4.17,
+      "expected_scores": {
+        "performance_gap_identification": 4,
+        "cause_analysis": 4,
+        "needs_assessment_completeness": 4,
+        "goal_objective_quality": 5,
+        "stakeholder_alignment": 4,
+        "intervention_appropriateness": 4
+      },
+      "judge_overall": 4.5,
+      "judge_scores": {
+        "performance_gap_identification": 5,
+        "cause_analysis": 5,
+        "needs_assessment_completeness": 3,
+        "goal_objective_quality": 5,
+        "stakeholder_alignment": 4,
+        "intervention_appropriateness": 5
+      },
+      "severity_flags": [
+        "Learner analysis (McGoldrick & Tobey Level 4) is underdeveloped — no assessment of rep motivation, confidence, or attitude toward the new process (ARCS-relevant factors), which could undermine training uptake even if content is well-designed.",
+        "Manager-level objective lacks a quantifiable criterion/standard for coaching quality, weakening its evaluability relative to the rep-level objectives.",
+        "No explicit documentation of stakeholder sign-off/agreement on findings, nor acknowledgment of any differing views between the strong-performer and struggling reps consulted."
+      ],
+      "drift": 0.33,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "needs_analysis_front_end",
+      "case": "bad_01_jumps_to_training_no_needs_data",
+      "expected_overall": 1.0,
+      "expected_scores": {
+        "performance_gap_identification": 1,
+        "cause_analysis": 1,
+        "needs_assessment_completeness": 1,
+        "goal_objective_quality": 1,
+        "stakeholder_alignment": 1,
+        "intervention_appropriateness": 1
+      },
+      "judge_overall": 1.0,
+      "judge_scores": {
+        "performance_gap_identification": 1,
+        "cause_analysis": 1,
+        "needs_assessment_completeness": 1,
+        "goal_objective_quality": 1,
+        "stakeholder_alignment": 1,
+        "intervention_appropriateness": 1
+      },
+      "severity_flags": [
+        "Training solution selected before any business need, performance gap, or cause was verified — pure solution-first ('leap to training') decision-making",
+        "$50K committed to a training spend (course license + lost productivity) with no evidence base and explicit acknowledgment that if workload/priorities are the real cause, training will fail and frustrate employees",
+        "No feasibility screening: training is being pursued even though cited conditions (200% workload, daily priority reassignment by managers) would make applying any learned skill impossible",
+        "Zero stakeholder involvement outside HR — department heads and managers (who control the actual working conditions) were not consulted"
+      ],
+      "drift": 0.0,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "needs_analysis_front_end",
+      "case": "bad_02_assumes_training_environmental_problem",
+      "expected_overall": 1.83,
+      "expected_scores": {
+        "performance_gap_identification": 4,
+        "cause_analysis": 2,
+        "needs_assessment_completeness": 2,
+        "goal_objective_quality": 1,
+        "stakeholder_alignment": 1,
+        "intervention_appropriateness": 1
+      },
+      "judge_overall": 2.5,
+      "judge_scores": {
+        "performance_gap_identification": 5,
+        "cause_analysis": 4,
+        "needs_assessment_completeness": 2,
+        "goal_objective_quality": 1,
+        "stakeholder_alignment": 2,
+        "intervention_appropriateness": 1
+      },
+      "severity_flags": [
+        "Training recommended for a data-confirmed environmental/staffing barrier, not a skill/knowledge gap — core HPT mismatch",
+        "No Mager-formatted objectives; training goal not derived from or linked to the documented root cause",
+        "No Level 3/4 needs analysis (learning needs, learner motivation/capacity) despite recommending a training solution",
+        "Decision-makers with authority over staffing/budget (the actual lever) are not shown as consulted or in agreement with the chosen intervention",
+        "Self-predicted failure outcome (trained-but-unchanged performance, wasted spend) indicates the recommendation was finalized despite contradicting evidence already in hand"
+      ],
+      "drift": 0.67,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "needs_analysis_front_end",
+      "case": "borderline_01_good_gap_weak_cause_analysis",
+      "expected_overall": 2.67,
+      "expected_scores": {
+        "performance_gap_identification": 5,
+        "cause_analysis": 2,
+        "needs_assessment_completeness": 3,
+        "goal_objective_quality": 2,
+        "stakeholder_alignment": 2,
+        "intervention_appropriateness": 2
+      },
+      "judge_overall": 2.5,
+      "judge_scores": {
+        "performance_gap_identification": 5,
+        "cause_analysis": 2,
+        "needs_assessment_completeness": 3,
+        "goal_objective_quality": 2,
+        "stakeholder_alignment": 1,
+        "intervention_appropriateness": 2
+      },
+      "severity_flags": [
+        "Training recommended prior to completing root-cause analysis — risk of spending budget on an intervention that will not move the 7pp gap or recover the $500K/month if the actual cause is incentive structure, approval-process friction, or lead quality.",
+        "No stakeholder engagement documented (sales leadership, compensation/HR, marketing, operations) despite causes spanning multiple organizational functions outside L&D's control.",
+        "Goals/objectives are not Mager-formatted and are not demonstrably linked to a confirmed skill gap — objective-to-cause traceability is broken.",
+        "Learner analysis (Level 4) omits motivation/goals data (e.g., are officers incentivized to sell new products, do they want to), which is precisely the missing piece needed to resolve the incentive-vs-skill ambiguity flagged in the cause analysis."
+      ],
+      "drift": -0.17,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "needs_analysis_front_end",
+      "case": "borderline_02_thorough_assessment_weak_stakeholder_buy_in",
+      "expected_overall": 4.17,
+      "expected_scores": {
+        "performance_gap_identification": 5,
+        "cause_analysis": 5,
+        "needs_assessment_completeness": 5,
+        "goal_objective_quality": 4,
+        "stakeholder_alignment": 1,
+        "intervention_appropriateness": 5
+      },
+      "judge_overall": 3.67,
+      "judge_scores": {
+        "performance_gap_identification": 5,
+        "cause_analysis": 5,
+        "needs_assessment_completeness": 3,
+        "goal_objective_quality": 3,
+        "stakeholder_alignment": 1,
+        "intervention_appropriateness": 5
+      },
+      "severity_flags": [
+        "No stakeholder participation or sign-off documented for a multi-department, multi-level recommendation (training + job design + process + IT + management communication) — high risk of resistance or implementation stall, explicitly anticipated by the assessment's own risk section.",
+        "Recommendations presented as a conclusion ('this is the right solution') rather than as findings separated from proposed action, undermining objectivity and stakeholder trust.",
+        "No Mager-format learning objectives (behavior/condition/criterion) exist to operationalize the training component or to measure post-training performance against the 100% critical-info-transfer target.",
+        "Resource/authorization dependencies (equipment repair budget, IT integration, protected 10-minute schedule window) are recommended but no owner or decision-maker has committed resources — these span beyond the instructional designer's authority."
+      ],
+      "drift": -0.5,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "story_design",
+      "case": "08_good_01",
+      "expected_overall": 4.7,
+      "expected_scores": {
+        "narrative_structure": 5,
+        "learning_narrative_integration": 5,
+        "character_situation_authenticity": 5,
+        "emotional_engagement_motivation": 4,
+        "decision_points_branching_quality": 5,
+        "transfer_generalizability": 4
+      },
+      "judge_overall": 4.0,
+      "judge_scores": {
+        "narrative_structure": 3,
+        "learning_narrative_integration": 4,
+        "character_situation_authenticity": 4,
+        "emotional_engagement_motivation": 4,
+        "decision_points_branching_quality": 5,
+        "transfer_generalizability": 4
+      },
+      "severity_flags": [
+        "Artifact submitted is a summary/description of the scenario rather than the actual script, dialogue, or interface text — several judgments (character voice, pacing, tone) are inferred rather than directly verified.",
+        "No explicit mapping to a recognized narrative framework is present, which weakens confidence in structural coherence beyond basic setup-choice-consequence logic."
+      ],
+      "drift": -0.7,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "story_design",
+      "case": "08_good_02",
+      "expected_overall": 4.5,
+      "expected_scores": {
+        "narrative_structure": 4,
+        "learning_narrative_integration": 5,
+        "character_situation_authenticity": 5,
+        "emotional_engagement_motivation": 4,
+        "decision_points_branching_quality": 4,
+        "transfer_generalizability": 5
+      },
+      "judge_overall": 3.33,
+      "judge_scores": {
+        "narrative_structure": 3,
+        "learning_narrative_integration": 4,
+        "character_situation_authenticity": 4,
+        "emotional_engagement_motivation": 3,
+        "decision_points_branching_quality": 2,
+        "transfer_generalizability": 4
+      },
+      "severity_flags": [
+        "No learner-facing decision points or branching — the scenario is narrated/observed rather than interactive, undermining the 'Decision Points & Branching Quality' dimension by design",
+        "Narrative structure is only loosely mapped to a recognized framework; key dramatic beats (midpoint escalation, low point, resolution) are underspecified, risking a flat or anticlimactic experience"
+      ],
+      "drift": -1.17,
+      "whole_number_overall": false,
+      "within_tolerance": false
+    },
+    {
+      "archetype": "story_design",
+      "case": "08_bad_01",
+      "expected_overall": 1.7,
+      "expected_scores": {
+        "narrative_structure": 2,
+        "learning_narrative_integration": 1,
+        "character_situation_authenticity": 2,
+        "emotional_engagement_motivation": 2,
+        "decision_points_branching_quality": 1,
+        "transfer_generalizability": 2
+      },
+      "judge_overall": 1.5,
+      "judge_scores": {
+        "narrative_structure": 2,
+        "learning_narrative_integration": 1,
+        "character_situation_authenticity": 2,
+        "emotional_engagement_motivation": 1,
+        "decision_points_branching_quality": 1,
+        "transfer_generalizability": 2
+      },
+      "severity_flags": [
+        "No genuine decision complexity — choices are cost-free and outcomes are predetermined, undermining the entire purpose of a branching/scenario format",
+        "Learning objectives are externally imposed rather than emergent from narrative tension, violating core scenario-based learning design principles",
+        "Scenario avoids the realistic difficult cases (abusive customer, admitting company fault) that would actually require judgment, making the training non-representative of real job demands",
+        "Flat emotional stakes risk learner disengagement and provide no productive tension to deepen processing or retention"
+      ],
+      "drift": -0.2,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "story_design",
+      "case": "08_bad_02",
+      "expected_overall": 2.6,
+      "expected_scores": {
+        "narrative_structure": 4,
+        "learning_narrative_integration": 1,
+        "character_situation_authenticity": 4,
+        "emotional_engagement_motivation": 4,
+        "decision_points_branching_quality": 3,
+        "transfer_generalizability": 1
+      },
+      "judge_overall": 1.67,
+      "judge_scores": {
+        "narrative_structure": 2,
+        "learning_narrative_integration": 1,
+        "character_situation_authenticity": 3,
+        "emotional_engagement_motivation": 2,
+        "decision_points_branching_quality": 1,
+        "transfer_generalizability": 1
+      },
+      "severity_flags": [
+        "Critical structural break: narrative is paused for an external, non-diegetic policy lecture, violating basic narrative-instruction integration principles",
+        "Zero decision points or branching—learners never practice applying the five policies, only receive them as stated rules",
+        "Weak transfer: no realistic application scenarios modeled for any of the five policies (compliance, expenses, confidentiality, cybersecurity, conflicts of interest)",
+        "Risk of engagement collapse at the midpoint, where the relatable story the learner has invested in is abandoned for bullet-point exposition"
+      ],
+      "drift": -0.93,
+      "whole_number_overall": false,
+      "within_tolerance": false
+    },
+    {
+      "archetype": "story_design",
+      "case": "08_borderline_01",
+      "expected_overall": 3.5,
+      "expected_scores": {
+        "narrative_structure": 5,
+        "learning_narrative_integration": 4,
+        "character_situation_authenticity": 2,
+        "emotional_engagement_motivation": 4,
+        "decision_points_branching_quality": 4,
+        "transfer_generalizability": 2
+      },
+      "judge_overall": 3.33,
+      "judge_scores": {
+        "narrative_structure": 5,
+        "learning_narrative_integration": 3,
+        "character_situation_authenticity": 2,
+        "emotional_engagement_motivation": 4,
+        "decision_points_branching_quality": 4,
+        "transfer_generalizability": 2
+      },
+      "severity_flags": [
+        "Domain mismatch between narrative surface features and target audience may cause learners to dismiss the case as irrelevant ('not applicable to tech'), undermining transfer regardless of narrative quality.",
+        "Character authenticity is misaligned with intended learners—vivid construction PM persona does not help software/IT PMs see themselves in the story, weakening identification and motivation to apply lessons.",
+        "Divergent failure-mode stakes (structural collapse vs. security vulnerability) risk making consequences feel dramatic but not credible or proportionate to real IT PM risk, potentially reducing perceived relevance."
+      ],
+      "drift": -0.17,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "story_design",
+      "case": "08_borderline_02",
+      "expected_overall": 3.3,
+      "expected_scores": {
+        "narrative_structure": 4,
+        "learning_narrative_integration": 4,
+        "character_situation_authenticity": 3,
+        "emotional_engagement_motivation": 3,
+        "decision_points_branching_quality": 4,
+        "transfer_generalizability": 2
+      },
+      "judge_overall": 2.83,
+      "judge_scores": {
+        "narrative_structure": 3,
+        "learning_narrative_integration": 4,
+        "character_situation_authenticity": 2,
+        "emotional_engagement_motivation": 3,
+        "decision_points_branching_quality": 3,
+        "transfer_generalizability": 2
+      },
+      "severity_flags": [
+        "Sanitized consequences (100% turnaround, zero legal/HR complications, perfect PIP compliance) risk teaching supervisors false confidence about outcomes that are actually uncertain and risk-laden in real workplaces",
+        "No branch models failure, ambiguity, or partial success, so learners never practice recovering from a reasonable decision that still goes badly — a core real-world supervisory skill"
+      ],
+      "drift": -0.47,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "cognitive_neuroscience",
+      "case": "09_good_01",
+      "expected_overall": 4.8,
+      "expected_scores": {
+        "5e_model_alignment": 5,
+        "memory_system_optimization": 5,
+        "attention_management": 5,
+        "emotional_engagement_for_encoding": 4,
+        "synaptic_strengthening_factors": 5,
+        "theory_practice_grounding": 5
+      },
+      "judge_overall": 4.33,
+      "judge_scores": {
+        "5e_model_alignment": 5,
+        "memory_system_optimization": 4,
+        "attention_management": 5,
+        "emotional_engagement_for_encoding": 3,
+        "synaptic_strengthening_factors": 4,
+        "theory_practice_grounding": 5
+      },
+      "severity_flags": [
+        "No explicit advance organizer connecting prior knowledge to new content before instruction begins, weakening semantic anchoring (Ausubel, 2000)",
+        "Imagination/mental-simulation strategies are absent, leaving one of the five synaptic-strengthening factors unaddressed",
+        "Emotional engagement rests on a single asserted claim rather than a deliberately designed authentic-stakes or productive-struggle experience"
+      ],
+      "drift": -0.47,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "cognitive_neuroscience",
+      "case": "09_good_02",
+      "expected_overall": 4.7,
+      "expected_scores": {
+        "5e_model_alignment": 4,
+        "memory_system_optimization": 5,
+        "attention_management": 5,
+        "emotional_engagement_for_encoding": 5,
+        "synaptic_strengthening_factors": 5,
+        "theory_practice_grounding": 4
+      },
+      "judge_overall": 4.83,
+      "judge_scores": {
+        "5e_model_alignment": 5,
+        "memory_system_optimization": 5,
+        "attention_management": 4,
+        "emotional_engagement_for_encoding": 5,
+        "synaptic_strengthening_factors": 5,
+        "theory_practice_grounding": 5
+      },
+      "severity_flags": [
+        "Two uninterrupted activity stretches (33 min and 30 min) exceed the 10-20 min attention-reset guideline without a dedicated reset or micro-break.",
+        "Action Planning segment (20 min) is not explicitly mapped to a 5E phase, creating ambiguity in how it functions within the model.",
+        "Spaced retrieval practice relies on a single follow-up prompt rather than multiple varied touchpoints, limiting robustness of long-term consolidation.",
+        "Discussing 'what went wrong' using participants' own real organizational scenarios carries latent risk of defensiveness/anxiety if psychological safety isn't explicitly framed, which could suppress productive emotional encoding."
+      ],
+      "drift": 0.13,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "cognitive_neuroscience",
+      "case": "09_bad_01",
+      "expected_overall": 1.0,
+      "expected_scores": {
+        "5e_model_alignment": 1,
+        "memory_system_optimization": 1,
+        "attention_management": 1,
+        "emotional_engagement_for_encoding": 1,
+        "synaptic_strengthening_factors": 1,
+        "theory_practice_grounding": 1
+      },
+      "judge_overall": 1.0,
+      "judge_scores": {
+        "5e_model_alignment": 1,
+        "memory_system_optimization": 1,
+        "attention_management": 1,
+        "emotional_engagement_for_encoding": 1,
+        "synaptic_strengthening_factors": 1,
+        "theory_practice_grounding": 1
+      },
+      "severity_flags": [
+        "90-minute uninterrupted lecture format directly contradicts documented sustained-attention limits (15-20 minutes), risking near-total disengagement and minimal retention",
+        "Explain-only delivery with no Explore phase violates the 5E Model's core sequencing principle, preventing basal-ganglia/procedural groundwork before declarative framing",
+        "Single-pathway (semantic-only) encoding with zero retrieval practice means content is highly vulnerable to rapid forgetting (no desirable difficulties, no spaced retrieval per Brown et al., 2014)",
+        "No mechanism exists to verify comprehension, behavior change, or policy application (e.g., harassment reporting, security protocols), creating organizational/legal risk despite 'compliance' framing",
+        "Content is explicitly divorced from learners' actual work context, eliminating personal relevance and transfer potential"
+      ],
+      "drift": 0.0,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "cognitive_neuroscience",
+      "case": "09_bad_02",
+      "expected_overall": 1.2,
+      "expected_scores": {
+        "5e_model_alignment": 1,
+        "memory_system_optimization": 1,
+        "attention_management": 2,
+        "emotional_engagement_for_encoding": 1,
+        "synaptic_strengthening_factors": 1,
+        "theory_practice_grounding": 1
+      },
+      "judge_overall": 1.0,
+      "judge_scores": {
+        "5e_model_alignment": 1,
+        "memory_system_optimization": 1,
+        "attention_management": 1,
+        "emotional_engagement_for_encoding": 1,
+        "synaptic_strengthening_factors": 1,
+        "theory_practice_grounding": 1
+      },
+      "severity_flags": [
+        "Amygdala hijack: emotional arousal level actively shuts down prefrontal cortex function per Yerkes-Dodson, directly impairing the encoding of safety-critical content.",
+        "No Explain/Elaborate phase: workers never receive conceptual understanding of WHY practices matter, producing compliance without comprehension.",
+        "Massed, non-spaced practice with forced immediate retakes reinforces anxiety and shallow cramming rather than durable learning.",
+        "Fear-based motivation substitutes punishment-avoidance for genuine safety internalization, predicting inconsistent real-world application—a safety-critical failure mode."
+      ],
+      "drift": -0.2,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "cognitive_neuroscience",
+      "case": "09_borderline_01",
+      "expected_overall": 3.5,
+      "expected_scores": {
+        "5e_model_alignment": 4,
+        "memory_system_optimization": 3,
+        "attention_management": 4,
+        "emotional_engagement_for_encoding": 3,
+        "synaptic_strengthening_factors": 3,
+        "theory_practice_grounding": 4
+      },
+      "judge_overall": 2.67,
+      "judge_scores": {
+        "5e_model_alignment": 2,
+        "memory_system_optimization": 2,
+        "attention_management": 4,
+        "emotional_engagement_for_encoding": 3,
+        "synaptic_strengthening_factors": 2,
+        "theory_practice_grounding": 3
+      },
+      "severity_flags": [
+        "CRITICAL: Explore phase is teacher-demonstrated, not learner-directed — students observe rather than manipulate materials, so the basal ganglia procedural pathway is never engaged, undermining the defining purpose of Explore in the 5E model.",
+        "Explain phase is built on an impoverished Explore foundation, weakening the declarative learning (numerator/denominator, equivalence) that depends on prior embodied experience.",
+        "No procedural/generation-based retrieval practice; 'practice' problems are the first time students actually act on fractions themselves, which is too late in the sequence."
+      ],
+      "drift": -0.83,
+      "whole_number_overall": false,
+      "within_tolerance": false
+    },
+    {
+      "archetype": "cognitive_neuroscience",
+      "case": "09_borderline_02",
+      "expected_overall": 3.5,
+      "expected_scores": {
+        "5e_model_alignment": 4,
+        "memory_system_optimization": 2,
+        "attention_management": 4,
+        "emotional_engagement_for_encoding": 5,
+        "synaptic_strengthening_factors": 3,
+        "theory_practice_grounding": 3
+      },
+      "judge_overall": 3.33,
+      "judge_scores": {
+        "5e_model_alignment": 3,
+        "memory_system_optimization": 2,
+        "attention_management": 3,
+        "emotional_engagement_for_encoding": 5,
+        "synaptic_strengthening_factors": 3,
+        "theory_practice_grounding": 4
+      },
+      "severity_flags": [
+        "No Elaborate phase: memory consolidation, spaced practice, and varied-context application are entirely absent, risking rapid decay of in-the-moment learning.",
+        "Zero retrieval practice or spaced retrieval cues (1-day, 3-day, 1-week) — directly contradicts Brown, Roediger & McDaniel (2014) findings on retrieval as the single most effective durability mechanism.",
+        "Single-session massed practice with no follow-up application opportunities; transfer to novel customer scenarios is unaddressed, leaving transfer outcomes uncertain.",
+        "High emotional/episodic encoding in the moment is not leveraged post-session — without reinforcement, strong initial encoding is likely to be wasted as unconsolidated memory."
+      ],
+      "drift": -0.17,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "curriculum_alignment",
+      "case": "good_01_full_alignment",
+      "expected_overall": 5.0,
+      "expected_scores": {
+        "objective_strategy_coherence": 5,
+        "strategy_assessment_coherence": 5,
+        "objective_assessment_coherence": 5,
+        "coverage_completeness": 5,
+        "vertical_alignment": 5,
+        "discipline_alignment": 5
+      },
+      "judge_overall": 4.83,
+      "judge_scores": {
+        "objective_strategy_coherence": 5,
+        "strategy_assessment_coherence": 5,
+        "objective_assessment_coherence": 5,
+        "coverage_completeness": 5,
+        "vertical_alignment": 4,
+        "discipline_alignment": 5
+      },
+      "severity_flags": [
+        "M3's 'Analyze' Bloom tag covers a task (producing a new SBAR document) that also carries Create-level synthesis demand; not a coherence break since objective, instruction, and assessment all treat it consistently, but worth noting if a separate archetype later audits objective quality.",
+        "No explicit statement of how NURS 305 vertically connects to adjacent courses in the BSN curriculum (what it presumes from semester 3, what it enables in semester 5) — only within-course sequencing is evidenced."
+      ],
+      "drift": -0.17,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "curriculum_alignment",
+      "case": "bad_01_bloom_drift",
+      "expected_overall": 2.5,
+      "expected_scores": {
+        "objective_strategy_coherence": 2,
+        "strategy_assessment_coherence": 4,
+        "objective_assessment_coherence": 1,
+        "coverage_completeness": 3,
+        "vertical_alignment": 3,
+        "discipline_alignment": 2
+      },
+      "judge_overall": 1.33,
+      "judge_scores": {
+        "objective_strategy_coherence": 1,
+        "strategy_assessment_coherence": 2,
+        "objective_assessment_coherence": 1,
+        "coverage_completeness": 1,
+        "vertical_alignment": 1,
+        "discipline_alignment": 2
+      },
+      "severity_flags": [
+        "CRITICAL: Bloom-level mismatch across all three legs (objective=Analyze; instruction=Remember/Understand; assessment=Remember/Understand) — the module teaches and tests recall of definitions while claiming to teach analysis.",
+        "CRITICAL: No instructional activity ever models or practices the application of ethical frameworks to a case, and no assessment item requires it — the core objective behavior ('analyze...to recommend') is never operationalized anywhere in the module.",
+        "No case-based, essay, or recommendation task exists despite being the explicit deliverable implied by the objective ('recommend the most defensible action').",
+        "Weeks 1-2 are substantively redundant (lecture then textbook reading of the same definitions), consuming instructional time without advancing toward the stated skill."
+      ],
+      "drift": -1.17,
+      "whole_number_overall": false,
+      "within_tolerance": false
+    },
+    {
+      "archetype": "curriculum_alignment",
+      "case": "bad_02_orphan_objectives_and_instruction",
+      "expected_overall": 2.2,
+      "expected_scores": {
+        "objective_strategy_coherence": 3,
+        "strategy_assessment_coherence": 2,
+        "objective_assessment_coherence": 2,
+        "coverage_completeness": 1,
+        "vertical_alignment": 3,
+        "discipline_alignment": 2
+      },
+      "judge_overall": 1.67,
+      "judge_scores": {
+        "objective_strategy_coherence": 2,
+        "strategy_assessment_coherence": 2,
+        "objective_assessment_coherence": 1,
+        "coverage_completeness": 1,
+        "vertical_alignment": 2,
+        "discipline_alignment": 2
+      },
+      "severity_flags": [
+        "Objective-Assessment Coherence scored 1: two of three stated objectives (O2, O3) are not assessed at all, and the one assessed objective (O1) is tested at a lower Bloom level ('Apply' stated vs. recognition-level MCQ delivered) — overall score capped at 3.0 per rubric rule.",
+        "Approximately 50% of workshop time (VP talk, inspirational video, stakeholders segment) is instructional content with no traceable link to any stated objective — a major extraneous-content/coverage violation.",
+        "O2 and O3 are taught at Remember-level only (slides/demo) despite objectives requiring Apply-level behavior ('conduct,' 'identify and escalate') — no opportunity to practice before being expected to perform on the job.",
+        "No rubric, criterion, or performance checklist exists anywhere that mirrors any objective's stated criterion, undermining the assessment's validity for certifying competence."
+      ],
+      "drift": -0.53,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "curriculum_alignment",
+      "case": "borderline_01_strong_unit_no_vertical",
+      "expected_overall": 4.2,
+      "expected_scores": {
+        "objective_strategy_coherence": 5,
+        "strategy_assessment_coherence": 5,
+        "objective_assessment_coherence": 5,
+        "coverage_completeness": 5,
+        "vertical_alignment": 3,
+        "discipline_alignment": 2
+      },
+      "judge_overall": 4.33,
+      "judge_scores": {
+        "objective_strategy_coherence": 4,
+        "strategy_assessment_coherence": 4,
+        "objective_assessment_coherence": 5,
+        "coverage_completeness": 5,
+        "vertical_alignment": 4,
+        "discipline_alignment": 4
+      },
+      "severity_flags": [
+        "Time-criterion gap: the objective and assessment both impose a hard 10-minute limit, but no instructional activity rehearses performance under that exact time pressure (guided practice is untimed; independent practice allows 15 minutes) — learners are tested on a condition they never practiced.",
+        "Hint/scaffold withdrawal at assessment (hints and step-checks present in practice, absent in the performance task) is appropriate for an application-level test but is not flagged anywhere in the lesson, risking learner surprise.",
+        "No stated prerequisites — baseline Excel familiarity is assumed but never verified or stated, which is a minor completeness gap rather than a critical one given the lesson's optional/standalone status."
+      ],
+      "drift": 0.13,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "curriculum_alignment",
+      "case": "bad_03_assessment_without_instruction",
+      "expected_overall": 2.3,
+      "expected_scores": {
+        "objective_strategy_coherence": 3,
+        "strategy_assessment_coherence": 1,
+        "objective_assessment_coherence": 3,
+        "coverage_completeness": 2,
+        "vertical_alignment": 2,
+        "discipline_alignment": 3
+      },
+      "judge_overall": 1.67,
+      "judge_scores": {
+        "objective_strategy_coherence": 2,
+        "strategy_assessment_coherence": 1,
+        "objective_assessment_coherence": 2,
+        "coverage_completeness": 1,
+        "vertical_alignment": 2,
+        "discipline_alignment": 2
+      },
+      "severity_flags": [
+        "Final assessment (40% of grade) tests qualitative research skills (interviewing, transcription, thematic coding, theme development) that receive zero instructional practice — only a single non-practice overview lecture.",
+        "11 of 12 instructional weeks (quantitative methods, statistics, SPSS, survey design) are not measured by any assessment component described, representing near-total orphan instruction.",
+        "Rubric criteria (coding rigor, theme development, use of qualitative literature) have no corresponding practiced skill or stated objective criterion — students are being graded on unlearned competencies.",
+        "No scaffolding or formative practice bridges the week 12 qualitative lecture to the high-stakes summative qualitative project."
+      ],
+      "drift": -0.63,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    },
+    {
+      "archetype": "curriculum_alignment",
+      "case": "borderline_02_strong_vertical_weak_unit",
+      "expected_overall": 3.8,
+      "expected_scores": {
+        "objective_strategy_coherence": 3,
+        "strategy_assessment_coherence": 3,
+        "objective_assessment_coherence": 3,
+        "coverage_completeness": 4,
+        "vertical_alignment": 5,
+        "discipline_alignment": 5
+      },
+      "judge_overall": 3.5,
+      "judge_scores": {
+        "objective_strategy_coherence": 3,
+        "strategy_assessment_coherence": 2,
+        "objective_assessment_coherence": 3,
+        "coverage_completeness": 3,
+        "vertical_alignment": 5,
+        "discipline_alignment": 5
+      },
+      "severity_flags": [
+        "Week 5 'React State Management': two-level Bloom drift between objective (Apply) and assessment (Remember via MC quiz) — the capstone-critical skill of state management is being certified at a recall level, not application level, creating risk that learners reach the capstone without having been validated on a core hireable skill.",
+        "Week 11 'Database Normalization': assessment tests Analyze-level skill (identify normalization violations) that was never practiced in instruction (examples only, no analysis exercises) — learners are tested on an unpracticed skill, violating the 'no surprises' principle even though the objective-assessment pairing itself is technically correct.",
+        "Strategy-Assessment Coherence is the systemic weak point (2/5): in 2 of 3 sampled units, what is taught does not match in format or cognitive demand what is assessed, suggesting this pattern may recur across other modules not shown in the excerpt."
+      ],
+      "drift": -0.3,
+      "whole_number_overall": false,
+      "within_tolerance": true
+    }
+  ]
+}

@@ -8,17 +8,27 @@ the scores an expert would give it, and why. This script uses them two ways.
   python run_edge_cases.py              Check the case files (no model, no API key).
   python run_edge_cases.py --live       Score every case with a live judge and report
                                         drift from the expected overall.
+  python run_edge_cases.py --live --backend cli
+                                        The same, through the Claude Code CLI you are
+                                        signed in to (no API key).
 
 The check confirms that every case names exactly its judge's six dimensions, that
 every expected score is a whole number from 1 to 5, and that a stated overall agrees
 with its own dimension scores. It exits non-zero on any problem, so it can run in CI.
 
-The live run needs the `anthropic` package and ANTHROPIC_API_KEY. It sends each case's
-artifact to the model you name and prints expected versus actual. It exits non-zero
-when any case drifts from its expected overall by more than --tolerance.
+The live run sends each case's artifact to a judge and prints expected versus actual.
+It exits non-zero when any case drifts from its expected overall by more than
+--tolerance (one full point for cases that expect only a whole-number overall). There are two ways to reach a model:
+
+  --backend api   (default) the `anthropic` package and ANTHROPIC_API_KEY.
+  --backend cli   the `claude` command, with the judge prompt as the system prompt
+                  and no tools. It scores --jobs cases at a time (default 4).
+
+--report FILE writes the results as JSON, to keep with a release.
 
     python run_edge_cases.py --live --archetype 02
     python run_edge_cases.py --live --model claude-sonnet-5-5 --tolerance 0.7
+    python run_edge_cases.py --live --backend cli --model sonnet --report drift.json
 
 Author: Jeremy Terhune
 Copyright 2026 Jeremy Terhune
@@ -30,7 +40,10 @@ import argparse
 import json
 import os
 import re
+import subprocess
 import sys
+import tempfile
+from concurrent.futures import ThreadPoolExecutor
 
 try:
     sys.stdout.reconfigure(encoding="utf-8")
@@ -41,7 +54,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
 import guide_registry  # noqa: E402,F401  (importing registers the archetypes)
-from guide_base import _REGISTRY, evaluate_standalone  # noqa: E402
+from guide_base import GUIDEResult, _REGISTRY, evaluate_standalone, get_archetype  # noqa: E402
 from test_judge_schemas import dimension_keys  # noqa: E402
 
 ARCHETYPES_DIR = os.path.join(HERE, "archetypes")
@@ -149,44 +162,101 @@ def case_text(case: dict) -> tuple[str, str, str, str]:
     return str(user_input), str(output), context, str(reference)
 
 
-def run_live(paths: list[str], model: str, tolerance: float) -> int:
-    drifted = 0
-    total = 0
+def evaluate_with_cli(archetype: str, user_input: str, output: str, context: str, reference: str, model: str) -> GUIDEResult:
+    """Score one case through the Claude Code CLI: judge prompt as system prompt, no tools."""
+    spec = get_archetype(archetype)
+    human = spec["human_prompt"].format(input=user_input, output=output, context=context, reference=reference)
+    with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as work:
+        system_file = os.path.join(work, "judge_system_prompt.txt")
+        with open(system_file, "w", encoding="utf-8") as fh:
+            fh.write(spec["system_prompt"])
+        cmd = ["claude", "-p", "--system-prompt-file", system_file, "--tools", "", "--model", model]
+        proc = subprocess.run(cmd, input=human, capture_output=True, text=True, encoding="utf-8",
+                              cwd=work, timeout=600, shell=(os.name == "nt"))
+    text = (proc.stdout or "").strip()
+    if proc.returncode != 0 or not text:
+        raise RuntimeError((proc.stderr or text or "no output").strip()[:300])
+    start, end = text.find("{"), text.rfind("}")
+    if start == -1 or end <= start:
+        raise RuntimeError("no JSON object in the judge's reply: " + text[:200])
+    return GUIDEResult.from_json(text[start:end + 1], archetype=archetype)
+
+
+def score_case(archetype: str, case: dict, model: str, backend: str) -> dict:
+    """Score one case and return a result row; a failed call is a row with an error, not an exception."""
+    want = expected_overall(archetype, case)
+    user_input, output, context, reference = case_text(case)
+    row = {"archetype": archetype, "case": case_id(case), "expected_overall": want,
+           "expected_scores": expected_dimensions(case)}
+    try:
+        if backend == "cli":
+            result = evaluate_with_cli(archetype, user_input, output, context, reference, model)
+        else:
+            result = evaluate_standalone(archetype, user_input, output, context=context,
+                                         reference=reference, model_name=model)
+    except Exception as exc:
+        row["error"] = str(exc)
+        return row
+    scores = {k: v for k, v in result.scores.items() if k != "overall" and isinstance(v, (int, float))}
+    got = result.scores.get("overall")
+    if not isinstance(got, (int, float)):
+        got = sum(scores.values()) / max(len(scores), 1)
+    row.update(judge_overall=round(float(got), 2), judge_scores=scores, severity_flags=result.severity_flags,
+               rationale=result.rationale)
+    if want is not None:
+        row["drift"] = round(float(got) - want, 2)
+        # A case that expects only a whole-number overall (no dimension scores) cannot be matched
+        # more closely than one step, so one step counts as agreement.
+        row["whole_number_overall"] = not row["expected_scores"] and float(want).is_integer()
+    return row
+
+
+def within(row: dict, tolerance: float) -> bool:
+    """True when a scored case agrees with its expected overall."""
+    allowed = max(tolerance, 1.0) if row.get("whole_number_overall") else tolerance
+    return abs(row["drift"]) <= allowed + 1e-9
+
+
+def run_live(paths: list[str], model: str, tolerance: float, backend: str, jobs: int, report: str | None) -> int:
+    rows: list[dict] = []
     for path in paths:
         archetype, cases = load_cases(path)
-        print(f"\n{os.path.basename(path)}  ({archetype}, model {model})")
-        for case in cases:
-            cid = case_id(case)
-            want = expected_overall(archetype, case)
-            user_input, output, context, reference = case_text(case)
-            try:
-                result = evaluate_standalone(archetype, user_input, output, context=context,
-                                             reference=reference, model_name=model)
-            except Exception as exc:  # a failed call is reported, not fatal to the run
-                print(f"  ERROR {cid}: {exc}")
-                drifted += 1
-                total += 1
-                continue
-            got_scores = {k: v for k, v in result.scores.items() if k != "overall"}
-            got = result.scores.get("overall")
-            if not isinstance(got, (int, float)):
-                got = sum(got_scores.values()) / max(len(got_scores), 1)
-            total += 1
-            if want is None:
-                print(f"  ----  {cid}: no expected overall; judge gave {got:.2f}")
-                continue
-            drift = float(got) - want
-            verdict = "ok  " if abs(drift) <= tolerance else "DRIFT"
-            if verdict == "DRIFT":
-                drifted += 1
-            print(f"  {verdict}  {cid}: expected {want:.2f}, judge {float(got):.2f} ({drift:+.2f})")
-            dims = expected_dimensions(case)
-            off = {k: (dims[k], got_scores.get(k)) for k in dims
-                   if isinstance(got_scores.get(k), (int, float)) and abs(got_scores[k] - dims[k]) >= 2}
-            for key, (exp, act) in off.items():
-                print(f"          {key}: expected {exp}, judge {act}")
-    print(f"\n{total - drifted} of {total} cases within {tolerance} of the expected overall.")
-    return 1 if drifted else 0
+        print(f"\n{os.path.basename(path)}  ({archetype}, {backend} backend, model {model})", flush=True)
+        workers = jobs if backend == "cli" else 1
+        with ThreadPoolExecutor(max_workers=max(workers, 1)) as pool:
+            results = list(pool.map(lambda c: score_case(archetype, c, model, backend), cases))
+        for row in results:
+            rows.append(row)
+            cid = row["case"]
+            if "error" in row:
+                print(f"  ERROR {cid}: {row['error']}")
+            elif row["expected_overall"] is None:
+                print(f"  ----  {cid}: no expected overall; judge gave {row['judge_overall']:.2f}")
+            else:
+                verdict = "ok   " if within(row, tolerance) else "DRIFT"
+                print(f"  {verdict} {cid}: expected {row['expected_overall']:.2f}, "
+                      f"judge {row['judge_overall']:.2f} ({row['drift']:+.2f})")
+                for key, exp in row["expected_scores"].items():
+                    act = row["judge_scores"].get(key)
+                    if isinstance(act, (int, float)) and abs(act - exp) >= 2:
+                        print(f"          {key}: expected {exp}, judge {act}")
+        sys.stdout.flush()
+    scored = [r for r in rows if "drift" in r]
+    errors = [r for r in rows if "error" in r]
+    drifted = [r for r in scored if not within(r, tolerance)]
+    mean_signed = sum(r["drift"] for r in scored) / len(scored) if scored else 0.0
+    mean_abs = sum(abs(r["drift"]) for r in scored) / len(scored) if scored else 0.0
+    print(f"\n{len(scored) - len(drifted)} of {len(scored)} scored cases within {tolerance} of the expected overall "
+          f"(mean absolute drift {mean_abs:.2f}, mean drift {mean_signed:+.2f}); {len(errors)} error(s).")
+    if report:
+        with open(report, "w", encoding="utf-8") as fh:
+            json.dump({"model": model, "backend": backend, "tolerance": tolerance,
+                       "cases": len(rows), "within_tolerance": len(scored) - len(drifted), "errors": len(errors),
+                       "mean_absolute_drift": round(mean_abs, 3), "mean_drift": round(mean_signed, 3),
+                       "results": rows}, fh, indent=2, ensure_ascii=False)
+            fh.write("\n")
+        print(f"Report written to {report}")
+    return 1 if drifted or errors else 0
 
 
 def main() -> int:
@@ -195,6 +265,10 @@ def main() -> int:
     parser.add_argument("--archetype", help="two-digit archetype number, e.g. 02 (default: all)")
     parser.add_argument("--model", default=DEFAULT_MODEL, help=f"model for --live (default {DEFAULT_MODEL})")
     parser.add_argument("--tolerance", type=float, default=0.7, help="allowed drift in the overall for --live (default 0.7)")
+    parser.add_argument("--backend", choices=("api", "cli"), default="api",
+                        help="how --live reaches a model: the Anthropic API (default) or the signed-in claude CLI")
+    parser.add_argument("--jobs", type=int, default=4, help="cases scored at once with --backend cli (default 4)")
+    parser.add_argument("--report", help="write the --live results to this JSON file")
     args = parser.parse_args()
 
     paths = sorted(
@@ -224,10 +298,10 @@ def main() -> int:
     print(f"\nAll {count} cases in {len(paths)} file(s) are well-formed.")
     if not args.live:
         return 0
-    if not os.environ.get("ANTHROPIC_API_KEY"):
-        print("\n--live needs ANTHROPIC_API_KEY in the environment.")
+    if args.backend == "api" and not os.environ.get("ANTHROPIC_API_KEY"):
+        print("\n--live needs ANTHROPIC_API_KEY in the environment, or use --backend cli.")
         return 1
-    return run_live(paths, args.model, args.tolerance)
+    return run_live(paths, args.model, args.tolerance, args.backend, args.jobs, args.report)
 
 
 if __name__ == "__main__":
