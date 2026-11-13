@@ -205,14 +205,14 @@ GUIDE is scored against its own rubrics at most releases. Six archetypes apply t
 | v3.2.3 | 4.3 / 5 | 4.2 / 5 | [v3.2.3](self-evaluations/GUIDE_Self_Evaluation_v3.2.3.md) |
 | v3.3.0 | 4.3 / 5 | 4.3 / 5 | [v3.3.0](self-evaluations/GUIDE_Self_Evaluation_v3.3.0.md) |
 | v3.4.0 | 4.4 / 5 | 4.3 / 5 | [v3.4.0](self-evaluations/GUIDE_Self_Evaluation_v3.4.0.md) |
-| v3.5.0 | 4.3 / 5 | 4.3 / 5 | [v3.5.0](self-evaluations/GUIDE_Self_Evaluation_v3.5.0.md) |
+| v3.5.0 | 4.4 / 5 | 4.3 / 5 | [v3.5.0](self-evaluations/GUIDE_Self_Evaluation_v3.5.0.md) |
 
 Highlights:
 
 - **v3.1.1** applied archetype 10 to GUIDE for the first time. It scored 2 on Discipline Alignment because GUIDE did not map to a professional competency framework.
 - **v3.3.0** added the discipline crosswalk and raised that score from 2 to 4. It stops at 4 because a self-published crosswalk is not accreditation.
 - **v3.4.0** brought the printable rubric back to parity and added the first diagram, which raised Multimedia Principle Compliance from 3 to 4.
-- **v3.5.0** scored the living framework and the printable rubric together, re-reading every dimension against its anchor, and came out at 4.3 against v3.4.0's 4.4. The earlier figure reads about 4.2 under the same strict scoring, so this release is a gain: practice exercises, a spaced review schedule, and three new diagrams raised five dimensions, four older scores were corrected down, and one fell because parts of the pipeline have not yet run live.
+- **v3.5.0** scored the living framework and the printable rubric together, re-reading every dimension against its anchor, and came out at 4.4 (4.3 with archetype 10), the same headline as v3.4.0. The earlier figure reads about 4.2 under the same strict scoring, so this release is a gain: practice exercises, a spaced review schedule, three new diagrams, a screen-reader pass, and live runs of the edge cases and the pipeline earned back seven points. Some of that evidence is thin (one screen reader, one live run by one model), and the report says where.
 
 v3.2.2 was packaging only, and v3.4.1 fixed only the Python output format for three archetypes, so neither was re-scored.
 

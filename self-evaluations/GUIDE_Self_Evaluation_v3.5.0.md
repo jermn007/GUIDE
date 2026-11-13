@@ -24,17 +24,18 @@ One rule follows from scoring two surfaces: **where the living layer and the doc
 
 Conventions are unchanged from prior self-evaluations: six archetypes apply to GUIDE itself (01, 02, 03, 04, 05, 09); archetype 10 is scored and reported separately; 06, 07, and 08 score artifact types GUIDE is not and are N/A.
 
-### Five passes
+### Six passes
 
-This evaluation ran five times during the release, and each pass led to changes.
+This evaluation ran six times during the release, and each pass led to changes.
 
 1. **First pass** scored the working tree as first prepared: 4.0. It found a dangling pointer in `EVALUATE.md`, agent lists that summed to 14, stale counts in the docx, and a wrong citation year, among others.
 2. **Second pass** re-read those fixes: 4.1.
 3. **Third pass** re-read a larger round of work: the docx's archetype sections regenerated from the handoffs, source names traced or removed, new edge cases and an edge-case checker, live command runs, and anchor and severity-flag edits to 04, 05, and 06. It also found that the regeneration had left hand-written front matter out of step and a print edition that repeated itself: 4.1 (4.14 and 4.12 to two decimals).
 4. **Fourth pass** re-read the fixes to those: 4.2 (4.19 and 4.17).
-5. **Fifth pass** (this document) scored three additions that earlier passes had listed as long-standing gaps: a practice page with score-then-compare exercises, a spaced review schedule, and three new diagrams. The practice answers were checked against the current anchors in handoffs 02, 04, and 07, and the diagrams were viewed and checked for contrast. Result: 4.3 on both composites (4.33 and 4.29).
+5. **Fifth pass** scored three additions that earlier passes had listed as long-standing gaps: a practice page with score-then-compare exercises, a spaced review schedule, and three new diagrams: 4.3 (4.33 and 4.29).
+6. **Sixth pass** (this document) scored the validation work: one NVDA reading of the docx, a live scoring of all 68 edge cases, and live runs of the pipeline's needs-analysis stop, fail-fast gate, and revision loop. The results file was re-computed rather than taken from its summary. Result: 4.4 on the six archetypes and 4.3 with archetype 10 (4.39 and 4.33).
 
-Every change was confirmed in the file itself before a score moved. Scores here describe the repository as it stands after the fifth round.
+Every change was confirmed in the file itself before a score moved. Scores here describe the repository as it stands after the sixth round.
 
 ---
 
@@ -49,18 +50,19 @@ Every change was confirmed in the file itself before a score moved. Scores here 
 7. **Tests.** `run_edge_cases.py` checks all 68 edge cases offline (it passes), and `edge_cases_02.json` has four new cases for the new 02 rules. No case has been scored by a live judge.
 8. **Diagrams.** The source line in `assets/three-alignments.svg` is now #475569 (7.24:1 on its background). Three new diagrams sit where their ideas are explained, in the README and the docx, each with a full text alternative: `addie-map` (the ten archetypes on the ADDIE phases), `review-flow` (five steps of a review and the four verdict bands drawn to scale), and `alignment-cap` (archetype 10's three links and its cap rule, with an example).
 9. **Practice page.** `docs/practice.md`, "Practice: Score This, Then Compare": three exercises (a quiz for 02, a slide for 04, a training request for 07) where the reader scores first and then opens GUIDE's scores, the reasoning, "the common mistake", and "the fix"; then a review schedule at one day (recall), three days (apply), and one week (transfer, including scoring the reader's own artifact), with answers. It is linked from the README and plugin README and printed as the closing section of the docx.
+10. **Validation runs** (all 2026-11-12, recorded in `STATUS.md`). The author read the docx with NVDA and found no problems. `run_edge_cases.py --live` scored all 68 cases once with one model: 62 within tolerance of the expected overall, mean absolute drift 0.43, mean drift -0.30, no bad case ranked above a good one; six cases drift 0.8 to 1.8 and are listed as open. `/guide-pipeline` ran its needs-analysis stop, its fail-fast gate (blocked at 1, redesigned, passed at 5), and one revision round (capped 3.0 to 4.89). Two defects those runs exposed were fixed and not re-run, and no complete build has finished in a single run.
 
 ---
 
 ## Reading this score against the history table
 
-The composite is **4.3**, against 4.4 for v3.4.0. The two figures are not measured the same way, and a reader of the history table should separate three things.
+The composite is **4.4**, the same published figure as v3.4.0 (4.39 against 4.36 to two decimals). The match is a coincidence of two movements in opposite directions, and a reader of the history table should separate three things.
 
-**1. Corrections to earlier, more generous readings (six dimensions, -1 each).** These v3.4.0 scores had been carried forward from release to release as deltas. Read against the anchor text and a specific file, they did not hold, and v3.5.0 did not cause any of them. There was no spaced review anywhere, so Transfer & Retention could not be a 5. One figure in a long document was not "good use of visuals". No assistive-technology test has ever been recorded. A diagram is not emotional engagement. "Validated" has never been shown by a live run of the edge cases. And the docx's worked calibration example computes archetype 01's overall in a way the rubric says not to.
+**1. Corrections to earlier, more generous readings (six dimensions, -1 each).** These v3.4.0 scores had been carried forward from release to release as deltas. Read against the anchor text and a specific file, they did not hold, and v3.5.0 did not cause any of them. There was no spaced review anywhere, so Transfer & Retention could not be a 5. One figure in a long document was not "good use of visuals". No assistive-technology test had ever been recorded. A diagram is not emotional engagement. "Validated" had never been shown by a live run of the edge cases. And the docx's worked calibration example computes archetype 01's overall in a way the rubric says not to.
 
-**2. Gains made by v3.5.0 (five dimensions, +1 each).** The practice page, its review schedule, and the three new diagrams are evidence the anchors ask for by name. Two of the gains bring a corrected score back to its v3.4.0 value, now earned (03 Transfer & Retention, 04 Multimedia Principle Compliance). Three go above v3.4.0 (03 Practice & Feedback, 09 5E Model Alignment, 09 Memory System Optimization).
+**2. Gains made by v3.5.0 (seven dimensions, +1 each).** The practice page, its review schedule, the three new diagrams, the screen-reader pass, and the live edge-case run are evidence the anchors ask for by name. Four of the gains bring a corrected score back to its v3.4.0 value, now earned (03 Transfer & Retention, 04 Multimedia Principle Compliance, 05 Robust, 09 Theory-Practice Grounding). Three go above v3.4.0 (03 Practice & Feedback, 09 5E Model Alignment, 09 Memory System Optimization).
 
-**3. One loss caused by v3.5.0 (-1).** The pipeline's build path, fail-fast gate, and revision loop shipped as commands without a live run (10 Coverage Completeness). Archetype 10 is outside the six-archetype composite, so this affects only the "with archetype 10" figure.
+**3. One loss caused by v3.5.0 (-1).** The pipeline commands shipped with more specified than has been confirmed live (10 Coverage Completeness). Archetype 10 is outside the six-archetype composite, so this affects only the "with archetype 10" figure.
 
 The arithmetic, on the six applicable archetypes (36 dimension scores):
 
@@ -68,9 +70,11 @@ The arithmetic, on the six applicable archetypes (36 dimension scores):
 |---|---|---|
 | v3.4.0 as published | 157 / 36 | 4.36 |
 | v3.4.0 after the six corrections (-6 points) | 151 / 36 | 4.19 |
-| v3.5.0: five gains (+5 points) | 156 / 36 | **4.33** |
+| v3.5.0: seven gains (+7 points) | 158 / 36 | **4.39** |
 
-With archetype 10 the same steps run 182/42 = 4.33, then 176/42 = 4.19, then 180/42 = **4.29** (five gains and the one loss). Put plainly: scored this strictly, v3.4.0 would have read about 4.2, and v3.5.0 is a real improvement on that. The published 4.4 and this 4.3 look like a small decline only because the earlier figure was read more generously. The corrected v3.4.0 row is indicative: it applies today's corrections to the v3.4.0 scores and is not a re-score of the v3.4.0 artifact.
+With archetype 10 the same steps run 182/42 = 4.33, then 176/42 = 4.19, then 182/42 = **4.33** (seven gains and the one loss). Put plainly: scored this strictly, v3.4.0 would have read about 4.2, and v3.5.0 reads 4.4. The history table shows 4.4 twice; the second one was earned against the anchors and the first was not. The corrected v3.4.0 row is indicative: it applies today's corrections to the v3.4.0 scores and is not a re-score of the v3.4.0 artifact.
+
+Two corrections remain in force (01 Accuracy & Grounding, 09 Emotional Engagement), because nothing in this release addressed them.
 
 ---
 
@@ -83,20 +87,18 @@ With archetype 10 the same steps run 182/42 = 4.33, then 176/42 = 4.19, then 180
 | 03 - Practice & Feedback Integration | 3 | 4 | **+1** | `docs/practice.md` adds three score-then-compare exercises and eight review questions, each with immediate, specific feedback of several kinds. Not a 5: it practices 10 of the 60 dimensions across 3 of the 10 archetypes. |
 | 09 - 5E Model Alignment | 4 | 5 | **+1** | Elaborate was the underdeveloped phase. The review schedule gives it spaced retrieval in varied contexts, and the practice page puts scoring (Explore) before the explanation. |
 | 09 - Memory System Optimization | 4 | 5 | **+1** | Retrieval is now spaced at one day, three days, and one week, by recall, application, and transfer - the anchor's own example of "systematic". |
-| 10 - Coverage Completeness | 5 | 4 | **-1** | Mostly closed (four new 02 edge cases, three live command runs). What remains: the pipeline's build path, fail-fast gate, needs-analysis stop, and reviser loop have instructions and no live run. |
+| 10 - Coverage Completeness | 5 | 4 | **-1** | Nearly closed: the new 02 rules have edge cases, all 68 cases have been scored, and the stop, the gate, and the revision loop have run. What remains is small: two fixes made after those runs have not been re-run, and the Develop and Implement agents have run live only in review mode. |
 
 ### Corrections to earlier readings
 
 | Archetype / Dimension | v3.4.0 | v3.5.0 | Delta | Rationale |
 |---|---|---|---|---|
 | 01 - Accuracy & Grounding | 5 | 4 | **-1** | Sources are now traceable and handoff 09 is consistent about attention spans. One contradiction is left: the docx Calibration Example gives archetype 01 a plain-mean overall of 3.7, and the rubric printed after it says the overall "is not a plain mean". |
-| 05 - Robust | 4 | 3 | **-1** | Table header rows and alt text are in place, but no assistive-technology test is recorded. The anchor for 4 says "tested with multiple AT". |
 | 09 - Emotional Engagement for Encoding | 4 | 3 | **-1** | v3.4.0 raised this on the diagram being a "memorable mental model". The anchor is about relevance and productive struggle, and those are moderate. |
-| 09 - Theory-Practice Grounding | 5 | 4 | **-1** | "Validated" is one of the four parts of the anchor for 5. The edge cases are checked for form but have not been scored by a live judge. |
 
 ### Corrected, then earned back in v3.5.0
 
-03 Transfer & Retention Design (5) and 04 Multimedia Principle Compliance (4) were each corrected down a point in the earlier passes, because the v3.4.0 evidence did not support them. The fifth-pass additions supply that evidence, so both now stand at their v3.4.0 values on the anchor's terms. They are not movers against v3.4.0, but they are two of the five v3.5.0 gains in the arithmetic above.
+Four dimensions were corrected down a point in the earlier passes, because the v3.4.0 evidence did not support them, and now stand at their v3.4.0 values on the anchor's terms: 03 Transfer & Retention Design (5), 04 Multimedia Principle Compliance (4), 05 Robust (4), and 09 Theory-Practice Grounding (5). The fifth- and sixth-pass work supplies the evidence each anchor asks for. They are not movers against v3.4.0, but they are four of the seven v3.5.0 gains in the arithmetic above.
 
 ### Lowered in an earlier pass, restored after fixes
 
@@ -131,7 +133,7 @@ GUIDE is read here as an assessment instrument: its dimensions and anchors are t
 | Objective Congruence | 5 | 5 | 0 | Held, and now earned. Every surface states ten archetypes and 60 dimensions. The docx Reader Objective that nothing in the document served now reads "Find the judge prompts and Python runners for each archetype in the GUIDE repository". The "Done when" lists give each mode a checkable criterion. |
 | Item Construction Quality | 4 | 4 | 0 | Sharper again: 04's Extraneous Load anchors now step 5-4-3-2-1 principles without overlap, and Generative Processing separates "engagement cues in most segments" from "only occasional". Held at 4 because other mid-range anchors still lean on "mostly" and "generally" (04 Intrinsic Load, 04 Interactivity, 03 Scaffolding, 01 Personalization). |
 | Validity Evidence | 5 | 5 | 0 | Holds. The index's ADDIE table and 60-dimension list are a complete blueprint, a test counts the 60, and the docx Coverage Matrix now has a column for archetype 10. |
-| Reliability Considerations | 4 | 4 | 0 | Held, after falling to 3 in the first two passes. The cause is closed: the docx's archetype sections are generated from the handoffs (`--check` passes), so the print and live rubrics no longer score a single item or a keyless quiz differently, and the "score the mapping" note is in the judge prompt (line 49 of the 02 judge). `run_edge_cases.py` found and fixed two cases whose stated overall did not match their own scores. The practice page doubles as scorer calibration, and its first exercise uses the same artifact and expected scores as an edge case. Not a 5: no case has been scored by a live judge, there is no inter-rater study, and the hand-written Calibration Example still models a plain mean for 01. |
+| Reliability Considerations | 4 | 4 | 0 | Held, after falling to 3 in the first two passes. The cause is closed: the docx's archetype sections are generated from the handoffs (`--check` passes), so the print and live rubrics no longer score a single item or a keyless quiz differently, and the "score the mapping" note is in the judge prompt (line 49 of the 02 judge). `run_edge_cases.py` found and fixed two cases whose stated overall did not match their own scores. The practice page doubles as scorer calibration, and its first exercise uses the same artifact and expected scores as an edge case. There is now agreement data: a live judge scored all 68 cases, 62 within tolerance of the expected overall, and on the 58 cases with dimension-level expectations it matched 59% of dimension scores exactly and 93% within one point. Held at 4 ("good rubric clarity") rather than 5 ("clear scoring rules") because that is one run by one model against one author's expectations, not an inter-rater study; six cases are open, and the two largest drifts (-1.8 and -1.2) are the two "good" cases of this archetype, the one edited this release; and the hand-written Calibration Example still models a plain mean for 01. |
 | Inclusivity & Fairness | 5 | 5 | 0 | Holds. The sample rule is a fairness gain: a short sample is "capped, not failed", a pasted sample that omits its key is not flagged, and a single-objective check is not held to a whole-unit item count. |
 
 **Archetype 02 Mean: 4.7 -> 4.7 (0)**
@@ -161,7 +163,7 @@ GUIDE is read here as an assessment instrument: its dimensions and anchors are t
 | Extraneous Load Reduction | 5 | 5 | 0 | Held, after falling to 4 in the third pass. The skill side is leaner than ever (skill edition, typed-only commands, identical mirror). The print edition's repeats are gone: handoff 01 has one reference list, the restated rubric tables in 08 and 09 and the author and version lines are dropped from print, and each alignment note points to "the Discipline Alignment Crosswalk section" instead of a file name. The docx is long, but what is in it is the rubric. |
 | Intrinsic Load Management | 5 | 5 | 0 | Holds. A skill run reads the router, one mode file, and one handoff at a time; the docx tells readers it "is a reference document, not sequential reading" and is segmented by archetype. |
 | Generative Processing Support | 4 | 4 | 0 | Conversational "you" in both READMEs and the practice page ("A score you only think about is easy to revise after the fact"); clinical anchors in the handoffs. Holds. |
-| Interactivity & Learner Control | 4 | 4 | 0 | Partly verified. `STATUS.md` records live runs of all three commands on 2026-11-12, and the practice page adds knowledge checks with corrective feedback behind a reveal. The parts that would earn a 5 as meaningful branching - the needs-analysis stop, the fail-fast gate, the reviser loop - are listed as `open`: they "have not run live". Holds at 4. |
+| Interactivity & Learner Control | 4 | 4 | 0 | The branching now has live evidence: `STATUS.md` records the needs-analysis stop halting a request "before Design", the fail-fast gate blocking a lecture proposed for a hands-on objective, and a revision round lifting a capped 3.0 to 4.89. Held at 4 ("mostly meaningful interactions; good control; well-aligned") rather than 5 ("meaningful interactions... full learner control") for three reasons: the two defects those runs exposed (a fifth verdict value; agents unable to read `PIPELINE.md`) were fixed and not re-run; no complete build has finished in one run (one attempt timed out at 55 minutes, which is not full control of pacing); and the Develop and Implement agents have run live only in review mode. |
 | Visual Design & Information Architecture | 4 | 4 | 0 | The diagram's source line now passes contrast, tables mark header rows, and the TOC is a real Word field. Held at 4: the TOC lists two heading levels, so the 60 dimensions are no longer in it; the ten generated sections follow three different layouts ("Scoring Guide", "Rubric: 6 Dimensions", "Evaluation Dimensions"); and several section titles differ from the Quick-Reference table. |
 
 **Archetype 04 Mean: 4.3 -> 4.3 (0)**
@@ -175,11 +177,11 @@ GUIDE is read here as an assessment instrument: its dimensions and anchors are t
 | Perceivable | 4 | 4 | 0 | Held, after falling to 3 in early passes. All four docx figures have a title and a description that restates the content, the README images have full alt text, and every text color in the four SVGs is at least 7:1 on its background. Minor gaps remain, as the anchor for 4 allows: the pipeline flow in `PIPELINE.md` is box-drawing characters with no text alternative. |
 | Operable | 4 | 4 | 0 | Clean heading structure in Markdown and the docx; descriptive link text; a field-based TOC with page references. The TOC stops at level 2, so dimension headings must be reached through the navigation pane. Holds. |
 | Understandable | 4 | 4 | 0 | Document language is set (en-US); navigation is consistent within each layer; 02 explains its two test types in plain terms. First-use jargon remains in dimension text. Holds. |
-| Robust | 4 | 3 | **-1** | Structure is now sound: all 58 docx tables mark a header row, the figure has alt text, and Markdown and JSON pass their checks. What the anchor for 4 also asks is "tested with multiple AT", and `STATUS.md` says of the docx that "no one has listened to the file with NVDA, JAWS, or VoiceOver". Structure at 4, testing at 1; 3 overall. Handoff 05's own new flag, "Untested Compliance Claim", is the reason not to round up. |
+| Robust | 4 | 4 | 0 | Held, and now earned; earlier passes scored this 3 because no assistive-technology test existed. Structure is sound (all 59 tables mark a header row, four figures have alt text, Markdown and JSON pass their checks), and `STATUS.md` now records that "the author read `GUIDE_Rubric_Document.docx` with NVDA on 2026-11-12 and found no problems". Read column by column, validity, name and role, and screen-reader support sit at the anchor for 4 ("fully functional"), and testing sits at the anchor for 3 ("tested once"), not 4 ("tested with multiple AT"). Four of five columns at 4 makes a 4 with one stated gap. The evidence is thin in a specific way: one reader, one tester who is also the author, and no keyboard-only or second screen-reader pass. |
 | UDL Integration | 4 | 4 | 0 | Several formats (Markdown, docx, a PDF install guide, the skill, a Python API) and several means of action (plain request, typed command, code). No audio or video. Holds. |
-| Remediation Feasibility | 5 | 5 | 0 | Holds. What is left is a screen-reader pass and whatever it finds. |
+| Remediation Feasibility | 5 | 5 | 0 | Holds. What is left is a second assistive technology and whatever it finds. |
 
-**Archetype 05 Mean: 4.2 -> 4.0 (-0.2)**
+**Archetype 05 Mean: 4.2 -> 4.2 (0)**
 
 ---
 
@@ -192,9 +194,9 @@ GUIDE is read here as an assessment instrument: its dimensions and anchors are t
 | Attention Management | 4 | 4 | 0 | Short router and mode files, collapsible README sections, and reader-controlled pacing. No designed pause for reflection. Holds. |
 | Emotional Engagement for Encoding | 4 | 3 | **-1** | There are real stakes statements ("the most common and most expensive instructional-design mistake"; "not a rubber stamp"), every low score comes with a fix, and the practice page lowers the stakes of being wrong ("A difference of one point on a dimension is normal"). Scoring your own artifact adds some personal relevance. But relevance is still mostly a "Use it for" column, nothing was added to show a reader why a given archetype matters to them, and the tone is flat across the handoffs and docx. "Relevance present but not deeply explored; emotional impact is inconsistent" is the anchor for 3. |
 | Synaptic Strengthening Factors | 4 | 4 | 0 | Four factors are now strong: repetition is spaced and varied (the review schedule), application is authentic (the user's own artifact), encoding runs through several paths, and imagination has four diagrams and the "if everyone dropped together in July" reasoning in exercise 3. Desirable difficulty is deliberate ("Answer from memory first, then check"). The weak factor has changed from repetition to emotion, which is moderate (see above). "All five present but one may be weaker." Holds. |
-| Theory-Practice Grounding | 5 | 4 | **-1** | Traceability is now good: the named sources are cited where they are credited, and the example citation in handoff 09 is a real entry (Dunlosky et al., 2013). The anchor for 5 also requires "validated". `run_edge_cases.py` proves the 68 cases are well-formed, not that a judge reproduces them; `STATUS.md` lists "Edge cases scored by a live judge" as `open`. |
+| Theory-Practice Grounding | 5 | 5 | 0 | Held, and now earned; earlier passes scored this 4. The anchor for 5 asks for four things: "defensible theory + consistent with research + generalizable + validated". The first three were already in place once the sources were traced. The fourth now has evidence: a live judge scored all 68 edge cases, 62 fell within tolerance, the mean absolute drift was 0.43, and no bad case outscored a good one (re-computed from `self-evaluations/edge_case_run_v3.5.0.json`). On the recall-quiz-for-recall-objectives case the judge gave Bloom's Alignment a 4, where the old anchors would have given 1 or 2, so the release's main rubric change behaves as intended. This is a 5 with a plain caveat: it is one run, by one model, against expected scores the author wrote; the judge runs about 0.3 low; and six cases are open, in one of which "the judge found real flaws the expected scores overlook". That is what a first formative evaluation looks like, and the anchor asks for no more than one, but a second model or a human rater would make it firm. |
 
-**Archetype 09 Mean: 4.2 -> 4.2 (0)**
+**Archetype 09 Mean: 4.2 -> 4.3 (+0.1)**
 
 ---
 
@@ -205,9 +207,9 @@ Objectives are what GUIDE says it does (README, the skill description, the docx 
 | Dimension | v3.4.0 | v3.5.0 | Delta | Rationale |
 |-----------|--------|--------|-------|-----------|
 | Objective <-> Strategy Coherence | 4 | 4 | 0 | The commands now deliver something the README already promised: the changelog notes that before, "the pipeline started only from phrasing, and its router agent had no way to spawn the other agents." The older unevenness stands (04, 05, 06, 08 carry the three-alignments framing without being built around it). Holds. |
-| Strategy <-> Assessment Coherence | 4 | 4 | 0 | Firmer than in the earlier passes. `edge_cases_02.json` now has a single-item sample, a keyless single-objective quiz, a recall quiz for recall objectives, and a norm-referenced short test - one case per new rule. Still a 4: depth varies across archetypes (10 cases for 01 and 02, 6 for the rest), and none has been scored live. |
-| Objective <-> Assessment Coherence | 4 | 4 | 0 | Handoff, judge, agent, and print edition now agree on 02, and three checks guard it (`test_judge_schemas.py`, the agent-key check in `build_skill.py`, `build_rubric_docx.py --check`). The docx front matter and handoffs 08 and 09 now use the same four bands as everything else. Held at 4: the docx's one worked example still computes 01's overall against the rubric's own rule, and no edge case has been scored by a judge. |
-| Coverage Completeness | 5 | 4 | **-1** | Most of what the first pass found is closed: the new 02 rules have cases, the commands have run, the matrix has its tenth column. One orphan is left, and it is not small: the pipeline's build path, fail-fast gate, needs-analysis stop, and reviser loop are specified in `guide-pipeline` and have no live run. "One minor orphan" is the anchor for 4. |
+| Strategy <-> Assessment Coherence | 4 | 4 | 0 | Firmer again. `edge_cases_02.json` has one case per new rule, and all 68 cases have now been scored by a judge. Held at 4 ("mostly mirrored; one format change or one cognitive-demand step beyond what was practiced") rather than 5 ("no surprises"): six cases surprised the judge by 0.8 to 1.8 points and await a decision to "correct the expected scores or sharpen the anchor", and depth is uneven (10 cases each for 01 and 02, 6 for the rest). |
+| Objective <-> Assessment Coherence | 4 | 4 | 0 | Handoff, judge, agent, and print edition now agree on 02, and three checks guard it (`test_judge_schemas.py`, the agent-key check in `build_skill.py`, `build_rubric_docx.py --check`). The docx front matter and handoffs 08 and 09 now use the same four bands as everything else. Held at 4 ("one verb is slightly off OR one Bloom level near-miss" is the size of gap allowed): the docx's one worked example still computes 01's overall against the rubric's own rule, and the live pipeline run showed the synthesizer returning a verdict value outside the four the rubric defines, since fixed but not re-run. |
+| Coverage Completeness | 5 | 4 | **-1** | Nearly closed. The new 02 rules have cases, all 68 cases have been scored, the matrix has its tenth column, and the stop, the fail-fast gate, and the revision loop have each run live. The anchor for 5 is "no orphan objectives, no orphan content"; the anchor for 4 is "one minor orphan". One remains and it is now truly minor: the two fixes made after the live runs (the verdict values; the rules restated in the agent prompts) have no run behind them, and the Develop and Implement agents have been exercised live only in review mode, so their design mode is specified and unconfirmed. One complete build after the fixes would close it. |
 | Vertical Alignment | 4 | 4 | 0 | The layering is clear: router, then mode file, then rubric; `DESIGN.md` ends by calling `EVALUATE.md`; `guide-review` hands off to `guide-design`, which skips the interview when objectives are already set. Most archetype-to-archetype pairings are still left to the index table. Holds. |
 | Discipline Alignment | 4 | 4 | 0 | Unchanged. The crosswalk and the per-handoff Professional alignment blocks are in the skill edition and now in every print section. Still self-published and unendorsed. Holds. |
 
@@ -225,18 +227,18 @@ Cap rule: Objective <-> Assessment Coherence is 4, so the cap at 3.0 (which appl
 | 02 - Assessment Design | 4.7 | 4.7 | **4.7** | 0 | Low |
 | 03 - Instructional Sequencing | 4.3 | 4.3 | **4.5** | +0.2 | Low |
 | 04 - Multimedia Design | 4.2 | 4.3 | **4.3** | 0 | Low |
-| 05 - Accessibility | 4.2 | 4.2 | **4.0** | -0.2 | Low (screen-reader pass) |
-| 09 - Cognitive Neuroscience | 4.0 | 4.2 | **4.2** | 0 | Low (no live validation) |
+| 05 - Accessibility | 4.2 | 4.2 | **4.2** | 0 | Low (second assistive technology) |
+| 09 - Cognitive Neuroscience | 4.0 | 4.2 | **4.3** | +0.1 | Low |
 | 10 - Curriculum Alignment | 4.2 | 4.2 | **4.0** | -0.2 | Low |
 
-**Composite Mean (applicable 6: 01, 02, 03, 04, 05, 09):** 4.3 (v3.3.0) -> 4.4 (v3.4.0) -> **4.3** (v3.5.0)
+**Composite Mean (applicable 6: 01, 02, 03, 04, 05, 09):** 4.3 (v3.3.0) -> 4.4 (v3.4.0) -> **4.4** (v3.5.0)
 **Composite Mean (all 7 applicable, including 10):** 4.3 -> 4.3 -> **4.3**
 
-How the composites are computed: each archetype's overall is the plain mean of its six dimensions, and the composite is the mean of those archetype means. Because every archetype has six dimensions, that equals the mean of all dimension scores. For v3.5.0 that is 156/36 = 4.33 for the six archetypes and 180/42 = 4.29 with archetype 10. Averaging the one-decimal archetype means gives the same two figures. The same arithmetic reproduces the earlier rows (v3.4.0: 157/36 = 4.36 and 182/42 = 4.33; v3.3.0: 155/36 = 4.31 and 180/42 = 4.29).
+How the composites are computed: each archetype's overall is the plain mean of its six dimensions, and the composite is the mean of those archetype means. Because every archetype has six dimensions, that equals the mean of all dimension scores. For v3.5.0 that is 158/36 = 4.39 for the six archetypes and 182/42 = 4.33 with archetype 10. Averaging the one-decimal archetype means instead gives 4.38 and 4.33; the dimension-level figures are the ones reported. The same arithmetic reproduces the earlier rows (v3.4.0: 157/36 = 4.36 and 182/42 = 4.33; v3.3.0: 155/36 = 4.31 and 180/42 = 4.29).
 
-By GUIDE's own threshold bands (read from the lower bound, as the index now says), 4.33 is "light revision; ship with documented gaps". This file is that documentation.
+By GUIDE's own threshold bands (read from the lower bound, as the index now says), 4.39 is "light revision; ship with documented gaps". This file is that documentation.
 
-The three columns are not the same artifact. v3.3.0 scored the living layer, v3.4.0 the docx, and v3.5.0 both with the weaker surface deciding. As set out above, the six archetypes lost six points to corrections of earlier readings and gained five from v3.5.0 work; the one v3.5.0-caused loss is in archetype 10.
+The three columns are not the same artifact. v3.3.0 scored the living layer, v3.4.0 the docx, and v3.5.0 both with the weaker surface deciding. As set out above, the six archetypes lost six points to corrections of earlier readings and gained seven from v3.5.0 work; the one v3.5.0-caused loss is in archetype 10.
 
 ---
 
@@ -244,8 +246,8 @@ The three columns are not the same artifact. v3.3.0 scored the living layer, v3.
 
 In order of how much they move the score and how little they cost.
 
-1. **Finish validating.** Run `run_edge_cases.py --live` once and record the drift. Run `/guide-pipeline` on a build request far enough to exercise the needs-analysis stop, the fail-fast gate, and one reviser round. These lift 10 Coverage Completeness and 09 Theory-Practice Grounding to 5 and open the way for 04 Interactivity.
-2. **One screen-reader pass on the docx**, recorded in `STATUS.md`. This returns 05 Robust to 4.
+1. **Close the validation loop.** Decide each of the six drifting edge cases (correct the expected scores or sharpen the anchor), starting with the two "good" cases in `edge_cases_02.json`. Re-run with a second model. Run one complete `/guide-pipeline` build after the two post-run fixes, so the verdict values and the Develop and Implement agents' design mode are confirmed. This returns 10 Coverage Completeness to 5, opens 04 Interactivity, and makes the 5 on 09 Theory-Practice Grounding firm.
+2. **A second assistive technology on the docx** (and a keyboard-only pass), by someone other than the author if possible. This makes the 4 on 05 Robust firm and is the route to 5.
 3. **Fix the Calibration Example's overall.** Give archetype 01's overall by its own weighted rule, or say the 3.7 is a plain mean shown for simplicity. Generate the back-matter References list, or add the newer entries to it. This is the path to 5 on 01 Accuracy & Grounding.
 4. **Give each archetype a reason to care.** A two- or three-sentence scenario per archetype (what goes wrong for a real learner when this is skipped) would address 09 Emotional Engagement, the only dimension where nothing was added this release.
 5. **Widen the practice page.** It practices 10 of the 60 dimensions in 3 of the 10 archetypes, and two of its three exercises score two dimensions each. An exercise for each remaining archetype is the path to 5 on 03 Practice & Feedback. Its first exercise reuses an edge case, which matters if the edge cases are ever used as held-out tests. (The thin explanations and the two diagram wording slips found in the fifth pass were fixed before release.)
@@ -258,8 +260,8 @@ In order of how much they move the score and how little they cost.
 
 v3.5.0 restructures the skill around a short router and two mode procedures with checkable endings, adds three typed commands, corrects a real flaw in the Assessment Design rubric, and makes the printable rubric a generated edition of the canonical handoffs instead of a hand-kept copy.
 
-Late in the release it also added the three things every earlier self-evaluation had asked for: practice with feedback, spaced review, and more than one figure.
+Late in the release it also added the three things every earlier self-evaluation had asked for - practice with feedback, spaced review, and more than one figure - and ran the validation none of them had: a screen-reader pass, a live scoring of every edge case, and live runs of the pipeline's gates.
 
-Scored against the rubrics as they are written today, with both shipped surfaces in scope, the framework comes out at **4.3** on the six applicable archetypes and **4.3** with archetype 10 (4.33 and 4.29), against 4.4 and 4.3 for v3.4.0. Eight dimensions differ from v3.4.0. Three are up, all from the practice page and its review schedule. One is down because of this release: part of the pipeline shipped without a live run. Four are down as corrections to scores that had been carried forward on readings more generous than the anchors allow; none of those was caused by this release.
+Scored against the rubrics as they are written today, with both shipped surfaces in scope, the framework comes out at **4.4** on the six applicable archetypes and **4.3** with archetype 10 (4.39 and 4.33), the same published figures as v3.4.0. Six dimensions differ from v3.4.0. Three are up, all from the practice page and its review schedule. One is down because of this release: a small part of the pipeline is specified and not yet confirmed live. Two are down as corrections that nothing in this release addressed (the docx's calibration example, and emotional engagement).
 
-The headline number is nearly flat, and that hides the real movement. Scored as strictly as this, v3.4.0 would have read about 4.2; v3.5.0 reads 4.3 because it earned five points the stricter reading had taken away or never given. Across five passes, the evaluation found defects, most were fixed before release, and the scores followed the evidence in both directions. What remains is short and specific: one live run of the edge cases and the pipeline's build path, one screen-reader pass, one worked example in the docx, a reason-to-care for each archetype, and practice for more than three of them.
+The matching headline numbers hide the real movement. Scored as strictly as this, v3.4.0 would have read about 4.2; v3.5.0 reads 4.4 because it earned seven points the stricter reading had taken away or never given. Some of that evidence is thin and is labelled so above: one screen reader, one live run by one model, six edge cases still to settle. Across six passes, the evaluation found defects, most were fixed before release, and the scores followed the evidence in both directions. What remains is short and specific: settle the six drifting cases and re-run with a second model, one complete pipeline build, a second assistive technology, one worked example in the docx, a reason-to-care for each archetype, and practice for more than three of them.
