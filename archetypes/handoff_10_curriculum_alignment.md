@@ -3,6 +3,8 @@
 
 **Purpose**: Design and evaluate the internal alignment of an instructional artifact — whether its objectives, instructional strategies (content + activities + chunking + sequencing), and learner assessments cohere with each other and with broader scopes (course-level vertical progression and discipline-level competencies). The dimensions below work in both directions: build an aligned artifact against them, or score an existing set for coherence.
 
+**When this is skipped** (an illustrative scenario): A course has well-written objectives, a polished set of lessons, and a carefully built exam, each made by a different person. The objectives say analyze, the lessons explain, and the exam asks for definitions. Every part passes its own review, and learners finish certified in something the course never taught. If more than one person, or more than one week, went into your course, this archetype is the check that the parts still agree.
+
 **Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
 - Trace every objective to a strategy that teaches it and an assessment that measures it - no orphans (Tyler; Dick & Carey).
 - Match cognitive demand across stated, taught, and tested behaviors (Bloom; Webb DoK).
@@ -13,7 +15,7 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 **Professional alignment** (the professional standards this archetype *aims* to align with - an independent, aspirational mapping by the author, not reviewed or endorsed by these bodies; see [`discipline_alignment_crosswalk.md`](discipline_alignment_crosswalk.md) for the full mapping, citations, and licensing notes):
 - **IBSTPI ID Competencies (2012)** - Design & Development: C10 (fit-for-project design process), C11 (organizing programs across design/develop/evaluate).
 - **ATD Capability Model (2020)** - Instructional Design; Learning Sciences.
-- **ISPI/HPT Ten Standards** - S1 Focus on Results; S2 Take a Systemic View. The crosswalk itself is this archetype's *Discipline Alignment* reference model.
+- **ISPI/HPT Ten Standards** - S1 Focus on Results; S2 Take a Systemic View. The crosswalk is GUIDE's own discipline-level mapping, the evidence for GUIDE's *Discipline Alignment* score when it evaluates itself. When scoring another course, this dimension looks for that course's own competency framework.
 
 This archetype operationalizes the **Efficient** quality outcome (Merrill, 2002) - the alignment of objectives ↔ strategies ↔ assessments mapped to that outcome by Hirumi (2025). It is the synthesis archetype - it does *not* evaluate the quality of any individual component (other archetypes do that) but rather whether the components, taken together, say the same thing.
 
@@ -89,6 +91,8 @@ A course can score 5/5 on 02, 03, and 07 individually and still fail archetype 1
 | **2** | Significant mismatch; assessment requires skills that were not practiced. |
 | **1** | Assessment effectively tests different content than what was taught. |
 
+**Score each pair on its own.** When instruction and assessment agree with each other but both sit below the objective (the course teaches recall and tests recall, while the objective says analyze), this dimension stays high: the test measures what was taught. The miss is scored on Objective ↔ Strategy and Objective ↔ Assessment, where it belongs. Lowering all three for one fault hides which link is broken.
+
 ### Objective ↔ Assessment Coherence (1-5)
 
 | Score | Definition |
@@ -118,7 +122,7 @@ A course can score 5/5 on 02, 03, and 07 individually and still fail archetype 1
 
 | Score | Definition |
 |-------|-----------|
-| **5** | Across lessons/modules/courses, content builds coherently. Prerequisites are explicit and respected. Spiral or elaboration logic (Bruner; Reigeluth) is evident. Later content extends rather than merely repeats earlier content. |
+| **5** | Across lessons/modules/courses, content builds coherently. Prerequisites are explicit and respected. Spiral or elaboration logic (Bruner; Reigeluth) is evident. Later content extends rather than merely repeats earlier content. For 4C/ID-style designs (van Merriënboer & Kirschner, 2018), the whole-task progression is coherent. |
 | **4** | Strong vertical logic; one prerequisite gap or one redundancy. |
 | **3** | Moderate; some modules build on prior, others stand alone in ways that don't make pedagogical sense. |
 | **2** | Weak vertical logic; modules feel like independent units rather than a connected progression. |
@@ -172,6 +176,7 @@ Score: 1=Instruction and objectives essentially disconnected; 5=Every objective 
 - Assessment tasks reflect the practice activities in format and cognitive demand
 - No surprises for the learner — same Bloom level taught is tested
 - Skills tested were actually practiced, not just mentioned
+- Score this pair on its own: when instruction and assessment agree with each other but both miss the objective, score this high and put the miss on dimensions 1 and 3
 Score: 1=Assessment tests different content than was taught; 5=Assessment mirrors practice in format and cognitive demand
 
 3. **Objective ↔ Assessment Coherence** (1-5)
@@ -284,7 +289,7 @@ For artifacts scoring below 4 on any dimension, draw from these categories:
 
 ## Output Format
 
-The judge returns a JSON object matching the schema in the Human Prompt Template above. The framework's `GUIDEResult` class parses this and exposes:
+The judge returns a JSON object matching the GUIDE output JSON schema (scores, rationale, severity_flags, improvement_suggestions). The framework's `GUIDEResult` class parses this and exposes:
 - `overall_score` — mean of the six dimensions (unless a catastrophic severity flag warrants weighting; see Notes)
 - `scores` — dict of dimension → integer 1–5
 - `rationale` — dict of dimension → 2–3 sentence justification

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 640" width="920" height="640" role="img" aria-label="Archetype 10 checks the three links between objectives, instructional strategies, and assessments, and caps the overall score when objectives and assessments disagree">
+  <title>Archetype 10, the alignment gate: three links and the cap rule</title>
+  <rect x="1" y="1" width="918" height="638" rx="18" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <g font-family="'Segoe UI', system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif">
+    <!-- Title -->
+    <text x="460" y="52" text-anchor="middle" font-size="30" font-weight="700" fill="#0f172a">Archetype 10: The Alignment Gate</text>
+    <text x="460" y="82" text-anchor="middle" font-size="16" fill="#475569">It scores the links between the parts, not the parts themselves.</text>
+
+    <!-- Links -->
+    <line x1="280" y1="170" x2="118" y2="430" stroke="#64748b" stroke-width="3"/>
+    <line x1="118" y1="450" x2="442" y2="450" stroke="#64748b" stroke-width="3"/>
+    <line x1="280" y1="170" x2="442" y2="430" stroke="#b91c1c" stroke-width="5"/>
+
+    <!-- Nodes -->
+    <g stroke="#334155" stroke-width="2" fill="#ffffff">
+      <rect x="200" y="128" width="160" height="46" rx="10"/>
+      <rect x="18" y="428" width="200" height="46" rx="10"/>
+      <rect x="362" y="428" width="160" height="46" rx="10"/>
+    </g>
+    <g font-size="16" font-weight="700" fill="#0f172a" text-anchor="middle">
+      <text x="280" y="157">Objectives</text>
+      <text x="118" y="457">Instructional strategies</text>
+      <text x="442" y="457">Assessments</text>
+    </g>
+
+    <!-- Link labels -->
+    <g font-size="13.5" fill="#334155">
+      <text x="176" y="290" text-anchor="end">Objective and strategy</text>
+      <text x="176" y="308" text-anchor="end">coherence</text>
+      <text x="280" y="500" text-anchor="middle">Strategy and assessment coherence</text>
+    </g>
+    <g font-size="13.5" font-weight="700" fill="#b91c1c">
+      <text x="384" y="290">Objective and assessment</text>
+      <text x="384" y="308">coherence: the cap link</text>
+    </g>
+
+    <!-- Cap rule callout -->
+    <rect x="600" y="128" width="268" height="230" rx="10" fill="#fef2f2" stroke="#b91c1c" stroke-width="2"/>
+    <text x="620" y="160" font-size="17" font-weight="700" fill="#7f1d1d">The cap rule</text>
+    <g font-size="13.5" fill="#0f172a">
+      <text x="620" y="188">When objective and assessment</text>
+      <text x="620" y="206">coherence scores 1 or 2, the</text>
+      <text x="620" y="224">overall is capped at 3.0,</text>
+      <text x="620" y="242">however strong the other</text>
+      <text x="620" y="260">scores are.</text>
+    </g>
+    <g font-size="13" fill="#334155">
+      <text x="620" y="292">Why: a test that measures a</text>
+      <text x="620" y="310">different behavior than the</text>
+      <text x="620" y="328">objective states certifies the</text>
+      <text x="620" y="346">wrong thing.</text>
+    </g>
+
+    <!-- Example -->
+    <rect x="600" y="376" width="268" height="124" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="620" y="404" font-size="14" font-weight="700" fill="#0f172a">Example of a capped course</text>
+    <g font-size="13" fill="#334155">
+      <text x="620" y="428">Objective: apply the model on</text>
+      <text x="620" y="446">a live complaint call.</text>
+      <text x="620" y="470">Quiz: what does the A in LEAP stand for?</text>
+      <text x="620" y="488">Apply was asked; recall was tested.</text>
+    </g>
+
+    <!-- Other dimensions -->
+    <text x="52" y="556" font-size="14.5" fill="#334155"><tspan font-weight="700" fill="#0f172a">Also scored:</tspan> coverage completeness, vertical alignment across modules, and discipline alignment.</text>
+    <text x="52" y="580" font-size="14.5" fill="#334155">A course can score 5 on needs analysis, sequencing, and assessment separately and still fail here.</text>
+    <text x="460" y="622" text-anchor="middle" font-size="12" fill="#475569">Alignment of objectives, strategies, and assessments: Tyler (1949); Dick, Carey and Carey (2015); Wiggins and McTighe (2005).</text>
+  </g>
+</svg>

@@ -2,6 +2,8 @@
 
 **Purpose**: Design and evaluate formative evaluation plans, expert review protocols, usability test designs, and pilot study designs for methodological rigor and appropriateness. The dimensions below work in both directions: draft a plan against them, or score an existing one.
 
+**When this is skipped** (an illustrative scenario): A course goes to 4,000 employees without a single learner having tried it first. On launch day a broken quiz blocks completion, the instructions on screen three confuse nearly everyone, and the help desk takes 300 tickets. Three people and one afternoon would have caught all of it. If you are about to release something you have only reviewed yourself, this archetype is for you.
+
 **Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
 - Cover the formative phases - one-to-one, small-group, and field/expert review (Bordonaro; Dick & Carey).
 - Match evaluators to each phase (SME, target learners, usability testers).
@@ -125,7 +127,7 @@ Revision Decision: [What to do? e.g., "Rewrite labels; test with one learner bef
 
 ### 5. Feasibility & Practicality (1-5)
 
-Can the evaluation be executed realistically with available resources?
+Can the evaluation be executed realistically with available resources? Weigh cost against benefit: the evaluation should be commensurate with the project's scope.
 
 | Score | Budget | Timeline | Recruitment | Facilities/Tech | Resource Plan |
 |-------|--------|----------|------------|----------------|---------------|
@@ -185,82 +187,11 @@ Are appropriate usability methods integrated into the evaluation design?
 
 ---
 
-## System Prompt (Judge Rubric)
+## Output JSON
 
-```
-You are an expert in instructional design evaluation methodology and formative evaluation design.
-Your role is to assess evaluation plans, protocols, and designs for quality and appropriateness.
+Return this shape when the user wants machine-readable output (scores are integers 1-5; `overall` follows the archetype's scoring rule):
 
-You will score across 6 dimensions, each on a 1-5 scale:
-
-1. **Phase Coverage** (1-5)
-Bordonaro's four-phase model: expert review → one-to-one evaluation → small group → field trial
-- Not all phases required for every project, but omissions should be justified
-- Expert review: Subject matter experts, instructional designers, media specialists evaluate
-- One-to-one: Individual learners from target population work through content with observation/interview
-- Small group: 8-12 learners work through, facilitated discussion, identify issues
-- Field trial: Implementation in actual learning environment with larger sample
-Score: 1=Only one phase, no justification; 5=Appropriate phases with clear rationale
-
-2. **Evaluator Selection** (1-5)
-- Expert review requires THREE expert types: SME (content), Instruction/Learning expert, Media/Technology expert
-- One-to-one needs mixed ability learners: above-average, average, below-average from target population
-- Small group: Representative sample of target population
-- Field trial: Adequate sample size for statistical power (if applicable)
-Score: 1=Wrong evaluator types or sample; 5=Correct mix, justified selection criteria
-
-3. **Data Collection Alignment** (1-5)
-- Instruments match evaluation goals and research questions
-- Appropriate methods: observation forms, interviews, attitude surveys, achievement tests, think-aloud, heuristic checklists
-- Data collection tools clearly specified and attached
-- Right data being collected for right questions (not collecting "nice to know")
-Score: 1=Vague data collection, misaligned to goals; 5=Specific, well-designed instruments aligned to questions
-
-4. **Revision Decision Framework** (1-5)
-- Clear process for turning findings into revisions: Target → Data Source → Information Gained → Revision Decision
-- Severity ratings applied to prioritize fixes (Nielsen's scale: cosmetic, minor, major, catastrophic)
-- Threshold defined: what magnitude of finding triggers revision?
-- Revision decisions documented and tracked
-Score: 1=No clear decision framework; 5=Explicit severity ratings, prioritization, tracking
-
-5. **Feasibility & Practicality** (1-5)
-- Can the evaluation be executed with available resources (budget, personnel, time)?
-- Timelines realistic given recruitment and data collection needs
-- Participant recruitment plan documented and feasible
-- Technology/facilities available for planned evaluation
-- Cost-benefit analysis: Is the evaluation commensurate with project scope?
-Score: 1=Unrealistic timeline, no resource plan; 5=Fully resourced, detailed timeline, achievable
-
-6. **Usability Engineering Integration** (1-5)
-- Appropriate usability techniques employed: card sorting, think-aloud, heuristic evaluation, scenario testing
-- Nielsen's heuristic evaluation principles applied where appropriate
-- User testing methodology matches learning/usability goals
-- Observation protocols designed to capture usability issues
-Score: 1=No usability methods; 5=Multiple usability techniques well-integrated
-
-Return JSON with overall score (mean of 6 dimensions), individual dimension scores, rationale per dimension, severity_flags (critical issues), and improvement_suggestions (actionable next steps).
-```
-
----
-
-## Human Prompt Template
-
-```
-Evaluate the following formative evaluation plan or protocol.
-
-## INPUT / ARTIFACT
-{input}
-
-## CONTEXT (if available)
-{context}
-
-## OUTPUT / RESPONSE TO EVALUATE
-{output}
-
-## REFERENCE (if available)
-{reference}
-
-Score using the rubric above. Return only the JSON object in this format:
+```json
 {
   "scores": {
     "phase_coverage": <1-5>,
@@ -283,6 +214,20 @@ Score using the rubric above. Return only the JSON object in this format:
   "improvement_suggestions": ["<suggestion 1>", "<suggestion 2>"]
 }
 ```
+
+---
+
+## Severity Flags (Red Flags)
+
+Look for and flag critical issues. Each one means the evaluation cannot support the decisions it is meant to inform:
+
+1. **No Learners Involved**: The plan stops at expert review, yet its findings are treated as evidence that learners can use the instruction
+2. **No Independent Evaluator**: The designers are the only reviewers of their own work
+3. **Data with No Decision Rule**: Data is collected, but nothing says what result triggers a revision, or who decides
+4. **Instruments Do Not Match the Questions**: The surveys, tests, or protocols do not measure what the evaluation says it will find out
+5. **Summative Claims from Formative Data**: Effectiveness is asserted from a handful of tryout learners or from satisfaction ratings alone
+6. **No Participant Protection**: Learner data is collected with no consent, privacy, or data-handling plan
+7. **No Room to Revise**: The evaluation is scheduled so late, or budgeted so thinly, that its findings cannot change the instruction
 
 ---
 
@@ -388,8 +333,7 @@ Use this before scoring:
 | **4.5-5.0** | Excellent | Methodologically rigorous; high confidence in findings; implement as-is |
 | **3.5-4.4** | Good | Solid evaluation design; minor gaps; findings reliable; proceed with caution if major revisions needed |
 | **2.5-3.4** | Fair | Adequate but weak; some methodological gaps; supplement with additional testing |
-| **1.5-2.4** | Poor | Significant methodological flaws; findings questionable; redesign evaluation before proceeding |
-| **<1.5** | Inadequate | Cannot proceed; evaluation must be redesigned; risk of poor implementation decisions |
+| **< 2.5** | Poor to inadequate | Do not proceed. Significant methodological flaws; findings questionable; redesign the evaluation before acting on it |
 
 ---
 
@@ -406,4 +350,4 @@ If these five are met, score ≥3 ("Fair"). Lower scores indicate critical gaps.
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.4.1). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 06 of 10.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.5.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 06 of 10. Skill edition: the judge prompts and Python-harness notes are omitted; the full model-agnostic handoff is `archetypes/handoff_06_formative_evaluation.md` in the GUIDE repository.*

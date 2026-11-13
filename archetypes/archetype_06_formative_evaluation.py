@@ -70,6 +70,8 @@ You will score across 6 dimensions, each on a 1-5 scale:
    - Observation protocols designed to capture usability issues
    Score: 1=No usability methods; 5=Multiple usability techniques well-integrated
 
+Severity flags to raise: no learners involved; no independent evaluator; data collected with no decision rule; instruments that do not match the evaluation questions; summative claims from formative data; no participant protection; no time or budget left to revise.
+
 Return JSON with overall score (mean of 6 dimensions), individual dimension scores, rationale per dimension, severity_flags (critical issues), and improvement_suggestions (actionable next steps).
 """
 

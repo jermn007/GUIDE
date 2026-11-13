@@ -3,6 +3,8 @@
 
 **Purpose**: Design and evaluate lesson plans, course outlines, module structures, and learning paths for pedagogical coherence, event coverage, and instructional effectiveness. The dimensions below work in both directions: sequence against them, or score an existing sequence.
 
+**When this is skipped** (an illustrative scenario): A two-hour workshop opens with forty minutes of slides, moves to a demo, and ends as time runs out, just before the practice. People leave able to describe the skill and unable to do it, and their manager concludes the training did not work. If you have ever cut the practice to fit the agenda, this archetype shows what that trade costs the learner.
+
 **Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
 - Walk Gagné's nine events in order; don't skip gain-attention, recall of prior learning, or assessment/retention.
 - Match the strategy to the learning domain (intellectual skill vs. attitude vs. motor skill).
@@ -45,6 +47,8 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 - **3**: Six to seven events present; one to two missing or vague.
 - **2**: Four to five events present; multiple missing.
 - **1**: Fewer than four events; no clear instructional structure.
+
+Events may be reordered; score on whether each one is present, not on strict Gagné order.
 
 ### Learning Domain Alignment (v3.1.0: ARCS integrated)
 - **5**: Learning domain explicitly identified; all strategies match domain. For the Attitudes domain or any motivationally-sensitive content, ARCS is explicitly designed in.
@@ -100,65 +104,32 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 
 ---
 
-## System Prompt (Judge Rubric)
+## Output JSON
 
-```
-You are an expert instructional design evaluator specializing in course design and instructional sequencing.
+Return this shape when the user wants machine-readable output (scores are integers 1-5; `overall` follows the archetype's scoring rule):
 
-You assess lesson plans, course outlines, module structures, and learning paths using six dimensions:
-
-1. Gagné's Nine Events Coverage (1-5)
-   The nine events: gain attention, state objectives, recall prior learning, present content,
-   provide guidance, elicit performance, provide feedback, assess performance, enhance retention/transfer.
-   Events may be reordered but all should be present.
-
-2. Learning Domain Alignment (1-5) — v3.1.0 includes ARCS as cross-cutting motivational lens.
-   Gagné's 5 domains: verbal information, intellectual skills, cognitive strategies, motor skills, attitudes.
-   For the Attitudes domain (and as a cross-cutting motivational lens for any domain), apply
-   Keller's ARCS: Attention (curiosity hook), Relevance (tie to the learner's personal/professional
-   goals from Archetype 07 L4), Confidence (early scaffolded wins, clear success criteria),
-   Satisfaction (outcomes the learner has named as valuable - mastery, recognition, advancement).
-   If the upstream needs assessment captured learner goals/interests/motivations and this instruction
-   ignores them in favor of generic framing, that is a domain-alignment failure, not just polish.
-
-3. Sequencing Logic (1-5)
-   Dick/Carey prerequisite analysis; hierarchical/procedural/combination sequencing.
-
-4. Scaffolding & Gradual Release (1-5)
-   Initial support → guided practice → independent practice.
-   Merrill's First Principles: worked examples before independent tasks.
-
-5. Practice & Feedback Integration (1-5)
-   Gagné events 6-7. Multiple practice opportunities; timely, specific, varied feedback
-   (confirmatory, evaluative, remedial, descriptive).
-
-6. Transfer & Retention Design (1-5)
-   Gagné event 9; spaced practice; varied contexts; real-world application.
-
-Return JSON with overall score (mean of 6 dimensions), individual dimension scores,
-rationale per dimension, severity_flags, and improvement_suggestions.
-```
-
----
-
-## Human Prompt Template
-
-```
-Evaluate the following instructional artifact.
-
-## INPUT / ARTIFACT
-{input}
-
-## CONTEXT (if available)
-{context}
-
-## OUTPUT / RESPONSE TO EVALUATE
-{output}
-
-## REFERENCE (if available)
-{reference}
-
-Score using the rubric above. Return only the JSON object.
+```json
+{
+  "scores": {
+    "gagne_events_coverage": <1-5>,
+    "learning_domain_alignment": <1-5>,
+    "sequencing_logic": <1-5>,
+    "scaffolding_gradual_release": <1-5>,
+    "practice_feedback_integration": <1-5>,
+    "transfer_retention_design": <1-5>,
+    "overall": <mean of all 6>
+  },
+  "rationale": {
+    "gagne_events_coverage": "<brief explanation>",
+    "learning_domain_alignment": "<brief explanation>",
+    "sequencing_logic": "<brief explanation>",
+    "scaffolding_gradual_release": "<brief explanation>",
+    "practice_feedback_integration": "<brief explanation>",
+    "transfer_retention_design": "<brief explanation>"
+  },
+  "severity_flags": ["<critical issue 1>", "<critical issue 2>"],
+  "improvement_suggestions": ["<suggestion 1>", "<suggestion 2>"]
+}
 ```
 
 ---
@@ -200,4 +171,4 @@ When scoring < 4 on any dimension:
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.4.1). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 03 of 10.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.5.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 03 of 10. Skill edition: the judge prompts and Python-harness notes are omitted; the full model-agnostic handoff is `archetypes/handoff_03_instructional_sequencing.md` in the GUIDE repository.*

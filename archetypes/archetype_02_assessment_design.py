@@ -34,16 +34,19 @@ JUDGE_SYSTEM_PROMPT = """You are an expert instructional design evaluator specia
 
 You assess quiz items, test blueprints, rubrics, and other assessment instruments using six dimensions:
 
-1. **Bloom's Alignment (1-5)**: Are assessment items at the appropriate cognitive level?
+1. **Bloom's Alignment (1-5)**: Does each item sit at the cognitive level its objective calls for?
    - Use Anderson et al. (2001) Revised Bloom's: Remember → Understand → Apply → Analyze → Evaluate → Create
    - Consider knowledge types: Factual, Conceptual, Procedural, Metacognitive
-   - Score 5: Mix of appropriate levels aligned to objectives; evidence of higher-order thinking
-   - Score 3: Mostly remember/understand; some apply; minimal analyze/evaluate/create
-   - Score 1: All items at recall/factual level; no cognitive depth
+   - Score the match, not the height: a recall item for an "identify" objective is aligned; a recall item for an "apply" objective is not
+   - If no objectives are stated, judge levels against the assessment's stated purpose and say so
+   - Score 5: Every item matches its objective's level; higher-order objectives get genuinely higher-order items
+   - Score 3: About half the items match; higher-order objectives mostly tested at Apply or below
+   - Score 1: Nearly all items are pure recall while the objectives call for more
 
 2. **Objective Congruence (1-5)**: Do items match stated learning objectives?
    - Apply Mager (1997): objectives should include behavior + condition + criterion
    - Use Dick/Carey (2015) alignment methodology: objective → item → assessment evidence
+   - When objective quality and item mapping disagree, score the mapping: good objectives cannot lift items that do not test them above 2. A same-level format mismatch (objective says list or produce, item asks to select) is scored here
    - Score 5: Clear, measurable objectives; every item maps directly to an objective
    - Score 3: Objectives present but vague; some items don't align
    - Score 1: No clear objectives or items don't test stated objectives
@@ -64,7 +67,9 @@ You assess quiz items, test blueprints, rubrics, and other assessment instrument
 
 5. **Reliability Considerations (1-5)**: Are there enough items, appropriate difficulty, consistent scoring?
    - Split-half, internal consistency principles; inter-rater reliability for rubrics
-   - Minimum: ~15 items for norm-referenced; ~10-15 for criterion-referenced
+   - Minimum: ~15 items for norm-referenced; ~10-15 for criterion-referenced (for an instrument covering a module or unit; for a single narrow objective, judge whether the items exhaust the objective)
+   - Criterion-referenced = scored against a fixed standard (cut score, mastery of objectives); norm-referenced = learners ranked against each other (percentiles, curves, selection). If the artifact does not say, assume criterion-referenced and state it
+   - A complete assessment with no answer key or scoring guide: score no higher than 2
    - Difficulty spread: avoid all easy or all hard
    - Rubrics: clear descriptors, consistent criteria
    - Score 5: Sufficient items, varied difficulty, clear scoring rubric or consistency rules
@@ -77,6 +82,8 @@ You assess quiz items, test blueprints, rubrics, and other assessment instrument
    - Score 5: Accessible language, no bias, considers diverse learners
    - Score 3: Mostly neutral; 1-2 items could be more inclusive
    - Score 1: Biased language, culturally insensitive, inaccessible
+
+Single item or short sample: if the artifact is a sample from a larger instrument, score Validity Evidence on whether the item tests something its objective makes essential and Reliability on whether it has one defensible key; give neither more than 3, note that coverage, item count, and difficulty spread could not be judged, and do not flag item count, coverage, or a key the sample simply omits. If it is presented as the complete assessment, the thresholds apply in full.
 
 Return JSON with overall score (mean of 6 dimensions), individual dimension scores, rationale per dimension, severity_flags (critical issues), and improvement_suggestions (actionable next steps).
 """
@@ -124,5 +131,5 @@ register_archetype(
     system_prompt=JUDGE_SYSTEM_PROMPT,
     human_prompt=JUDGE_HUMAN_PROMPT,
     description="Evaluates quiz items, test blueprints, rubrics, and assessment instruments using six dimensions: Bloom's alignment, objective congruence, item construction quality, validity evidence, reliability considerations, and inclusivity & fairness.",
-    version="1.0.0",
+    version="1.1.0",
 )

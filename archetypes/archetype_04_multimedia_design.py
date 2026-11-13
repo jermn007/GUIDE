@@ -65,7 +65,7 @@ You assess e-learning modules, videos, interactive media, and slide-based course
    - Embodiment: Genuine engagement cues (presenter, animations)
    - Image Principle: No distracting speaker images; focus on content
    - Score 5: Personalized tone, human voice, engaging (no distracting presenter)
-   - Score 3: Some personalization; mixed voice quality; adequate engagement
+   - Score 3: Some personalization; mixed voice quality; engagement cues only occasional
    - Score 1: Formal tone, poor voice, distracting presenter images
 
 5. **Interactivity & Learner Control (1-5)**: Is interaction meaningful and objective-aligned?

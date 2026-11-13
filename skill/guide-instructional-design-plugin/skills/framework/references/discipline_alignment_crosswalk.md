@@ -2,7 +2,7 @@
 
 **The professional standards GUIDE's ten archetypes aim to align with - an independent, aspirational mapping across instructional design and performance improvement.**
 
-GUIDE is grounded in named *learning theory* (Knowles, Mayer, Gagné, Sweller, and others). This document addresses a different axis: **discipline alignment** - the professional competency and performance standards GUIDE's archetypes *aim* to align with, the ones instructional designers and L&D practitioners are actually measured against. It is the reference model behind Archetype 10's *Discipline Alignment* dimension.
+GUIDE is grounded in named *learning theory* (Knowles, Mayer, Gagné, Sweller, and others). This document addresses a different axis: **discipline alignment** - the professional competency and performance standards GUIDE's archetypes *aim* to align with, the ones instructional designers and L&D practitioners are actually measured against. It is GUIDE's own discipline-level mapping and the evidence behind GUIDE's *Discipline Alignment* score when GUIDE evaluates itself with Archetype 10. When Archetype 10 scores another course, that dimension asks whether the course maps to its own field's competency framework, not to this one.
 
 Three complementary standards are used, each at its natural altitude:
 
@@ -58,7 +58,7 @@ This is the **reference-safe version**. A future revision may reproduce framewor
 A crosswalk is only honest if it names what it *doesn't* reach. GUIDE evaluates the quality of **instructional artifacts** - it does not assess a practitioner's project-management, business, or organizational-consulting competence. The following framework areas therefore sit outside GUIDE's scope by design:
 
 - **IBSTPI Management domain (C20-C22)** - managing the ID function, partnerships, and projects. GUIDE scores the artifact, not the management of the work that produced it.
-- **ATD Domain 3 (Impacting Organizational Capability)** beyond Performance Improvement (which connects to Archetype 07), and most of **Domain 1 (Building Personal Capability)** beyond Communication (Archetype 01) and Cultural Awareness & Inclusion (Archetype 05).
+- **ATD Domain 3 (Impacting Organizational Capability)** beyond the three capabilities the table touches: Performance Improvement and Consulting & Business Partnering (Archetype 07), and Data & Analytics (Archetype 06). Also most of **Domain 1 (Building Personal Capability)** beyond Communication (Archetype 01) and Cultural Awareness & Inclusion (Archetype 05).
 - **HPT non-instructional interventions** - GUIDE's Archetype 07 applies the gatekeeper question ("is training even the right intervention?") and can flag that a non-instructional solution is needed, but GUIDE does not evaluate the design of those non-instructional interventions (incentive systems, process redesign, tooling, staffing).
 
 This boundary is a feature: it keeps GUIDE focused on what it can rigorously measure and avoids overclaiming full professional-competency coverage.
@@ -67,9 +67,9 @@ This boundary is a feature: it keeps GUIDE focused on what it can rigorously mea
 
 ## Where GUIDE maps most tightly
 
-- **Design & Development (IBSTPI)** and **Developing Professional Capability (ATD Domain 2)** are covered densely - archetypes 01, 02, 03, 04, 05, 08, 09, and 10 all land here. This is GUIDE's center of gravity.
+- **Design & Development (IBSTPI)** is covered densely - archetypes 02, 03, 04, 05, 07, 08, 09, and 10 all land there. **Developing Professional Capability (ATD Domain 2)** is touched by all ten archetypes. Together these are GUIDE's center of gravity.
 - **Front-end analysis** is GUIDE's strongest tie to **HPT** - Archetype 07 already embeds the performance-gap and cause-analysis logic (S5, S6, Gilbert's BEM) that defines the performance-improvement discipline.
-- **Evaluation** (archetypes 02, 06) maps cleanly to both IBSTPI's Evaluation & Implementation domain and HPT's S10 (Evaluate Results and Measure Impact).
+- **Evaluation** connects to both frameworks. Archetype 06 maps cleanly to IBSTPI's Evaluation & Implementation domain and HPT's S10 (Evaluate Results and Measure Impact). Archetype 02 sits in IBSTPI Design & Development (C16, designing learning assessment) and connects to S10 only in part, since assessment feeds evaluation.
 
 ---
 
@@ -86,4 +86,4 @@ This boundary is a feature: it keeps GUIDE focused on what it can rigorously mea
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.4.1). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.5.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0.*

@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 640" width="920" height="640" role="img" aria-label="GUIDE's Three Alignments: Effective, Efficient, and Engaging instruction">
+  <title>GUIDE's three alignments: effective, efficient, and engaging</title>
   <rect x="1" y="1" width="918" height="638" rx="18" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
   <g font-family="'Segoe UI', system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif">
     <!-- Title -->
@@ -33,6 +34,6 @@
     <text x="868" y="569" text-anchor="end" font-size="14.5" fill="#334155">interests, and motivations</text>
 
     <!-- Footer -->
-    <text x="460" y="622" text-anchor="middle" font-size="12" fill="#94a3b8">Quality outcomes: Merrill (2002). Alignment framing after Hirumi (2021, 2025). Independent diagram, not the original figure.</text>
+    <text x="460" y="622" text-anchor="middle" font-size="12" fill="#475569">Quality outcomes: Merrill (2002). Alignment framing after Hirumi (2021, 2025). Independent diagram, not the original figure.</text>
   </g>
 </svg>

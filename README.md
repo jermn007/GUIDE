@@ -21,7 +21,7 @@
 
 </div>
 
-**Latest:** [v3.4.1](https://github.com/jermn007/GUIDE/releases/tag/v3.4.1) (September 24, 2026) fixes the Python output format for three archetypes and adds a changelog, a status page, and citation metadata.
+**Latest:** [v3.5.0](https://github.com/jermn007/GUIDE/releases/tag/v3.5.0) (November 13, 2026) adds three plugin commands (`/evaluate`, `/build`, `/pipeline`), slims the rubrics the skill loads by about a fifth, and tightens the assessment rubric for single items, test type, and answer keys.
 
 ## What GUIDE is
 
@@ -70,7 +70,7 @@ The easiest way to use GUIDE is as a Claude Code plugin from this repository's m
 
 ## Quick start
 
-Once the plugin is installed, GUIDE turns on by itself when you talk about courses, lessons, quizzes, training, or learners. You don't need a special command.
+Once the plugin is installed, GUIDE turns on by itself when you talk about courses, lessons, quizzes, training, or learners. You don't need a special command, though the plugin adds three: `/evaluate`, `/build`, and `/pipeline`.
 
 Paste a draft and ask for a review:
 
@@ -92,6 +92,12 @@ GUIDE matches the item to **Assessment Design** (archetype 02) and returns:
 - One to three concrete fixes.
 
 This sample item has a classic flaw for GUIDE to catch: the objective asks learners to *apply* a model, but the item only asks them to *recall* it.
+
+<p align="center">
+  <img src="assets/review-flow.svg" alt="Diagram of a GUIDE review in five steps. 1 Route: match the draft to one to three archetypes. 2 Read: read each rubric's six dimensions and anchors. 3 Score: give each dimension the score its anchor matches and quote the evidence. 4 Flag and fix: raise severity flags and give a fix for every dimension under 4. 5 Verdict: average the six scores. Verdict bands: below 2.5 redesign, 2.5 to 3.4 revise, 3.5 to 4.4 light revision, 4.5 to 5.0 ship." width="760">
+</p>
+
+**Learn to score by doing it.** [Practice: score this, then compare](docs/practice.md) has three five-minute exercises with GUIDE's scores and reasoning to check yours against, and a short review schedule for the week after.
 
 To **design** instead of grade, ask for the thing you want built, for example: *"Write a three-item scenario quiz for that objective, using GUIDE."* GUIDE writes against the same dimensions and checks its own work before handing it over.
 
@@ -146,27 +152,37 @@ Good instruction is effective, efficient, and engaging (Merrill, 2002). Hirumi (
 
 Each archetype maps to a phase of the ADDIE lifecycle. Archetype 10 checks that the pieces fit together, so a course can score well on every other archetype and still fail it.
 
+<p align="center">
+  <img src="assets/addie-map.svg" alt="Diagram of the five ADDIE phases with GUIDE's archetypes under each. Analyze: 07 Needs Analysis. Design: 03 Instructional Sequencing, 08 Story Design, 09 Cognitive Neuroscience. Develop: 04 Multimedia Design, 05 Accessibility. Implement: 01 Adult Learning Communication. Evaluate: 02 Assessment Design, 06 Formative Evaluation. Archetype 10, Curriculum Alignment, spans all five phases." width="760">
+</p>
+
 | # | Archetype | Use it for | ADDIE phase | Grounded in |
 |---|-----------|-----------|-------------|-------------|
-| 07 | Needs Analysis | training requests, performance gaps, objectives | Analyze | Rossett, Kaufman, Gilbert, Keller |
-| 03 | Instructional Sequencing | lesson plans, course outlines, learning paths | Design | Gagne, Reigeluth, van Merrienboer, Keller |
-| 08 | Story Design | scenarios, case studies, branching, role-play | Design | Campbell, Vogler, Harmon, Snyder |
-| 09 | Cognitive Neuroscience | memory, attention, emotion, the 5E model | Design | Kandel, Sousa, Medina, Ausubel, Brown |
-| 04 | Multimedia Design | e-learning, video, slides, interactive media | Develop | Mayer, Paivio, Sweller |
-| 05 | Accessibility | web and LMS content, digital materials | Develop | WCAG, CAST UDL, Section 508 |
+| 07 | Needs Analysis | training requests, performance gaps, objectives | Analyze | Van Tiem, Kaufman, Mager, Keller |
+| 03 | Instructional Sequencing | lesson plans, course outlines, learning paths | Design | Gagne, Merrill, Keller, Vygotsky |
+| 08 | Story Design | scenarios, case studies, branching, role-play | Design | Campbell, Snyder, the Story Circle |
+| 09 | Cognitive Neuroscience | memory, attention, emotion, the 5E model | Design | Bybee (5E), Ausubel, Brown, Posner and Rothbart |
+| 04 | Multimedia Design | e-learning, video, slides, interactive media | Develop | Mayer, Clark, Sweller |
+| 05 | Accessibility | web and LMS content, digital materials | Develop | WCAG 2.1, CAST UDL, Nielsen |
 | 01 | Adult Learning Communication | chatbot and help answers for learning professionals | Implement | Knowles, Mezirow, Sweller, Ausubel |
-| 02 | Assessment Design | quizzes, tests, item banks, rubrics | Evaluate | Bloom, Webb, Messick |
-| 06 | Formative Evaluation | evaluation plans, usability tests, pilots | Evaluate | Scriven, Kirkpatrick, Stufflebeam |
+| 02 | Assessment Design | quizzes, tests, item banks, rubrics | Evaluate | Anderson and Krathwohl, Mager, Kubiszyn and Borich |
+| 06 | Formative Evaluation | evaluation plans, usability tests, pilots | Evaluate | Bordonaro, Dick and Carey, Nielsen |
 | 10 | Curriculum Alignment | do objectives, instruction, and assessment agree? | Across all phases | Tyler, Anderson and Krathwohl, Webb, Mager, Dick and Carey, Wiggins and McTighe, Reigeluth, Hirumi |
+
+Archetype 10 scores the links between the parts, and one link carries a cap:
+
+<p align="center">
+  <img src="assets/alignment-cap.svg" alt="Triangle diagram linking objectives, instructional strategies, and assessments. Archetype 10 scores the three links between them. The cap rule: when objective and assessment coherence scores 1 or 2, the overall is capped at 3.0, however strong the other scores are. Example: an objective that says apply, tested by a recall question." width="760">
+</p>
 
 ### Sources
 
-Every dimension cites its research. Full citations are in each archetype's rubric in [`archetypes/`](archetypes) (the `handoff_*.md` files) and in the References section of [`GUIDE_Rubric_Document.docx`](GUIDE_Rubric_Document.docx), the printable version of the whole framework. [`archetypes/discipline_alignment_crosswalk.md`](archetypes/discipline_alignment_crosswalk.md) maps each archetype to the IBSTPI, ATD, and ISPI professional standards. That mapping is the author's own and is not endorsed by those organizations.
+Every name in the table above is cited in that archetype's rubric. Full citations are in each archetype's rubric in [`archetypes/`](archetypes) (the `handoff_*.md` files) and in the matching archetype section of [`GUIDE_Rubric_Document.docx`](GUIDE_Rubric_Document.docx), the printable version of the whole framework. [`archetypes/discipline_alignment_crosswalk.md`](archetypes/discipline_alignment_crosswalk.md) maps each archetype to the IBSTPI, ATD, and ISPI professional standards. That mapping is the author's own and is not endorsed by those organizations.
 
 <details>
 <summary><strong>The 13-agent ADDIE pipeline</strong></summary>
 
-The plugin includes 13 agents that build instructional content from start to finish: a router, the 10 archetype specialists, the Curriculum Alignment acceptance gate, a synthesizer, and a reviser. Each archetype acts first as a design guardrail and then as an acceptance test. See [`PIPELINE.md`](skill/guide-instructional-design-plugin/PIPELINE.md) for phase order, severity flags, and score thresholds.
+The plugin includes 13 agents that build instructional content from start to finish: a router, the 10 archetype specialists (the Curriculum Alignment specialist doubles as the acceptance gate), a synthesizer, and a reviser. Each archetype acts first as a design guardrail and then as an acceptance test. See [`PIPELINE.md`](skill/guide-instructional-design-plugin/PIPELINE.md) for phase order, severity flags, and score thresholds.
 
 For batch evaluation, [`guide_pipeline.py`](guide_pipeline.py) runs the same pipeline from Python as `ADDIEPipeline`, and [`smoke_test_pipeline.py`](smoke_test_pipeline.py) is its mocked end-to-end test:
 
@@ -189,12 +205,14 @@ GUIDE is scored against its own rubrics at most releases. Six archetypes apply t
 | v3.2.3 | 4.3 / 5 | 4.2 / 5 | [v3.2.3](self-evaluations/GUIDE_Self_Evaluation_v3.2.3.md) |
 | v3.3.0 | 4.3 / 5 | 4.3 / 5 | [v3.3.0](self-evaluations/GUIDE_Self_Evaluation_v3.3.0.md) |
 | v3.4.0 | 4.4 / 5 | 4.3 / 5 | [v3.4.0](self-evaluations/GUIDE_Self_Evaluation_v3.4.0.md) |
+| v3.5.0 | 4.4 / 5 | 4.4 / 5 | [v3.5.0](self-evaluations/GUIDE_Self_Evaluation_v3.5.0.md) |
 
 Highlights:
 
 - **v3.1.1** applied archetype 10 to GUIDE for the first time. It scored 2 on Discipline Alignment because GUIDE did not map to a professional competency framework.
 - **v3.3.0** added the discipline crosswalk and raised that score from 2 to 4. It stops at 4 because a self-published crosswalk is not accreditation.
 - **v3.4.0** brought the printable rubric back to parity and added the first diagram, which raised Multimedia Principle Compliance from 3 to 4.
+- **v3.5.0** scored the living framework and the printable rubric together, re-reading every dimension against its anchor, and came out at 4.4 on the six archetypes (4.42) and 4.4 with archetype 10 (4.36, just over the rounding line), the same headline as v3.4.0. The earlier figure reads about 4.2 under the same strict scoring, so this release is a gain: practice exercises, a spaced review schedule, three new diagrams, a screen-reader pass, a reason-to-care scenario for each archetype, and live runs of the edge cases on two models and of the full pipeline earned back eight points. Some of that evidence is thin (one screen reader, one run per case per model), and the report says where.
 
 v3.2.2 was packaging only, and v3.4.1 fixed only the Python output format for three archetypes, so neither was re-scored.
 
@@ -213,25 +231,28 @@ GUIDE/
 │   ├── edge_cases_XX.json                 # Labeled test cases (one file per archetype)
 │   └── handoff_XX_*.md                    # Rubrics: the single source of truth
 ├── assets/
-│   ├── three-alignments.png               # Diagram, rasterized for the docx
-│   └── three-alignments.svg               # Diagram used in this README
+│   ├── *.svg                              # Diagrams used in this README (three alignments, ADDIE map, review flow, alignment cap)
+│   └── *.png                              # The same diagrams, rasterized for the docx by docs/art/render_diagrams.py
 ├── docs/
-│   └── art/                               # README hero (hero.html) and plugin icon (icon.py) sources, rendered PNGs
+│   ├── art/                               # README hero (hero.html) and plugin icon (icon.py) sources, rendered PNGs
+│   ├── build_rubric_docx.py               # Regenerates the printable rubric's archetype sections from archetypes/
+│   └── practice.md                        # Three score-then-compare exercises and a spaced review schedule
 ├── self-evaluations/                      # One self-evaluation per scored release
 ├── skill/
 │   ├── guide-instructional-design/        # Canonical skill source
-│   ├── guide-instructional-design-plugin/ # Installable plugin (skill mirror, 13 agents, PIPELINE.md, README.md)
+│   ├── guide-instructional-design-plugin/ # Installable plugin (skill mirror, 3 commands, 13 agents, PIPELINE.md, README.md)
 │   ├── README.md                          # Skill and plugin install, build, and sync
 │   └── build_skill.py                     # Regenerates skill references and plugin mirror from archetypes/
 ├── CHANGELOG.md                           # Release history
 ├── CITATION.cff                           # Citation metadata (Cite this repository)
-├── GUIDE_Rubric_Document.docx             # Printable rubric (v3.4.0)
+├── GUIDE_Rubric_Document.docx             # Printable rubric (v3.5.0); archetype sections are generated
 ├── Installing-GUIDE-in-Claude.pdf         # Install guide with screenshots
 ├── LICENSE                                # Apache License 2.0
 ├── NOTICE                                 # Copyright and attribution
 ├── PRIVACY.md                             # Privacy policy (the plugin collects and sends nothing)
 ├── README.md                              # This file
 ├── STATUS.md                              # What works, what is open, what is next
+├── run_edge_cases.py                      # Checks the edge-case files; --live scores them with a judge
 ├── guide_base.py                          # Result types, registry, evaluation runners
 ├── guide_pipeline.py                      # ADDIE multi-archetype orchestrator
 ├── guide_registry.py                      # Public Python API
@@ -257,6 +278,6 @@ GUIDE is licensed under the [Apache License 2.0](LICENSE). Copyright 2026 Jeremy
 
 If you use GUIDE in research, teaching, or training, select **Cite this repository** in the sidebar on GitHub for APA and BibTeX formats (the details come from [`CITATION.cff`](CITATION.cff)). In APA style:
 
-> Terhune, J. (2026). *GUIDE: Grounded Universal Instructional Design Evaluator* (Version 3.4.1) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22949871
+> Terhune, J. (2026). *GUIDE: Grounded Universal Instructional Design Evaluator* (Version 3.5.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22949871
 
 That DOI covers all versions and always points to the latest release. To cite the exact version you used, take its DOI from the [Zenodo record](https://doi.org/10.5281/zenodo.22949871).

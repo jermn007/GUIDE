@@ -11,6 +11,8 @@
 
 This archetype guides the design of, and evaluates, narrative-driven instruction, scenario-based learning, case studies, and branching scenarios. It covers whether stories are structurally sound, whether learning objectives are naturally integrated into the narrative rather than artificially overlaid, and whether the story creates the conditions for authentic transfer of learning to learners' real-world contexts. The dimensions below work in both directions: author a scenario against them, or score an existing one.
 
+**When this is skipped** (an illustrative scenario): An ethics module tells an engaging story about an analyst's first week, then stops the story to list five policies in bullet points. Learners remember the character and none of the policies, because nothing in the story ever depended on them. If you use scenarios or case studies, this archetype checks that the story is doing the teaching and not just decorating it.
+
 **Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
 - Build a sound narrative arc (Campbell; Snyder beats) - don't bolt a lesson onto a flat scenario.
 - Fuse the objective into the narrative tension so the learning is the story, using authentic characters and situations from the learners' real context.
@@ -46,6 +48,8 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 - **Hero's Journey (Campbell):** Ordinary world → Call to adventure → Refusal of the call → Meeting the mentor → Crossing the threshold → Tests and allies → Ordeal → Reward → Road back → Return with the elixir
 - **Beat Sheet (Snyder, 2005):** Opening Image → Theme Stated → Set-Up → Catalyst → Debate → Break into Two → B Story → Midpoint → Bad Guys Close In → All Is Lost → Dark Night of the Soul → Break into Three → Finale → Final Image. Snyder's framework maps emotional beats to structural milestones and is especially useful for tightly paced instructional narratives.
 
+The structure need not follow a framework rigidly, but it should be identifiable and coherent.
+
 **Why it matters:** Structure creates cognitive scaffolding. Learners can follow a well-structured narrative more easily and retain the embedded learning more effectively. Structure also makes the story memorable, which aids recall and transfer.
 
 ---
@@ -68,7 +72,7 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 
 ### Dimension 3: Character & Situation Authenticity (1-5)
 
-**Question:** Are characters relatable to the target audience? Are scenarios realistic and relevant?
+**Question:** Are characters relatable to the target audience? Are scenarios realistic and relevant? Do the emotional stakes feel earned and believable?
 
 | Score | Indicators |
 |-------|-----------|
@@ -108,9 +112,9 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 | **4** | Most decision points are meaningful with clear consequences. A few choices might have overlapping outcomes, but generally branches diverge. Wrong paths teach; mostly avoid arbitrary feedback. |
 | **3** | Some meaningful decisions; others feel forced or have overlapping consequences. Branching exists but branches may partially reconverge. Some wrong paths are instructive; others are dismissive. |
 | **2** | Few meaningful decisions. Consequences feel forced or arbitrary. Branches reconverge quickly; little substantive divergence. Wrong paths are mostly punitive ("try again") not instructive. |
-| **1** | No real decisions (linear story only, or all choices lead to same outcome). Consequences are random or absent. |
+| **1** | No real decisions: every choice leads to the same outcome, or, in a linear story, the characters face no meaningful decision. Consequences are random or absent. |
 
-**Note:** For linear scenarios without branching, score based on narrative tension and decision-making embedded in the case study itself. For example, in a case study, do characters face meaningful decisions? Are the consequences of their choices clear?
+**Note:** For linear scenarios without branching, score based on narrative tension and decision-making embedded in the case study itself. For example, in a case study, do characters face meaningful decisions? Are the consequences of their choices clear? A linear form is not by itself a 1: a case built around a character's decisions and their visible consequences can score 4. It scores 5 only when the learner is also asked to judge or predict those decisions.
 
 **Why it matters:** Meaningful choices increase learner agency and metacognitive reflection. Learning from the consequences of decisions-both good and bad-enhances understanding and transfer. Branching that reconverges quickly reduces the impact of choices.
 
@@ -199,6 +203,7 @@ You assess scenario-based learning, narrative structures in training, case studi
 - Consequences should be instructive, not arbitrary or punitive
 - Wrong paths should teach something, not just say "try again"
 - Branches should represent genuine complexity, not surface variation
+- Linear case with no learner choices: score the decisions the characters face and whether their consequences are shown. A linear form is not by itself a 1; a linear story whose characters face no meaningful decision is
 - Score 5: Decision points are abundant and meaningful; each choice has distinct consequences; wrong paths are instructive; branches diverge significantly
 - Score 3: Some meaningful decisions; most choices have consequences but they might feel forced; some branches overlap
 - Score 1: Few or no real decisions; consequences feel random; wrong paths are dismissive; little branching complexity
@@ -268,11 +273,13 @@ Score using the rubric above. Return only the JSON object in this format:
 
 ### Interpreting Results
 
-**High overall score (4.5-5.0):** Story-driven instruction is likely to engage learners deeply and support transfer. Consider for validation studies or as a model for other scenarios in your curriculum.
+**4.5-5.0 (ship):** Story-driven instruction is likely to engage learners deeply and support transfer. Consider for validation studies or as a model for other scenarios in your curriculum.
 
-**Mid-range (3.0-4.4):** Instruction is functional but has opportunities for improvement. Check severity flags and improvement suggestions for quick wins. Often, improving Learning-Narrative Integration or Transfer & Generalizability can lift the entire score.
+**3.5-4.4 (light revision):** Instruction works, with opportunities for improvement. Check severity flags and improvement suggestions for quick wins. Often, improving Learning-Narrative Integration or Transfer & Generalizability can lift the entire score.
 
-**Lower score (1.0-2.9):** Significant gaps. Consider whether the narrative structure supports instruction at all. May need redesign rather than revision.
+**2.5-3.4 (revise):** Real concerns. Fix the flagged dimensions before wide rollout.
+
+**Below 2.5 (redesign):** Significant gaps. Consider whether the narrative structure supports instruction at all. May need redesign rather than revision.
 
 ### Common Pitfalls to Flag
 

@@ -2,6 +2,8 @@
 
 **Purpose**: Design and evaluate formative evaluation plans, expert review protocols, usability test designs, and pilot study designs for methodological rigor and appropriateness. The dimensions below work in both directions: draft a plan against them, or score an existing one.
 
+**When this is skipped** (an illustrative scenario): A course goes to 4,000 employees without a single learner having tried it first. On launch day a broken quiz blocks completion, the instructions on screen three confuse nearly everyone, and the help desk takes 300 tickets. Three people and one afternoon would have caught all of it. If you are about to release something you have only reviewed yourself, this archetype is for you.
+
 **Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
 - Cover the formative phases - one-to-one, small-group, and field/expert review (Bordonaro; Dick & Carey).
 - Match evaluators to each phase (SME, target learners, usability testers).
@@ -125,7 +127,7 @@ Revision Decision: [What to do? e.g., "Rewrite labels; test with one learner bef
 
 ### 5. Feasibility & Practicality (1-5)
 
-Can the evaluation be executed realistically with available resources?
+Can the evaluation be executed realistically with available resources? Weigh cost against benefit: the evaluation should be commensurate with the project's scope.
 
 | Score | Budget | Timeline | Recruitment | Facilities/Tech | Resource Plan |
 |-------|--------|----------|------------|----------------|---------------|
@@ -238,6 +240,8 @@ Score: 1=Unrealistic timeline, no resource plan; 5=Fully resourced, detailed tim
 - Observation protocols designed to capture usability issues
 Score: 1=No usability methods; 5=Multiple usability techniques well-integrated
 
+Severity flags to raise: no learners involved; no independent evaluator; data collected with no decision rule; instruments that do not match the evaluation questions; summative claims from formative data; no participant protection; no time or budget left to revise.
+
 Return JSON with overall score (mean of 6 dimensions), individual dimension scores, rationale per dimension, severity_flags (critical issues), and improvement_suggestions (actionable next steps).
 ```
 
@@ -283,6 +287,20 @@ Score using the rubric above. Return only the JSON object in this format:
   "improvement_suggestions": ["<suggestion 1>", "<suggestion 2>"]
 }
 ```
+
+---
+
+## Severity Flags (Red Flags)
+
+Look for and flag critical issues. Each one means the evaluation cannot support the decisions it is meant to inform:
+
+1. **No Learners Involved**: The plan stops at expert review, yet its findings are treated as evidence that learners can use the instruction
+2. **No Independent Evaluator**: The designers are the only reviewers of their own work
+3. **Data with No Decision Rule**: Data is collected, but nothing says what result triggers a revision, or who decides
+4. **Instruments Do Not Match the Questions**: The surveys, tests, or protocols do not measure what the evaluation says it will find out
+5. **Summative Claims from Formative Data**: Effectiveness is asserted from a handful of tryout learners or from satisfaction ratings alone
+6. **No Participant Protection**: Learner data is collected with no consent, privacy, or data-handling plan
+7. **No Room to Revise**: The evaluation is scheduled so late, or budgeted so thinly, that its findings cannot change the instruction
 
 ---
 
@@ -388,8 +406,7 @@ Use this before scoring:
 | **4.5-5.0** | Excellent | Methodologically rigorous; high confidence in findings; implement as-is |
 | **3.5-4.4** | Good | Solid evaluation design; minor gaps; findings reliable; proceed with caution if major revisions needed |
 | **2.5-3.4** | Fair | Adequate but weak; some methodological gaps; supplement with additional testing |
-| **1.5-2.4** | Poor | Significant methodological flaws; findings questionable; redesign evaluation before proceeding |
-| **<1.5** | Inadequate | Cannot proceed; evaluation must be redesigned; risk of poor implementation decisions |
+| **< 2.5** | Poor to inadequate | Do not proceed. Significant methodological flaws; findings questionable; redesign the evaluation before acting on it |
 
 ---
 

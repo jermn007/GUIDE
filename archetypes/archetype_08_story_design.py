@@ -73,6 +73,7 @@ You assess scenario-based learning, narrative structures in training, case studi
    - Consequences should be instructive, not arbitrary or punitive
    - Wrong paths should teach something, not just say "try again"
    - Branches should represent genuine complexity, not surface variation
+   - Linear case with no learner choices: score the decisions the characters face and whether their consequences are shown. A linear form is not by itself a 1; a linear story whose characters face no meaningful decision is
    - Score 5: Decision points are abundant and meaningful; each choice has distinct consequences; wrong paths are instructive; branches diverge significantly
    - Score 3: Some meaningful decisions; most choices have consequences but they might feel forced; some branches overlap
    - Score 1: Few or no real decisions; consequences feel random; wrong paths are dismissive; little branching complexity
@@ -130,5 +131,5 @@ register_archetype(
     system_prompt=JUDGE_SYSTEM_PROMPT,
     human_prompt=JUDGE_HUMAN_PROMPT,
     description="Evaluates scenario-based learning, narrative structures in training, case studies, branching scenarios, and story-driven instruction using six dimensions: narrative structure, learning-narrative integration, character & situation authenticity, emotional engagement & motivation, decision points & branching quality, and transfer & generalizability.",
-    version="1.1.0",
+    version="1.1.1",
 )

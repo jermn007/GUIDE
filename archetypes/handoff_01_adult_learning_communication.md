@@ -3,6 +3,8 @@
 
 **Purpose**: Design and evaluate an AI assistant's conversational responses to learning professionals — tone, clarity, accuracy, accessibility, and respect for adult learners. The dimensions below work in both directions: hold them in mind while authoring a response, or score an existing one against them.
 
+**When this is skipped** (an illustrative scenario): A new instructional designer asks a help assistant how to set up completion tracking the night before a launch. The reply opens with three paragraphs of theory, uses two terms it never defines, and states a menu path the product does not have. She follows it, the tracking fails, and she stops trusting the assistant. If your reader is a busy adult with a real problem, this is the archetype that decides whether your answer helps them or costs them an evening.
+
 **Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
 - Treat the reader as a self-directing professional: build on their stated problem, offer options, invite reflection - don't lecture (Knowles, Mezirow).
 - Lead with the answer, define terms before use, and cut tangents to keep load down (Sweller; Mayer signaling/coherence).
@@ -26,17 +28,17 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 
 ## Citation Sources
 
-- Knowles, M.S. (1978). Andragogy: Adult Learning Theory in Perspective.
-- Knowles, M.S., Holton, E.F., & Swanson, R.A. (2015). The Adult Learner (8th ed.).
-- Mezirow, J. (1991). Transformative Dimensions of Adult Learning. Jossey-Bass.
-- Ausubel, D.P. (2000). The Acquisition and Retention of Knowledge: A Cognitive View. Kluwer Academic Publishers.
-- Mayer, R.E. (2009). Multimedia Learning (2nd ed.). Cambridge University Press.
-- Clark, R.C. & Mayer, R.E. (2016). e-Learning and the Science of Instruction (4th ed.).
-- Sweller, J. (1988). Cognitive Load During Problem Solving. Cognitive Science, 12(2), 257-285.
-- W3C WAI (2018). Web Content Accessibility Guidelines (WCAG) 2.1.
-- Nielsen, J. (1994). Severity Ratings for Usability Problems.
-- Dick, W., Carey, L., & Carey, J.O. (2015). The Systematic Design of Instruction (8th ed.).
-- Hirumi, A. (2025). Design Principles, Ethics, and Evidence-Informed Decision Making. In *Foundations of Learning and Instructional Design Technology* (2nd ed., pp. 433-448). EdTechBooks. (Anecdotal vs. scientific evidence distinction.)
+- Ausubel, D.P. (2000). *The Acquisition and Retention of Knowledge: A Cognitive View*. Kluwer Academic Publishers.
+- Clark, R.C., & Mayer, R.E. (2016). *e-Learning and the Science of Instruction* (4th ed.). Wiley.
+- Dick, W., Carey, L., & Carey, J.O. (2015). *The Systematic Design of Instruction* (8th ed.). Pearson.
+- Hirumi, A. (2025). Design Principles, Ethics, and Evidence-Informed Decision Making. In R.E. West & H. Leary (Eds.), *Foundations of Learning and Instructional Design Technology* (2nd ed., pp. 433-448). EdTechBooks. (Anecdotal vs. scientific evidence distinction.)
+- Knowles, M.S. (1978). Andragogy: Adult Learning Theory in Perspective. *Community College Review*, 5(3), 9-20.
+- Knowles, M.S., Holton, E.F., & Swanson, R.A. (2015). *The Adult Learner* (8th ed.). Routledge.
+- Mayer, R.E. (2009). *Multimedia Learning* (2nd ed.). Cambridge University Press.
+- Mezirow, J. (1991). *Transformative Dimensions of Adult Learning*. Jossey-Bass.
+- Nielsen, J. (1994). Severity Ratings for Usability Problems. Nielsen Norman Group.
+- Sweller, J. (1988). Cognitive Load During Problem Solving. *Cognitive Science*, 12(2), 257-285.
+- W3C WAI (2018). *Web Content Accessibility Guidelines (WCAG) 2.1*.
 
 ---
 
@@ -79,7 +81,7 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 ### Accuracy & Grounding (v3.1.0: anecdotal vs. scientific evidence)
 - **5**: All claims accurate and traceable; no hallucination; appropriate hedging. **Anecdotal evidence** (observations, stakeholder experience) is framed as anecdotal; **scientific evidence** (systematic, peer-reviewed) is framed as such; the two are not conflated (Hirumi, 2025).
 - **4**: Accurate overall; minor imprecision or one unsupported generalization that doesn't mislead.
-- **3**: Mostly accurate but at least one unsupported claim, oversimplification, or anecdote presented as if it were scientific consensus.
+- **3**: Mostly accurate but at least one unsupported claim, oversimplification, or anecdote presented as if it were established practice or scientific consensus (penalize this even when the anecdote is true).
 - **2**: Multiple inaccuracies; valid information mixed with hallucinated content; anecdotal and scientific evidence conflated in misleading ways.
 - **1**: Substantially inaccurate; fabricated information; would mislead the user.
 
@@ -96,6 +98,9 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 - **3**: Mixed — partly conversational, partly stiff or generic.
 - **2**: Predominantly formal or robotic; excessive self-referential disclaimers.
 - **1**: Reads like a textbook or policy document; no social presence.
+
+### Overall score
+The overall (1-5) is not a plain mean: weight **Accuracy & Grounding** and **Adult Learning Alignment** most heavily. A fluent, well-signaled response that is inaccurate or ignores the adult learner's context should not score well overall.
 
 ---
 
@@ -158,7 +163,29 @@ Evaluate the following assistant response.
 ## REFERENCE ANSWER (if available)
 {reference}
 
-Score using the six-dimension rubric. Return only the JSON object.
+Score using the six-dimension rubric. Return only the JSON object in this format:
+{
+  "scores": {
+    "adult_learning_alignment": <1-5>,
+    "cognitive_load_management": <1-5>,
+    "instructional_clarity": <1-5>,
+    "accuracy_and_grounding": <1-5>,
+    "accessibility": <1-5>,
+    "personalization_and_engagement": <1-5>,
+    "overall": <1-5, weighted toward accuracy and adult learning alignment>
+  },
+  "rationale": {
+    "adult_learning_alignment": "<2-3 sentence justification citing specific evidence from the response>",
+    "cognitive_load_management": "<2-3 sentence justification>",
+    "instructional_clarity": "<2-3 sentence justification>",
+    "accuracy_and_grounding": "<2-3 sentence justification>",
+    "accessibility": "<2-3 sentence justification>",
+    "personalization_and_engagement": "<2-3 sentence justification>",
+    "overall": "<1-2 sentence holistic summary>"
+  },
+  "severity_flags": ["<Nielsen severity 3-4 issues: major problems or catastrophes to fix before deployment>"],
+  "improvement_suggestions": ["<top 1-3 actionable improvements>"]
+}
 ```
 
 ---
@@ -193,17 +220,4 @@ Before deploying at scale:
 
 1. **Calibrate**: Run 5-10 diverse responses through your chosen model. Compare to expert judgment.
 2. **Test Edge Cases**: Validate against `edge_cases_01.json`.
-3. **Document Threshold**: Define what scores mean for your context (4.5+ ship; 3.5-4.4 light revision; <3.5 rewrite).
-
----
-
-## References
-
-- Clark, R.C., & Mayer, R.E. (2016). *e-Learning and the Science of Instruction* (4th ed.). Wiley.
-- Dick, W., Carey, L., & Carey, J.O. (2015). *The Systematic Design of Instruction* (8th ed.). Pearson.
-- Hirumi, A. (2025). Design Principles, Ethics, and Evidence-Informed Decision Making. In R.E. West & H. Leary (Eds.), *Foundations of Learning and Instructional Design Technology* (2nd ed., pp. 433-448). EdTechBooks.
-- Knowles, M.S., Holton, E.F., & Swanson, R.A. (2015). *The Adult Learner* (8th ed.). Routledge.
-- Mayer, R.E. (2009). *Multimedia Learning* (2nd ed.). Cambridge University Press.
-- Mezirow, J. (1991). *Transformative Dimensions of Adult Learning*. Jossey-Bass.
-- Sweller, J. (1988). Cognitive Load During Problem Solving. *Cognitive Science*, 12(2), 257-285.
-- W3C WAI (2018). *Web Content Accessibility Guidelines (WCAG) 2.1*.
+3. **Document Threshold**: Define what scores mean for your context (GUIDE's defaults: 4.5+ ship; 3.5-4.4 light revision; 2.5-3.4 revise; below 2.5 redesign).

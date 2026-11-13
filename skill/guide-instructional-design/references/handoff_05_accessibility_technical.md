@@ -2,6 +2,8 @@
 
 **Purpose**: Design and evaluate web-based learning content, LMS pages, and e-learning modules for compliance with WCAG 2.1 standards and Universal Design for Learning (UDL) principles. The dimensions below work in both directions: build accessibility in against them, or audit existing content.
 
+**When this is skipped** (an illustrative scenario): A new hire who uses a screen reader opens the mandatory onboarding course on day one. The drag-and-drop activity cannot be reached by keyboard and the videos have no captions, so the first thing the company teaches him is that the course was not built for him. If your learners include anyone you have not met, this archetype is how you avoid finding that out from them.
+
 **Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
 - Provide text alternatives, captions, transcripts, and audio description (Perceivable).
 - Ensure full keyboard operability with a logical focus order (Operable); use plain language and consistent navigation (Understandable).
@@ -126,86 +128,11 @@ How easily can identified accessibility issues be fixed? 5 = quick fixes only; 1
 
 ---
 
-## System Prompt (Judge Rubric)
+## Output JSON
 
-```
-You are an expert in WCAG 2.1 accessibility compliance and Universal Design for Learning (UDL).
-Your role is to evaluate web-based learning content against accessibility standards.
+Return this shape when the user wants machine-readable output (scores are integers 1-5; `overall` follows the archetype's scoring rule):
 
-You will score across 6 dimensions, each on a 1-5 scale:
-
-1. **Perceivable** (1-5)
-- Text alternatives for non-text content (1.1.1): All images, icons, graphs have alt text
-- Captions for audio (1.2.2): Multimedia includes captions for hearing-impaired users
-- Audio description (1.2.5): Videos have audio descriptions for visual content
-- Color not sole conveyor (1.4.1): Information isn't conveyed by color alone
-- Contrast ratio (1.4.3): Text contrast ≥4.5:1 for normal text
-- Text resizable (1.4.4): Content remains readable when text enlarged to 200%
-Score: 1=No alt text, captions, or descriptions; 5=Full coverage of all above
-
-2. **Operable** (1-5)
-- Keyboard accessibility (2.1.1): All functionality accessible via keyboard
-- No keyboard traps (2.1.2): Users can navigate away from any element
-- Adjustable timing (2.2.1): Users can extend time limits for tasks
-- Skip navigation (2.4.1): Links to skip repetitive content present
-- Descriptive titles (2.4.2): Page/section titles clearly describe content
-- Logical focus order (2.4.3): Tab order follows logical sequence
-- Descriptive link text (2.4.4): Links have meaningful text (not "click here")
-Score: 1=Not keyboard accessible; 5=Full keyboard nav, no traps, clear focus
-
-3. **Understandable** (1-5)
-- Language identified (3.1.1): Page language explicitly set
-- Consistent navigation (3.2.3): Navigation patterns consistent across pages
-- Consistent identification (3.2.4): Components identified consistently
-- Error identification (3.3.1): Errors clearly identified to user
-- Labels and instructions (3.3.2): Form fields have clear labels
-- Error suggestions (3.3.3): Errors provide suggestions for correction
-Score: 1=No language set, inconsistent nav, no error handling; 5=Fully compliant
-
-4. **Robust** (1-5)
-- Valid HTML (4.1.1): Code passes WCAG validation
-- Name/role/value (4.1.2): UI components have accessible names and roles
-- ARIA usage (4.1.2): ARIA correctly applied (not redundantly or incorrectly)
-- Assistive tech compatibility: Content works with screen readers, keyboard nav
-Score: 1=Invalid HTML, broken screen reader support; 5=Valid, ARIA correct, full AT support
-
-5. **Universal Design for Learning Integration** (1-5)
-- Multiple means of representation: Content in text, audio, visual, interactive formats
-- Multiple means of action/expression: Learners can interact via keyboard, mouse, touch, voice
-- Multiple means of engagement: Choices in learning pace, difficulty, content type
-- Alternative formats: PDFs accessible, transcripts provided, captions included
-- Flexible assessment: Not dependent on single modality (vision, hearing, motor control)
-Score: 1=Single format/modality only; 5=Multiple formats, flexible engagement
-
-6. **Remediation Feasibility** (1-5)
-- Surface-level issues (quick fixes): Missing alt text, contrast ratio, missing captions
-- Structural issues (significant effort): No keyboard nav requires code refactor, invalid HTML
-- Architectural barriers (rebuild required): Flash content, unsupported technologies
-Score: 5=Quick fixes only; 1=Requires architectural rebuild
-
-Return JSON with overall score (mean of 6 dimensions), individual dimension scores, rationale per dimension, severity_flags (critical issues), and improvement_suggestions (actionable next steps).
-```
-
----
-
-## Human Prompt Template
-
-```
-Evaluate the following web-based learning content for WCAG 2.1 compliance.
-
-## INPUT / ARTIFACT
-{input}
-
-## CONTEXT (if available)
-{context}
-
-## OUTPUT / RESPONSE TO EVALUATE
-{output}
-
-## REFERENCE (if available)
-{reference}
-
-Score using the rubric above. Return only the JSON object in this format:
+```json
 {
   "scores": {
     "perceivable": <1-5>,
@@ -228,6 +155,21 @@ Score using the rubric above. Return only the JSON object in this format:
   "improvement_suggestions": ["<suggestion 1>", "<suggestion 2>"]
 }
 ```
+
+---
+
+## Severity Flags (Red Flags)
+
+Look for and flag critical issues. Each one blocks some learners outright, so treat it as major or catastrophic on Nielsen's scale:
+
+1. **No Text Alternative**: Instructional images, charts, or diagrams with no alt text or long description
+2. **Uncaptioned Media**: Video or audio that carries instruction with no captions or transcript
+3. **Keyboard Trap or Unreachable Content**: Any activity that cannot be reached, operated, or exited by keyboard alone
+4. **Unlabeled Controls**: Form fields, buttons, or custom widgets with no programmatic name, so assistive technology cannot operate them
+5. **Meaning by Color Alone or Unreadable Contrast**: Required information carried only by color, or body text well below 4.5:1
+6. **Timed Activity with No Adjustment**: A timed assessment or interaction with no way to extend, pause, or turn off the limit
+7. **Flashing Content**: Anything that flashes more than three times per second
+8. **Untested Compliance Claim**: The artifact is declared accessible or "WCAG compliant" with no automated or assistive-technology test behind the claim
 
 ---
 
@@ -322,9 +264,8 @@ Use this before scoring:
 | **4.5-5.0** | Excellent | Ship as-is; exemplary accessibility |
 | **3.5-4.4** | Good | Minor issues; can ship; document known gaps |
 | **2.5-3.4** | Fair | Accessibility concerns; plan fixes before wide rollout |
-| **1.5-2.4** | Poor | Significant barriers; remediation required; legal risk |
-| **<1.5** | Inaccessible | Cannot ship; critical remediation or redesign needed |
+| **< 2.5** | Poor to inaccessible | Do not ship. Significant barriers and legal risk; remediate or redesign (below 1.5, treat as inaccessible) |
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.4.1). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 05 of 10.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.5.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 05 of 10. Skill edition: the judge prompts and Python-harness notes are omitted; the full model-agnostic handoff is `archetypes/handoff_05_accessibility_technical.md` in the GUIDE repository.*

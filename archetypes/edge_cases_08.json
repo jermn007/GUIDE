@@ -27,12 +27,12 @@
       "expected_scores": {
         "narrative_structure": 4,
         "learning_narrative_integration": 5,
-        "character_situation_authenticity": 5,
+        "character_situation_authenticity": 4,
         "emotional_engagement_motivation": 4,
         "decision_points_branching_quality": 4,
-        "transfer_generalizability": 5,
-        "overall": 4.5,
-        "rationale": "Exceptional integration of learning into narrative. Principles emerge organically from story events rather than being stated. Characters and situations are highly authentic to IT PMs. Transfer is excellent—principles about stakeholder management, communication, and scope are generalizable beyond software. Emotional engagement is strong (project failure creates stakes). Narrative structure is clear (problem → response → outcome → reflection) though not explicitly a Hero's Journey. Linear form means no branching complexity, but Decision Points score reflects embedded decision-making within the case."
+        "transfer_generalizability": 4,
+        "overall": 4.2,
+        "rationale": "Learning and narrative are one thing here: the principles emerge from story events and the story never stops to explain. The arc is clear (context, crisis, attempts, partial success, lessons) though it is not mapped to a named framework. The situation is authentic to IT project managers; the description says little about the characters themselves (4). A project failure gives real stakes (4). The case is linear, so Decision Points is scored on the decisions the project manager faces and their visible consequences, which are central to the case (4). Principles generalize beyond software, but the learner is not asked to apply them to their own project (4)."
       },
       "notes": "This exemplifies how narrative and learning can be inseparable in linear instruction. The weakness (minor) is that Narrative Structure could be stronger if the case explicitly mapped to a framework, but this might feel heavy-handed for adult professionals."
     },
@@ -59,14 +59,14 @@
       "category": "bad",
       "description": "An onboarding e-learning module for a financial services company that opens with an entertaining story: a new analyst protagonist navigates their first week, makes friends at lunch, learns the office layout, attends team meetings. The story is engaging and relatable—new employees see themselves in the protagonist. However, halfway through, the narrative stops and a voiceover announces: 'Here are the five key policies you must know: compliance, expense reporting, confidentiality, cybersecurity, and conflicts of interest.' Each policy is then explained in bullet-point form while the story pauses. After the policies are presented, the story resumes briefly (protagonist completes compliance training) and ends. The learning objectives (understanding the five policies) were external to the narrative; the story served to engage the audience, but the actual learning was separated from the narrative. Transfer is weak because learners haven't seen the protagonist apply the policies to realistic scenarios; they've just heard the rules stated.",
       "expected_scores": {
-        "narrative_structure": 4,
+        "narrative_structure": 3,
         "learning_narrative_integration": 1,
         "character_situation_authenticity": 4,
-        "emotional_engagement_motivation": 4,
-        "decision_points_branching_quality": 3,
+        "emotional_engagement_motivation": 3,
+        "decision_points_branching_quality": 1,
         "transfer_generalizability": 1,
-        "overall": 2.6,
-        "rationale": "The story itself is well-crafted (character, setting, authentic scenarios) and emotionally engaging. But learning and narrative are disconnected. The learning segment (five policies explained) is pedagogical, not narrative. This is a missed opportunity: the protagonist could have faced situations where each policy mattered (e.g., a scenario requiring confidentiality judgment, or a conflict of interest dilemma). Instead, learning is bolted on, and learners are unlikely to extract principles they can apply to their own judgment calls. Transfer is very low."
+        "overall": 2.2,
+        "rationale": "The story is relatable and the setting authentic, but learning and narrative are disconnected: the five policies are a lecture dropped into a paused story. Stopping the story halfway and resuming it only briefly breaks the arc (3) and spends the engagement the opening earned (3). The protagonist never faces a decision where a policy matters, so there are no decisions to score, for the learner or for the character (1). Learners hear the rules stated and never see them applied, so transfer is very low."
       },
       "notes": "A common approach: use narrative to hook engagement, then lecture. Better approach: weave the five policies into the story as challenges the protagonist faces. Show what happens when policies matter; let learners see consequences of policy violations or adherence."
     },

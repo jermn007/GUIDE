@@ -1,6 +1,6 @@
 {
   "name": "guide-instructional-design",
-  "version": "3.4.1",
+  "version": "3.5.0",
   "description": "Design and evaluate instructional content with GUIDE - a learning-science framework of 10 archetypes and 60 theory-grounded dimensions mapped to the ADDIE lifecycle. Packaged as a Claude skill.",
   "keywords": [
     "instructional-design",
@@ -42,7 +42,7 @@
     "type": "reference-and-workflow",
     "modes": ["design", "evaluate"],
     "tracksFramework": "GUIDE",
-    "frameworkVersion": "3.4.1",
+    "frameworkVersion": "3.5.0",
     "archetypes": 10,
     "dimensions": 60,
     "scale": "1-5",
@@ -60,6 +60,7 @@
       "references/handoff_10_curriculum_alignment.md",
       "references/discipline_alignment_crosswalk.md"
     ],
-    "runtimeDependencies": "none - Markdown reference files only; no executable code or external packages required"
+    "runtimeDependencies": "none - Markdown reference files only; no executable code or external packages required",
+    "workflows": ["EVALUATE.md", "DESIGN.md"]
   }
 }

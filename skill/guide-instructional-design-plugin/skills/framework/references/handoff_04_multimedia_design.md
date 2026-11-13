@@ -3,6 +3,8 @@
 
 **Purpose**: Design and evaluate e-learning modules, videos, interactive media, and slide-based courses for cognitive load optimization and multimedia learning effectiveness. The dimensions below work in both directions: author media against them, or score existing media.
 
+**When this is skipped** (an illustrative scenario): A compliance module has a narrator reading every word on a dense slide while a stock photo fades in and music plays. Learners click Next as fast as the button allows and remember the music. The content was correct and almost none of it got in. If you build slides, video, or e-learning, this archetype is the difference between material people sit through and material they learn from.
+
 **Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
 - Pair words with relevant visuals; cut decorative media and on-screen text that duplicates narration (coherence, redundancy).
 - Segment into learner-paced chunks and pre-train key terms before the main content (segmenting, pre-training).
@@ -59,10 +61,10 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 
 ### Extraneous Load Reduction
 - **5**: All five principles evident; content is focused and efficient; no seductive details
-- **4**: Four principles evident; one minor violation
-- **3**: Three to four principles present; one to two violations
-- **2**: Two to three principles present; multiple violations
-- **1**: Few principles; multiple violations; high extraneous load
+- **4**: Four of the five principles applied; one minor violation
+- **3**: Three principles applied; two violations
+- **2**: Two principles applied; three or more violations
+- **1**: One principle or none; high extraneous load throughout
 
 **Principle Checklist**:
 1. **Coherence**: Is the content focused on learning objective? Are there interesting-but-irrelevant tangents? (E.g., A video on photosynthesis shouldn't spend 2 minutes on the history of photosynthesis research unless objective requires it.)
@@ -96,8 +98,8 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 
 ### Generative Processing Support
 - **5**: Personalized conversational tone ("you"), human voice, genuine engagement (no distracting presenter images)
-- **4**: Mostly personalized; human voice or good synthesis; adequate engagement
-- **3**: Some personalization; mixed voice quality; adequate engagement
+- **4**: Mostly personalized; human voice or good synthesis; engagement cues in most segments
+- **3**: Some personalization; mixed voice quality; engagement cues only occasional
 - **2**: Formal tone; poor voice; minimal engagement cues
 - **1**: Highly formal, robotic voice, or very distracting presenter
 
@@ -178,88 +180,11 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 
 ---
 
-## System Prompt (Judge Rubric)
+## Output JSON
 
-```
-You are an expert instructional design evaluator specializing in multimedia learning and cognitive load.
+Return this shape when the user wants machine-readable output (scores are integers 1-5; `overall` follows the archetype's scoring rule):
 
-You assess e-learning modules, videos, interactive media, and slide-based courses using six dimensions:
-
-1. **Multimedia Principle Compliance (1-5)**: Does content use words AND graphics, not words alone or graphics alone?
-- Mayer: "people learn better from words and pictures than from words alone"
-- Evaluate: Are visuals instructional (supporting learning) or decorative (distracting)?
-- Score 5: Graphics are instructional and integrated with text/narration; good use of visuals throughout
-- Score 3: Mix of visual and text; some graphics are decorative
-- Score 1: Primarily text-based or only decorative images; missing instructional graphics
-
-2. **Extraneous Load Reduction (1-5)**: Are all five cognitive load principles applied?
-- Coherence: No seductive details (interesting but irrelevant information)
-- Redundancy: On-screen text doesn't duplicate narration for complex content
-- Signaling: Organizational cues (arrows, highlights, labels) guide attention
-- Spatial Contiguity: Labels are near corresponding graphics (not separated)
-- Temporal Contiguity: Related elements are presented at the same time (not separated)
-- Score 5: All five principles evident; content is focused and efficient
-- Score 3: Most principles present; 1-2 minor violations
-- Score 1: Multiple violations; seductive details, redundancy, poor layout
-
-3. **Intrinsic Load Management (1-5)**: Is complex content segmented and modality-optimized?
-- Segmenting: Content broken into learner-paced chunks
-- Pre-Training: Key concepts introduced before complex processes
-- Modality: Audio narration + graphics for complex content (not text + graphics)
-- Score 5: Content is chunked; modality optimized; pre-training evident
-- Score 3: Some segmenting; modality mixed; pre-training implied
-- Score 1: Long, unsegmented content; poor modality choices
-
-4. **Generative Processing Support (1-5)**: Does content encourage active engagement?
-- Personalization: Conversational tone ("you") vs. formal ("the learner")
-- Voice: Human narration (preferred over synthesized)
-- Embodiment: Genuine engagement cues (presenter, animations)
-- Image Principle: No distracting speaker images; focus on content
-- Score 5: Personalized tone, human voice, engaging (no distracting presenter)
-- Score 3: Some personalization; mixed voice quality; adequate engagement
-- Score 1: Formal tone, poor voice, distracting presenter images
-
-5. **Interactivity & Learner Control (1-5)**: Is interaction meaningful and objective-aligned?
-- Is interaction more than "click next"? (e.g., branching, decision-making, knowledge checks)
-- Can learners control pacing (pause, rewind, speed)?
-- Do interactions target learning objectives, not just engagement?
-- Score 5: Meaningful interactions (branching, simulations, decision tasks); full learner control; aligned to objectives
-- Score 3: Some interaction (quizzes, click-to-reveal); basic pacing control; mostly aligned
-- Score 1: Minimal interaction (mostly click-next); no pacing control; unclear alignment to objectives
-
-6. **Visual Design & Information Architecture (1-5)**: Is layout clear, accessible, and readable?
-- Visual hierarchy: Important elements are prominent
-- Whitespace: Breathing room; not cluttered
-- Color: Supports comprehension (not excessive or arbitrary)
-- Typography: Readable font, appropriate size, good contrast
-- Information architecture: Logical organization; easy navigation
-- Score 5: Clear hierarchy, good whitespace, purposeful color, readable fonts, intuitive navigation
-- Score 3: Generally clear; minor readability or organization issues
-- Score 1: Cluttered, poor contrast, confusing layout
-
-Return JSON with overall score (mean of 6 dimensions), individual dimension scores, rationale per dimension, severity_flags (critical issues), and improvement_suggestions (actionable next steps).
-```
-
----
-
-## Human Prompt Template
-
-```
-Evaluate the following multimedia artifact.
-
-## INPUT / ARTIFACT
-{input}
-
-## CONTEXT (if available)
-{context}
-
-## OUTPUT / RESPONSE TO EVALUATE
-{output}
-
-## REFERENCE (if available)
-{reference}
-
-Score using the rubric above. Return only the JSON object in this format:
+```json
 {
   "scores": {
     "multimedia_principle_compliance": <1-5>,
@@ -314,54 +239,6 @@ When scoring < 4 on any dimension, recommend specific next steps:
 
 ---
 
-## Input Format
-
-The archetype expects:
-
-- **Input**: Learning objective(s), learner profile, and content context (e.g., "E-learning module on 'Excel Pivot Tables' for business professionals; self-paced; video + interactive simulation")
-- **Output**: Screenshots, video descriptions, slide deck, or detailed content outline describing visuals, interactions, narration, and layout
-- **Context** (optional): Platform (Articulate Storyline, Moodle, YouTube, Captivate), target audience, accessibility requirements
-- **Reference** (optional): Exemplary e-learning module, video, or design guideline for comparison
-
-Example Input/Output:
-```
-INPUT: "E-learning module on 'Customer Service Call Handling' for call center representatives; learners are adults with varied tech skills; asynchronous, mobile-accessible"
-
-OUTPUT DESCRIPTION:
-Module Structure:
-- Slide 1: Title slide with learning objectives
-- Slide 2-3: Video (4 min) showing a good vs. bad customer service call (narrated; shows examples)
-* Good call: Representative listens, empathizes, solves
-* Bad call: Representative interrupts, dismisses concern
-* Narration: "You'll learn the three keys to great service..."
-* Graphics: Call transcript on-screen (during narration) + visual indicators (checkmark for good, X for bad)
-- Slide 4: Interactive branching scenario
-* Learner reads a customer complaint; chooses response (A, B, or C)
-* Each choice leads to different outcome video
-* Feedback explains why choice was good/poor
-- Slide 5: Practice quiz (5 questions, knowledge check)
-- Slide 6: Real-world application (template for handling similar call)
-
-Design Notes:
-- Font: Calibri, 16pt body, 24pt headings
-- Colors: Company blue (primary), gray (secondary), white background
-- Visuals: Call transcript, branching scenario decision trees, video demonstrations
-- Interaction: Branching scenario + quiz (not just click-next)
-- Narration: Professional voice (not synthesized); conversational tone
-```
-
----
-
-## Calibration & Validation
-
-Before deploying at scale:
-
-1. **Calibrate the Rubric**: Run 5-10 diverse multimedia samples (videos, modules, slide decks) through your chosen model. Compare results to your expert judgment. Adjust dimension wording if scores are skewed.
-2. **Test Edge Cases**: Validate against the 6 edge cases in `edge_cases_04.json`. All should score within your expected range.
-3. **Document Threshold**: Define what score ranges mean (e.g., 4.5+ = "ready for launch", 3.5-4.4 = "revise", < 3.5 = "redesign").
-
----
-
 ## References
 
 - Clark, R.C., & Mayer, R.E. (2016). *e-Learning and the Science of Instruction: Proven Guidelines for Consumers and Designers of Multimedia Learning* (4th ed.). Wiley.
@@ -384,4 +261,4 @@ Before deploying at scale:
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.4.1). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 04 of 10.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.5.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 04 of 10. Skill edition: the judge prompts and Python-harness notes are omitted; the full model-agnostic handoff is `archetypes/handoff_04_multimedia_design.md` in the GUIDE repository.*

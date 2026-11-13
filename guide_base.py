@@ -125,7 +125,7 @@ def get_archetype(name: str) -> dict:
 
 def make_evaluator(
     archetype_name: str,
-    model_name: str = "claude-sonnet-4-20250514",
+    model_name: str = "claude-sonnet-5-5",
     temperature: float = 0.0,
 ) -> Callable:
     """
@@ -189,7 +189,7 @@ def evaluate_standalone(
     assistant_output: str,
     context: str = "N/A",
     reference: str = "N/A",
-    model_name: str = "claude-sonnet-4-20250514",
+    model_name: str = "claude-sonnet-5-5",
     api_key: Optional[str] = None,
 ) -> GUIDEResult:
     """Evaluate a single response using the Anthropic SDK directly."""
@@ -230,7 +230,7 @@ def evaluate_composite(
     assistant_output: str,
     context: str = "N/A",
     reference: str = "N/A",
-    model_name: str = "claude-sonnet-4-20250514",
+    model_name: str = "claude-sonnet-5-5",
     api_key: Optional[str] = None,
 ) -> CompositeResult:
     """
@@ -268,7 +268,7 @@ def run_langsmith_eval(
     archetype_name: str,
     dataset_name: str,
     predict_fn: Callable,
-    model_name: str = "claude-sonnet-4-20250514",
+    model_name: str = "claude-sonnet-5-5",
     project_name: Optional[str] = None,
 ):
     """Run an archetype evaluator against a LangSmith dataset."""

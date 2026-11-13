@@ -76,14 +76,14 @@
       "category": "borderline",
       "description": "A middle school math lesson on fractions: (1) Engage: Brief video hook on fractions in cooking (why do recipes say '1/4 cup'?). (2) Explore (20 min): The teacher demonstrates fractions using a pizza pie model, breaking it into pieces and asking students to observe and answer questions the teacher asks. Students watch and respond, but don't manipulate the materials themselves. They see the teacher cut, they don't cut. (3) Explain (15 min): Teacher explains numerator/denominator, equivalence. (4) Elaborate (10 min): Guided practice problems. (5) Evaluate: Partner discussion. All five 5E phases are present. Attention is managed (segments are reasonable). Emotional engagement is moderate (pizza hook is relatable). However, the Explore phase violates a critical principle: it's teacher-demonstrated exploration, not learner-directed. Students' basal ganglia (procedural learning through doing) are not engaged; only the visual cortex (observation) is engaged. The procedural pathway is underdeveloped because students didn't manipulate, measure, or cut the fractions themselves. This reduces the effectiveness of the Explore phase and weakens the subsequent Explain phase. Students are observing procedure but not performing it, which reduces encoding robustness.",
       "expected_scores": {
-        "5e_model_alignment": 4,
-        "memory_system_optimization": 3,
+        "5e_model_alignment": 3,
+        "memory_system_optimization": 2,
         "attention_management": 4,
         "emotional_engagement_for_encoding": 3,
-        "synaptic_strengthening_factors": 3,
-        "theory_practice_grounding": 4,
-        "overall": 3.5,
-        "rationale": "All five 5E phases are present, which is good (score 4, not 5, because Explore should be learner-directed, not teacher-directed). Memory optimization is weak (score 3) because the procedural pathway is underdeveloped—students observed but didn't do. Episodic memory (their own experience cutting fractions) is missing. Attention management is good. Emotional engagement is moderate (pizza is relatable but stakes are low). Synaptic strengthening factors are partially present: repetition yes, but application is limited to guided practice, and imagination is not explicitly supported. Theory grounding is good (5E is named). This instruction would be more effective if students manipulated pizza slices themselves, explaining to each other how fractions work, before the teacher explains formally."
+        "synaptic_strengthening_factors": 2,
+        "theory_practice_grounding": 3,
+        "overall": 2.8,
+        "rationale": "All five 5E phases are present and in order, but Explore is a teacher demonstration, so it does not do the job the model gives it; that is 'all five present but weak integration' (3). Students watch and do not handle the materials, so the procedural pathway is missing, their own episode of doing is missing, and nothing is spaced or retrieved later (2). Segments are a reasonable length (4). The pizza hook is relatable but the stakes are low (3). Of the five strengthening factors only repetition, in one massed session, and a mild emotional hook are present; application is limited to guided problems and imagination is not supported (2). The 5E model is followed in name, and no design decision is traced to research (3). Letting students cut and fold paper pizzas before the explanation would lift the first, second, and fifth dimensions together."
       },
       "notes": "This represents a common teaching challenge: wanting to show/demonstrate vs. letting learners do. The fix is straightforward: in Explore, have students cut/fold paper pizza slices, measure, and report what they observe ('What did you notice when you cut the pizza in half?') before the teacher explains fractions formally. This engages the procedural pathway and strengthens the overall learning."
     },

@@ -65,7 +65,7 @@ _MOCK_RESPONSES: dict[str, GUIDEResult] = {}
 
 def _mock_evaluate_standalone(archetype_name, user_input, assistant_output,
                               context="N/A", reference="N/A",
-                              model_name="claude-sonnet-4-20250514", api_key=None) -> GUIDEResult:
+                              model_name="claude-sonnet-5-5", api_key=None) -> GUIDEResult:
     """Return the pre-loaded mock result for this archetype."""
     if archetype_name not in _MOCK_RESPONSES:
         raise AssertionError(

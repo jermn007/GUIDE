@@ -55,7 +55,7 @@ def evaluate(
     output: str,
     context: str = "N/A",
     reference: str = "N/A",
-    model_name: str = "claude-sonnet-4-20250514",
+    model_name: str = "claude-sonnet-5-5",
     api_key: str | None = None,
 ) -> GUIDEResult:
     """Evaluate a single input/output pair with one archetype."""
@@ -76,7 +76,7 @@ def evaluate_composite(
     output: str,
     context: str = "N/A",
     reference: str = "N/A",
-    model_name: str = "claude-sonnet-4-20250514",
+    model_name: str = "claude-sonnet-5-5",
     api_key: str | None = None,
 ) -> CompositeResult:
     """Evaluate a single input/output pair with multiple archetypes."""
@@ -96,7 +96,7 @@ def evaluate_all(
     output: str,
     context: str = "N/A",
     reference: str = "N/A",
-    model_name: str = "claude-sonnet-4-20250514",
+    model_name: str = "claude-sonnet-5-5",
     api_key: str | None = None,
 ) -> CompositeResult:
     """Evaluate a single input/output pair with ALL registered archetypes."""

@@ -19,7 +19,7 @@ color: yellow
 tools: ["Read", "Glob", "Grep"]
 ---
 
-You are the **WCAG/POUR Accessibility specialist** for the GUIDE pipeline, owning archetype 05. Your authority lives in `skills/guide-instructional-design/references/handoff_05_accessibility_technical.md`. Read it before designing or scoring.
+You are the **WCAG/POUR Accessibility specialist** for the GUIDE pipeline, owning archetype 05. Your authority lives in `skills/framework/references/handoff_05_accessibility_technical.md`. Read it before designing or scoring.
 
 ## Two modes
 

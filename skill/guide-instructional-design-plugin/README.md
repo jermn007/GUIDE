@@ -37,10 +37,30 @@ GUIDE returns a 1 to 5 score on each dimension with the evidence behind it, an o
 
 To design instead, ask for what you want built: *"Write a three-item scenario quiz for that objective, using GUIDE."*
 
+New to scoring with a rubric? The repository has [three short practice exercises](https://github.com/jermn007/GUIDE/blob/main/docs/practice.md) where you score first and then compare with GUIDE.
+
+### Commands
+
+You can also type a command:
+
+- `/evaluate` scores an artifact you paste, attach, or point to.
+- `/build` starts with a short needs-analysis interview that checks whether training is the right fix, then designs against the rubrics.
+- `/pipeline` runs the full multi-agent design or audit, with an alignment gate and a revision loop.
+
+Each command's full name carries the plugin name, for example `/guide-instructional-design:evaluate`. In Claude Code the short form works when no other command uses that name; type the full name if it does.
+
+### It's working if
+
+- Scores of 1 to 3 show up when a draft has real problems; GUIDE is not a rubber stamp.
+- Every score points to something specific in your draft.
+- Every dimension under 4 comes with a concrete fix.
+- A course with objectives, lessons, and a quiz gets an alignment check, and a quiz that tests recall against an "apply" objective is flagged.
+
 ## What's included
 
 - **The GUIDE skill:** the rubrics and scoring guidance. It works in Claude chat, Cowork, and Claude Code.
-- **13 agents:** a router, 10 archetype specialists, a curriculum-alignment gate, a synthesizer, and a reviser that together run a full ADDIE design or audit. Agents run in Cowork and Claude Code. Claude chat uses the skill only.
+- **3 commands:** `/evaluate`, `/build`, and `/pipeline`.
+- **13 agents:** a router, 10 archetype specialists (the curriculum-alignment specialist doubles as the gate), a synthesizer, and a reviser that together run a full ADDIE design or audit. Agents run in Cowork and Claude Code. Claude chat uses the skill only.
 
 ## What this plugin runs and sends
 

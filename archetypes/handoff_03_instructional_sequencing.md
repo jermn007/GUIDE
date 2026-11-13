@@ -3,6 +3,8 @@
 
 **Purpose**: Design and evaluate lesson plans, course outlines, module structures, and learning paths for pedagogical coherence, event coverage, and instructional effectiveness. The dimensions below work in both directions: sequence against them, or score an existing sequence.
 
+**When this is skipped** (an illustrative scenario): A two-hour workshop opens with forty minutes of slides, moves to a demo, and ends as time runs out, just before the practice. People leave able to describe the skill and unable to do it, and their manager concludes the training did not work. If you have ever cut the practice to fit the agenda, this archetype shows what that trade costs the learner.
+
 **Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
 - Walk Gagné's nine events in order; don't skip gain-attention, recall of prior learning, or assessment/retention.
 - Match the strategy to the learning domain (intellectual skill vs. attitude vs. motor skill).
@@ -45,6 +47,8 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 - **3**: Six to seven events present; one to two missing or vague.
 - **2**: Four to five events present; multiple missing.
 - **1**: Fewer than four events; no clear instructional structure.
+
+Events may be reordered; score on whether each one is present, not on strict Gagné order.
 
 ### Learning Domain Alignment (v3.1.0: ARCS integrated)
 - **5**: Learning domain explicitly identified; all strategies match domain. For the Attitudes domain or any motivationally-sensitive content, ARCS is explicitly designed in.
@@ -158,7 +162,28 @@ Evaluate the following instructional artifact.
 ## REFERENCE (if available)
 {reference}
 
-Score using the rubric above. Return only the JSON object.
+Score using the rubric above. Return only the JSON object in this format:
+{
+  "scores": {
+    "gagne_events_coverage": <1-5>,
+    "learning_domain_alignment": <1-5>,
+    "sequencing_logic": <1-5>,
+    "scaffolding_gradual_release": <1-5>,
+    "practice_feedback_integration": <1-5>,
+    "transfer_retention_design": <1-5>,
+    "overall": <mean of all 6>
+  },
+  "rationale": {
+    "gagne_events_coverage": "<brief explanation>",
+    "learning_domain_alignment": "<brief explanation>",
+    "sequencing_logic": "<brief explanation>",
+    "scaffolding_gradual_release": "<brief explanation>",
+    "practice_feedback_integration": "<brief explanation>",
+    "transfer_retention_design": "<brief explanation>"
+  },
+  "severity_flags": ["<critical issue 1>", "<critical issue 2>"],
+  "improvement_suggestions": ["<suggestion 1>", "<suggestion 2>"]
+}
 ```
 
 ---

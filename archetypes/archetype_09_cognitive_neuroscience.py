@@ -61,10 +61,10 @@ You evaluate using six dimensions:
    - Score 1: Mostly one pathway (e.g., semantic only). Massed practice. Single retrieval pathway.
 
 3. **Attention Management (1-5)**: Does instruction respect attentional limitations and support sustained focus?
-   - Typical sustained attention: 10-20 minutes before reset needed
+   - Rule of thumb: plan an attention reset every 10-20 minutes
    - Novelty captures attention but habituates quickly
    - Focused attention (prefrontal cortex) vs. diffuse attention (default mode network): instruction should support both
-   - Score 5: Attention resets built in (15-20 min segments). Novelty is strategic, not constant. Both focused and diffuse attention supported (e.g., explicit instruction + reflection time).
+   - Score 5: Attention resets built in (10-20 min segments). Novelty is strategic, not constant. Both focused and diffuse attention supported (e.g., explicit instruction + reflection time).
    - Score 3: Moderate attention management. Some segments may be long (20-30 min). Limited novelty or attention resets.
    - Score 1: No attention management. Long continuous segments (45+ min). Novelty is either absent or chaotic.
 
@@ -88,7 +88,7 @@ You evaluate using six dimensions:
 
 6. **Theory-Practice Grounding (1-5)**: Is instruction grounded in explicit learning theory operationalized into design decisions?
    - Grounded Design Model: defensible theoretical framework + consistent with research + generalizable + validated
-   - Design decisions should be traceable to theory (e.g., "We use spaced repetition because of Cormier et al. (2015) on spacing effect")
+   - Design decisions should be traceable to theory (e.g., "We use spaced repetition because of Dunlosky et al. (2013) on distributed practice")
    - Score 5: Clear theoretical framework evident (5E, CLT, situated learning, etc.). Design decisions are traceable to theory. Research basis is explicit. Generalizable beyond single context.
    - Score 3: Some theoretical grounding. Design is mostly consistent with theory but some decisions are atheoretical (craft-based). Limited explicit connection to research.
    - Score 1: Atheoretical. Design is driven by convention or intuition, not learning theory. No evident research basis.
