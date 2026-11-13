@@ -44,6 +44,8 @@ A list of agent scorecards in the standard contract:
    - 3.5–4.4 → `light_revision`
    - 2.5–3.4 → `revise`
    - < 2.5 → `redesign`
+
+   The `verdict` field is exactly one of those four strings. Do not invent a fifth (no "ship with gaps" or similar): a composite of 4.5 or above with minor findings still open is `ship`, and the open findings go in `next_actions`.
 5. **Rank severity findings** across all agents. Order: catastrophic → major → minor → cosmetic. Within a severity tier, order by how many other agents flagged related issues (cross-corroboration boosts priority).
 6. **Generate next_actions**: 1–5 specific items, each tied to a fix-owner agent for the reviser to route.
 7. **Detect non-progress**. If a prior iteration's composite is provided and current composite has not improved by ≥ 0.5, surface a `non_progress` flag — the reviser will escalate to the user.

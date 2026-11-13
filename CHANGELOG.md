@@ -26,7 +26,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - `EVALUATE.md` and `DESIGN.md` in the skill. `SKILL.md` now routes to one of them, so each run reads only the procedure for its mode, and each ends on a checkable "Done when" list (every score cites evidence, every dimension under 4 has a fix).
 - `build_skill.py` checks that each specialist agent's output contract uses the same dimension keys as its handoff, and `test_judge_schemas.py` checks that each handoff's output JSON matches its Python judge.
 - Plugin README: a Commands section and an "It's working if" section.
-- `STATUS.md` records a live run of each command in Claude Code on 2026-11-12.
+- `STATUS.md` records a live run of each command in Claude Code on 2026-11-12, including the pipeline's needs-analysis stop, fail-fast gate, and one revision round.
 - Zenodo DOI: a DOI badge and citation in the README, and the concept DOI ([10.5281/zenodo.22949871](https://doi.org/10.5281/zenodo.22949871)) in `CITATION.cff`. v3.4.1 is archived as [10.5281/zenodo.22949872](https://doi.org/10.5281/zenodo.22949872).
 - Plugin `README.md`, in preparation for listing GUIDE in Anthropic's Claude directory. The directory requires a README of at least 40 words in the plugin folder and shows it as the listing's description. It says what each archetype is for, which parts load in Claude chat versus Cowork and Claude Code, and that the plugin runs and sends nothing.
 - Plugin `displayName` ("GUIDE Instructional Design") in `plugin.json`.
@@ -46,6 +46,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - The three-alignments diagram's source line is darker (it was 2.45:1 against its background; it is now about 7:1), and the PNG is re-rendered from the SVG.
 - The archetype index no longer opens with a "What's new in v3.1.0" block.
 - Archetype 02: Objective Congruence scores the item mapping when objective quality and mapping disagree, and the Coverage Gaps flag can be judged from the objectives when there is no blueprint.
+- The synthesizer's verdict is held to its four values; in a live run it had returned a fifth. `/guide-pipeline` now states the fail-fast, cap, and verdict rules in the prompts of the gate, synthesizer, and reviser, because an agent could read the rubrics but not `PIPELINE.md`.
 - `/guide-pipeline` stops when needs analysis finds training is the wrong fix, passes the reviser and synthesizer the inputs their contracts require, and skips the fail-fast gate in review runs. `PIPELINE.md` and the router and gate agents now name the main conversation as the orchestrator.
 - Threshold bands in the archetype index state their lower bounds, so an overall such as 4.47 has a band.
 - `STATUS.md`: the Claude directory listing is live (published 2026-11-09).

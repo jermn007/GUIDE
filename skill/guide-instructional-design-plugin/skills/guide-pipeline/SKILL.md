@@ -22,6 +22,14 @@ specialist to read its rubric before it designs or scores:
 - Rubrics: `${CLAUDE_PLUGIN_ROOT}/skills/guide-instructional-design/references/`
 - Pipeline design: `${CLAUDE_PLUGIN_ROOT}/PIPELINE.md`
 
+An agent may be able to read the rubrics but not `PIPELINE.md`. So state these rules in the prompt of the gate, the
+synthesizer, and the reviser instead of relying on that file:
+
+- Fail-fast: block when `objective_strategy_coherence` is below 4.
+- Cap: when `objective_assessment_coherence` is 1 or 2, the composite is capped at 3.0.
+- Verdict, exactly one of four values: `ship` at 4.5 and up, `light_revision` from 3.5, `revise` from 2.5,
+  `redesign` below 2.5.
+
 Also ask every specialist to start each severity flag with its tier (catastrophic, major, minor,
 or cosmetic), so the synthesizer can rank them.
 
@@ -43,7 +51,7 @@ or cosmetic), so the synthesizer can rank them.
    again. If it still blocks, ask the user. A review run has no Design phase, so skip this gate.
 5. **Close with the gate and the verdict.** Run `guide-curriculum-alignment` in
    `acceptance_gate` mode over every artifact, then `guide-synthesizer` over all scorecards. Its
-   verdict is ship, light_revision, revise, or redesign.
+   verdict is exactly one of ship, light_revision, revise, or redesign.
 6. **Revise when asked for.** Keep a round counter that starts at 1. On light_revision or
    revise, spawn `guide-reviser` with the synthesizer's output, the router's `dispatch_plan`, and
    the counter, then run its `revision_plan` as written (it ends with the gate and the
