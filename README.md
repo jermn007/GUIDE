@@ -21,7 +21,7 @@
 
 </div>
 
-**Latest:** [v3.5.0](https://github.com/jermn007/GUIDE/releases/tag/v3.5.0) (November 12, 2026) adds three plugin commands (`/evaluate`, `/build`, `/pipeline`), slims the rubrics the skill loads by about a fifth, and tightens the assessment rubric for single items, test type, and answer keys.
+**Latest:** [v3.5.0](https://github.com/jermn007/GUIDE/releases/tag/v3.5.0) (November 13, 2026) adds three plugin commands (`/evaluate`, `/build`, `/pipeline`), slims the rubrics the skill loads by about a fifth, and tightens the assessment rubric for single items, test type, and answer keys.
 
 ## What GUIDE is
 

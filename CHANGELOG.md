@@ -6,7 +6,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
-## [3.5.0] - 2026-11-12
+## [3.5.0] - 2026-11-13
 
 ### Added
 - Archetype 02 (Assessment Design): guidance for scoring a single item or a short sample. Four dimensions score normally; Validity Evidence and Reliability Considerations are capped at 3 for a sample, and the item-count and coverage flags do not apply. An artifact presented as the complete assessment still meets the full thresholds.
