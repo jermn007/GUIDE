@@ -52,7 +52,9 @@ or cosmetic), so the synthesizer can rank them.
 4. **Honor the fail-fast gate.** In a build or partial run, after the Design phase, run
    `guide-curriculum-alignment` in `fail_fast` mode. When its `decision` is `block`, show the
    user the `block_reason`, re-run the Design agent it names once with that fix, and check
-   again. If it still blocks, ask the user. A review run has no Design phase, so skip this gate.
+   again. If it still blocks, ask the user. Once it passes, re-run any other Design specialist whose
+   scorecard flagged the problem the fix removed, so no archetype goes into the composite stale or
+   gets left out of it. A review run has no Design phase, so skip this gate.
 5. **Close with the gate and the verdict.** Run `guide-curriculum-alignment` in
    `acceptance_gate` mode over every artifact, then `guide-synthesizer` over all scorecards. Its
    verdict is exactly one of ship, light_revision, revise, or redesign.
