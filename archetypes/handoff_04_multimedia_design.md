@@ -59,10 +59,10 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 
 ### Extraneous Load Reduction
 - **5**: All five principles evident; content is focused and efficient; no seductive details
-- **4**: Four principles evident; one minor violation
-- **3**: Three to four principles present; one to two violations
-- **2**: Two to three principles present; multiple violations
-- **1**: Few principles; multiple violations; high extraneous load
+- **4**: Four of the five principles applied; one minor violation
+- **3**: Three principles applied; two violations
+- **2**: Two principles applied; three or more violations
+- **1**: One principle or none; high extraneous load throughout
 
 **Principle Checklist**:
 1. **Coherence**: Is the content focused on learning objective? Are there interesting-but-irrelevant tangents? (E.g., A video on photosynthesis shouldn't spend 2 minutes on the history of photosynthesis research unless objective requires it.)
@@ -96,8 +96,8 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 
 ### Generative Processing Support
 - **5**: Personalized conversational tone ("you"), human voice, genuine engagement (no distracting presenter images)
-- **4**: Mostly personalized; human voice or good synthesis; adequate engagement
-- **3**: Some personalization; mixed voice quality; adequate engagement
+- **4**: Mostly personalized; human voice or good synthesis; engagement cues in most segments
+- **3**: Some personalization; mixed voice quality; engagement cues only occasional
 - **2**: Formal tone; poor voice; minimal engagement cues
 - **1**: Highly formal, robotic voice, or very distracting presenter
 
@@ -216,7 +216,7 @@ You assess e-learning modules, videos, interactive media, and slide-based course
 - Embodiment: Genuine engagement cues (presenter, animations)
 - Image Principle: No distracting speaker images; focus on content
 - Score 5: Personalized tone, human voice, engaging (no distracting presenter)
-- Score 3: Some personalization; mixed voice quality; adequate engagement
+- Score 3: Some personalization; mixed voice quality; engagement cues only occasional
 - Score 1: Formal tone, poor voice, distracting presenter images
 
 5. **Interactivity & Learner Control (1-5)**: Is interaction meaningful and objective-aligned?
@@ -358,7 +358,7 @@ Before deploying at scale:
 
 1. **Calibrate the Rubric**: Run 5-10 diverse multimedia samples (videos, modules, slide decks) through your chosen model. Compare results to your expert judgment. Adjust dimension wording if scores are skewed.
 2. **Test Edge Cases**: Validate against the 6 edge cases in `edge_cases_04.json`. All should score within your expected range.
-3. **Document Threshold**: Define what score ranges mean (e.g., 4.5+ = "ready for launch", 3.5-4.4 = "revise", < 3.5 = "redesign").
+3. **Document Threshold**: Define what score ranges mean (GUIDE's defaults: 4.5+ = ship, 3.5-4.4 = light revision, 2.5-3.4 = revise, below 2.5 = redesign).
 
 ---
 

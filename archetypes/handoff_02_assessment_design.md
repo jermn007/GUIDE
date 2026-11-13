@@ -79,7 +79,7 @@ When objective quality and item mapping point to different scores, score the map
 - **2**: Too few items or skewed difficulty; vague scoring
 - **1**: Insufficient items; all same difficulty; no scoring consistency rules
 
-A complete assessment with no answer key or scoring guide scores no higher than 2 here: nothing shows that two scorers would agree. Judge item sets on split-half and internal-consistency principles, and rubrics on inter-rater reliability (clear, distinct descriptors that two scorers would apply the same way).
+The item counts are for an instrument that covers a module or unit. For a check on one narrow objective, judge whether the items exhaust what the objective asks (every step, every case), state that the scope is a single objective, and raise the Insufficient Item Count flag only when they do not. A complete assessment with no answer key or scoring guide scores no higher than 2 here: nothing shows that two scorers would agree. Judge item sets on split-half and internal-consistency principles, and rubrics on inter-rater reliability (clear, distinct descriptors that two scorers would apply the same way).
 
 ### Inclusivity & Fairness
 - **5**: Accessible language; no bias; considers diverse learners (ELL, neurodivergent, disabilities)
@@ -96,7 +96,7 @@ The item-count thresholds depend on how scores will be read, so settle this befo
 
 ### Scoring a single item or a short sample
 Four dimensions can be judged from the items in hand: Bloom's Alignment, Objective Congruence, Item Construction Quality, and Inclusivity & Fairness. Validity Evidence and Reliability Considerations describe a whole instrument, so the rule depends on what the artifact claims to be:
-- **A sample from a larger instrument** (one item, or an excerpt): score Validity Evidence on whether the item tests something its objective makes essential, and Reliability Considerations on whether it has one defensible key and can be scored the same way twice. Give neither more than 3, and say in the rationale that blueprint coverage, item count, and difficulty spread could not be judged. Do not raise the Insufficient Item Count or Coverage Gaps flags. A pasted sample often omits its key: when one option is defensibly correct, the no-answer-key cap and the Missing or Wrong Answer Key flag do not apply, though a key that marks an indefensible option is still flagged.
+- **A sample from a larger instrument** (one item, or an excerpt): score Validity Evidence on whether the item tests something its objective makes essential, and Reliability Considerations on whether it has one defensible key and can be scored the same way twice. 3 is the ceiling for both, not the score: an item that fails these tests scores lower on merit. Say in the rationale that blueprint coverage, item count, and difficulty spread could not be judged. Do not raise the Insufficient Item Count or Coverage Gaps flags. A pasted sample often omits its key: when one option is defensibly correct, the no-answer-key cap and the Missing or Wrong Answer Key flag do not apply, though a key that marks an indefensible option is still flagged.
 - **Presented as the complete assessment**: the thresholds apply in full. One item cannot sample a domain or show a difficulty spread, so both dimensions score low and the Insufficient Item Count flag applies.
 - **When you cannot tell**, ask. If you cannot ask, score it as a sample and say so.
 
@@ -142,7 +142,7 @@ You assess quiz items, test blueprints, rubrics, and other assessment instrument
 
 5. **Reliability Considerations (1-5)**: Are there enough items, appropriate difficulty, consistent scoring?
 - Split-half, internal consistency principles; inter-rater reliability for rubrics
-- Minimum: ~15 items for norm-referenced; ~10-15 for criterion-referenced
+- Minimum: ~15 items for norm-referenced; ~10-15 for criterion-referenced (for an instrument covering a module or unit; for a single narrow objective, judge whether the items exhaust the objective)
 - Criterion-referenced = scored against a fixed standard (cut score, mastery of objectives); norm-referenced = learners ranked against each other (percentiles, curves, selection). If the artifact does not say, assume criterion-referenced and state it
 - A complete assessment with no answer key or scoring guide: score no higher than 2
 - Difficulty spread: avoid all easy or all hard
@@ -216,7 +216,7 @@ Look for and flag critical issues:
 2. **Missing Bloom's Higher Order**: All items at Remember/Understand (if objectives call for Apply+)
 3. **Ambiguous Correct Answers**: More than one defensible correct answer
 4. **Biased or Offensive Content**: Stereotypes, cultural insensitivity, ableist language
-5. **Insufficient Item Count**: Fewer than 10 items for criterion-referenced; fewer than 15 for norm-referenced. Applies to a complete assessment, not to a single item or excerpt submitted as a sample
+5. **Insufficient Item Count**: Fewer than 10 items for criterion-referenced; fewer than 15 for norm-referenced. Applies to a complete assessment covering a module or unit, not to a sample or to a single-objective check whose items exhaust the objective
 6. **No Scoring Rubric**: Subjective assessment with no clear scoring criteria
 7. **Coverage Gaps**: Critical content the objectives name is not assessed (judge from the blueprint, or from the objectives when there is none). Applies to a complete assessment, not to a sample
 8. **Missing or Wrong Answer Key**: A complete assessment whose selected-response items have no key, or any key that marks an indefensible option, so the items cannot be scored consistently
@@ -272,7 +272,7 @@ Before deploying at scale:
 
 1. **Calibrate the Rubric**: Run 5-10 diverse assessment samples through your chosen model. Compare results to your expert judgment. Adjust dimension wording if score distributions are skewed.
 2. **Test Edge Cases**: Validate against the 6 edge cases in `edge_cases_02.json`. All should score within your expected range.
-3. **Document Threshold**: Define what score ranges mean for your context (e.g., 4.5+ = "ready for deployment", 3.5-4.4 = "revise", < 3.5 = "redesign").
+3. **Document Threshold**: Define what score ranges mean for your context (GUIDE's defaults: 4.5+ = ship, 3.5-4.4 = light revision, 2.5-3.4 = revise, below 2.5 = redesign).
 
 ---
 

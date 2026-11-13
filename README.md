@@ -148,20 +148,20 @@ Each archetype maps to a phase of the ADDIE lifecycle. Archetype 10 checks that 
 
 | # | Archetype | Use it for | ADDIE phase | Grounded in |
 |---|-----------|-----------|-------------|-------------|
-| 07 | Needs Analysis | training requests, performance gaps, objectives | Analyze | Rossett, Kaufman, Gilbert, Keller |
-| 03 | Instructional Sequencing | lesson plans, course outlines, learning paths | Design | Gagne, Reigeluth, van Merrienboer, Keller |
-| 08 | Story Design | scenarios, case studies, branching, role-play | Design | Campbell, Vogler, Harmon, Snyder |
-| 09 | Cognitive Neuroscience | memory, attention, emotion, the 5E model | Design | Kandel, Sousa, Medina, Ausubel, Brown |
-| 04 | Multimedia Design | e-learning, video, slides, interactive media | Develop | Mayer, Paivio, Sweller |
-| 05 | Accessibility | web and LMS content, digital materials | Develop | WCAG, CAST UDL, Section 508 |
+| 07 | Needs Analysis | training requests, performance gaps, objectives | Analyze | Van Tiem, Kaufman, Mager, Keller |
+| 03 | Instructional Sequencing | lesson plans, course outlines, learning paths | Design | Gagne, Merrill, Keller, Vygotsky |
+| 08 | Story Design | scenarios, case studies, branching, role-play | Design | Campbell, Snyder, the Story Circle |
+| 09 | Cognitive Neuroscience | memory, attention, emotion, the 5E model | Design | Bybee (5E), Ausubel, Brown, Posner and Rothbart |
+| 04 | Multimedia Design | e-learning, video, slides, interactive media | Develop | Mayer, Clark, Sweller |
+| 05 | Accessibility | web and LMS content, digital materials | Develop | WCAG 2.1, CAST UDL, Nielsen |
 | 01 | Adult Learning Communication | chatbot and help answers for learning professionals | Implement | Knowles, Mezirow, Sweller, Ausubel |
-| 02 | Assessment Design | quizzes, tests, item banks, rubrics | Evaluate | Bloom, Webb, Messick |
-| 06 | Formative Evaluation | evaluation plans, usability tests, pilots | Evaluate | Scriven, Kirkpatrick, Stufflebeam |
+| 02 | Assessment Design | quizzes, tests, item banks, rubrics | Evaluate | Anderson and Krathwohl, Mager, Kubiszyn and Borich |
+| 06 | Formative Evaluation | evaluation plans, usability tests, pilots | Evaluate | Bordonaro, Dick and Carey, Nielsen |
 | 10 | Curriculum Alignment | do objectives, instruction, and assessment agree? | Across all phases | Tyler, Anderson and Krathwohl, Webb, Mager, Dick and Carey, Wiggins and McTighe, Reigeluth, Hirumi |
 
 ### Sources
 
-Every dimension cites its research. Full citations are in each archetype's rubric in [`archetypes/`](archetypes) (the `handoff_*.md` files) and in the References section of [`GUIDE_Rubric_Document.docx`](GUIDE_Rubric_Document.docx), the printable version of the whole framework. [`archetypes/discipline_alignment_crosswalk.md`](archetypes/discipline_alignment_crosswalk.md) maps each archetype to the IBSTPI, ATD, and ISPI professional standards. That mapping is the author's own and is not endorsed by those organizations.
+Every name in the table above is cited in that archetype's rubric. Full citations are in each archetype's rubric in [`archetypes/`](archetypes) (the `handoff_*.md` files) and in the matching archetype section of [`GUIDE_Rubric_Document.docx`](GUIDE_Rubric_Document.docx), the printable version of the whole framework. [`archetypes/discipline_alignment_crosswalk.md`](archetypes/discipline_alignment_crosswalk.md) maps each archetype to the IBSTPI, ATD, and ISPI professional standards. That mapping is the author's own and is not endorsed by those organizations.
 
 <details>
 <summary><strong>The 13-agent ADDIE pipeline</strong></summary>
@@ -189,14 +189,14 @@ GUIDE is scored against its own rubrics at most releases. Six archetypes apply t
 | v3.2.3 | 4.3 / 5 | 4.2 / 5 | [v3.2.3](self-evaluations/GUIDE_Self_Evaluation_v3.2.3.md) |
 | v3.3.0 | 4.3 / 5 | 4.3 / 5 | [v3.3.0](self-evaluations/GUIDE_Self_Evaluation_v3.3.0.md) |
 | v3.4.0 | 4.4 / 5 | 4.3 / 5 | [v3.4.0](self-evaluations/GUIDE_Self_Evaluation_v3.4.0.md) |
-| v3.5.0 | 4.1 / 5 | 4.1 / 5 | [v3.5.0](self-evaluations/GUIDE_Self_Evaluation_v3.5.0.md) |
+| v3.5.0 | 4.2 / 5 | 4.2 / 5 | [v3.5.0](self-evaluations/GUIDE_Self_Evaluation_v3.5.0.md) |
 
 Highlights:
 
 - **v3.1.1** applied archetype 10 to GUIDE for the first time. It scored 2 on Discipline Alignment because GUIDE did not map to a professional competency framework.
 - **v3.3.0** added the discipline crosswalk and raised that score from 2 to 4. It stops at 4 because a self-published crosswalk is not accreditation.
 - **v3.4.0** brought the printable rubric back to parity and added the first diagram, which raised Multimedia Principle Compliance from 3 to 4.
-- **v3.5.0** scored the living framework and the printable rubric together, re-reading every dimension against its anchor, and came out at 4.1, down from 4.4. Two dimensions fell because of this release: the printable rubric trails the updated assessment rubric, and the new rules and commands are not yet tested. The other eight are corrections to scores that had been carried forward on more generous readings, so the number fell mainly because the scoring got stricter. The report lists what to fix.
+- **v3.5.0** scored the living framework and the printable rubric together, re-reading every dimension against its anchor, and came out at 4.2, down from 4.4. Six of the seven one-point drops are corrections to scores that had been carried forward on more generous readings, and one traces to this release (pipeline paths not yet run live), so the number fell because the scoring got stricter. The report lists what to fix next.
 
 v3.2.2 was packaging only, and v3.4.1 fixed only the Python output format for three archetypes, so neither was re-scored.
 
@@ -215,10 +215,11 @@ GUIDE/
 │   ├── edge_cases_XX.json                 # Labeled test cases (one file per archetype)
 │   └── handoff_XX_*.md                    # Rubrics: the single source of truth
 ├── assets/
-│   ├── three-alignments.png               # Diagram, rasterized for the docx
+│   ├── three-alignments.png               # Diagram, rasterized from the SVG for the docx
 │   └── three-alignments.svg               # Diagram used in this README
 ├── docs/
-│   └── art/                               # README hero (hero.html) and plugin icon (icon.py) sources, rendered PNGs
+│   ├── art/                               # README hero (hero.html) and plugin icon (icon.py) sources, rendered PNGs
+│   └── build_rubric_docx.py               # Regenerates the printable rubric's archetype sections from archetypes/
 ├── self-evaluations/                      # One self-evaluation per scored release
 ├── skill/
 │   ├── guide-instructional-design/        # Canonical skill source
@@ -227,13 +228,14 @@ GUIDE/
 │   └── build_skill.py                     # Regenerates skill references and plugin mirror from archetypes/
 ├── CHANGELOG.md                           # Release history
 ├── CITATION.cff                           # Citation metadata (Cite this repository)
-├── GUIDE_Rubric_Document.docx             # Printable rubric (v3.5.0)
+├── GUIDE_Rubric_Document.docx             # Printable rubric (v3.5.0); archetype sections are generated
 ├── Installing-GUIDE-in-Claude.pdf         # Install guide with screenshots
 ├── LICENSE                                # Apache License 2.0
 ├── NOTICE                                 # Copyright and attribution
 ├── PRIVACY.md                             # Privacy policy (the plugin collects and sends nothing)
 ├── README.md                              # This file
 ├── STATUS.md                              # What works, what is open, what is next
+├── run_edge_cases.py                      # Checks the edge-case files; --live scores them with a judge
 ├── guide_base.py                          # Result types, registry, evaluation runners
 ├── guide_pipeline.py                      # ADDIE multi-archetype orchestrator
 ├── guide_registry.py                      # Public Python API

@@ -270,11 +270,13 @@ Score using the rubric above. Return only the JSON object in this format:
 
 ### Interpreting Results
 
-**High overall score (4.5-5.0):** Story-driven instruction is likely to engage learners deeply and support transfer. Consider for validation studies or as a model for other scenarios in your curriculum.
+**4.5-5.0 (ship):** Story-driven instruction is likely to engage learners deeply and support transfer. Consider for validation studies or as a model for other scenarios in your curriculum.
 
-**Mid-range (3.0-4.4):** Instruction is functional but has opportunities for improvement. Check severity flags and improvement suggestions for quick wins. Often, improving Learning-Narrative Integration or Transfer & Generalizability can lift the entire score.
+**3.5-4.4 (light revision):** Instruction works, with opportunities for improvement. Check severity flags and improvement suggestions for quick wins. Often, improving Learning-Narrative Integration or Transfer & Generalizability can lift the entire score.
 
-**Lower score (1.0-2.9):** Significant gaps. Consider whether the narrative structure supports instruction at all. May need redesign rather than revision.
+**2.5-3.4 (revise):** Real concerns. Fix the flagged dimensions before wide rollout.
+
+**Below 2.5 (redesign):** Significant gaps. Consider whether the narrative structure supports instruction at all. May need redesign rather than revision.
 
 ### Common Pitfalls to Flag
 

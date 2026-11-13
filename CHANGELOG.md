@@ -13,10 +13,17 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - Archetype 02: a rule for telling criterion-referenced from norm-referenced tests (cut score or mastery criterion versus percentiles, ranks, or a curve), with criterion-referenced as the stated default when the artifact does not say.
 - Archetype 02: a "Missing or Wrong Answer Key" severity flag, and a cap of 2 on Reliability Considerations when there is no answer key or scoring guide.
 - [v3.5.0 self-evaluation](self-evaluations/GUIDE_Self_Evaluation_v3.5.0.md), scored against the updated rubrics.
+- `docs/build_rubric_docx.py` regenerates the ten archetype sections of `GUIDE_Rubric_Document.docx` from the handoffs, so the printable rubric cannot drift from the rubrics. It also rebuilds the table of contents, adds an archetype 10 column to the coverage matrix, marks every table's header row, and gives the figure alt text. `--check` fails when the file is stale.
+- `run_edge_cases.py` checks every edge-case file without a model, and with `--live` scores each case with a judge and reports drift from the expected overall.
+- Four edge cases for archetype 02's new rules: a single-item sample, a keyless quiz on one objective, a recall quiz for recall objectives, and a short norm-referenced placement test.
+- Severity flag lists for archetypes 05 (Accessibility) and 06 (Formative Evaluation), in the handoffs and the Python judges. Every rubric now names the conditions to flag.
+- Archetype 02: the item-count minimum applies to an instrument covering a module or unit. A check on one narrow objective is judged on whether its items exhaust the objective.
+- Handoff 09: reference entries for Bjork (1994), Craik and Lockhart (1972), Kosslyn et al. (2006), Shepard and Metzler (1971), and Yerkes and Dodson (1908), which were cited in the text without one.
 - Three plugin commands: `/guide-review` scores an artifact, `/guide-design` starts with a needs-analysis interview before designing, and `/guide-pipeline` runs the 13-agent pipeline with the main conversation as orchestrator. They are user-invoked skills (`disable-model-invocation: true`), so they add nothing to Claude's context until typed. Before, the pipeline started only from phrasing, and its router agent had no way to spawn the other agents.
 - `EVALUATE.md` and `DESIGN.md` in the skill. `SKILL.md` now routes to one of them, so each run reads only the procedure for its mode, and each ends on a checkable "Done when" list (every score cites evidence, every dimension under 4 has a fix).
 - `build_skill.py` checks that each specialist agent's output contract uses the same dimension keys as its handoff, and `test_judge_schemas.py` checks that each handoff's output JSON matches its Python judge.
 - Plugin README: a Commands section and an "It's working if" section.
+- `STATUS.md` records a live run of each command in Claude Code on 2026-11-12.
 - Zenodo DOI: a DOI badge and citation in the README, and the concept DOI ([10.5281/zenodo.22949871](https://doi.org/10.5281/zenodo.22949871)) in `CITATION.cff`. v3.4.1 is archived as [10.5281/zenodo.22949872](https://doi.org/10.5281/zenodo.22949872).
 - Plugin `README.md`, in preparation for listing GUIDE in Anthropic's Claude directory. The directory requires a README of at least 40 words in the plugin folder and shows it as the listing's description. It says what each archetype is for, which parts load in Claude chat versus Cowork and Claude Code, and that the plugin runs and sends nothing.
 - Plugin `displayName` ("GUIDE Instructional Design") in `plugin.json`.
@@ -28,7 +35,13 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - Archetype 02's Bloom's Alignment anchors now score the match between each item and its objective, not how high the items reach. Before, a recall quiz for a recall objective could not score above 2. The Python judge (`assessment_design`, now v1.1.0), the assessment agent, and the printable rubric carry the same change.
 - `/guide-pipeline` gives every agent the absolute path of the rubric folder. The agents name their rubrics relative to the plugin, which they could not resolve from the user's project.
 - `EVALUATE.md` says where each handoff keeps its severity list (Severity Flags, Red Flags, or Common Pitfalls to Flag) and what to flag for the two handoffs that have none (05 and 06).
-- `GUIDE_Rubric_Document.docx` is stamped v3.5.0 and carries the new Bloom's Alignment anchors. The new archetype 02 guidance on samples, test type, and answer keys is in the handoff only.
+- `GUIDE_Rubric_Document.docx`: the archetype sections are now the handoffs' own text, so they carry every anchor, flag, and note in the rubrics. The document grew from about 60 pages to about 85.
+- Archetype 04: the Extraneous Load Reduction and Generative Processing Support anchors no longer overlap between adjacent scores.
+- Archetypes 05 and 06 use GUIDE's four score bands in their interpretation tables. Handoffs 01, 02, and 04 quote the same four bands in their calibration notes.
+- The "Grounded in" column in the README and the theorist column in the archetype index list only sources each rubric cites. Removed: Rossett, Gilbert, Reigeluth and van Merrienboer (from 03), Vogler, Harmon, Kandel, Sousa, Medina, Paivio, Section 508, Webb and Messick (from 02), Scriven, Kirkpatrick, and Stufflebeam.
+- Handoff 09 presents the 10-20 minute attention segment as a design rule of thumb, drops the claim that no other judge covers cognitive neuroscience, and cites Dunlosky et al. (2013) in its example where it cited a source it did not list.
+- The three-alignments diagram's source line is darker (it was 2.45:1 against its background; it is now about 7:1), and the PNG is re-rendered from the SVG.
+- The archetype index no longer opens with a "What's new in v3.1.0" block.
 - Archetype 02: Objective Congruence scores the item mapping when objective quality and mapping disagree, and the Coverage Gaps flag can be judged from the objectives when there is no blueprint.
 - `/guide-pipeline` stops when needs analysis finds training is the wrong fix, passes the reviser and synthesizer the inputs their contracts require, and skips the fail-fast gate in review runs. `PIPELINE.md` and the router and gate agents now name the main conversation as the orchestrator.
 - Threshold bands in the archetype index state their lower bounds, so an overall such as 4.47 has a band.
@@ -46,6 +59,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - Handoff 09 dated Dolcos, LaBar, and Cabeza's *Neuron* paper 2005. It is 2004.
 - The agent list in the READMEs and manifests counted the curriculum-alignment gate apart from the 10 specialists, which summed to 14. The gate is one of the 10; there are 13 agents.
 - `EVALUATE.md` pointed to a troubleshooting table that handoff 01 does not have.
+- Two edge cases stated an overall that was not the mean of their own scores (`edge_cases_02` borderline_01: 3.2, now 3.5; `edge_cases_03` borderline_01: 3.7, now 4.5). The new edge-case check found them.
+- The printable rubric's reader objectives promised judge prompts the document does not contain. The objective now points to the repository.
 
 ## [3.4.1] - 2026-09-24
 

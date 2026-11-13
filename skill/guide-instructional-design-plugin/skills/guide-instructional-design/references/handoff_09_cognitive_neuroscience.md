@@ -9,11 +9,11 @@
 
 ## Overview
 
-This archetype guides the design of, and evaluates, instruction for alignment with how memory, attention, and emotion actually function in the brain. It is the most differentiated archetype in the GUIDE framework-no other LLM-based judge operationalizes cognitive neuroscience into instructional design and evaluation.
+This archetype guides the design of, and evaluates, instruction for alignment with how memory, attention, and emotion actually function in the brain. It turns findings from cognitive neuroscience into criteria for designing and evaluating instruction.
 
 **Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
 - Sequence Explore before Explain (5E); let learners generate before you tell.
-- Engage multiple memory systems and chunk to ~15-20 minute attention spans (Posner & Rothbart).
+- Engage multiple memory systems and chunk into segments of roughly 10-20 minutes with a reset between them (a rule of thumb; see Attention Management).
 - Manage emotional stakes to strengthen encoding; use retrieval practice and spacing (Brown, Roediger & McDaniel), and tie each design choice to an explicit mechanism.
 
 Then run an evaluate-mode self-check against the scoring anchors below.
@@ -88,10 +88,10 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 | **2** | Poor attention management. Segments run 30-45+ minutes. Novelty is either absent or chaotic. Dominated by focused attention; no diffuse/reflection time. |
 | **1** | No attention management. Continuous 45+ minute segments. No pacing. Attention demands are unsustainable for most learners. |
 
-**Why it matters:** Human sustained attention typically lasts 10-20 minutes before the anterior cingulate cortex signals fatigue (anterior cingulate cortex involvement in sustained attention; Posner & Rothbart, 1998). Beyond this window, attention degrades and learning efficiency drops. Attention resets (brief breaks, topic changes, reflection time) allow the reticular activating system to reset. Diffuse attention (mind-wandering, reflection) is critical for memory consolidation and insight; constantly demanding focused attention prevents this.
+**Why it matters:** Sustained attention to a single activity is limited. The 10-20 minute segment used in the anchors is a design rule of thumb, not a measured limit; studies of attention during lectures disagree on the figure. What the research on attention networks does support (Posner & Rothbart, 1998) is that focused attention is effortful and regulated, so designs that vary the demand hold it better than designs that never let up. Attention resets (brief breaks, topic changes, reflection time) give learners a point to re-engage. Diffuse attention (mind-wandering, reflection) is critical for memory consolidation and insight; constantly demanding focused attention prevents this.
 
 **Attention systems:**
-- **Focused attention:** Dorsolateral prefrontal cortex, anterior cingulate-effortful, limited capacity, fatigues after ~15-20 min
+- **Focused attention:** Dorsolateral prefrontal cortex, anterior cingulate-effortful and limited in capacity, so it needs periodic resets
 - **Diffuse attention:** Default mode network, posterior cingulate-involuntary, supports memory consolidation and insight, needed for learning integration
 - **Novelty-driven attention:** Reticular activating system, anterior cingulate-captures attention but habituates quickly
 
@@ -135,10 +135,10 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 **The Five Factors:**
 
 1. **Repetition (Spacing Effect):** Spaced retrieval over time (not massed practice in one session). Brown, Roediger & McDaniel (2014) emphasize that spaced practice with interleaving produces stronger, more durable learning than blocked or massed practice. Dunlosky et al. (2013) on distributed practice.
-2. **Application (Transfer/Generation):** Problem-solving, authentic contexts, transfer to novel situations. Brown et al. (2014) call this "generation" - the act of producing answers rather than recognizing them. Bjork & Bjork (1992) on desirable difficulty.
+2. **Application (Transfer/Generation):** Problem-solving, authentic contexts, transfer to novel situations. Brown et al. (2014) call this "generation" - the act of producing answers rather than recognizing them. Bjork (1994) on desirable difficulties.
 3. **Memory (Multiple Encoding/Retrieval Practice):** Semantic + episodic + procedural pathways; variety in encoding contexts. Retrieval practice is the single most effective learning strategy (Brown et al., 2014). Craik & Lockhart (1972) on levels of processing.
 4. **Imagination (Mental Simulation):** Visualization, mental models, "what if" scenarios. Shepard & Metzler (1971) on mental rotation; Kosslyn et al. (2006) on visual imagery.
-5. **Strong Emotional Reactions (Salience):** Personal relevance, meaningful stakes, productive struggle. Dolcos et al. (2004) on emotion-memory interaction; Yerkes-Dodson law on optimal arousal.
+5. **Strong Emotional Reactions (Salience):** Personal relevance, meaningful stakes, productive struggle. Dolcos et al. (2004) on emotion-memory interaction; Yerkes & Dodson (1908) on optimal arousal.
 
 ---
 
@@ -148,7 +148,7 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 
 | Score | Indicators |
 |-------|-----------|
-| **5** | Explicit theoretical framework is evident (BSCS 5E, Cognitive Load Theory, situated learning, etc.). Design decisions are traceable to theory: e.g., "We use 15-minute segments because sustained attention (Posner & Rothbart, 1998) degrades after 15-20 minutes." Research basis is clear. Instruction is generalizable beyond a single context; design principles apply across domains. Following the Grounded Design Model: defensible theory + consistent with research + generalizable + validated. |
+| **5** | Explicit theoretical framework is evident (BSCS 5E, Cognitive Load Theory, situated learning, etc.). Design decisions are traceable to theory: e.g., "We use 15-minute segments with a reset between them because focused attention is effortful and limited (Posner & Rothbart, 1998)." Research basis is clear. Instruction is generalizable beyond a single context; design principles apply across domains. Following the Grounded Design Model: defensible theory + consistent with research + generalizable + validated. |
 | **4** | Clear theoretical grounding. Most design decisions are traceable to theory. Research basis is mostly explicit. Some generalizability across contexts. |
 | **3** | Some theoretical grounding. Design is mostly consistent with theory but some decisions are atheoretical (craft-based, "best practices" without theory). Limited explicit connection to research. Generalizability is unclear. |
 | **2** | Weak theoretical grounding. Design is driven partly by convention, intuition, or tradition. Limited research basis. Difficult to generalize. |
@@ -180,14 +180,19 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 ## Citation Sources
 
 - **Ausubel, D.P. (2000).** *The Acquisition and Retention of Knowledge: A Cognitive View.* Kluwer Academic Publishers.
+- **Bjork, R.A. (1994).** Memory and metamemory considerations in the training of human beings. In J. Metcalfe & A.P. Shimamura (Eds.), *Metacognition: Knowing about Knowing* (pp. 185-205). MIT Press.
 - **Brown, P.C., Roediger, H.L., & McDaniel, M.A. (2014).** *Make It Stick: The Science of Successful Learning.* Harvard University Press.
 - **BSCS (2006).** *The BSCS 5E Instructional Model: Origins and Effectiveness.*
 - **Bybee, R.W. (2002).** *Learning Science and the Science of Learning.* NSTA Press.
 - **Neuroscience Online.** University of Texas Medical School, Houston. (EME6646 course textbook)
 - **EME6646 Course Materials.** Learning, Instructional Design and Cognitive Neuroscience. UCF MA Instructional Systems.
+- **Craik, F.I.M., & Lockhart, R.S. (1972).** Levels of processing: A framework for memory research. *Journal of Verbal Learning and Verbal Behavior, 11*(6), 671-684.
 - **Dolcos, F., LaBar, K.S., & Cabeza, R. (2004).** Interaction between the amygdala and the medial temporal lobe memory system predicts better memory for emotional events. *Neuron, 42*(5), 855-863.
 - **Dunlosky, J., et al. (2013).** Improving students' learning with effective learning techniques: Promising directions from cognitive and educational psychology. *Psychological Science in the Public Interest, 14*(1), 4-58.
+- **Kosslyn, S.M., Thompson, W.L., & Ganis, G. (2006).** *The Case for Mental Imagery.* Oxford University Press.
 - **Posner, M.I., & Rothbart, M.K. (1998).** Attention, self-regulation and consciousness. *Philosophical Transactions of the Royal Society B, 353*, 1915-1927.
+- **Shepard, R.N., & Metzler, J. (1971).** Mental rotation of three-dimensional objects. *Science, 171*(3972), 701-703.
+- **Yerkes, R.M., & Dodson, J.D. (1908).** The relation of strength of stimulus to rapidity of habit-formation. *Journal of Comparative Neurology and Psychology, 18*(5), 459-482.
 
 ---
 
@@ -231,16 +236,18 @@ Return this shape when the user wants machine-readable output (scores are intege
 
 ### Interpreting Results
 
-**High overall score (4.5-5.0):** Instruction is neurologically grounded and likely to produce durable, transferable learning. Consider for scaling or as a model for other courses.
+**4.5-5.0 (ship):** Instruction is neurologically grounded and likely to produce durable, transferable learning. Consider for scaling or as a model for other courses.
 
-**Mid-range (3.0-4.4):** Instruction is functional but has neuroscience-grounded opportunities for improvement. Often, a single weak dimension (e.g., Attention Management) can be fixed without redesigning the whole course.
+**3.5-4.4 (light revision):** Instruction is sound, with neuroscience-grounded opportunities for improvement. Often a single weak dimension (e.g., Attention Management) can be fixed without redesigning the whole course.
 
-**Lower score (1.0-2.9):** Significant neuroscience violations. Consider whether the instruction implements *any* of the core neuroscience principles. May require substantial redesign.
+**2.5-3.4 (revise):** Several principles are missing or misapplied. Fix the flagged dimensions before wide rollout.
+
+**Below 2.5 (redesign):** Significant neuroscience violations. Consider whether the instruction implements *any* of the core neuroscience principles. May require substantial redesign.
 
 ### Common Pitfalls to Flag
 
 1. **Explain before Explore:** Declarative instruction (lecture) precedes procedural experience (hands-on). This violates the neurological sequence. Fix: Reverse order; let learners explore first, then explain.
-2. **No attention management:** 45-60 minute continuous segments with no breaks or topic shifts. Attention degrades after 15-20 minutes. Fix: Segment into 15-20 minute chunks with attention resets.
+2. **No attention management:** 45-60 minute continuous segments with no breaks or topic shifts. Fix: Segment into 10-20 minute chunks with attention resets.
 3. **Massed practice:** All repetition happens in one session or back-to-back days. Doesn't leverage spacing effect. Fix: Space retrieval over time (1 day, 3 days, 1 week post-instruction).
 4. **Single memory pathway:** Only semantic learning (lecture); no episodic (experience) or procedural (practice). Reduces encoding robustness. Fix: Engage all three pathways.
 5. **No emotional stakes:** Instruction is informational but learners don't care. Personal relevance is missing. Fix: Make learning personally meaningful; show real-world stakes.

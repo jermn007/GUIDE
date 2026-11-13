@@ -16,8 +16,8 @@ discriminates is useless, so give low scores where the evidence calls for them.
 4. **Raise severity flags** for every critical issue the handoff names (hallucination, no
    assessment, inaccessible to screen readers, training recommended for an environmental problem,
    and so on). The list sits under "Severity Flags", "Red Flags", or "Common Pitfalls to Flag",
-   depending on the handoff. Where a handoff has no such list (05, 06), flag anything that scores
-   a dimension at 1 or would exclude, mislead, or fail learners. Use Nielsen severity framing
+   depending on the handoff. Also flag anything outside the list that scores a dimension at 1
+   or would exclude, mislead, or fail learners. Use Nielsen severity framing
    (cosmetic / minor / major / catastrophic) for the archetypes the index lists under Nielsen
    severity ratings.
 5. **Give improvement suggestions**: 1-3 concrete next steps for each dimension under 4, drawn
@@ -51,6 +51,6 @@ several archetypes apply, give one scorecard per archetype and a short combined 
 - Every dimension has a score, and every score cites specific evidence from the artifact, or names
   what the artifact is missing (no blueprint, no answer key, no objectives).
 - Every dimension under 4 has at least one concrete fix.
-- Every severity condition the handoff lists was checked, and each one present is flagged. For a
-  handoff with no list, every dimension scored 1 is flagged.
+- Every severity condition the handoff lists was checked, and each one present is flagged, as is
+  every dimension scored 1.
 - The overall follows the archetype's own rule, and the verdict matches the threshold band.

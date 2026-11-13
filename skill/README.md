@@ -160,6 +160,16 @@ Because the skill edition omits the judge prompts, keep any scoring rule in the 
 
 > **Note:** The Python judge prompts (`archetypes/*.py`, `JUDGE_SYSTEM_PROMPT`) and the handoff markdown are separate artifacts (an executable prompt vs. a practitioner guide) and are not generated from each other; keep their rubric content in step when editing either. `python test_judge_schemas.py` checks that each handoff's output JSON uses the same dimension keys as its Python judge.
 
+## Printable rubric
+
+`GUIDE_Rubric_Document.docx` at the repo root has hand-written front and back matter, and ten archetype sections that are generated from the same handoffs:
+
+```bash
+python docs/build_rubric_docx.py
+```
+
+The script replaces everything from "Archetype 01" to "Severity Flagging" with a print edition of each handoff (the skill edition without the JSON output shape), stamps the cover with `GUIDE_VERSION`, rebuilds the table of contents, recomputes the archetype 10 column of the coverage matrix, marks every table's header row, and sets the figure's alt text. It needs `python-docx`. With Word installed it also fills in the page numbers; without Word they fill in when the file is first opened. Run it after editing a handoff, and never edit the generated sections by hand. `python docs/build_rubric_docx.py --check` fails when the file is older than its sources.
+
 ## Versioning
 
 Skill and plugin versions track the GUIDE framework version (currently 3.5.0). When bumping GUIDE:
@@ -168,7 +178,7 @@ Skill and plugin versions track the GUIDE framework version (currently 3.5.0). W
 2. Update `version` and `claudeSkill.frameworkVersion` in `guide-instructional-design/package.json`.
 3. Update `version` in `guide-instructional-design-plugin/.claude-plugin/plugin.json`.
 4. Update the version strings in `SKILL.md`, `references/00_archetype_index.md`, and `references/NOTICE.md`.
-5. Run `python skill/build_skill.py` to re-stamp the handoff footers and mirror the plugin.
+5. Run `python skill/build_skill.py` to re-stamp the handoff footers and mirror the plugin, then `python docs/build_rubric_docx.py` to re-stamp and regenerate the printable rubric.
 6. Commit and push to `main`. Marketplace installs (Option A) pick up the new `version` from the plugin's `plugin.json`; file installs (Option B) require attaching the rebuilt `.plugin` to a release.
 
 The marketplace manifest is `.claude-plugin/marketplace.json` at the repo root; it points at `skill/guide-instructional-design-plugin/` and does **not** carry its own per-plugin version (the plugin's `plugin.json` is the single version authority).

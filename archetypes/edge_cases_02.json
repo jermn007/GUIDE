@@ -87,7 +87,7 @@
         "validity_evidence": 2,
         "reliability_considerations": 4,
         "inclusivity_fairness": 4,
-        "overall": 3.2,
+        "overall": 3.5,
         "rationale": "COVERAGE PROBLEM: Despite excellent item quality (clear stems, plausible distractors, good Bloom's mix), the test blueprint reveals serious coverage gaps. 67% of items test glucose metabolism (Objective 1), while Objectives 2 and 3 receive minimal coverage. Item 12 is the only analysis-level item and the only diabetes-focused item. This violates basic validity principles: the test does not adequately sample the domain. Recommend: rebalance items to 25–30% glucose, 25–30% insulin, 25–30% glucagon, 15% diabetes; add 2–3 items for Objective 2 (Apply) to match Objective 1 coverage."
       }
     },
@@ -107,6 +107,78 @@
         "inclusivity_fairness": 4,
         "overall": 3.3,
         "rationale": "OBJECTIVE CLARITY ISSUE: The three stated objectives are vague ('understand ecosystems,' 'think critically') and do not follow Mager format (no behavior, condition, or criterion). It's unclear which items map to which objectives. Items 2, 6, and 8 are open-ended with no scoring rubrics (reliability issue). Item 8 is ambiguous—what counts as 'good' reasoning? Individual items are well-constructed and cognitively varied (Remember through Evaluate), but the quiz lacks transparent alignment. RECOMMENDATION: Rewrite objectives in Mager format with measurable criteria (e.g., 'Students will predict population changes in a food web when an organism is removed, with 80% accuracy'). Add rubrics for open-ended items. Explicitly map each item to an objective."
+      }
+    },
+    {
+      "case_id": "sample_01_single_item_apply_objective",
+      "label": "Sample: one recall item for an Apply objective (v3.5.0 sample rule)",
+      "description": "A single multiple-choice item pasted from a longer quiz, with its objective. Tests the rule for scoring a sample: four dimensions score normally, Validity Evidence and Reliability Considerations have a ceiling of 3, and the item-count, coverage, and answer-key flags do not apply.",
+      "input": "Objective: Given a customer complaint call, the agent will apply the LEAP de-escalation model to resolve the complaint without supervisor escalation. This is one item from a longer quiz; I want a quick read on it.",
+      "artifact": "What does the L in LEAP stand for?\nA) Listen\nB) Lead\nC) Learn\nD) Leave",
+      "reference": "None provided.",
+      "expected_scores": {
+        "blooms_alignment": 1,
+        "objective_congruence": 2,
+        "item_construction_quality": 3,
+        "validity_evidence": 2,
+        "reliability_considerations": 3,
+        "inclusivity_fairness": 4,
+        "overall": 2.5,
+        "rationale": "The objective's verb is apply; the item is recall of an acronym, so Bloom's Alignment is 1 and Objective Congruence cannot exceed 2 however well the objective is written. The stem is clear and has one defensible answer, but 'Leave' is a throwaway distractor. Scored as a sample: Validity Evidence is 2 on merit (the item tests a prerequisite, not what the objective makes essential) and Reliability Considerations sits at the ceiling of 3. Expected flags: Assessment-Objective Misalignment and Missing Bloom's Higher Order. Must not flag: Insufficient Item Count, Coverage Gaps, or Missing or Wrong Answer Key."
+      }
+    },
+    {
+      "case_id": "complete_01_keyless_single_objective_quiz",
+      "label": "Complete: three-item recall quiz with no answer key (v3.5.0 answer-key and scope rules)",
+      "description": "A three-item quiz presented as the complete assessment for one recall objective, with no answer key and one item with two defensible answers. Tests match-not-height (recall items for a recall objective are aligned), the answer-key cap, and the single-objective scope note.",
+      "input": "Here is my complete end-of-module quiz for new baristas. Objective: List the four steps of the milk-steaming procedure in order.",
+      "artifact": "Q1: Which step comes first? a) Purge the wand b) Stretch the milk c) Wipe the wand d) Texture the milk\nQ2: Which step comes last? a) Purge the wand b) Stretch c) Wipe and purge d) Texture\nQ3: True or false: milk is stretched before it is textured.",
+      "reference": "None provided.",
+      "expected_scores": {
+        "blooms_alignment": 5,
+        "objective_congruence": 3,
+        "item_construction_quality": 2,
+        "validity_evidence": 2,
+        "reliability_considerations": 1,
+        "inclusivity_fairness": 5,
+        "overall": 3.0,
+        "rationale": "The objective is recall (list), and all three items are recall, so Bloom's Alignment is 5: score the match, not the height. No item asks for the full four-step order the objective names, and the items ask the learner to select where the objective says list, so Objective Congruence is 3. Q2 offers both 'Purge the wand' and 'Wipe and purge', two defensible answers. The quiz is criterion-referenced by default and covers one objective, but its items do not exhaust that objective, there is no key, and there is one difficulty level. Expected flags: Ambiguous Correct Answers, Insufficient Item Count, Missing or Wrong Answer Key. Must not flag: Missing Bloom's Higher Order."
+      }
+    },
+    {
+      "case_id": "good_03_recall_quiz_for_recall_objectives",
+      "label": "Good: recall quiz for recall objectives (v3.5.0 match-not-height)",
+      "description": "A complete 12-item quiz with a blueprint, an answer key, and a pass mark, for three objectives that all ask for recall. Before v3.5.0 the Bloom's Alignment anchors scored this 1 or 2 because no item reaches Analyze; under the match reading it is aligned.",
+      "input": "Learning objectives for Module 2 of a workplace fire-safety course: identify fire classes, identify the approved extinguisher for each class, and list the PASS steps in order. Audience: all new warehouse staff.",
+      "artifact": "QUIZ: Fire Extinguisher Basics (end of Module 2, complete assessment, pass mark 10 of 12)\n\nLearning Objectives:\n1. Identify the class of fire (A, B, C, D, K) for a named fuel.\n2. Identify the extinguisher type approved for each class of fire.\n3. List the four steps of the PASS technique in order.\n\nTest Blueprint (objective x items):\n- Objective 1: items 1-4 (Remember)\n- Objective 2: items 5-8 (Remember)\n- Objective 3: items 9-12 (Remember)\n\n1. Burning paper and wood are which class of fire? a) Class A b) Class B c) Class C d) Class K\n2. Burning gasoline is which class of fire? a) Class A b) Class B c) Class D d) Class K\n3. A fire in an energized electrical panel is which class? a) Class A b) Class B c) Class C d) Class D\n4. Burning cooking oil in a deep fryer is which class? a) Class B c) Class C b) Class D d) Class K\n5. Which extinguisher is approved for a Class K fire? a) Water b) Wet chemical c) Carbon dioxide d) Dry powder\n6. Which extinguisher must never be used on a Class C fire? a) Water b) Carbon dioxide c) Dry chemical d) Clean agent\n7. Which extinguisher is approved for Class A, B, and C fires? a) Water b) Wet chemical c) ABC dry chemical d) Class D dry powder\n8. Which extinguisher is approved for a combustible-metal fire? a) Water b) Carbon dioxide c) ABC dry chemical d) Class D dry powder\n9. What is the first step of PASS? a) Aim b) Pull c) Squeeze d) Sweep\n10. What is the second step of PASS? a) Aim b) Pull c) Squeeze d) Sweep\n11. Where do you aim the nozzle? a) At the top of the flames b) At the base of the fire c) At the smoke d) At the ceiling\n12. Put the four PASS steps in order: Sweep, Pull, Squeeze, Aim. (Write the four words in order.)\n\nAnswer key: 1-a, 2-b, 3-c, 4-d, 5-b, 6-a, 7-c, 8-d, 9-b, 10-a, 11-b, 12: Pull, Aim, Squeeze, Sweep (all four in order for credit).\n",
+      "reference": "None provided.",
+      "expected_scores": {
+        "blooms_alignment": 5,
+        "objective_congruence": 4,
+        "item_construction_quality": 4,
+        "validity_evidence": 5,
+        "reliability_considerations": 4,
+        "inclusivity_fairness": 5,
+        "overall": 4.5,
+        "rationale": "Every objective asks for recall (identify, list) and every item is recall, so Bloom's Alignment is 5. Each item maps to one objective through the blueprint; the objectives state a behavior but no condition, and the criterion appears only as the pass mark, so Objective Congruence is 4. Item 4's option labels are out of order (a, c, b, d), a construction slip. Coverage is balanced at four items per objective. Twelve items with a key and a cut score meet the criterion-referenced minimum; difficulty is uniform. No severity flags expected."
+      }
+    },
+    {
+      "case_id": "borderline_03_norm_referenced_short_test",
+      "label": "Borderline: norm-referenced placement test below the item minimum (v3.5.0 test-type rule)",
+      "description": "A 10-item placement test whose scores are read as percentile ranks to sort applicants into three course levels. Tests the criterion- versus norm-referenced rule: the percentile use makes it norm-referenced, so the 15-item minimum applies.",
+      "input": "Placement test for incoming students; results decide which of three math courses each applicant enters.",
+      "artifact": "MATH PLACEMENT TEST (complete test, 10 items, 20 minutes)\n\nUse of scores: each applicant's raw score is converted to a percentile rank against this year's applicant pool.\nThe top 30 percent are placed in Algebra II, the middle 40 percent in Algebra I, and the bottom 30 percent in\nPre-Algebra.\n\nSkill areas sampled: arithmetic with fractions (items 1-3), linear equations (items 4-7), exponents (items 8-9),\nword problems (item 10).\n\n1. 3/4 + 5/8 = ?  a) 8/12 b) 11/8 c) 1 d) 15/32\n2. 2/3 x 9/4 = ?  a) 3/2 b) 11/7 c) 18/7 d) 8/27\n3. 5/6 - 1/4 = ?  a) 4/2 b) 7/12 c) 1/3 d) 5/24\n4. Solve 3x + 7 = 22.  a) 3 b) 5 c) 7 d) 15\n5. Solve 2(x - 4) = 10.  a) 3 b) 7 c) 9 d) 14\n6. Solve x/5 + 2 = 6.  a) 4 b) 20 c) 30 d) 40\n7. What is the slope of y = -2x + 9?  a) -2 b) 2 c) 9 d) -9\n8. 2^3 x 2^4 = ?  a) 2^7 b) 2^12 c) 4^7 d) 4^12\n9. (3^2)^3 = ?  a) 3^5 b) 3^6 c) 9^5 d) 27\n10. A phone plan costs 20 dollars a month plus 5 cents per text. Which equation gives the monthly cost C for t texts?\n    a) C = 20t + 0.05 b) C = 20 + 0.05t c) C = 20.05t d) C = 0.05 + 20t\n\nAnswer key: 1-b, 2-a, 3-b, 4-b, 5-c, 6-b, 7-a, 8-a, 9-b, 10-b.\n",
+      "reference": "None provided.",
+      "expected_scores": {
+        "blooms_alignment": 4,
+        "objective_congruence": 3,
+        "item_construction_quality": 4,
+        "validity_evidence": 3,
+        "reliability_considerations": 2,
+        "inclusivity_fairness": 4,
+        "overall": 3.3,
+        "rationale": "Percentile ranks and placement by rank make this norm-referenced, so the 15-item minimum applies and 10 items is too few to separate three groups reliably: Reliability Considerations is 2 and the Insufficient Item Count flag is expected. There are no stated objectives, only skill areas, so Objective Congruence is 3 and Bloom's Alignment is judged against the stated purpose (placing students by procedural skill), which the Apply-level items fit. Items are clear with plausible distractors and a key. Word problems get one item, so coverage is skewed. A scorer who treats this as criterion-referenced will miss the item-count flag."
       }
     }
   ]

@@ -26,17 +26,17 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 
 ## Citation Sources
 
-- Knowles, M.S. (1978). Andragogy: Adult Learning Theory in Perspective.
-- Knowles, M.S., Holton, E.F., & Swanson, R.A. (2015). The Adult Learner (8th ed.).
-- Mezirow, J. (1991). Transformative Dimensions of Adult Learning. Jossey-Bass.
-- Ausubel, D.P. (2000). The Acquisition and Retention of Knowledge: A Cognitive View. Kluwer Academic Publishers.
-- Mayer, R.E. (2009). Multimedia Learning (2nd ed.). Cambridge University Press.
-- Clark, R.C. & Mayer, R.E. (2016). e-Learning and the Science of Instruction (4th ed.).
-- Sweller, J. (1988). Cognitive Load During Problem Solving. Cognitive Science, 12(2), 257-285.
-- W3C WAI (2018). Web Content Accessibility Guidelines (WCAG) 2.1.
-- Nielsen, J. (1994). Severity Ratings for Usability Problems.
-- Dick, W., Carey, L., & Carey, J.O. (2015). The Systematic Design of Instruction (8th ed.).
-- Hirumi, A. (2025). Design Principles, Ethics, and Evidence-Informed Decision Making. In *Foundations of Learning and Instructional Design Technology* (2nd ed., pp. 433-448). EdTechBooks. (Anecdotal vs. scientific evidence distinction.)
+- Ausubel, D.P. (2000). *The Acquisition and Retention of Knowledge: A Cognitive View*. Kluwer Academic Publishers.
+- Clark, R.C., & Mayer, R.E. (2016). *e-Learning and the Science of Instruction* (4th ed.). Wiley.
+- Dick, W., Carey, L., & Carey, J.O. (2015). *The Systematic Design of Instruction* (8th ed.). Pearson.
+- Hirumi, A. (2025). Design Principles, Ethics, and Evidence-Informed Decision Making. In R.E. West & H. Leary (Eds.), *Foundations of Learning and Instructional Design Technology* (2nd ed., pp. 433-448). EdTechBooks. (Anecdotal vs. scientific evidence distinction.)
+- Knowles, M.S. (1978). Andragogy: Adult Learning Theory in Perspective. *Community College Review*, 5(3), 9-20.
+- Knowles, M.S., Holton, E.F., & Swanson, R.A. (2015). *The Adult Learner* (8th ed.). Routledge.
+- Mayer, R.E. (2009). *Multimedia Learning* (2nd ed.). Cambridge University Press.
+- Mezirow, J. (1991). *Transformative Dimensions of Adult Learning*. Jossey-Bass.
+- Nielsen, J. (1994). Severity Ratings for Usability Problems. Nielsen Norman Group.
+- Sweller, J. (1988). Cognitive Load During Problem Solving. *Cognitive Science*, 12(2), 257-285.
+- W3C WAI (2018). *Web Content Accessibility Guidelines (WCAG) 2.1*.
 
 ---
 
@@ -218,17 +218,4 @@ Before deploying at scale:
 
 1. **Calibrate**: Run 5-10 diverse responses through your chosen model. Compare to expert judgment.
 2. **Test Edge Cases**: Validate against `edge_cases_01.json`.
-3. **Document Threshold**: Define what scores mean for your context (4.5+ ship; 3.5-4.4 light revision; <3.5 rewrite).
-
----
-
-## References
-
-- Clark, R.C., & Mayer, R.E. (2016). *e-Learning and the Science of Instruction* (4th ed.). Wiley.
-- Dick, W., Carey, L., & Carey, J.O. (2015). *The Systematic Design of Instruction* (8th ed.). Pearson.
-- Hirumi, A. (2025). Design Principles, Ethics, and Evidence-Informed Decision Making. In R.E. West & H. Leary (Eds.), *Foundations of Learning and Instructional Design Technology* (2nd ed., pp. 433-448). EdTechBooks.
-- Knowles, M.S., Holton, E.F., & Swanson, R.A. (2015). *The Adult Learner* (8th ed.). Routledge.
-- Mayer, R.E. (2009). *Multimedia Learning* (2nd ed.). Cambridge University Press.
-- Mezirow, J. (1991). *Transformative Dimensions of Adult Learning*. Jossey-Bass.
-- Sweller, J. (1988). Cognitive Load During Problem Solving. *Cognitive Science*, 12(2), 257-285.
-- W3C WAI (2018). *Web Content Accessibility Guidelines (WCAG) 2.1*.
+3. **Document Threshold**: Define what scores mean for your context (GUIDE's defaults: 4.5+ ship; 3.5-4.4 light revision; 2.5-3.4 revise; below 2.5 redesign).

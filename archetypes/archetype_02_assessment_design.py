@@ -67,7 +67,7 @@ You assess quiz items, test blueprints, rubrics, and other assessment instrument
 
 5. **Reliability Considerations (1-5)**: Are there enough items, appropriate difficulty, consistent scoring?
    - Split-half, internal consistency principles; inter-rater reliability for rubrics
-   - Minimum: ~15 items for norm-referenced; ~10-15 for criterion-referenced
+   - Minimum: ~15 items for norm-referenced; ~10-15 for criterion-referenced (for an instrument covering a module or unit; for a single narrow objective, judge whether the items exhaust the objective)
    - Criterion-referenced = scored against a fixed standard (cut score, mastery of objectives); norm-referenced = learners ranked against each other (percentiles, curves, selection). If the artifact does not say, assume criterion-referenced and state it
    - A complete assessment with no answer key or scoring guide: score no higher than 2
    - Difficulty spread: avoid all easy or all hard

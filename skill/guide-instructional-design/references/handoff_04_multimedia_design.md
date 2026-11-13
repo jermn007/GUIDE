@@ -59,10 +59,10 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 
 ### Extraneous Load Reduction
 - **5**: All five principles evident; content is focused and efficient; no seductive details
-- **4**: Four principles evident; one minor violation
-- **3**: Three to four principles present; one to two violations
-- **2**: Two to three principles present; multiple violations
-- **1**: Few principles; multiple violations; high extraneous load
+- **4**: Four of the five principles applied; one minor violation
+- **3**: Three principles applied; two violations
+- **2**: Two principles applied; three or more violations
+- **1**: One principle or none; high extraneous load throughout
 
 **Principle Checklist**:
 1. **Coherence**: Is the content focused on learning objective? Are there interesting-but-irrelevant tangents? (E.g., A video on photosynthesis shouldn't spend 2 minutes on the history of photosynthesis research unless objective requires it.)
@@ -96,8 +96,8 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 
 ### Generative Processing Support
 - **5**: Personalized conversational tone ("you"), human voice, genuine engagement (no distracting presenter images)
-- **4**: Mostly personalized; human voice or good synthesis; adequate engagement
-- **3**: Some personalization; mixed voice quality; adequate engagement
+- **4**: Mostly personalized; human voice or good synthesis; engagement cues in most segments
+- **3**: Some personalization; mixed voice quality; engagement cues only occasional
 - **2**: Formal tone; poor voice; minimal engagement cues
 - **1**: Highly formal, robotic voice, or very distracting presenter
 

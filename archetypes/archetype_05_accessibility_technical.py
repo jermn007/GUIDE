@@ -71,6 +71,8 @@ You will score across 6 dimensions, each on a 1-5 scale:
    - Architectural barriers (rebuild required): Flash content, unsupported technologies
    Score: 5=Quick fixes only; 1=Requires architectural rebuild
 
+Severity flags to raise: instructional images with no text alternative; uncaptioned instructional media; keyboard traps or content unreachable by keyboard; unlabeled controls; meaning carried by color alone; timed activities with no adjustment; flashing content; a compliance claim with no testing behind it.
+
 Return JSON with overall score (mean of 6 dimensions), individual dimension scores, rationale per dimension, severity_flags (critical issues), and improvement_suggestions (actionable next steps).
 """
 

@@ -183,6 +183,8 @@ Score: 1=Single format/modality only; 5=Multiple formats, flexible engagement
 - Architectural barriers (rebuild required): Flash content, unsupported technologies
 Score: 5=Quick fixes only; 1=Requires architectural rebuild
 
+Severity flags to raise: instructional images with no text alternative; uncaptioned instructional media; keyboard traps or content unreachable by keyboard; unlabeled controls; meaning carried by color alone; timed activities with no adjustment; flashing content; a compliance claim with no testing behind it.
+
 Return JSON with overall score (mean of 6 dimensions), individual dimension scores, rationale per dimension, severity_flags (critical issues), and improvement_suggestions (actionable next steps).
 ```
 
@@ -228,6 +230,21 @@ Score using the rubric above. Return only the JSON object in this format:
   "improvement_suggestions": ["<suggestion 1>", "<suggestion 2>"]
 }
 ```
+
+---
+
+## Severity Flags (Red Flags)
+
+Look for and flag critical issues. Each one blocks some learners outright, so treat it as major or catastrophic on Nielsen's scale:
+
+1. **No Text Alternative**: Instructional images, charts, or diagrams with no alt text or long description
+2. **Uncaptioned Media**: Video or audio that carries instruction with no captions or transcript
+3. **Keyboard Trap or Unreachable Content**: Any activity that cannot be reached, operated, or exited by keyboard alone
+4. **Unlabeled Controls**: Form fields, buttons, or custom widgets with no programmatic name, so assistive technology cannot operate them
+5. **Meaning by Color Alone or Unreadable Contrast**: Required information carried only by color, or body text well below 4.5:1
+6. **Timed Activity with No Adjustment**: A timed assessment or interaction with no way to extend, pause, or turn off the limit
+7. **Flashing Content**: Anything that flashes more than three times per second
+8. **Untested Compliance Claim**: The artifact is declared accessible or "WCAG compliant" with no automated or assistive-technology test behind the claim
 
 ---
 
@@ -322,5 +339,4 @@ Use this before scoring:
 | **4.5-5.0** | Excellent | Ship as-is; exemplary accessibility |
 | **3.5-4.4** | Good | Minor issues; can ship; document known gaps |
 | **2.5-3.4** | Fair | Accessibility concerns; plan fixes before wide rollout |
-| **1.5-2.4** | Poor | Significant barriers; remediation required; legal risk |
-| **<1.5** | Inaccessible | Cannot ship; critical remediation or redesign needed |
+| **< 2.5** | Poor to inaccessible | Do not ship. Significant barriers and legal risk; remediate or redesign (below 1.5, treat as inaccessible) |

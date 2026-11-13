@@ -8,12 +8,6 @@ GUIDE = **G**rounded **U**niversal **I**nstructional **D**esign **E**valuator. *
 **60** dimensions (6 per archetype), each grounded in named learning-science sources and scored 1–5
 with behavioral anchors. Built on the LLM-as-a-judge pattern (Zheng et al., 2023). Tracks GUIDE v3.5.0.
 
-**What's new in v3.1.0:** Archetype **10 Curriculum Alignment** (synthesis archetype, evaluates
-relationships between objectives ↔ strategies ↔ assessments). Archetypes **03 Sequencing** and
-**07 Needs Analysis** integrate **Keller's ARCS** (motivational design). Archetype **01 Adult
-Learning Communication** adopts **Hirumi's Three Alignments** framework (Merrill 2002 quality triad).
-Across the framework, alignment to *personal/professional goals* is now an evaluable design element.
-
 ---
 
 ## The 10 archetypes mapped to ADDIE
@@ -21,14 +15,14 @@ Across the framework, alignment to *personal/professional goals* is now an evalu
 | # | Archetype | ADDIE phase | Theorists | Reference file |
 |---|-----------|-------------|-----------|----------------|
 | 7 | Needs Analysis & Front-End Design | **A**nalyze | Van Tiem (HPT), McGoldrick & Tobey, Mager, Keller (ARCS), Hirumi | `handoff_07_needs_analysis.md` |
-| 3 | Instructional Sequencing & Events | **D**esign | Gagné, Reigeluth, van Merriënboer, Merrill, Dick & Carey, Keller (ARCS) | `handoff_03_instructional_sequencing.md` |
+| 3 | Instructional Sequencing & Events | **D**esign | Gagné, Merrill, Dick & Carey, Keller (ARCS), Vygotsky | `handoff_03_instructional_sequencing.md` |
 | 8 | Story & Narrative Design | **D**esign | Campbell, Snyder (Beat Sheet), Story Circle | `handoff_08_story_design.md` |
 | 9 | Cognitive Neuroscience & Brain-Based Instruction | **D**esign | BSCS 5E, Ausubel, Brown/Roediger/McDaniel, Posner & Rothbart | `handoff_09_cognitive_neuroscience.md` |
-| 4 | Multimedia Content Design (Deep Mayer) | **D**evelop | Mayer, Paivio, Sweller, Clark | `handoff_04_multimedia_design.md` |
-| 5 | WCAG/POUR Technical Accessibility | **D**evelop | WCAG 2.1, CAST UDL, Section 508, Nielsen | `handoff_05_accessibility_technical.md` |
+| 4 | Multimedia Content Design (Deep Mayer) | **D**evelop | Mayer, Clark, Sweller | `handoff_04_multimedia_design.md` |
+| 5 | WCAG/POUR Technical Accessibility | **D**evelop | WCAG 2.1, CAST UDL, Nielsen | `handoff_05_accessibility_technical.md` |
 | 1 | Adult Learning Communication | **I**mplement | Knowles, Mezirow, Ausubel, Mayer, Hirumi (Three Alignments) | `handoff_01_adult_learning_communication.md` |
-| 2 | Assessment Design Quality | **E**valuate | Bloom/Anderson & Krathwohl, Webb, Messick, Mager, Kubiszyn & Borich | `handoff_02_assessment_design.md` |
-| 6 | Formative Evaluation Protocol Quality | **E**valuate | Bordonaro, Dick & Carey, Nielsen, Scriven, Kirkpatrick | `handoff_06_formative_evaluation.md` |
+| 2 | Assessment Design Quality | **E**valuate | Bloom/Anderson & Krathwohl, Mager, Kubiszyn & Borich, Dick & Carey | `handoff_02_assessment_design.md` |
+| 6 | Formative Evaluation Protocol Quality | **E**valuate | Bordonaro, Dick & Carey, Nielsen | `handoff_06_formative_evaluation.md` |
 | **10** | **Curriculum Alignment (Synthesis)** | **Cross-cutting** | Tyler, Bloom/Anderson & Krathwohl, Webb (DoK), Mager, Wiggins & McTighe, Reigeluth, van Merriënboer & Kirschner, Merrill (2002), Hirumi (2021, 2025) | `handoff_10_curriculum_alignment.md` |
 
 **Archetype 10 is the synthesis archetype.** It evaluates *relationships between* objectives, instructional
@@ -134,7 +128,7 @@ Several theories appear in multiple archetypes. When designing or evaluating, th
 - **Mager-format objectives** (Behavior + Condition + Criterion; observable verbs, never "understand/know") — 02, 07, 10.
 - **Cognitive Load Theory** (Sweller: intrinsic / extraneous / germane) — 01, 04, 09.
 - **Alignment** (objective → instruction → assessment; Tyler, Dick & Carey, Wiggins & McTighe) — 02, 03, 07, **10 (synthesis)**.
-- **Bloom / Webb DoK** (cognitive level + depth of knowledge) — 02, 10.
+- **Bloom's revised taxonomy** (cognitive level) — 02, 10. **Webb's DoK** (depth of knowledge) — 10.
 - **Mayer's multimedia principles** (coherence, signaling, redundancy, contiguity, modality, personalization) — 01, 04.
 - **Retrieval practice & spacing** (Brown/Roediger/McDaniel; "Make It Stick") — 03, 09.
 - **Advance organizers / meaningful learning** (Ausubel) — 01, 03, 09.
@@ -143,7 +137,7 @@ Several theories appear in multiple archetypes. When designing or evaluating, th
 - **ARCS — Attention, Relevance, Confidence, Satisfaction** (Keller) — 03, 07.
 - **Hirumi's Three Alignments** (Merrill 2002 effective/efficient/engaging mapped to alignments) — 01, 07, 10.
 - **HPT cause analysis** — the gatekeeper question in 07.
-- **Nielsen severity ratings** (cosmetic / minor / major / catastrophic) — used for severity flags in 01, 05, 06, 10.
+- **Nielsen severity ratings** (cosmetic / minor / major / catastrophic) — the tiers for severity flags in 01, 05, 06, 10.
 
 ---
 
