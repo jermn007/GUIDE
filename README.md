@@ -35,6 +35,10 @@ GUIDE is listed in Anthropic's [Claude directory](https://claude.ai/directory), 
 
 **From the Claude directory (recommended)**
 
+Open [GUIDE Instructional Design in Claude](https://claude.ai/customize/plugins/id/d36ea61b-91f2-4262-b7ca-15a1984d1ec1%40anthropic-plugin-directory?via=directory) and select **Add**. You need to be signed in.
+
+Or find it yourself:
+
 1. In Claude, open **Settings**, then **Customize**. In the desktop app, choose **Plugins** under *Customize*.
 2. Search for **GUIDE Instructional Design**.
 3. Open it (it is marked "from Anthropic Directory") and select **Add**.
