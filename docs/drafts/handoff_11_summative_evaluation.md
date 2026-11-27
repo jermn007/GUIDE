@@ -52,7 +52,7 @@ Does the evidence follow the whole chain from participation to results, or does 
 
 **The chain, in plain terms** (after Kirkpatrick & Kirkpatrick; tiers after Thalheimer's LTEM):
 1. **Participation**: who attended, started, finished. Says nothing about learning.
-2. **Reaction**: what learners thought of it. Weakly related to learning (Alliger et al., 1997).
+2. **Reaction**: what learners thought of it. How much they liked it is weakly related to learning; whether they judged it useful relates somewhat better (Alliger et al., 1997).
 3. **Learning**: what they can recall, decide, and do at the end.
 4. **Behavior**: what they do on the job, weeks later.
 5. **Results**: what changed for the team or organisation because of that behavior.
@@ -101,7 +101,8 @@ Are the measures taken at the right time, with sound instruments, from enough pe
 
 **Guidance:**
 - **Delay matters.** A test at the end of the course measures what was just seen. Remeasure after days or weeks to see what was kept.
-- **Confidence is not competence.** Self-rated confidence and satisfaction do not stand in for performance.
+- **Confidence is not competence.** Self-rated confidence and satisfaction do not stand in for performance (Roediger & Karpicke, 2006).
+- **Use more than one source.** Behavior rated by the same person in the same setting as the training looks stronger than it is (Blume et al., 2010).
 - **Small groups.** With few learners, report counts and cases rather than percentages, and say so.
 
 ---
@@ -307,26 +308,57 @@ Match the effort to the stakes. A five-minute job aid does not need a comparison
 
 ## Evidence Base by Dimension
 
-What each dimension rests on, and who to cite for it. Full references follow.
+What each dimension rests on, who to cite for it, and how far the source was read. "Read" means the passage was read in the published text. "Abstract" means only the published abstract was read. "Secondary" means the source itself was not read and the description rests on another work that describes it. Full references follow.
 
-| Dimension | Claim the rubric makes | Evidence to cite |
-|---|---|---|
-| 1. Outcome Chain Coverage | Satisfaction and completion do not show learning or transfer | Alliger et al. (1997) and Sitzmann et al. (2008): meta-analyses finding reactions only weakly related to learning. Kirkpatrick & Kirkpatrick (2016), Kaufman & Keller (1994), Thalheimer (2018) for the chain itself; Holton (1996) for the critique |
-| 1. Outcome Chain Coverage | In practice, summative evaluation is done less often than formative, and clients often do not see its value | DeVaughn & Stefaniak (2020): interviews with instructional designers about project constraints on evaluation |
-| 2. Objective-Evidence Traceability | Measures should be derived from objectives, and tracking designed for the question | Dick, Carey & Carey (2015) on criterion-referenced measures and summative evaluation; Kraiger, Ford & Salas (1993) on matching measures to outcome type; Gašević, Dawson & Siemens (2015) on analytics grounded in learning design; IEEE 9274.1.1-2023 for xAPI |
-| 3. Measurement Quality | Delayed measures show what was retained; end-of-course tests overstate it | Roediger & Karpicke (2006); Cepeda et al. (2006); Brown, Roediger & McDaniel (2014) |
-| 3. Measurement Quality | Instruments need evidence of validity and reliability | Kubiszyn & Borich (2016) |
-| 4. Attribution & Comparison | After-only data cannot support causal claims | Shadish, Cook & Campbell (2002); Phillips (2003) on isolating effects; Brinkerhoff (2003) for small programmes; Arthur et al. (2003) on how effect sizes vary by criterion |
-| 5. Transfer Conditions | Transfer depends on the learner, the design, and the workplace | Baldwin & Ford (1988); Blume et al. (2010); Ford, Baldwin & Prasad (2018); Grossman & Salas (2011); Salas et al. (2012) on what happens before and after training |
-| 5. Transfer Conditions | Follow-up and reinforcement sustain new behavior | Wurth & Wurth (2018); Cepeda et al. (2006) |
-| 6. Decision Rules & Feedback Loop | Evaluation exists to inform a decision | Scriven (1967); Dick, Carey & Carey (2015); Kaufman (2003) on value added for external clients and society |
-| 6. Decision Rules & Feedback Loop | Learner data carries ethical obligations | Slade & Prinsloo (2013); Giacumo, Villachica & Stepich (2025) on inclusive implementation and evaluation practice |
+| Dimension | Claim the rubric makes | Source | Fit | Basis |
+|---|---|---|---|---|
+| 1. Outcome Chain | How much learners liked a course is a poor guide to what they learned | Alliger et al. (1997) | Supported, with a limit: liking was weakly related to learning, but ratings of usefulness related more strongly to learning and transfer | Abstract |
+| 1. Outcome Chain | Same | Sitzmann et al. (2008) | Supported through Clark (2020), who reports the correlation as positive but too small to be of practical value. The abstract does not state it | Abstract + secondary |
+| 1. Outcome Chain | Same | Clark (2020), ch. 1 | Supported: advises against relying on learner ratings as indicators of learning | Read |
+| 1. Outcome Chain | The chain runs reaction, learning, behavior, results | Kirkpatrick & Kirkpatrick (2006, 2016) | Supported as a description of the model, per Giacumo et al. (2025), Kaufman (2003), and DeVaughn & Stefaniak (2020) | Secondary |
+| 1. Outcome Chain | Lower tiers (attendance, activity, perceptions) do not validate learning | Thalheimer (2018) | Supported: the author's summary calls the lower tiers inadequate to validate learning success. Tier names per Giacumo et al. (2025) | Author's summary + secondary |
+| 1. Outcome Chain | The chain can be extended to societal value | Kaufman & Keller (1994) | Consistent with secondary summaries; article not read | Secondary |
+| 1. Outcome Chain | Same | Kaufman (2003) | Supported: argues value is best judged at the level of external clients and society | Read |
+| 1. Outcome Chain | The four levels are a taxonomy, not a causal model | Holton (1996) | Supported | Abstract |
+| 1. Outcome Chain | Results are studied far less often than learning | Arthur et al. (2003) | Supported by the counts reported: 234 effect sizes for learning criteria, 26 for results. Note the effect sizes themselves were similar across criteria (0.60-0.63) | Abstract |
+| 1. Outcome Chain | Summative evaluation is done less often than formative; clients often do not see its value | DeVaughn & Stefaniak (2020) | Supported | Read |
+| 2. Traceability | Measures must correspond to objectives | Dick, Carey & Carey | Supported: test items must correspond one to one with performance objectives | Read (7th ed.) |
+| 2. Traceability | Same | Kubiszyn & Borich (2016), ch. 5 | Supported: content validity evidence is the extent to which a test measures the instructional objectives | Read |
+| 2. Traceability | Match the measure to the type of outcome | Kraiger, Ford & Salas (1993) | Supported: classifies cognitive, skill-based, and affective outcomes with measures for each | Abstract |
+| 2. Traceability | Analytics should be tied to educational research, not computation alone | Gašević, Dawson & Siemens (2015) | Partly: the abstract says analytics must be integrated with existing educational research. It does not mention learning design by name | Abstract |
+| 2. Traceability | xAPI as the tracking format | IEEE 9274.1.1-2023 | Descriptive reference to the standard, not evidence | Record |
+| 3. Measurement | Performance at the end of instruction is an unreliable guide to lasting learning | Soderstrom & Bjork (2015) | Supported: this is the paper's central argument | Abstract |
+| 3. Measurement | Immediate and delayed tests can rank methods in opposite order; confidence misleads | Roediger & Karpicke (2006) | Supported: restudying won at 5 minutes, testing won at 2 days and 1 week, and restudying raised confidence | Abstract |
+| 3. Measurement | Same | Brown, Roediger & McDaniel (2014) | Supported: delayed-test results and the "illusion of mastery" | Read |
+| 3. Measurement | Behavior measured by the same source in the same setting is inflated | Blume et al. (2010) | Supported: same-source, same-context measurement consistently inflated transfer relationships | Abstract |
+| 4. Attribution | After-only data cannot support causal claims | Shadish, Cook & Campbell (2002) | Not read. Standard reference for the point; no secondary confirmation gathered | Not read |
+| 4. Attribution | Isolate the effect of training before quoting a return | Phillips (2003) | Partly: Giacumo et al. (2025) confirm the five-level return-on-investment model and formula, not the isolation methods | Secondary |
+| 4. Attribution | Compare the most and least successful cases | Brinkerhoff (2003) | Supported as a description of the method, per Giacumo et al. (2025) | Secondary |
+| 5. Transfer | Transfer depends on the learner, the design, and the workplace | Baldwin & Ford (1988) | Supported | Abstract |
+| 5. Transfer | Same, with a supportive work environment among the predictors | Blume et al. (2010) | Supported | Abstract |
+| 5. Transfer | Same | Ford, Baldwin & Prasad (2018) | Supported as a review of what is reliably known | Abstract |
+| 5. Transfer | Support, opportunity to perform, and follow-up are among the strongest workplace factors | Grossman & Salas (2011) | Supported | Abstract |
+| 5. Transfer | What happens before and after training matters as well as during | Salas et al. (2012) | Supported | Abstract |
+| 5. Transfer | Spaced follow-up improves retention | Cepeda et al. (2006) | Supported for spacing and retention of verbal material. It is laboratory evidence, not workplace evidence | Abstract |
+| 5. Transfer | Reinforcement after the event sustains behavior | Wurth & Wurth (2018) | Practitioner guidance, not research. Its "70 percent forgotten in 24 hours" figure should not be repeated | Read |
+| 6. Decision | Summative evaluation exists to inform a decision about continued use | Dick, Carey & Carey | Supported: defined as collecting data to make decisions about the acquisition or continued use of instruction | Read (7th ed.) |
+| 6. Decision | Same | Giacumo, Villachica & Stepich (2025), ch. 12 | Supported: organisations use summative evaluation to determine value, effectiveness, or efficiency; pairs evaluation questions with models | Read |
+| 6. Decision | The formative and summative distinction | Scriven (1967) | Supported as the origin of the distinction, per Dick, Carey & Carey | Secondary |
+| 6. Decision | Learner data needs consent, privacy, and de-identification | Slade & Prinsloo (2013) | Supported | Abstract |
+| 6. Decision | Evaluation should be culturally relevant and equitable | Giacumo, Villachica & Stepich (2025), ch. 12 | Partly: raised as a reflection question, not developed as a method. Does not cover data privacy | Read |
+
+**Changes made after the passage-level read:**
+- Arthur et al. (2003) was first cited for effect sizes varying by criterion. The abstract shows they were nearly identical. It is now cited only for how rarely results are studied.
+- Cepeda et al. (2006) was first cited for delayed measurement. It is about spacing, so it now sits under follow-up. Soderstrom & Bjork (2015) was added as the direct source for the measurement claim.
+- Alliger et al. (1997) is cited with its limit: usefulness ratings did better than liking.
+- Giacumo et al. (2025) was first cited for data ethics. The book does not cover data privacy; it is now cited for the purpose of summative evaluation.
+- Gašević et al. (2015) is cited for what its abstract says, not for learning design.
 
 ---
 
 ## Citation & References
 
-Bibliographic details were checked on 2026-11-27: journal articles against Crossref records, books against catalogue records, and five sources against the published text itself (see "Verification notes" below). What has not been done is a passage-level read of every source to confirm it supports the specific anchor it is cited beside.
+Bibliographic details were checked on 2026-11-27: journal articles against Crossref records, books against catalogue records, and five sources against the published text itself (see "Verification notes" below). The "Evidence Base by Dimension" table records how far each source was read and whether it supports the claim beside it.
 
 **Evaluation Models**
 - Kirkpatrick, D.L., & Kirkpatrick, J.D. (2006). Evaluating Training Programs: The Four Levels (3rd ed.). Berrett-Koehler.
@@ -346,6 +378,7 @@ Bibliographic details were checked on 2026-11-27: journal articles against Cross
 - Arthur, W., Bennett, W., Edens, P.S., & Bell, S.T. (2003). Effectiveness of training in organizations: A meta-analysis of design and evaluation features. Journal of Applied Psychology, 88(2), 234-245. https://doi.org/10.1037/0021-9010.88.2.234
 - Salas, E., Tannenbaum, S.I., Kraiger, K., & Smith-Jentsch, K.A. (2012). The science of training and development in organizations: What matters in practice. Psychological Science in the Public Interest, 13(2), 74-101. https://doi.org/10.1177/1529100612436661
 - DeVaughn, P., & Stefaniak, J. (2020). An exploration of the challenges instructional designers encounter while conducting evaluations. Performance Improvement Quarterly, 33(4), 443-470. https://doi.org/10.1002/piq.21332
+- Clark, R.C. (2020). Evidence-Based Training Methods: A Guide for Training Professionals (3rd ed.). ATD Press.
 - Kraiger, K., Ford, J.K., & Salas, E. (1993). Application of cognitive, skill-based, and affective theories of learning outcomes to new methods of training evaluation. Journal of Applied Psychology, 78(2), 311-328. https://doi.org/10.1037/0021-9010.78.2.311
 
 **Transfer of Training**
@@ -353,9 +386,10 @@ Bibliographic details were checked on 2026-11-27: journal articles against Cross
 - Blume, B.D., Ford, J.K., Baldwin, T.T., & Huang, J.L. (2010). Transfer of training: A meta-analytic review. Journal of Management, 36(4), 1065-1105. https://doi.org/10.1177/0149206309352880
 - Ford, J.K., Baldwin, T.T., & Prasad, J. (2018). Transfer of training: The known and the unknown. Annual Review of Organizational Psychology and Organizational Behavior, 5, 201-225. https://doi.org/10.1146/annurev-orgpsych-032117-104443
 - Grossman, R., & Salas, E. (2011). The transfer of training: What really matters. International Journal of Training and Development, 15(2), 103-120. https://doi.org/10.1111/j.1468-2419.2011.00373.x
-- Wurth, A., & Wurth, K. (2018). Training Reinforcement. Wiley.
+- Wurth, A., & Wurth, K. (2018). Training Reinforcement. Wiley. (Practitioner guidance)
 
 **Retention and Delayed Measurement**
+- Soderstrom, N.C., & Bjork, R.A. (2015). Learning versus performance: An integrative review. Perspectives on Psychological Science, 10(2), 176-199. https://doi.org/10.1177/1745691615569000
 - Roediger, H.L., & Karpicke, J.D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. Psychological Science, 17(3), 249-255. https://doi.org/10.1111/j.1467-9280.2006.01693.x
 - Cepeda, N.J., Pashler, H., Vul, E., Wixted, J.T., & Rohrer, D. (2006). Distributed practice in verbal recall tasks: A review and quantitative synthesis. Psychological Bulletin, 132(3), 354-380. https://doi.org/10.1037/0033-2909.132.3.354
 - Brown, P.C., Roediger, H.L., & McDaniel, M.A. (2014). Make It Stick: The Science of Successful Learning. Belknap Press of Harvard University Press.
@@ -379,7 +413,9 @@ The models above are named with attribution and described in the author's own wo
 - **Read in the published text:** DeVaughn & Stefaniak (2020) - journal, volume, pages, and the finding cited. Kaufman (2003) - journal, volume, pages, and the argument cited. Dick, Carey & Carey - summative evaluation chapter title, read in the 7th edition (2009); the 8th edition (2015) is cited to match the other archetypes. Kubiszyn & Borich - 11th edition, 2016. Brown, Roediger & McDaniel (2014) and Giacumo, Villachica & Stepich (2025) - title and copyright pages.
 - **Year conventions:** Blume et al. appeared online in 2009 and in print in 36(4), 2010. Shadish, Cook & Campbell carries a 2002 copyright; some catalogues list 2001. Kirkpatrick & Kirkpatrick's third edition carries a 2006 copyright; some catalogues list 2005.
 - **Edition consistency:** archetype 02 cites Kubiszyn & Borich (2013), the 10th edition. Pick one edition across the framework.
-- **Not confirmed:** the page range and series details of Scriven's chapter (the book, year, and publisher are confirmed); the publisher line for Thalheimer (2018), which is a self-published report.
+- **Not confirmed:** the page range and series details of Scriven's chapter (the book, year, and publisher are confirmed); the publisher line for Thalheimer (2018), which is a self-published report whose title appears in a longer form on the author's site.
+- **Not read at all:** Kirkpatrick & Kirkpatrick (2006, 2016), Phillips (2003), Brinkerhoff (2003), Shadish, Cook & Campbell (2002), Scriven (1967), and Kaufman & Keller (1994). None is open access or in the author's course materials. Their entries in the table rest on secondary descriptions, except Shadish et al., which has none.
+- **Abstract only:** the journal articles marked "Abstract" in the table. An abstract confirms the paper's main claim, not the details.
 
 ---
 
@@ -468,5 +504,5 @@ If these five are met, score ≥3 ("Fair"). Lower scores indicate critical gaps.
 3. **Composite and cap rule.** Should 11 enter the composite for a pre-launch build, where only the plan exists? One option: score the plan pre-launch, and score the report as a separate post-launch review.
 4. **Overlap with 03.** Archetype 03 has a Transfer & Retention dimension for the design of the instruction. Dimension 5 here covers the workplace and the measurement of transfer. The boundary should be stated in both files.
 5. **Trademark check.** "Kirkpatrick" and "Four Levels" are used here by citation and paraphrase only. Confirm that wording against the rights holder's guidance before release, as was done for the crosswalk.
-6. **Citations.** Bibliographic details are checked (see "Verification notes"). Still to do: read the cited passages to confirm each source supports the claim beside it in the "Evidence Base by Dimension" table. Only DeVaughn & Stefaniak, Kaufman, and the Dick, Carey & Carey chapter were read for that purpose.
+6. **Citations.** Bibliographic details are checked and each claim has a fit verdict in the "Evidence Base by Dimension" table. Still to do: read the books and the one article listed as not read, and read past the abstract for any article whose details the rubric relies on.
 7. **Still to build if adopted:** the judge module, edge cases, an owning agent, crosswalk entries, and the generated skill and plugin references.
