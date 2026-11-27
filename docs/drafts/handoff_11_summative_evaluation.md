@@ -506,9 +506,9 @@ If these five are met, score ≥3 ("Fair"). Lower scores indicate critical gaps.
 3. **Composite.** The measurement plan enters the composite when present and is skipped when absent, like every other archetype. The impact report does not enter the composite.
 4. **Boundary with archetype 03.** Archetype 03 scores what the instruction itself does for transfer: practice in varied contexts and spaced review inside the course timeline. Archetype 11 scores what happens outside the instruction: the manager's role, opportunity to use the skill, follow-up after the last session, workplace barriers, and whether these are measured. Dimension 5 is named "Workplace Transfer Conditions" to make the split plain. Add one sentence to handoff 03 pointing here.
 
-## Proposed, not yet decided (composite details)
+## Composite details (accepted by the author, 2026-11-27)
 
-These follow from decision 3 and are suggestions for the author to accept or change:
+These follow from decision 3:
 
 - **Evidence verdict.** Report the impact report's score as its own verdict, named "evidence verdict", shown beside the design composite and never averaged with it. Use the four bands in "Score Interpretation for Stakeholders" above.
 - **No second cap in v3.6.0.** Archetype 10's cap stays the only one. The severity flags here cover "completion presented as effectiveness". Include two edge cases built to tempt a judge (a polished completion dashboard; a satisfaction-only renewal case). Add a cap only if a live judge scores either above 3.0.
