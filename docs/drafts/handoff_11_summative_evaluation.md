@@ -305,23 +305,69 @@ Match the effort to the stakes. A five-minute job aid does not need a comparison
 
 ---
 
+## Evidence Base by Dimension
+
+What each dimension rests on, and who to cite for it. Full references follow.
+
+| Dimension | Claim the rubric makes | Evidence to cite |
+|---|---|---|
+| 1. Outcome Chain Coverage | Satisfaction and completion do not show learning or transfer | Alliger et al. (1997) and Sitzmann et al. (2008): meta-analyses finding reactions only weakly related to learning. Kirkpatrick & Kirkpatrick (2016), Kaufman & Keller (1994), Thalheimer (2018) for the chain itself; Holton (1996) for the critique |
+| 1. Outcome Chain Coverage | Practitioners rarely evaluate past the end-of-course test | DeVaughn & Stefaniak (2020): the barriers instructional designers report when evaluating |
+| 2. Objective-Evidence Traceability | Measures should be derived from objectives, and tracking designed for the question | Dick, Carey & Carey (2015) on criterion-referenced measures and summative evaluation; Kraiger, Ford & Salas (1993) on matching measures to outcome type; Gašević, Dawson & Siemens (2015) on analytics grounded in learning design; IEEE 9274.1.1-2023 for xAPI |
+| 3. Measurement Quality | Delayed measures show what was retained; end-of-course tests overstate it | Roediger & Karpicke (2006); Cepeda et al. (2006); Brown, Roediger & McDaniel (2014) |
+| 3. Measurement Quality | Instruments need evidence of validity and reliability | Kubiszyn & Borich (2016) |
+| 4. Attribution & Comparison | After-only data cannot support causal claims | Shadish, Cook & Campbell (2002); Phillips (2003) on isolating effects; Brinkerhoff (2003) for small programmes; Arthur et al. (2003) on how effect sizes vary by criterion |
+| 5. Transfer Conditions | Transfer depends on the learner, the design, and the workplace | Baldwin & Ford (1988); Blume et al. (2010); Ford, Baldwin & Prasad (2018); Grossman & Salas (2011); Salas et al. (2012) on what happens before and after training |
+| 5. Transfer Conditions | Follow-up and reinforcement sustain new behavior | Wurth & Wurth (2018); Cepeda et al. (2006) |
+| 6. Decision Rules & Feedback Loop | Evaluation exists to inform a decision | Scriven (1967); Dick, Carey & Carey (2015); Kaufman (2003) on value to the organisation and society |
+| 6. Decision Rules & Feedback Loop | Learner data carries ethical obligations | Slade & Prinsloo (2013); Giacumo, Villachica & Stepich (2024) on equity in design and evaluation |
+
+---
+
 ## Citation & References
+
+Entries marked **[checked]** were confirmed against a publisher, repository, or index record while drafting. All others were written from memory or from course materials and must be verified before release.
 
 **Evaluation Models**
 - Kirkpatrick, D.L., & Kirkpatrick, J.D. (2006). Evaluating Training Programs: The Four Levels (3rd ed.). Berrett-Koehler.
 - Kirkpatrick, J.D., & Kirkpatrick, W.K. (2016). Kirkpatrick's Four Levels of Training Evaluation. ATD Press.
 - Phillips, J.J. (2003). Return on Investment in Training and Performance Improvement Programs (2nd ed.). Butterworth-Heinemann.
 - Brinkerhoff, R.O. (2003). The Success Case Method: Find Out Quickly What's Working and What's Not. Berrett-Koehler.
-- Thalheimer, W. (2018). The Learning-Transfer Evaluation Model (LTEM). Work-Learning Research.
+- Thalheimer, W. (2018). The Learning-Transfer Evaluation Model: Sending Messages to Enable Learning Effectiveness. Work-Learning Research. **[checked: title and year]**
+- Kaufman, R., & Keller, J.M. (1994). Levels of evaluation: Beyond Kirkpatrick. Human Resource Development Quarterly, 5(4), 371-380.
+- Kaufman, R. (2003). Value, value, where is the value? Performance Improvement, 42(2). (Pages to confirm)
+- Dick, W., Carey, L., & Carey, J.O. (2015). The Systematic Design of Instruction (8th ed.). Pearson. (Chapter on summative evaluation)
 - Scriven, M. (1967). The methodology of evaluation. In R.W. Tyler, R.M. Gagné, & M. Scriven (Eds.), Perspectives of Curriculum Evaluation. Rand McNally. (Formative and summative distinction)
 
 **Critiques and Evidence**
 - Holton, E.F. (1996). The flawed four-level evaluation model. Human Resource Development Quarterly, 7(1), 5-21.
-- Alliger, G.M., Tannenbaum, S.I., Bennett, W., Traver, H., & Shotland, A. (1997). A meta-analysis of the relations among training criteria. Personnel Psychology, 50(2), 341-358.
+- Alliger, G.M., Tannenbaum, S.I., Bennett, W., Traver, H., & Shotland, A. (1997). A meta-analysis of the relations among training criteria. Personnel Psychology, 50(2), 341-358. https://doi.org/10.1111/j.1744-6570.1997.tb00911.x **[checked]**
+- Sitzmann, T., Brown, K.G., Casper, W.J., Ely, K., & Zimmerman, R.D. (2008). A review and meta-analysis of the nomological network of trainee reactions. Journal of Applied Psychology, 93(2), 280-295. https://doi.org/10.1037/0021-9010.93.2.280 **[checked]**
+- Arthur, W., Bennett, W., Edens, P.S., & Bell, S.T. (2003). Effectiveness of training in organizations: A meta-analysis of design and evaluation features. Journal of Applied Psychology, 88(2), 234-245.
+- Salas, E., Tannenbaum, S.I., Kraiger, K., & Smith-Jentsch, K.A. (2012). The science of training and development in organizations: What matters in practice. Psychological Science in the Public Interest, 13(2), 74-101. https://doi.org/10.1177/1529100612436661 **[checked]**
+- DeVaughn, P., & Stefaniak, J. (2020). An exploration of the challenges instructional designers encounter while conducting evaluations. Performance Improvement Quarterly, 33(4), 443-470. https://doi.org/10.1002/piq.21332 **[checked: one source lists a different volume; confirm on the journal page]**
+- Kraiger, K., Ford, J.K., & Salas, E. (1993). Application of cognitive, skill-based, and affective theories of learning outcomes to new methods of training evaluation. Journal of Applied Psychology, 78(2), 311-328.
 
 **Transfer of Training**
 - Baldwin, T.T., & Ford, J.K. (1988). Transfer of training: A review and directions for future research. Personnel Psychology, 41(1), 63-105.
 - Blume, B.D., Ford, J.K., Baldwin, T.T., & Huang, J.L. (2010). Transfer of training: A meta-analytic review. Journal of Management, 36(4), 1065-1105.
+- Ford, J.K., Baldwin, T.T., & Prasad, J. (2018). Transfer of training: The known and the unknown. Annual Review of Organizational Psychology and Organizational Behavior, 5, 201-225. https://doi.org/10.1146/annurev-orgpsych-032117-104443 **[checked: article and DOI; confirm pages]**
+- Grossman, R., & Salas, E. (2011). The transfer of training: What really matters. International Journal of Training and Development, 15(2), 103-120.
+- Wurth, A., & Wurth, K. (2018). Training Reinforcement: The 7 Principles to Create Measurable Behavior Change and Make Learning Stick. Wiley.
+
+**Retention and Delayed Measurement**
+- Roediger, H.L., & Karpicke, J.D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. Psychological Science, 17(3), 249-255.
+- Cepeda, N.J., Pashler, H., Vul, E., Wixted, J.T., & Rohrer, D. (2006). Distributed practice in verbal recall tasks: A review and quantitative synthesis. Psychological Bulletin, 132(3), 354-380.
+- Brown, P.C., Roediger, H.L., & McDaniel, M.A. (2014). Make It Stick: The Science of Successful Learning. Harvard University Press.
+
+**Measurement**
+- Kubiszyn, T., & Borich, G.D. (2016). Educational Testing and Measurement: Classroom Application and Practice (11th ed.). Wiley.
+
+**Learning Analytics and Data Ethics**
+- Gašević, D., Dawson, S., & Siemens, G. (2015). Let's not forget: Learning analytics are about learning. TechTrends, 59(1), 64-71. https://doi.org/10.1007/s11528-014-0822-x **[checked]**
+- Slade, S., & Prinsloo, P. (2013). Learning analytics: Ethical issues and dilemmas. American Behavioral Scientist, 57(10), 1510-1529. https://doi.org/10.1177/0002764213479366 **[checked: sources differ by one page on the range]**
+- IEEE. (2023). IEEE Standard for Learning Technology - JavaScript Object Notation (JSON) Data Model Format and Representational State Transfer (RESTful) Web Service for Learner Experience Data Tracking and Access (IEEE Std 9274.1.1-2023). (The xAPI standard) **[checked]**
+- Giacumo, L.A., Villachica, S.W., & Stepich, D.A. (2024). Instructional Design for Organizational Justice. Routledge.
 
 **Research Design**
 - Shadish, W.R., Cook, T.D., & Campbell, D.T. (2002). Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Houghton Mifflin.
@@ -415,5 +461,5 @@ If these five are met, score ≥3 ("Fair"). Lower scores indicate critical gaps.
 3. **Composite and cap rule.** Should 11 enter the composite for a pre-launch build, where only the plan exists? One option: score the plan pre-launch, and score the report as a separate post-launch review.
 4. **Overlap with 03.** Archetype 03 has a Transfer & Retention dimension for the design of the instruction. Dimension 5 here covers the workplace and the measurement of transfer. The boundary should be stated in both files.
 5. **Trademark check.** "Kirkpatrick" and "Four Levels" are used here by citation and paraphrase only. Confirm that wording against the rights holder's guidance before release, as was done for the crosswalk.
-6. **Citations.** Verify every reference against the source before release; they were drafted from memory.
+6. **Citations.** Nine references are marked [checked] in the reference list. Verify the rest against their sources before release, and read the cited passages to confirm each one supports the claim in the "Evidence Base by Dimension" table.
 7. **Still to build if adopted:** the judge module, edge cases, an owning agent, crosswalk entries, and the generated skill and plugin references.
