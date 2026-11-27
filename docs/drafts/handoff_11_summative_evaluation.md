@@ -32,6 +32,7 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 - **06 Formative Evaluation** is run before release, with a handful of learners, to fix the instruction. Archetype 11 is run after release, with the real population, to judge whether it worked and what the next version should change. Archetype 06 flags "summative claims from formative data"; archetype 11 is where summative claims belong.
 - **02 Assessment Design** evaluates whether the test itself is sound. Archetype 11 uses test results as one link in the chain and asks what happens after the test.
 - **07 Needs Analysis** defines the performance gap. Archetype 11 checks whether that same gap closed, using the measure 07 named.
+- **03 Instructional Sequencing** scores how the instruction itself supports transfer (Transfer & Retention Design). Archetype 11 scores the workplace conditions around it and whether transfer was measured.
 - **10 Curriculum Alignment** checks on paper that objectives, strategies, and assessments agree. Archetype 11 checks in practice, with learner data, whether that alignment produced the outcome.
 
 ---
@@ -128,9 +129,9 @@ When a result changes, is there reason to believe the training caused it?
 
 ---
 
-### 5. Transfer Conditions (1-5)
+### 5. Workplace Transfer Conditions (1-5)
 
-Does the plan account for what has to be true at work for the new behavior to appear and last?
+Does the plan account for what has to be true at work for the new behavior to appear and last? This dimension covers what happens outside the instruction. Practice and spaced review built into the course itself are scored by archetype 03 (Transfer & Retention Design).
 
 | Score | Manager Support | Opportunity to Use | Follow-Up | Environment Barriers | Measured? |
 |-------|-----------------|--------------------|-----------|---------------------|-----------|
@@ -206,8 +207,9 @@ Score: 1=End-of-course satisfaction only; 5=Baseline plus delayed measures, pilo
 - Claims proportionate to the design; limits stated
 Score: 1=Causal claims from after-only data; 5=Designed comparison, alternatives examined, confidence stated
 
-5. **Transfer Conditions** (1-5)
-- Manager support, opportunity to use, follow-up, and workplace barriers are planned for
+5. **Workplace Transfer Conditions** (1-5)
+- Manager support, opportunity to use, follow-up after the course ends, and workplace barriers are planned for
+- Score only what happens outside the instruction; in-course practice and review belong to archetype 03
 - These conditions are measured and reported beside outcomes
 Score: 1=Workplace not considered; 5=Managers equipped, use scheduled, spaced follow-up, barriers tracked
 
@@ -334,13 +336,13 @@ What each dimension rests on, who to cite for it, and how far the source was rea
 | 4. Attribution | After-only data cannot support causal claims | Shadish, Cook & Campbell (2002) | Not read. Standard reference for the point; no secondary confirmation gathered | Not read |
 | 4. Attribution | Isolate the effect of training before quoting a return | Phillips (2003) | Partly: Giacumo et al. (2025) confirm the five-level return-on-investment model and formula, not the isolation methods | Secondary |
 | 4. Attribution | Compare the most and least successful cases | Brinkerhoff (2003) | Supported as a description of the method, per Giacumo et al. (2025) | Secondary |
-| 5. Transfer | Transfer depends on the learner, the design, and the workplace | Baldwin & Ford (1988) | Supported | Abstract |
-| 5. Transfer | Same, with a supportive work environment among the predictors | Blume et al. (2010) | Supported | Abstract |
-| 5. Transfer | Same | Ford, Baldwin & Prasad (2018) | Supported as a review of what is reliably known | Abstract |
-| 5. Transfer | Support, opportunity to perform, and follow-up are among the strongest workplace factors | Grossman & Salas (2011) | Supported | Abstract |
-| 5. Transfer | What happens before and after training matters as well as during | Salas et al. (2012) | Supported | Abstract |
-| 5. Transfer | Spaced follow-up improves retention | Cepeda et al. (2006) | Supported for spacing and retention of verbal material. It is laboratory evidence, not workplace evidence | Abstract |
-| 5. Transfer | Reinforcement after the event sustains behavior | Wurth & Wurth (2018) | Practitioner guidance, not research. Its "70 percent forgotten in 24 hours" figure should not be repeated | Read |
+| 5. Workplace Transfer | Transfer depends on the learner, the design, and the workplace | Baldwin & Ford (1988) | Supported | Abstract |
+| 5. Workplace Transfer | Same, with a supportive work environment among the predictors | Blume et al. (2010) | Supported | Abstract |
+| 5. Workplace Transfer | Same | Ford, Baldwin & Prasad (2018) | Supported as a review of what is reliably known | Abstract |
+| 5. Workplace Transfer | Support, opportunity to perform, and follow-up are among the strongest workplace factors | Grossman & Salas (2011) | Supported | Abstract |
+| 5. Workplace Transfer | What happens before and after training matters as well as during | Salas et al. (2012) | Supported | Abstract |
+| 5. Workplace Transfer | Spaced follow-up improves retention | Cepeda et al. (2006) | Supported for spacing and retention of verbal material. It is laboratory evidence, not workplace evidence | Abstract |
+| 5. Workplace Transfer | Reinforcement after the event sustains behavior | Wurth & Wurth (2018) | Practitioner guidance, not research. Its "70 percent forgotten in 24 hours" figure should not be repeated | Read |
 | 6. Decision | Summative evaluation exists to inform a decision about continued use | Dick, Carey & Carey | Supported: defined as collecting data to make decisions about the acquisition or continued use of instruction | Read (7th ed.) |
 | 6. Decision | Same | Giacumo, Villachica & Stepich (2025), ch. 12 | Supported: organisations use summative evaluation to determine value, effectiveness, or efficiency; pairs evaluation questions with models | Read |
 | 6. Decision | The formative and summative distinction | Scriven (1967) | Supported as the origin of the distinction, per Dick, Carey & Carey | Secondary |
@@ -497,12 +499,25 @@ If these five are met, score ≥3 ("Fair"). Lower scores indicate critical gaps.
 
 ---
 
+## Decisions (author, 2026-11-27)
+
+1. **Adoption.** This becomes archetype 11 in v3.6.0, but only after the author has reviewed the rubric and its agent in full. Do not release, or merge anything that changes the archetype count, before that review.
+2. **Pipeline placement.** One archetype, two modes. Before launch it scores the measurement plan in the Evaluate phase, beside archetype 06. After launch it scores the impact report as a review.
+3. **Composite.** The measurement plan enters the composite when present and is skipped when absent, like every other archetype. The impact report does not enter the composite.
+4. **Boundary with archetype 03.** Archetype 03 scores what the instruction itself does for transfer: practice in varied contexts and spaced review inside the course timeline. Archetype 11 scores what happens outside the instruction: the manager's role, opportunity to use the skill, follow-up after the last session, workplace barriers, and whether these are measured. Dimension 5 is named "Workplace Transfer Conditions" to make the split plain. Add one sentence to handoff 03 pointing here.
+
+## Proposed, not yet decided (composite details)
+
+These follow from decision 3 and are suggestions for the author to accept or change:
+
+- **Evidence verdict.** Report the impact report's score as its own verdict, named "evidence verdict", shown beside the design composite and never averaged with it. Use the four bands in "Score Interpretation for Stakeholders" above.
+- **No second cap in v3.6.0.** Archetype 10's cap stays the only one. The severity flags here cover "completion presented as effectiveness". Include two edge cases built to tempt a judge (a polished completion dashboard; a satisfaction-only renewal case). Add a cap only if a live judge scores either above 3.0.
+- **A missing plan is a finding, not a score.** The router marks a measurement plan as expected for a course or programme and optional for a job aid or micro-lesson. When one is expected and absent, the synthesizer lists "no measurement plan" among its findings and the composite is unchanged.
+- **The report is checked against the plan.** When a measurement plan exists, pass it as the reference when scoring the impact report, so dimension 6 can check the result against the thresholds set in advance.
+- **One verdict cannot stand in for the other.** An evidence verdict does not lift a capped design composite, and a high design composite is not evidence of impact. The synthesizer should word the two separately.
+
 ## Open questions (draft only - remove before release)
 
-1. **Count and naming.** Adding this makes 11 archetypes and 66 dimensions. Every "10 archetypes, 60 dimensions" statement, `TOTAL_ARCHETYPES`, the smoke test, the printable rubric, and the plugin's agent list would change. That is a version bump the author decides.
-2. **ADDIE placement.** This sits in Evaluate beside 02 and 06, but runs after Implement in time. The pipeline would need a post-launch entry point as well as a pre-launch one (scoring the measurement plan before release).
-3. **Composite and cap rule.** Should 11 enter the composite for a pre-launch build, where only the plan exists? One option: score the plan pre-launch, and score the report as a separate post-launch review.
-4. **Overlap with 03.** Archetype 03 has a Transfer & Retention dimension for the design of the instruction. Dimension 5 here covers the workplace and the measurement of transfer. The boundary should be stated in both files.
-5. **Trademark check.** "Kirkpatrick" and "Four Levels" are used here by citation and paraphrase only. Confirm that wording against the rights holder's guidance before release, as was done for the crosswalk.
-6. **Citations.** Bibliographic details are checked and each claim has a fit verdict in the "Evidence Base by Dimension" table. Still to do: read the books and the one article listed as not read, and read past the abstract for any article whose details the rubric relies on.
-7. **Still to build if adopted:** the judge module, edge cases, an owning agent, crosswalk entries, and the generated skill and plugin references.
+1. **Trademark check.** "Kirkpatrick" and "Four Levels" are used here by citation and paraphrase only. Confirm that wording against the rights holder's guidance before release, as was done for the crosswalk.
+2. **Citations.** Bibliographic details are checked and each claim has a fit verdict in the "Evidence Base by Dimension" table. Still to do: read the books and the one article listed as not read, and read past the abstract for any article whose details the rubric relies on.
+3. **Still to build:** the judge module, edge cases, an owning agent, crosswalk entries, and the generated skill and plugin references.
