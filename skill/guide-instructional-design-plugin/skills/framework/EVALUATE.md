@@ -24,7 +24,9 @@ discriminates is useless, so give low scores where the evidence calls for them.
    from the handoff's Improvement Suggestions section where it has one, otherwise from what
    the next anchor up describes.
 6. **State the verdict** by mapping the overall to the threshold bands in
-   `references/00_archetype_index.md` (ship / light revision / revise / redesign).
+   `references/00_archetype_index.md` (ship / light revision / revise / redesign). An impact report
+   scored with 11 gets an **evidence verdict** from that handoff's own bands (excellent / good /
+   fair / poor) instead.
 
 ## Output
 
@@ -32,7 +34,9 @@ Default to the scorecard a person can use: a per-dimension table (score plus a o
 two-sentence rationale citing the evidence), the overall and verdict, severity flags, and
 improvement suggestions. When the user wants machine-readable output or is wiring GUIDE into a
 pipeline, return the exact object from the handoff's **Output JSON** section instead. When
-several archetypes apply, give one scorecard per archetype and a short combined verdict.
+several archetypes apply, give one scorecard per archetype and a short combined verdict. Keep an
+impact report's score (11) out of the combined verdict: state it separately as the evidence
+verdict, and say whether it was checked against a measurement plan.
 
 ## When scoring is hard
 
@@ -42,6 +46,9 @@ several archetypes apply, give one scorecard per archetype and a short combined 
   (see 08).
 - **One quiz item or a short excerpt instead of a whole test?** Follow "Scoring a single item or
   a short sample" in 02: the instrument-level dimensions are capped, not failed.
+- **A plan or a report under 11?** A plan says what will be measured; a report says what happened.
+  Score a plan on what it commits to and a report on the evidence it shows. When a report comes
+  with its measurement plan, read the result against the thresholds the plan set.
 - **Two dimensions feel alike?** Re-read both definitions in the handoff's dimension table and
   score each piece of evidence under the dimension whose anchor names it. Handoffs 02, 04, and
   10 also have a troubleshooting table for the common mix-ups.

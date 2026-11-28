@@ -4,13 +4,13 @@ This is the routing map for the GUIDE framework. Use it to pick the right archet
 instructional-design task, then open the matching `handoff_XX_*.md` file for the full grounding text,
 scoring anchors, severity flags, and output JSON.
 
-GUIDE = **G**rounded **U**niversal **I**nstructional **D**esign **E**valuator. **Ten** archetypes,
-**60** dimensions (6 per archetype), each grounded in named learning-science sources and scored 1–5
+GUIDE = **G**rounded **U**niversal **I**nstructional **D**esign **E**valuator. **Eleven** archetypes,
+**66** dimensions (6 per archetype), each grounded in named learning-science sources and scored 1–5
 with behavioral anchors. Built on the LLM-as-a-judge pattern (Zheng et al., 2023). Tracks GUIDE v3.5.0.
 
 ---
 
-## The 10 archetypes mapped to ADDIE
+## The 11 archetypes mapped to ADDIE
 
 | # | Archetype | ADDIE phase | Theorists | Reference file |
 |---|-----------|-------------|-----------|----------------|
@@ -23,12 +23,19 @@ with behavioral anchors. Built on the LLM-as-a-judge pattern (Zheng et al., 2023
 | 1 | Adult Learning Communication | **I**mplement | Knowles, Mezirow, Ausubel, Mayer, Hirumi (Three Alignments) | `handoff_01_adult_learning_communication.md` |
 | 2 | Assessment Design Quality | **E**valuate | Bloom/Anderson & Krathwohl, Mager, Kubiszyn & Borich, Dick & Carey | `handoff_02_assessment_design.md` |
 | 6 | Formative Evaluation Protocol Quality | **E**valuate | Bordonaro, Dick & Carey, Nielsen | `handoff_06_formative_evaluation.md` |
+| 11 | Summative Evaluation & Learning Transfer | **E**valuate (the plan), then after launch (the report) | Kirkpatrick & Kirkpatrick, Thalheimer, Baldwin & Ford, Phillips, Brinkerhoff, Shadish/Cook/Campbell, Dick & Carey | `handoff_11_summative_evaluation.md` |
 | **10** | **Curriculum Alignment (Synthesis)** | **Cross-cutting** | Tyler, Bloom/Anderson & Krathwohl, Webb (DoK), Mager, Wiggins & McTighe, Reigeluth, van Merriënboer & Kirschner, Merrill (2002), Hirumi (2021, 2025) | `handoff_10_curriculum_alignment.md` |
 
 **Archetype 10 is the synthesis archetype.** It evaluates *relationships between* objectives, instructional
 strategies, and assessments — not the quality of any individual component (other archetypes do that).
 A course can score 5/5 on archetypes 02, 03, and 07 individually and still fail 10. That is exactly
 the failure mode 10 is designed to catch.
+
+**Archetype 11 has two modes.** Before launch it scores the *measurement plan*: how the course will be
+judged once it is live. That score counts toward the composite like any other archetype's. After launch
+it scores the *impact report*, with the measurement plan as its reference when there is one. That score
+is reported on its own as an **evidence verdict** and is never averaged into the composite: a well-designed
+course is not evidence of impact, and good impact evidence does not repair a design that failed its gate.
 
 **Professional standards.** For how each archetype maps to IBSTPI, ATD, and ISPI/HPT competency
 standards, see `discipline_alignment_crosswalk.md` in this directory. It is GUIDE's own
@@ -49,7 +56,8 @@ Use this to route. Match the artifact in front of you to the archetype whose obj
 - **A web page, LMS shell, digital course material, or anything that must meet WCAG/UDL** → **05 Accessibility**.
 - **A chatbot/RAG answer, help-desk reply, or any conversational response to a learning professional** → **01 Adult Learning Communication**.
 - **A quiz, test, item bank, rubric, or test blueprint** → **02 Assessment Design**.
-- **An evaluation plan, usability test, expert-review protocol, or pilot study design** → **06 Formative Evaluation**.
+- **A pre-release evaluation plan, usability test, expert-review protocol, or pilot study design** → **06 Formative Evaluation**.
+- **A summative evaluation or measurement plan, a dashboard or tracking specification, an impact report, a post-launch review, or a programme renewal case** → **11 Summative Evaluation & Learning Transfer**. Completion and satisfaction figures offered as proof that training worked belong here.
 - **A complete artifact set (objectives + instruction + assessment) where you want to verify they actually agree** → **10 Curriculum Alignment**. Always run this as the final gate when you have all three components.
 
 **Multiple archetypes often apply.** A narrated e-learning scenario could be scored by 04 (multimedia),
@@ -59,7 +67,7 @@ set is complete.
 
 ---
 
-## The 60 dimensions at a glance
+## The 66 dimensions at a glance
 
 Each archetype scores six dimensions 1–5. Overall is normally the mean of the six. **Archetype 01**
 weights Accuracy and Adult Learning Alignment most heavily. **Archetype 10** caps overall at 3.0 if
@@ -101,6 +109,11 @@ Generalizability.
 Objective ↔ Assessment Coherence · Coverage Completeness · Vertical Alignment · Discipline Alignment.
 *(Cap rule: if Objective ↔ Assessment ≤ 2, overall capped at 3.0.)*
 
+**11 Summative Evaluation & Learning Transfer** - Outcome Chain Coverage · Objective-Evidence
+Traceability · Measurement Quality · Attribution & Comparison · Workplace Transfer Conditions ·
+Decision Rules & Feedback Loop. *(Two modes: a measurement plan counts toward the composite; an impact
+report is a separate evidence verdict.)*
+
 ---
 
 ## The 1–5 scale (shared across all archetypes)
@@ -120,6 +133,10 @@ Objective ↔ Assessment Coherence · Coverage Completeness · Vertical Alignmen
 Report the overall to two decimals and read each band from its lower bound: 4.5 and up, 3.5 up to
 4.5, 2.5 up to 3.5, below 2.5. A 4.47 is light revision.
 
+An impact report scored with archetype 11 is not part of the composite. It gets an **evidence verdict**
+from that handoff's own bands (excellent, good, fair, poor), stated beside the design verdict and never
+blended with it.
+
 ---
 
 ## Recurring cross-archetype concepts
@@ -134,7 +151,7 @@ Several theories appear in multiple archetypes. When designing or evaluating, th
 - **Retrieval practice & spacing** (Brown/Roediger/McDaniel; "Make It Stick") — 03, 09.
 - **Advance organizers / meaningful learning** (Ausubel) — 01, 03, 09.
 - **UDL — multiple means of representation, action/expression, engagement** (CAST) — 05, plus accessibility threads in 01, 02, 04.
-- **Transfer** (application in varied/authentic contexts) — 03, 08, 09, 10 (Vertical).
+- **Transfer** (application in varied/authentic contexts) — 03, 08, 09, 10 (Vertical), 11 (workplace conditions and whether transfer was measured).
 - **ARCS — Attention, Relevance, Confidence, Satisfaction** (Keller) — 03, 07.
 - **Hirumi's Three Alignments** (Merrill 2002 effective/efficient/engaging mapped to alignments) — 01, 07, 10.
 - **HPT cause analysis** — the gatekeeper question in 07.
@@ -146,4 +163,4 @@ Several theories appear in multiple archetypes. When designing or evaluating, th
 
 GUIDE — Grounded Universal Instructional Design Evaluator (v3.5.0).
 Repository: github.com/jermn007/GUIDE. Copyright 2026 Jeremy Terhune. Apache-2.0.
-This index condenses the ten `handoff_*.md` files in this directory; those files are the authoritative source.
+This index condenses the eleven `handoff_*.md` files in this directory; those files are the authoritative source.
