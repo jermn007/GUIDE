@@ -7,6 +7,13 @@ Extends guide_registry.py with a multi-archetype evaluation pipeline that maps
 to the ADDIE lifecycle, applies archetype 10's curriculum-alignment cap rule,
 and produces a structured verdict + targeted revision recommendations.
 
+Two verdicts, kept apart. The *design verdict* is the composite of every
+archetype that scored a design artifact, including archetype 11 when a
+measurement plan is present. The *evidence verdict* is archetype 11's score of
+an impact report written after launch. It is reported beside the composite and
+never averaged into it: a well-designed course is not evidence of impact, and
+good impact evidence does not lift a design that failed its gate.
+
 This module focuses on the *evaluation* side of the pipeline (end-to-end audit
 of a complete or partial artifact set). For the *build* side (agents that
 actually author content), see the Cowork plugin's agents/ directory.
@@ -34,6 +41,9 @@ Usage:
             "conversational_responses": "...",  # archetype 01 (optional)
             "assessment": "...",                # archetype 02
             "formative_eval_plan": "...",       # archetype 06
+            "measurement_plan": "...",          # archetype 11, before launch (optional)
+            "impact_report": "...",             # archetype 11, after launch (optional;
+                                                #   evidence verdict, not in the composite)
         },
         context="Optional retrieval context or source material",
         reference="Optional gold-standard artifact for comparison",
@@ -41,6 +51,8 @@ Usage:
 
     print(verdict.composite_score)
     print(verdict.threshold_band)
+    print(verdict.verdict_statements["design"])
+    print(verdict.verdict_statements["evidence"])
     for action in verdict.next_actions:
         print(f"  - {action.fix_owner_archetype}: {action.action}")
 
@@ -75,6 +87,7 @@ class Archetype(str, Enum):
     STORY_DESIGN         = "story_design"                   # 08 Design (optional)
     COGNITIVE_NEURO      = "cognitive_neuroscience"         # 09 Design
     CURRICULUM_ALIGNMENT = "curriculum_alignment"           # 10 Synthesis gate
+    SUMMATIVE_EVAL       = "summative_evaluation"           # 11 Evaluate (plan) / after launch (report)
 
 
 # Map each artifact slot in the input dict → archetype that judges it.
@@ -89,7 +102,16 @@ ARTIFACT_TO_ARCHETYPE: dict[str, Archetype] = {
     "conversational_responses": Archetype.ADULT_LEARNING,
     "assessment":               Archetype.ASSESSMENT_DESIGN,
     "formative_eval_plan":      Archetype.FORMATIVE_EVAL,
+    "measurement_plan":         Archetype.SUMMATIVE_EVAL,
 }
+
+# Archetype 11 has two artifact slots. The measurement plan (above) is a design
+# artifact: it is written before launch and enters the composite when present.
+# The impact report is written after launch and is deliberately NOT in
+# ARTIFACT_TO_ARCHETYPE: it is scored on its own as the evidence verdict and is
+# kept out of the specialist fan-out, the alignment gate, and the composite.
+MEASUREMENT_PLAN_SLOT = "measurement_plan"
+IMPACT_REPORT_SLOT    = "impact_report"
 
 # Phase ordering — used by the synthesizer when ranking findings by where in
 # ADDIE the failure should be fixed (cheapest to fix earliest).
@@ -103,6 +125,7 @@ PHASE_ORDER: dict[Archetype, int] = {
     Archetype.ADULT_LEARNING:       4,   # Implement
     Archetype.ASSESSMENT_DESIGN:    5,   # Evaluate
     Archetype.FORMATIVE_EVAL:       5,
+    Archetype.SUMMATIVE_EVAL:       5,
     Archetype.CURRICULUM_ALIGNMENT: 6,   # Gate
 }
 
@@ -119,6 +142,25 @@ VERDICT_BANDS: list[tuple[float, str, str]] = [
     (2.5, "revise",         "Real misalignment; revise before delivery."),
     (0.0, "redesign",       "Misaligned; objectives, instruction, and assessment are effectively three different courses."),
 ]
+
+# Bands for the evidence verdict (archetype 11's score of an impact report), from
+# "Score Interpretation for Stakeholders" in handoff 11. They are separate from
+# VERDICT_BANDS on purpose: these judge the evidence, not the design.
+EVIDENCE_BANDS: list[tuple[float, str, str]] = [
+    (4.5, "excellent", "Evidence supports decisions about the programme; act on findings."),
+    (3.5, "good",      "Sound evidence with named limits; act on findings, close the stated gaps next cycle."),
+    (2.5, "fair",      "Supports claims about learning, not about behavior or results; do not quote impact."),
+    (0.0, "poor",      "Reports activity, not effect; redesign the evaluation before renewing or scaling."),
+]
+
+# Used when there is nothing to score for one of the two verdicts.
+NOT_SCORED = "not_scored"
+
+MISSING_PLAN_FINDING = (
+    "No measurement plan: a course or programme of this size is expected to say, before launch, "
+    "how it will be judged once it is live (archetype 11). This is a finding, not a score; "
+    "the composite is unchanged."
+)
 
 
 # ---------------------------------------------------------------------------
@@ -168,6 +210,11 @@ class PipelineVerdict:
     next_actions: list[RevisionAction]
     iteration_number: int = 1
     non_progress_flag: bool = False
+    # Archetype 11. `evidence` is None when no impact report was supplied; otherwise it
+    # holds the evidence verdict, which is never part of composite_score.
+    evidence: Optional[dict] = None
+    missing_measurement_plan: bool = False
+    verdict_statements: dict = field(default_factory=dict)   # {"design": ..., "evidence": ...}
 
     def to_dict(self) -> dict:
         return {
@@ -182,6 +229,9 @@ class PipelineVerdict:
             "next_actions": [a.to_dict() for a in self.next_actions],
             "iteration_number": self.iteration_number,
             "non_progress_flag": self.non_progress_flag,
+            "evidence": self.evidence,
+            "missing_measurement_plan": self.missing_measurement_plan,
+            "verdict_statements": self.verdict_statements,
         }
 
     def to_json(self) -> str:
@@ -200,8 +250,11 @@ class ADDIEPipeline:
       1. classify_request   → mode = build | review | partial
       2. fan_out_specialists → run each applicable archetype as a judge
       3. alignment_gate     → run archetype 10 across the artifact set; apply cap rule
-      4. synthesize         → compose verdict (verdict + ranked findings)
-      5. plan_revisions     → targeted, rubric-anchored revision actions
+      4. evidence_review    → when an impact report is present, score it with archetype 11
+                              against the measurement plan (the evidence verdict)
+      5. synthesize         → compose verdict (design verdict + ranked findings), with the
+                              evidence verdict beside it, never averaged in
+      6. plan_revisions     → targeted, rubric-anchored revision actions
     """
 
     def __init__(
@@ -218,7 +271,7 @@ class ADDIEPipeline:
     # -- registry sanity check ---------------------------------------------
 
     def _verify_registry(self) -> None:
-        """Confirm all 10 archetypes are registered (caller imports guide_registry)."""
+        """Confirm every archetype is registered (caller imports guide_registry)."""
         registered = set(list_archetypes())
         expected = {a.value for a in Archetype}
         missing = expected - registered
@@ -238,10 +291,14 @@ class ADDIEPipeline:
                    to use the Cowork plugin agents to author the artifacts).
         - review:  full or near-full artifact set; do an end-to-end audit.
         - partial: some pieces present; audit what we have, flag what's missing.
+        - evidence_only: an impact report (with or without its measurement plan)
+                   and no instruction to audit; only the evidence verdict is given.
         """
         present = {k for k, v in artifact.items() if v}
         if not present:
             return "build"
+        if IMPACT_REPORT_SLOT in present and not (present - {IMPACT_REPORT_SLOT, MEASUREMENT_PLAN_SLOT}):
+            return "evidence_only"
         # Define a "near-full" set: needs analysis + at least one design/develop + assessment
         full_signals = {"needs_analysis", "lesson_plan", "assessment"}
         if full_signals.issubset(present):
@@ -258,7 +315,9 @@ class ADDIEPipeline:
     ) -> list[GUIDEResult]:
         """
         Run each present artifact slot through its judging archetype.
-        Skips archetype 10 here — that's the gate, called separately.
+        Skips archetype 10 here — that's the gate, called separately. Also skips
+        the impact report: it has no entry in ARTIFACT_TO_ARCHETYPE and is scored
+        by evidence_review(), outside the composite.
         """
         results: list[GUIDEResult] = []
         for slot, content in artifact.items():
@@ -355,7 +414,7 @@ class ADDIEPipeline:
         composed = "\n\n".join(
             f"### {slot.upper().replace('_', ' ')}\n{content}"
             for slot, content in artifact.items()
-            if content
+            if content and slot != IMPACT_REPORT_SLOT   # post-launch evidence is not a design artifact
         )
         return evaluate_standalone(
             archetype_name=Archetype.CURRICULUM_ALIGNMENT.value,
@@ -367,6 +426,105 @@ class ADDIEPipeline:
             api_key=self.api_key,
         )
 
+    # -- 3b. evidence review (archetype 11 on the impact report) -----------
+
+    def evidence_review(
+        self,
+        artifact: dict,
+        context: str = "N/A",
+    ) -> Optional[GUIDEResult]:
+        """
+        Score the impact report with archetype 11, or return None when there is none.
+
+        When a measurement plan is present it is passed as the judge's reference, so
+        Decision Rules & Feedback Loop can check the result against the thresholds
+        the plan set in advance. The result feeds the evidence verdict only.
+        """
+        report = artifact.get(IMPACT_REPORT_SLOT)
+        if not report:
+            return None
+        plan = artifact.get(MEASUREMENT_PLAN_SLOT)
+        return evaluate_standalone(
+            archetype_name=Archetype.SUMMATIVE_EVAL.value,
+            user_input=(
+                "Evaluate the impact_report artifact (mode: impact_report, stage: post_launch). "
+                + ("The measurement plan agreed before launch is the REFERENCE: check the report against "
+                   "the measures and decision thresholds it set."
+                   if plan else
+                   "No measurement plan was supplied, so there are no advance thresholds to check against.")
+            ),
+            assistant_output=str(report),
+            context=context,
+            reference=str(plan) if plan else "N/A",
+            model_name=self.model_name,
+            api_key=self.api_key,
+        )
+
+    @staticmethod
+    def _evidence_block(evidence_result: Optional[GUIDEResult], scored_against_plan: bool) -> Optional[dict]:
+        """The evidence verdict as a dict, or None when no impact report was scored."""
+        if evidence_result is None:
+            return None
+        score = float(evidence_result.overall_score)
+        band, explanation = EVIDENCE_BANDS[-1][1], EVIDENCE_BANDS[-1][2]
+        for threshold, name, text in EVIDENCE_BANDS:
+            if score >= threshold:
+                band, explanation = name, text
+                break
+        top_finding = evidence_result.severity_flags[0] if evidence_result.severity_flags else (
+            next(iter(evidence_result.improvement_suggestions), "") if evidence_result.improvement_suggestions else ""
+        )
+        return {
+            "archetype": evidence_result.archetype,
+            "mode": "impact_report",
+            "evidence_score": round(score, 2),
+            "evidence_verdict": band,
+            "explanation": explanation,
+            "scored_against_plan": scored_against_plan,
+            "in_composite": False,
+            "scores": dict(evidence_result.scores),
+            "top_finding": top_finding,
+            "severity_flags": list(evidence_result.severity_flags),
+            "improvement_suggestions": list(evidence_result.improvement_suggestions),
+        }
+
+    @staticmethod
+    def _verdict_statements(
+        band: str,
+        composite: float,
+        cap_triggered: bool,
+        evidence: Optional[dict],
+        missing_plan: bool,
+    ) -> dict:
+        """
+        Word the design verdict and the evidence verdict separately, so that
+        neither can be read as standing in for the other.
+        """
+        if band == NOT_SCORED:
+            design = "Design verdict: not scored. No design artifacts were supplied, so there is no composite."
+        else:
+            design = f"Design verdict: {band} (composite {composite:.2f})."
+            if cap_triggered:
+                design += f" Capped at {CAP_RULE_CEILING} by archetype 10; impact evidence does not lift the cap."
+            design += " This judges the design on paper. It is not evidence that the course worked."
+        if missing_plan:
+            design += " Finding: no measurement plan was supplied where one is expected."
+        if evidence is None:
+            evidence_text = (
+                "Evidence verdict: none. No impact report was supplied, so nothing here says "
+                "whether the course changed behavior or results."
+            )
+        else:
+            evidence_text = (
+                f"Evidence verdict: {evidence['evidence_verdict']} ({evidence['evidence_score']:.2f}). "
+                f"{evidence['explanation']} "
+                + ("Scored against the measurement plan. " if evidence["scored_against_plan"]
+                   else "Scored without a measurement plan, so no advance thresholds were checked. ")
+                + "This judges the impact evidence only. It is not averaged into the design composite "
+                  "and does not change the design verdict."
+            )
+        return {"design": design, "evidence": evidence_text}
+
     # -- 4. synthesize ----------------------------------------------------
 
     def synthesize(
@@ -375,10 +533,17 @@ class ADDIEPipeline:
         gate_result: GUIDEResult,
         iteration_number: int = 1,
         prior_composite_score: Optional[float] = None,
+        evidence_result: Optional[GUIDEResult] = None,
+        evidence_scored_against_plan: bool = False,
+        missing_measurement_plan: bool = False,
     ) -> PipelineVerdict:
         """
         Compose all archetype scorecards into a single verdict.
-        Applies the archetype-10 cap rule.
+        Applies the archetype-10 cap rule (the only cap).
+
+        `evidence_result` (archetype 11 on an impact report) is reported beside the
+        composite as the evidence verdict and never enters it. A measurement plan
+        that was expected and absent is added to the findings; it is not a score.
         """
         all_results = specialist_results + [gate_result]
 
@@ -413,6 +578,16 @@ class ADDIEPipeline:
 
         # Ranked severity
         ranked = self._rank_severity(all_results, gate_result)
+        if missing_measurement_plan:
+            ranked.append({
+                "archetype": Archetype.SUMMATIVE_EVAL.value,
+                "finding": MISSING_PLAN_FINDING,
+                "corroborated_by": [],
+                "raised_by": "synthesizer",
+            })
+
+        # Evidence verdict (separate from the composite, by design)
+        evidence = self._evidence_block(evidence_result, evidence_scored_against_plan)
 
         # Revision actions
         actions = self._plan_revisions(all_results, gate_result)
@@ -435,6 +610,11 @@ class ADDIEPipeline:
             next_actions=actions,
             iteration_number=iteration_number,
             non_progress_flag=non_progress,
+            evidence=evidence,
+            missing_measurement_plan=missing_measurement_plan,
+            verdict_statements=self._verdict_statements(
+                band, capped, cap_triggered, evidence, missing_measurement_plan
+            ),
         )
 
     @staticmethod
@@ -522,9 +702,16 @@ class ADDIEPipeline:
         reference: str = "N/A",
         iteration_number: int = 1,
         prior_composite_score: Optional[float] = None,
+        measurement_plan_expected: Optional[bool] = None,
     ) -> PipelineVerdict:
         """
         End-to-end evaluation pipeline. Returns a PipelineVerdict.
+
+        `measurement_plan_expected` says whether this artifact set should have a
+        measurement plan (archetype 11): True for a course or programme, False for a
+        job aid or micro-lesson. Left as None, it is taken to be True for a full
+        `review` set and False otherwise. When a plan is expected and absent, the
+        verdict carries a "no measurement plan" finding and the composite is unchanged.
 
         The orchestrator does *not* author content; that's the Cowork plugin's
         job. This function audits whatever is present in `artifact`, runs the
@@ -549,7 +736,36 @@ class ADDIEPipeline:
                 ranked_severity=[],
                 next_actions=[],
                 iteration_number=iteration_number,
+                verdict_statements=self._verdict_statements(NOT_SCORED, 0.0, False, None, False),
             )
+
+        has_plan = bool(artifact.get(MEASUREMENT_PLAN_SLOT))
+        evidence_result = self.evidence_review(artifact, context)
+
+        if mode == "evidence_only":
+            # An impact report with no instruction to audit: give the evidence verdict
+            # alone. There is no design composite, so nothing is averaged or capped.
+            evidence = self._evidence_block(evidence_result, has_plan)
+            return PipelineVerdict(
+                composite_score=0.0,
+                composite_score_uncapped=0.0,
+                alignment_cap_triggered=False,
+                cap_reason="",
+                threshold_band=NOT_SCORED,
+                band_explanation=(
+                    "No design artifacts were supplied, so there is no design composite. "
+                    "See the evidence verdict for the impact report."
+                ),
+                by_archetype={},
+                ranked_severity=[],
+                next_actions=[],
+                iteration_number=iteration_number,
+                evidence=evidence,
+                verdict_statements=self._verdict_statements(NOT_SCORED, 0.0, False, evidence, False),
+            )
+
+        if measurement_plan_expected is None:
+            measurement_plan_expected = (mode == "review")
 
         specialist_results = self.fan_out_specialists(artifact, context, reference)
         gate_result = self.alignment_gate(artifact, context, reference)
@@ -558,6 +774,9 @@ class ADDIEPipeline:
             gate_result,
             iteration_number=iteration_number,
             prior_composite_score=prior_composite_score,
+            evidence_result=evidence_result,
+            evidence_scored_against_plan=has_plan,
+            missing_measurement_plan=bool(measurement_plan_expected) and not has_plan,
         )
 
 
@@ -580,6 +799,11 @@ def _cli() -> None:
     parser.add_argument("--reference", default="N/A", help="Optional gold-standard artifact for comparison.")
     parser.add_argument("--model", default="claude-sonnet-5-5", help="Anthropic model name.")
     parser.add_argument("--output", default="-", help="Output path for verdict JSON (- for stdout).")
+    plan_group = parser.add_mutually_exclusive_group()
+    plan_group.add_argument("--expect-measurement-plan", dest="plan_expected", action="store_true", default=None,
+                            help="A measurement plan is expected (a course or programme); report it as a finding if absent.")
+    plan_group.add_argument("--no-measurement-plan-expected", dest="plan_expected", action="store_false",
+                            help="A measurement plan is optional (a job aid or micro-lesson).")
     args = parser.parse_args()
 
     with open(args.artifact_json) as f:
@@ -591,6 +815,7 @@ def _cli() -> None:
         artifact=artifact,
         context=args.context,
         reference=args.reference,
+        measurement_plan_expected=args.plan_expected,
     )
 
     out = verdict.to_json()
