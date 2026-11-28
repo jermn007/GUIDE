@@ -1,7 +1,5 @@
 # Archetype 11: Summative Evaluation & Learning Transfer
 
-> **DRAFT - not part of the released framework.** This file lives in `docs/drafts/` so the build scripts, which read `archetypes/handoff_*.md`, do not pick it up. Dimension names, anchors, and citations are proposals for review. See "Open questions" at the end.
-
 **Purpose**: Design and evaluate the plan, and the report, that answer the question asked after release: did people learn it, do they use it on the job, and did that change anything that matters? The dimensions below work in both directions: draft a summative evaluation or measurement plan against them, or score an existing plan, dashboard specification, or impact report.
 
 **When this is skipped** (an illustrative scenario): A new-manager programme runs for a year. The dashboard shows 94% completion and a 4.6 out of 5 satisfaction rating, and the programme is renewed. Nobody checks whether managers hold the feedback conversations the programme taught. They do not: the practice was never scheduled into their week, and their own managers never ask about it. The numbers were accurate and answered the wrong question. If your evidence that training worked is completion and satisfaction, this archetype is for you.
@@ -15,7 +13,7 @@
 
 Then run an evaluate-mode self-check against the scoring anchors below.
 
-**Professional alignment** (the professional standards this archetype *aims* to align with - an independent, aspirational mapping by the author, not reviewed or endorsed by these bodies; see [`discipline_alignment_crosswalk.md`](../../archetypes/discipline_alignment_crosswalk.md) for the full mapping, citations, and licensing notes):
+**Professional alignment** (the professional standards this archetype *aims* to align with - an independent, aspirational mapping by the author, not reviewed or endorsed by these bodies; see [`discipline_alignment_crosswalk.md`](discipline_alignment_crosswalk.md) for the full mapping, citations, and licensing notes):
 - **IBSTPI ID Competencies (2012)** - Evaluation & Implementation: C17 (evaluating interventions), C18 (data-based revision).
 - **ATD Capability Model (2020)** - Evaluating Impact; Data & Analytics; Performance Improvement.
 - **ISPI/HPT Ten Standards** - S1 Focus on Results; S10 Evaluate Results and Measure Impact.
@@ -34,6 +32,10 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 - **07 Needs Analysis** defines the performance gap. Archetype 11 checks whether that same gap closed, using the measure 07 named.
 - **03 Instructional Sequencing** scores how the instruction itself supports transfer (Transfer & Retention Design). Archetype 11 scores the workplace conditions around it and whether transfer was measured.
 - **10 Curriculum Alignment** checks on paper that objectives, strategies, and assessments agree. Archetype 11 checks in practice, with learner data, whether that alignment produced the outcome.
+
+**Two ways to run this archetype:**
+- **Measurement plan** (before launch, in the Evaluate phase beside archetype 06): score the plan for how the course will be judged once it is live. Like every other archetype, this score enters the composite when a plan is present and is left out when it is not.
+- **Impact report** (after launch): score the report, dashboard, or renewal case that claims the course worked. When a measurement plan exists, pass it as the reference, so dimension 6 can check the result against the thresholds set in advance. This score is reported on its own as an **evidence verdict**, using the bands under "Score Interpretation for Stakeholders" below. It is never averaged into the design composite: a well-designed course is not evidence of impact, and good impact evidence does not repair a design that failed its gate.
 
 ---
 
@@ -308,60 +310,9 @@ Match the effort to the stakes. A five-minute job aid does not need a comparison
 
 ---
 
-## Evidence Base by Dimension
-
-What each dimension rests on, who to cite for it, and how far the source was read. "Read" means the passage was read in the published text. "Abstract" means only the published abstract was read. "Secondary" means the source itself was not read and the description rests on another work that describes it. Full references follow.
-
-| Dimension | Claim the rubric makes | Source | Fit | Basis |
-|---|---|---|---|---|
-| 1. Outcome Chain | How much learners liked a course is a poor guide to what they learned | Alliger et al. (1997) | Supported: reactions of any type correlated .07 with immediate learning, and affective reactions about zero. The authors conclude that liking does not equate to learning or performing, and recommend usefulness questions when the aim is to predict transfer | Read |
-| 1. Outcome Chain | Reactions relate to learning measured straight after training, not to learning measured later | Sitzmann et al. (2008) | Mixed, and cited as such: reactions predicted post-training knowledge (2% to 5% of added variance) but not delayed procedural knowledge. The authors say this challenges the view that reactions are unrelated to learning. They found no difference between liking and usefulness ratings, unlike Alliger et al. | Read |
-| 1. Outcome Chain | Do not rely on learner ratings as indicators of learning | Clark (2020), ch. 1 | Supported: reads the Sitzmann correlation as positive but too small to be of practical value. That reading is Clark's, not the original authors' | Read |
-| 1. Outcome Chain | The chain runs reaction, learning, behavior, results | Kirkpatrick & Kirkpatrick (2006, 2016) | Supported as a description of the model, per Giacumo et al. (2025), Kaufman (2003), and DeVaughn & Stefaniak (2020) | Secondary |
-| 1. Outcome Chain | Lower tiers (attendance, activity, perceptions) do not validate learning | Thalheimer (2018) | Supported: the author's summary calls the lower tiers inadequate to validate learning success. Tier names per Giacumo et al. (2025) | Author's summary + secondary |
-| 1. Outcome Chain | The chain can be extended to societal value | Kaufman & Keller (1994) | Consistent with secondary summaries; article not read | Secondary |
-| 1. Outcome Chain | Same | Kaufman (2003) | Supported: argues value is best judged at the level of external clients and society | Read |
-| 1. Outcome Chain | The four levels are a taxonomy, not a causal model | Holton (1996) | Supported | Abstract |
-| 1. Outcome Chain | Results are studied far less often than learning | Arthur et al. (2003) | Supported by the counts reported: 234 effect sizes for learning criteria, 26 for results. Note the effect sizes themselves were similar across criteria (0.60-0.63) | Abstract |
-| 1. Outcome Chain | Summative evaluation is done less often than formative; clients often do not see its value | DeVaughn & Stefaniak (2020) | Supported | Read |
-| 2. Traceability | Measures must correspond to objectives | Dick, Carey & Carey | Supported: test items must correspond one to one with performance objectives | Read (7th ed.) |
-| 2. Traceability | Same | Kubiszyn & Borich (2016), ch. 5 | Supported: content validity evidence is the extent to which a test measures the instructional objectives | Read |
-| 2. Traceability | Match the measure to the type of outcome | Kraiger, Ford & Salas (1993) | Supported: classifies cognitive, skill-based, and affective outcomes with measures for each | Abstract |
-| 2. Traceability | Analytics should be grounded in learning theory and take the course design into account, not rest on counts of activity | Gašević, Dawson & Siemens (2015) | Supported: reports that counting activity revealed little of value for theory or practice, and that the link between activity data and performance depends on instructional conditions | Read |
-| 2. Traceability | xAPI as the tracking format | IEEE 9274.1.1-2023 | Descriptive reference to the standard, not evidence | Record |
-| 3. Measurement | Performance at the end of instruction is an unreliable guide to lasting learning | Soderstrom & Bjork (2015) | Supported: this is the paper's central argument | Abstract |
-| 3. Measurement | Immediate and delayed tests can rank methods in opposite order; confidence misleads | Roediger & Karpicke (2006) | Supported: restudying won at 5 minutes, testing won at 2 days and 1 week, and restudying raised confidence | Abstract |
-| 3. Measurement | Same | Brown, Roediger & McDaniel (2014) | Supported: delayed-test results and the "illusion of mastery" | Read |
-| 3. Measurement | Behavior measured by the same source in the same setting is inflated | Blume et al. (2010) | Supported: same-source, same-context measurement consistently inflated transfer relationships | Abstract |
-| 4. Attribution | A causal claim needs an estimate of what would have happened without the training, and other explanations ruled out | Shadish, Cook & Campbell (2002), ch. 1 | Supported: an effect is the difference between what happened and what would have happened; control groups and pretests exist to support that inference. The chapter on designs without a comparison group was not in the excerpt read | Read (ch. 1 and 14) |
-| 4. Attribution | Isolate the effect of training before quoting a return | Phillips (2003) | Partly: Giacumo et al. (2025) confirm the five-level return-on-investment model and formula, not the isolation methods | Secondary |
-| 4. Attribution | Compare the most and least successful cases | Brinkerhoff (2003) | Supported as a description of the method, per Giacumo et al. (2025) | Secondary |
-| 5. Workplace Transfer | Transfer depends on the learner, the design, and the workplace | Baldwin & Ford (1988) | Supported | Abstract |
-| 5. Workplace Transfer | Same, with a supportive work environment among the predictors | Blume et al. (2010) | Supported | Abstract |
-| 5. Workplace Transfer | Same | Ford, Baldwin & Prasad (2018) | Supported as a review of what is reliably known | Abstract |
-| 5. Workplace Transfer | Support, opportunity to perform, and follow-up are among the strongest workplace factors | Grossman & Salas (2011) | Supported | Abstract |
-| 5. Workplace Transfer | What happens before and after training matters as well as during | Salas et al. (2012) | Supported | Abstract |
-| 5. Workplace Transfer | Spaced follow-up improves retention | Cepeda et al. (2006) | Supported for spacing and retention of verbal material. It is laboratory evidence, not workplace evidence | Abstract |
-| 5. Workplace Transfer | Reinforcement after the event sustains behavior | Wurth & Wurth (2018) | Practitioner guidance, not research. Its "70 percent forgotten in 24 hours" figure should not be repeated | Read |
-| 6. Decision | Summative evaluation exists to inform a decision about continued use | Dick, Carey & Carey | Supported: defined as collecting data to make decisions about the acquisition or continued use of instruction | Read (7th ed.) |
-| 6. Decision | Same | Giacumo, Villachica & Stepich (2025), ch. 12 | Supported: organisations use summative evaluation to determine value, effectiveness, or efficiency; pairs evaluation questions with models | Read |
-| 6. Decision | The formative and summative distinction | Scriven (1967) | Supported as the origin of the distinction, per Dick, Carey & Carey | Secondary |
-| 6. Decision | Learner data needs consent, privacy, and de-identification | Slade & Prinsloo (2013) | Supported | Abstract |
-| 6. Decision | Evaluation should be culturally relevant and equitable | Giacumo, Villachica & Stepich (2025), ch. 12 | Partly: raised as a reflection question, not developed as a method. Does not cover data privacy | Read |
-
-**Changes made after the passage-level read:**
-- Arthur et al. (2003) was first cited for effect sizes varying by criterion. The abstract shows they were nearly identical. It is now cited only for how rarely results are studied.
-- Cepeda et al. (2006) was first cited for delayed measurement. It is about spacing, so it now sits under follow-up. Soderstrom & Bjork (2015) was added as the direct source for the measurement claim.
-- Alliger et al. (1997) and Sitzmann et al. (2008) disagree on whether usefulness ratings do better than liking. The rubric no longer claims they do; it says only that reactions are a weak guide and fade as a predictor once learning is measured later.
-- Giacumo et al. (2025) was first cited for data ethics. The book does not cover data privacy; it is now cited for the purpose of summative evaluation.
-- Gašević et al. (2015) was first narrowed to what its abstract says. The full text supports the stronger claim about learning theory and course design, so that claim is restored.
-- Sitzmann et al. (2008) was first cited as plain support for "satisfaction does not show learning". The full text is more mixed, and the table now says so.
-
----
-
 ## Citation & References
 
-Bibliographic details were checked on 2026-11-27: journal articles against Crossref records, books against catalogue records, and five sources against the published text itself (see "Verification notes" below). The "Evidence Base by Dimension" table records how far each source was read and whether it supports the claim beside it.
+Bibliographic details were checked on 2026-11-27: journal articles against Crossref records, books against catalogue records, and a subset against the published text itself. `docs/archetype_11_evidence_and_decisions.md` in the GUIDE repository holds the "Evidence Base by Dimension" table (the claim each dimension makes, the source cited for it, whether the source supports it, and how far the source was read), the verification notes, and the design decisions behind this archetype's place in the pipeline.
 
 **Evaluation Models**
 - Kirkpatrick, D.L., & Kirkpatrick, J.D. (2006). Evaluating Training Programs: The Four Levels (3rd ed.). Berrett-Koehler.
@@ -410,16 +361,6 @@ Bibliographic details were checked on 2026-11-27: journal articles against Cross
 - Shadish, W.R., Cook, T.D., & Campbell, D.T. (2002). Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Houghton Mifflin.
 
 The models above are named with attribution and described in the author's own words. GUIDE is independent of, and not endorsed by, their authors or rights holders.
-
-### Verification notes
-
-- **Read in the published text:** DeVaughn & Stefaniak (2020) - journal, volume, pages, and the finding cited. Kaufman (2003) - journal, volume, pages, and the argument cited. Dick, Carey & Carey - summative evaluation chapter title, read in the 7th edition (2009); the 8th edition (2015) is cited to match the other archetypes. Kubiszyn & Borich - 11th edition, 2016. Brown, Roediger & McDaniel (2014) and Giacumo, Villachica & Stepich (2025) - title and copyright pages.
-- **Year conventions:** Blume et al. appeared online in 2009 and in print in 36(4), 2010. Shadish, Cook & Campbell carries a 2002 copyright; some catalogues list 2001. Kirkpatrick & Kirkpatrick's third edition carries a 2006 copyright; some catalogues list 2005.
-- **Edition consistency:** archetype 02 cites Kubiszyn & Borich (2013), the 10th edition. Pick one edition across the framework.
-- **Not confirmed:** the page range and series details of Scriven's chapter (the book, year, and publisher are confirmed); the publisher line for Thalheimer (2018), which is a self-published report whose title appears in a longer form on the author's site.
-- **Not read at all:** Kirkpatrick & Kirkpatrick (2006, 2016), Phillips (2003), Brinkerhoff (2003), Scriven (1967), and Kaufman & Keller (1994). Their entries in the table rest on secondary descriptions.
-- **Read in full from copies the author supplied (2026-11-28):** Alliger et al. (1997), Sitzmann et al. (2008), and Gašević et al. (2015). Shadish, Cook & Campbell (2002) was read in part: chapters 1 and 14.
-- **Abstract only:** the journal articles marked "Abstract" in the table. An abstract confirms the paper's main claim, not the details.
 
 ---
 
@@ -498,28 +439,3 @@ When time is tight, prioritize:
 5. **Decision**: A stated rule for what happens next
 
 If these five are met, score ≥3 ("Fair"). Lower scores indicate critical gaps.
-
----
-
-## Decisions (author, 2026-11-27)
-
-1. **Adoption.** This becomes archetype 11 in v3.6.0, but only after the author has reviewed the rubric and its agent in full. Do not release, or merge anything that changes the archetype count, before that review.
-2. **Pipeline placement.** One archetype, two modes. Before launch it scores the measurement plan in the Evaluate phase, beside archetype 06. After launch it scores the impact report as a review.
-3. **Composite.** The measurement plan enters the composite when present and is skipped when absent, like every other archetype. The impact report does not enter the composite.
-4. **Boundary with archetype 03.** Archetype 03 scores what the instruction itself does for transfer: practice in varied contexts and spaced review inside the course timeline. Archetype 11 scores what happens outside the instruction: the manager's role, opportunity to use the skill, follow-up after the last session, workplace barriers, and whether these are measured. Dimension 5 is named "Workplace Transfer Conditions" to make the split plain. Add one sentence to handoff 03 pointing here.
-
-## Composite details (accepted by the author, 2026-11-27)
-
-These follow from decision 3:
-
-- **Evidence verdict.** Report the impact report's score as its own verdict, named "evidence verdict", shown beside the design composite and never averaged with it. Use the four bands in "Score Interpretation for Stakeholders" above.
-- **No second cap in v3.6.0.** Archetype 10's cap stays the only one. The severity flags here cover "completion presented as effectiveness". Include two edge cases built to tempt a judge (a polished completion dashboard; a satisfaction-only renewal case). Add a cap only if a live judge scores either above 3.0.
-- **A missing plan is a finding, not a score.** The router marks a measurement plan as expected for a course or programme and optional for a job aid or micro-lesson. When one is expected and absent, the synthesizer lists "no measurement plan" among its findings and the composite is unchanged.
-- **The report is checked against the plan.** When a measurement plan exists, pass it as the reference when scoring the impact report, so dimension 6 can check the result against the thresholds set in advance.
-- **One verdict cannot stand in for the other.** An evidence verdict does not lift a capped design composite, and a high design composite is not evidence of impact. The synthesizer should word the two separately.
-
-## Open questions (draft only - remove before release)
-
-1. **Trademark check.** "Kirkpatrick" and "Four Levels" are used here by citation and paraphrase only. Confirm that wording against the rights holder's guidance before release, as was done for the crosswalk.
-2. **Citations.** Bibliographic details are checked and each claim has a fit verdict in the "Evidence Base by Dimension" table. Still to do: read the five books and the one article listed as not read, and read past the abstract for any article whose details the rubric relies on.
-3. **Still to build:** the judge module, edge cases, an owning agent, crosswalk entries, and the generated skill and plugin references.
