@@ -56,13 +56,16 @@ You will score across 6 dimensions, each on a 1-5 scale:
 
 3. **Measurement Quality** (1-5)
    - Timing: baseline, end of instruction, and delayed measures
+   - The delayed measure tests decisions or tasks; a delayed recall quiz alone is not enough
    - Instruments measure performance, not recall or confidence alone
    - Sample size and response rate stated; non-response considered
    - Behavior measured by observation or work-system evidence, not self-report alone
    Score: 1=End-of-course satisfaction only; 5=Baseline plus delayed measures, piloted instruments, multiple agreeing sources
 
 4. **Attribution & Comparison** (1-5)
-   - Baseline and some form of comparison (comparison group, staggered rollout, trend line, success cases)
+   - Baseline and some form of comparison (comparison group, staggered rollout, trend line)
+   - Success cases show that it worked for some people and why; they are not a comparison and do not support an average effect
+   - No impact or return-on-investment figure without a step that isolates the training's effect
    - Other explanations for the result listed and addressed
    - Claims proportionate to the design; limits stated
    Score: 1=Causal claims from after-only data; 5=Designed comparison, alternatives examined, confidence stated

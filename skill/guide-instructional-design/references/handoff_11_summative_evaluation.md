@@ -7,7 +7,7 @@
 **Design targets** (using these dimensions forward, in design mode) - the moves that produce a 4-5:
 - Plan evidence along the whole chain - reaction, learning, behavior on the job, and results - and say in advance which links you will not measure and why (Kirkpatrick & Kirkpatrick; Thalheimer).
 - Map every objective to at least one measure and one data source before launch, so the instruction is built to emit the evidence.
-- Measure after a delay as well as at the end, against a baseline or a comparison, and state what else could explain the result (Phillips; Shadish, Cook & Campbell).
+- Measure after a delay as well as at the end, against a baseline or a comparison, and state what else could explain the result (Phillips & Phillips; Shadish, Cook & Campbell).
 - Plan for the conditions that make transfer happen - manager support, opportunity to use, follow-up - and measure them (Baldwin & Ford).
 - Write the decision rule before the data arrives: what result means continue, revise, or retire, and which part of the design each finding goes back to.
 
@@ -57,7 +57,7 @@ Does the evidence follow the whole chain from participation to results, or does 
 1. **Participation**: who attended, started, finished. Says nothing about learning.
 2. **Reaction**: what learners thought of it. A weak guide to learning: liking correlates about zero with learning (Alliger et al., 1997), and where reactions do relate to learning it is to learning measured straight after training, not later (Sitzmann et al., 2008).
 3. **Learning**: what they can recall, decide, and do at the end.
-4. **Behavior**: what they do on the job, weeks later.
+4. **Behavior**: what they do on the job, weeks later. Do not assume it from learning: in studies that measured both, the effect on behavior was markedly smaller than the effect on learning (Arthur et al., 2003).
 5. **Results**: what changed for the team or organisation because of that behavior.
 
 ---
@@ -104,6 +104,7 @@ Are the measures taken at the right time, with sound instruments, from enough pe
 
 **Guidance:**
 - **Delay matters.** A test at the end of the course measures what was just seen. Remeasure after days or weeks to see what was kept.
+- **Test what people can do, at the delay too.** A recall quiz given weeks later shows what was remembered, not what can be decided or done. Use decisions or tasks for the delayed measure (Thalheimer, 2018).
 - **Confidence is not competence.** Self-rated confidence and satisfaction do not stand in for performance (Roediger & Karpicke, 2006).
 - **Use more than one source.** Behavior rated by the same person in the same setting as the training looks stronger than it is (Blume et al., 2010).
 - **Small groups.** With few learners, report counts and cases rather than percentages, and say so.
@@ -118,16 +119,16 @@ When a result changes, is there reason to believe the training caused it?
 |-------|----------|------------|--------------------|--------|--------|
 | **1** | None | None | Ignored | Causal claims from after-only data | None |
 | **2** | Informal | None | Not discussed | Overstated | Before/after implied |
-| **3** | Measured | Before/after only | Mentioned | Mostly proportionate | Before/after |
-| **4** | Measured | Comparison group, staggered rollout, or trend line | Listed and addressed | Proportionate to the design | Quasi-experimental or success-case |
+| **3** | Measured | Before/after only | Mentioned | Mostly proportionate | Before/after, or estimates adjusted for error |
+| **4** | Measured | Comparison group, staggered rollout, or trend line | Listed and addressed | Proportionate to the design | Quasi-experimental |
 | **5** | Measured on the results measure | Comparison plus trend | Systematically examined | Confidence level stated; limits named | Designed comparison, with success and non-success cases explaining why |
 
-**Practical ways to compare** (choose what the setting allows):
+**Practical ways to build the case** (choose what the setting allows):
 - **Before and after**: the minimum. Weak alone, since anything else that changed is mixed in.
 - **Staggered rollout**: teams trained later serve as the comparison for teams trained first.
 - **Trend line**: several measures before and after, so an existing trend is not mistaken for an effect.
-- **Success Case Method** (Brinkerhoff): find the people for whom it worked best and least, and document why. Suited to small programmes.
-- **Isolating the effect** (Phillips): control groups, trend analysis, or structured estimates, used before any return-on-investment figure is quoted.
+- **Success Case Method** (Brinkerhoff, 2005): find the people for whom it worked best and least, and document with corroborated evidence what they did and why. It shows that the training worked for some people and what helped or blocked the rest. It is not a comparison and gives no average effect, so score the claims it can support and no more. Suited to small programmes.
+- **Isolating the effect** (Phillips & Phillips, 2019): take at least one step to separate the training's effect from other influences - a control group where feasible, a trend line, or estimates from participants or managers adjusted for error. Where no such step is taken, do not report business impact or a return on investment.
 
 ---
 
@@ -250,13 +251,13 @@ Bibliographic details were checked on 2026-11-27: journal articles against Cross
 **Evaluation Models**
 - Kirkpatrick, D.L., & Kirkpatrick, J.D. (2006). Evaluating Training Programs: The Four Levels (3rd ed.). Berrett-Koehler.
 - Kirkpatrick, J.D., & Kirkpatrick, W.K. (2016). Kirkpatrick's Four Levels of Training Evaluation. ATD Press.
-- Phillips, J.J. (2003). Return on Investment in Training and Performance Improvement Programs (2nd ed.). Butterworth-Heinemann.
-- Brinkerhoff, R.O. (2003). The Success Case Method: Find Out Quickly What's Working and What's Not. Berrett-Koehler.
+- Phillips, P.P., & Phillips, J.J. (2019). ROI Basics (2nd ed.). ATD Press.
+- Brinkerhoff, R.O. (2005). The Success Case Method: A strategic evaluation approach to increasing the value and effect of training. Advances in Developing Human Resources, 7(1), 86-101. https://doi.org/10.1177/1523422304272172
 - Thalheimer, W. (2018). The Learning-Transfer Evaluation Model: Sending Messages to Enable Learning Effectiveness. Work-Learning Research.
 - Kaufman, R., & Keller, J.M. (1994). Levels of evaluation: Beyond Kirkpatrick. Human Resource Development Quarterly, 5(4), 371-380. https://doi.org/10.1002/hrdq.3920050408
 - Kaufman, R. (2003). Value, value: Where is the value? Performance Improvement, 42(2), 36-38. https://doi.org/10.1002/pfi.4930420214
 - Dick, W., Carey, L., & Carey, J.O. (2015). The Systematic Design of Instruction (8th ed.). Pearson. (Chapter: Designing and Conducting Summative Evaluations)
-- Scriven, M. (1967). The methodology of evaluation. In R.W. Tyler, R.M. Gagné, & M. Scriven (Eds.), Perspectives of Curriculum Evaluation. Rand McNally. (Formative and summative distinction)
+- Scriven, M. (1967). The methodology of evaluation. In R.W. Tyler, R.M. Gagné, & M. Scriven (Eds.), Perspectives of Curriculum Evaluation. Rand McNally. (Formative and summative distinction) Read in the Social Science Education Consortium edition (ERIC ED014001).
 
 **Critiques and Evidence**
 - Holton, E.F. (1996). The flawed four-level evaluation model. Human Resource Development Quarterly, 7(1), 5-21. https://doi.org/10.1002/hrdq.3920070103
@@ -311,7 +312,7 @@ The models above are named with attribution and described in the author's own wo
 - **Chain**: Role-play performance, observed feedback conversations, team engagement item
 - **Traceability**: Objective-to-evidence table with manager observation checklist
 - **Measurement**: Baseline, end, 30 and 90 days; counts and cases, not percentages
-- **Comparison**: Success Case Method across two cohorts
+- **Comparison**: Before and after on the observation checklist; Success Case Method across two cohorts to explain why it worked or did not
 - **Transfer**: Senior managers ask about commitments in 1:1s; practice scheduled
 - **Decision rule**: Fewer than half of commitments acted on at 30 days triggers a review of workplace barriers before any course change
 
