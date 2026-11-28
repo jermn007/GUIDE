@@ -1,8 +1,8 @@
 # GUIDE Agent Pipeline — Workflow Design (v0.1 draft)
 
-A multi-agent ADDIE workflow that uses each of GUIDE's 10 archetypes as both **design guardrail** (when building) and **acceptance test** (when judging). Archetype 10 (Curriculum Alignment, v3.1.0) operates as a cross-cutting alignment check: it does **not** replace any individual archetype's judgment; it verifies that the components agree with each other.
+A multi-agent ADDIE workflow that uses each of GUIDE's 11 archetypes as both **design guardrail** (when building) and **acceptance test** (when judging). Archetype 10 (Curriculum Alignment, v3.1.0) operates as a cross-cutting alignment check: it does **not** replace any individual archetype's judgment; it verifies that the components agree with each other.
 
-Tracks GUIDE **v3.5.0** (10 archetypes, 60 dimensions). Adopts Hirumi's Three Alignments (01), ARCS motivational alignment (03/07), and the Merrill (2002) Effective/Efficient/Engaging vocabulary that archetype 10 codifies.
+Tracks GUIDE **v3.5.0** plus archetype 11, which is not yet released (11 archetypes, 66 dimensions). Adopts Hirumi's Three Alignments (01), ARCS motivational alignment (03/07), and the Merrill (2002) Effective/Efficient/Engaging vocabulary that archetype 10 codifies.
 
 ## Goals
 
@@ -51,6 +51,7 @@ Tracks GUIDE **v3.5.0** (10 archetypes, 60 dimensions). Adopts Hirumi's Three Al
 │ Phase E — Evaluate (parallel)            │                │
 │  guide-assessment (02)                   │                │
 │  guide-formative-eval (06)               │                │
+│  guide-summative-eval (11, the plan)     │                │
 └────────┬─────────────────────────────────┘                │
          │                                                  │
          ▼                                                  ▼
@@ -69,6 +70,8 @@ Tracks GUIDE **v3.5.0** (10 archetypes, 60 dimensions). Adopts Hirumi's Three Al
          ▼
      Final verdict
 ```
+
+After launch, `guide-summative-eval` (11) scores the impact report on its own. That score is the **evidence verdict**. The synthesizer reports it beside the final verdict and never averages it in.
 
 ## Phase 0 — Intake & Router (`guide-router`)
 
@@ -114,10 +117,11 @@ Parallel. Each returns the developed artifact (storyboards, scripts, slides, mod
 
 `guide-adult-learning` produces the conversational/RAG/help layer that learners actually interact with — chatbot answers, support content, in-product help. Now grounded in **Hirumi's Three Alignments** (analyze → design → develop) plus Knowles/Mezirow. Returns response patterns + a self-eval scorecard.
 
-## Phase E — Evaluate (Archetypes 02, 06)
+## Phase E — Evaluate (Archetypes 02, 06, 11)
 
 - `guide-assessment` (02) — generates assessment items (quizzes, rubrics, blueprints) at the Bloom level each objective requires.
 - guide-formative-eval (06) — drafts the evaluation plan (Bordonaro phases, evaluator selection, instruments, revision decision framework, usability methods).
+- `guide-summative-eval` (11) - drafts the measurement plan: how the course will be judged once it is live (the outcome chain, an objective-to-evidence table, baseline and delayed measures, a comparison, workplace transfer conditions, and decision thresholds set in advance). The router marks a plan as expected for a course or programme and optional for a job aid or micro-lesson.
 
 Parallel.
 
@@ -143,6 +147,15 @@ Parallel.
 - Multi-module artifact with no vertical alignment.
 - Claimed competency framework with no traceable mapping (accreditation risk).
 
+## After Launch - Evidence Verdict (Archetype 11)
+
+Archetype 11 has a second mode that runs outside the build. Once the course is live, `guide-summative-eval` scores the **impact report** (a post-launch review, a live dashboard offered as evidence, a renewal case) on the same six dimensions, with the measurement plan as its reference when one exists, so the result is read against the thresholds set before launch.
+
+- The impact report's score is the **evidence verdict**: `excellent`, `good`, `fair`, or `poor`, from the bands in handoff 11.
+- It is shown beside the design composite and **never averaged into it**. It does not go through the alignment gate.
+- One verdict cannot stand in for the other. An evidence verdict does not lift a capped composite, and a high composite is not evidence of impact.
+- An impact report on its own (no course attached) is a valid run: router, `guide-summative-eval`, synthesizer. There is no design verdict in that case.
+
 ## Synthesis + Revision Loop
 
 `guide-synthesizer` ingests every archetype's JSON scorecard and produces a **combined verdict**:
@@ -151,6 +164,9 @@ Parallel.
 - Honors the 10's cap rule.
 - Threshold map: **4.5+** ship; **3.5–4.4** light revision; **2.5–3.4** revise; **< 2.5** redesign.
 - Severity-flagged issues ranked.
+- Archetype 11's measurement-plan score is in the composite when a plan is present and skipped when it is not. There is no second cap.
+- A measurement plan that was expected and is absent is listed as a finding ("No measurement plan"). It is not scored and the composite does not move.
+- The evidence verdict, when there is one, is reported separately, and the two verdicts are worded separately.
 
 `guide-reviser` reads the synthesized verdict and routes targeted feedback back to the relevant phase agents (e.g., "objective_assessment_coherence = 2 because verbs drift between Phase A objectives and Phase E items → return to Phase E with these specific edits"). Loop until composite clears the threshold or a max-iteration cap is hit (default 3).
 
@@ -181,8 +197,11 @@ The synthesizer's final output, in outline (`agents/guide-synthesizer.md` holds 
 {
   "verdict": "ship" | "light_revision" | "revise" | "redesign",
   "composite_overall": 1-5,
-  "by_archetype": { "01": {...}, "02": {...}, ..., "10": {...} },
+  "by_archetype": { "01": {...}, "02": {...}, ..., "10": {...}, "11": {...} },
   "alignment_cap_triggered": true | false,
+  "missing_measurement_plan": true | false,
+  "evidence": { "evidence_verdict": "excellent" | "good" | "fair" | "poor", "evidence_overall": 1-5, "scored_against_plan": true | false, "in_composite": false },
+  "verdict_statements": { "design": "...", "evidence": "..." },
   "ranked_severity": [ {"archetype": 10, "flag": "...", "severity": "major"}, ... ],
   "next_actions": [ "..." ]
 }
@@ -205,7 +224,9 @@ The synthesizer's final output, in outline (`agents/guide-synthesizer.md` holds 
 | 2.5–3.4 | Real misalignment | Revise before delivery |
 | < 2.5 | Misaligned | Redesign — objectives/instruction/assessment are effectively different courses |
 
-Cap rule from archetype 10 overrides upward composite when `objective_assessment_coherence ≤ 2`.
+Cap rule from archetype 10 overrides upward composite when `objective_assessment_coherence ≤ 2`. It is the only cap.
+
+The evidence verdict (archetype 11 on an impact report) is not in this table. It has its own bands and is reported beside the composite.
 
 ## When to skip / adapt
 
@@ -213,6 +234,7 @@ Cap rule from archetype 10 overrides upward composite when `objective_assessment
 - **No scenarios.** Skip 08; route directly through 03 + 09 in the design phase.
 - **Non-web delivery.** Skip 05 if there's no digital/web component (rare for modern instruction; usually still applies).
 - **No assessment authoring needed** (e.g., evaluating an existing artifact). Skip 02 in design mode; still run 02 in evaluate mode against the existing assessment.
+- **Job aid or micro-lesson.** A measurement plan is optional; skip 11's plan unless one is supplied. For a course or programme it is expected, and its absence is a synthesizer finding.
 - **Internal one-off training.** Discipline Alignment becomes N/A → score on stated-purpose coherence; flag in rationale.
 
 ## How to invoke (Cowork / Claude Code)

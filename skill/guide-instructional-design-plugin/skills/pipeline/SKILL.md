@@ -29,6 +29,10 @@ synthesizer, and the reviser instead of relying on that file:
 - Cap: when `objective_assessment_coherence` is 1 or 2, the composite is capped at 3.0.
 - Verdict, exactly one of four values: `ship` at 4.5 and up, `light_revision` from 3.5, `revise` from 2.5,
   `redesign` below 2.5.
+- Archetype 11: a `measurement_plan` scorecard goes into the composite like any other. An
+  `impact_report` scorecard is the evidence verdict (`excellent` at 4.5 and up, `good` from 3.5, `fair`
+  from 2.5, `poor` below 2.5); it is never averaged into the composite, and it adds no cap.
+- A measurement plan the router marked as expected, and that is absent, is a finding. It is not a score.
 
 The agents keep nothing between calls and the artifacts exist only in this conversation. Whenever
 you send an agent back to revise, put its own previous output in the prompt in full, next to the
@@ -44,7 +48,7 @@ or cosmetic), so the synthesizer can rank them.
    `rationale` says the request is too underspecified, ask the user that question before going on.
 2. **Run the plan in order.** Spawn each step's agent with its mode and inputs, passing the JSON
    outputs the step names. Steps in the same phase run in one batch: the Design specialists
-   together, the Develop pair together, the Evaluate pair together (the router's
+   together, the Develop pair together, the Evaluate specialists together (the router's
    `downstream_notes` say which).
 3. **Stop when training is the wrong fix.** When `guide-needs-analysis` returns
    `is_training_appropriate: false`, stop, report its `alternative_interventions`, and ask the
@@ -56,8 +60,12 @@ or cosmetic), so the synthesizer can rank them.
    scorecard flagged the problem the fix removed, so no archetype goes into the composite stale or
    gets left out of it. A review run has no Design phase, so skip this gate.
 5. **Close with the gate and the verdict.** Run `guide-curriculum-alignment` in
-   `acceptance_gate` mode over every artifact, then `guide-synthesizer` over all scorecards. Its
-   verdict is exactly one of ship, light_revision, revise, or redesign.
+   `acceptance_gate` mode over every design artifact (leave an impact report out of the gate's
+   input). When the plan has `guide-summative-eval` with `scoring_mode` `impact_report`, run it
+   now, with the measurement plan as its reference when there is one. Then run
+   `guide-synthesizer` over all scorecards, with the router's `measurement_plan` object, telling
+   it which scorecard is the impact report. Its verdict is exactly one of ship, light_revision,
+   revise, or redesign; when only an impact report was scored, there is no design verdict.
 6. **Revise when asked for.** Keep a round counter that starts at 1. On light_revision or
    revise, spawn `guide-reviser` with the synthesizer's output, the router's `dispatch_plan`, and
    the counter, then run its `revision_plan` as written (it ends with the gate and the
@@ -73,5 +81,8 @@ In Claude Code the agents carry the plugin prefix, for example
 
 Lead with the synthesizer's verdict and composite, then the ranked severity findings and next
 actions, then one line per archetype score. Offer the full JSON on request.
+
+When there is an evidence verdict, give it its own line after the design verdict, in the
+synthesizer's separate wording. Never fold the two into one sentence or one number.
 
 Request: $ARGUMENTS
