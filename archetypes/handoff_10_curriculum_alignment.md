@@ -30,6 +30,7 @@ This archetype operationalizes the **Efficient** quality outcome (Merrill, 2002)
 - **02 Assessment Design** evaluates whether the assessment itself is well-constructed (item quality, validity, fairness). Archetype 10 evaluates whether that assessment measures what the objective stated.
 - **03 Instructional Sequencing** evaluates whether instruction is well-sequenced (Gagné events, scaffolding, practice). Archetype 10 evaluates whether that sequencing teaches what the objective stated.
 - **07 Needs Analysis** evaluates whether objectives are well-written (Mager format, linked to gap). Archetype 10 evaluates whether those objectives connect cleanly through to assessment.
+- **11 Summative Evaluation & Learning Transfer** takes over after launch: archetype 10 checks on paper that objectives, instruction, and assessment agree, and archetype 11 checks with learner data whether that agreement produced the outcome.
 
 A course can score 5/5 on 02, 03, and 07 individually and still fail archetype 10 — that is exactly the failure mode this archetype is designed to catch.
 

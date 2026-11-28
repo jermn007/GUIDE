@@ -11,9 +11,9 @@
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache_2.0-059669?style=for-the-badge&labelColor=0f172a)](LICENSE)
 [![Instructional design: LLM-as-judge](https://img.shields.io/badge/instructional_design-LLM--as--judge-d97706?style=for-the-badge&labelColor=0f172a)](#how-it-works)
 
-[![10 archetypes](https://img.shields.io/badge/archetypes-10-334155?style=flat-square)](#ten-archetypes-across-addie)
-[![60 dimensions](https://img.shields.io/badge/dimensions-60-334155?style=flat-square)](skill/guide-instructional-design/references/00_archetype_index.md#the-60-dimensions-at-a-glance)
-[![13 agents](https://img.shields.io/badge/ADDIE_pipeline-13_agents-334155?style=flat-square)](skill/guide-instructional-design-plugin/PIPELINE.md)
+[![11 archetypes](https://img.shields.io/badge/archetypes-11-334155?style=flat-square)](#eleven-archetypes-across-addie)
+[![66 dimensions](https://img.shields.io/badge/dimensions-66-334155?style=flat-square)](skill/guide-instructional-design/references/00_archetype_index.md#the-66-dimensions-at-a-glance)
+[![14 agents](https://img.shields.io/badge/ADDIE_pipeline-14_agents-334155?style=flat-square)](skill/guide-instructional-design-plugin/PIPELINE.md)
 [![Claude Code plugin](https://img.shields.io/badge/Claude_Code-plugin-334155?style=flat-square)](#install)
 [![DOI 10.5281/zenodo.22949871](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22949871-334155?style=flat-square)](https://doi.org/10.5281/zenodo.22949871)
 
@@ -166,12 +166,12 @@ Good instruction is effective, efficient, and engaging (Merrill, 2002). Hirumi (
 - **Efficient:** objectives, instructional strategies, and assessments agree with each other (Tyler, 1949; Bloom, 1956; Dick, Carey and Carey, 2015), so learners don't do wasted work.
 - **Engaging:** the design connects to learners' personal and professional goals and motivations (Keller's ARCS model, 1987 and 2010).
 
-### Ten archetypes across ADDIE
+### Eleven archetypes across ADDIE
 
 Each archetype maps to a phase of the ADDIE lifecycle. Archetype 10 checks that the pieces fit together, so a course can score well on every other archetype and still fail it.
 
 <p align="center">
-  <img src="assets/addie-map.svg" alt="Diagram of the five ADDIE phases with GUIDE's archetypes under each. Analyze: 07 Needs Analysis. Design: 03 Instructional Sequencing, 08 Story Design, 09 Cognitive Neuroscience. Develop: 04 Multimedia Design, 05 Accessibility. Implement: 01 Adult Learning Communication. Evaluate: 02 Assessment Design, 06 Formative Evaluation. Archetype 10, Curriculum Alignment, spans all five phases." width="760">
+  <img src="assets/addie-map.svg" alt="Diagram of the five ADDIE phases with GUIDE's archetypes under each. Analyze: 07 Needs Analysis. Design: 03 Instructional Sequencing, 08 Story Design, 09 Cognitive Neuroscience. Develop: 04 Multimedia Design, 05 Accessibility. Implement: 01 Adult Learning Communication. Evaluate: 02 Assessment Design, 06 Formative Evaluation, 11 Summative Evaluation. Archetype 10, Curriculum Alignment, spans all five phases." width="760">
 </p>
 
 | # | Archetype | Use it for | ADDIE phase | Grounded in |
@@ -185,6 +185,7 @@ Each archetype maps to a phase of the ADDIE lifecycle. Archetype 10 checks that 
 | 01 | Adult Learning Communication | chatbot and help answers for learning professionals | Implement | Knowles, Mezirow, Sweller, Ausubel |
 | 02 | Assessment Design | quizzes, tests, item banks, rubrics | Evaluate | Anderson and Krathwohl, Mager, Kubiszyn and Borich |
 | 06 | Formative Evaluation | evaluation plans, usability tests, pilots | Evaluate | Bordonaro, Dick and Carey, Nielsen |
+| 11 | Summative Evaluation & Learning Transfer | measurement plans, impact reports, dashboards, renewal cases | Evaluate, and after launch | Kirkpatrick and Kirkpatrick, Thalheimer, Baldwin and Ford, Shadish, Cook and Campbell |
 | 10 | Curriculum Alignment | do objectives, instruction, and assessment agree? | Across all phases | Tyler, Anderson and Krathwohl, Webb, Mager, Dick and Carey, Wiggins and McTighe, Reigeluth, Hirumi |
 
 Archetype 10 scores the links between the parts, and one link carries a cap:
@@ -193,14 +194,16 @@ Archetype 10 scores the links between the parts, and one link carries a cap:
   <img src="assets/alignment-cap.svg" alt="Triangle diagram linking objectives, instructional strategies, and assessments. Archetype 10 scores the three links between them. The cap rule: when objective and assessment coherence scores 1 or 2, the overall is capped at 3.0, however strong the other scores are. Example: an objective that says apply, tested by a recall question." width="760">
 </p>
 
+Archetype 11 looks past release, in two modes. Before launch it scores the measurement plan (how the course will be judged once it is live), and that score counts toward the composite like any other. After launch it scores the impact report, and that score is reported on its own as an evidence verdict. It is never averaged into the composite: a well-designed course is not evidence of impact.
+
 ### Sources
 
 Every name in the table above is cited in that archetype's rubric. Full citations are in each archetype's rubric in [`archetypes/`](archetypes) (the `handoff_*.md` files) and in the matching archetype section of [`GUIDE_Rubric_Document.docx`](GUIDE_Rubric_Document.docx), the printable version of the whole framework. [`archetypes/discipline_alignment_crosswalk.md`](archetypes/discipline_alignment_crosswalk.md) maps each archetype to the IBSTPI, ATD, and ISPI professional standards. That mapping is the author's own and is not endorsed by those organizations.
 
 <details>
-<summary><strong>The 13-agent ADDIE pipeline</strong></summary>
+<summary><strong>The 14-agent ADDIE pipeline</strong></summary>
 
-The plugin includes 13 agents that build instructional content from start to finish: a router, the 10 archetype specialists (the Curriculum Alignment specialist doubles as the acceptance gate), a synthesizer, and a reviser. Each archetype acts first as a design guardrail and then as an acceptance test. See [`PIPELINE.md`](skill/guide-instructional-design-plugin/PIPELINE.md) for phase order, severity flags, and score thresholds.
+The plugin includes 14 agents that build instructional content from start to finish: a router, the 11 archetype specialists (the Curriculum Alignment specialist doubles as the acceptance gate), a synthesizer, and a reviser. Each archetype acts first as a design guardrail and then as an acceptance test. See [`PIPELINE.md`](skill/guide-instructional-design-plugin/PIPELINE.md) for phase order, severity flags, and score thresholds.
 
 For batch evaluation, [`guide_pipeline.py`](guide_pipeline.py) runs the same pipeline from Python as `ADDIEPipeline`, and [`smoke_test_pipeline.py`](smoke_test_pipeline.py) is its mocked end-to-end test:
 
@@ -244,7 +247,7 @@ GUIDE/
 ├── .claude-plugin/
 │   └── marketplace.json                   # Plugin marketplace manifest
 ├── archetypes/
-│   ├── archetype_XX_*.py                  # Judge prompt modules (01-10)
+│   ├── archetype_XX_*.py                  # Judge prompt modules (01-11)
 │   ├── discipline_alignment_crosswalk.md  # Archetype to IBSTPI / ATD / ISPI-HPT mapping
 │   ├── edge_cases_XX.json                 # Labeled test cases (one file per archetype)
 │   └── handoff_XX_*.md                    # Rubrics: the single source of truth
@@ -253,12 +256,13 @@ GUIDE/
 │   └── *.png                              # The same diagrams, rasterized for the docx by docs/art/render_diagrams.py
 ├── docs/
 │   ├── art/                               # README hero (hero.html) and plugin icon (icon.py) sources, rendered PNGs
+│   ├── archetype_11_evidence_and_decisions.md # Archetype 11: evidence table, verification notes, design decisions
 │   ├── build_rubric_docx.py               # Regenerates the printable rubric's archetype sections from archetypes/
 │   └── practice.md                        # Three score-then-compare exercises and a spaced review schedule
 ├── self-evaluations/                      # One self-evaluation per scored release
 ├── skill/
 │   ├── guide-instructional-design/        # Canonical skill source
-│   ├── guide-instructional-design-plugin/ # Installable plugin (skill mirror, 3 commands, 13 agents, PIPELINE.md, README.md)
+│   ├── guide-instructional-design-plugin/ # Installable plugin (skill mirror, 3 commands, 14 agents, PIPELINE.md, README.md)
 │   ├── README.md                          # Skill and plugin install, build, and sync
 │   └── build_skill.py                     # Regenerates skill references and plugin mirror from archetypes/
 ├── CHANGELOG.md                           # Release history

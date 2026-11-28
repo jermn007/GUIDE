@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Rebuild the ten archetype sections of GUIDE_Rubric_Document.docx from archetypes/handoff_*.md.
+"""Rebuild the archetype sections of GUIDE_Rubric_Document.docx from archetypes/handoff_*.md.
 
 The printable rubric has hand-written front and back matter (executive summary,
 introduction, calibration example, severity flagging, coverage matrix, crosswalk,
-implementation guide, references). Its ten archetype sections used to be hand-written
+implementation guide, references). Its archetype sections used to be hand-written
 too, and drifted from the rubrics. This script regenerates those sections from the
 canonical handoffs, so the printable rubric cannot say something the rubrics do not.
 
@@ -13,7 +13,8 @@ What it does, in place, on GUIDE_Rubric_Document.docx:
    the JSON output shape and data-format notes.
 2. Stamps the cover with GUIDE_VERSION and the release month from CITATION.cff.
 3. Replaces the table of contents with a Word TOC field (headings 1-2).
-4. Recomputes the archetype 10 column of the coverage matrix from handoff 10.
+4. Recomputes the archetype 10 and 11 columns of the coverage matrix from their handoffs,
+   and adds archetype 11's row to the hand-written quick-reference and crosswalk tables.
 5. Accessibility: marks the first row of every table as a repeating header row, sets
    alt text on the three-alignments figure, and re-embeds assets/three-alignments.png.
 6. If Word is installed (Windows, pywin32), opens the file to update the TOC page
@@ -82,12 +83,12 @@ GENERATED_FIGURE_PREFIX = "GUIDE figure: "
 FIGURES = {
     "addie-map": (
         REPO_ROOT / "assets" / "addie-map.png",
-        "the ten archetypes on the five ADDIE phases.",
+        "the eleven archetypes on the five ADDIE phases.",
         "Diagram of the five ADDIE phases with GUIDE's archetypes under each. Analyze: 07 Needs Analysis. Design: 03 "
         "Instructional Sequencing, 08 Story Design, 09 Cognitive Neuroscience. Develop: 04 Multimedia Design, 05 "
         "Accessibility. Implement: 01 Adult Learning Communication. Evaluate: 02 Assessment Design, 06 Formative "
-        "Evaluation. Archetype 10, Curriculum Alignment, spans all five phases and checks that objectives, instruction, "
-        "and assessment agree.",
+        "Evaluation, 11 Summative Evaluation. Archetype 10, Curriculum Alignment, spans all five phases and checks that "
+        "objectives, instruction, and assessment agree.",
     ),
     "review-flow": (
         REPO_ROOT / "assets" / "review-flow.png",
@@ -472,7 +473,42 @@ FRONT_MATTER_SWAPS = {
     "weigh most, and Accuracy at 3 pulls it down. A functional":
         "weigh most, and Accuracy at 3 pulls it down. A judge may report this overall as a whole number; the decimal "
         "is shown here to make the weighting visible. A functional",
+    # Archetype 11: the hand-written front and back matter counted ten archetypes and 60 dimensions.
+    "The framework gives you ten evaluation archetypes": "The framework gives you eleven evaluation archetypes",
+    "the ten archetypes provide 60 evaluation dimensions": "the eleven archetypes provide 66 evaluation dimensions",
+    "Why Ten Archetypes?": "Why Eleven Archetypes?",
+    "The ten archetypes are not arbitrary.": "The eleven archetypes are not arbitrary.",
+    "the ten archetypes and 60 dimensions provide coverage": "the eleven archetypes and 66 dimensions provide coverage",
+    "Archetype 10 is the synthesis archetype that evaluates internal coherence between objectives, instruction, and "
+    "assessment.":
+        "Archetype 10 is the synthesis archetype that evaluates internal coherence between objectives, instruction, and "
+        "assessment; Archetype 11 evaluates how the course is judged after launch.",
+    "a modular suite of ten evaluation archetypes": "a modular suite of eleven evaluation archetypes",
+    "containing ten archetype modules (archetype_01 through archetype_10)":
+        "containing eleven archetype modules (archetype_01 through archetype_11)",
+    "maps GUIDE's ten archetypes to the professional standards": "maps GUIDE's eleven archetypes to the professional standards",
+    "importing all ten archetypes": "importing all eleven archetypes",
 }
+
+# Archetypes whose coverage-matrix column is computed from the handoff (the hand-written matrix stops at 09).
+MATRIX_GENERATED_COLUMNS = (10, 11)
+# Where a name pattern misreads a handoff. In handoff 11, "Campbell" is Shadish, Cook & Campbell (not Joseph
+# Campbell), "Gagné" appears only as a book editor, and Dick, Carey & Carey is cited in reference-list form.
+MATRIX_OVERRIDES = {11: {"Campbell": False, "Gagne": False, "Dick, Carey": True}}
+
+# Rows for archetype 11 in the two hand-written tables that list every archetype. Each is found by its
+# header row and gets the row once. The crosswalk row is a short form of archetypes/discipline_alignment_crosswalk.md.
+ARCHETYPE_11_ROWS = [
+    (("Archetype", "Dimensions (1-6)"),
+     ("11 - Summative Evaluation & Learning Transfer",
+      "Outcome Chain Coverage, Objective-Evidence Traceability, Measurement Quality, Attribution & Comparison, "
+      "Workplace Transfer Conditions, Decision Rules & Feedback Loop")),
+    (("Archetype", "IBSTPI ID Competencies (2012)"),
+     ("11 Summative Evaluation",
+      "Evaluation & Implementation: C17, C18",
+      "Evaluating Impact; Data & Analytics; Performance Improvement",
+      "S10 Evaluate & Measure Impact; S1 Focus on Results")),
+]
 
 # The worked calibration example scores archetype 01, whose overall is weighted.
 CALIBRATION_OVERALL = ("3.7", "3.6")
@@ -578,40 +614,66 @@ def add_missing_references(doc) -> None:
             entries.append(para)
 
 
+def set_tc_text(tc, table, value: str) -> None:
+    """Set a table cell's text, keeping the formatting of its first run."""
+    texts = tc.findall(".//" + qn("w:t"))
+    if texts:
+        texts[0].text = value
+        for extra in texts[1:]:
+            extra.text = ""
+    else:
+        from docx.table import _Cell
+        _Cell(tc, table).paragraphs[0].add_run(value)
+
+
 def update_matrix(doc, handoff_text: dict[int, str]) -> None:
-    """Give the coverage matrix an archetype 10 column, computed from handoff 10."""
+    """Give the coverage matrix a column for each of archetypes 10 and 11, computed from its handoff."""
     table = next((t for t in doc.tables if t.rows and t.rows[0].cells[0].text.strip().startswith(MATRIX_FIRST_CELL)), None)
     if table is None:
         raise SystemExit("Cannot find the coverage matrix")
-    header = [c.text.strip() for c in table.rows[0].cells]
-    if "10" not in header:
-        for row in table.rows:
-            cells = row._tr.findall(qn("w:tc"))
-            row._tr.append(copy.deepcopy(cells[-1]))
-        grid = table._tbl.find(qn("w:tblGrid"))
-        if grid is not None:
-            cols = grid.findall(qn("w:gridCol"))
-            grid.append(copy.deepcopy(cols[-1]))
-    col = len(table.rows[0]._tr.findall(qn("w:tc"))) - 1
-    text10 = handoff_text[10]
-
-    def set_cell(row, value):
-        tc = row._tr.findall(qn("w:tc"))[col]
-        texts = tc.findall(".//" + qn("w:t"))
-        if texts:
-            texts[0].text = value
-            for extra in texts[1:]:
-                extra.text = ""
+    for number in MATRIX_GENERATED_COLUMNS:
+        label = f"{number:02d}"
+        header = [c.text.strip() for c in table.rows[0].cells]
+        if label not in header:
+            for row in table.rows:
+                cells = row._tr.findall(qn("w:tc"))
+                row._tr.append(copy.deepcopy(cells[-1]))
+            grid = table._tbl.find(qn("w:tblGrid"))
+            if grid is not None:
+                cols = grid.findall(qn("w:gridCol"))
+                grid.append(copy.deepcopy(cols[-1]))
+            col = len(table.rows[0]._tr.findall(qn("w:tc"))) - 1
         else:
-            from docx.table import _Cell
-            _Cell(tc, table).paragraphs[0].add_run(value)
+            col = header.index(label)
+        text = handoff_text[number]
+        set_tc_text(table.rows[0]._tr.findall(qn("w:tc"))[col], table, label)
+        for row in table.rows[1:]:
+            row_label = row.cells[0].text
+            key, pattern = next(((k, pat) for k, pat in MATRIX_PATTERNS if k.lower() in row_label.lower()), (None, None))
+            hit = bool(pattern and re.search(pattern, text, re.IGNORECASE))
+            hit = MATRIX_OVERRIDES.get(number, {}).get(key, hit)
+            set_tc_text(row._tr.findall(qn("w:tc"))[col], table, "✓" if hit else " ")
 
-    set_cell(table.rows[0], "10")
-    for row in table.rows[1:]:
-        label = row.cells[0].text
-        pattern = next((pat for key, pat in MATRIX_PATTERNS if key.lower() in label.lower()), None)
-        hit = bool(pattern and re.search(pattern, text10, re.IGNORECASE))
-        set_cell(row, "✓" if hit else " ")
+
+def add_archetype_11_rows(doc) -> None:
+    """Add archetype 11 to the hand-written quick-reference and crosswalk tables, once."""
+    for header_start, values in ARCHETYPE_11_ROWS:
+        table = next(
+            (t for t in doc.tables
+             if t.rows and tuple(c.text.strip() for c in t.rows[0].cells)[:len(header_start)] == header_start),
+            None,
+        )
+        if table is None:
+            raise SystemExit(f"Cannot find the table headed {header_start}")
+        if any(row.cells[0].text.strip().startswith("11") for row in table.rows[1:]):
+            continue
+        new_tr = copy.deepcopy(table.rows[-1]._tr)
+        table.rows[-1]._tr.addnext(new_tr)
+        cells = new_tr.findall(qn("w:tc"))
+        if len(cells) != len(values):
+            raise SystemExit(f"Table headed {header_start} has {len(cells)} columns, expected {len(values)}")
+        for tc, value in zip(cells, values):
+            set_tc_text(tc, table, value)
 
 
 def accessibility_pass(doc) -> None:
@@ -699,6 +761,7 @@ def build() -> None:
         h1 = writer.heading(heading_title(number, title), 1, page_break=True)
         render_markdown(writer, body)
         if number == 10:
+            # The cap-rule figure belongs to archetype 10 (still the only cap with archetype 11 added).
             add_figure(doc, h1._p, "alignment-cap")
     # Practice exercises and the spaced-review schedule close the generated block.
     writer.heading(PRACTICE_TITLE, 1, page_break=True)
@@ -712,6 +775,7 @@ def build() -> None:
     add_figure(doc, heading_element(doc, "How to Use This Document", level=2), "review-flow")
     insert_toc(doc)
     update_matrix(doc, handoff_text)
+    add_archetype_11_rows(doc)
     accessibility_pass(doc)
     props = doc.core_properties
     props.title = "GUIDE: Complete Evaluation Rubric and Citation Guide"

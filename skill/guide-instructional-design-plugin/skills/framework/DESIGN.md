@@ -23,7 +23,11 @@ dimensions were design inputs, not an afterthought.
 4. **Keep alignment tight.** Objectives, instruction, practice, and assessment must trace to each
    other (Dick & Carey). When you also produce assessments, apply 02: the Bloom level matches the
    objective's verb, distractors are plausible, and coverage is balanced.
-5. **Self-evaluate before delivering.** Run an evaluate-mode pass (`EVALUATE.md`) on your own
+5. **Plan how it will be judged after launch.** For a course or a programme, draft the measurement
+   plan with 11 before release: the outcome chain, an objective-to-evidence table, a delayed
+   measure, a comparison, the workplace conditions, and the decision rule. A job aid or a
+   micro-lesson can skip this; say that you did.
+6. **Self-evaluate before delivering.** Run an evaluate-mode pass (`EVALUATE.md`) on your own
    draft against the same archetype(s), and fix every dimension that would score below 4. Show
    the user a short "GUIDE self-check" table when the grounding helps them trust the design.
 

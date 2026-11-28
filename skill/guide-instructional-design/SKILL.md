@@ -1,14 +1,15 @@
 ---
 name: guide-instructional-design
 description: >-
-  Design and evaluate instructional content using GUIDE, a learning-science framework of 10
-  archetypes and 60 theory-grounded dimensions mapped to the ADDIE lifecycle. Use whenever work
+  Design and evaluate instructional content using GUIDE, a learning-science framework of 11
+  archetypes and 66 theory-grounded dimensions mapped to the ADDIE lifecycle. Use whenever work
   involves teaching, training, or learning: writing or reviewing a lesson plan, course, syllabus,
   or curriculum; building or critiquing a quiz, test, rubric, or assessment; creating or auditing
   an e-learning module, training video, or slide deck; designing scenario-based or branching
   learning; checking learning content for accessibility (WCAG/UDL); running a needs analysis or
   deciding whether training is even the right solution; planning a formative evaluation, usability
-  test, or pilot; or grounding any of these in learning theory (Bloom, Gagné, Mayer, Knowles,
+  test, or pilot; planning how to measure whether training worked, or judging an impact report
+  or completion dashboard; or grounding any of these in learning theory (Bloom, Gagné, Mayer, Knowles,
   Sweller, Mager, cognitive neuroscience). Trigger even when the user says course, training,
   lesson, module, learners, objectives, or instructional design without naming GUIDE. Use it both
   to CREATE instructional artifacts and to SCORE existing ones with rubrics.
@@ -17,8 +18,8 @@ description: >-
 # GUIDE: Instructional Design (Design & Evaluate)
 
 GUIDE (Grounded Universal Instructional Design Evaluator) operationalizes peer-reviewed learning
-science into ten **archetypes**, each scoring an instructional artifact on **six dimensions**
-(60 total) using a 1-5 scale with concrete behavioral **anchors**. The same rubrics work in two
+science into eleven **archetypes**, each scoring an instructional artifact on **six dimensions**
+(66 total) using a 1-5 scale with concrete behavioral **anchors**. The same rubrics work in two
 directions: the things a judge looks for are exactly the things good instruction should do.
 
 - **Evaluate mode**: score an existing artifact and return a scorecard with evidence, severity
@@ -39,6 +40,9 @@ rather than improvising.
    matching the artifact's primary purpose, then add lenses (a narrated e-learning scenario is
    04 Multimedia + 08 Story + 05 Accessibility). Archetype **10 Curriculum Alignment** is the
    synthesis gate: run it last, once objectives, instruction, and assessment exist together.
+   Archetype **11 Summative Evaluation** scores how a course will be judged after launch (a
+   measurement plan) or the evidence once it is live (an impact report); an impact report's
+   score is an evidence verdict of its own, never averaged with design scores.
 3. **Read the rubric(s).** Read each matching `references/handoff_NN_*.md` in full. Every handoff
    has its purpose and design targets, the six dimensions with scoring anchors, and an Output
    JSON section; most add severity or red flags, improvement suggestions, and troubleshooting
@@ -46,10 +50,11 @@ rather than improvising.
 4. **Run the mode.** Read `EVALUATE.md` for evaluate mode or `DESIGN.md` for design mode, and
    follow it through to its "Done when" checklist.
 
-The ten archetypes, in ADDIE order: 07 Needs Analysis (Analyze); 03 Instructional Sequencing,
+The eleven archetypes, in ADDIE order: 07 Needs Analysis (Analyze); 03 Instructional Sequencing,
 08 Story Design, 09 Cognitive Neuroscience (Design); 04 Multimedia Design, 05 Accessibility
 (Develop); 01 Adult Learning Communication (Implement); 02 Assessment Design, 06 Formative
-Evaluation (Evaluate); 10 Curriculum Alignment (across all phases).
+Evaluation, 11 Summative Evaluation (Evaluate, and after launch); 10 Curriculum Alignment (across
+all phases).
 
 ## Producing deliverables
 
@@ -63,7 +68,7 @@ substance; those skills supply the format.
 
 - `EVALUATE.md`: the evaluate-mode procedure and scorecard format.
 - `DESIGN.md`: the design-mode procedure, starting from needs analysis.
-- `references/00_archetype_index.md`: router (artifact-to-archetype map, ADDIE table, all 60
+- `references/00_archetype_index.md`: router (artifact-to-archetype map, ADDIE table, all 66
   dimensions, the shared 1-5 scale, verdict thresholds, recurring cross-archetype concepts).
   **Read this first** to choose archetypes.
 - `references/handoff_01_adult_learning_communication.md`: conversational/RAG answers to learners.
@@ -76,6 +81,7 @@ substance; those skills supply the format.
 - `references/handoff_08_story_design.md`: scenario/narrative/branching instruction.
 - `references/handoff_09_cognitive_neuroscience.md`: brain-based design (memory, attention, emotion, 5E).
 - `references/handoff_10_curriculum_alignment.md`: synthesis gate, objective-strategy-assessment coherence.
+- `references/handoff_11_summative_evaluation.md`: measurement plans before launch, impact reports after it, learning transfer.
 - `references/discipline_alignment_crosswalk.md`: how each archetype maps to IBSTPI / ATD / ISPI-HPT
   professional standards (GUIDE's own discipline-level mapping, not the framework other courses are
   scored against).

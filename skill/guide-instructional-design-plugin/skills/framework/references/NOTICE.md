@@ -12,7 +12,7 @@ https://www.apache.org/licenses/LICENSE-2.0
 
 GUIDE was developed as a capstone synthesis of the author's work in the University of Central Florida
 Master of Arts in Instructional Systems program. It applies the LLM-as-a-judge pattern
-(Zheng et al., 2023) to instructional-design evaluation across 10 archetypes and 60 theory-grounded
+(Zheng et al., 2023) to instructional-design evaluation across 11 archetypes and 66 theory-grounded
 dimensions.
 
 ## What is bundled here

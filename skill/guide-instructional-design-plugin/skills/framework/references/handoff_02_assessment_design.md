@@ -25,6 +25,8 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 - Assessment blueprint gap analysis
 - Item bank audits
 
+**Relationship to other archetypes:** This archetype evaluates whether the test itself is sound; what happens after the test (whether the learning lasts, reaches the job, and changes results) is scored by archetype 11, Summative Evaluation & Learning Transfer, which uses test results as one link in its chain.
+
 ---
 
 ## Evaluation Dimensions
@@ -185,4 +187,4 @@ When scoring < 4 on any dimension, recommend specific next steps:
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.5.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 02 of 10. Skill edition: the judge prompts and Python-harness notes are omitted; the full model-agnostic handoff is `archetypes/handoff_02_assessment_design.md` in the GUIDE repository.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.5.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 02 of 11. Skill edition: the judge prompts and Python-harness notes are omitted; the full model-agnostic handoff is `archetypes/handoff_02_assessment_design.md` in the GUIDE repository.*

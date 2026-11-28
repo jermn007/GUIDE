@@ -3,7 +3,7 @@ message: "If you use GUIDE in research, teaching, or training, please cite it as
 type: software
 title: "GUIDE: Grounded Universal Instructional Design Evaluator"
 abstract: >-
-  A learning-science framework of 10 archetypes and 60 theory-grounded
+  A learning-science framework of 11 archetypes and 66 theory-grounded
   dimensions, mapped to the ADDIE lifecycle, for designing and evaluating
   instructional content with an LLM-as-a-judge.
 authors:

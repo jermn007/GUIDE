@@ -27,3 +27,4 @@ from . import archetype_07_needs_analysis
 from . import archetype_08_story_design
 from . import archetype_09_cognitive_neuroscience
 from . import archetype_10_curriculum_alignment
+from . import archetype_11_summative_evaluation

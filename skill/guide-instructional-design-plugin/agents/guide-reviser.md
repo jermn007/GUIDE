@@ -79,5 +79,6 @@ If halting, set `halted: true`, fill `halt_reason`, and populate `human_escalati
 - Never silently lower the target; every revision aims for ≥ 4 on the affected dimension.
 - Carry forward unchanged scorecards — don't waste tokens re-running agents whose targets weren't flagged. Exception: `guide-curriculum-alignment` always re-runs after any change.
 - If you detect that two findings conflict (e.g., simplify for accessibility vs. add detail for completeness), escalate to the user rather than picking a side.
+- The synthesizer's `evidence` object (archetype 11's verdict on an impact report) is not a revision input. Do not route its flags to design agents and do not re-run `guide-summative-eval` on the impact report. A measurement plan that scored below 4, or a "No measurement plan" finding, is a normal revision item owned by `guide-summative-eval`.
 
 When the loop terminates, hand off back to the user via the synthesizer's final verdict.

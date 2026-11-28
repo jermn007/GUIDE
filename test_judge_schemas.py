@@ -33,7 +33,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import archetypes  # noqa: F401  (registers all archetypes)
 from guide_base import GUIDEResult, _REGISTRY
 
-EXPECTED_ARCHETYPES = 10
+EXPECTED_ARCHETYPES = 11
 DIMENSIONS_PER_ARCHETYPE = 6
 
 

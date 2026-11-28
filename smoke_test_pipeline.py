@@ -12,6 +12,9 @@ Exercises the ADDIEPipeline class end-to-end with mocked archetype evaluations
   - verdict banding
   - revision-action generation
   - build / review / partial mode classification
+  - archetype 11: the measurement plan in the composite, the impact report as a
+    separate evidence verdict, the missing-plan finding, and the plan passed as
+    the reference when the report is scored
 
 Run from the GUIDE repo root (or any dir with guide_base.py and guide_pipeline.py):
     python smoke_test_pipeline.py
@@ -48,7 +51,7 @@ from guide_pipeline import Archetype
 # never silently drift from the names the pipeline actually verifies against.
 ARCHETYPE_NAMES = [a.value for a in Archetype]
 
-# Register all 10 archetypes with placeholder prompts. The judge call is
+# Register every archetype with placeholder prompts. The judge call is
 # monkey-patched below, so the prompt bodies are never used — but
 # register_archetype() requires them, so pass empty strings.
 for n in ARCHETYPE_NAMES:
@@ -61,12 +64,23 @@ for n in ARCHETYPE_NAMES:
 
 # A dispatch table: each scenario sets this to control what each archetype returns.
 _MOCK_RESPONSES: dict[str, GUIDEResult] = {}
+# Every judge call the pipeline makes, in order, so scenarios can check what was sent.
+_CALLS: list[dict] = []
+# Archetype 11 is called twice with the same name: once for the measurement plan and
+# once for the impact report. A response staged under this key answers the second.
+IMPACT_REPORT_KEY = "summative_evaluation:impact_report"
 
 
 def _mock_evaluate_standalone(archetype_name, user_input, assistant_output,
                               context="N/A", reference="N/A",
                               model_name="claude-sonnet-5-5", api_key=None) -> GUIDEResult:
     """Return the pre-loaded mock result for this archetype."""
+    _CALLS.append({"archetype": archetype_name, "user_input": user_input,
+                   "output": assistant_output, "reference": reference})
+    if archetype_name == "summative_evaluation" and "impact_report" in user_input:
+        if IMPACT_REPORT_KEY not in _MOCK_RESPONSES:
+            raise AssertionError("Smoke test did not stage a response for the impact report.")
+        return _MOCK_RESPONSES[IMPACT_REPORT_KEY]
     if archetype_name not in _MOCK_RESPONSES:
         raise AssertionError(
             f"Smoke test did not stage a response for archetype '{archetype_name}'. "
@@ -127,10 +141,17 @@ def _stage_mocks(specialist_overalls: dict[str, int], gate_scores: dict, *,
                  specialist_flags: dict | None = None, gate_flags=None):
     """Load _MOCK_RESPONSES so any subsequent pipeline call returns canned data."""
     _MOCK_RESPONSES.clear()
+    _CALLS.clear()
     for arch, overall in specialist_overalls.items():
         flags = (specialist_flags or {}).get(arch, [])
         _MOCK_RESPONSES[arch] = _make_specialist_result(arch, overall, severity_flags=flags)
     _MOCK_RESPONSES["curriculum_alignment"] = _make_gate_result(gate_scores, severity_flags=gate_flags or [])
+
+
+def _stage_impact_report(overall: int, *, severity_flags=None):
+    """Stage archetype 11's answer for the impact report (call after _stage_mocks)."""
+    _MOCK_RESPONSES[IMPACT_REPORT_KEY] = _make_specialist_result(
+        "summative_evaluation", overall, severity_flags=severity_flags or [])
 
 
 def _ok(msg):  print(f"  PASS  {msg}")
@@ -151,7 +172,9 @@ ARTIFACT_FULL = {
     "conversational_responses": "RAG help responses",
     "assessment":               "blueprint + items + rubric",
     "formative_eval_plan":      "expert + 1:1 + small group",
+    "measurement_plan":         "objective-to-evidence table; baseline, 30 and 90 days; thresholds set in advance",
 }
+ALL_SPECIALISTS_5 = {a: 5 for a in ARCHETYPE_NAMES if a != Archetype.CURRICULUM_ALIGNMENT.value}
 
 
 def scenario_a_clean_ship():
@@ -169,8 +192,10 @@ def scenario_a_clean_ship():
     _ok(f"threshold_band = {verdict.threshold_band}")
     assert verdict.next_actions == [], "expected no revision actions"
     _ok("next_actions empty (nothing < 4)")
-    assert len(verdict.by_archetype) == 10, f"expected 10 archetypes, got {len(verdict.by_archetype)}"
-    _ok(f"by_archetype covers all 10 archetypes")
+    assert len(verdict.by_archetype) == 11, f"expected 11 archetypes, got {len(verdict.by_archetype)}"
+    _ok(f"by_archetype covers all 11 archetypes")
+    assert verdict.evidence is None and verdict.missing_measurement_plan is False
+    _ok("no impact report, so no evidence verdict; plan present, so no missing-plan finding")
 
 
 def scenario_b_cap_rule_triggered():
@@ -310,11 +335,187 @@ def scenario_g_verdict_to_json():
         "composite_score", "composite_score_uncapped", "alignment_cap_triggered",
         "cap_reason", "threshold_band", "band_explanation", "by_archetype",
         "ranked_severity", "next_actions", "iteration_number", "non_progress_flag",
+        "evidence", "missing_measurement_plan", "verdict_statements",
     }
     assert expected_keys.issubset(parsed.keys()), f"missing keys: {expected_keys - parsed.keys()}"
     _ok(f"verdict JSON has all expected keys ({len(expected_keys)})")
     assert parsed["threshold_band"] == "light_revision"
     _ok(f"threshold_band = {parsed['threshold_band']} (4.0 falls in 3.5-4.4 band)")
+
+
+def scenario_h_measurement_plan_in_composite():
+    """A measurement plan is scored by archetype 11 and averaged in like any other archetype."""
+    print("\n[H] Archetype 11: measurement plan enters the composite when present")
+    specs = dict(ALL_SPECIALISTS_5)
+    specs[Archetype.SUMMATIVE_EVAL.value] = 1
+    _stage_mocks(specs, gate_scores={})
+    pipeline = guide_pipeline.ADDIEPipeline()
+    verdict = pipeline.run_evaluation(request="Course", artifact=ARTIFACT_FULL)
+    expected = round((9 * 5 + 1 + 5) / 11, 2)
+    assert verdict.composite_score == expected, f"expected {expected}, got {verdict.composite_score}"
+    _ok(f"composite_score = {verdict.composite_score} (plan scored 1, averaged with ten 5s)")
+    assert verdict.by_archetype["summative_evaluation"]["overall"] == 1
+    _ok("by_archetype includes summative_evaluation")
+    assert verdict.alignment_cap_triggered is False
+    _ok("a weak measurement plan does not cap the composite (archetype 10's cap is the only one)")
+    owners = {a.fix_owner_archetype for a in verdict.next_actions}
+    assert "summative_evaluation" in owners, "expected revision actions owned by summative_evaluation"
+    _ok("revision actions are routed to summative_evaluation")
+
+    # Absent and not expected: skipped, like 08 when there are no scenarios.
+    artifact = {k: v for k, v in ARTIFACT_FULL.items() if k != "measurement_plan"}
+    _stage_mocks({a: 5 for a in ALL_SPECIALISTS_5 if a != "summative_evaluation"}, gate_scores={})
+    verdict = pipeline.run_evaluation(request="Job aid", artifact=artifact, measurement_plan_expected=False)
+    assert verdict.composite_score == 5.0 and "summative_evaluation" not in verdict.by_archetype
+    _ok("plan absent and optional: archetype 11 skipped, composite 5.0")
+    assert verdict.missing_measurement_plan is False
+    assert not any("measurement plan" in i["finding"] for i in verdict.ranked_severity)
+    _ok("no missing-plan finding when the plan is optional")
+
+
+def scenario_i_missing_plan_is_a_finding():
+    """An expected plan that is absent is a synthesizer finding; the composite does not move."""
+    print("\n[I] Archetype 11: missing-but-expected measurement plan is a finding, not a score")
+    artifact = {k: v for k, v in ARTIFACT_FULL.items() if k != "measurement_plan"}
+    _stage_mocks({a: 5 for a in ALL_SPECIALISTS_5 if a != "summative_evaluation"}, gate_scores={})
+    pipeline = guide_pipeline.ADDIEPipeline()
+    verdict = pipeline.run_evaluation(request="Course", artifact=artifact, measurement_plan_expected=True)
+    assert verdict.composite_score == 5.0, f"composite should be unchanged, got {verdict.composite_score}"
+    _ok(f"composite_score = {verdict.composite_score} (unchanged)")
+    assert verdict.threshold_band == "ship"
+    _ok("threshold_band = ship (a finding does not change the band)")
+    assert "summative_evaluation" not in verdict.by_archetype
+    _ok("no score invented for archetype 11")
+    assert verdict.missing_measurement_plan is True
+    found = [i for i in verdict.ranked_severity if "No measurement plan" in i["finding"]]
+    assert len(found) == 1 and found[0]["raised_by"] == "synthesizer"
+    _ok("ranked_severity lists 'No measurement plan', raised by the synthesizer")
+    assert "no measurement plan" in verdict.verdict_statements["design"]
+    _ok("design verdict statement names the missing plan")
+    # Default: a full review set is taken to be a course, so the plan is expected.
+    _stage_mocks({a: 5 for a in ALL_SPECIALISTS_5 if a != "summative_evaluation"}, gate_scores={})
+    verdict = pipeline.run_evaluation(request="Course", artifact=artifact)
+    assert verdict.missing_measurement_plan is True
+    _ok("default for a full review set: plan expected")
+
+
+def scenario_j_impact_report_is_separate():
+    """The impact report gets its own evidence verdict and never moves the composite."""
+    print("\n[J] Archetype 11: impact report is an evidence verdict, never in the composite")
+    artifact = dict(ARTIFACT_FULL, impact_report="96% completion, 4.7 satisfaction, proven impact")
+    _stage_mocks(ALL_SPECIALISTS_5, gate_scores={})
+    _stage_impact_report(1, severity_flags=["catastrophic: completion presented as effectiveness"])
+    pipeline = guide_pipeline.ADDIEPipeline()
+    verdict = pipeline.run_evaluation(request="Course", artifact=artifact)
+    assert verdict.composite_score == 5.0, f"report must not move the composite, got {verdict.composite_score}"
+    _ok(f"composite_score = {verdict.composite_score} with an impact report scored 1")
+    assert verdict.threshold_band == "ship"
+    _ok("design verdict stays ship")
+    ev = verdict.evidence
+    assert ev is not None and ev["evidence_score"] == 1.0 and ev["evidence_verdict"] == "poor"
+    _ok(f"evidence verdict = {ev['evidence_verdict']} ({ev['evidence_score']})")
+    assert ev["in_composite"] is False and ev["mode"] == "impact_report"
+    _ok("evidence block is marked in_composite = False")
+    assert verdict.by_archetype["summative_evaluation"]["overall"] == 5
+    _ok("by_archetype holds the measurement plan's score, not the report's")
+    assert not any("completion presented" in i["finding"] for i in verdict.ranked_severity)
+    _ok("the report's flags stay in the evidence block, out of the design findings")
+    assert len(verdict.by_archetype) == 11
+    _ok("by_archetype still has 11 entries (the report adds none)")
+
+    # Bands for the evidence verdict
+    for overall, band in ((5, "excellent"), (4, "good"), (3, "fair"), (2, "poor")):
+        _stage_mocks(ALL_SPECIALISTS_5, gate_scores={})
+        _stage_impact_report(overall)
+        got = pipeline.run_evaluation(request="Course", artifact=artifact).evidence["evidence_verdict"]
+        assert got == band, f"evidence score {overall}: expected {band}, got {got}"
+    _ok("evidence bands: 5 excellent, 4 good, 3 fair, 2 poor")
+
+
+def scenario_k_report_scored_against_plan():
+    """The measurement plan is the reference when the report is scored; the gate never sees the report."""
+    print("\n[K] Archetype 11: the plan is passed as the reference for the impact report")
+    report = "IMPACT REPORT TEXT"
+    artifact = dict(ARTIFACT_FULL, impact_report=report)
+    _stage_mocks(ALL_SPECIALISTS_5, gate_scores={})
+    _stage_impact_report(4)
+    pipeline = guide_pipeline.ADDIEPipeline()
+    verdict = pipeline.run_evaluation(request="Course", artifact=artifact, reference="GOLD STANDARD")
+    report_calls = [c for c in _CALLS if c["archetype"] == "summative_evaluation" and c["output"] == report]
+    assert len(report_calls) == 1, f"expected one impact-report call, got {len(report_calls)}"
+    assert report_calls[0]["reference"] == ARTIFACT_FULL["measurement_plan"]
+    _ok("impact report scored once, with the measurement plan as its reference")
+    assert verdict.evidence["scored_against_plan"] is True
+    _ok("evidence.scored_against_plan = True")
+    plan_calls = [c for c in _CALLS if c["archetype"] == "summative_evaluation" and c["output"] != report]
+    assert len(plan_calls) == 1 and plan_calls[0]["reference"] == "GOLD STANDARD"
+    _ok("measurement plan scored once, as a design artifact, with the caller's reference")
+    gate_calls = [c for c in _CALLS if c["archetype"] == "curriculum_alignment"]
+    assert gate_calls and all(report not in c["output"] for c in gate_calls)
+    _ok("alignment gate input does not include the impact report")
+
+    # No plan: the report is still scored, with no reference.
+    artifact = {k: v for k, v in artifact.items() if k != "measurement_plan"}
+    _stage_mocks({a: 5 for a in ALL_SPECIALISTS_5 if a != "summative_evaluation"}, gate_scores={})
+    _stage_impact_report(3)
+    verdict = pipeline.run_evaluation(request="Course", artifact=artifact, measurement_plan_expected=False)
+    report_calls = [c for c in _CALLS if c["output"] == report]
+    assert len(report_calls) == 1 and report_calls[0]["reference"] == "N/A"
+    assert verdict.evidence["scored_against_plan"] is False
+    _ok("no plan: report scored with reference N/A, scored_against_plan = False")
+    assert "summative_evaluation" not in verdict.by_archetype
+    _ok("no plan: archetype 11 is absent from by_archetype even though the report was scored")
+
+
+def scenario_l_verdicts_do_not_stand_in():
+    """A capped design with excellent evidence stays capped, and the two are worded apart."""
+    print("\n[L] Archetype 11: one verdict cannot stand in for the other")
+    artifact = dict(ARTIFACT_FULL, impact_report="rigorous impact study")
+    gate_scores = {"objective_assessment_coherence": 2, "overall": 4}
+    _stage_mocks(ALL_SPECIALISTS_5, gate_scores=gate_scores)
+    _stage_impact_report(5)
+    pipeline = guide_pipeline.ADDIEPipeline()
+    verdict = pipeline.run_evaluation(request="Course", artifact=artifact)
+    assert verdict.alignment_cap_triggered is True and verdict.composite_score == 3.0
+    _ok("composite stays capped at 3.0 with an evidence verdict of excellent")
+    assert verdict.threshold_band == "revise" and verdict.evidence["evidence_verdict"] == "excellent"
+    _ok("design verdict = revise; evidence verdict = excellent")
+    design, evidence = verdict.verdict_statements["design"], verdict.verdict_statements["evidence"]
+    assert design.startswith("Design verdict: revise") and "does not lift the cap" in design
+    assert "excellent" not in design
+    _ok("design statement names the cap and does not quote the evidence verdict")
+    assert evidence.startswith("Evidence verdict: excellent") and "not averaged into the design composite" in evidence
+    assert "revise" not in evidence
+    _ok("evidence statement stands alone and says it is not in the composite")
+
+    # The reverse: a clean design with no report says so, and claims no impact.
+    _stage_mocks(ALL_SPECIALISTS_5, gate_scores={})
+    verdict = pipeline.run_evaluation(request="Course", artifact=ARTIFACT_FULL)
+    assert "not evidence that the course worked" in verdict.verdict_statements["design"]
+    assert verdict.verdict_statements["evidence"].startswith("Evidence verdict: none")
+    _ok("ship with no impact report: evidence verdict is 'none', and the design verdict claims no impact")
+
+
+def scenario_m_evidence_only():
+    """An impact report on its own gets an evidence verdict and no design composite."""
+    print("\n[M] Archetype 11: impact report alone (evidence_only)")
+    _MOCK_RESPONSES.clear()
+    _CALLS.clear()
+    _stage_impact_report(2)
+    pipeline = guide_pipeline.ADDIEPipeline()
+    artifact = {"impact_report": "renewal case: 4.8 of 5, 97% would recommend"}
+    assert pipeline.classify_request("Review this renewal case", artifact) == "evidence_only"
+    verdict = pipeline.run_evaluation(request="Review this renewal case", artifact=artifact)
+    assert verdict.threshold_band == guide_pipeline.NOT_SCORED and verdict.by_archetype == {}
+    _ok(f"threshold_band = {verdict.threshold_band}; no design composite")
+    assert verdict.evidence["evidence_verdict"] == "poor" and verdict.evidence["scored_against_plan"] is False
+    _ok("evidence verdict = poor, scored without a plan")
+    assert [c["archetype"] for c in _CALLS] == ["summative_evaluation"]
+    _ok("only archetype 11 was called (no alignment gate on an impact report)")
+    assert verdict.missing_measurement_plan is False
+    _ok("no missing-plan finding without a design to attach it to")
+    json.loads(verdict.to_json())
+    _ok("verdict serializes to JSON")
 
 
 # ---------------------------------------------------------------------------
@@ -332,5 +533,11 @@ if __name__ == "__main__":
     scenario_e_fail_fast()
     scenario_f_non_progress()
     scenario_g_verdict_to_json()
+    scenario_h_measurement_plan_in_composite()
+    scenario_i_missing_plan_is_a_finding()
+    scenario_j_impact_report_is_separate()
+    scenario_k_report_scored_against_plan()
+    scenario_l_verdicts_do_not_stand_in()
+    scenario_m_evidence_only()
     print()
     print("All scenarios passed.")

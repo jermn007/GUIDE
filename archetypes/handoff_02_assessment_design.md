@@ -25,6 +25,8 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 - Assessment blueprint gap analysis
 - Item bank audits
 
+**Relationship to other archetypes:** This archetype evaluates whether the test itself is sound; what happens after the test (whether the learning lasts, reaches the job, and changes results) is scored by archetype 11, Summative Evaluation & Learning Transfer, which uses test results as one link in its chain.
+
 ---
 
 ## Evaluation Dimensions

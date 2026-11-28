@@ -26,6 +26,8 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 - Mager-format instructional objectives
 - Stakeholder alignment documentation for training projects
 
+**Relationship to other archetypes:** This archetype defines the performance gap and the measure that shows it; archetype 11, Summative Evaluation & Learning Transfer, checks after launch whether that same gap closed, using that same measure.
+
 ---
 
 ## Rubric: 6 Dimensions (1-5 Scale)
@@ -248,4 +250,4 @@ Return this shape when the user wants machine-readable output (scores are intege
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.5.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 07 of 10. Skill edition: the judge prompts and Python-harness notes are omitted; the full model-agnostic handoff is `archetypes/handoff_07_needs_analysis.md` in the GUIDE repository.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.5.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 07 of 11. Skill edition: the judge prompts and Python-harness notes are omitted; the full model-agnostic handoff is `archetypes/handoff_07_needs_analysis.md` in the GUIDE repository.*

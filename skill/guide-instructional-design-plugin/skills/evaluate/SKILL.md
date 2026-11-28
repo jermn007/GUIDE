@@ -17,7 +17,11 @@ Review an instructional artifact against GUIDE in **evaluate mode**, in this con
 3. **Add the alignment gate when it fits.** When the artifact holds objectives, instruction, and
    assessment together (a full lesson or course), score archetype 10 Curriculum Alignment as well,
    and let its cap rule bound the combined verdict.
-4. **Return the scorecard**, one per archetype. When more than one archetype applies, add a short
+4. **Keep impact evidence apart.** When the artifact is an impact report, a post-launch dashboard,
+   or a renewal case, score it with archetype 11 Summative Evaluation and report the result as an
+   evidence verdict of its own. If its measurement plan is attached, score the report against the
+   plan. When it arrives with a course, do not average it into the combined verdict.
+5. **Return the scorecard**, one per archetype. When more than one archetype applies, add a short
    combined verdict that leads with the highest-severity findings. Close by offering to rework
    the weakest dimensions (`/build`, which goes straight to the rework when the
    objectives are already set).

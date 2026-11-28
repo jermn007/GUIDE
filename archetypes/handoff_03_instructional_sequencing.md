@@ -24,6 +24,8 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 - Learning pathway design review
 - Curriculum mapping against Gagné's Nine Events
 
+**Relationship to other archetypes:** Transfer & Retention Design scores what the instruction itself does for transfer (practice in varied contexts and spaced review inside the course); the workplace conditions outside the instruction (the manager's role, the opportunity to use the skill, follow-up after the last session) and whether transfer was measured are scored by archetype 11, Summative Evaluation & Learning Transfer.
+
 ---
 
 ## Evaluation Dimensions

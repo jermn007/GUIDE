@@ -24,6 +24,8 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 - Learning pathway design review
 - Curriculum mapping against Gagné's Nine Events
 
+**Relationship to other archetypes:** Transfer & Retention Design scores what the instruction itself does for transfer (practice in varied contexts and spaced review inside the course); the workplace conditions outside the instruction (the manager's role, the opportunity to use the skill, follow-up after the last session) and whether transfer was measured are scored by archetype 11, Summative Evaluation & Learning Transfer.
+
 ---
 
 ## Evaluation Dimensions
@@ -171,4 +173,4 @@ When scoring < 4 on any dimension:
 
 ---
 
-*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.5.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 03 of 10. Skill edition: the judge prompts and Python-harness notes are omitted; the full model-agnostic handoff is `archetypes/handoff_03_instructional_sequencing.md` in the GUIDE repository.*
+*Source: GUIDE - Grounded Universal Instructional Design Evaluator (v3.5.0). Copyright 2026 Jeremy Terhune. Licensed under the Apache License, Version 2.0. Archetype 03 of 11. Skill edition: the judge prompts and Python-harness notes are omitted; the full model-agnostic handoff is `archetypes/handoff_03_instructional_sequencing.md` in the GUIDE repository.*
