@@ -19,7 +19,7 @@ This script:
 1. Writes the skill edition of each archetypes/handoff_*.md into the skill's
    references/: the sections in HARNESS_ONLY_SECTIONS are dropped, the Human Prompt
    Template is replaced by its JSON output shape ("Output JSON"), and the
-   "Source: GUIDE ... (vX.Y.Z) ... Archetype NN of 10" version footer is appended.
+   "Source: GUIDE ... (vX.Y.Z) ... Archetype NN of 11" version footer is appended.
    The canonical handoffs stay complete for use outside Claude.
 2. Mirrors the canonical skill tree into the plugin's skills/framework/
    so the plugin always ships the same content. Only the `name` in SKILL.md differs:
@@ -44,8 +44,8 @@ from pathlib import Path
 GUIDE_VERSION = "3.5.0"
 COPYRIGHT_YEAR = "2026"
 COPYRIGHT_HOLDER = "Jeremy Terhune"
-TOTAL_ARCHETYPES = 10
-# Trailing note appended after "of 10" for specific archetypes (10 is the synthesis lens).
+TOTAL_ARCHETYPES = 11
+# Trailing note appended after "of 11" for specific archetypes (10 is the synthesis lens).
 FOOTER_SUFFIX = {10: " (the synthesis archetype)"}
 DIMENSIONS_PER_ARCHETYPE = 6
 # Non-handoff reference authored in archetypes/ and propagated like the handoffs.

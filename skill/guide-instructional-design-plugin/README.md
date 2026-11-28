@@ -2,7 +2,7 @@
 
 GUIDE (Grounded Universal Instructional Design Evaluator) scores instructional content against published learning-science research. Use it to **evaluate** a lesson plan, quiz, e-learning module, or needs analysis you already have, or to **design** a new one that meets the same criteria from the start. You ask in plain language and get back a scorecard with reasons and next steps.
 
-GUIDE has 10 archetypes. Each one is a full rubric for one kind of instructional work, and each scores six dimensions on a 1 to 5 scale, for 60 dimensions in all. The archetypes map to the ADDIE lifecycle:
+GUIDE has 11 archetypes. Each one is a full rubric for one kind of instructional work, and each scores six dimensions on a 1 to 5 scale, for 66 dimensions in all. The archetypes map to the ADDIE lifecycle:
 
 | # | Archetype | Use it for | ADDIE phase |
 |---|-----------|-----------|-------------|
@@ -15,9 +15,10 @@ GUIDE has 10 archetypes. Each one is a full rubric for one kind of instructional
 | 01 | Adult Learning Communication | chatbot and help answers for learning professionals | Implement |
 | 02 | Assessment Design | quizzes, tests, item banks, rubrics | Evaluate |
 | 06 | Formative Evaluation | evaluation plans, usability tests, pilots | Evaluate |
+| 11 | Summative Evaluation & Learning Transfer | measurement plans, impact reports, dashboards, renewal cases | Evaluate, and after launch |
 | 10 | Curriculum Alignment | do objectives, instruction, and assessment agree? | Across all phases |
 
-Archetype 10 checks that the pieces fit together, so a course can score well on every other archetype and still fail it.
+Archetype 10 checks that the pieces fit together, so a course can score well on every other archetype and still fail it. Archetype 11 looks past release: it scores the plan for judging a course once it is live, and later the evidence that it worked. Its score of that evidence is reported on its own and is never averaged with the design scores.
 
 ## How to use it
 
@@ -60,7 +61,7 @@ Each command's full name carries the plugin name, for example `/guide-instructio
 
 - **The GUIDE skill:** the rubrics and scoring guidance. It works in Claude chat, Cowork, and Claude Code.
 - **3 commands:** `/evaluate`, `/build`, and `/pipeline`.
-- **13 agents:** a router, 10 archetype specialists (the curriculum-alignment specialist doubles as the gate), a synthesizer, and a reviser that together run a full ADDIE design or audit. Agents run in Cowork and Claude Code. Claude chat uses the skill only.
+- **14 agents:** a router, 11 archetype specialists (the curriculum-alignment specialist doubles as the gate), a synthesizer, and a reviser that together run a full ADDIE design or audit. Agents run in Cowork and Claude Code. Claude chat uses the skill only.
 
 ## What this plugin runs and sends
 

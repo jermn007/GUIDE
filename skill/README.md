@@ -1,6 +1,6 @@
 # GUIDE - Claude Skill & Plugin
 
-This folder packages [GUIDE](../) as a [Claude skill](https://docs.claude.com/en/docs/claude-code/skills) and an installable Claude Code plugin. The skill exposes GUIDE's 10 archetypes and 60 dimensions as reference-driven workflows for **designing** instructional content and **evaluating** existing artifacts. The plugin additionally bundles a **13-agent ADDIE pipeline** that orchestrates those archetypes end-to-end (see [Agent pipeline](#agent-pipeline-plugin)).
+This folder packages [GUIDE](../) as a [Claude skill](https://docs.claude.com/en/docs/claude-code/skills) and an installable Claude Code plugin. The skill exposes GUIDE's 11 archetypes and 66 dimensions as reference-driven workflows for **designing** instructional content and **evaluating** existing artifacts. The plugin additionally bundles a **14-agent ADDIE pipeline** that orchestrates those archetypes end-to-end (see [Agent pipeline](#agent-pipeline-plugin)).
 
 Version: **3.5.0** (tracks the GUIDE framework version one-to-one).
 
@@ -18,11 +18,11 @@ skill/
 │   └── references/
 │       ├── 00_archetype_index.md          # routing index
 │       ├── NOTICE.md                      # Apache-2.0 attribution
-│       ├── handoff_01..10_*.md            # skill edition of the 10 rubrics (generated from ../archetypes/)
+│       ├── handoff_01..11_*.md            # skill edition of the 11 rubrics (generated from ../archetypes/)
 │       └── discipline_alignment_crosswalk.md # archetype -> IBSTPI / ATD / ISPI-HPT mapping (generated from ../archetypes/)
 └── guide-instructional-design-plugin/     # installable Claude Code plugin
     ├── .claude-plugin/plugin.json          # plugin manifest (version, metadata)
-    ├── agents/                             # 13 ADDIE pipeline subagents (plugin-only, hand-maintained)
+    ├── agents/                             # 14 ADDIE pipeline subagents (plugin-only, hand-maintained)
     ├── PIPELINE.md                         # multi-agent workflow design doc
     └── skills/
         ├── framework/                      # generated mirror of ../guide-instructional-design/, named `framework`
@@ -113,17 +113,17 @@ The plugin adds three commands you type. Claude never fires them on its own (`di
 |---------|--------------|
 | `/evaluate <artifact>` | Scores the artifact in this conversation: one scorecard per archetype, plus archetype 10 when objectives, instruction, and assessment are all present. |
 | `/build <request>` | Runs the needs-analysis gatekeeper interview first (is training the right fix?), writes Mager objectives, then designs against the rubrics and self-checks. |
-| `/pipeline <request>` | Runs the 13-agent pipeline, with the main conversation as orchestrator: router, phase agents, fail-fast and acceptance gates, synthesizer, and the revision loop. Where subagents are unavailable, it runs the same plan in one conversation. |
+| `/pipeline <request>` | Runs the 14-agent pipeline, with the main conversation as orchestrator: router, phase agents, fail-fast and acceptance gates, synthesizer, and the revision loop. Where subagents are unavailable, it runs the same plan in one conversation. |
 
 The commands are plugin-only. The skill-only install (Option C) and claude.ai skill uploads keep the auto-triggering skill; there you ask in plain language instead.
 
 ## Agent pipeline (plugin)
 
-Beyond the single-skill workflow above, the **plugin** bundles a 13-agent ADDIE pipeline that uses each GUIDE archetype as both a design guardrail (when building) and an acceptance test (when judging). The agent files live in [`guide-instructional-design-plugin/agents/`](guide-instructional-design-plugin/agents/) and are auto-discovered by Claude Code (no manifest entry required):
+Beyond the single-skill workflow above, the **plugin** bundles a 14-agent ADDIE pipeline that uses each GUIDE archetype as both a design guardrail (when building) and an acceptance test (when judging). The agent files live in [`guide-instructional-design-plugin/agents/`](guide-instructional-design-plugin/agents/) and are auto-discovered by Claude Code (no manifest entry required):
 
 - **guide-router** - classifies the request (build / review / partial) and produces a dispatch plan.
-- **10 archetype specialists** - `guide-needs-analysis` (07), `guide-sequencing` (03), `guide-story-design` (08), `guide-cognitive-neuro` (09), `guide-multimedia` (04), `guide-accessibility` (05), `guide-adult-learning` (01), `guide-assessment` (02), `guide-formative-eval` (06), and `guide-curriculum-alignment` (10, the acceptance gate that enforces the cap rule).
-- **guide-synthesizer** - rolls every scorecard into a composite verdict, honoring archetype 10's cap rule and the ship/revise thresholds.
+- **11 archetype specialists** - `guide-needs-analysis` (07), `guide-sequencing` (03), `guide-story-design` (08), `guide-cognitive-neuro` (09), `guide-multimedia` (04), `guide-accessibility` (05), `guide-adult-learning` (01), `guide-assessment` (02), `guide-formative-eval` (06), `guide-summative-eval` (11, the measurement plan before launch and the impact report after it), and `guide-curriculum-alignment` (10, the acceptance gate that enforces the cap rule).
+- **guide-synthesizer** - rolls every scorecard into a composite verdict, honoring archetype 10's cap rule and the ship/revise thresholds. It reports archetype 11's score of an impact report as a separate evidence verdict, outside the composite.
 - **guide-reviser** - routes targeted feedback back to the responsible phase and loops until the composite clears threshold (max 3 iterations).
 
 See [`guide-instructional-design-plugin/PIPELINE.md`](guide-instructional-design-plugin/PIPELINE.md) for the full workflow design - phase ordering, the Design→Develop fail-fast seam, severity flags, and the composite thresholds.
@@ -149,7 +149,7 @@ python skill/build_skill.py
 
 The script:
 
-1. Writes the **skill edition** of each `../archetypes/handoff_*.md` into `references/`. It drops the sections that serve only the Python LLM-as-a-judge harness (`System Prompt (Judge Rubric)`, `Input Format`, `Calibration & Validation`, `Integration with GUIDE Pipeline`, `Version History`; see `HARNESS_ONLY_SECTIONS`), replaces the `Human Prompt Template` with the JSON output shape it contains (as `Output JSON`), and appends a fresh `Source: GUIDE ... (vX.Y.Z) ... Archetype NN of 10` footer. This cuts the ten rubrics by about a fifth. Claude scores from the scoring guide directly, so the judge prompt, a compressed restatement of that guide, only cost context.
+1. Writes the **skill edition** of each `../archetypes/handoff_*.md` into `references/`. It drops the sections that serve only the Python LLM-as-a-judge harness (`System Prompt (Judge Rubric)`, `Input Format`, `Calibration & Validation`, `Integration with GUIDE Pipeline`, `Version History`; see `HARNESS_ONLY_SECTIONS`), replaces the `Human Prompt Template` with the JSON output shape it contains (as `Output JSON`), and appends a fresh `Source: GUIDE ... (vX.Y.Z) ... Archetype NN of 11` footer. This cuts the eleven rubrics by about a fifth. Claude scores from the scoring guide directly, so the judge prompt, a compressed restatement of that guide, only cost context.
 2. Copies `../archetypes/discipline_alignment_crosswalk.md` with a generic version footer.
 3. Mirrors the canonical skill into the plugin's `skills/` directory so the two stay byte-identical.
 4. Checks that every specialist agent's output contract uses the same six dimension keys, in the same order, as its handoff's output JSON, and fails the build if not.
@@ -162,13 +162,13 @@ Because the skill edition omits the judge prompts, keep any scoring rule in the 
 
 ## Printable rubric
 
-`GUIDE_Rubric_Document.docx` at the repo root has hand-written front and back matter, and ten archetype sections that are generated from the same handoffs:
+`GUIDE_Rubric_Document.docx` at the repo root has hand-written front and back matter, and eleven archetype sections that are generated from the same handoffs:
 
 ```bash
 python docs/build_rubric_docx.py
 ```
 
-The script replaces everything from "Archetype 01" to "Severity Flagging" with a print edition of each handoff (the skill edition without the JSON output shape), stamps the cover with `GUIDE_VERSION`, rebuilds the table of contents, recomputes the archetype 10 column of the coverage matrix, places the diagrams, appends `docs/practice.md` as a practice section, marks every table's header row, and sets alt text on every figure. After editing a diagram in `assets/`, run `python docs/art/render_diagrams.py` first to refresh the PNGs. It needs `python-docx`. With Word installed it also fills in the page numbers; without Word they fill in when the file is first opened. Run it after editing a handoff, and never edit the generated sections by hand. `python docs/build_rubric_docx.py --check` fails when the file is older than its sources.
+The script replaces everything from "Archetype 01" to "Severity Flagging" with a print edition of each handoff (the skill edition without the JSON output shape), stamps the cover with `GUIDE_VERSION`, rebuilds the table of contents, recomputes the archetype 10 and 11 columns of the coverage matrix, adds archetype 11's row to the quick-reference and crosswalk tables, places the diagrams, appends `docs/practice.md` as a practice section, marks every table's header row, and sets alt text on every figure. After editing a diagram in `assets/`, run `python docs/art/render_diagrams.py` first to refresh the PNGs. It needs `python-docx`. With Word installed it also fills in the page numbers; without Word they fill in when the file is first opened. Run it after editing a handoff, and never edit the generated sections by hand. `python docs/build_rubric_docx.py --check` fails when the file is older than its sources.
 
 ## Versioning
 
