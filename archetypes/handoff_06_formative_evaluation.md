@@ -26,6 +26,8 @@ Then run an evaluate-mode self-check against the scoring anchors below.
 - Heuristic evaluation checklists for interactive learning environments
 - Small group evaluation designs
 
+**Relationship to other archetypes:** Formative evaluation is run before release, with a handful of learners, to fix the instruction; judging whether the released course worked, with the real population, belongs to archetype 11, Summative Evaluation & Learning Transfer, which is where the summative claims this archetype flags should be made.
+
 ---
 
 ## Rubric: 6 Dimensions (1-5 Scale)
