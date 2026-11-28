@@ -53,7 +53,7 @@ Does the evidence follow the whole chain from participation to results, or does 
 
 **The chain, in plain terms** (after Kirkpatrick & Kirkpatrick; tiers after Thalheimer's LTEM):
 1. **Participation**: who attended, started, finished. Says nothing about learning.
-2. **Reaction**: what learners thought of it. How much they liked it is weakly related to learning; whether they judged it useful relates somewhat better (Alliger et al., 1997).
+2. **Reaction**: what learners thought of it. A weak guide to learning: liking correlates about zero with learning (Alliger et al., 1997), and where reactions do relate to learning it is to learning measured straight after training, not later (Sitzmann et al., 2008).
 3. **Learning**: what they can recall, decide, and do at the end.
 4. **Behavior**: what they do on the job, weeks later.
 5. **Results**: what changed for the team or organisation because of that behavior.
@@ -314,9 +314,9 @@ What each dimension rests on, who to cite for it, and how far the source was rea
 
 | Dimension | Claim the rubric makes | Source | Fit | Basis |
 |---|---|---|---|---|
-| 1. Outcome Chain | How much learners liked a course is a poor guide to what they learned | Alliger et al. (1997) | Supported, with a limit: liking was weakly related to learning, but ratings of usefulness related more strongly to learning and transfer | Abstract |
-| 1. Outcome Chain | Same | Sitzmann et al. (2008) | Supported through Clark (2020), who reports the correlation as positive but too small to be of practical value. The abstract does not state it | Abstract + secondary |
-| 1. Outcome Chain | Same | Clark (2020), ch. 1 | Supported: advises against relying on learner ratings as indicators of learning | Read |
+| 1. Outcome Chain | How much learners liked a course is a poor guide to what they learned | Alliger et al. (1997) | Supported: reactions of any type correlated .07 with immediate learning, and affective reactions about zero. The authors conclude that liking does not equate to learning or performing, and recommend usefulness questions when the aim is to predict transfer | Read |
+| 1. Outcome Chain | Reactions relate to learning measured straight after training, not to learning measured later | Sitzmann et al. (2008) | Mixed, and cited as such: reactions predicted post-training knowledge (2% to 5% of added variance) but not delayed procedural knowledge. The authors say this challenges the view that reactions are unrelated to learning. They found no difference between liking and usefulness ratings, unlike Alliger et al. | Read |
+| 1. Outcome Chain | Do not rely on learner ratings as indicators of learning | Clark (2020), ch. 1 | Supported: reads the Sitzmann correlation as positive but too small to be of practical value. That reading is Clark's, not the original authors' | Read |
 | 1. Outcome Chain | The chain runs reaction, learning, behavior, results | Kirkpatrick & Kirkpatrick (2006, 2016) | Supported as a description of the model, per Giacumo et al. (2025), Kaufman (2003), and DeVaughn & Stefaniak (2020) | Secondary |
 | 1. Outcome Chain | Lower tiers (attendance, activity, perceptions) do not validate learning | Thalheimer (2018) | Supported: the author's summary calls the lower tiers inadequate to validate learning success. Tier names per Giacumo et al. (2025) | Author's summary + secondary |
 | 1. Outcome Chain | The chain can be extended to societal value | Kaufman & Keller (1994) | Consistent with secondary summaries; article not read | Secondary |
@@ -327,13 +327,13 @@ What each dimension rests on, who to cite for it, and how far the source was rea
 | 2. Traceability | Measures must correspond to objectives | Dick, Carey & Carey | Supported: test items must correspond one to one with performance objectives | Read (7th ed.) |
 | 2. Traceability | Same | Kubiszyn & Borich (2016), ch. 5 | Supported: content validity evidence is the extent to which a test measures the instructional objectives | Read |
 | 2. Traceability | Match the measure to the type of outcome | Kraiger, Ford & Salas (1993) | Supported: classifies cognitive, skill-based, and affective outcomes with measures for each | Abstract |
-| 2. Traceability | Analytics should be tied to educational research, not computation alone | Gašević, Dawson & Siemens (2015) | Partly: the abstract says analytics must be integrated with existing educational research. It does not mention learning design by name | Abstract |
+| 2. Traceability | Analytics should be grounded in learning theory and take the course design into account, not rest on counts of activity | Gašević, Dawson & Siemens (2015) | Supported: reports that counting activity revealed little of value for theory or practice, and that the link between activity data and performance depends on instructional conditions | Read |
 | 2. Traceability | xAPI as the tracking format | IEEE 9274.1.1-2023 | Descriptive reference to the standard, not evidence | Record |
 | 3. Measurement | Performance at the end of instruction is an unreliable guide to lasting learning | Soderstrom & Bjork (2015) | Supported: this is the paper's central argument | Abstract |
 | 3. Measurement | Immediate and delayed tests can rank methods in opposite order; confidence misleads | Roediger & Karpicke (2006) | Supported: restudying won at 5 minutes, testing won at 2 days and 1 week, and restudying raised confidence | Abstract |
 | 3. Measurement | Same | Brown, Roediger & McDaniel (2014) | Supported: delayed-test results and the "illusion of mastery" | Read |
 | 3. Measurement | Behavior measured by the same source in the same setting is inflated | Blume et al. (2010) | Supported: same-source, same-context measurement consistently inflated transfer relationships | Abstract |
-| 4. Attribution | After-only data cannot support causal claims | Shadish, Cook & Campbell (2002) | Not read. Standard reference for the point; no secondary confirmation gathered | Not read |
+| 4. Attribution | A causal claim needs an estimate of what would have happened without the training, and other explanations ruled out | Shadish, Cook & Campbell (2002), ch. 1 | Supported: an effect is the difference between what happened and what would have happened; control groups and pretests exist to support that inference. The chapter on designs without a comparison group was not in the excerpt read | Read (ch. 1 and 14) |
 | 4. Attribution | Isolate the effect of training before quoting a return | Phillips (2003) | Partly: Giacumo et al. (2025) confirm the five-level return-on-investment model and formula, not the isolation methods | Secondary |
 | 4. Attribution | Compare the most and least successful cases | Brinkerhoff (2003) | Supported as a description of the method, per Giacumo et al. (2025) | Secondary |
 | 5. Workplace Transfer | Transfer depends on the learner, the design, and the workplace | Baldwin & Ford (1988) | Supported | Abstract |
@@ -352,9 +352,10 @@ What each dimension rests on, who to cite for it, and how far the source was rea
 **Changes made after the passage-level read:**
 - Arthur et al. (2003) was first cited for effect sizes varying by criterion. The abstract shows they were nearly identical. It is now cited only for how rarely results are studied.
 - Cepeda et al. (2006) was first cited for delayed measurement. It is about spacing, so it now sits under follow-up. Soderstrom & Bjork (2015) was added as the direct source for the measurement claim.
-- Alliger et al. (1997) is cited with its limit: usefulness ratings did better than liking.
+- Alliger et al. (1997) and Sitzmann et al. (2008) disagree on whether usefulness ratings do better than liking. The rubric no longer claims they do; it says only that reactions are a weak guide and fade as a predictor once learning is measured later.
 - Giacumo et al. (2025) was first cited for data ethics. The book does not cover data privacy; it is now cited for the purpose of summative evaluation.
-- Gašević et al. (2015) is cited for what its abstract says, not for learning design.
+- Gašević et al. (2015) was first narrowed to what its abstract says. The full text supports the stronger claim about learning theory and course design, so that claim is restored.
+- Sitzmann et al. (2008) was first cited as plain support for "satisfaction does not show learning". The full text is more mixed, and the table now says so.
 
 ---
 
@@ -416,7 +417,8 @@ The models above are named with attribution and described in the author's own wo
 - **Year conventions:** Blume et al. appeared online in 2009 and in print in 36(4), 2010. Shadish, Cook & Campbell carries a 2002 copyright; some catalogues list 2001. Kirkpatrick & Kirkpatrick's third edition carries a 2006 copyright; some catalogues list 2005.
 - **Edition consistency:** archetype 02 cites Kubiszyn & Borich (2013), the 10th edition. Pick one edition across the framework.
 - **Not confirmed:** the page range and series details of Scriven's chapter (the book, year, and publisher are confirmed); the publisher line for Thalheimer (2018), which is a self-published report whose title appears in a longer form on the author's site.
-- **Not read at all:** Kirkpatrick & Kirkpatrick (2006, 2016), Phillips (2003), Brinkerhoff (2003), Shadish, Cook & Campbell (2002), Scriven (1967), and Kaufman & Keller (1994). None is open access or in the author's course materials. Their entries in the table rest on secondary descriptions, except Shadish et al., which has none.
+- **Not read at all:** Kirkpatrick & Kirkpatrick (2006, 2016), Phillips (2003), Brinkerhoff (2003), Scriven (1967), and Kaufman & Keller (1994). Their entries in the table rest on secondary descriptions.
+- **Read in full from copies the author supplied (2026-11-28):** Alliger et al. (1997), Sitzmann et al. (2008), and Gašević et al. (2015). Shadish, Cook & Campbell (2002) was read in part: chapters 1 and 14.
 - **Abstract only:** the journal articles marked "Abstract" in the table. An abstract confirms the paper's main claim, not the details.
 
 ---
@@ -519,5 +521,5 @@ These follow from decision 3:
 ## Open questions (draft only - remove before release)
 
 1. **Trademark check.** "Kirkpatrick" and "Four Levels" are used here by citation and paraphrase only. Confirm that wording against the rights holder's guidance before release, as was done for the crosswalk.
-2. **Citations.** Bibliographic details are checked and each claim has a fit verdict in the "Evidence Base by Dimension" table. Still to do: read the books and the one article listed as not read, and read past the abstract for any article whose details the rubric relies on.
+2. **Citations.** Bibliographic details are checked and each claim has a fit verdict in the "Evidence Base by Dimension" table. Still to do: read the five books and the one article listed as not read, and read past the abstract for any article whose details the rubric relies on.
 3. **Still to build:** the judge module, edge cases, an owning agent, crosswalk entries, and the generated skill and plugin references.
